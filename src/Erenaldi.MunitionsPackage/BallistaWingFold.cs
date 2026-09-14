@@ -9,7 +9,7 @@ namespace Erenaldi.MunitionsPackage
     [HarmonyPatch(typeof(OpticalSeekerCruiseMissile), "TerminalMode")]
     internal static class BallistaWingFoldPatch
     {
-        private static void Prefix(OpticalSeekerCruiseMissile __instance)
+        private static void Postfix(OpticalSeekerCruiseMissile __instance)
         {
             BallistaWingFoldController.OnTerminalMode(__instance);
         }
@@ -25,6 +25,10 @@ namespace Erenaldi.MunitionsPackage
             typeof(Missile), "target");
         private static readonly FieldInfo CurrentFinAreaField = AccessTools.Field(
             typeof(Missile), "currentFinArea");
+        private static readonly FieldInfo SeekerAimPosField = AccessTools.Field(
+            typeof(OpticalSeekerCruiseMissile), "aimPos");
+        private static readonly FieldInfo SeekerKnownVelField = AccessTools.Field(
+            typeof(OpticalSeekerCruiseMissile), "knownVel");
 
         private sealed class SprintState
         {
@@ -48,40 +52,58 @@ namespace Erenaldi.MunitionsPackage
             SprintState state = GetState(missile);
             if (!state.LoftStarted)
             {
-                // Phase 1: the seeker enters terminal mode at 10 km; the forced
-                // top attack pitches the missile up with wings still deployed.
+                // Phase 1: the seeker enters terminal mode at 10 km. The
+                // vanilla top attack is zeroed at launch for every target that
+                // starts within its TooCloseRange (10 km) or is small, so the
+                // loft is commanded here instead: the seeker's aim is raised
+                // every tick and the missile pitches up with wings deployed.
                 state.LoftStarted = true;
                 state.FoldAtTime = Time.timeSinceLevelLoad + BallistaCloner.FoldDelaySeconds;
                 BallistaCloner.Logger?.LogInfo(
                     $"[Phase 2D] Ballista terminal loft started at {missile.speed:F0} m/s with wings deployed.");
-                return;
             }
 
-            if (state.FoldTriggered)
+            if (!state.FoldTriggered)
+            {
+                RaiseAim(seeker, missile);
+
+                float range = float.MaxValue;
+                var target = MissileTargetField?.GetValue(missile) as Unit;
+                if (target != null && target.rb != null && missile.rb != null)
+                {
+                    range = FastMath.Distance(missile.GlobalPosition(), target.GlobalPosition());
+                }
+                if (Time.timeSinceLevelLoad < state.FoldAtTime && range > BallistaCloner.FoldRange)
+                {
+                    return;
+                }
+
+                // Phase 2: fold the wings and light the sprint rocket once the
+                // loft climb is established (time-based, or earlier by range).
+                state.FoldTriggered = true;
+                FoldWings(missile.transform);
+                CutAeroReferenceArea(missile);
+                IgniteSprint(missile);
+                BallistaCloner.Logger?.LogInfo(
+                    $"[Phase 2D] Ballista wings folded, fin area cut to {BallistaCloner.TerminalFinArea:F2} m2, " +
+                    $"sprint ignited at {missile.speed:F0} m/s, {range:F0} m to target.");
+            }
+        }
+
+        private static void RaiseAim(OpticalSeekerCruiseMissile seeker, Missile missile)
+        {
+            // Runs as a postfix, after the seeker has computed and published
+            // its aim for this tick; raise the published aimpoint so the
+            // missile climbs through the loft phase. GlobalPosition supports
+            // Vector3 addition (the seeker's own code relies on it).
+            var aimPosValue = SeekerAimPosField?.GetValue(seeker);
+            if (aimPosValue == null)
             {
                 return;
             }
-
-            // Phase 2: fold the wings and light the sprint rocket once the
-            // pitch-up is established (time-based, or earlier by range).
-            float range = float.MaxValue;
-            var target = MissileTargetField?.GetValue(missile) as Unit;
-            if (target != null && target.rb != null && missile.rb != null)
-            {
-                range = FastMath.Distance(missile.GlobalPosition(), target.GlobalPosition());
-            }
-            if (Time.timeSinceLevelLoad < state.FoldAtTime && range > BallistaCloner.FoldRange)
-            {
-                return;
-            }
-            state.FoldTriggered = true;
-
-            FoldWings(missile.transform);
-            CutAeroReferenceArea(missile);
-            IgniteSprint(missile);
-            BallistaCloner.Logger?.LogInfo(
-                $"[Phase 2D] Ballista wings folded, fin area cut to {BallistaCloner.TerminalFinArea:F2} m2, " +
-                $"sprint ignited at {missile.speed:F0} m/s, {range:F0} m to target.");
+            var raised = (GlobalPosition)aimPosValue + BallistaCloner.LoftAimRise * Vector3.up;
+            var knownVel = SeekerKnownVelField?.GetValue(seeker) as Vector3? ?? Vector3.zero;
+            missile.SetAimpoint(raised, knownVel);
         }
 
         internal static void Remove(Missile missile)

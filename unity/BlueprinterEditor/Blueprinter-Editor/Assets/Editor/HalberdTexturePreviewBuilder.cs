@@ -120,45 +120,12 @@ namespace Erenaldi.Halberd
 
         internal static Material CreateApprovedBodyMaterial(string assetRoot, string name)
         {
-            var charcoal = new Color(0.075f, 0.085f, 0.095f);
-            var seam = new Color(0.20f, 0.22f, 0.23f);
-            return CreateMaterial(
-                assetRoot,
-                name,
-                new Color(0.73f, 0.75f, 0.74f),
-                seam,
-                new[] { 0.24f, 0.56f },
-                new[]
-                {
-                    new ColorBand(0.865f, 1f, charcoal)
-                },
-                0.12f,
-                0.37f,
-                new[]
-                {
-                    new TextureFeature(0.665f, 0.672f, 0.18f, 0.56f, seam, seam, 0f),
-                    new TextureFeature(0.828f, 0.835f, 0.18f, 0.56f, seam, seam, 0f),
-                    new TextureFeature(0.46f, 0.54f, 0.30f, 0.39f, new Color(0.63f, 0.65f, 0.64f), seam, 0.008f),
-                    new TextureFeature(0.96f, 0.04f, 0.49f, 0.56f, new Color(0.66f, 0.68f, 0.67f), seam, 0.008f),
-                    new TextureFeature(0.975f, 0.025f, 0.445f, 0.465f, new Color(0.30f, 0.12f, 0.09f), new Color(0.30f, 0.12f, 0.09f), 0f)
-                });
+            return HalberdTexturedMaterialBuilder.CreateBodyMaterial(assetRoot, name);
         }
 
         internal static Material CreateApprovedBoosterMaterial(string assetRoot, string name)
         {
-            var seam = new Color(0.20f, 0.22f, 0.23f);
-            return CreateMaterial(
-                assetRoot,
-                name,
-                new Color(0.66f, 0.68f, 0.67f),
-                seam,
-                new[] { 0.50f },
-                new[]
-                {
-                    new ColorBand(0.965f, 1f, seam)
-                },
-                0.22f,
-                0.32f);
+            return HalberdTexturedMaterialBuilder.CreateBoosterMaterial(assetRoot, name);
         }
 
         private static Mesh LoadMesh(string path)

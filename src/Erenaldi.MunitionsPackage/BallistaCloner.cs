@@ -26,9 +26,10 @@ namespace Erenaldi.MunitionsPackage
         internal const float MissileLength = 2.594424f;
         internal const float MissileDiameter = 0.24f;
         internal const float MaxRange = 20000f;
-        // Terminal-dash drag: the folded airframe runs nearly clean; the donor
-        // curve and its 0.5 supersonic penalty bled the sprint to a crawl.
-        internal const float SupersonicDrag = 0.05f;
+        // Supersonic drag restored to the earlier 0.15 tuning (user direction):
+        // the sprint cap is raised and drag re-limits the dash naturally
+        // instead of the hard topSpeed clamp doing it alone.
+        internal const float SupersonicDrag = 0.15f;
         internal const float CruiseThrust = 2800f;
         internal const float CruiseTopSpeed = 300f;
         // 8 kg over 80 s = 24 km cruise endurance: covers a 20 km engagement
@@ -62,19 +63,29 @@ namespace Erenaldi.MunitionsPackage
         internal const float SprintBurnTime = 8.6f;
         internal const float SprintFuelMass = 49f;
         internal const float SprintReserveDelay = 3600f;
-        // Sprint velocity ceiling, Mach 2.4-ish at terminal altitude. The
-        // motor's delta-v would reach Mach 3+; the engine's per-motor topSpeed
-        // cap trims the dash the way a real grain tail-off would.
-        internal const float SprintTopSpeed = 780f;
+        // Sprint velocity ceiling raised (user direction): with drag restored
+        // to 0.15 the dash self-limits near Mach 3 at terminal altitude
+        // instead of the hard 780 m/s clamp.
+        internal const float SprintTopSpeed = 1050f;
         internal const float TerminalRange = 10000f;
         internal const float FoldRange = 7500f;
-        internal const float FoldDelaySeconds = 2f;
+        // Loft duration: 4 s of aim-raised climb before the wing fold and
+        // sprint ignition (user direction: 2 s longer than the prior pass).
+        internal const float FoldDelaySeconds = 4f;
+        // Aimpoint raise during the loft: the seeker's top attack is zeroed at
+        // launch for every target inside its 10 km TooCloseRange (all our
+        // shots), so the loft commands its own climb instead.
+        internal const float LoftAimRise = 500f;
         // Aero reference area after the wing fold. Missile.ApplyAero scales
         // drag AND lift by currentFinArea; the donor deploys it to 2.5 m2 and
         // never re-folds it, so the sprint paid sea-skimmer drag. 0.12 m2 is
         // the Ballista's actual folded tail-control area.
         internal const float TerminalFinArea = 0.12f;
         internal const float CruiseAltitude = 110f;
+        // Cruise plume size: the AGM-68 fire clone reduced by 80 percent from
+        // the 0.8x first pass (user direction), keeping it discreet in chase
+        // view while the sprint carries the full plume.
+        internal const float CruisePlumeScale = 0.16f;
         internal const float TerminalMaxTargetSpeed = 50f;
         internal const float TargetMaxAltitude = 100000f;
         internal const float TargetMinValue = 0f;
@@ -213,7 +224,7 @@ namespace Erenaldi.MunitionsPackage
             {
                 AlignCruiseFx(missileClone.transform);
             }
-            SetupSprintFx(missileClone, sourceMount);
+            SetupMotorFx(missileClone, sourceMount);
 
             int prefabHash = HalberdCloner.AssignUniquePrefabHash(missileClone, HashSeed);
 
@@ -305,42 +316,23 @@ namespace Erenaldi.MunitionsPackage
             HalberdCloner.SetField(motor, "burnRate", 0f);
         }
 
-        private static void SetupSprintFx(GameObject missileClone, WeaponMount carriageMount)
+        private static void SetupMotorFx(GameObject missileClone, WeaponMount carriageMount)
         {
-            // The sprint stage was MemberwiseClone'd from the cruise jet, so it
-            // referenced the SAME already-playing jet plume objects: igniting
-            // it re-"Plays" FX that are already live and nothing visibly
-            // changes. The sprint instead gets the carriage donor's (AGM-68)
-            // own rocket plume, cloned from the Encyclopedia prefab and
-            // configured for the engine's Play-on-Activate / Stop-on-burnout
-            // lifecycle. The cruise jet plume is also stabilized: burnout only
-            // stops looping systems, and a looping BURST-based emitter pulses
-            // flare-and-fade every duration cycle, so bursts convert to a
-            // steady rate.
+            // The donor's jet emitter is a 0.15 s three-burst ignition flash by
+            // design; looping or rate-converting it always reads as flicker.
+            // Both engine stages therefore get the carriage donor's (AGM-68)
+            // own fire FX instead: a scaled-down clone as the continuous
+            // cruise flame (the jet FX objects are disabled outright), and
+            // full-scale fire + smoke + trail clones as the sprint plume. The
+            // AGM-68 flame is a continuous rate emitter; the only change made
+            // to it is clearing its one-shot ignition bursts (which would
+            // replay every loop cycle) and looping it so burnout stops it.
             var missile = missileClone.GetComponent<Missile>();
             var motors = HalberdCloner.GetField(missile, "motors") as Array;
             if (motors == null || motors.Length < 2)
             {
                 Logger?.LogWarning("[Phase 2D] No sprint motor for FX setup.");
                 return;
-            }
-            var sprint = motors.GetValue(1);
-
-            var cruiseFx = HalberdCloner.GetField(motors.GetValue(0), "particleSystems") as Array;
-            if (cruiseFx != null)
-            {
-                var stabilized = new System.Collections.Generic.List<string>();
-                foreach (var value in cruiseFx)
-                {
-                    if (value is ParticleSystem jetPlume)
-                    {
-                        stabilized.Add(StabilizeForBurn(jetPlume));
-                    }
-                }
-                if (stabilized.Count > 0)
-                {
-                    Logger?.LogInfo($"[Phase 2D] Cruise plume stabilized: {string.Join("; ", stabilized)}");
-                }
             }
 
             var rocketPrefab = carriageMount != null && carriageMount.info != null
@@ -350,39 +342,74 @@ namespace Erenaldi.MunitionsPackage
             var rocketMotors = rocketMissile == null
                 ? null
                 : HalberdCloner.GetField(rocketMissile, "motors") as Array;
-            var source = rocketMotors != null && rocketMotors.Length > 0
+            var rocketFx = rocketMotors != null && rocketMotors.Length > 0
                 ? HalberdCloner.GetField(rocketMotors.GetValue(0), "particleSystems") as Array
                 : null;
-            if (source == null || source.Length == 0)
+            if (rocketFx == null || rocketFx.Length == 0)
             {
-                Logger?.LogWarning("[Phase 2D] AGM-68 rocket FX unavailable; sprint plume skipped.");
+                Logger?.LogWarning("[Phase 2D] AGM-68 rocket FX unavailable; plume setup skipped.");
                 return;
             }
 
             var tailZ = -MissileLength * 0.5f;
-            var clones = new System.Collections.Generic.List<ParticleSystem>();
-            foreach (var value in source)
+            var cruiseFire = new System.Collections.Generic.List<ParticleSystem>();
+            var sprintFire = new System.Collections.Generic.List<ParticleSystem>();
+            foreach (var value in rocketFx)
             {
                 if (!(value is ParticleSystem original))
                 {
                     continue;
                 }
-                var copy = UnityEngine.Object.Instantiate(
+                bool isFire = original.gameObject.name.IndexOf("Fire", StringComparison.OrdinalIgnoreCase) >= 0;
+                var cruiseCopy = UnityEngine.Object.Instantiate(
                     original.gameObject, missileClone.transform, false).GetComponent<ParticleSystem>();
-                copy.gameObject.name = "Sprint" + original.gameObject.name;
-                var position = copy.transform.localPosition;
-                position.z = tailZ;
-                copy.transform.localPosition = position;
-                StabilizeForBurn(copy);
-                copy.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-                clones.Add(copy);
+                cruiseCopy.gameObject.name = "Cruise" + original.gameObject.name;
+                var cruisePosition = cruiseCopy.transform.localPosition;
+                cruisePosition.z = tailZ;
+                cruiseCopy.transform.localPosition = cruisePosition;
+                cruiseCopy.transform.localScale = cruiseCopy.transform.localScale * CruisePlumeScale;
+                StabilizeForBurn(cruiseCopy);
+                cruiseCopy.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                if (isFire)
+                {
+                    cruiseFire.Add(cruiseCopy);
+                }
+                else
+                {
+                    cruiseCopy.gameObject.SetActive(false);
+                }
+
+                var sprintCopy = UnityEngine.Object.Instantiate(
+                    original.gameObject, missileClone.transform, false).GetComponent<ParticleSystem>();
+                sprintCopy.gameObject.name = "Sprint" + original.gameObject.name;
+                var sprintPosition = sprintCopy.transform.localPosition;
+                sprintPosition.z = tailZ;
+                sprintCopy.transform.localPosition = sprintPosition;
+                StabilizeForBurn(sprintCopy);
+                sprintCopy.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                sprintFire.Add(sprintCopy);
             }
-            if (clones.Count == 0)
+
+            // Retire the donor jet emitters: their objects are disabled so the
+            // 0.15 s ignition flash can never play again.
+            var cruiseMotor = motors.GetValue(0);
+            var jetFx = HalberdCloner.GetField(cruiseMotor, "particleSystems") as Array;
+            if (jetFx != null)
             {
-                Logger?.LogWarning("[Phase 2D] No AGM-68 rocket FX cloned for the sprint plume.");
-                return;
+                foreach (var value in jetFx)
+                {
+                    if (value is ParticleSystem jetPlume)
+                    {
+                        jetPlume.gameObject.SetActive(false);
+                    }
+                }
+                HalberdCloner.SetField(cruiseMotor, "particleSystems", cruiseFire.ToArray());
+                HalberdCloner.SetField(cruiseMotor, "audioSources", Array.Empty<AudioSource>());
+                HalberdCloner.SetField(cruiseMotor, "lights", Array.Empty<Light>());
             }
-            HalberdCloner.SetField(sprint, "particleSystems", clones.ToArray());
+            HalberdCloner.SetField(motors.GetValue(1), "particleSystems", sprintFire.ToArray());
+            HalberdCloner.SetField(motors.GetValue(1), "audioSources", Array.Empty<AudioSource>());
+            HalberdCloner.SetField(motors.GetValue(1), "lights", Array.Empty<Light>());
 
             var rocketTrails = HalberdCloner.GetField(rocketMotors.GetValue(0), "trailEmitters") as Array;
             if (rocketTrails != null && rocketTrails.Length > 0)
@@ -405,34 +432,25 @@ namespace Erenaldi.MunitionsPackage
                 }
                 if (trails.Count > 0)
                 {
-                    HalberdCloner.SetField(sprint, "trailEmitters", trails.ToArray());
+                    HalberdCloner.SetField(motors.GetValue(1), "trailEmitters", trails.ToArray());
                 }
             }
-
-            // The cloned motor also shares the jet's audio and lights; silence
-            // them so the sprint lights only its own plume.
-            HalberdCloner.SetField(sprint, "audioSources", Array.Empty<AudioSource>());
-            HalberdCloner.SetField(sprint, "lights", Array.Empty<Light>());
             Logger?.LogInfo(
-                $"[Phase 2D] Sprint FX: {clones.Count} AGM-68 rocket plume system(s), " +
-                $"cruise jet plume stabilized.");
+                $"[Phase 2D] Plume FX: {cruiseFire.Count} cruise flame(s) (AGM-68 fire, {CruisePlumeScale:F2}x), " +
+                $"{sprintFire.Count} sprint system(s) (AGM-68 fire+smoke), donor jet emitters retired.");
         }
 
         private static string StabilizeForBurn(ParticleSystem plume)
         {
             // Burnout(forceStopEffects: false) only stops looping systems, so
-            // the plume must loop. But a looping BURST emitter pulses
-            // flare-and-fade every duration cycle; convert bursts to an
-            // equivalent steady rate. A sparse converted rate (or a short
-            // particle lifetime) still reads as flicker, so the rate is
-            // floored and lifetime extended until particles overlap into a
-            // continuous flame.
+            // the plume must loop. The one intervention allowed on the AGM-68
+            // flame is clearing its one-shot ignition bursts: replayed every
+            // loop cycle they read as pulses. Its own designed steady rate is
+            // preserved untouched; only a purely burst emitter gets a derived
+            // rate.
             var main = plume.main;
             main.loop = true;
             var emission = plume.emission;
-            float rate = emission.rateOverTime.mode == ParticleSystemCurveMode.Constant
-                ? emission.rateOverTime.constant
-                : 0f;
             int bursts = emission.burstCount;
             if (bursts > 0)
             {
@@ -445,17 +463,14 @@ namespace Erenaldi.MunitionsPackage
                         ? burstCurve.constant
                         : burstCurve.constantMax;
                 }
-                rate += total / duration;
                 emission.SetBursts(Array.Empty<ParticleSystem.Burst>());
+                if (emission.rateOverTime.mode == ParticleSystemCurveMode.Constant &&
+                    emission.rateOverTime.constant <= 0.01f)
+                {
+                    emission.rateOverTime = Mathf.Max(total / duration, 25f);
+                }
             }
-            rate = Mathf.Max(rate, 40f);
-            emission.rateOverTime = rate;
-            float lifetime = main.startLifetime.constantMax > 0f
-                ? main.startLifetime.constantMax
-                : 0.3f;
-            main.startLifetimeMultiplier = 1.6f;
-            return $"{plume.gameObject.name}: bursts {bursts} -> rate {rate:F0}/s, " +
-                   $"lifetime {lifetime:F2} -> {lifetime * 1.6f:F2} s";
+            return $"{plume.gameObject.name}: bursts {bursts} cleared, loop on";
         }
 
         private static void AlignCruiseFx(Transform missileTransform)

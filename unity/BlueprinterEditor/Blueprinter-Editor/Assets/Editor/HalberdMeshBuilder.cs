@@ -36,21 +36,21 @@ namespace Erenaldi.Halberd
             var boosterMaterial = HalberdTexturePreviewBuilder.CreateApprovedBoosterMaterial(OutputRoot, "HalberdBooster");
             var pylonMaterial = new Material(shader) { name = "MatHalberdPylon" };
             pylonMaterial.color = new Color(0.45f, 0.47f, 0.5f);
-            var intakesMaterial = CreateFlatMaterial(shader, "MatHalberdIntakes", new Color(0.22f, 0.23f, 0.24f));
-            var sustainerFinsMaterial = CreateFlatMaterial(shader, "MatHalberdSustainerFins", new Color(0.52f, 0.54f, 0.53f));
-            var hardwareMaterial = CreateFlatMaterial(shader, "MatHalberdHardware", new Color(0.35f, 0.36f, 0.38f));
-            var sustainerNozzleMaterial = CreateFlatMaterial(shader, "MatHalberdSustainerNozzle", new Color(0.2f, 0.2f, 0.22f));
-            var finsMaterial = CreateFlatMaterial(shader, "MatHalberdFins", new Color(0.52f, 0.54f, 0.53f));
+            var intakesMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdIntakes", new Color(0.30f, 0.31f, 0.32f));
+            var sustainerFinsMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdSustainerFins", new Color(0.56f, 0.58f, 0.57f));
+            var hardwareMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdHardware", new Color(0.42f, 0.43f, 0.45f));
+            var sustainerNozzleMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdSustainerNozzle", new Color(0.30f, 0.30f, 0.32f));
+            var finsMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdFins", new Color(0.56f, 0.58f, 0.57f));
             var boosterNozzleMaterial = CreateFlatMaterial(shader, "MatHalberdBoosterNozzle", new Color(0.24f, 0.07f, 0.045f));
             var boosterNozzleRecessMaterial = CreateFlatMaterial(shader, "MatHalberdBoosterNozzleRecess", new Color(0.025f, 0.03f, 0.035f));
 
             var bodyMesh = LoadCadMesh(BodyModelPath, "MeshHalberdBody", true);
-            var intakesMesh = LoadCadMesh(IntakesModelPath, "MeshHalberdIntakes", false);
-            var sustainerFinsMesh = LoadCadMesh(SustainerFinsModelPath, "MeshHalberdSustainerFins", false);
-            var hardwareMesh = LoadCadMesh(HardwareModelPath, "MeshHalberdHardware", false);
-            var sustainerNozzleMesh = LoadCadMesh(SustainerNozzleModelPath, "MeshHalberdSustainerNozzle", false);
+            var intakesMesh = LoadCadMesh(IntakesModelPath, "MeshHalberdIntakes", true);
+            var sustainerFinsMesh = LoadCadMesh(SustainerFinsModelPath, "MeshHalberdSustainerFins", true);
+            var hardwareMesh = LoadCadMesh(HardwareModelPath, "MeshHalberdHardware", true);
+            var sustainerNozzleMesh = LoadCadMesh(SustainerNozzleModelPath, "MeshHalberdSustainerNozzle", true);
             var boosterBodyMesh = LoadCadMesh(BoosterBodyModelPath, "MeshHalberdBooster", true);
-            var boosterFinsMesh = LoadCadMesh(BoosterFinsModelPath, "MeshHalberdBoosterFins", false);
+            var boosterFinsMesh = LoadCadMesh(BoosterFinsModelPath, "MeshHalberdBoosterFins", true);
             var boosterNozzleMesh = LoadCadMesh(BoosterNozzleModelPath, "MeshHalberdBoosterNozzle", false);
             var boosterNozzleRecessMesh = LoadCadMesh(BoosterNozzleRecessModelPath, "MeshHalberdBoosterNozzleRecess", false);
             ValidateAssembly(bodyMesh, intakesMesh, sustainerFinsMesh, hardwareMesh, sustainerNozzleMesh, boosterBodyMesh, boosterFinsMesh, boosterNozzleMesh, boosterNozzleRecessMesh);
@@ -67,11 +67,9 @@ namespace Erenaldi.Halberd
             SaveAsset(boosterNozzleRecessMesh, "MeshHalberdBoosterNozzleRecess.asset");
             SaveAsset(pylonMesh, "MeshHalberdPylon.asset");
             SaveAsset(pylonMaterial, "MatHalberdPylon.mat");
-            SaveAsset(intakesMaterial, "MatHalberdIntakes.mat");
-            SaveAsset(sustainerFinsMaterial, "MatHalberdSustainerFins.mat");
-            SaveAsset(hardwareMaterial, "MatHalberdHardware.mat");
-            SaveAsset(sustainerNozzleMaterial, "MatHalberdSustainerNozzle.mat");
-            SaveAsset(finsMaterial, "MatHalberdFins.mat");
+            // Intakes/fins/hardware/sustainer-nozzle/fins materials are created and
+            // saved by HalberdTexturedMaterialBuilder; re-saving them would destroy
+            // the in-memory assets (DeleteAsset + CreateAsset on the same object).
             SaveAsset(boosterNozzleMaterial, "MatHalberdBoosterNozzle.mat");
             SaveAsset(boosterNozzleRecessMaterial, "MatHalberdBoosterNozzleRecess.mat");
 
@@ -136,7 +134,7 @@ namespace Erenaldi.Halberd
             var uvs = new List<Vector2>(sourceVertices.Length);
             for (int i = 0; i < sourceVertices.Length; i++)
             {
-                float u = Mathf.Atan2(sourceVertices[i].y, Mathf.Abs(sourceVertices[i].x)) / (Mathf.PI * 2f) + 0.5f;
+                float u = (Mathf.Atan2(sourceVertices[i].y, sourceVertices[i].x) + Mathf.PI) / (Mathf.PI * 2f);
                 float v = (sourceVertices[i].z - bounds.min.z) / length;
                 uvs.Add(new Vector2(u, v));
             }

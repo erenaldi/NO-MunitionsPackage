@@ -46,10 +46,13 @@ the clone pipeline — see `docs/PHASE2A_FINDINGS.md`.
    - Do NOT add scripts, `NetworkIdentity`, particle systems, or audio — the clone
      already carries all gameplay components; extra components are ignored or can
      break the transplant.
-3. Materials: use plain URP/Built-in lit materials during the initial
-   geometry-only pass. Later presentation passes may add packed texture
-   atlases, material variation, colors, labels, and faction or safety markings
-   as needed without changing the approved geometry.
+3. Materials: the Halberd ships original vanilla-style textures built by
+   `HalberdTexturedMaterialBuilder.cs` (albedo + packed metallic/smoothness,
+   panel seams, rivets, stencil text, ochre accent — palette measured in
+   `docs/TEXTURE_STYLE_FINDINGS.md`). Intakes/fins/hardware share a neutral
+   microsurface texture tinted per part; nozzles stay flat-color. Kris and
+   Ballista still use flat URP materials; their texture passes follow the
+   same findings doc. Do not bake vanilla textures into any shipped asset.
 4. Scale: `cad/generate_halberd_detailed.py` authors the Halberd directly at
    final game scale in millimeters. CAD +X is forward, +Z is dorsal, and +Y is
    lateral; `cad/export_halberd_unity_mesh.py` maps those axes to Unity +Z, +Y,
