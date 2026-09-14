@@ -14,7 +14,9 @@ namespace Erenaldi.Kris
         private const float PylonTargetClearance = 0.009f;
         private const float DeployedRadius = 0.22356208f * SizeScale;
         private const float MaximumSpan = 0.44446433f * SizeScale;
-        private const int ExpectedVertexCount = 64388;
+        // Total across the five parts after the body's seam-deduplicated
+        // cylindrical UV unwrap (64388 source vertices + 251 seam duplicates).
+        private const int ExpectedVertexCount = 64639;
         private const int ExpectedTriangleCount = 100328;
 
         internal static float RackMissileOffsetY { get; private set; } = -0.22746752f;
@@ -40,18 +42,26 @@ namespace Erenaldi.Kris
             {
                 throw new System.InvalidOperationException("Required URP Lit shaders are unavailable");
             }
-            var bodyMaterial = CreateFlatMaterial(shader, "MatKrisBody", new Color(0.630757f, 0.630757f, 0.584078f), 0.1f, 0.35f, 0f, 0f);
+            var bodyMaterial = KrisTexturedMaterialBuilder.CreateBodyMaterial(OutputRoot, "MatKrisBody");
             var hardwareMaterial = CreateFlatMaterial(shader, "MatKrisHardware", new Color(0.270498f, 0.309469f, 0.309469f), 0.35f, 0.45f, 0f, 0f);
             var darkMaterial = CreateFlatMaterial(shader, "MatKrisDark", new Color(0.033105f, 0.039546f, 0.042311f), 0.1f, 0.35f, 0f, 0f);
             var gridFinsMaterial = CreateFlatMaterial(shader, "MatKrisGridFins", new Color(0.0185f, 0.023153f, 0.026241f), 0.35f, 0.45f, 0f, 0f);
             var seekerMaterial = CreateFlatMaterial(clearcoatShader, "MatKrisSeeker", new Color(0.008568f, 0.019382f, 0.026241f), 0.05f, 0.94f, 1f, 0.975f);
             var pylonMaterial = new Material(shader) { name = "MatKrisPylon" };
             pylonMaterial.color = new Color(0.45f, 0.47f, 0.5f);
-            ValidateMaterial(bodyMaterial, "body", 0.630757f, 0.630757f, 0.584078f, 0.1f, 0.35f);
             ValidateMaterial(hardwareMaterial, "hardware", 0.270498f, 0.309469f, 0.309469f, 0.35f, 0.45f);
             ValidateMaterial(darkMaterial, "dark", 0.033105f, 0.039546f, 0.042311f, 0.1f, 0.35f);
             ValidateMaterial(gridFinsMaterial, "grid fins", 0.0185f, 0.023153f, 0.026241f, 0.35f, 0.45f);
             ValidateMaterial(seekerMaterial, "seeker", 0.008568f, 0.019382f, 0.026241f, 0.05f, 0.94f);
+            if (Mathf.Abs(bodyMaterial.color.r - 1f) > 0.001f ||
+                Mathf.Abs(bodyMaterial.color.g - 1f) > 0.001f ||
+                Mathf.Abs(bodyMaterial.color.b - 1f) > 0.001f ||
+                Mathf.Abs(bodyMaterial.GetFloat("_Metallic") - 1f) > 0.001f ||
+                !bodyMaterial.IsKeywordEnabled("_METALLICSPECGLOSSMAP") ||
+                bodyMaterial.GetTexture("_MetallicGlossMap") == null)
+            {
+                throw new System.InvalidOperationException("Kris body textured material was not configured");
+            }
             if (Mathf.Abs(seekerMaterial.GetFloat("_ClearCoat") - 1f) > 0.001f ||
                 Mathf.Abs(seekerMaterial.GetFloat("_ClearCoatMask") - 1f) > 0.001f ||
                 Mathf.Abs(seekerMaterial.GetFloat("_ClearCoatSmoothness") - 0.975f) > 0.001f ||
@@ -60,11 +70,11 @@ namespace Erenaldi.Kris
                 throw new System.InvalidOperationException("Kris seeker clearcoat material was not configured");
             }
 
-            var bodyMesh = LoadCadMesh(BodyModelPath, "MeshKrisBody");
-            var hardwareMesh = LoadCadMesh(HardwareModelPath, "MeshKrisHardware");
-            var darkMesh = LoadCadMesh(DarkModelPath, "MeshKrisDark");
-            var seekerMesh = LoadCadMesh(SeekerModelPath, "MeshKrisSeeker");
-            var gridFinsMesh = LoadCadMesh(GridFinsModelPath, "MeshKrisGridFins");
+            var bodyMesh = LoadCadMesh(BodyModelPath, "MeshKrisBody", true);
+            var hardwareMesh = LoadCadMesh(HardwareModelPath, "MeshKrisHardware", false);
+            var darkMesh = LoadCadMesh(DarkModelPath, "MeshKrisDark", false);
+            var seekerMesh = LoadCadMesh(SeekerModelPath, "MeshKrisSeeker", false);
+            var gridFinsMesh = LoadCadMesh(GridFinsModelPath, "MeshKrisGridFins", false);
             ValidateAssembly(bodyMesh, hardwareMesh, darkMesh, seekerMesh, gridFinsMesh);
             var pylonMesh = BuildPylonMesh();
 
@@ -74,7 +84,8 @@ namespace Erenaldi.Kris
             SaveAsset(seekerMesh, "MeshKrisSeeker.asset");
             SaveAsset(gridFinsMesh, "MeshKrisGridFins.asset");
             SaveAsset(pylonMesh, "MeshKrisPylon.asset");
-            SaveAsset(bodyMaterial, "MatKrisBody.mat");
+            // MatKrisBody is created and saved by KrisTexturedMaterialBuilder;
+            // re-saving it would destroy the in-memory asset.
             SaveAsset(hardwareMaterial, "MatKrisHardware.mat");
             SaveAsset(darkMaterial, "MatKrisDark.mat");
             SaveAsset(seekerMaterial, "MatKrisSeeker.mat");
@@ -111,7 +122,7 @@ namespace Erenaldi.Kris
             AssetDatabase.DeleteAsset(OutputRoot + "/Models/KrisHybrid_ControlVanes.obj");
         }
 
-        private static Mesh LoadCadMesh(string path, string meshName)
+        private static Mesh LoadCadMesh(string path, string meshName, bool textured)
         {
             Mesh source = null;
             foreach (var asset in AssetDatabase.LoadAllAssetsAtPath(path))
@@ -139,8 +150,84 @@ namespace Erenaldi.Kris
                 mesh.vertices = scaledVertices;
             }
             mesh.RecalculateNormals();
+            if (textured)
+            {
+                var texturedMesh = GenerateCylindricalUVs(mesh);
+                Object.DestroyImmediate(mesh);
+                mesh = texturedMesh;
+            }
             mesh.RecalculateBounds();
             Debug.Log($"[Kris] Imported {path}: {mesh.vertices.Length} vertices, bounds {mesh.bounds}");
+            return mesh;
+        }
+
+        /// <summary>
+        /// Full 2-pi cylindrical unwrap along the Kris z-axis (v 0 tail .. 1
+        /// nose), with seam-wrapping triangles duplicated so no triangle
+        /// spans the u seam. Matches the Halberd body unwrap convention.
+        /// </summary>
+        internal static Mesh GenerateCylindricalUVs(Mesh source)
+        {
+            var sourceVertices = source.vertices;
+            var sourceNormals = source.normals;
+            var bounds = source.bounds;
+            var length = Mathf.Max(bounds.size.z, 0.001f);
+            var vertices = new List<Vector3>(sourceVertices);
+            var normals = new List<Vector3>(sourceNormals);
+            var uvs = new List<Vector2>(sourceVertices.Length);
+            for (int i = 0; i < sourceVertices.Length; i++)
+            {
+                float u = (Mathf.Atan2(sourceVertices[i].y, sourceVertices[i].x) + Mathf.PI) / (Mathf.PI * 2f);
+                float v = (sourceVertices[i].z - bounds.min.z) / length;
+                uvs.Add(new Vector2(u, v));
+            }
+
+            int subMeshCount = source.subMeshCount;
+            var subMeshTriangles = new List<int[]>(subMeshCount);
+            var seamDuplicates = new Dictionary<int, int>();
+            for (int subMesh = 0; subMesh < subMeshCount; subMesh++)
+            {
+                var triangles = source.GetTriangles(subMesh);
+                for (int triangle = 0; triangle < triangles.Length; triangle += 3)
+                {
+                    float minU = Mathf.Min(uvs[triangles[triangle]].x, uvs[triangles[triangle + 1]].x, uvs[triangles[triangle + 2]].x);
+                    float maxU = Mathf.Max(uvs[triangles[triangle]].x, uvs[triangles[triangle + 1]].x, uvs[triangles[triangle + 2]].x);
+                    if (maxU - minU <= 0.5f)
+                    {
+                        continue;
+                    }
+                    for (int corner = 0; corner < 3; corner++)
+                    {
+                        int triangleIndex = triangle + corner;
+                        int vertexIndex = triangles[triangleIndex];
+                        if (uvs[vertexIndex].x >= 0.5f)
+                        {
+                            continue;
+                        }
+                        if (!seamDuplicates.TryGetValue(vertexIndex, out int duplicateIndex))
+                        {
+                            duplicateIndex = vertices.Count;
+                            seamDuplicates.Add(vertexIndex, duplicateIndex);
+                            vertices.Add(vertices[vertexIndex]);
+                            normals.Add(normals[vertexIndex]);
+                            uvs.Add(new Vector2(uvs[vertexIndex].x + 1f, uvs[vertexIndex].y));
+                        }
+                        triangles[triangleIndex] = duplicateIndex;
+                    }
+                }
+                subMeshTriangles.Add(triangles);
+            }
+
+            var mesh = new Mesh { name = source.name, indexFormat = source.indexFormat };
+            mesh.SetVertices(vertices);
+            mesh.SetNormals(normals);
+            mesh.SetUVs(0, uvs);
+            mesh.subMeshCount = subMeshCount;
+            for (int subMesh = 0; subMesh < subMeshCount; subMesh++)
+            {
+                mesh.SetTriangles(subMeshTriangles[subMesh], subMesh);
+            }
+            mesh.RecalculateBounds();
             return mesh;
         }
 

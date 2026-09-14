@@ -279,6 +279,11 @@ namespace Erenaldi.Munitions
             }
         }
 
+        private static bool IsKrisBodyLabel(string label)
+        {
+            return label.EndsWith("/<root>") || label.EndsWith("pylon/aam1") || label.EndsWith("/aam1");
+        }
+
         private static void ValidateKrisRenderer(Transform transform, string label)
         {
             var mesh = transform.GetComponent<MeshFilter>()?.sharedMesh;
@@ -289,18 +294,27 @@ namespace Erenaldi.Munitions
                     "Built bundle has invalid Kris geometry at " + label +
                     ": mesh=" + (mesh != null) + ", material=" + (material != null));
             }
+            if (IsKrisBodyLabel(label))
+            {
+                // Body material is texture-driven; validate structure instead of flat color.
+                if (material.name != "MatKrisBody" ||
+                    Mathf.Abs(material.color.r - 1f) > 0.001f ||
+                    Mathf.Abs(material.color.g - 1f) > 0.001f ||
+                    Mathf.Abs(material.color.b - 1f) > 0.001f ||
+                    Mathf.Abs(material.GetFloat("_Metallic") - 1f) > 0.001f ||
+                    material.GetTexture("_MetallicGlossMap") == null ||
+                    material.GetTexture("_BaseMap") == null)
+                {
+                    throw new System.InvalidOperationException("Built bundle has incorrect Kris body textured material at " + label);
+                }
+                return;
+            }
+
             string expectedMaterial;
             Color expectedColor;
             float expectedMetallic;
             float expectedSmoothness;
-            if (label.EndsWith("/Hardware"))
-            {
-                expectedMaterial = "MatKrisHardware";
-                expectedColor = new Color(0.270498f, 0.309469f, 0.309469f);
-                expectedMetallic = 0.35f;
-                expectedSmoothness = 0.45f;
-            }
-            else if (label.EndsWith("/Dark"))
+            if (label.EndsWith("/Dark"))
             {
                 expectedMaterial = "MatKrisDark";
                 expectedColor = new Color(0.033105f, 0.039546f, 0.042311f);
@@ -323,10 +337,10 @@ namespace Erenaldi.Munitions
             }
             else
             {
-                expectedMaterial = "MatKrisBody";
-                expectedColor = new Color(0.630757f, 0.630757f, 0.584078f);
-                expectedMetallic = 0.1f;
-                expectedSmoothness = 0.35f;
+                expectedMaterial = "MatKrisHardware";
+                expectedColor = new Color(0.270498f, 0.309469f, 0.309469f);
+                expectedMetallic = 0.35f;
+                expectedSmoothness = 0.45f;
             }
             var color = material.color;
             if (material.name != expectedMaterial ||

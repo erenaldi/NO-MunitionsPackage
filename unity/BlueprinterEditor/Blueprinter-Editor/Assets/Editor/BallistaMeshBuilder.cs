@@ -36,12 +36,6 @@ namespace Erenaldi.Ballista
                 throw new System.InvalidOperationException("Required URP shaders are unavailable");
             }
 
-            var body = new MaterialClass("MatBallistaBody", shader,
-                new Color(0.122139f, 0.14996f, 0.162029f), 0.22f, 0.42f);
-            var panel = new MaterialClass("MatBallistaPanel", shader,
-                new Color(0.076185f, 0.099899f, 0.114435f), 0.24f, 0.44f);
-            var wing = new MaterialClass("MatBallistaWing", shader,
-                new Color(0.174647f, 0.208637f, 0.226966f), 0.22f, 0.42f);
             var hardware = new MaterialClass("MatBallistaHardware", shader,
                 new Color(0.029557f, 0.043735f, 0.05448f), 0.35f, 0.45f);
             var edge = new MaterialClass("MatBallistaEdge", shader,
@@ -59,9 +53,9 @@ namespace Erenaldi.Ballista
 
             var materials = new Dictionary<string, Material>
             {
-                { "body", body.Create() },
-                { "panel", panel.Create() },
-                { "wing", wing.Create() },
+                { "body", BallistaTexturedMaterialBuilder.CreateBodyMaterial(OutputRoot, "MatBallistaBody") },
+                { "panel", BallistaTexturedMaterialBuilder.CreatePanelMaterial(OutputRoot, "MatBallistaPanel") },
+                { "wing", BallistaTexturedMaterialBuilder.CreateWingMaterial(OutputRoot, "MatBallistaWing") },
                 { "hardware", hardware.Create() },
                 { "edge", edge.Create() },
                 { "glass", glass.Create() },
@@ -91,7 +85,14 @@ namespace Erenaldi.Ballista
             var pylonMesh = BuildPylonMesh();
             foreach (var material in materials.Values)
             {
-                SaveAsset(material, material.name + ".mat");
+                // Textured body/panel/wing materials are saved by
+                // BallistaTexturedMaterialBuilder; re-saving would destroy them.
+                if (material.name != "MatBallistaBody" &&
+                    material.name != "MatBallistaPanel" &&
+                    material.name != "MatBallistaWing")
+                {
+                    SaveAsset(material, material.name + ".mat");
+                }
             }
             SaveAsset(pylonMesh, "MeshBallistaPylon.asset");
             foreach (var pair in meshes.Keys)
@@ -195,9 +196,14 @@ namespace Erenaldi.Ballista
             var mesh = Object.Instantiate(source);
             mesh.name = meshName;
             mesh.RecalculateNormals();
-            mesh.RecalculateBounds();
-            Debug.Log($"[Ballista] Imported {path}: {mesh.vertices.Length} vertices, bounds {mesh.bounds}");
-            return mesh;
+            // Every group gets the seam-deduplicated full-2pi cylindrical
+            // unwrap (z-axis, v 0 tail .. 1 nose) so the textured materials
+            // can paint panel lines over the whole airframe.
+            var unwrapped = Erenaldi.Kris.KrisMeshBuilder.GenerateCylindricalUVs(mesh);
+            Object.DestroyImmediate(mesh);
+            unwrapped.RecalculateBounds();
+            Debug.Log($"[Ballista] Imported {path}: {unwrapped.vertices.Length} vertices, bounds {unwrapped.bounds}");
+            return unwrapped;
         }
 
         private static int GetTriangleCount(Mesh mesh)

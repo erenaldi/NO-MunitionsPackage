@@ -46,13 +46,16 @@ the clone pipeline — see `docs/PHASE2A_FINDINGS.md`.
    - Do NOT add scripts, `NetworkIdentity`, particle systems, or audio — the clone
      already carries all gameplay components; extra components are ignored or can
      break the transplant.
-3. Materials: the Halberd ships original vanilla-style textures built by
-   `HalberdTexturedMaterialBuilder.cs` (albedo + packed metallic/smoothness,
-   panel seams, rivets, stencil text, ochre accent — palette measured in
-   `docs/TEXTURE_STYLE_FINDINGS.md`). Intakes/fins/hardware share a neutral
-   microsurface texture tinted per part; nozzles stay flat-color. Kris and
-   Ballista still use flat URP materials; their texture passes follow the
-   same findings doc. Do not bake vanilla textures into any shipped asset.
+3. Materials: the Halberd, Kris, and Ballista ship original vanilla-style
+   textures (`HalberdTexturedMaterialBuilder.cs`, `KrisTexturedMaterialBuilder.cs`,
+   `BallistaTexturedMaterialBuilder.cs` — albedo + packed metallic/smoothness,
+   panel seams, rivets, geometric service marks; palette measured in
+   `docs/TEXTURE_STYLE_FINDINGS.md`). Halberd/Kris bodies use a seam-deduplicated
+   full-2π cylindrical unwrap; Ballista groups share the same unwrap via
+   `KrisMeshBuilder.GenerateCylindricalUVs`; Kris hardware/dark/gridfins/seeker
+   and Ballista hardware/edge/glass/nozzles stay flat-color (Kris seeker keeps
+   Complex Lit clearcoat). Markings carry no stencil text by user preference.
+   Do not bake vanilla textures into any shipped asset.
 4. Scale: `cad/generate_halberd_detailed.py` authors the Halberd directly at
    final game scale in millimeters. CAD +X is forward, +Z is dorsal, and +Y is
    lateral; `cad/export_halberd_unity_mesh.py` maps those axes to Unity +Z, +Y,

@@ -2,6 +2,15 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-13 (night) — Kris + Ballista texture passes; runtime validation green
+
+- Installed iteration-2 plugin (game had closed; SHA f9d0b8e2...). Launched to menu: `check_log.ps1` green — bundle loaded, Halberd/Kris/Ballista all transplanted 2/2 and registered; dumper v2 regenerated 29 OBJs + `missile-geometry.json` schema 2 with per-renderer material/texture bindings. Key runtime findings: Scythe `AAM2` binds **Weapons4** at runtime (offline prefab dump was ambiguous), Scimitar `AAM4`→`Missiles3` confirmed; Kris meshes ship no UVs pre-unwrap; `Erenaldi.*` dumps list our textures loaded.
+- Kris texture pass (`KrisTexturedMaterialBuilder.cs`): Missiles1-family light gray body (196) + sparse yellow-ochre ring (0.885-0.90) + tail/nose charcoal (53), 4 seam rings + flank axial lines + rivets, X-in-box service mark, packed MS; `KrisMeshBuilder` gained `GenerateCylindricalUVs` (seam-deduplicated full-2π, z-axis, v 0 tail → 1 nose) applied to the body only. Body material now texture-driven (white tint, `_METALLICSPECGLOSSMAP`); validator updated (`KrisMeshBuilder` body check + `MunitionsGeometryBundleBuilder.ValidateKrisRenderer` with new `IsKrisBodyLabel` helper covering `<root>` and rack `pylon/aam1`). `ExpectedVertexCount` 64388 → 64639 (+251 seam duplicates).
+- Ballista texture pass (`BallistaTexturedMaterialBuilder.cs`): Bombs1-family warm gray (182) + olive zone (0.30-0.62) + orange accent ring (0.80-0.815) + nose charcoal, panel/wing get their own subtle textures; all 24 groups now unwrap via `KrisMeshBuilder.GenerateCylindricalUVs` (z-axis) so the textured materials cover the airframe and folding wings; hardware/edge/glass/nozzle/recess/accent stay flat.
+- Gotchas fixed along the way: (a) `ValidateKrisRenderer` was rewritten through several bad edits — final form validates body structurally and keeps flat-color checks for Dark/GridFins/Seeker/Hardware; (b) Kris exact-vertex validator needed the +251 seam-duplicate allowance; (c) Unity batch runs can use a stale compiled assembly if launched immediately after editing `const` values — rerun before diagnosing.
+- Verified: headless `BuildBundle` (all 3 weapons) exit 0, Kris assembly-verify 64639/100328, bundle 40,832,363 B (21:59); `dotnet build` 0 errors; installed (SHA 5c3f3dde...); in-game launch + `check_log.ps1`: all 3 transplanted 2/2, registered, no errors. Game closed after validation.
+- Next: in-game visual pass by user (all 3 weapons now textured, no text anywhere); optional normal/AO maps; `TEXTURE_STYLE_FINDINGS.md` delta table can be updated after user review.
+
 ## 2026-09-13 (late) — Halberd texture iteration 2: no text, brighter, de-crowded
 
 - User feedback: remove all words from the texture; body looked crowded vs. Scythe/Scimitar while the booster looked sparse.
