@@ -1,0 +1,17 @@
+{
+  "input": "PL-10_Stencil_Revision.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "outputs": [
+    { "path": "PL-10_revision_stencil_view.png", "camera": { "direction": [-0.798636, -0.601815, -0.42] } },
+    { "path": "PL-10_revision_iso.png", "camera": { "direction": [-1, -1, 0.8] } },
+    { "path": "PL-10_revision_rear.png", "camera": { "direction": [1, 1, -1.6] } },
+    { "path": "PL-10_revision_side.png", "camera": { "direction": [-1, 0, 0] } },
+    { "path": "PL-10_quadrant_0.png", "camera": { "direction": [0.798636, 0.601815, 0] } },
+    { "path": "PL-10_quadrant_90.png", "camera": { "direction": [-0.601815, 0.798636, 0] } },
+    { "path": "PL-10_quadrant_180.png", "camera": { "direction": [-0.798636, -0.601815, 0] } },
+    { "path": "PL-10_quadrant_270.png", "camera": { "direction": [0.601815, -0.798636, 0] } },
+    { "path": "PL-10_revision_tail.png", "camera": { "direction": [0, 0, -1] } }
+  ],
+  "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+}

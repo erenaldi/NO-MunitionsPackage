@@ -1,0 +1,38 @@
+{
+  "id": "Erenaldi.MunitionsPackage",
+  "displayName": "Nuclear Option Munitions Package",
+  "description": "A Blueprinter addon containing additional munitions for Nuclear Option.",
+  "tags": [
+    "Weapons"
+  ],
+  "urls": [
+    {
+      "name": "info",
+      "url": "https://github.com/Erenaldi/NO-MunitionsPackage"
+    }
+  ],
+  "authors": [
+    "Erenaldi"
+  ],
+  "isClientOrServer": "Both",
+  "githubOwner": "Erenaldi",
+  "githubRepoName": "NO-MunitionsPackage",
+  "autoUpdateArtifacts": "True",
+  "artifacts": [
+    {
+      "type": "addOn",
+      "fileName": "MunitionsPackage_0.1.0.nobp",
+      "downloadUrl": "https://github.com/Erenaldi/NO-MunitionsPackage/releases/download/0.1.0/MunitionsPackage_0.1.0.nobp",
+      "gameVersion": "0.34.1",
+      "version": "0.1.0",
+      "category": "release",
+      "hash": "sha256:REPLACE_AFTER_BUILD",
+      "extends": {
+        "id": "com.nikkorap.blueprinter",
+        "version": "2.0.1"
+      },
+      "dependencies": [],
+      "incompatibilities": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "input": "PL-10_Exterior.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "outputs": [
+    { "path": "PL-10_baseline_stencil_view.png", "camera": { "direction": [-0.798636, -0.601815, -0.42] } }
+  ],
+  "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "input": "AGM-110_Ballista_Stowed.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Ballista_stowed_iso.png", "camera": { "direction": [1, -1, 0.7] } },
+      { "path": "Ballista_stowed_opposite.png", "camera": { "direction": [-1, 1, -0.55] } },
+      { "path": "Ballista_stowed_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Ballista_stowed_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Ballista_stowed_belly.png", "camera": { "direction": [0, 0, -1] } },
+      { "path": "Ballista_stowed_nose.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "Ballista_stowed_tail.png", "camera": { "direction": [-1, 0, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "assembly" }
+  },
+  {
+    "input": "AGM-110_Ballista_Deployed.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Ballista_deployed_iso.png", "camera": { "direction": [1, -1, 0.7] } },
+      { "path": "Ballista_deployed_opposite.png", "camera": { "direction": [-1, 1, -0.55] } },
+      { "path": "Ballista_deployed_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Ballista_deployed_belly.png", "camera": { "direction": [0, 0, -1] } },
+      { "path": "Ballista_deployed_side.png", "camera": { "direction": [0, -1, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "assembly" }
+  },
+  {
+    "input": "AGM-110_Ballista_Deployed.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Ballista_deployed_material.png", "camera": {"direction": [0.65,-1,0.85]}},
+      {"path": "Ballista_deployed_material_belly.png", "camera": {"direction": [-0.7,1,-1.1]}}
+    ],
+    "render": {"padding": 0.1, "sizeProfile": "assembly"}
+  },
+  {
+    "input": "AGM-110_Ballista_Stowed.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [{"path": "Ballista_stowed_material.png", "camera": {"direction": [0.65,-1,0.85]}}],
+    "render": {"padding": 0.1, "sizeProfile": "assembly"}
+  },
+  {
+    "input": "Ballista_Seeker_Review.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Ballista_seeker_detail.png", "camera": {"direction": [1,-0.65,0.45]}},
+      {"path": "Ballista_seeker_grazing.png", "camera": {"direction": [0.45,1,-0.35]}}
+    ],
+    "render": {"padding": 0.13, "sizeProfile": "diagnostic"}
+  },
+  {
+    "input": "Ballista_Propulsion_Review.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Ballista_propulsion_detail.png", "camera": {"direction": [-1,-0.65,0.5]}},
+      {"path": "Ballista_tail_opposite.png", "camera": {"direction": [-1,0.65,-0.5]}}
+    ],
+    "render": {"padding": 0.12, "sizeProfile": "diagnostic"}
+  },
+  {
+    "input": "Ballista_Propulsion_Section.step",
+    "mode": "view", "theme": "snapshot",
+    "outputs": [{"path": "Ballista_propulsion_section.png", "camera": {"direction": [-0.5,1,0.25]}}],
+    "render": {"padding": 0.12, "sizeProfile": "diagnostic"}
+  },
+  {
+    "input": "Ballista_Mount_Review.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Ballista_mount_detail.png", "camera": {"direction": [0.35,-1,0.9]}},
+      {"path": "Ballista_mount_opposite.png", "camera": {"direction": [-0.35,1,0.4]}}
+    ],
+    "render": {"padding": 0.12, "sizeProfile": "diagnostic"}
+  },
+  {
+    "input": "Ballista_Wing_Deployment_Review.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [{"path": "Ballista_wing_deployment.png", "camera": {"direction": [0,0,-1]}}],
+    "render": {"padding": 0.08, "sizeProfile": "assembly"}
+  },
+  {
+    "input": "Ballista_Wing_Root_Review.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Ballista_wing_root.png", "camera": {"direction": [0.7,-0.6,-1]}},
+      {"path": "Ballista_wing_root_grazing.png", "camera": {"direction": [-0.7,1,-0.3]}}
+    ],
+    "render": {"padding": 0.14, "sizeProfile": "diagnostic"}
+  },
+  {
+    "input": "Ballista_Wing_Recess_Review.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Ballista_wing_recess_smoothing.png", "camera": {"direction": [0.55,0.6,-1]}},
+      {"path": "Ballista_wing_recess_opposite.png", "camera": {"direction": [-0.55,-0.6,-0.8]}}
+    ],
+    "render": {"padding": 0.1, "sizeProfile": "assembly"}
+  }
+]

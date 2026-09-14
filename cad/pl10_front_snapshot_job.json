@@ -1,0 +1,25 @@
+[
+  {
+    "input": "PL-10_Front_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "PL-10_front_0.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "PL-10_front_90.png", "camera": { "direction": [0, 1, 0] } },
+      { "path": "PL-10_front_180.png", "camera": { "direction": [-1, 0, 0] } },
+      { "path": "PL-10_front_270.png", "camera": { "direction": [0, -1, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "PL-10_Seeker_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "PL-10_seeker_closeup.png", "camera": { "direction": [1, -1, 0.7] } },
+      { "path": "PL-10_seeker_opposite.png", "camera": { "direction": [-1, 1, 0.7] } },
+      { "path": "PL-10_seeker_end.png", "camera": { "direction": [0, 0, 1] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  }
+]

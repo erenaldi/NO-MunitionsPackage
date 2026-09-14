@@ -1,0 +1,37 @@
+{
+  "input": "IRM-S4_Kris.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "outputs": [
+    { "path": "IRM-S4_Kris_iso.png", "camera": "iso" },
+    {
+      "path": "IRM-S4_Kris_opposite.png",
+      "camera": { "direction": [-1, 1, -0.8] }
+    },
+    {
+      "path": "IRM-S4_Kris_side.png",
+      "camera": { "direction": [-1, 0, 0] }
+    },
+    {
+      "path": "IRM-S4_Kris_front.png",
+      "camera": { "direction": [-1, 0, 0] }
+    },
+    {
+      "path": "IRM-S4_Kris_top.png",
+      "camera": { "direction": [0, -1, 0] }
+    },
+    {
+      "path": "IRM-S4_Kris_nose.png",
+      "camera": { "direction": [0, 0, 1] }
+    },
+    {
+      "path": "IRM-S4_Kris_tail.png",
+      "camera": { "direction": [0, 0, -1] }
+    }
+  ],
+  "render": {
+    "viewLabels": true,
+    "padding": 0.1,
+    "sizeProfile": "diagnostic"
+  }
+}

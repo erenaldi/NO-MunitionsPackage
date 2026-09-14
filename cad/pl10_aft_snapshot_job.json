@@ -1,0 +1,11 @@
+{
+  "input": "PL-10_Aft_Review.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "outputs": [
+    { "path": "PL-10_aft_closeup.png", "camera": { "direction": [1, -1, -1.6] } },
+    { "path": "PL-10_aft_opposite.png", "camera": { "direction": [-1, 1, -1.6] } },
+    { "path": "PL-10_aft_end.png", "camera": { "direction": [0, 0, -1] } }
+  ],
+  "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+}

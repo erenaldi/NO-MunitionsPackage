@@ -1,0 +1,323 @@
+{
+  "JsonVersion": 6,
+  "MapKey": {
+    "Type": "None",
+    "Path": ""
+  },
+  "missionSettings": {
+    "description": "Erenaldi Munitions Proving Ground\n\nA deterministic, non-ending sandbox for the Nuclear Option Munitions Package. In single player, the mission pauses at the North Boscali Airbase loadout selector and resumes when you spawn the aircraft you configured. Named Primevan targets form close-air, BVR, area-ground, hardened-IADS, naval, and water-entry test zones. The remaining package weapons use these same zones as they are implemented. Restart the mission to restore targets and ammunition. The BepInEx munitions package is required on every multiplayer peer.",
+    "allowEventContent": false,
+    "Tags": [],
+    "playerMode": "SingleAndMultiplayer",
+    "allowRespawn": true,
+    "playerStartingRank": 5,
+    "rankMultiplier": 1.0,
+    "successfulSortieBonus": 0.0,
+    "nuclearEscalationThreshold": 0.0,
+    "strategicEscalationThreshold": 0.0,
+    "minRankTacticalWarhead": 0,
+    "minRankStrategicWarhead": 0,
+    "cameraStartPosition": {
+      "IsOverride": true,
+      "Value": {
+        "Position": { "x": 0.0, "y": 5000.0, "z": 35000.0 },
+        "Rotation": { "x": 0.0, "y": 1.0, "z": 0.0, "w": 0.0 }
+      }
+    },
+    "missionRoads": { "roads": [] },
+    "missionSeaLanes": { "roads": [] },
+    "wrecksMaxNumber": 100,
+    "wrecksDecayTime": 0.0
+  },
+  "environment": {
+    "timeOfDay": 10.0,
+    "timeFactor": 0.0,
+    "weatherIntensity": 0.0,
+    "cloudAltitude": 1800.0,
+    "windSpeed": 0.0,
+    "windTurbulence": 0.0,
+    "windHeading": 0.0,
+    "windRandomHeading": 0.0,
+    "moonPhase": 14.0
+  },
+  "aircraft": [
+    {
+      "type": "Fighter1",
+      "faction": "Primeva",
+      "UniqueName": "AIR-CLOSE-IR-TARGET",
+      "globalPosition": { "x": 0.0, "y": 5000.0, "z": 27000.0 },
+      "rotation": { "x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 },
+      "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "playerControlled": false,
+      "playerControlledPriority": 0,
+      "savedLoadout": { "Selected": [{ "Key": "gun_20mm_internal" }, { "Key": "" }, { "Key": "" }, { "Key": "" }] },
+      "livery": 0,
+      "liveryType": "Builtin",
+      "liveryName": "",
+      "fuel": 1.0,
+      "skill": 0.65,
+      "bravery": 1.0,
+      "startingSpeed": 190.0
+    },
+    {
+      "type": "Fighter1",
+      "faction": "Primeva",
+      "UniqueName": "AIR-CLOSE-IR-TARGET-02",
+      "globalPosition": { "x": -8000.0, "y": 5200.0, "z": 31000.0 },
+      "rotation": { "x": 0.0, "y": 0.7071068, "z": 0.0, "w": 0.7071068 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 },
+      "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "playerControlled": false,
+      "playerControlledPriority": 0,
+      "savedLoadout": { "Selected": [{ "Key": "gun_20mm_internal" }, { "Key": "" }, { "Key": "" }, { "Key": "" }] },
+      "livery": 0,
+      "liveryType": "Builtin",
+      "liveryName": "",
+      "fuel": 1.0,
+      "skill": 0.65,
+      "bravery": 1.0,
+      "startingSpeed": 190.0
+    },
+    {
+      "type": "Fighter1",
+      "faction": "Primeva",
+      "UniqueName": "AIR-CLOSE-IR-TARGET-03",
+      "globalPosition": { "x": 8000.0, "y": 5500.0, "z": 33000.0 },
+      "rotation": { "x": 0.0, "y": -0.7071068, "z": 0.0, "w": 0.7071068 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 },
+      "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "playerControlled": false,
+      "playerControlledPriority": 0,
+      "savedLoadout": { "Selected": [{ "Key": "gun_20mm_internal" }, { "Key": "" }, { "Key": "" }, { "Key": "" }] },
+      "livery": 0,
+      "liveryType": "Builtin",
+      "liveryName": "",
+      "fuel": 1.0,
+      "skill": 0.65,
+      "bravery": 1.0,
+      "startingSpeed": 190.0
+    },
+    {
+      "type": "Fighter1",
+      "faction": "Primeva",
+      "UniqueName": "AIR-CLOSE-IR-TARGET-04",
+      "globalPosition": { "x": 0.0, "y": 6000.0, "z": 39000.0 },
+      "rotation": { "x": 0.0, "y": 1.0, "z": 0.0, "w": 0.0 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 },
+      "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "playerControlled": false,
+      "playerControlledPriority": 0,
+      "savedLoadout": { "Selected": [{ "Key": "gun_20mm_internal" }, { "Key": "" }, { "Key": "" }, { "Key": "" }] },
+      "livery": 0,
+      "liveryType": "Builtin",
+      "liveryName": "",
+      "fuel": 1.0,
+      "skill": 0.65,
+      "bravery": 1.0,
+      "startingSpeed": 190.0
+    },
+    {
+      "type": "Fighter1",
+      "faction": "Primeva",
+      "UniqueName": "AIR-BVR-RADAR-TARGET",
+      "globalPosition": { "x": -45000.0, "y": 7000.0, "z": -45000.0 },
+      "rotation": { "x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 },
+      "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "playerControlled": false,
+      "playerControlledPriority": 0,
+      "savedLoadout": { "Selected": [{ "Key": "gun_20mm_internal" }, { "Key": "" }, { "Key": "AAM1_single" }, { "Key": "AAM2_single" }] },
+      "livery": 0,
+      "liveryType": "Builtin",
+      "liveryName": "",
+      "fuel": 1.0,
+      "skill": 0.5,
+      "bravery": 0.5,
+      "startingSpeed": 200.0
+    }
+  ],
+  "vehicles": [
+    {
+      "type": "AFV8_IFV", "faction": "Primeva", "UniqueName": "GROUND-AREA-IFV-01",
+      "globalPosition": { "x": 13573.8438, "y": 141.3623, "z": 18319.2012 },
+      "rotation": { "x": -0.009371684, "y": 0.9990672, "z": -0.00242791022, "w": 0.042084258 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "holdPosition": true, "skill": 0.2
+    },
+    {
+      "type": "AFV8_IFV", "faction": "Primeva", "UniqueName": "GROUND-AREA-IFV-02",
+      "globalPosition": { "x": 13217.1387, "y": 141.6293, "z": 19234.8027 },
+      "rotation": { "x": 0.0, "y": 1.0, "z": 0.0, "w": 0.0 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "holdPosition": true, "skill": 0.2
+    },
+    {
+      "type": "AFV8_IFV", "faction": "Primeva", "UniqueName": "GROUND-AREA-IFV-03",
+      "globalPosition": { "x": 13814.5566, "y": 144.308929, "z": 20417.5547 },
+      "rotation": { "x": 0.0, "y": 1.0, "z": 0.0, "w": 0.0 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "holdPosition": true, "skill": 0.2
+    },
+    {
+      "type": "HLT-R", "faction": "Primeva", "UniqueName": "IADS-HARD-SEARCH-RADAR",
+      "globalPosition": { "x": 27790.8, "y": 135.176056, "z": -18987.375 },
+      "rotation": { "x": -0.00005510115, "y": 0.0500380769, "z": 0.000196800509, "w": 0.9987473 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "holdPosition": true, "skill": 0.5
+    },
+    {
+      "type": "RadarSAM1", "faction": "Primeva", "UniqueName": "IADS-HARD-RADAR-SAM",
+      "globalPosition": { "x": 27698.9766, "y": 136.243469, "z": -19131.95 },
+      "rotation": { "x": 0.00128543261, "y": -0.668809056, "z": 0.007417964, "w": 0.743396163 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "holdPosition": true, "skill": 0.5
+    }
+  ],
+  "ships": [
+    {
+      "type": "Corvette1", "faction": "Primeva", "UniqueName": "NAVAL-WATER-CORVETTE",
+      "globalPosition": { "x": 6094.5166, "y": 7.747925, "z": -37409.9961 },
+      "rotation": { "x": 0.0, "y": 0.73177886, "z": 0.0, "w": 0.681542158 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "holdPosition": true, "skill": 0.3
+    }
+  ],
+  "buildings": [
+    {
+      "type": "pillbox", "faction": "Primeva", "UniqueName": "IADS-HARD-PILLBOX-01",
+      "globalPosition": { "x": 27875.52, "y": 131.203491, "z": -18043.1445 },
+      "rotation": { "x": 0.0, "y": 0.0296589378, "z": 0.0, "w": 0.9995601 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "capturable": false, "Airbase": "", "factoryOptions": { "productionType": "", "productionTime": 900.0 }
+    },
+    {
+      "type": "pillbox", "faction": "Primeva", "UniqueName": "IADS-HARD-PILLBOX-02",
+      "globalPosition": { "x": 27398.9961, "y": 136.651611, "z": -19489.5234 },
+      "rotation": { "x": 0.0, "y": -0.5639611, "z": 0.0, "w": 0.825801432 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "capturable": false, "Airbase": "", "factoryOptions": { "productionType": "", "productionTime": 900.0 }
+    },
+    {
+      "type": "radarStation1", "faction": "Primeva", "UniqueName": "IADS-HARD-FIXED-RADAR",
+      "globalPosition": { "x": 29597.5938, "y": 665.524658, "z": -33331.1641 },
+      "rotation": { "x": 0.0, "y": 0.055800207, "z": 0.0, "w": 0.998442 },
+      "CaptureStrength": { "IsOverride": false, "Value": 0.0 }, "CaptureDefense": { "IsOverride": false, "Value": 0.0 },
+      "capturable": false, "Airbase": "", "factoryOptions": { "productionType": "", "productionTime": 900.0 }
+    }
+  ],
+  "scenery": [],
+  "containers": [],
+  "missiles": [],
+  "pilots": [],
+  "factions": [
+    {
+      "factionName": "Boscali", "preventJoin": false, "preventDonation": false,
+      "supplies": [
+        { "UnitType": "trainer", "Count": 20 },
+        { "UnitType": "AttackHelo1", "Count": 20 },
+        { "UnitType": "Fighter1", "Count": 20 },
+        { "UnitType": "Multirole1", "Count": 20 },
+        { "UnitType": "SmallFighter1", "Count": 20 },
+        { "UnitType": "EW1", "Count": 20 },
+        { "UnitType": "Darkreach", "Count": 20 }
+      ],
+      "startingBalance": 100000.0, "playerJoinAllowance": 100000.0, "playerTaxRate": 0.0, "regularIncome": 1000.0,
+      "excessFundsDistributePercent": 1.0, "killReward": 0.0, "airSkillMultiplier": 1.0, "surfaceSkillMultiplier": 1.0,
+      "startingWarheads": 0, "reserveWarheads": 0, "reserveAirframes": 20, "extraReservesPerPlayer": 20,
+      "AIAircraftLimit": 0, "reduceAIPerFriendlyPlayer": 0.0, "addAIPerEnemyPlayer": 0.0,
+      "cameraStartPosition": { "IsOverride": true, "Value": { "Position": { "x": 0.0, "y": 5000.0, "z": 35000.0 }, "Rotation": { "x": 0.0, "y": 1.0, "z": 0.0, "w": 0.0 } } }
+    },
+    {
+      "factionName": "Primeva", "preventJoin": true, "preventDonation": true, "supplies": [],
+      "startingBalance": 0.0, "playerJoinAllowance": 0.0, "playerTaxRate": 0.0, "regularIncome": 0.0,
+      "excessFundsDistributePercent": 0.0, "killReward": 0.0, "airSkillMultiplier": 1.0, "surfaceSkillMultiplier": 1.0,
+      "startingWarheads": 0, "reserveWarheads": 0, "reserveAirframes": 0, "extraReservesPerPlayer": 0,
+      "AIAircraftLimit": 0, "reduceAIPerFriendlyPlayer": 0.0, "addAIPerEnemyPlayer": 0.0,
+      "cameraStartPosition": { "IsOverride": false, "Value": { "Position": { "x": 0.0, "y": 0.0, "z": 0.0 }, "Rotation": { "x": 0.0, "y": 0.0, "z": 0.0, "w": 0.0 } } }
+    }
+  ],
+  "airbases": [
+    {
+      "IsOverride": true, "faction": "Boscali", "UniqueName": "North Boscali Airbase", "DisplayName": "North Boscali Airbase",
+      "Disabled": false, "Capturable": false, "CaptureDefense": 10.0, "CaptureRange": 1000.0,
+      "Center": { "x": 0.0, "y": 0.0, "z": 0.0 }, "SelectionPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+      "Tower": "", "VerticalLandingPoints": [], "ServicePoints": [], "roads": {}, "runways": []
+    }
+  ],
+  "objectives": [
+    {
+      "Type": "None", "UniqueName": "Mission Start", "Faction": "", "DisplayName": "Erenaldi Proving Ground", "Hidden": true,
+      "Outcomes": ["START-ZONE-LABELS"]
+    },
+    {
+      "Type": "None", "UniqueName": "REVEAL-ALL-TARGETS", "Faction": "Boscali", "DisplayName": "", "Hidden": true,
+      "Outcomes": ["APPLY-REVEAL-ALL-TARGETS"]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "LABEL-AIR-CLOSE", "Faction": "Boscali", "DisplayName": "AIR-CLOSE", "Hidden": false, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": 0.0, "y": 5500.0, "z": 33000.0 }, "Range": 1.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "LABEL-AIR-BVR", "Faction": "Boscali", "DisplayName": "AIR-BVR", "Hidden": false, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": -45000.0, "y": 7000.0, "z": -45000.0 }, "Range": 1.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "LABEL-GROUND-AREA", "Faction": "Boscali", "DisplayName": "GROUND-AREA", "Hidden": false, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": 13500.0, "y": 142.0, "z": 19500.0 }, "Range": 1.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "LABEL-IADS-HARD", "Faction": "Boscali", "DisplayName": "IADS-HARD", "Hidden": false, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": 27800.0, "y": 136.0, "z": -19000.0 }, "Range": 1.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "LABEL-NAVAL-WATER", "Faction": "Boscali", "DisplayName": "NAVAL-WATER", "Hidden": false, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": 6094.5166, "y": 7.747925, "z": -37409.9961 }, "Range": 1.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "PATROL-AIR-CLOSE", "Faction": "Primeva", "DisplayName": "", "Hidden": true, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": 0.0, "y": 5000.0, "z": 27000.0 }, "Range": 5000.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "PATROL-AIR-CLOSE-02", "Faction": "Primeva", "DisplayName": "", "Hidden": true, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": -8000.0, "y": 5200.0, "z": 31000.0 }, "Range": 5000.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "PATROL-AIR-CLOSE-03", "Faction": "Primeva", "DisplayName": "", "Hidden": true, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": 8000.0, "y": 5500.0, "z": 33000.0 }, "Range": 5000.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "PATROL-AIR-CLOSE-04", "Faction": "Primeva", "DisplayName": "", "Hidden": true, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": 0.0, "y": 6000.0, "z": 39000.0 }, "Range": 5000.0 }]
+    },
+    {
+      "Type": "ReachWaypoints", "UniqueName": "PATROL-AIR-BVR", "Faction": "Primeva", "DisplayName": "", "Hidden": true, "Outcomes": [],
+      "completeOrder": "CompleteAll", "completeSomePercent": 1.0, "completeOnEnterRange": false,
+      "waypoints": [{ "Position": { "x": -45000.0, "y": 7000.0, "z": -45000.0 }, "Range": 5000.0 }]
+    }
+  ],
+  "outcomes": [
+    {
+      "Type": "StartObjective", "UniqueName": "START-ZONE-LABELS",
+      "objectivesToStart": ["LABEL-AIR-CLOSE", "LABEL-AIR-BVR", "LABEL-GROUND-AREA", "LABEL-IADS-HARD", "LABEL-NAVAL-WATER", "PATROL-AIR-CLOSE", "PATROL-AIR-CLOSE-02", "PATROL-AIR-CLOSE-03", "PATROL-AIR-CLOSE-04", "PATROL-AIR-BVR", "REVEAL-ALL-TARGETS"]
+    },
+    {
+      "Type": "RevealUnit", "UniqueName": "APPLY-REVEAL-ALL-TARGETS",
+      "UnitsToReveal": [
+        "AIR-CLOSE-IR-TARGET", "AIR-CLOSE-IR-TARGET-02", "AIR-CLOSE-IR-TARGET-03", "AIR-CLOSE-IR-TARGET-04", "AIR-BVR-RADAR-TARGET",
+        "GROUND-AREA-IFV-01", "GROUND-AREA-IFV-02", "GROUND-AREA-IFV-03",
+        "IADS-HARD-SEARCH-RADAR", "IADS-HARD-RADAR-SAM", "IADS-HARD-PILLBOX-01", "IADS-HARD-PILLBOX-02", "IADS-HARD-FIXED-RADAR",
+        "NAVAL-WATER-CORVETTE"
+      ]
+    }
+  ]
+}

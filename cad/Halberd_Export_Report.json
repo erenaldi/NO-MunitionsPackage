@@ -1,0 +1,230 @@
+{
+  "source": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\AAM-44_Halberd_Detailed.step",
+  "groups": {
+    "body": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_Body.obj",
+      "labels": [
+        "ramjet_body",
+        "forward_body",
+        "seeker_section",
+        "radome"
+      ],
+      "vertices": 2349,
+      "triangles": 4684,
+      "bounds": [
+        [
+          -0.1004901482134973,
+          -0.1005,
+          -0.3367
+        ],
+        [
+          0.10048875423193247,
+          0.10049594366778107,
+          1.6835000000000016
+        ]
+      ]
+    },
+    "intakes": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_Intakes.obj",
+      "labels": [
+        "intake_ramp_1",
+        "intake_lip_1",
+        "intake_duct_1",
+        "intake_cheek_1_1",
+        "intake_cheek_1_2",
+        "intake_ramp_2",
+        "intake_lip_2",
+        "intake_duct_2",
+        "intake_cheek_2_1",
+        "intake_cheek_2_2",
+        "intake_ramp_3",
+        "intake_lip_3",
+        "intake_duct_3",
+        "intake_cheek_3_1",
+        "intake_cheek_3_2"
+      ],
+      "vertices": 393,
+      "triangles": 750,
+      "bounds": [
+        [
+          -0.14336254469030052,
+          -0.149375,
+          0.03
+        ],
+        [
+          0.14336254469030052,
+          0.09893621130596429,
+          0.79
+        ]
+      ]
+    },
+    "sustainer_fins": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_SustainerFins.obj",
+      "labels": [
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3"
+      ],
+      "vertices": 252,
+      "triangles": 492,
+      "bounds": [
+        [
+          -0.15095636945092344,
+          -0.17200000000000001,
+          -0.3
+        ],
+        [
+          0.15095636945092344,
+          0.08946410161513776,
+          0.13
+        ]
+      ]
+    },
+    "hardware": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_Hardware.obj",
+      "labels": [
+        "stage_joint_band",
+        "ramjet_joint_band",
+        "forward_joint_band",
+        "dorsal_launch_rail",
+        "suspension_lug_1",
+        "suspension_lug_2",
+        "dorsal_wiring_conduit"
+      ],
+      "vertices": 666,
+      "triangles": 1304,
+      "bounds": [
+        [
+          -0.10448830663917358,
+          -0.1045,
+          -0.3087
+        ],
+        [
+          0.10448830663917358,
+          0.1085,
+          1.064
+        ]
+      ]
+    },
+    "sustainer_nozzle": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_SustainerNozzle.obj",
+      "labels": [
+        "sustainer_nozzle"
+      ],
+      "vertices": 420,
+      "triangles": 840,
+      "bounds": [
+        [
+          -0.10548819474098385,
+          -0.1055,
+          -0.3367
+        ],
+        [
+          0.10548819474098385,
+          0.10545278160590962,
+          -0.3087
+        ]
+      ]
+    },
+    "booster_body": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_BoosterBody.obj",
+      "labels": [
+        "booster_body",
+        "booster_forward_collar",
+        "booster_nozzle_outer"
+      ],
+      "vertices": 2476,
+      "triangles": 5154,
+      "bounds": [
+        [
+          -0.10648808284279411,
+          -0.1065,
+          -1.6835
+        ],
+        [
+          0.10648808284279411,
+          0.10645233403819311,
+          -0.3367
+        ]
+      ]
+    },
+    "booster_fins": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_BoosterFins.obj",
+      "labels": [
+        "booster_fin_1",
+        "booster_fin_root_1",
+        "booster_fin_2",
+        "booster_fin_root_2",
+        "booster_fin_3",
+        "booster_fin_root_3"
+      ],
+      "vertices": 369,
+      "triangles": 714,
+      "bounds": [
+        [
+          -0.19179353802500765,
+          -0.21800000000000003,
+          -1.5150000000000001
+        ],
+        [
+          0.19179353802500765,
+          0.11419615242270667,
+          -0.61
+        ]
+      ]
+    },
+    "booster_nozzle": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_BoosterNozzle.obj",
+      "labels": [
+        "booster_nozzle_inner"
+      ],
+      "vertices": 3376,
+      "triangles": 6752,
+      "bounds": [
+        [
+          -0.07999104814482187,
+          -0.08,
+          -1.6835
+        ],
+        [
+          0.07999104814482187,
+          0.07996419458268028,
+          -1.51
+        ]
+      ]
+    },
+    "booster_nozzle_recess": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\HalberdMod\\Models\\Halberd_BoosterNozzleRecess.obj",
+      "labels": [
+        "booster_nozzle_recess"
+      ],
+      "vertices": 210,
+      "triangles": 416,
+      "bounds": [
+        [
+          -0.021997538239826014,
+          -0.022,
+          -1.5865
+        ],
+        [
+          0.021997538239826014,
+          0.02199015351023708,
+          -1.5835000000000001
+        ]
+      ]
+    }
+  },
+  "assembly": {
+    "length": 3.3670000000000018,
+    "bodyRadius": 0.10050000002860991,
+    "maximumRadius": 0.2180825531765437,
+    "seamZ": -0.3367,
+    "center": [
+      0.0,
+      -0.05190192378864668,
+      7.771561172376096e-16
+    ],
+    "triangles": 21106,
+    "triangleBudget": 75000
+  }
+}

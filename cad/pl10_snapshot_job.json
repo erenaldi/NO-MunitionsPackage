@@ -1,0 +1,14 @@
+{
+  "input": "PL-10_Exterior.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "outputs": [
+    { "path": "PL-10_iso.png", "camera": { "direction": [1, -1, 0.55] } },
+    { "path": "PL-10_opposite.png", "camera": { "direction": [-1, 1, -0.55] } },
+    { "path": "PL-10_side.png", "camera": { "direction": [-1, 0, 0] } },
+    { "path": "PL-10_top.png", "camera": { "direction": [0, -1, 0] } },
+    { "path": "PL-10_nose.png", "camera": { "direction": [0, 0, 1] } },
+    { "path": "PL-10_tail.png", "camera": { "direction": [0, 0, -1] } }
+  ],
+  "render": { "viewLabels": true, "padding": 0.1, "sizeProfile": "diagnostic" }
+}

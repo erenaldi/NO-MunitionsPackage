@@ -1,0 +1,26 @@
+# Blueprinter build artifacts
+dist/
+build/
+*.nobp
+__pycache__/
+*.pyc
+bin/
+obj/
+
+# Local game exports and Unity-generated data
+AssetRipperExport/
+_donotship/
+Library/
+Logs/
+Temp/
+UserSettings/
+
+# Editors and operating systems
+.idea/
+.vs/
+.vscode/
+*.user
+*.suo
+*.user.props
+Thumbs.db
+.DS_Store

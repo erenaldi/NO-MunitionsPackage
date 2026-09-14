@@ -1,0 +1,59 @@
+[
+  {
+    "input": "IRM-S4_Kris_PL10_Hybrid.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Kris_hybrid_iso.png", "camera": { "direction": [-1, -1, 0.8] } },
+      { "path": "Kris_hybrid_opposite.png", "camera": { "direction": [1, 1, -0.8] } },
+      { "path": "Kris_hybrid_side.png", "camera": { "direction": [-1, 0, 0] } },
+      { "path": "Kris_hybrid_end.png", "camera": { "direction": [0, 0, -1] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "IRM-S4_Kris_Hybrid_Aft_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Kris_hybrid_aft_closeup.png", "camera": { "direction": [1, -1, -1.6] } },
+      { "path": "Kris_hybrid_aft_opposite.png", "camera": { "direction": [-1, 1, -1.6] } },
+      { "path": "Kris_hybrid_aft_top.png", "camera": { "direction": [0, 0, 1] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "IRM-S4_Kris_Hybrid_Aft_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Kris_housing_example_face.png", "camera": { "direction": [0, 1, 0.2] } },
+      { "path": "Kris_housing_example_oblique.png", "camera": { "direction": [0.45, 1, 0.35] } },
+      { "path": "Kris_housing_example_grazing.png", "camera": { "direction": [1, 0.28, 0.18] } },
+      { "path": "Kris_housing_opposite_rendered.png", "camera": { "direction": [0, -1, 0.2] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "Kris_Grid_Fin_Prototype.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Kris_fin_prototype_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Kris_fin_prototype_oblique.png", "camera": { "direction": [1, -0.3, 1] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "Kris_Hybrid_Seeker_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Kris_seeker_gloss.png", "camera": { "direction": [1, -1, 0.7] } },
+      { "path": "Kris_seeker_gloss_opposite.png", "camera": { "direction": [-1, 1, 0.7] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  }
+]

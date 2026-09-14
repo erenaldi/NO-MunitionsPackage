@@ -1,0 +1,32 @@
+{
+  "source": "First image in user's latest message: broadside render, 500 x 286 pixels",
+  "method": "Manual visual trace from displayed attachment, NOT pixel-extracted segmentation. Approximate edges; original image bytes unavailable.",
+  "uncertainty_pixels": 3,
+  "canvas": [500, 286],
+  "axis": [[28, 136], [484, 137]],
+  "silhouette_polygons": {
+    "body": [[28,128],[34,126],[70,125],[101,126],[110,125],[455,125],[469,127],[479,129],[483,133],[484,139],[482,144],[476,147],[461,149],[118,147],[108,148],[73,146],[31,146],[26,141],[28,136]],
+    "upper_strake": [[143,121],[277,121],[284,127],[281,129],[144,129]],
+    "lower_strake": [[145,145],[284,145],[277,152],[143,152]],
+    "upper_near_tail": [[25,106],[51,106],[59,128],[36,128],[20,113],[28,113]],
+    "lower_near_tail": [[35,145],[59,145],[50,168],[25,168],[28,161],[20,161]],
+    "upper_far_tail": [[56,126],[71,112],[84,112],[69,128]],
+    "lower_far_tail": [[56,146],[71,162],[83,162],[67,146]],
+    "forward_strip": [[417,121],[442,121],[447,126],[416,126]],
+    "lower_forward_strip": [[422,146],[449,146],[444,153],[429,153]]
+  },
+  "feature_lines": {
+    "aft_joint": [[73,128],[73,145]],
+    "rear_body_joint": [[106,126],[106,147]],
+    "forward_joint": [[311,127],[311,147]],
+    "nose_collar": [[459,128],[462,135],[461,143],[458,148]],
+    "near_strake_root": [[145,145],[277,145]],
+    "near_dark_inset": [[406,135],[412,135],[412,140],[406,140],[406,135]]
+  },
+  "notes": [
+    "Body shadows and painted markings excluded from silhouette.",
+    "The rear oblique attachment is an independent visual check for stepped fins, not a calibrated orthographic trace.",
+    "Camera fit is approximate; no nonuniform image warp or per-feature alignment is permitted.",
+    "Similarity scores compare a manual interpretation, not original source pixels."
+  ]
+}

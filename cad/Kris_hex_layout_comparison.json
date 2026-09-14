@@ -1,0 +1,110 @@
+{
+  "criterion": "Shortlist six layouts with fewest sub-15% fragments and largest minimum retained cells; select least partial-cell area variation within that shortlist, checked visually.",
+  "candidate_count": 1584,
+  "baseline": {
+    "clear_mm": 16,
+    "scale": 1.0,
+    "pitch_mm": 18,
+    "orientation_deg": 0,
+    "phase_x": 0,
+    "phase_y": 0,
+    "cells": 45,
+    "full_cells": 23,
+    "slivers_below_15_percent": 4,
+    "smallest_cell_fraction": 0.030019685143166882,
+    "partial_variance": 0.09043849462728391
+  },
+  "selected": {
+    "clear_mm": 26.75,
+    "scale": 1.671875,
+    "pitch_mm": 28.75,
+    "orientation_deg": 0,
+    "phase_x": 0.5625,
+    "phase_y": 0.5,
+    "cells": 19,
+    "full_cells": 6,
+    "slivers_below_15_percent": 0,
+    "smallest_cell_fraction": 0.18573242088007413,
+    "partial_variance": 0.06115000038741773
+  },
+  "top_six": [
+    {
+      "clear_mm": 24.75,
+      "scale": 1.546875,
+      "pitch_mm": 26.75,
+      "orientation_deg": 0,
+      "phase_x": 0.0,
+      "phase_y": 0,
+      "cells": 23,
+      "full_cells": 7,
+      "slivers_below_15_percent": 0,
+      "smallest_cell_fraction": 0.1878880120330048,
+      "partial_variance": 0.0953119526330832
+    },
+    {
+      "clear_mm": 24.5,
+      "scale": 1.53125,
+      "pitch_mm": 26.5,
+      "orientation_deg": 0,
+      "phase_x": 0.0625,
+      "phase_y": 0,
+      "cells": 23,
+      "full_cells": 9,
+      "slivers_below_15_percent": 0,
+      "smallest_cell_fraction": 0.18742321878098728,
+      "partial_variance": 0.07248396526509071
+    },
+    {
+      "clear_mm": 26.75,
+      "scale": 1.671875,
+      "pitch_mm": 28.75,
+      "orientation_deg": 0,
+      "phase_x": 0.5625,
+      "phase_y": 0.5,
+      "cells": 19,
+      "full_cells": 6,
+      "slivers_below_15_percent": 0,
+      "smallest_cell_fraction": 0.18573242088007413,
+      "partial_variance": 0.06115000038741773
+    },
+    {
+      "clear_mm": 26.5,
+      "scale": 1.65625,
+      "pitch_mm": 28.5,
+      "orientation_deg": 0,
+      "phase_x": 0.625,
+      "phase_y": 0.5,
+      "cells": 19,
+      "full_cells": 6,
+      "slivers_below_15_percent": 0,
+      "smallest_cell_fraction": 0.18333383331532804,
+      "partial_variance": 0.06149664651122439
+    },
+    {
+      "clear_mm": 27.5,
+      "scale": 1.71875,
+      "pitch_mm": 29.5,
+      "orientation_deg": 0,
+      "phase_x": 0.4375,
+      "phase_y": 0.5,
+      "cells": 19,
+      "full_cells": 6,
+      "slivers_below_15_percent": 0,
+      "smallest_cell_fraction": 0.1794020461123964,
+      "partial_variance": 0.06833930385594852
+    },
+    {
+      "clear_mm": 27.25,
+      "scale": 1.703125,
+      "pitch_mm": 29.25,
+      "orientation_deg": 0,
+      "phase_x": 0.5,
+      "phase_y": 0.5,
+      "cells": 19,
+      "full_cells": 6,
+      "slivers_below_15_percent": 0,
+      "smallest_cell_fraction": 0.1764076279453193,
+      "partial_variance": 0.06395416487987525
+    }
+  ]
+}
