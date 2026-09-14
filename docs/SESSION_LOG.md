@@ -2,6 +2,15 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-14 (15:29) — Ballista intake relocation re-verified
+
+- Reconciled the previous conversational handoff against disk: the complete 200 mm forward intake relocation was already captured by the initial checkpoint `445c87c`; the worktree was clean before this journal entry. `cad/ballista_geometry.py:65` fixes the assembly center at X=-668 mm, and `docs/BALLISTA_UNITY_DELIVERY.md:159-177` records the translated ducts, frames, ramps, splitters, fasteners, hull cutouts, and healed former sockets.
+- Fresh `cadgen store why` checks report both generators current: stowed tree `e2e242e872b0` and deployed tree `15b254c5a6d7`, each with 37 components and 58 occurrences.
+- Fresh `python -u check_ballista.py` passed all pose/identity, intake placement/opening, healed-socket, and deployment-clearance checks. Current report evidence in `cad/Ballista_checks.json`: intake center X=-668 mm and +200 mm translation; 3 clear mouths per side; no body intrusion; 45-degree deployed pose; 1576.114 mm deployed span; minimum fixed-geometry clearance 4.288 mm and wing-pair clearance 16.576 mm.
+- Fresh `cadgen step inspect validate ... --every-placement` passed for both `cad/AGM-110_Ballista_Stowed.step` and `cad/AGM-110_Ballista_Deployed.step`: 58 occurrences, 37 prototypes, zero findings each. Reviewed `cad/Ballista_stowed_side.png`, `cad/Ballista_deployed_material_belly.png`, and `cad/Ballista_intake_detail.png`; no visible relocation regression found.
+- CAD Viewer reused at `http://127.0.0.1:3245/`, serving `cad/`. Unity export/import and in-game rack-fit validation remain outside this CAD-only milestone.
+- Next: user visual approval of the relocated Ballista intake position; after approval, proceed through the existing Unity delivery contract rather than changing the CAD master implicitly.
+
 ## 2026-09-13 (22:00) — Ballista palette revert + Halberd matte pass
 
 - User decisions: (1) Ballista keeps all texture detail but reverts fuselage/tail/wing underlying colors to the original STEP dark blue-gray family; (2) Halberd texture more matte, like Scythe/Scimitar.
