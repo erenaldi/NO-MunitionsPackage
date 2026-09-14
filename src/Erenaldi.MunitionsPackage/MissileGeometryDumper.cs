@@ -14,7 +14,7 @@ namespace Erenaldi.MunitionsPackage
 {
     internal sealed class MissileGeometryDumper
     {
-        private const int DumpSchemaVersion = 1;
+        private const int DumpSchemaVersion = 2;
 
         private static readonly string[] TargetMountKeys =
         {
@@ -24,7 +24,28 @@ namespace Erenaldi.MunitionsPackage
             "AGM_heavy_single",
             "P_KEM1_single",
             "AShM2_single",
-            "Erenaldi.AAM44_single"
+            "Erenaldi.AAM44_single",
+            "Erenaldi.IRMS4_single",
+            "AAM1_single",
+            "AAM3_single",
+            "AAM3_single_stealth",
+            "AGM2_6Pod",
+            "ARM1_single",
+            "ARM1_mini_single",
+            "AShM1_single",
+            "AShM3_single",
+            "BallisticMissile1_single",
+            "P_AAM2_single",
+            "IRMS1_single",
+            "bomb_125_single",
+            "bomb_250_single",
+            "bomb_500_single",
+            "bomb_glide1_single",
+            "bomb_penetrator1_mount",
+            "bomb_cluster1_single",
+            "bomb_demolition_internal",
+            "RocketPod1_single",
+            "Rocket2_4Pod"
         };
 
         private readonly ManualLogSource log;
@@ -92,6 +113,8 @@ namespace Erenaldi.MunitionsPackage
             }
 
             var meshes = new JArray();
+            var materials = new JArray();
+            var seenMaterials = new HashSet<string>();
             var objFileName = ObjFileName(mountKey);
             var objPath = Path.Combine(outputDirectory, objFileName);
             var mergedMin = new Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity);
@@ -124,7 +147,7 @@ namespace Erenaldi.MunitionsPackage
                     try
                     {
                         var matrix = prefab.transform.worldToLocalMatrix * renderer.transform.localToWorldMatrix;
-                        if (!TryReadMeshGeometry(mesh, out var vertices, out var submeshTriangles, out var triangleCount, out var readMethod, out var readError))
+                        if (!TryReadMeshGeometry(mesh, out var vertices, out var uvs, out var submeshTriangles, out var triangleCount, out var readMethod, out var readError))
                         {
                             log.LogWarning($"[Phase 3] Failed to read mesh '{mesh.name}' on '{mountKey}': {readError}");
                             meshes.Add(new JObject
@@ -138,6 +161,7 @@ namespace Erenaldi.MunitionsPackage
                             continue;
                         }
 
+                        var hasUVs = uvs != null && uvs.Length == vertices.Length;
                         var transformedVertices = new List<Vector3>(vertices.Length);
                         var min = new Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity);
                         var max = new Vector3(float.NegativeInfinity, float.NegativeInfinity, float.NegativeInfinity);
@@ -157,14 +181,31 @@ namespace Erenaldi.MunitionsPackage
                         {
                             writer.WriteLine(FormatVector(transformed));
                         }
+                        if (hasUVs)
+                        {
+                            foreach (var uv in uvs)
+                            {
+                                writer.WriteLine(FormatUV(uv));
+                            }
+                        }
                         foreach (var triangles in submeshTriangles)
                         {
                             for (var index = 0; index + 2 < triangles.Length; index += 3)
                             {
-                                writer.WriteLine(string.Format(CultureInfo.InvariantCulture, "f {0} {1} {2}",
-                                    triangles[index] + 1 + vertexOffset,
-                                    triangles[index + 1] + 1 + vertexOffset,
-                                    triangles[index + 2] + 1 + vertexOffset));
+                                if (hasUVs)
+                                {
+                                    writer.WriteLine(string.Format(CultureInfo.InvariantCulture, "f {0}/{0} {1}/{1} {2}/{2}",
+                                        triangles[index] + 1 + vertexOffset,
+                                        triangles[index + 1] + 1 + vertexOffset,
+                                        triangles[index + 2] + 1 + vertexOffset));
+                                }
+                                else
+                                {
+                                    writer.WriteLine(string.Format(CultureInfo.InvariantCulture, "f {0} {1} {2}",
+                                        triangles[index] + 1 + vertexOffset,
+                                        triangles[index + 1] + 1 + vertexOffset,
+                                        triangles[index + 2] + 1 + vertexOffset));
+                                }
                             }
                         }
 
@@ -181,11 +222,17 @@ namespace Erenaldi.MunitionsPackage
                             ["exported"] = true,
                             ["readMethod"] = readMethod,
                             ["vertexCount"] = vertices.Length,
+                            ["uvCount"] = hasUVs ? uvs.Length : 0,
+                            ["uvBounds"] = hasUVs ? UVBounds(uvs) : null,
                             ["triangleCount"] = triangleCount,
                             ["min"] = VectorToArray(min),
                             ["max"] = VectorToArray(max),
                             ["size"] = VectorToArray(max - min)
                         });
+                        foreach (var style in DumpMaterialStyles(renderer, seenMaterials))
+                        {
+                            materials.Add(style);
+                        }
                     }
                     catch (Exception exception)
                     {
@@ -226,6 +273,7 @@ namespace Erenaldi.MunitionsPackage
                 ["prefabName"] = prefab.name,
                 ["objFileName"] = objFileName,
                 ["meshes"] = meshes,
+                ["materials"] = materials,
                 ["mergedMin"] = exportedVertexCount > 0 ? VectorToArray(mergedMin) : null,
                 ["mergedMax"] = exportedVertexCount > 0 ? VectorToArray(mergedMax) : null,
                 ["mergedSize"] = exportedVertexCount > 0 ? VectorToArray(mergedSize) : null,
@@ -275,9 +323,10 @@ namespace Erenaldi.MunitionsPackage
             }
         }
 
-        private static bool TryReadMeshGeometry(Mesh mesh, out Vector3[] vertices, out int[][] submeshTriangles, out int triangleCount, out string readMethod, out string error)
+        private static bool TryReadMeshGeometry(Mesh mesh, out Vector3[] vertices, out Vector2[] uvs, out int[][] submeshTriangles, out int triangleCount, out string readMethod, out string error)
         {
             vertices = null;
+            uvs = null;
             submeshTriangles = null;
             triangleCount = 0;
             readMethod = null;
@@ -287,6 +336,7 @@ namespace Erenaldi.MunitionsPackage
                 if (mesh.isReadable)
                 {
                     vertices = mesh.vertices ?? Array.Empty<Vector3>();
+                    uvs = mesh.uv ?? Array.Empty<Vector2>();
                     submeshTriangles = new int[mesh.subMeshCount][];
                     triangleCount = 0;
                     for (var submesh = 0; submesh < mesh.subMeshCount; submesh++)
@@ -298,13 +348,99 @@ namespace Erenaldi.MunitionsPackage
                     readMethod = "cpu";
                     return true;
                 }
-                return TryReadGpuReadback(mesh, out vertices, out submeshTriangles, out triangleCount, out error);
+                if (!TryReadGpuReadback(mesh, out vertices, out submeshTriangles, out triangleCount, out error))
+                {
+                    return false;
+                }
+                if (TryReadGpuUVs(mesh, out var gpuUVs, out _))
+                {
+                    uvs = gpuUVs;
+                }
+                readMethod = "gpu";
+                return true;
             }
             catch (Exception exception)
             {
                 error = $"{exception.GetType().Name}: {exception.Message}";
                 return false;
             }
+        }
+
+        private static bool TryReadGpuUVs(Mesh mesh, out Vector2[] uvs, out string error)
+        {
+            uvs = null;
+            error = null;
+            GraphicsBuffer buffer = null;
+            try
+            {
+                var stream = mesh.GetVertexAttributeStream(VertexAttribute.TexCoord0);
+                if (stream < 0)
+                {
+                    error = "Mesh has no TexCoord0 attribute.";
+                    return false;
+                }
+                var offset = mesh.GetVertexAttributeOffset(VertexAttribute.TexCoord0);
+                var format = mesh.GetVertexAttributeFormat(VertexAttribute.TexCoord0);
+                var dimension = mesh.GetVertexAttributeDimension(VertexAttribute.TexCoord0);
+                if (dimension != 2)
+                {
+                    error = $"TexCoord0 dimension is {dimension}, expected 2.";
+                    return false;
+                }
+                if (format != VertexAttributeFormat.Float32 && format != VertexAttributeFormat.UNorm16 && format != VertexAttributeFormat.SNorm16)
+                {
+                    error = $"TexCoord0 format {format} is not supported.";
+                    return false;
+                }
+                var stride = mesh.GetVertexBufferStride(stream);
+                var elementSize = format == VertexAttributeFormat.Float32 ? sizeof(float) : sizeof(short);
+                if (stride <= 0 || offset < 0 || offset + 2 * elementSize > stride)
+                {
+                    error = $"Invalid UV buffer layout (stride {stride}, offset {offset}).";
+                    return false;
+                }
+                buffer = mesh.GetVertexBuffer(stream);
+                if (buffer == null)
+                {
+                    error = "UV vertex buffer could not be acquired.";
+                    return false;
+                }
+                var bytes = new byte[buffer.count * buffer.stride];
+                buffer.GetData(bytes);
+                uvs = new Vector2[mesh.vertexCount];
+                for (var index = 0; index < mesh.vertexCount; index++)
+                {
+                    var byteIndex = index * stride + offset;
+                    if (format == VertexAttributeFormat.Float32)
+                    {
+                        uvs[index] = new Vector2(
+                            BitConverter.ToSingle(bytes, byteIndex),
+                            BitConverter.ToSingle(bytes, byteIndex + sizeof(float)));
+                    }
+                    else
+                    {
+                        uvs[index] = new Vector2(
+                            ReadNormalizedShort(bytes, byteIndex, format == VertexAttributeFormat.SNorm16),
+                            ReadNormalizedShort(bytes, byteIndex + sizeof(short), format == VertexAttributeFormat.SNorm16));
+                    }
+                }
+                return true;
+            }
+            catch (Exception exception)
+            {
+                error = $"{exception.GetType().Name}: {exception.Message}";
+                return false;
+            }
+            finally
+            {
+                buffer?.Dispose();
+            }
+        }
+
+        private static float ReadNormalizedShort(byte[] bytes, int offset, bool signed)
+        {
+            var raw = BitConverter.ToInt16(bytes, offset);
+            return signed ? Mathf.Clamp(raw / 32767f, -1f, 1f) * 0.5f + 0.5f : Mathf.Clamp01(raw / 65535f);
         }
 
         private static bool TryReadGpuReadback(Mesh mesh, out Vector3[] vertices, out int[][] submeshTriangles, out int triangleCount, out string error)
@@ -441,6 +577,110 @@ namespace Erenaldi.MunitionsPackage
             var invalid = Path.GetInvalidFileNameChars();
             var safe = new string(baseName.Select(character => invalid.Contains(character) ? '_' : character).ToArray());
             return safe + ".geometry.obj";
+        }
+
+        private static JArray DumpMaterialStyles(Renderer renderer, HashSet<string> seenMaterials)
+        {
+            var styles = new JArray();
+            var shared = renderer.sharedMaterials ?? Array.Empty<Material>();
+            foreach (var material in shared)
+            {
+                if (material == null || !seenMaterials.Add(material.name + "#" + (material.shader != null ? material.shader.name : "")))
+                {
+                    continue;
+                }
+                var entry = new JObject { ["material"] = material.name };
+                try
+                {
+                    entry["shader"] = material.shader != null ? material.shader.name : null;
+                }
+                catch
+                {
+                    entry["shader"] = null;
+                }
+                try
+                {
+                    entry["color"] = ColorToJArray(material.color);
+                }
+                catch
+                {
+                }
+                try
+                {
+                    entry["baseColor"] = ColorToJArray(material.GetColor("_BaseColor"));
+                }
+                catch
+                {
+                }
+                foreach (var property in new[] { ("_Metallic", "metallic"), ("_Smoothness", "smoothness"), ("_Glossiness", "glossiness") })
+                {
+                    try
+                    {
+                        if (material.HasProperty(property.Item1))
+                        {
+                            entry[property.Item2] = material.GetFloat(property.Item1);
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+                var textures = new JObject();
+                try
+                {
+                    foreach (var propertyName in material.GetTexturePropertyNames())
+                    {
+                        var texture = material.GetTexture(propertyName);
+                        if (texture != null)
+                        {
+                            textures[propertyName] = new JObject
+                            {
+                                ["name"] = texture.name,
+                                ["width"] = texture.width,
+                                ["height"] = texture.height
+                            };
+                        }
+                    }
+                }
+                catch
+                {
+                }
+                entry["textures"] = textures;
+                styles.Add(entry);
+            }
+            return styles;
+        }
+
+        private static JArray ColorToJArray(Color color)
+        {
+            return new JArray(
+                (double)color.r,
+                (double)color.g,
+                (double)color.b,
+                (double)color.a);
+        }
+
+        private static JArray UVBounds(Vector2[] uvs)
+        {
+            var minU = float.PositiveInfinity;
+            var minV = float.PositiveInfinity;
+            var maxU = float.NegativeInfinity;
+            var maxV = float.NegativeInfinity;
+            foreach (var uv in uvs)
+            {
+                minU = Mathf.Min(minU, uv.x);
+                minV = Mathf.Min(minV, uv.y);
+                maxU = Mathf.Max(maxU, uv.x);
+                maxV = Mathf.Max(maxV, uv.y);
+            }
+            return new JArray(minU, minV, maxU, maxV);
+        }
+
+        private static string FormatUV(Vector2 value)
+        {
+            return string.Format(CultureInfo.InvariantCulture, "vt {0} {1}",
+                value.x.ToString("G9", CultureInfo.InvariantCulture),
+                value.y.ToString("G9", CultureInfo.InvariantCulture));
         }
 
         private static string FormatVector(Vector3 value)
