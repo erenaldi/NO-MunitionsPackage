@@ -2,6 +2,13 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-14 (17:15) — Phantom/Palisade runtime checkpoint committed
+
+- Commit `025d888` (`Add Phantom decoy and Palisade defense prototype`) records the combined buildable runtime milestone: Phantom and Palisade cloners/controllers, shared plugin and dormant-rack integration, L05 mission activation, authority/findings/plan updates, and the detailed journal entries below.
+- Pre-commit gates: `dotnet build -c Release` passed with 0 errors and the one tolerated MSB3277 warning; `tools/validate_test_mission.ps1` passed against the runtime schema; `git diff --cached --check` passed. `tools/check_log.ps1` remained nonzero only because its broad warning check includes the proving-ground map-root recovery warnings, while direct log/schema inspection and the user's flight report establish the Phantom evidence recorded below.
+- All pre-existing CAD, Unity, texture, `.gitignore`, geometry-bundle, and Halberd concept/export worktree changes remain uncommitted and were not modified or staged for this checkpoint. Nuclear Option remains running with installed DLL hash `3C9F76BAF23FB8232ADCD120A11D8E197C18B307714B7B8F44845F625FEF75FA`; fresh build hash `31F0682430334A6DE68F72C8BEACB7F87B5A2C0987A13EE383A37E940BB04047` is not installed.
+- Next: after the user closes Nuclear Option, install the fresh DLL, repeat main-menu/runtime validation, then run the remaining Phantom and Palisade flight gates.
+
 ## 2026-09-14 (17:12) — RDM-9 Phantom draws SAM engagement; remaining flight gates pending
 
 - Implemented the Phase 2F behavior-first Phantom: `PhantomCloner.cs` clones AGM-48 (`AGM1_single` / `AGM1`) to `Erenaldi.RDM9_single` / `Erenaldi.RDM9`, sets 180 kg and `MissileDefinition.radarSize = 1.0`, preserves donor carriage RCS 0.005/0.0, removes blast/pierce damage, blocks arming, and installs a 20 kN / 3.44 s / 30 kg motor with a 650 m/s ceiling and provisional 60 s fuse. `PhantomInterceptPriorityPatch.cs` restores intercept priority 1 for the otherwise untargeted Phantom and does not replace external radar, range, altitude, or intercept-viability checks.
