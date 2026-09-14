@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,11 +6,12 @@ namespace Erenaldi.Halberd
     /// <summary>
     /// Original vanilla-style textures for the AAM-44 Halberd, matched to the
     /// measured language of the game's shared munitions atlases
-    /// (docs/TEXTURE_STYLE_FINDINGS.md): cool mid grays over a wide value
-    /// range, charcoal nose/tail bands, one ochre accent, thin dark panel
-    /// seams with rivet rows, stencil microtext, faint streak grunge, baked
-    /// seam shading, low metallic, semi-matte paint via packed
-    /// metallic(R)/smoothness(A) maps on URP Lit.
+    /// (docs/TEXTURE_STYLE_FINDINGS.md): bright neutral grays over a wide
+    /// value range, charcoal nose/tail bands, one ochre accent, thin dark
+    /// panel seams with rivet rows, faint streak grunge, baked seam shading,
+    /// low metallic, semi-matte paint via packed metallic(R)/smoothness(A)
+    /// maps on URP Lit. Markings are purely geometric (panel lines, service
+    /// panels, X-in-box marks) — no stencil text, per user preference.
     /// No vanilla texture data is used — everything is painted procedurally.
     /// </summary>
     internal static class HalberdTexturedMaterialBuilder
@@ -21,31 +21,31 @@ namespace Erenaldi.Halberd
 
         // Body (sustainer) axial zones: v 0 aft .. 1 nose.
         private const float TailCharcoalEnd = 0.055f;
-        private const float MidBandStart = 0.70f;
-        private const float MidBandEnd = 0.82f;
         private const float OchreStart = 0.856f;
         private const float OchreEnd = 0.866f;
         private const float NoseCharcoalStart = 0.866f;
 
-        private static readonly float[] BodySeamRings = { 0.055f, 0.18f, 0.40f, 0.62f, 0.70f, 0.82f, 0.856f };
+        private static readonly float[] BodySeamRings = { 0.055f, 0.40f, 0.856f };
         private static readonly float[] BodyAxialSeamsU = { 0.13f, 0.37f, 0.63f, 0.87f };
         private const float AxialSeamStartV = 0.06f;
         private const float AxialSeamEndV = 0.69f;
 
         // Booster axial zones: v 0 aft/nozzle .. 1 forward/stage seam.
         private const float BoosterCharcoalEnd = 0.12f;
+        private static readonly float[] BoosterSeamRings = { 0.30f, 0.55f, 0.78f };
+        private static readonly float[] BoosterAxialSeamsU = { 0.13f, 0.37f, 0.63f, 0.87f };
+        private const float BoosterAxialStartV = 0.14f;
+        private const float BoosterAxialEndV = 0.93f;
         private const float BoosterOchreStart = 0.94f;
         private const float BoosterOchreEnd = 0.95f;
         private const float BoosterSeamV = 0.965f;
 
         private static readonly Color Charcoal = new Color(38f / 255f, 37f / 255f, 36f / 255f);
-        private static readonly Color MidGray = new Color(109f / 255f, 108f / 255f, 107f / 255f);
-        private static readonly Color BaseGray = new Color(133f / 255f, 133f / 255f, 132f / 255f);
-        private static readonly Color LightGray = new Color(168f / 255f, 171f / 255f, 169f / 255f);
+        private static readonly Color BaseGray = new Color(194f / 255f, 196f / 255f, 195f / 255f);
+        private static readonly Color LightGray = new Color(184f / 255f, 187f / 255f, 186f / 255f);
         private static readonly Color Ochre = new Color(228f / 255f, 193f / 255f, 94f / 255f);
         private static readonly Color SeamDark = new Color(30f / 255f, 29f / 255f, 28f / 255f);
         private static readonly Color InkBlack = new Color(22f / 255f, 22f / 255f, 22f / 255f);
-        private static readonly Color InkWhite = new Color(228f / 255f, 230f / 255f, 230f / 255f);
 
         internal static Material CreateBodyMaterial(string assetRoot, string name)
         {
@@ -88,10 +88,6 @@ namespace Erenaldi.Halberd
             {
                 color = Charcoal;
             }
-            else if (v >= MidBandStart && v <= MidBandEnd)
-            {
-                color = MidGray;
-            }
             else if (v >= OchreStart && v <= OchreEnd)
             {
                 color = Ochre;
@@ -121,6 +117,7 @@ namespace Erenaldi.Halberd
                 color = LightGray;
             }
             color = ApplyGrunge(color, u, v, hash);
+            color = ApplyPanelLines(color, u, v, BoosterSeamRings, BoosterAxialSeamsU, BoosterAxialStartV, BoosterAxialEndV);
             if (Mathf.Abs(v - BoosterSeamV) < 0.0032f)
             {
                 color = Color.Lerp(color, SeamDark, 0.62f);
@@ -173,15 +170,6 @@ namespace Erenaldi.Halberd
             StampRectBorder(pixels, 0.42f, 0.58f, 0.30f, 0.395f, 3, InkBlack);
             StampXInBox(pixels, 0.45f, 0.55f, 0.325f, 0.372f, 2, InkBlack);
             StampXInBox(pixels, 0.08f, 0.17f, 0.315f, 0.365f, 2, InkBlack);
-            // Rotated stencils run along the missile length (nose right), upright
-            // on the right flank; cellU sets glyph height on the circumference,
-            // cellV the advance along the body (the unwrap is ~6x anisotropic).
-            StampTextRotated(pixels, "AAM-44 HALBERD", 0.40f, 0.50f, 16, 3, InkBlack);
-            StampTextRotated(pixels, "ERENALDI ORD LOT 7", 0.462f, 0.50f, 10, 2, InkBlack);
-            StampTextRotated(pixels, "SR-1157-90825", 0.16f, 0.872f, 9, 2, InkWhite);
-            StampTextRotated(pixels, "DANGER", 0.30f, 0.90f, 10, 2, InkWhite);
-            StampTextRotated(pixels, "NO STEP", 0.66f, 0.55f, 10, 2, InkBlack);
-            StampTextRotated(pixels, "NO STEP", 0.66f, 0.20f, 10, 2, InkBlack);
 
             // Baked seam shading (AO) around ring seams.
             foreach (float ring in BodySeamRings)
@@ -201,10 +189,24 @@ namespace Erenaldi.Halberd
 
         private static void StampBoosterDetail(Color[] pixels)
         {
-            StampTextRotated(pixels, "AAM-44", 0.42f, 0.35f, 14, 3, InkWhite);
-            StampTextRotated(pixels, "BOOSTER", 0.475f, 0.35f, 10, 2, InkBlack);
-            StampRectBorder(pixels, 0.26f, 0.62f, 0.015f, 0.105f, 2, InkWhite);
-            StampTextRotated(pixels, "SR-1157-908", 0.30f, 0.03f, 8, 2, InkWhite);
+            StampRectBorder(pixels, 0.30f, 0.50f, 0.38f, 0.47f, 2, InkBlack);
+            StampXInBox(pixels, 0.335f, 0.465f, 0.395f, 0.455f, 2, InkBlack);
+            StampRectBorder(pixels, 0.62f, 0.74f, 0.60f, 0.68f, 2, InkBlack);
+
+            // Baked seam shading (AO) around ring seams.
+            foreach (float ring in BoosterSeamRings)
+            {
+                int center = Mathf.RoundToInt(ring * (Height - 1));
+                for (int x = 0; x < Width; x++)
+                {
+                    for (int d = 1; d <= 6; d++)
+                    {
+                        float shade = Mathf.Lerp(0.9f, 1f, d / 6f);
+                        MultiplyPixel(pixels, x, center + d, shade);
+                        MultiplyPixel(pixels, x, center - d, shade);
+                    }
+                }
+            }
         }
 
         // ------------------------------------------------------------------
@@ -226,11 +228,6 @@ namespace Erenaldi.Halberd
                     {
                         metal = 0.14f;
                         smooth = 0.58f;
-                    }
-                    else if (v >= MidBandStart && v <= MidBandEnd)
-                    {
-                        metal = 0.08f;
-                        smooth = 0.47f;
                     }
                     else if (v >= OchreStart && v <= OchreEnd)
                     {
@@ -280,7 +277,8 @@ namespace Erenaldi.Halberd
                         metal = 0.06f;
                         smooth = 0.46f;
                     }
-                    if (Mathf.Abs(v - BoosterSeamV) < 0.0016f)
+                    if (Mathf.Abs(v - BoosterSeamV) < 0.0016f ||
+                        NearOneOf(v, BoosterSeamRings, 0.0016f))
                     {
                         smooth += 0.02f;
                     }
@@ -423,81 +421,8 @@ namespace Erenaldi.Halberd
         }
 
         // ------------------------------------------------------------------
-        // 5x7 bitmap stencil font
+        // Marking primitives
         // ------------------------------------------------------------------
-
-        private static readonly Dictionary<char, string> Glyphs = new Dictionary<char, string>
-        {
-            ['A'] = "01110100011000111111100011000110001",
-            ['B'] = "11110100011000111110100011000111110",
-            ['C'] = "01110100011000010000100001000101110",
-            ['D'] = "11110100011000110001100011000111110",
-            ['E'] = "11111100001000011110100001000011111",
-            ['G'] = "01110100011000010111100011000101111",
-            ['H'] = "10001100011000111111100011000110001",
-            ['I'] = "11111001000010000100001000010011111",
-            ['K'] = "10001100101010011000101001001010001",
-            ['L'] = "10000100001000010000100001000011111",
-            ['M'] = "10001110111010110101100011000110001",
-            ['N'] = "10001110011010110011100011000110001",
-            ['O'] = "01110100011000110001100011000101110",
-            ['P'] = "11110100011000111110100001000010000",
-            ['R'] = "11110100011000111110101001001010001",
-            ['S'] = "01111100001000001110000010000111110",
-            ['T'] = "11111001000010000100001000010000100",
-            ['U'] = "10001100011000110001100011000101110",
-            ['0'] = "01110100011001110101110011000101110",
-            ['1'] = "00100011000010000100001000010001110",
-            ['2'] = "01110100010000100110010001000011111",
-            ['4'] = "00010001100010100100111110001000010",
-            ['5'] = "11111100001000011110000010000111110",
-            ['6'] = "01110100001000011110100011000101110",
-            ['7'] = "11111000010001000100010000100001000",
-            ['8'] = "01110100011000101110100011000101110",
-            ['9'] = "01110100011000101111000010000101110",
-            ['-'] = "00000000000000011111000000000000000",
-            ['/'] = "00001000100010000100010001000100000",
-            [' '] = "00000000000000000000000000000000000"
-        };
-
-        /// <summary>
-        /// Stamps stencil text that runs along the missile length, upright when
-        /// viewed from above with the nose to the right. Glyph rows (top to
-        /// bottom) advance along -u (screen down on the top flank), glyph
-        /// columns advance along +v (toward the nose); uOrigin is the glyph
-        /// top edge, vOrigin the first character. cellU is the glyph pixel
-        /// size on the circumference axis, cellV on the length axis — the
-        /// cylindrical unwrap is ~6x anisotropic, so the cells differ.
-        /// </summary>
-        private static void StampTextRotated(Color[] pixels, string text, float uOrigin, float vOrigin, int cellU, int cellV, Color ink)
-        {
-            int x0 = Mathf.RoundToInt(uOrigin * (Width - 1));
-            int y0 = Mathf.RoundToInt(vOrigin * (Height - 1));
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (!Glyphs.TryGetValue(text[i], out string rows))
-                {
-                    continue;
-                }
-                for (int row = 0; row < 7; row++)
-                {
-                    for (int col = 0; col < 5; col++)
-                    {
-                        if (rows[row * 5 + col] != '1')
-                        {
-                            continue;
-                        }
-                        for (int py = 0; py < cellV; py++)
-                        {
-                            for (int px = 0; px < cellU; px++)
-                            {
-                                SetPixel(pixels, x0 - row * cellU - px, y0 + (i * 6 + col) * cellV + py, ink);
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
         private static void StampRectBorder(Color[] pixels, float uMin, float uMax, float vMin, float vMax, int widthPx, Color ink)
         {

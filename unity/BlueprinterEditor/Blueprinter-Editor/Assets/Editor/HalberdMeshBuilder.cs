@@ -37,10 +37,10 @@ namespace Erenaldi.Halberd
             var pylonMaterial = new Material(shader) { name = "MatHalberdPylon" };
             pylonMaterial.color = new Color(0.45f, 0.47f, 0.5f);
             var intakesMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdIntakes", new Color(0.30f, 0.31f, 0.32f));
-            var sustainerFinsMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdSustainerFins", new Color(0.56f, 0.58f, 0.57f));
-            var hardwareMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdHardware", new Color(0.42f, 0.43f, 0.45f));
+            var sustainerFinsMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdSustainerFins", new Color(0.80f, 0.815f, 0.81f));
+            var hardwareMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdHardware", new Color(0.61f, 0.62f, 0.63f));
             var sustainerNozzleMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdSustainerNozzle", new Color(0.30f, 0.30f, 0.32f));
-            var finsMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdFins", new Color(0.56f, 0.58f, 0.57f));
+            var finsMaterial = HalberdTexturedMaterialBuilder.CreatePlainMaterial(OutputRoot, "MatHalberdFins", new Color(0.80f, 0.815f, 0.81f));
             var boosterNozzleMaterial = CreateFlatMaterial(shader, "MatHalberdBoosterNozzle", new Color(0.24f, 0.07f, 0.045f));
             var boosterNozzleRecessMaterial = CreateFlatMaterial(shader, "MatHalberdBoosterNozzleRecess", new Color(0.025f, 0.03f, 0.035f));
 

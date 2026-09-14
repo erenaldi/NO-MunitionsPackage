@@ -2,6 +2,19 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-13 (late) — Halberd texture iteration 2: no text, brighter, de-crowded
+
+- User feedback: remove all words from the texture; body looked crowded vs. Scythe/Scimitar while the booster looked sparse.
+- Changes (all in `HalberdTexturedMaterialBuilder.cs` + child tints in `HalberdMeshBuilder.cs`):
+  - Removed every text stencil and the 5×7 font (`Glyphs`, `StampTextRotated`) + unused `InkWhite`. Markings now purely geometric: panel seams, rivet dots, rect service panels, X-in-box marks.
+  - Body rings cut 7 → 3 (`{0.055, 0.40, 0.856}`); gray mid-band removed (single light field like the references).
+  - Base gray brightened 133 → 194 (Scythe/Scimitar near-white range); booster stays light-gray family (184) vs. body 194.
+  - Booster de-sparse: 3 ring seams (0.30/0.55/0.78) + axial panel lines (v 0.14-0.93) + 2 service panels with X-in-box + baked AO shading; packed-map smoothness bump applies on the new rings.
+  - Children tints brightened to match (fins 0.80, hardware 0.61); intakes/nozzles unchanged darks.
+- Verified: preview render `cad/Halberd_Vanilla_Texture_Comparison.png` (21:27, 319 KB) — Halberd now reads clean/bright next to Scythe/Scimitar, no text, 1 mid-body ring + panel detail; headless bundle build exit 0, bundle rebuilt 21:33 (26,794,766 B); `dotnet build -c Release` 0 errors.
+- **Plugin DLL NOT installed — game was running (installer guard refused).** Built DLL awaiting install at `src\Erenaldi.MunitionsPackage\bin\Release\netstandard2.1\Erenaldi.MunitionsPackage.dll`: close the game, run `tools\install_plugin.ps1 -PluginPath src\Erenaldi.MunitionsPackage\bin\Release\netstandard2.1\Erenaldi.MunitionsPackage.dll`, restart, then `tools\check_log.ps1`.
+- Next: in-game visual check of the new texture; then Kris/Ballista texture passes (unchanged from previous entry).
+
 ## 2026-09-13 (evening) — vanilla texture extraction + Halberd texture pass
 
 - Extracted the game's weapon atlases offline (UnityPy 1.25.3, `FALLBACK_UNITY_VERSION=2022.3.62f2`): `tools/dump_weapon_textures.py` → `reference/vanilla_textures/` (gitignored) — 47 PNGs covering `weapons1-5`, `missiles1-4` (+`missiles4_o`), `bombs1`, `ballisticMissile1` + `inventory/materials/prefabs/placeholder_check.json`. Blueprinter `_donotship` copies verified pixel-identical except normal-map swizzle (game copies kept).
