@@ -2,6 +2,10 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-14 (17:22 final) — Game exited after validation
+
+- Final process check found no running `NuclearOption` process. The validated installed DLL remains hash `31F0682430334A6DE68F72C8BEACB7F87B5A2C0987A13EE383A37E940BB04047`; do not replace it with the concurrently rebuilt workspace artifact until the new Palisade source changes listed below are reviewed and validated.
+
 ## 2026-09-14 (17:22) — Fresh Phantom/Palisade install and main-menu validation passed
 
 - After the user closed Nuclear Option, `tools/install_plugin.ps1` installed the checkpoint build and reported SHA-256 `31F0682430334A6DE68F72C8BEACB7F87B5A2C0987A13EE383A37E940BB04047`. Nuclear Option was launched through Steam at 17:18 (PID 41716) and remains running at this handoff.
