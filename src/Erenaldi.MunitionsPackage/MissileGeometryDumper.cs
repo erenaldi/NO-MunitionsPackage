@@ -45,7 +45,8 @@ namespace Erenaldi.MunitionsPackage
             "bomb_cluster1_single",
             "bomb_demolition_internal",
             "RocketPod1_single",
-            "Rocket2_4Pod"
+            "Rocket2_4Pod",
+            "Erenaldi.HKP1_Palisade"
         };
 
         private readonly ManualLogSource log;

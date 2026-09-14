@@ -39,8 +39,8 @@
 
 ### 5. RDM-9 Phantom — radar decoy missile
 - Summary: no warhead; Luneburg lens + active repeater = maximum signature; flies a threat profile to bait SAM shots.
-- Specs: 2.8 m × 0.25 m, ~180 kg · Mach 2 burn then glide
-- Impl: clone **AGM-48** airframe · def (verify max-signature via signature fields) + light code fallback
+- Specs: 2.8 m × 0.25 m, ~180 kg · Mach 2 burn then glide · 30 km
+- Impl: clone **AGM-48** (`AGM1_single` / `AGM1`) · projectile `radarSize` 1.0 while preserving the donor's low carriage RCS · zero blast/pierce and permanently blocked arming · 20 kN / 3.44 s / 30 kg single motor with a 650 m/s ceiling and provisional 60 s harmless termination · Phantom-only `Missile.InterceptPriority` fallback restores priority 1 for untargeted shots without bypassing radar, range, altitude, or intercept-viability gates. (2026-09-14 user decisions: lock-free from first implementation, 30 km envelope, radar size 1.0. IADS-HARD flight test confirmed a SAM engages an untargeted Phantom; practical range, harmless termination, designated-target behavior, and multiplayer remain pending.)
 - Visual: unadorned cylinder, round lens housing mid-body
 
 ### 6. GPO-2R Auger — rocket-powered penetrator
@@ -106,7 +106,7 @@
   - **Safe** — pod inhibited, rounds locked.
   - **Smart Engage** — soft-kill sufficiency check: fires only when normal CMs cannot defeat the threat in time (time-to-impact vs CM engagement cycle), when a CM defeat would take too long (re-engagement cadence can't keep up), or when flare/capacitor reserves are inadequate for the CM response the threat demands; 1 interceptor per qualifying threat.
   - **Max Coverage** — engages every munition targeted at the aircraft that can kinematically be reached; 1 interceptor per target at a time, committed at maximum intercept range, re-engaging on failure (threat survives past the clearance threshold with time-to-impact still allowing re-engagement).
-- Impl: clone **RAM-45** as the interceptor substrate; pod hardware from a gun-pod/AGR-31-style station · **code: hard-kill auto-defense** (threat classification from the missile-warning pipeline, CM-state access, mode state machine, CM-menu Harmony hook). Vanilla-system findings and the integration design are recorded in `docs/PALISADE_FINDINGS.md`; the implementation plan is in `docs/V1_PLAN.md`.
+- Impl: clone **RAM-45** as the interceptor substrate; functional pod cloned from `AGM2_6Pod` and reduced to four `MountedMissile` launchers · **code: hard-kill auto-defense** (threat classification from the missile-warning pipeline, CM-state access, mode state machine, CM-menu integration). The first runtime spike retains widened, short-delay SARH guidance; replace it with self-contained ARH only if Ifrit/Medusa flight tests prove carrier illumination unreliable. Player-aircraft decisions run on the owning client and use the vanilla missile command path; AI decisions run on the server. Vanilla-system findings and the integration design are recorded in `docs/PALISADE_FINDINGS.md`; the implementation plan is in `docs/V1_PLAN.md`. (2026-09-14: functional clone registered; interception validation pending.)
 - Counterplay: saturation launches, breaking lock early before the pod commits, low-closure launches outside the envelope; balance via round count and cost.
 - Visual: boxy under-fuselage pod with four flush launcher doors and a small flat radar window at the nose; interceptors are stubby darts with strakes.
 

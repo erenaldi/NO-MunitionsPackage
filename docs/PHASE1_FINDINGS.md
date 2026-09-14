@@ -59,17 +59,23 @@ inspection, but Phase 1 does not assume provenance.
   definition was observed, so a dual-seeker weapon would require code; no
   dual-seeker weapon remains on the roster.
 - Radar-signature tuning exists on `WeaponMount.RCS`,
-  `WeaponMount.emptyRCS`, and `Unit.RCS`. Phantom still needs a runtime test to
-  prove that these values make air defenses engage the decoy.
+  `WeaponMount.emptyRCS`, and `Unit.RCS`. Decompiled runtime flow confirms the
+  flying missile copies `MissileDefinition.radarSize` into `Unit.RCS`; mount RCS
+  affects only the carrier. RDM-9 now uses `radarSize = 1.0` plus a narrowly
+  scoped lock-free intercept-priority patch. An IADS-HARD firing test on
+  2026-09-14 confirmed a SAM engages the untargeted decoy; practical range,
+  harmless termination, designated-target behavior, and multiplayer remain
+  unverified.
 - AGR-18 exposes `LaserSeeker.errorRate`; no dedicated salvo-dispersion field
   was found. Hailstorm needs a firing test before deciding whether this field
   alone produces the requested footprint.
 - No water-phase missile field or component was found. The only relevant live
   serialized fields were buoyancy on `AeroPart` and a gun water-impact effect.
   Halcyon therefore requires the planned physics/networking spike.
-- Ship point-defense behavior (`antiMissile`/`DefendWithMissiles`) and the
+- Ship/air-defense behavior (`antiMissile`/`DefendWithMissiles`) and the
   countermeasure manager are the reference implementations for the HKP-1
-  Palisade hard-kill system; neither has been dumped yet.
+  Palisade hard-kill system. They were inspected before the Phase 4 functional
+  clone; current findings are in `docs/PALISADE_FINDINGS.md`.
 
 ## Decisions Recorded
 

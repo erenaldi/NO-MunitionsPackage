@@ -36,10 +36,12 @@ outTargets)` (CombatAI.cs:176) is the reusable threat enumerator:
 - Missile-specific threat math already exists: `Missile.InterceptPriority(...)`
   and `GetWeaponInfo().GetMaxSpeed() * 0.67f` scaling inside `AnalyzeTarget`.
 
-Palisade reuses this pattern; the pod's interceptor station is configured
-with `effectiveness.antiMissile > 0` and short-range `targetRequirements`
-(~0.3-4 km, small `minAlignment` because the pod launches omnidirectionally,
-no `lineOfSight` requirement).
+Palisade borrows the commit guards from this pattern, but does not call
+`CombatAI.LookForMissileTargets`: that method searches around an AI-selected
+target and interprets smaller `minAlignment` as a narrower forward cone. The
+pod instead reads `MissileWarning.knownMissiles` directly and configures its
+station for ~0.3-4 km, 180-degree alignment, and no weapon-level line-of-sight
+requirement.
 
 ## 2. Threat feed — MissileWarning (MissileWarning.cs)
 
@@ -95,8 +97,10 @@ Palisade integration design — no Harmony patch on the manager is required:
 - **Mode cycling lives in the `Fire()` override**: each Deploy CM press while
   Palisade is active cycles Safe → Smart Engage → Max Coverage → Safe.
   `UpdateHUD()` displays the current mode name.
-- Auto-engagement runs in a separate pod component (not `Fire()`), launching
-  cloned interceptor missiles with `targetID` set to the selected threat.
+- Auto-engagement runs in a separate pod component (not `Fire()`). It fires the
+  cloned pod's existing `MountedMissile` children through the vanilla station
+  path, which sets the interceptor target and preserves server spawn authority,
+  client commands, remote launch visuals, ammo, and rearm behavior.
 
 ## 4. Capacitor / power — RadarJammer reference
 
@@ -115,16 +119,19 @@ energy system is `PowerSupply`:
 - Flare/chaff adequacy reads per-station `ammo` from
   `CountermeasureManager` stations (flares are station 0).
 
-## 5. Open items for implementation
+## 5. Implementation result and open runtime gates (2026-09-14)
 
-- Network authority for engagement decisions: existing weapon code (Halberd/
-  Kris cloners) follows Mirage conventions; confirm whether interceptor
-  launches are host-authoritative like AI weapon fire.
-- Interceptor launch mechanics: spawn the cloned RAM-45-substrate missile
-  with `targetID` set to the threat; verify lock-free launch path (no seeker
-  warm-up requirement) for the micro-interceptor def.
-- Pod prefab: gun-pod/AGR-31-style station clone carrying the
-  `PalisadeCountermeasure` + auto-defense components; platform whitelist
-  patching per `MUNITIONS.md`.
-- Confirm `Aircraft.Countermeasures(active, index)` network behavior for
-  remote CM-menu state (mode display on remote peers).
+- Functional pod source is `AGM2_6Pod`, reduced from six to four
+  `MountedMissile` children. The mount is marked `countermeasure`; dormant
+  activation is handled by `HardpointSpawnMountPatch`.
+- Player-aircraft decisions run on the owning client; AI decisions run on the
+  server. The vanilla `MountedMissile` command/RPC path owns network spawning.
+- RAM-45 is SARH. The first spike removes its long launch delays and widens its
+  seeker, but Ifrit and Medusa must prove carrier illumination against
+  missile-sized targets. Failure triggers a self-contained ARH conversion.
+- Default whitelist keys are `Multirole1` and `EW1`. A set must also contain a
+  compatible pod anchor (`Rocket2_4Pod` or `JammingPod1`); main-menu registration
+  found four eligible sets.
+- Multiplayer must verify one launch per decision, remote visibility, mode/ammo
+  consistency, and rearm. Custom 1.8 m four-door pod and 1.2 m interceptor
+  geometry remains gated on functional approval.

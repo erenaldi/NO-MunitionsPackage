@@ -2,7 +2,9 @@ using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -23,6 +25,18 @@ namespace Erenaldi.MunitionsPackage
         private ConfigEntry<bool> enableKris;
         private ConfigEntry<bool> enableBallista;
         private ConfigEntry<bool> enableArad80;
+        private ConfigEntry<bool> enablePhantom;
+        private ConfigEntry<bool> enablePalisade;
+        private ConfigEntry<PalisadeCountermeasure.PalisadeMode> palisadeInitialMode;
+        private ConfigEntry<int> palisadeRounds;
+        private ConfigEntry<float> palisadeMinRange;
+        private ConfigEntry<float> palisadeMaxRange;
+        private ConfigEntry<float> palisadeRefireCooldown;
+        private ConfigEntry<float> palisadeReengageClearance;
+        private ConfigEntry<float> palisadeSoftKillLeadTime;
+        private ConfigEntry<int> palisadeMinimumFlareReserve;
+        private ConfigEntry<float> palisadeMinimumCapacitorReserve;
+        private ConfigEntry<string> palisadePlatformWhitelist;
         private ConfigEntry<bool> enableKrisJHook;
         private ConfigEntry<float> krisJHookLoftAltitude;
         private ConfigEntry<float> krisJHookDiveRange;
@@ -70,6 +84,8 @@ namespace Erenaldi.MunitionsPackage
                 "Runtime-clone the AGM-110 Ballista from the AGM-99 (AShM2) with AGM-68 carriage after the encyclopedia loads.");
             enableArad80 = Config.Bind("Phase 2", "EnableArad80", true,
                 "Runtime-clone the ARAD-80 single-burn sprinter from the ARAD-116 (ARM1) after the encyclopedia loads.");
+            enablePhantom = Config.Bind("Phase 2", "EnablePhantom", true,
+                "Runtime-clone the unarmed RDM-9 radar decoy from the AGM-48 after the encyclopedia loads.");
             enableKrisJHook = Config.Bind("Phase 2", "EnableKrisJHook", true,
                 "Loft Kris missiles into an energy-preserving J-hook arc with a terminal dive onto the target.");
             krisJHookLoftAltitude = Config.Bind("Phase 2", "KrisJHookLoftAltitude", 2762f,
@@ -111,13 +127,36 @@ namespace Erenaldi.MunitionsPackage
                 "Seconds within which a Kris flare is predicted to leave the optical window on a fast-sweeping line of sight (beam aspect); such flares are ignored instead of blinding the seeker. 0 disables.");
             enableCustomGeometry = Config.Bind("Phase 3", "EnableCustomGeometry", true,
                 "Transplant custom geometry from the embedded bundle onto cloned weapons when available.");
+            enablePalisade = Config.Bind("Phase 4", "EnablePalisade", true,
+                "Runtime-clone the HKP-1 Palisade hard-kill defense pod and its interceptor.");
+            palisadeInitialMode = Config.Bind("Phase 4", "PalisadeInitialMode",
+                PalisadeCountermeasure.PalisadeMode.Safe,
+                "Palisade mode at aircraft spawn: Safe, SmartEngage, or MaxCoverage.");
+            palisadeRounds = Config.Bind("Phase 4", "PalisadeRoundsPerPod", 4,
+                "Interceptor rounds carried by each Palisade pod (1-6; default 4).");
+            palisadeMinRange = Config.Bind("Phase 4", "PalisadeMinimumRange", 300f,
+                "Minimum hard-kill engagement range in meters.");
+            palisadeMaxRange = Config.Bind("Phase 4", "PalisadeMaximumRange", 4000f,
+                "Maximum hard-kill engagement range in meters.");
+            palisadeRefireCooldown = Config.Bind("Phase 4", "PalisadeRefireCooldown", 0.75f,
+                "Minimum seconds between interceptor launches from the aircraft-level Palisade station.");
+            palisadeReengageClearance = Config.Bind("Phase 4", "PalisadeReengageClearance", 100f,
+                "Meters an interceptor must clear before a surviving threat may be reconsidered.");
+            palisadeSoftKillLeadTime = Config.Bind("Phase 4", "PalisadeSoftKillLeadTime", 2f,
+                "Smart Engage withholds hard kill only when normal countermeasures have at least this much reaction time.");
+            palisadeMinimumFlareReserve = Config.Bind("Phase 4", "PalisadeMinimumFlareReserve", 2,
+                "Minimum flare count Smart Engage considers sufficient against an IR threat.");
+            palisadeMinimumCapacitorReserve = Config.Bind("Phase 4", "PalisadeMinimumCapacitorReserve", 0.25f,
+                "Minimum normalized capacitor charge Smart Engage considers sufficient for radar countermeasures.");
+            palisadePlatformWhitelist = Config.Bind("Phase 4", "PalisadePlatformWhitelist", "Multirole1,EW1",
+                "Comma-separated aircraft definition keys allowed to carry Palisade. Compatible pod-class hardpoints are still required.");
             showMapDiagnostics = Config.Bind("Testing", "MapDiagnostics", true,
                 "Log every proving-ground map maximize/minimize transition with the calling code, to trace fullscreen-map overlays.");
 
             Logger.LogInfo($"{PluginName} {PluginVersion} loaded (Phase 2A clone mode).");
             new Harmony(PluginGuid).PatchAll();
             if (dumpSchemaOnStartup.Value || enableHalberd.Value || enableKris.Value || enableBallista.Value ||
-                enableArad80.Value)
+                enableArad80.Value || enablePhantom.Value || enablePalisade.Value)
             {
                 StartCoroutine(WaitForStableEncyclopedia());
             }
@@ -243,6 +282,38 @@ namespace Erenaldi.MunitionsPackage
                     Logger.LogError($"Phase 2E ARAD-80 clone failed: {exception}");
                 }
             }
+            if (enablePhantom.Value)
+            {
+                try
+                {
+                    PhantomCloner.Clone(Logger);
+                }
+                catch (System.Exception exception)
+                {
+                    Logger.LogError($"Phase 2F RDM-9 Phantom clone failed: {exception}");
+                }
+            }
+            if (enablePalisade.Value)
+            {
+                try
+                {
+                    PalisadeCloner.InitialMode = palisadeInitialMode.Value;
+                    PalisadeCloner.RoundsPerPod = Mathf.Clamp(palisadeRounds.Value, 1, 6);
+                    PalisadeCloner.MinRange = Mathf.Max(palisadeMinRange.Value, 0f);
+                    PalisadeCloner.MaxRange = Mathf.Max(palisadeMaxRange.Value, PalisadeCloner.MinRange + 100f);
+                    PalisadeCloner.RefireCooldown = Mathf.Clamp(palisadeRefireCooldown.Value, 0.1f, 10f);
+                    PalisadeCloner.ReengageClearance = Mathf.Max(palisadeReengageClearance.Value, 0f);
+                    PalisadeCloner.SoftKillLeadTime = Mathf.Clamp(palisadeSoftKillLeadTime.Value, 0f, 30f);
+                    PalisadeCloner.MinimumFlareReserve = Mathf.Max(palisadeMinimumFlareReserve.Value, 0);
+                    PalisadeCloner.MinimumCapacitorReserve = Mathf.Clamp01(palisadeMinimumCapacitorReserve.Value);
+                    PalisadeCloner.PlatformWhitelist = ParseWhitelist(palisadePlatformWhitelist.Value);
+                    PalisadeCloner.Clone(Logger);
+                }
+                catch (Exception exception)
+                {
+                    Logger.LogError($"Phase 4 Palisade clone failed: {exception}");
+                }
+            }
             if (!dumpSchemaOnStartup.Value)
             {
                 yield break;
@@ -281,6 +352,20 @@ namespace Erenaldi.MunitionsPackage
             {
                 Logger.LogError($"Phase 1 schema dump failed: {exception}");
             }
+        }
+
+        private static HashSet<string> ParseWhitelist(string value)
+        {
+            var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach (var entry in (value ?? string.Empty).Split(','))
+            {
+                var trimmed = entry.Trim();
+                if (trimmed.Length > 0)
+                {
+                    result.Add(trimmed);
+                }
+            }
+            return result;
         }
     }
 }
