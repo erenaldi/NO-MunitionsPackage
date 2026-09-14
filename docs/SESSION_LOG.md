@@ -2,6 +2,14 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-14 (17:22) — Fresh Phantom/Palisade install and main-menu validation passed
+
+- After the user closed Nuclear Option, `tools/install_plugin.ps1` installed the checkpoint build and reported SHA-256 `31F0682430334A6DE68F72C8BEACB7F87B5A2C0987A13EE383A37E940BB04047`. Nuclear Option was launched through Steam at 17:18 (PID 41716) and remains running at this handoff.
+- Fresh `LogOutput.log:616-618` confirms Phantom missile/mount indices 549/550 and hash `49DEEA29`, 180 kg, radar size 1.00, 30 km envelope, 20 kN/3.44 s motor, 60 s maximum flight, and 9 hardpoint sets; Palisade registered at indices 551/552 with hash `B94325EA`, 4 rounds, 0.3-4.0 km envelope, and 4 whitelisted sets. No Phase 2F/Phase 4 clone failure was found.
+- `tools/check_log.ps1` passed against the fresh 666-line main-menu log: the known analog review warning remains (1 missing, 7 ambiguous), and no Blueprinter warnings/errors were found in the inspected window. `tools/validate_test_mission.ps1` also passed against the regenerated schema: 15 lanes (4 live), 14 units across 5 zones.
+- Concurrent work changed the workspace after installation: the build artifact was regenerated at 17:20 with hash `50E460E37F81E75D205A7FB43D4A0F5778EF66A45DDA3FD677963A6841050547`, and `HardpointSpawnMountPatch.cs`, `PalisadeCloner.cs`, `PalisadeDefense.cs`, plus new `PalisadeWeaponSelectionPatch.cs` are now modified/untracked. Those changes were not inspected, staged, installed, or attributed to this validation; the running game still uses installed hash `31F068...4047`.
+- Next: use the running validated install for the remaining Phantom range/lifetime/harmlessness and Palisade flight gates. Reconcile and independently validate the concurrent Palisade source changes before any later rebuild or install.
+
 ## 2026-09-14 (17:15) — Phantom/Palisade runtime checkpoint committed
 
 - Commit `025d888` (`Add Phantom decoy and Palisade defense prototype`) records the combined buildable runtime milestone: Phantom and Palisade cloners/controllers, shared plugin and dormant-rack integration, L05 mission activation, authority/findings/plan updates, and the detailed journal entries below.
