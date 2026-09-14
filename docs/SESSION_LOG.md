@@ -2,6 +2,15 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-13 (22:00) — Ballista palette revert + Halberd matte pass
+
+- User decisions: (1) Ballista keeps all texture detail but reverts fuselage/tail/wing underlying colors to the original STEP dark blue-gray family; (2) Halberd texture more matte, like Scythe/Scimitar.
+- Ballista (`BallistaTexturedMaterialBuilder.cs`): `BaseGray` 182-warm → old body (31,38,41); olive zone → `ZoneGray` old wing (44,53,58); wing base → `ZoneGray`; panel material base → old panel (0.075,0.100,0.114). Kept: charcoal nose cap, orange accent ring, all seams/rivets/service marks/grunge/packed maps (panel 0.10/0.42, wing 0.08/0.44).
+- Halberd (`HalberdTexturedMaterialBuilder.cs` packed maps): body base smoothness 0.45→0.40, charcoal 0.58→0.46, ochre 0.50→0.44; booster base 0.46→0.40, charcoal 0.58→0.46; plain microsurface 0.44→0.40; metals trimmed (0.14→0.10 charcoal, 0.06→0.05 base). Albedo geometry/detail unchanged.
+- Verified: headless `BuildBundle` exit 0, Halberd+Kris assembly-verify pass, bundle rebuilt 22:16 (39,903,437 B); `dotnet build` 0 errors.
+- **PENDING: plugin DLL not installed — game running (user session).** After closing the game run: `tools\install_plugin.ps1 -PluginPath src\Erenaldi.MunitionsPackage\bin\Release\netstandard2.1\Erenaldi.MunitionsPackage.dll`, then launch + `tools\check_log.ps1`.
+- Next: user visual check (Ballista dark blue-gray + Halberd matte); then whatever the user reviews next.
+
 ## 2026-09-13 (night) — Kris + Ballista texture passes; runtime validation green
 
 - Installed iteration-2 plugin (game had closed; SHA f9d0b8e2...). Launched to menu: `check_log.ps1` green — bundle loaded, Halberd/Kris/Ballista all transplanted 2/2 and registered; dumper v2 regenerated 29 OBJs + `missile-geometry.json` schema 2 with per-renderer material/texture bindings. Key runtime findings: Scythe `AAM2` binds **Weapons4** at runtime (offline prefab dump was ambiguous), Scimitar `AAM4`→`Missiles3` confirmed; Kris meshes ship no UVs pre-unwrap; `Erenaldi.*` dumps list our textures loaded.

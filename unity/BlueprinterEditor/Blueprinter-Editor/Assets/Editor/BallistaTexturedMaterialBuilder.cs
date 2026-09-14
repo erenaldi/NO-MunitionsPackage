@@ -4,14 +4,14 @@ using UnityEngine;
 namespace Erenaldi.Ballista
 {
     /// <summary>
-    /// Original vanilla-style textures for the AGM-110 Ballista, matched to the
-    /// measured language of the game's Bombs1 atlas (the bomb/standoff-munition
-    /// family): warm light-gray body, olive panel zones, one orange accent
-    /// band, thin dark seams with rivet rows, faint streak grunge, low
-    /// metallic, semi-matte paint via packed metallic(R)/smoothness(A) on URP
-    /// Lit. Markings are purely geometric — no stencil text, per user
-    /// preference. No vanilla texture data is used — everything is painted
-    /// procedurally.
+    /// Original vanilla-style textures for the AGM-110 Ballista: the approved
+    /// dark blue-gray STEP palette on the fuselage/tail/wings (user decision
+    /// 2026-09-13), with Bombs1-atlas-style detail language — thin dark seams
+    /// with rivet rows, olive panel zone, one orange accent band, faint streak
+    /// grunge, low metallic, semi-matte paint via packed
+    /// metallic(R)/smoothness(A) on URP Lit. Markings are purely geometric —
+    /// no stencil text, per user preference. No vanilla texture data is used —
+    /// everything is painted procedurally.
     /// </summary>
     internal static class BallistaTexturedMaterialBuilder
     {
@@ -30,9 +30,12 @@ namespace Erenaldi.Ballista
         private const float AxialSeamStartV = 0.09f;
         private const float AxialSeamEndV = 0.92f;
 
+        // Original STEP-palette base colors (user decision 2026-09-13: revert
+        // fuselage/tail/wing underlying colors to the approved dark blue-gray
+        // family while keeping all texture detail).
         private static readonly Color Charcoal = new Color(56f / 255f, 55f / 255f, 53f / 255f);
-        private static readonly Color OliveGray = new Color(122f / 255f, 121f / 255f, 108f / 255f);
-        private static readonly Color BaseGray = new Color(182f / 255f, 180f / 255f, 174f / 255f);
+        private static readonly Color ZoneGray = new Color(44f / 255f, 53f / 255f, 58f / 255f);
+        private static readonly Color BaseGray = new Color(31f / 255f, 38f / 255f, 41f / 255f);
         private static readonly Color Orange = new Color(225f / 255f, 140f / 255f, 40f / 255f);
         private static readonly Color SeamDark = new Color(30f / 255f, 29f / 255f, 28f / 255f);
         private static readonly Color InkBlack = new Color(22f / 255f, 22f / 255f, 22f / 255f);
@@ -66,7 +69,7 @@ namespace Erenaldi.Ballista
                 for (int x = 0; x < Width; x++)
                 {
                     float u = x / (float)(Width - 1);
-                    Color color = new Color(0.38f, 0.385f, 0.375f);
+                    Color color = new Color(0.075f, 0.100f, 0.114f);
                     color = ApplyGrunge(color, u, v, Hash(x, y));
                     if (Mathf.Abs(v - 0.33f) < 0.0030f || Mathf.Abs(v - 0.67f) < 0.0030f)
                     {
@@ -89,7 +92,7 @@ namespace Erenaldi.Ballista
                 for (int x = 0; x < Width; x++)
                 {
                     float u = x / (float)(Width - 1);
-                    Color color = OliveGray;
+                    Color color = ZoneGray;
                     color = ApplyGrunge(color, u, v, Hash(x, y));
                     if (Mathf.Abs(v - 0.5f) < 0.0026f)
                     {
@@ -116,7 +119,7 @@ namespace Erenaldi.Ballista
             }
             else if (v >= OliveStart && v <= OliveEnd)
             {
-                color = OliveGray;
+                color = ZoneGray;
             }
             else
             {

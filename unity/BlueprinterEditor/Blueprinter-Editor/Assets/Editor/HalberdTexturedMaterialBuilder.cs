@@ -226,18 +226,18 @@ namespace Erenaldi.Halberd
                     float smooth;
                     if (v <= TailCharcoalEnd || v >= NoseCharcoalStart)
                     {
-                        metal = 0.14f;
-                        smooth = 0.58f;
+                        metal = 0.10f;
+                        smooth = 0.46f;
                     }
                     else if (v >= OchreStart && v <= OchreEnd)
                     {
-                        metal = 0.05f;
-                        smooth = 0.50f;
+                        metal = 0.04f;
+                        smooth = 0.44f;
                     }
                     else
                     {
-                        metal = 0.06f;
-                        smooth = 0.45f;
+                        metal = 0.05f;
+                        smooth = 0.40f;
                     }
                     if (v > AxialSeamStartV && v < AxialSeamEndV &&
                         NearOneOf(x / (float)(Width - 1), BodyAxialSeamsU, 0.0016f))
@@ -264,18 +264,18 @@ namespace Erenaldi.Halberd
                     float smooth;
                     if (v <= BoosterCharcoalEnd)
                     {
-                        metal = 0.14f;
-                        smooth = 0.58f;
+                        metal = 0.10f;
+                        smooth = 0.46f;
                     }
                     else if (v >= BoosterOchreStart && v <= BoosterOchreEnd)
                     {
-                        metal = 0.05f;
-                        smooth = 0.50f;
+                        metal = 0.04f;
+                        smooth = 0.44f;
                     }
                     else
                     {
-                        metal = 0.06f;
-                        smooth = 0.46f;
+                        metal = 0.05f;
+                        smooth = 0.40f;
                     }
                     if (Mathf.Abs(v - BoosterSeamV) < 0.0016f ||
                         NearOneOf(v, BoosterSeamRings, 0.0016f))
@@ -297,8 +297,8 @@ namespace Erenaldi.Halberd
                 for (int x = 0; x < Width; x++)
                 {
                     float hash = Hash(x, y);
-                    float metal = 0.06f;
-                    float smooth = 0.44f + (hash - 0.5f) * 0.05f;
+                    float metal = 0.05f;
+                    float smooth = 0.40f + (hash - 0.5f) * 0.05f;
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth));
                 }
             }
