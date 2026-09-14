@@ -8,7 +8,7 @@ Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "
 - Ballista (`BallistaTexturedMaterialBuilder.cs`): `BaseGray` 182-warm → old body (31,38,41); olive zone → `ZoneGray` old wing (44,53,58); wing base → `ZoneGray`; panel material base → old panel (0.075,0.100,0.114). Kept: charcoal nose cap, orange accent ring, all seams/rivets/service marks/grunge/packed maps (panel 0.10/0.42, wing 0.08/0.44).
 - Halberd (`HalberdTexturedMaterialBuilder.cs` packed maps): body base smoothness 0.45→0.40, charcoal 0.58→0.46, ochre 0.50→0.44; booster base 0.46→0.40, charcoal 0.58→0.46; plain microsurface 0.44→0.40; metals trimmed (0.14→0.10 charcoal, 0.06→0.05 base). Albedo geometry/detail unchanged.
 - Verified: headless `BuildBundle` exit 0, Halberd+Kris assembly-verify pass, bundle rebuilt 22:16 (39,903,437 B); `dotnet build` 0 errors.
-- **PENDING: plugin DLL not installed — game running (user session).** After closing the game run: `tools\install_plugin.ps1 -PluginPath src\Erenaldi.MunitionsPackage\bin\Release\netstandard2.1\Erenaldi.MunitionsPackage.dll`, then launch + `tools\check_log.ps1`.
+- Installed after game close (SHA eb68344a...); in-game validation green — Halberd/Kris/Ballista transplanted 2/2, registered, zero errors; game closed after check. The Phase 1 "1 missing, 7 ambiguous" analog warning is pre-existing review status, not a texture regression.
 - Next: user visual check (Ballista dark blue-gray + Halberd matte); then whatever the user reviews next.
 
 ## 2026-09-13 (night) — Kris + Ballista texture passes; runtime validation green
