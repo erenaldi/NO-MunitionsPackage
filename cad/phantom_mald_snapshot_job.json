@@ -11,7 +11,7 @@
     { "path": "Phantom_MALD_bottom.png", "camera": { "direction": [0, 0, -1] } },
     { "path": "Phantom_MALD_nose.png", "camera": { "direction": [1, 0, 0] } },
     { "path": "Phantom_MALD_tail.png", "camera": { "direction": [-1, 0, 0] } },
-    { "path": "Phantom_MALD_intake_grazing.png", "camera": { "direction": [0.25, -1, 0.18] } }
+    { "path": "Phantom_MALD_body_grazing.png", "camera": { "direction": [0.25, -1, 0.18] } }
   ],
   "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
 }

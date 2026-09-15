@@ -14,7 +14,7 @@ VIEWS = (
     ("bottom", "bottom orthographic"),
     ("nose", "nose end view"),
     ("tail", "tail / exhaust end view"),
-    ("intake_grazing", "dorsal intake grazing view"),
+    ("body_grazing", "smooth body grazing view"),
 )
 
 

@@ -6,9 +6,9 @@ Date: 2026-09-14
 
 - Asset: RDM-9 Phantom radar-decoy missile exterior.
 - Intended use: sparse, vanilla-compatible Nuclear Option game asset viewed at aircraft-loadout and combat distances.
-- Silhouette: recognizable ADM-160B/MALD-J language without claiming a scale replica; broad shallow faceted body, rounded wedge nose, compact carriage appendages, intake/fairing language, and round recessed exhaust.
+- Silhouette: recognizable ADM-160B/MALD-J language without claiming a scale replica; smooth broad-shallow body, rounded wedge nose, compact carriage appendages, angular RF emitter housings, and round recessed exhaust.
 - Hard constraints: centered 2,800 mm length; every point inside a 125 mm radial carriage envelope; CAD +X nose, +Z dorsal, +Y starboard; no runtime-owned components in geometry.
-- Negative spaces: intake aperture and exhaust mouth must remain visibly open, with dark blind backing surfaces.
+- Negative space: the exhaust mouth must remain visibly open with a dark blind backing surface.
 - Detail density: sparse. Primary forms and appendages carry recognition; paired RF/lens panels provide the Phantom-specific role cue.
 - Known adaptation: the public MALD deployed span cannot fit the 250 mm game envelope. Wings and tail surfaces are deliberately represented as compact fixed/stowed-form appendages, with steep sweep used to preserve a readable root chord inside the narrow span.
 
@@ -38,16 +38,16 @@ The downloaded review copies live only in the temporary OpenCode workspace and a
 |---|---|---:|---|
 | 2,800 mm centered length | User-specified | High | Locked RDM-9 game specification, intentionally close to public MALD length reports. |
 | 125 mm maximum radial envelope | User-specified | High | Locked carriage constraint; overrides real deployed span. |
-| Broad, shallow faceted body | Visually inferred | High | Recurs across museum and RTX production imagery; exact section dimensions are not measurable from perspective photos. |
+| Smooth broad-shallow body | User-specified | High | Supersedes the first faceted interpretation; the emitter housings remain deliberately angular. |
 | Rounded wedge/ogive nose rather than needle tip | Visually inferred | High | Recurs across all five images and survives viewpoint changes. |
 | Compact fixed/stowed-form appendages | User-specified | High | Hybrid adaptation required by the 250 mm envelope; not a claim about real deployed geometry. |
-| Dorsal intake | User-specified | High | Phantom art direction. Public imagery more clearly establishes general dorsal fairings and an underside aperture than the exact intake placement, so the duct shape remains speculative. |
+| No intake | User-specified | High | Supersedes the earlier dorsal-intake art direction on 2026-09-14. |
 | Paired RF/lens side panels | User-specified | High | Phantom role cue, not copied MALD surface detail. |
 | Round recessed exhaust | Visually inferred | High | Museum and flight imagery support an aft turbojet exhaust; exact diameters remain adapted. |
 | Ventral keel | Speculative | Low | Compact Phantom stability/detail choice; not treated as a measured MALD feature. |
 
 ## Adversarial Review Resolution
 
-The first hybrid passed topology, symmetry, contact, aperture, and envelope checks but those checks did not enforce the two most consistent reference forms. It used a 176 x 184 mm main section and tapered to a 4 x 4 mm needle tip. The reviewed revision changes the main body to 200 x 154 mm, ends in a 34 x 28 mm blunt faceted cap, re-proportions adjacent loft stations, and reduces appendage tips to a 123.5 mm design radius. New checks enforce width over height by at least 30 mm, material through a nose-cap probe, a 124 mm design envelope for every part, the intake's dorsal placement, at least 100 mm longitudinal clearance between the mid-wings and RF panels, and full mirrored-geometry equivalence for bilateral pairs.
+The first hybrid passed topology, symmetry, contact, aperture, and envelope checks but those checks did not enforce the two most consistent reference forms. It used a 176 x 184 mm main section and tapered to a 4 x 4 mm needle tip. The reviewed revision changed the main body to 200 x 154 mm, ended in a 34 x 28 mm cap, re-proportioned adjacent loft stations, and reduced appendage tips to a 123.5 mm design radius. The subsequent user-directed revision removes both intake solids and replaces every octagonal section with a smooth elliptical loft while retaining angular emitter housings. Checks enforce the elliptical midbody area and absent angular shoulder material in addition to width over height, nose-cap material, the 124 mm design envelope, wing/emitter clearance, and full mirrored-geometry equivalence.
 
-The dorsal intake, paired RF panels, compact appendages, and ventral keel remain explicit hybrid choices. They are acceptable deviations because the goal is a recognizable Phantom derivative inside an incompatible carriage envelope, not a scale ADM-160 reproduction.
+The paired RF panels, compact appendages, and ventral keel remain explicit hybrid choices. They are acceptable deviations because the goal is a recognizable Phantom derivative inside an incompatible carriage envelope, not a scale ADM-160 reproduction.

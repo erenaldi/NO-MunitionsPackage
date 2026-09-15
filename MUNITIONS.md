@@ -41,12 +41,12 @@
 - Summary: no warhead; Luneburg lens + active repeater = maximum signature; flies a threat profile to bait SAM shots.
 - Specs: 2.8 m × 0.25 m, ~180 kg · Mach 2 burn then glide · 30 km
 - Impl: clone **AGM-48** (`AGM1_single` / `AGM1`) · projectile `radarSize` 1.0 while preserving the donor's low carriage RCS · zero blast/pierce and permanently blocked arming · 20 kN / 3.44 s / 30 kg single motor with a 650 m/s ceiling and provisional 60 s harmless termination · Phantom-only `Missile.InterceptPriority` fallback restores priority 1 for untargeted shots without bypassing radar, range, altitude, or intercept-viability gates. (2026-09-14 user decisions: lock-free from first implementation, 30 km envelope, radar size 1.0. IADS-HARD flight test confirmed a SAM engages an untargeted Phantom; practical range, harmless termination, designated-target behavior, and multiplayer remain pending.)
-- Visual: compact ADM-160B MALD-inspired hybrid: faceted airframe, angular nose,
-  dorsal intake, short fixed mid-wings and tail surfaces inside the 0.25 m
-  carriage envelope, paired mid-body RF/lens panels, and recessed turbojet
-  exhaust. This is an inspired Phantom design rather than a scale MALD replica;
-  the compact configuration supersedes the finless cylinder studies. (2026-09-14
-  user decision.)
+- Visual: compact ADM-160B MALD-inspired hybrid: smooth broad-shallow airframe,
+  rounded wedge nose, no intake, short fixed mid-wings and tail surfaces inside
+  the 0.25 m carriage envelope, angular paired mid-body RF/lens emitter housings,
+  and recessed turbojet exhaust. This is an inspired Phantom design rather than
+  a scale MALD replica; the compact configuration supersedes the finless cylinder
+  studies. (2026-09-14 user decisions.)
 
 ### 6. GPO-2R Auger — rocket-powered penetrator
 - Summary: 1.3 t bomb with 4 s rocket boost and terminal dive; AP ~5000 (vs Auger's 3000); delayed burst after penetration.

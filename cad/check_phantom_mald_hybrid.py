@@ -1,7 +1,7 @@
 """Independent deterministic checks for the compact MALD-inspired Phantom."""
 
 import json
-from math import sqrt
+from math import pi, sqrt
 from pathlib import Path
 
 from cadgen import build123d as bd, read_step
@@ -11,11 +11,9 @@ ROOT = Path(__file__).parent
 STEP_PATH = ROOT / "RDM-9_Phantom_MALD_Hybrid.step"
 EXPECTED_MODEL_LABEL = "RDM-9_Phantom_MALD_Hybrid"
 EXPECTED_LABELS = {
-    "faceted_body",
+    "smooth_body",
     "rf_panel_port",
     "rf_panel_starboard",
-    "dorsal_intake_cowl",
-    "dorsal_intake_recess",
     "midwing_port",
     "midwing_starboard",
     "tailplane_port",
@@ -25,7 +23,7 @@ EXPECTED_LABELS = {
     "nozzle_lip",
     "nozzle_recess",
 }
-CONTACT_PARTS = EXPECTED_LABELS - {"faceted_body"}
+CONTACT_PARTS = EXPECTED_LABELS - {"smooth_body"}
 PAIRS = (
     ("rf_panel_port", "rf_panel_starboard"),
     ("midwing_port", "midwing_starboard"),
@@ -93,7 +91,7 @@ def main():
         )
         radii[label] = round(max_radius(part), 3)
 
-    body = parts["faceted_body"]
+    body = parts["smooth_body"]
     body_bounds = body.bounding_box()
     assert body_bounds.size.Y > body_bounds.size.Z + 30.0, (
         f"body must read broad and shallow: {body_bounds.size.Y} x {body_bounds.size.Z} mm"
@@ -103,16 +101,21 @@ def main():
     nose_probe_volume = intersection_volume(body, nose_probe)
     assert nose_probe_volume > 2500.0, f"nose cap too sharp: {nose_probe_volume} mm^3"
 
+    midbody_slab = bd.Box(2.0, 240.0, 200.0).translate((0.0, 0.0, 0.0))
+    midbody_section_area = intersection_volume(body, midbody_slab) / 2.0
+    expected_ellipse_area = pi * 100.0 * 77.0
+    assert abs(midbody_section_area - expected_ellipse_area) < expected_ellipse_area * 0.005, (
+        f"midbody is not the specified smooth ellipse: {midbody_section_area} mm^2"
+    )
+    corner_probe = bd.Box(2.0, 2.0, 2.0).translate((0.0, 90.0, 50.0))
+    assert intersection_volume(body, corner_probe) < VOLUME_TOL, "midbody retains angular shoulders"
+
     design_envelope = bd.Cylinder(DESIGN_RADIUS, 2804.0).rotate(bd.Axis.Y, 90.0)
     for label in EXPECTED_LABELS:
         protrusion = parts[label] - design_envelope
         assert protrusion is None or protrusion.volume < VOLUME_TOL, (
             f"{label}: exceeds 124 mm design envelope"
         )
-
-    intake_bounds = parts["dorsal_intake_cowl"].bounding_box()
-    assert intake_bounds.min.Z > 70.0, f"intake is not locked to dorsal surface: {intake_bounds.min.Z}"
-    assert intake_bounds.max.Z <= 122.5, f"intake cowl exceeds design height: {intake_bounds.max.Z}"
 
     for label in CONTACT_PARTS:
         assert parts[label].distance_to(body) < TOL, f"{label}: no body contact"
@@ -133,13 +136,6 @@ def main():
         assert intersection_volume(parts[wing_label], parts[panel_label]) < VOLUME_TOL, (
             f"{wing_label}: intersects {panel_label}"
         )
-
-    intake_probe = bd.Box(12.0, 12.0, 8.0).translate((470.0, 0.0, 107.0))
-    intake_hits = [
-        label for label, part in parts.items()
-        if intersection_volume(part, intake_probe) > VOLUME_TOL
-    ]
-    assert not intake_hits, f"intake aperture blocked by {intake_hits}"
 
     mouth_probe = bd.Box(8.0, 12.0, 12.0).translate((-1370.0, 0.0, 0.0))
     mouth_hits = [
@@ -168,8 +164,9 @@ def main():
             "height": body_bounds.size.Z,
         },
         "nose_cap_probe_volume_mm3": nose_probe_volume,
+        "midbody_section_area_mm2": midbody_section_area,
+        "expected_elliptical_section_area_mm2": expected_ellipse_area,
         "design_envelope_radius_mm": DESIGN_RADIUS,
-        "intake_aperture_probe_blocked_by": intake_hits,
         "nozzle_mouth_probe_blocked_by": mouth_hits,
         "bilateral_pairs_checked": [list(pair) for pair in PAIRS],
         "wing_panel_longitudinal_gap_mm": wing_panel_gaps,
@@ -180,8 +177,8 @@ def main():
         encoding="utf-8",
     )
     print(
-        "PASS: RDM-9_Phantom_MALD_Hybrid.step -- 13 labeled valid solids, "
-        "2800 mm length, radius <= 125 mm, bilateral appendages, clear intake, blind nozzle."
+        "PASS: RDM-9_Phantom_MALD_Hybrid.step -- 11 labeled valid solids, "
+        "2800 mm length, smooth elliptical body, radius <= 125 mm, bilateral appendages, blind nozzle."
     )
 
 
