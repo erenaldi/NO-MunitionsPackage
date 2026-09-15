@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "file": "RDM-9_Phantom_MALD_Hybrid.step",
+  "label": "RDM-9_Phantom_MALD_Hybrid",
+  "part_count": 13,
+  "labels": [
+    "dorsal_fin",
+    "dorsal_intake_cowl",
+    "dorsal_intake_recess",
+    "faceted_body",
+    "midwing_port",
+    "midwing_starboard",
+    "nozzle_lip",
+    "nozzle_recess",
+    "rf_panel_port",
+    "rf_panel_starboard",
+    "tailplane_port",
+    "tailplane_starboard",
+    "ventral_keel"
+  ],
+  "model_bbox_mm": {
+    "min": [
+      -1400.0000001,
+      -124.9,
+      -124.9
+    ],
+    "max": [
+      1400.0000001,
+      124.9,
+      124.9
+    ],
+    "size": [
+      2800.0000002,
+      249.8,
+      249.8
+    ]
+  },
+  "maximum_radius_mm": {
+    "faceted_body": 118.018,
+    "rf_panel_port": 104.809,
+    "rf_panel_starboard": 104.809,
+    "dorsal_intake_cowl": 124.615,
+    "dorsal_intake_recess": 102.108,
+    "midwing_port": 124.936,
+    "midwing_starboard": 124.936,
+    "tailplane_port": 124.936,
+    "tailplane_starboard": 124.936,
+    "dorsal_fin": 124.936,
+    "ventral_keel": 124.936,
+    "nozzle_lip": 60.0,
+    "nozzle_recess": 47.0
+  },
+  "intake_aperture_probe_blocked_by": [],
+  "nozzle_mouth_probe_blocked_by": [],
+  "bilateral_pairs_checked": [
+    [
+      "rf_panel_port",
+      "rf_panel_starboard"
+    ],
+    [
+      "midwing_port",
+      "midwing_starboard"
+    ],
+    [
+      "tailplane_port",
+      "tailplane_starboard"
+    ]
+  ],
+  "scope": "compact MALD-inspired exterior; aircraft rack fit and Unity runtime not verified"
+}

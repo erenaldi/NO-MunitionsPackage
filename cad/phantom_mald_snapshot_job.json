@@ -1,0 +1,17 @@
+{
+  "input": "RDM-9_Phantom_MALD_Hybrid.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": { "mode": "rendered" },
+  "outputs": [
+    { "path": "Phantom_MALD_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+    { "path": "Phantom_MALD_opposite.png", "camera": { "direction": [1, 1, -0.7] } },
+    { "path": "Phantom_MALD_side.png", "camera": { "direction": [0, -1, 0] } },
+    { "path": "Phantom_MALD_top.png", "camera": { "direction": [0, 0, 1] } },
+    { "path": "Phantom_MALD_bottom.png", "camera": { "direction": [0, 0, -1] } },
+    { "path": "Phantom_MALD_nose.png", "camera": { "direction": [1, 0, 0] } },
+    { "path": "Phantom_MALD_tail.png", "camera": { "direction": [-1, 0, 0] } },
+    { "path": "Phantom_MALD_intake_grazing.png", "camera": { "direction": [0.25, -1, 0.18] } }
+  ],
+  "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+}
