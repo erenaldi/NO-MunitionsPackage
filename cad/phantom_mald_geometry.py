@@ -14,8 +14,11 @@ LENGTH = 2800.0
 HALF_LENGTH = LENGTH * 0.5
 ENVELOPE_RADIUS = 125.0
 
-BODY_WIDTH = 176.0
-BODY_HEIGHT = 184.0
+BODY_WIDTH = 200.0
+BODY_HEIGHT = 154.0
+NOSE_CAP_WIDTH = 34.0
+NOSE_CAP_HEIGHT = 28.0
+APPENDAGE_RADIUS = 123.5
 NOZZLE_INNER_RADIUS = 47.0
 
 BODY_COLOR = srgb("#8F989B")
@@ -74,7 +77,7 @@ def plate_from_xy(points, z_min, thickness):
 
 
 def side_panel(side):
-    y_inner = side * 86.0
+    y_inner = side * 98.0
     points = [
         (60.0, y_inner, -42.0),
         (100.0, y_inner, -52.0),
@@ -89,8 +92,8 @@ def side_panel(side):
 
 
 def horizontal_fin(side, root_aft, root_front, tip_aft, tip_front, z_center):
-    root_y = side * 82.0
-    tip_y = side * 124.9
+    root_y = side * 96.0
+    tip_y = side * APPENDAGE_RADIUS
     points = [
         (root_aft, root_y),
         (root_front, root_y),
@@ -116,15 +119,16 @@ def style(part, label, color, roughness=0.64, metalness=0.18):
 def make_body():
     body = bd.Solid.make_loft(
         [
-            section_wire(-HALF_LENGTH, 126.0, 135.0),
-            section_wire(-1375.0, 126.0, 135.0),
-            section_wire(-1250.0, 160.0, 170.0),
+            section_wire(-HALF_LENGTH, 142.0, 112.0),
+            section_wire(-1375.0, 142.0, 112.0),
+            section_wire(-1250.0, 176.0, 142.0),
             section_wire(-1050.0, BODY_WIDTH, BODY_HEIGHT),
             section_wire(900.0, BODY_WIDTH, BODY_HEIGHT),
-            section_wire(1080.0, 166.0, 170.0),
-            section_wire(1240.0, 110.0, 105.0),
-            section_wire(1360.0, 45.0, 42.0),
-            section_wire(HALF_LENGTH, 4.0, 4.0),
+            section_wire(1080.0, 188.0, 146.0),
+            section_wire(1240.0, 126.0, 100.0),
+            section_wire(1340.0, 62.0, 48.0),
+            section_wire(1380.0, 40.0, 32.0),
+            section_wire(HALF_LENGTH, NOSE_CAP_WIDTH, NOSE_CAP_HEIGHT),
         ],
         ruled=True,
     )
@@ -134,13 +138,13 @@ def make_body():
 
 def make_intake_cowl():
     roof = profile_prism_xz(
-        [(105.0, 92.0), (155.0, 104.0), (445.0, 123.0),
-         (490.0, 121.0), (490.0, 115.0), (165.0, 98.0), (120.0, 92.0)],
+        [(105.0, 77.0), (155.0, 96.0), (445.0, 122.0),
+         (490.0, 120.0), (490.0, 114.0), (165.0, 90.0), (120.0, 77.0)],
         40.0,
     )
     cheek_profile = [
-        (112.0, 91.0), (158.0, 102.0), (486.0, 120.0),
-        (486.0, 98.0), (165.0, 94.0), (125.0, 91.0),
+        (112.0, 76.0), (158.0, 94.0), (486.0, 119.0),
+        (486.0, 91.0), (165.0, 86.0), (125.0, 76.0),
     ]
     port = profile_prism_xz(cheek_profile, 5.0, -17.5)
     starboard = profile_prism_xz(cheek_profile, 5.0, 17.5)
@@ -155,7 +159,7 @@ def make_phantom_mald_hybrid():
         style(side_panel(1.0), "rf_panel_starboard", RF_PANEL_COLOR, 0.5, 0.12),
         style(make_intake_cowl(), "dorsal_intake_cowl", FIN_COLOR, 0.55, 0.24),
         style(
-            profile_prism_xz([(125.0, 92.0), (475.0, 97.0), (475.0, 101.0), (150.0, 96.0)], 30.0),
+            profile_prism_xz([(125.0, 76.0), (475.0, 88.0), (475.0, 94.0), (150.0, 82.0)], 30.0),
             "dorsal_intake_recess",
             INTAKE_COLOR,
             0.86,
@@ -166,12 +170,12 @@ def make_phantom_mald_hybrid():
         style(horizontal_fin(-1.0, -1280.0, -760.0, -1160.0, -900.0, 0.0), "tailplane_port", FIN_COLOR),
         style(horizontal_fin(1.0, -1280.0, -760.0, -1160.0, -900.0, 0.0), "tailplane_starboard", FIN_COLOR),
         style(
-            vertical_fin([(-1280.0, 58.0), (-730.0, 92.0), (-900.0, 124.9), (-1180.0, 124.9)]),
+            vertical_fin([(-1280.0, 52.0), (-730.0, 77.0), (-900.0, APPENDAGE_RADIUS), (-1180.0, APPENDAGE_RADIUS)]),
             "dorsal_fin",
             FIN_COLOR,
         ),
         style(
-            vertical_fin([(-1260.0, -60.0), (-850.0, -92.0), (-990.0, -124.9), (-1170.0, -124.9)]),
+            vertical_fin([(-1260.0, -52.0), (-850.0, -77.0), (-990.0, -APPENDAGE_RADIUS), (-1170.0, -APPENDAGE_RADIUS)]),
             "ventral_keel",
             FIN_COLOR,
         ),

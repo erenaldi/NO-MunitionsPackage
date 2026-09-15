@@ -34,6 +34,7 @@ PAIRS = (
 TOL = 1e-4
 VOLUME_TOL = 1e-3
 ENVELOPE_RADIUS = 125.0
+DESIGN_RADIUS = 124.0
 
 
 def intersection_volume(left, right):
@@ -56,6 +57,11 @@ def assert_mirrored(left, right):
     assert abs(left_bounds.max.Y + right_bounds.min.Y) < TOL
     assert abs(left_bounds.min.Z - right_bounds.min.Z) < TOL
     assert abs(left_bounds.max.Z - right_bounds.max.Z) < TOL
+    mirrored = left.mirror(bd.Plane.XZ)
+    left_only = mirrored - right
+    right_only = right - mirrored
+    assert left_only is None or left_only.volume < VOLUME_TOL
+    assert right_only is None or right_only.volume < VOLUME_TOL
 
 
 def main():
@@ -88,14 +94,42 @@ def main():
         radii[label] = round(max_radius(part), 3)
 
     body = parts["faceted_body"]
+    body_bounds = body.bounding_box()
+    assert body_bounds.size.Y > body_bounds.size.Z + 30.0, (
+        f"body must read broad and shallow: {body_bounds.size.Y} x {body_bounds.size.Z} mm"
+    )
+
+    nose_probe = bd.Box(4.0, 30.0, 24.0).translate((1398.0, 0.0, 0.0))
+    nose_probe_volume = intersection_volume(body, nose_probe)
+    assert nose_probe_volume > 2500.0, f"nose cap too sharp: {nose_probe_volume} mm^3"
+
+    design_envelope = bd.Cylinder(DESIGN_RADIUS, 2804.0).rotate(bd.Axis.Y, 90.0)
+    for label in EXPECTED_LABELS:
+        protrusion = parts[label] - design_envelope
+        assert protrusion is None or protrusion.volume < VOLUME_TOL, (
+            f"{label}: exceeds 124 mm design envelope"
+        )
+
+    intake_bounds = parts["dorsal_intake_cowl"].bounding_box()
+    assert intake_bounds.min.Z > 70.0, f"intake is not locked to dorsal surface: {intake_bounds.min.Z}"
+    assert intake_bounds.max.Z <= 122.5, f"intake cowl exceeds design height: {intake_bounds.max.Z}"
+
     for label in CONTACT_PARTS:
         assert parts[label].distance_to(body) < TOL, f"{label}: no body contact"
     for left_label, right_label in PAIRS:
         assert_mirrored(parts[left_label], parts[right_label])
+    wing_panel_gaps = {}
     for wing_label, panel_label in (
         ("midwing_port", "rf_panel_port"),
         ("midwing_starboard", "rf_panel_starboard"),
     ):
+        wing_bounds = parts[wing_label].bounding_box()
+        panel_bounds = parts[panel_label].bounding_box()
+        longitudinal_gap = panel_bounds.min.X - wing_bounds.max.X
+        wing_panel_gaps[wing_label] = longitudinal_gap
+        assert longitudinal_gap >= 100.0, (
+            f"{wing_label}: only {longitudinal_gap} mm longitudinal clearance from {panel_label}"
+        )
         assert intersection_volume(parts[wing_label], parts[panel_label]) < VOLUME_TOL, (
             f"{wing_label}: intersects {panel_label}"
         )
@@ -129,9 +163,16 @@ def main():
             "size": list(bounds.size),
         },
         "maximum_radius_mm": radii,
+        "body_aspect_mm": {
+            "width": body_bounds.size.Y,
+            "height": body_bounds.size.Z,
+        },
+        "nose_cap_probe_volume_mm3": nose_probe_volume,
+        "design_envelope_radius_mm": DESIGN_RADIUS,
         "intake_aperture_probe_blocked_by": intake_hits,
         "nozzle_mouth_probe_blocked_by": mouth_hits,
         "bilateral_pairs_checked": [list(pair) for pair in PAIRS],
+        "wing_panel_longitudinal_gap_mm": wing_panel_gaps,
         "scope": "compact MALD-inspired exterior; aircraft rack fit and Unity runtime not verified",
     }
     (ROOT / "RDM-9_Phantom_MALD_Hybrid_Checks.json").write_text(
