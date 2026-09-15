@@ -1,0 +1,121 @@
+{
+  "ok": true,
+  "datums_mm": {
+    "nose_x": 1400.0,
+    "tail_x": -1400.0,
+    "origin_x": 0.0
+  },
+  "body_diameter_mm": 225.0,
+  "envelope_diameter_mm": 250.0,
+  "candidates": [
+    {
+      "file": "RDM-9_Phantom_Lens180.step",
+      "label": "RDM-9_Phantom_Lens180",
+      "part_count": 4,
+      "labels": [
+        "body",
+        "lens_housing",
+        "nozzle_lip",
+        "nozzle_recess"
+      ],
+      "lens_width_mm": 180,
+      "model_bbox_mm": {
+        "min": [
+          -1400.0,
+          -125.0000001,
+          -125.0000001
+        ],
+        "max": [
+          1400.0000001,
+          125.0000001,
+          125.0000001
+        ],
+        "size": [
+          2800.0000001,
+          250.0000002,
+          250.0000002
+        ]
+      },
+      "measured_max_radius_mm": {
+        "body": 112.5,
+        "lens_housing": 125.0,
+        "nozzle_lip": 92.0,
+        "nozzle_recess": 72.0
+      },
+      "nozzle_mouth_probe_blocked_by": []
+    },
+    {
+      "file": "RDM-9_Phantom_Lens220.step",
+      "label": "RDM-9_Phantom_Lens220",
+      "part_count": 4,
+      "labels": [
+        "body",
+        "lens_housing",
+        "nozzle_lip",
+        "nozzle_recess"
+      ],
+      "lens_width_mm": 220,
+      "model_bbox_mm": {
+        "min": [
+          -1400.0,
+          -125.0000001,
+          -125.0000001
+        ],
+        "max": [
+          1400.0000001,
+          125.0000001,
+          125.0000001
+        ],
+        "size": [
+          2800.0000001,
+          250.0000002,
+          250.0000002
+        ]
+      },
+      "measured_max_radius_mm": {
+        "body": 112.5,
+        "lens_housing": 125.0,
+        "nozzle_lip": 92.0,
+        "nozzle_recess": 72.0
+      },
+      "nozzle_mouth_probe_blocked_by": []
+    },
+    {
+      "file": "RDM-9_Phantom_Lens260.step",
+      "label": "RDM-9_Phantom_Lens260",
+      "part_count": 4,
+      "labels": [
+        "body",
+        "lens_housing",
+        "nozzle_lip",
+        "nozzle_recess"
+      ],
+      "lens_width_mm": 260,
+      "model_bbox_mm": {
+        "min": [
+          -1400.0,
+          -125.0000001,
+          -125.0000001
+        ],
+        "max": [
+          1400.0000001,
+          125.0000001,
+          125.0000001
+        ],
+        "size": [
+          2800.0000001,
+          250.0000002,
+          250.0000002
+        ]
+      },
+      "measured_max_radius_mm": {
+        "body": 112.5,
+        "lens_housing": 125.0,
+        "nozzle_lip": 92.0,
+        "nozzle_recess": 72.0
+      },
+      "nozzle_mouth_probe_blocked_by": []
+    }
+  ],
+  "scope": "Phantom exterior silhouette; aircraft rack fit and Unity runtime not verified"
+}

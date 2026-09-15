@@ -1,0 +1,47 @@
+[
+  {
+    "input": "RDM-9_Phantom_Lens180.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Phantom_Lens180_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+      { "path": "Phantom_Lens180_opposite.png", "camera": { "direction": [1, 1, -0.7] } },
+      { "path": "Phantom_Lens180_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Phantom_Lens180_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Phantom_Lens180_nose.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "Phantom_Lens180_tail.png", "camera": { "direction": [-1, 0, 0] } }
+    ],
+    "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+  },
+  {
+    "input": "RDM-9_Phantom_Lens220.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Phantom_Lens220_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+      { "path": "Phantom_Lens220_opposite.png", "camera": { "direction": [1, 1, -0.7] } },
+      { "path": "Phantom_Lens220_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Phantom_Lens220_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Phantom_Lens220_nose.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "Phantom_Lens220_tail.png", "camera": { "direction": [-1, 0, 0] } }
+    ],
+    "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+  },
+  {
+    "input": "RDM-9_Phantom_Lens260.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Phantom_Lens260_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+      { "path": "Phantom_Lens260_opposite.png", "camera": { "direction": [1, 1, -0.7] } },
+      { "path": "Phantom_Lens260_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Phantom_Lens260_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Phantom_Lens260_nose.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "Phantom_Lens260_tail.png", "camera": { "direction": [-1, 0, 0] } }
+    ],
+    "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+  }
+]
