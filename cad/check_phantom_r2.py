@@ -89,6 +89,32 @@ CANDIDATES = {
         "touch_only": ("nozzle_recess",),
         "extra_contact": (),
     },
+    # R3 Dart of record (2026-09-20): side emitters removed, dorsal pop-out
+    # wings rendered deployed. The wing pair is exempt from the radial
+    # carriage-envelope gates (the real ADM-160 wings exceed the 250 mm
+    # carriage envelope once popped out) and is instead bounded by
+    # wing_limits; the buried wing roots remain inside the envelope and are
+    # still root-engagement gated.
+    "dart3": {
+        "step": "RDM-9_Phantom_R3_Dart.step",
+        "label": "RDM-9_Phantom_R3_Dart",
+        "pairs": (
+            ("wing_port", "wing_starboard"),
+            ("tail_fin_port", "tail_fin_starboard"),
+        ),
+        "rooted": (
+            "wing_port",
+            "wing_starboard",
+            "tail_fin_port",
+            "tail_fin_starboard",
+            "dorsal_fin",
+            "ventral_fin",
+        ),
+        "touch_only": ("nozzle_recess",),
+        "extra_contact": (),
+        "envelope_exempt": ("wing_port", "wing_starboard"),
+        "wing_limits": {"y": 600.0, "z": 200.0},
+    },
 }
 
 TOL = 1e-4
@@ -160,21 +186,34 @@ def main():
     assert abs(bounds.max.X - 1400.0) < TOL, f"nose datum {bounds.max.X}"
     assert abs(bounds.size.X - 2800.0) < TOL, f"length {bounds.size.X}"
     assert abs(bounds.center().Y) < TOL, f"lateral center {bounds.center().Y}"
-    assert bounds.min.Y >= -125.0 - TOL and bounds.max.Y <= 125.0 + TOL
-    assert bounds.min.Z >= -125.0 - TOL and bounds.max.Z <= 125.0 + TOL
 
     envelope = bd.Cylinder(ENVELOPE_RADIUS, 2804.0).rotate(bd.Axis.Y, 90.0)
     design_envelope = bd.Cylinder(DESIGN_RADIUS, 2804.0).rotate(bd.Axis.Y, 90.0)
+    exempt = set(spec.get("envelope_exempt", ()))
+    wing_limits = spec.get("wing_limits")
     radii = {}
     for label, part in parts.items():
-        protrusion = part - envelope
-        assert protrusion is None or protrusion.volume < VOLUME_TOL, (
-            f"{label}: exceeds 125 mm radial envelope"
-        )
-        design_protrusion = part - design_envelope
-        assert design_protrusion is None or design_protrusion.volume < VOLUME_TOL, (
-            f"{label}: exceeds 124 mm design envelope"
-        )
+        if label in exempt:
+            assert wing_limits, f"{label}: exempt without wing limits"
+            part_bounds = part.bounding_box()
+            assert part_bounds.max.Y <= wing_limits["y"] + TOL, (
+                f"{label}: starboard span {part_bounds.max.Y} exceeds {wing_limits['y']}"
+            )
+            assert part_bounds.min.Y >= -wing_limits["y"] - TOL, (
+                f"{label}: port span {part_bounds.min.Y} exceeds {wing_limits['y']}"
+            )
+            assert part_bounds.max.Z <= wing_limits["z"] + TOL, (
+                f"{label}: height {part_bounds.max.Z} exceeds {wing_limits['z']}"
+            )
+        else:
+            protrusion = part - envelope
+            assert protrusion is None or protrusion.volume < VOLUME_TOL, (
+                f"{label}: exceeds 125 mm radial envelope"
+            )
+            design_protrusion = part - design_envelope
+            assert design_protrusion is None or design_protrusion.volume < VOLUME_TOL, (
+                f"{label}: exceeds 124 mm design envelope"
+            )
         radii[label] = round(max_radius(part), 3)
 
     body = parts["smooth_body"]

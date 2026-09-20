@@ -21,6 +21,14 @@ The 2026-09-20 adversarial-review repairs are structural, not cosmetic:
 - Every candidate must clear a dorsal pylon-pad mockup zone (a 700 x 80 mm
   pad face 1 mm above the body crown), so no fixed dorsal feature may rise
   into the carriage interface.
+
+R3 Dart of record (2026-09-20 user decisions): the Dart silhouette is
+selected, the side RF/lens emitter panels are removed, and dorsal pop-out
+wings are added, rendered deployed like the real ADM-160 spring-out wings.
+The wing roots stay buried in the dorsal crown inside the 250 mm carriage
+envelope; the deployed span intentionally exceeds it, so the wing pair is
+exempt from the radial envelope gates and the rack visual will show
+deployed wings.
 """
 
 from cadgen import build123d as bd
@@ -158,6 +166,39 @@ def vertical_fin(points, width=6.0):
     return profile_prism_xz(points, width)
 
 
+# R3 Dart pop-out wings: dorsal-mounted, rendered deployed like the real
+# ADM-160 spring-out wings. The root edge is buried in the dorsal crown
+# (inside the 250 mm carriage envelope); the deployed span intentionally
+# exceeds it.
+WING_ROOT_AFT = -350.0
+WING_ROOT_FRONT = 250.0
+WING_TIP_AFT = -180.0
+WING_TIP_FRONT = 420.0
+WING_ROOT_Y = 18.0
+WING_TIP_Y = 550.0
+WING_Z_MIN = 68.0
+WING_THICKNESS = 5.0
+WING_DIHEDRAL_DEG = 5.0
+WING_LIMIT_Y = 600.0
+WING_LIMIT_Z = 200.0
+
+
+def popout_wing(side):
+    """One deployed wing half, hinged at the dorsal centerline with dihedral."""
+    points = [
+        (WING_ROOT_AFT, side * WING_ROOT_Y),
+        (WING_ROOT_FRONT, side * WING_ROOT_Y),
+        (WING_TIP_FRONT, side * WING_TIP_Y),
+        (WING_TIP_AFT, side * WING_TIP_Y),
+    ]
+    if side < 0.0:
+        points.reverse()
+    wing = plate_from_xy(points, WING_Z_MIN, WING_THICKNESS)
+    return wing.rotate(
+        bd.Axis((0.0, 0.0, WING_Z_MIN), (1.0, 0.0, 0.0)), side * WING_DIHEDRAL_DEG
+    )
+
+
 def style(part, label, color, roughness=0.64, metalness=0.18):
     part.label = label
     part.color = color
@@ -267,11 +308,34 @@ def _appendages(candidate):
             0.18,
         ))
         return parts
+    if candidate == "dart3":
+        parts = []
+        for side, name in ((-1.0, "port"), (1.0, "starboard")):
+            tail_fin = horizontal_fin(
+                side, -1340.0, -1130.0, -1250.0, -1190.0, 56.0, 123.5, 0.0, 6.0
+            )
+            parts.append((tail_fin, f"tail_fin_{name}", FIN_COLOR, 0.64, 0.18))
+            parts.append((popout_wing(side), f"wing_{name}", FIN_COLOR, 0.55, 0.24))
+        parts.append((
+            vertical_fin([(-1340.0, 40.0), (-1140.0, 54.0), (-1210.0, 123.5), (-1310.0, 123.5)]),
+            "dorsal_fin",
+            FIN_COLOR,
+            0.64,
+            0.18,
+        ))
+        parts.append((
+            vertical_fin([(-1330.0, -40.0), (-1150.0, -52.0), (-1220.0, -123.5), (-1300.0, -123.5)]),
+            "ventral_fin",
+            FIN_COLOR,
+            0.64,
+            0.18,
+        ))
+        return parts
     raise ValueError(f"unknown candidate: {candidate}")
 
 
 def make_r2(candidate):
-    """Assemble one round-2 Phantom candidate. candidate: sled | rails | dart."""
+    """Assemble one round-2 Phantom candidate. candidate: sled | rails | dart | dart3."""
     report(f"RDM-9 Phantom round-2 candidate: {candidate}")
     body = style(make_body(), "smooth_body", BODY_COLOR)
     lip, recess = make_nozzle_parts()
@@ -286,6 +350,7 @@ def make_r2(candidate):
         "sled": "RDM-9_Phantom_R2_Sled",
         "rails": "RDM-9_Phantom_R2_Rails",
         "dart": "RDM-9_Phantom_R2_Dart",
+        "dart3": "RDM-9_Phantom_R3_Dart",
     }[candidate]
     return bd.Compound(children=parts, label=label)
 
@@ -302,4 +367,10 @@ def make_r2_context(candidate):
     parts = list(compound.children) + [
         style(pad, "pylon_pad", PAD_COLOR, 0.55, 0.30),
     ]
-    return bd.Compound(children=parts, label=f"RDM-9_Phantom_R2_Context_{candidate.capitalize()}")
+    label = {
+        "sled": "RDM-9_Phantom_R2_Context_Sled",
+        "rails": "RDM-9_Phantom_R2_Context_Rails",
+        "dart": "RDM-9_Phantom_R2_Context_Dart",
+        "dart3": "RDM-9_Phantom_R3_Context_Dart",
+    }[candidate]
+    return bd.Compound(children=parts, label=label)
