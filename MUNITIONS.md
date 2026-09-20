@@ -1,7 +1,7 @@
 # MUNITIONS.md — Implementation Handoff Draft
 ## Global design parameters
-- **15 weapons** · 8 def-tuned, 7 code-touched · each munition's initial visual-design pass is geometry-only; later texture, material, color, and marking passes may add any presentation details needed · nukes deferred to v1.1
-- **Code systems:** submunitions · jamming (EW-25-style, energy store) · water-phase · HOB/LOAL seekers · salvo dispersion · hard-kill auto-defense
+- **12 weapons** · 6 def-tuned, 6 code-touched · each munition's initial visual-design pass is geometry-only; later texture, material, color, and marking passes may add any presentation details needed · nukes deferred to v1.1
+- **Code systems:** submunitions · jamming (EW-25-style, energy store) · water-phase · HOB/LOAL seekers · hard-kill auto-defense
 - **Method:** clone vanilla analog def → override fields → register via BepInEx plugin; def-only weapons may alternatively ship as Blueprinter `.nobp` patches (proven by AShM-500 Yashma)
 - **Phase 1 gate:** runtime reflection dump validates every def-field mapping below; all numbers are design targets until then
 
@@ -41,68 +41,51 @@
 - Summary: no warhead; Luneburg lens + active repeater = maximum signature; flies a threat profile to bait SAM shots.
 - Specs: 2.8 m × 0.25 m, ~180 kg · Mach 2 burn then glide · 30 km
 - Impl: clone **AGM-48** (`AGM1_single` / `AGM1`) · projectile `radarSize` 1.0 while preserving the donor's low carriage RCS · zero blast/pierce and permanently blocked arming · 20 kN / 3.44 s / 30 kg single motor with a 650 m/s ceiling and provisional 60 s harmless termination · Phantom-only `Missile.InterceptPriority` fallback restores priority 1 for untargeted shots without bypassing radar, range, altitude, or intercept-viability gates. (2026-09-14 user decisions: lock-free from first implementation, 30 km envelope, radar size 1.0. IADS-HARD flight test confirmed a SAM engages an untargeted Phantom; practical range, harmless termination, designated-target behavior, and multiplayer remain pending.)
-- Visual: compact ADM-160B MALD-inspired hybrid: smooth broad-shallow airframe,
-  rounded wedge nose, no intake, short fixed mid-wings and tail surfaces inside
-  the 0.25 m carriage envelope, angular paired mid-body RF/lens emitter housings,
-  and recessed turbojet exhaust. This is an inspired Phantom design rather than
-  a scale MALD replica; the compact configuration supersedes the finless cylinder
-  studies. (2026-09-14 user decisions.)
+- Visual: RDM-9 decoy of record (2026-09-20): Dart silhouette on the smooth
+  broad-shallow upward-wedge airframe — clean body, four real-span tail fins,
+  dorsal pop-out wings rendered deployed (wing roots stay inside the 0.25 m
+  carriage envelope; ~1.1 m deployed span intentionally exceeds it, like the
+  real ADM-160 spring-out wings), recessed turbojet exhaust. Side RF/lens
+  emitter panels removed by 2026-09-20 decision. Supersedes the 2026-09-14
+  compact MALD-hybrid direction and the finless cylinder studies.
 
-### 6. GPO-2R Auger — rocket-powered penetrator
-- Summary: 1.3 t bomb with 4 s rocket boost and terminal dive; AP ~5000 (vs Auger's 3000); delayed burst after penetration.
-- Specs: 4.2 m × 0.46 m, ~1,300 kg
-- Impl: clone **GPO-2P Auger** · def-only
-- Visual: thick body, hardened elongated tip, radial-nozzle tail motor ring
-
-### 7. CDM-4 Bramble — cluster dispenser
-- Summary: dispenser opens at preset altitude, scattering ~20 × 30 kg unguided bomblets over a ~200 m footprint.
-- Specs: 2.6 m × 0.48 m drum, ~900 kg
-- Impl: clone **Demolition Bomb** airframe · **code: submunition engine**
-- Visual: drum with longitudinal seams
-
-### 8. AGR-30 Hailstorm — indirect saturation rockets
-- Summary: salvo of 4 lofted rockets with sustainer motors, 25-40 km to the designated point, deliberate 300-600 m dispersion — area saturation, no precision.
-- Specs: 2.1 m × 0.24 m per rocket, ~340 kg · 30 kg HE-FRAG
-- Impl: clone **AGR-18 Lynchpin** airframe · def-first using `LaserSeeker.errorRate`; add code-lite salvo dispersion only if testing misses the 300-600 m footprint
-- Visual: fat tube, wraparound fins
-
-### 9. ALM-5 Vesper — high-mach ECM cruise
+### 6. ALM-5 Vesper — high-mach ECM cruise
 - Summary: Mach 3.5-4 cruise at 11+ km, 150+ km, 650 kg HE. Self-defense jammer reuses vanilla EW-25 mechanics: internal energy store drains while jamming and replenishes over time, 40 km radius, suppresses inbound seeker locks. Counter: saturation launches.
 - Specs: 6.5 m × 0.55 m, ~2,300 kg
 - Impl: clone **ALND-4/ALM-C450** · **code: jamming module** (capacity/recharge = config values)
 - Visual: sleek body, flush ramjet intake, spine ECM blade antennas
 
-### 10. Tusko-D — quasi-ballistic hypersonic strike missile
+### 7. Tusko-D — quasi-ballistic hypersonic strike missile
 - Summary: PrSM × Kinzhal mix — air-launched, quasi-ballistic arc with Mach 5-class sprint and maneuvering terminal phase; 1.2 t penetrator-HE; dual land/surface strike, 400+ km class. Terminal weave defeats single-shot intercepts.
 - Specs: 8.5 m × 0.70 m, ~2,400 kg
 - Impl: clone **Tusko-B (AShM3)** · def-only
 - Visual: slender Kinzhal-like body, sharp ogive nose, trapezoidal control surfaces
 
-### 11. ALBM-3 Trebuchet [U] — air-launched ballistic, unitary
+### 8. ALBM-3 Trebuchet [U] — air-launched ballistic, unitary
 - Summary: lofted ballistic arc to fixed INS coordinates, ~150+ km, 1.5 t unitary HE; positioned between Tusko-D and Piledriver; carryable across role classes (no hardpoint math). Counter: kill the shooter.
 - Specs: 6.5 m × 0.60 m, ~3,200 kg
 - Impl: clone **Piledriver TBM** · def + air-launch integration
 - Visual: clean tapering body, three tiny strakes
 
-### 12. ALBM-3 Trebuchet [C] — bomblet carpet variant
+### 9. ALBM-3 Trebuchet [C] — bomblet carpet variant
 - Summary: identical airframe/motor; dispenses ~50 × 12 kg unguided bomblets on descent for a wide footprint.
 - Specs: 6.5 m × 0.60 m, ~3,300 kg
 - Impl: shared airframe · **code: shared submunition engine**
 - Visual: [U] + ventral dispenser seams
 
-### 13. TOR-42 Halcyon — air-dropped lightweight torpedo
+### 10. TOR-42 Halcyon — air-dropped lightweight torpedo
 - Summary: parachute drop, 35 kt underwater, ~8 km run, 45 kg PBX, active acoustic homing vs ships. Balance via cost (no countermeasures in-game).
 - Specs: 2.9 m × 0.32 m, ~280 kg
 - Impl: **no vanilla analog — code: water-phase spike first; fallback = waterline skipper**; geometry built fresh
 - Visual: torpedo cylinder, propeller shroud
 
-### 14. RAT-44 Barracuda — rocket-assisted standoff torpedo
+### 11. RAT-44 Barracuda — rocket-assisted standoff torpedo
 - Summary: same 45 kg torpedo stage with a separable rocket booster delivering it 10-15 km out with skip-entry.
 - Specs: 3.8 m × 0.32 m, ~650 kg
 - Impl: shared with Halcyon (booster stage + transition logic)
 - Visual: torpedo + separable rocket tail stage
 
-### 15. HKP-1 Palisade — aerial hard-kill interceptor pod
+### 12. HKP-1 Palisade — aerial hard-kill interceptor pod
 - Summary: aircraft-carried point-defense pod that detects missiles inbound on the carrying aircraft and launches hard-kill interceptors against them — the aerial counterpart to vanilla ship RAM-45 point defense. Guidance reference: the vanilla `antiMissile`/`DefendWithMissiles` ship-defense pipeline.
 - Platforms: heavy airframes only — KR-67 Ifrit, EW-25 Medusa, and similar modded heavies via a BepInEx config whitelist; station availability is patched for whitelisted airframes only.
 - Pod: 1.8 m × 0.40 m station, ~250 kg loaded, 4 × 35 kg interceptor rounds; rearm between sorties; multiple pods stack coverage.
@@ -113,11 +96,41 @@
   - **Max Coverage** — engages every munition targeted at the aircraft that can kinematically be reached; 1 interceptor per target at a time, committed at maximum intercept range, re-engaging on failure (threat survives past the clearance threshold with time-to-impact still allowing re-engagement).
 - Impl: clone **RAM-45** as the interceptor substrate; functional pod cloned from `AGM2_6Pod` and reduced to four `MountedMissile` launchers · **code: hard-kill auto-defense** (threat classification from the missile-warning pipeline, CM-state access, mode state machine, CM-menu integration). The first runtime spike retains widened, short-delay SARH guidance; replace it with self-contained ARH only if Ifrit/Medusa flight tests prove carrier illumination unreliable. Player-aircraft decisions run on the owning client and use the vanilla missile command path; AI decisions run on the server. Vanilla-system findings and the integration design are recorded in `docs/PALISADE_FINDINGS.md`; the implementation plan is in `docs/V1_PLAN.md`. (2026-09-14: functional clone registered; interception validation pending.)
 - Counterplay: saturation launches, breaking lock early before the pod commits, low-closure launches outside the envelope; balance via round count and cost.
-- Visual: boxy under-fuselage pod with four flush launcher doors and a small flat radar window at the nose; interceptors are stubby darts with strakes.
+- Visual: boxy under-fuselage pod with four flush launcher doors and a small flat radar window at the nose. The interceptor is an almost cylindrical 1.2 m dart with a rounded nose, four tiny diagonal rear stabilizers, and a detachable aft turning cap carrying four cardinal transverse motors. The cap performs pitch/yaw snap-turning, not axial roll; it separates before the recessed main nozzle ignites.
+- Staged flight authority (2026-09-14): 0.2 s controller-applied housing ejection; snap-turn toward the SARH-owned aimpoint; cap release when alignment is within 5 degrees and angular rate is at most 60 deg/s after a 0.1 s minimum, or at a 0.55 s timeout; then an 18 kN, 2.0 s, 15 kg main burn with 1,050 m/s speed ceiling and high-authority TVC. Snap-turn torque is limited to 60 rad/s2 and 720 deg/s; powered TVC is limited to 35 degrees and 35 G with a 0.2 s authority ramp.
 
 ---
 
-This document is the design authority for the 15-weapon roster. Per-weapon
+## Deferred to a possible later release
+
+The three munitions below are archived from the active roster. Specs are
+preserved verbatim for revival; no analog, lane, or code work is planned.
+Analog decisions for revival: GPO-2R → `GPO-2P Auger`; Bramble →
+`bomb_demo_mini`; Hailstorm → `AGR-18 Lynchpin` airframe with a
+definition-only `LaserSeeker.errorRate` dispersion test before any custom
+salvo code.
+
+### D1. GPO-2R Auger — rocket-powered penetrator
+- Summary: 1.3 t bomb with 4 s rocket boost and terminal dive; AP ~5000 (vs Auger's 3000); delayed burst after penetration.
+- Specs: 4.2 m × 0.46 m, ~1,300 kg
+- Impl: clone **GPO-2P Auger** · def-only
+- Visual: thick body, hardened elongated tip, radial-nozzle tail motor ring
+
+### D2. CDM-4 Bramble — cluster dispenser
+- Summary: dispenser opens at preset altitude, scattering ~20 × 30 kg unguided bomblets over a ~200 m footprint.
+- Specs: 2.6 m × 0.48 m drum, ~900 kg
+- Impl: clone **Demolition Bomb** airframe · **code: submunition engine**
+- Visual: drum with longitudinal seams
+
+### D3. AGR-30 Hailstorm — indirect saturation rockets
+- Summary: salvo of 4 lofted rockets with sustainer motors, 25-40 km to the designated point, deliberate 300-600 m dispersion — area saturation, no precision.
+- Specs: 2.1 m × 0.24 m per rocket, ~340 kg · 30 kg HE-FRAG
+- Impl: clone **AGR-18 Lynchpin** airframe · def-first using `LaserSeeker.errorRate`; add code-lite salvo dispersion only if testing misses the 300-600 m footprint
+- Visual: fat tube, wraparound fins
+
+---
+
+This document is the design authority for the 12-weapon roster. Per-weapon
 implementation and test status is tracked in
 `missions/Erenaldi.ProvingGround/lane-manifest.json`; runtime findings and
 gates are recorded in `docs/PHASE1_FINDINGS.md`.
@@ -133,8 +146,6 @@ gates are recorded in `docs/PHASE1_FINDINGS.md`.
   identical component structure. Renamed from the original ARAD-120 when the
   continuous sustainer became a smaller motor; 2026-09-13: consolidated to the
   single continuous burn (see §4).
-- Bramble airframe base: `bomb_demo_mini`.
 - Trebuchet [U] retains the unitary Piledriver base; Trebuchet [C] uses the MIRV variant as its dispenser substrate.
-- Hailstorm receives a definition-only dispersion test before custom salvo-offset code is added.
-- MAD-2 Thistle, AShM-150 Kestrel, and AShM-450 Maelstrom were cut from the roster; no analog, lane, or code work is planned for them.
-- Palisade interceptor substrate: RAM-45; pod station cloned from a gun-pod-style mount. Phase 1 must inspect the vanilla anti-missile defense pipeline (`antiMissile`/`DefendWithMissiles`) and the countermeasure manager before the hard-kill code system is built.
+- MAD-2 Thistle, AShM-150 Kestrel, and AShM-450 Maelstrom were cut from the roster; GPO-2R Auger, CDM-4 Bramble, and AGR-30 Hailstorm are deferred to a possible later release (specs preserved verbatim in the deferred section above). No analog, lane, or code work is planned for any of them.
+- Palisade interceptor substrate: RAM-45; pod station cloned from a gun-pod-style mount. Phase 1 must inspect the vanilla anti-missile defense pipeline (`antiMissile`/`DefendWithMissiles`) and the countermeasure manager before the hard-kill code system is built. The countermeasure-system investigation is complete — see `docs/PALISADE_FINDINGS.md`.
