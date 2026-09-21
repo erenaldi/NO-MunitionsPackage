@@ -29,6 +29,16 @@ The wing roots stay buried in the dorsal crown inside the 250 mm carriage
 envelope; the deployed span intentionally exceeds it, so the wing pair is
 exempt from the radial envelope gates and the rack visual will show
 deployed wings.
+
+R4 revision (2026-09-20, after user review of R3): the nose converges to a
+full sharp point riding at +30 mm (upward wedge preserved), and the wings
+become a real swept planform - 420 mm root chord, 110 mm tip chord, 30
+degree leading-edge sweep, raked tips, 2.5 degree dihedral, +-700 mm span.
+The R4 body is one smooth non-ruled loft (no station ring bands) whose
+stability was found empirically: the apex vertex anchors the spline, the
+tail stations must be monotone without duplicates, and equal-value plateau
+stations must sit every 200 mm or the cubic crowns mid-span. Measured
+clamp: 200.64 x 154.73 mm against the 201.5 x 155.5 gate.
 """
 
 from cadgen import build123d as bd
@@ -79,6 +89,49 @@ BODY_SECTIONS = (
     (1390.0, 74.0, 16.0, 29.0),
     (1400.0, NOSE_CAP_WIDTH, NOSE_CAP_HEIGHT, NOSE_CAP_RISE),
 )
+
+# R4 dart4 body: a smooth non-ruled loft (no station ring bands) fused with
+# a ruled single-segment tip cone into a sharp apex vertex at (1400, 0,
+# +30). Station rules found empirically (see probes): monotone tail without
+# duplicate stations, equal-value plateau stations every 200 mm (larger
+# spans crown the cubic mid-span), and a ruled - not spline - tip because a
+# pure vertex-ended spline fails cadgen's strict topology check even after
+# fix(). Measured clamp 200.64 x 154.73 mm.
+R4_BODY_MAIN_SECTIONS = (
+    (-1400.0, TAIL_WIDTH, TAIL_HEIGHT, 0.0),
+    (-1320.0, 152.0, 120.0, 0.0),
+    (-1240.0, 168.0, 138.0, 0.0),
+    (-1160.0, 184.0, 148.0, 0.0),
+    (-1080.0, 196.0, 153.0, 0.0),
+    (-1000.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (-800.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (-600.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (-400.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (-200.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (0.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (200.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (400.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (600.0, BODY_WIDTH, BODY_HEIGHT, 0.0),
+    (700.0, 198.0, 150.0, 1.0),
+    (900.0, 188.0, 134.0, 5.0),
+    (1080.0, 174.0, 112.0, 10.0),
+    (1150.0, 162.0, 96.0, 13.0),
+    (1240.0, 142.0, 68.0, 17.0),
+    (1300.0, 120.0, 46.0, 21.0),
+    (1340.0, 86.0, 30.0, 25.0),
+    (1360.0, 60.0, 18.0, 27.0),
+    (1380.0, 34.0, 8.0, 28.8),
+)
+R4_TIP_SECTIONS = ((1380.0, 34.0, 8.0, 28.8),)
+R4_APEX = (1400.0, 0.0, 30.0)
+
+BODY_SPECS = {
+    "sled": (BODY_SECTIONS, True, None, None),
+    "rails": (BODY_SECTIONS, True, None, None),
+    "dart": (BODY_SECTIONS, True, None, None),
+    "dart3": (BODY_SECTIONS, True, None, None),
+    "dart4": (R4_BODY_MAIN_SECTIONS, False, R4_APEX, R4_TIP_SECTIONS),
+}
 
 BODY_COLOR = srgb("#8F989B")
 RF_PANEL_COLOR = srgb("#C1B7A9")
@@ -166,36 +219,47 @@ def vertical_fin(points, width=6.0):
     return profile_prism_xz(points, width)
 
 
-# R3 Dart pop-out wings: dorsal-mounted, rendered deployed like the real
-# ADM-160 spring-out wings. The root edge is buried in the dorsal crown
-# (inside the 250 mm carriage envelope); the deployed span intentionally
-# exceeds it.
-WING_ROOT_AFT = -350.0
-WING_ROOT_FRONT = 250.0
-WING_TIP_AFT = -180.0
-WING_TIP_FRONT = 420.0
-WING_ROOT_Y = 18.0
-WING_TIP_Y = 550.0
-WING_Z_MIN = 68.0
-WING_THICKNESS = 5.0
-WING_DIHEDRAL_DEG = 5.0
-WING_LIMIT_Y = 600.0
-WING_LIMIT_Z = 200.0
+# Pop-out wing planforms: dorsal-mounted, rendered deployed like the real
+# ADM-160 spring-out wings. Points are (x, y_outboard) for the starboard
+# half, extruded to a plate and rotated for dihedral about the dorsal
+# hinge. The root edge is buried in the dorsal crown (inside the 250 mm
+# carriage envelope); the deployed span intentionally exceeds it.
+# r3: the first pop-out attempt - near-square plan the user rejected.
+# r4: real swept planform - 420 mm root chord, 110 mm tip chord, 30 degree
+# LE sweep, raked tip corners, 2.5 degree dihedral, +-700 mm span.
+WING_SPECS = {
+    "r3": {
+        "points": ((-350.0, 18.0), (250.0, 18.0), (420.0, 550.0), (-180.0, 550.0)),
+        "z_min": 68.0,
+        "thickness": 5.0,
+        "dihedral": 5.0,
+    },
+    "r4": {
+        "points": (
+            (210.0, 14.0),
+            (-194.0, 672.0),
+            (-224.0, 700.0),
+            (-308.0, 700.0),
+            (-210.0, 14.0),
+        ),
+        "z_min": 66.0,
+        "thickness": 4.0,
+        "dihedral": 2.5,
+    },
+}
+WING_LIMITS = {"r3": {"y": 600.0, "z": 200.0}, "r4": {"y": 760.0, "z": 160.0}}
 
 
-def popout_wing(side):
+def popout_wing(side, spec_key):
     """One deployed wing half, hinged at the dorsal centerline with dihedral."""
-    points = [
-        (WING_ROOT_AFT, side * WING_ROOT_Y),
-        (WING_ROOT_FRONT, side * WING_ROOT_Y),
-        (WING_TIP_FRONT, side * WING_TIP_Y),
-        (WING_TIP_AFT, side * WING_TIP_Y),
-    ]
+    spec = WING_SPECS[spec_key]
+    points = [(x, side * y) for x, y in spec["points"]]
     if side < 0.0:
         points.reverse()
-    wing = plate_from_xy(points, WING_Z_MIN, WING_THICKNESS)
+    wing = plate_from_xy(points, spec["z_min"], spec["thickness"])
     return wing.rotate(
-        bd.Axis((0.0, 0.0, WING_Z_MIN), (1.0, 0.0, 0.0)), side * WING_DIHEDRAL_DEG
+        bd.Axis((0.0, 0.0, spec["z_min"]), (1.0, 0.0, 0.0)),
+        side * spec["dihedral"],
     )
 
 
@@ -206,11 +270,21 @@ def style(part, label, color, roughness=0.64, metalness=0.18):
     return part
 
 
-def make_body():
-    body = bd.loft(
-        [section_wire(x, width, height, z_center) for x, width, height, z_center in BODY_SECTIONS],
-        ruled=True,
-    )
+def make_body(sections=BODY_SECTIONS, ruled=True, apex=None, tip_sections=None):
+    profiles = [
+        section_wire(x, width, height, z_center) for x, width, height, z_center in sections
+    ]
+    if apex is None:
+        body = bd.loft(profiles, ruled=ruled)
+    elif tip_sections is None:
+        body = bd.loft(profiles + [bd.Vertex(*apex)], ruled=ruled)
+    else:
+        tip_profiles = [
+            section_wire(x, width, height, z_center) for x, width, height, z_center in tip_sections
+        ]
+        body = bd.loft(profiles, ruled=ruled).fuse(
+            bd.loft(tip_profiles + [bd.Vertex(*apex)], ruled=True)
+        )
     cavity = cylinder_x(-HALF_LENGTH - 1.0, -1335.0, BORE_RADIUS)
     return body - cavity
 
@@ -315,7 +389,30 @@ def _appendages(candidate):
                 side, -1340.0, -1130.0, -1250.0, -1190.0, 56.0, 123.5, 0.0, 6.0
             )
             parts.append((tail_fin, f"tail_fin_{name}", FIN_COLOR, 0.64, 0.18))
-            parts.append((popout_wing(side), f"wing_{name}", FIN_COLOR, 0.55, 0.24))
+            parts.append((popout_wing(side, "r3"), f"wing_{name}", FIN_COLOR, 0.55, 0.24))
+        parts.append((
+            vertical_fin([(-1340.0, 40.0), (-1140.0, 54.0), (-1210.0, 123.5), (-1310.0, 123.5)]),
+            "dorsal_fin",
+            FIN_COLOR,
+            0.64,
+            0.18,
+        ))
+        parts.append((
+            vertical_fin([(-1330.0, -40.0), (-1150.0, -52.0), (-1220.0, -123.5), (-1300.0, -123.5)]),
+            "ventral_fin",
+            FIN_COLOR,
+            0.64,
+            0.18,
+        ))
+        return parts
+    if candidate == "dart4":
+        parts = []
+        for side, name in ((-1.0, "port"), (1.0, "starboard")):
+            tail_fin = horizontal_fin(
+                side, -1340.0, -1130.0, -1250.0, -1190.0, 56.0, 123.5, 0.0, 6.0
+            )
+            parts.append((tail_fin, f"tail_fin_{name}", FIN_COLOR, 0.64, 0.18))
+            parts.append((popout_wing(side, "r4"), f"wing_{name}", FIN_COLOR, 0.55, 0.24))
         parts.append((
             vertical_fin([(-1340.0, 40.0), (-1140.0, 54.0), (-1210.0, 123.5), (-1310.0, 123.5)]),
             "dorsal_fin",
@@ -335,9 +432,10 @@ def _appendages(candidate):
 
 
 def make_r2(candidate):
-    """Assemble one round-2 Phantom candidate. candidate: sled | rails | dart | dart3."""
+    """Assemble one round-2 Phantom candidate. candidate: sled | rails | dart | dart3 | dart4."""
     report(f"RDM-9 Phantom round-2 candidate: {candidate}")
-    body = style(make_body(), "smooth_body", BODY_COLOR)
+    sections, ruled, apex, tip_sections = BODY_SPECS[candidate]
+    body = style(make_body(sections, ruled, apex, tip_sections), "smooth_body", BODY_COLOR)
     lip, recess = make_nozzle_parts()
     parts = [
         body,
@@ -351,6 +449,7 @@ def make_r2(candidate):
         "rails": "RDM-9_Phantom_R2_Rails",
         "dart": "RDM-9_Phantom_R2_Dart",
         "dart3": "RDM-9_Phantom_R3_Dart",
+        "dart4": "RDM-9_Phantom_R4_Dart",
     }[candidate]
     return bd.Compound(children=parts, label=label)
 
@@ -372,5 +471,6 @@ def make_r2_context(candidate):
         "rails": "RDM-9_Phantom_R2_Context_Rails",
         "dart": "RDM-9_Phantom_R2_Context_Dart",
         "dart3": "RDM-9_Phantom_R3_Context_Dart",
+        "dart4": "RDM-9_Phantom_R4_Context_Dart",
     }[candidate]
     return bd.Compound(children=parts, label=label)

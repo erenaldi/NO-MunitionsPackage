@@ -41,13 +41,15 @@
 - Summary: no warhead; Luneburg lens + active repeater = maximum signature; flies a threat profile to bait SAM shots.
 - Specs: 2.8 m × 0.25 m, ~180 kg · Mach 2 burn then glide · 30 km
 - Impl: clone **AGM-48** (`AGM1_single` / `AGM1`) · projectile `radarSize` 1.0 while preserving the donor's low carriage RCS · zero blast/pierce and permanently blocked arming · 20 kN / 3.44 s / 30 kg single motor with a 650 m/s ceiling and provisional 60 s harmless termination · Phantom-only `Missile.InterceptPriority` fallback restores priority 1 for untargeted shots without bypassing radar, range, altitude, or intercept-viability gates. (2026-09-14 user decisions: lock-free from first implementation, 30 km envelope, radar size 1.0. IADS-HARD flight test confirmed a SAM engages an untargeted Phantom; practical range, harmless termination, designated-target behavior, and multiplayer remain pending.)
-- Visual: RDM-9 decoy of record (2026-09-20): Dart silhouette on the smooth
-  broad-shallow upward-wedge airframe — clean body, four real-span tail fins,
-  dorsal pop-out wings rendered deployed (wing roots stay inside the 0.25 m
-  carriage envelope; ~1.1 m deployed span intentionally exceeds it, like the
-  real ADM-160 spring-out wings), recessed turbojet exhaust. Side RF/lens
-  emitter panels removed by 2026-09-20 decision. Supersedes the 2026-09-14
-  compact MALD-hybrid direction and the finless cylinder studies.
+- Visual: RDM-9 decoy of record (2026-09-20, R4): Dart silhouette on the smooth
+  broad-shallow upward-wedge airframe — clean body converging to a sharp apex
+  point riding above the centerline, four real-span tail fins, dorsal pop-out
+  wings rendered deployed (swept planform: 1.4 m span, 420/110 mm chords, raked
+  tips, roots inside the 0.25 m carriage envelope; the deployed span
+  intentionally exceeds it, like the real ADM-160 spring-out wings), recessed
+  turbojet exhaust. Side RF/lens emitter panels removed by 2026-09-20 decision.
+  Supersedes the 2026-09-14 compact MALD-hybrid direction and the finless
+  cylinder studies.
 
 ### 6. ALM-5 Vesper — high-mach ECM cruise
 - Summary: Mach 3.5-4 cruise at 11+ km, 150+ km, 650 kg HE. Self-defense jammer reuses vanilla EW-25 mechanics: internal energy store drains while jamming and replenishes over time, 40 km radius, suppresses inbound seeker locks. Counter: saturation launches.

@@ -115,6 +115,32 @@ CANDIDATES = {
         "envelope_exempt": ("wing_port", "wing_starboard"),
         "wing_limits": {"y": 600.0, "z": 200.0},
     },
+    # R4 dart4 of record (2026-09-20): nose converges to a full sharp apex
+    # riding at +30 mm (upward wedge preserved), wings become a real swept
+    # planform (+-700 mm span, 420/110 mm chords, raked tips). The apex
+    # replaces the blade cap, so the point gates below swap in for the
+    # blade-cap probe.
+    "dart4": {
+        "step": "RDM-9_Phantom_R4_Dart.step",
+        "label": "RDM-9_Phantom_R4_Dart",
+        "pairs": (
+            ("wing_port", "wing_starboard"),
+            ("tail_fin_port", "tail_fin_starboard"),
+        ),
+        "rooted": (
+            "wing_port",
+            "wing_starboard",
+            "tail_fin_port",
+            "tail_fin_starboard",
+            "dorsal_fin",
+            "ventral_fin",
+        ),
+        "touch_only": ("nozzle_recess",),
+        "extra_contact": (),
+        "envelope_exempt": ("wing_port", "wing_starboard"),
+        "wing_limits": {"y": 760.0, "z": 160.0},
+        "nose": "point",
+    },
 }
 
 TOL = 1e-4
@@ -235,9 +261,24 @@ def main():
         f"midbody is not the specified smooth ellipse: {midbody_section_area} mm^2"
     )
 
-    cap_probe = bd.Box(4.0, 52.0, 10.0).translate((1398.0, 0.0, 30.0))
-    cap_probe_volume = intersection_volume(body, cap_probe)
-    assert cap_probe_volume > 1500.0, f"nose cap too sharp: {cap_probe_volume} mm^3"
+    if spec.get("nose") == "point":
+        apex_probe = bd.Box(2.0, 4.0, 2.0).translate((1399.0, 0.0, 29.5))
+        apex_volume = intersection_volume(body, apex_probe)
+        assert apex_volume > 0.3, f"no material at the sharp apex: {apex_volume} mm^3"
+        centerline_probe = bd.Box(2.0, 8.0, 8.0).translate((1398.5, 0.0, 0.0))
+        centerline_volume = intersection_volume(body, centerline_probe)
+        assert centerline_volume < VOLUME_TOL, (
+            f"tip is not riding high: {centerline_volume} mm^3 of material at the centerline"
+        )
+        tip_slab = bd.Box(2.0, 240.0, 160.0).translate((1398.0, 0.0, 0.0))
+        tip_section_area = intersection_volume(body, tip_slab) / 2.0
+        assert tip_section_area < 60.0, (
+            f"tip section too broad at x=1398: {tip_section_area} mm^2"
+        )
+    else:
+        cap_probe = bd.Box(4.0, 52.0, 10.0).translate((1398.0, 0.0, 30.0))
+        cap_probe_volume = intersection_volume(body, cap_probe)
+        assert cap_probe_volume > 1500.0, f"nose cap too sharp: {cap_probe_volume} mm^3"
 
     nose_upper = bd.Box(2.0, 240.0, 80.0).translate((1340.0, 0.0, 40.0))
     nose_lower = bd.Box(2.0, 240.0, 80.0).translate((1340.0, 0.0, -40.0))
@@ -328,7 +369,14 @@ def main():
         },
         "midbody_section_area_mm2": midbody_section_area,
         "expected_elliptical_section_area_mm2": expected_ellipse_area,
-        "nose_cap_probe_volume_mm3": cap_probe_volume,
+        "nose_mode": spec.get("nose", "blade"),
+        "nose_probe": {
+            "mode": spec.get("nose", "blade"),
+            "blade_cap_volume_mm3": cap_probe_volume if spec.get("nose") != "point" else None,
+            "apex_volume_mm3": apex_volume if spec.get("nose") == "point" else None,
+            "centerline_volume_mm3": centerline_volume if spec.get("nose") == "point" else None,
+            "tip_section_area_mm2": tip_section_area if spec.get("nose") == "point" else None,
+        },
         "nose_wedge_upper_lower_mm3": [nose_upper_volume, nose_lower_volume],
         "nozzle_lip_protrusion_mm3": lip_protrusion,
         "pylon_pad_zone_violations": pad_hits,
