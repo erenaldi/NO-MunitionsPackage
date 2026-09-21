@@ -39,6 +39,19 @@ stability was found empirically: the apex vertex anchors the spline, the
 tail stations must be monotone without duplicates, and equal-value plateau
 stations must sit every 200 mm or the cubic crowns mid-span. Measured
 clamp: 200.64 x 154.73 mm against the 201.5 x 155.5 gate.
+
+R5 revision (2026-09-20, folding concept): the deployed wing panel thins
+from 4.0 to 2.5 mm so it can park inside the fuselage, and a retracted
+configuration is added. With a 1.4 m span against the locked 250 mm
+carriage envelope no external hinge fold fits (span needs the 2.8 m axis,
+but then the 420 mm chord lies across a 200 mm body), so the retraction is
+internal - Tomahawk-style: the panels park in a dorsal bay and deploy
+through a 6 mm spine slot (x -950..-250, floor z=71). The retracted model
+shows the dark panel stack through the slot plus an aft hinge fairing
+(x -1000..-950) that deliberately stays clear of the pylon-pad mockup
+zone, and it keeps the full 125/124 mm envelope gates - nothing is
+exempt, because fitting the carriage envelope is the retracted state's
+entire purpose.
 """
 
 from cadgen import build123d as bd
@@ -131,6 +144,37 @@ BODY_SPECS = {
     "dart": (BODY_SECTIONS, True, None, None),
     "dart3": (BODY_SECTIONS, True, None, None),
     "dart4": (R4_BODY_MAIN_SECTIONS, False, R4_APEX, R4_TIP_SECTIONS),
+    "dart5": (R4_BODY_MAIN_SECTIONS, False, R4_APEX, R4_TIP_SECTIONS),
+    # Retracted configuration shares the dart4/dart5 body; the dorsal
+    # retraction slot is cut in make_r2.
+    "dart5r": (R4_BODY_MAIN_SECTIONS, False, R4_APEX, R4_TIP_SECTIONS),
+}
+
+# Dorsal retraction bay (Tomahawk-style internal carriage): the 1.4 m span
+# cannot externally fold into the 250 mm envelope, so the thin wing panels
+# park inside the fuselage and deploy through a spine slot. The slot runs
+# aft from the wing box; the hinge fairing caps its aft end so the retracted
+# parts stay clear of the pylon-pad mockup zone (x -350..+350).
+RETRACTION_SLOT = {
+    "x_aft": -950.0,
+    "x_fore": -250.0,
+    "y_half": 3.0,
+    "z_floor": 71.0,
+    "z_top": 80.0,
+}
+STOWED_STACK = {
+    "x_aft": -944.0,
+    "x_fore": -256.0,
+    "y_half": 2.5,
+    "z_floor": 71.0,
+    "z_top": 73.4,
+}
+HINGE_FAIRING = {
+    "x_aft": -1000.0,
+    "x_fore": -950.0,
+    "y_half": 10.0,
+    "z_bottom": 73.0,
+    "z_top": 79.0,
 }
 
 BODY_COLOR = srgb("#8F989B")
@@ -244,6 +288,21 @@ WING_SPECS = {
         ),
         "z_min": 66.0,
         "thickness": 4.0,
+        "dihedral": 2.5,
+    },
+    # r5: same swept planform thinned for the folding/retraction concept -
+    # a 2.5 mm panel slides into the dorsal bay where the 4 mm plate would
+    # double the stowed stack height.
+    "r5": {
+        "points": (
+            (210.0, 14.0),
+            (-194.0, 672.0),
+            (-224.0, 700.0),
+            (-308.0, 700.0),
+            (-210.0, 14.0),
+        ),
+        "z_min": 66.0,
+        "thickness": 2.5,
         "dihedral": 2.5,
     },
 }
@@ -405,14 +464,14 @@ def _appendages(candidate):
             0.18,
         ))
         return parts
-    if candidate == "dart4":
+    if candidate == "dart5":
         parts = []
         for side, name in ((-1.0, "port"), (1.0, "starboard")):
             tail_fin = horizontal_fin(
                 side, -1340.0, -1130.0, -1250.0, -1190.0, 56.0, 123.5, 0.0, 6.0
             )
             parts.append((tail_fin, f"tail_fin_{name}", FIN_COLOR, 0.64, 0.18))
-            parts.append((popout_wing(side, "r4"), f"wing_{name}", FIN_COLOR, 0.55, 0.24))
+            parts.append((popout_wing(side, "r5"), f"wing_{name}", FIN_COLOR, 0.55, 0.24))
         parts.append((
             vertical_fin([(-1340.0, 40.0), (-1140.0, 54.0), (-1210.0, 123.5), (-1310.0, 123.5)]),
             "dorsal_fin",
@@ -428,14 +487,80 @@ def _appendages(candidate):
             0.18,
         ))
         return parts
+    if candidate == "dart5r":
+        # Retracted configuration: no deployed wings. The thin panels park
+        # inside the dorsal bay; the only external evidence is the dark
+        # panel stack visible through the spine slot plus the hinge
+        # fairing that caps its aft end. Tail surfaces are unchanged.
+        parts = []
+        for side, name in ((-1.0, "port"), (1.0, "starboard")):
+            tail_fin = horizontal_fin(
+                side, -1340.0, -1130.0, -1250.0, -1190.0, 56.0, 123.5, 0.0, 6.0
+            )
+            parts.append((tail_fin, f"tail_fin_{name}", FIN_COLOR, 0.64, 0.18))
+        parts.append((
+            vertical_fin([(-1340.0, 40.0), (-1140.0, 54.0), (-1210.0, 123.5), (-1310.0, 123.5)]),
+            "dorsal_fin",
+            FIN_COLOR,
+            0.64,
+            0.18,
+        ))
+        parts.append((
+            vertical_fin([(-1330.0, -40.0), (-1150.0, -52.0), (-1220.0, -123.5), (-1300.0, -123.5)]),
+            "ventral_fin",
+            FIN_COLOR,
+            0.64,
+            0.18,
+        ))
+        parts.append(
+            (
+                bd.Box(
+                    STOWED_STACK["x_fore"] - STOWED_STACK["x_aft"],
+                    STOWED_STACK["y_half"] * 2.0,
+                    STOWED_STACK["z_top"] - STOWED_STACK["z_floor"],
+                    align=(bd.Align.MIN, bd.Align.CENTER, bd.Align.MIN),
+                ).translate((STOWED_STACK["x_aft"], 0.0, STOWED_STACK["z_floor"])),
+                "stowed_wing_stack",
+                RECESS_COLOR,
+                0.88,
+                0.04,
+            )
+        )
+        parts.append(
+            (
+                bd.Box(
+                    HINGE_FAIRING["x_fore"] - HINGE_FAIRING["x_aft"],
+                    HINGE_FAIRING["y_half"] * 2.0,
+                    HINGE_FAIRING["z_top"] - HINGE_FAIRING["z_bottom"],
+                    align=(bd.Align.MIN, bd.Align.CENTER, bd.Align.MIN),
+                ).translate((HINGE_FAIRING["x_aft"], 0.0, HINGE_FAIRING["z_bottom"])),
+                "hinge_fairing",
+                FIN_COLOR,
+                0.55,
+                0.24,
+            )
+        )
+        return parts
     raise ValueError(f"unknown candidate: {candidate}")
 
 
+def _retraction_slot_box():
+    return bd.Box(
+        RETRACTION_SLOT["x_fore"] - RETRACTION_SLOT["x_aft"],
+        RETRACTION_SLOT["y_half"] * 2.0,
+        RETRACTION_SLOT["z_top"] - RETRACTION_SLOT["z_floor"],
+        align=(bd.Align.MIN, bd.Align.CENTER, bd.Align.MIN),
+    ).translate((RETRACTION_SLOT["x_aft"], 0.0, RETRACTION_SLOT["z_floor"]))
+
+
 def make_r2(candidate):
-    """Assemble one round-2 Phantom candidate. candidate: sled | rails | dart | dart3 | dart4."""
-    report(f"RDM-9 Phantom round-2 candidate: {candidate}")
+    """Assemble one Phantom candidate. candidate: sled | rails | dart | dart3 | dart4 | dart5 | dart5r."""
+    report(f"RDM-9 Phantom candidate: {candidate}")
     sections, ruled, apex, tip_sections = BODY_SPECS[candidate]
-    body = style(make_body(sections, ruled, apex, tip_sections), "smooth_body", BODY_COLOR)
+    body = make_body(sections, ruled, apex, tip_sections)
+    if candidate == "dart5r":
+        body = body - _retraction_slot_box()
+    body = style(body, "smooth_body", BODY_COLOR)
     lip, recess = make_nozzle_parts()
     parts = [
         body,
@@ -450,6 +575,8 @@ def make_r2(candidate):
         "dart": "RDM-9_Phantom_R2_Dart",
         "dart3": "RDM-9_Phantom_R3_Dart",
         "dart4": "RDM-9_Phantom_R4_Dart",
+        "dart5": "RDM-9_Phantom_R5_Dart",
+        "dart5r": "RDM-9_Phantom_R5_Dart_Retracted",
     }[candidate]
     return bd.Compound(children=parts, label=label)
 
@@ -472,5 +599,7 @@ def make_r2_context(candidate):
         "dart": "RDM-9_Phantom_R2_Context_Dart",
         "dart3": "RDM-9_Phantom_R3_Context_Dart",
         "dart4": "RDM-9_Phantom_R4_Context_Dart",
+        "dart5": "RDM-9_Phantom_R5_Context_Dart",
+        "dart5r": "RDM-9_Phantom_R5_Context_Dart_Retracted",
     }[candidate]
     return bd.Compound(children=parts, label=label)

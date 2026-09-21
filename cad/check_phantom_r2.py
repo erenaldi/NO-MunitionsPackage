@@ -141,6 +141,49 @@ CANDIDATES = {
         "wing_limits": {"y": 760.0, "z": 160.0},
         "nose": "point",
     },
+    # R5 deployed: the R4 airframe with the wing panel thinned to 2.5 mm
+    # for the folding/retraction concept.
+    "dart5": {
+        "step": "RDM-9_Phantom_R5_Dart.step",
+        "label": "RDM-9_Phantom_R5_Dart",
+        "pairs": (
+            ("wing_port", "wing_starboard"),
+            ("tail_fin_port", "tail_fin_starboard"),
+        ),
+        "rooted": (
+            "wing_port",
+            "wing_starboard",
+            "tail_fin_port",
+            "tail_fin_starboard",
+            "dorsal_fin",
+            "ventral_fin",
+        ),
+        "touch_only": ("nozzle_recess",),
+        "extra_contact": (),
+        "envelope_exempt": ("wing_port", "wing_starboard"),
+        "wing_limits": {"y": 760.0, "z": 160.0},
+        "nose": "point",
+    },
+    # R5 retracted: internal dorsal bay. Nothing is envelope-exempt - the
+    # retracted state must fit the 250 mm carriage envelope by definition.
+    # The stowed panel stack sits inside the slot (touch contact with the
+    # groove floor); the hinge fairing caps the slot aft end, out of the
+    # pylon-pad zone.
+    "dart5r": {
+        "step": "RDM-9_Phantom_R5_Dart_Retracted.step",
+        "label": "RDM-9_Phantom_R5_Dart_Retracted",
+        "pairs": (("tail_fin_port", "tail_fin_starboard"),),
+        "rooted": (
+            "tail_fin_port",
+            "tail_fin_starboard",
+            "dorsal_fin",
+            "ventral_fin",
+            "hinge_fairing",
+        ),
+        "touch_only": ("nozzle_recess", "stowed_wing_stack"),
+        "extra_contact": (),
+        "nose": "point",
+    },
 }
 
 TOL = 1e-4

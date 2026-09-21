@@ -1,0 +1,47 @@
+[
+  {
+    "input": "RDM-9_Phantom_R5_Dart.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Phantom_R5_Dart_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+      { "path": "Phantom_R5_Dart_opposite.png", "camera": { "direction": [1, 1, -0.7] } },
+      { "path": "Phantom_R5_Dart_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Phantom_R5_Dart_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Phantom_R5_Dart_bottom.png", "camera": { "direction": [0, 0, -1] } },
+      { "path": "Phantom_R5_Dart_nose.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "Phantom_R5_Dart_tail.png", "camera": { "direction": [-1, 0, 0] } },
+      { "path": "Phantom_R5_Dart_grazing.png", "camera": { "direction": [0.25, -1, 0.18] } }
+    ],
+    "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+  },
+  {
+    "input": "RDM-9_Phantom_R5_Dart_Retracted.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Phantom_R5_Retracted_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+      { "path": "Phantom_R5_Retracted_opposite.png", "camera": { "direction": [1, 1, -0.7] } },
+      { "path": "Phantom_R5_Retracted_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Phantom_R5_Retracted_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Phantom_R5_Retracted_bottom.png", "camera": { "direction": [0, 0, -1] } },
+      { "path": "Phantom_R5_Retracted_nose.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "Phantom_R5_Retracted_tail.png", "camera": { "direction": [-1, 0, 0] } },
+      { "path": "Phantom_R5_Retracted_grazing.png", "camera": { "direction": [0.25, -1, 0.18] } }
+    ],
+    "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+  },
+  {
+    "input": "RDM-9_Phantom_R5_Context_Dart_Retracted.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Phantom_R5_Context_Retracted_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+      { "path": "Phantom_R5_Context_Retracted_side.png", "camera": { "direction": [0, -1, 0] } }
+    ],
+    "render": { "sizeProfile": "diagnostic", "padding": 0.14, "viewLabels": false }
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "file": "RDM-9_Phantom_R5_Dart_Retracted.step",
+  "label": "RDM-9_Phantom_R5_Dart_Retracted",
+  "part_count": 9,
+  "labels": [
+    "dorsal_fin",
+    "hinge_fairing",
+    "nozzle_lip",
+    "nozzle_recess",
+    "smooth_body",
+    "stowed_wing_stack",
+    "tail_fin_port",
+    "tail_fin_starboard",
+    "ventral_fin"
+  ],
+  "model_bbox_mm": {
+    "min": [
+      -1400.0000001,
+      -123.5,
+      -123.5
+    ],
+    "max": [
+      1400.0000001,
+      123.5,
+      123.5
+    ],
+    "size": [
+      2800.0000002,
+      247.0,
+      247.0
+    ]
+  },
+  "maximum_radius_mm": {
+    "smooth_body": 100.157,
+    "nozzle_lip": 48.0,
+    "nozzle_recess": 32.0,
+    "tail_fin_port": 123.536,
+    "tail_fin_starboard": 123.536,
+    "dorsal_fin": 123.536,
+    "ventral_fin": 123.536,
+    "stowed_wing_stack": 73.443,
+    "hinge_fairing": 79.63
+  },
+  "body_bbox_mm": {
+    "width": 200.31450942302519,
+    "height": 154.89083405031786
+  },
+  "midbody_section_area_mm2": 24190.259680551742,
+  "expected_elliptical_section_area_mm2": 24190.263432641408,
+  "nose_mode": "point",
+  "nose_probe": {
+    "mode": "point",
+    "blade_cap_volume_mm3": null,
+    "apex_volume_mm3": 1.424207322125417,
+    "centerline_volume_mm3": 0.0,
+    "tip_section_area_mm2": 2.314308472425279
+  },
+  "nose_wedge_upper_lower_mm3": [
+    4052.5446321083527,
+    0.0
+  ],
+  "nozzle_lip_protrusion_mm3": 0,
+  "pylon_pad_zone_violations": [],
+  "bilateral_pairs_checked": [
+    [
+      "tail_fin_port",
+      "tail_fin_starboard"
+    ]
+  ],
+  "root_engagement_mm3": {
+    "tail_fin_port": 30672.242,
+    "tail_fin_starboard": 30672.242,
+    "dorsal_fin": 23522.507,
+    "ventral_fin": 22071.165,
+    "hinge_fairing": 3760.906
+  },
+  "longitudinal_gaps_mm": {},
+  "scope": "silhouette candidate only; aircraft rack fit and Unity runtime not verified"
+}
