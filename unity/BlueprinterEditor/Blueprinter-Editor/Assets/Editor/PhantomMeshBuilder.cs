@@ -13,6 +13,11 @@ namespace Erenaldi.Phantom
         // The retracted state must fit the 250 mm carriage envelope.
         internal const float RetractedSpan = 0.247f;
         private const float PylonTargetClearance = 0.009f;
+        // Derived-engine-mesh nozzle recess (export_phantom_unity_mesh.py):
+        // the approved R5 CAD has the nozzle lip coplanar with the body aft
+        // cap; the exporter recesses the lip forward by this amount so the
+        // nozzle reads visibly recessed without a proud lip.
+        private const float NozzleRecessMeters = 0.003f;
         // Total across the four exported groups (Phantom_Export_Report.json);
         // the cylindrical unwrap adds seam-duplicate vertices, so only the
         // triangle count is fixed here.
@@ -407,6 +412,7 @@ namespace Erenaldi.Phantom
             }
             ValidateCenteredOnAxis(bodyMesh, "body");
             ValidateCenteredOnAxis(nozzleMesh, "nozzle");
+            ValidateNozzleRecess(bodyMesh, nozzleMesh, "deployed");
             int triangleCount = 0;
             for (int i = 0; i < meshes.Length; i++)
             {
@@ -467,6 +473,7 @@ namespace Erenaldi.Phantom
             }
             ValidateCenteredOnAxis(bodyMesh, "retracted body");
             ValidateCenteredOnAxis(nozzleMesh, "retracted nozzle");
+            ValidateNozzleRecess(bodyMesh, nozzleMesh, "retracted");
             Debug.Log($"[Phantom] Retracted assembly verified: length={TotalLength:F3} m, span={maximumSpan:F3} m, radius={maximumRadius:F3} m, {triangleCount} triangles.");
         }
 
@@ -615,7 +622,9 @@ namespace Erenaldi.Phantom
 
         /// <summary>
         /// The candidate prefabs must never depend on vanilla reference assets
-        /// (extracted atlases or preview-only reference materials/meshes).
+        /// (extracted atlases or preview-only reference materials/meshes), and
+        /// the candidate root must never contain reference/preview assets
+        /// outside the preview-only TexturePreviews directory.
         /// </summary>
         private static void ValidateNoReferenceAssets(string prefabPath)
         {
@@ -625,6 +634,18 @@ namespace Erenaldi.Phantom
                 if (lower.Contains("/reference/") || lower.Contains("/texturepreviews/"))
                 {
                     throw new System.InvalidOperationException("Phantom prefab depends on a reference/preview asset: " + dependency);
+                }
+            }
+            var rootPrefix = OutputRoot.ToLowerInvariant() + "/";
+            foreach (var assetPath in AssetDatabase.GetAllAssetPaths())
+            {
+                var lower = assetPath.ToLowerInvariant();
+                if (lower.StartsWith(rootPrefix) &&
+                    !lower.Contains("/texturepreviews/") &&
+                    lower.Contains("reference"))
+                {
+                    throw new System.InvalidOperationException(
+                        "Phantom candidate root contains a reference asset outside TexturePreviews: " + assetPath);
                 }
             }
         }
@@ -840,6 +861,28 @@ namespace Erenaldi.Phantom
                 Mathf.Abs(mesh.bounds.min.y + mesh.bounds.max.y) > 0.001f)
             {
                 throw new System.InvalidOperationException($"Phantom {partName} is not centered on the z-axis");
+            }
+        }
+
+        /// <summary>
+        /// Regression gate for the issue-005 aft-face z-fighting defect: the
+        /// derived nozzle lip must sit recessed inside the body aft face
+        /// (never coplanar with it, never proud of it).
+        /// </summary>
+        private static void ValidateNozzleRecess(Mesh bodyMesh, Mesh nozzleMesh, string state)
+        {
+            float bodyAft = bodyMesh.bounds.min.z;
+            float nozzleAft = nozzleMesh.bounds.min.z;
+            if (nozzleAft < bodyAft - 0.0005f)
+            {
+                throw new System.InvalidOperationException(
+                    $"Phantom {state} nozzle lip stands proud of the body aft face: {nozzleAft:F4} m");
+            }
+            if (nozzleAft - bodyAft < NozzleRecessMeters - 0.0005f)
+            {
+                throw new System.InvalidOperationException(
+                    $"Phantom {state} nozzle lip is not recessed from the body aft face: " +
+                    $"lip aft {nozzleAft:F4} m vs body aft {bodyAft:F4} m");
             }
         }
 

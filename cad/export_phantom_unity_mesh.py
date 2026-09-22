@@ -41,6 +41,13 @@ BODY_RADIUS_METERS = 0.1002
 MAXIMUM_SPAN_METERS = 1.3987
 BOUNDS_TOLERANCE = 0.001
 APPROVAL_STATE = "candidate-awaiting-review"
+# Derived-engine-mesh correction for the issue-005 aft-face z-fighting defect:
+# the approved R5 CAD has the nozzle_lip aft face coplanar with the smooth_body
+# aft cap, which renders as alternating radial flicker/faceting. The exporter
+# recesses the lip forward (CAD +x, Unity +z) by this amount so the nozzle
+# reads visibly recessed inside the body aft rim without a proud lip. The
+# approved STEP geometry is never modified.
+NOZZLE_RECESS_METERS = 0.003
 
 STATES = {
     "deployed": {
@@ -211,7 +218,33 @@ def bounds_list(mesh):
     return [[float(value) for value in row] for row in mesh.bounds]
 
 
-def main(state="deployed"):
+def recess_nozzle_lip(mesh):
+    """Translate the nozzle lip forward (Unity +z) so its aft face is no
+    longer coplanar with the body aft cap. Translation preserves topology,
+    winding, and watertightness, so no export validation is weakened."""
+    mesh.apply_translation((0.0, 0.0, NOZZLE_RECESS_METERS))
+    return mesh
+
+
+def validate_nozzle_recess(body_mesh, lip_mesh):
+    """The derived nozzle lip must sit recessed inside the body aft face:
+    its aft plane must be forward of the body aft plane by at least the
+    recess amount, and it must never protrude past the body aft plane."""
+    body_aft = float(body_mesh.bounds[0][2])
+    lip_aft = float(lip_mesh.bounds[0][2])
+    if lip_aft < body_aft - 1e-6:
+        raise ValueError(
+            f"Phantom nozzle lip stands proud of the body aft face: {lip_aft:.6f} m"
+        )
+    if lip_aft - body_aft < NOZZLE_RECESS_METERS - 1e-6:
+        raise ValueError(
+            f"Phantom nozzle lip is not recessed from the body aft face: "
+            f"lip aft {lip_aft:.6f} m vs body aft {body_aft:.6f} m"
+        )
+    return lip_aft - body_aft
+
+
+def main(state="deployed", output_directory=None, report_path=None):
     if state not in STATES:
         raise ValueError(f"Unknown Phantom state: {state}")
     spec = STATES[state]
@@ -224,15 +257,25 @@ def main(state="deployed"):
         )
     mapping = validate_labels([child.label for child in model.children], state)
 
+    output_directory = output_directory or OUTPUT_DIRECTORY
+    report_path = report_path or REPORT_PATH
     outputs = spec["outputs"]
     grouped = {name: [] for name in outputs}
     part_labels = {name: [] for name in outputs}
+    body_mesh = None
+    lip_mesh = None
     for child in model.children:
         group = mapping[child.label]
         mesh = to_unity_mesh(child)
         validate_mesh(mesh, child.label)
+        if child.label == "smooth_body":
+            body_mesh = mesh
+        if child.label == "nozzle_lip":
+            recess_nozzle_lip(mesh)
+            lip_mesh = mesh
         grouped[group].append(mesh)
         part_labels[group].append(child.label)
+    validate_nozzle_recess(body_mesh, lip_mesh)
 
     combined = []
     for group in outputs:
@@ -250,7 +293,7 @@ def main(state="deployed"):
     length, body_radius, maximum_radius, span = validate_bounds(assembly, body, state)
     total_triangles = validate_groups(grouped)
 
-    OUTPUT_DIRECTORY.mkdir(parents=True, exist_ok=True)
+    output_directory.mkdir(parents=True, exist_ok=True)
     state_report = {
         "source": str(source),
         "sourceSha256": hashlib.sha256(source.read_bytes()).hexdigest(),
@@ -259,7 +302,7 @@ def main(state="deployed"):
     }
     for group, file_name in outputs.items():
         mesh = grouped[group]
-        output = OUTPUT_DIRECTORY / file_name
+        output = output_directory / file_name
         mesh.export(output, file_type="obj")
         state_report["groups"][group] = {
             "path": str(output),
@@ -280,12 +323,12 @@ def main(state="deployed"):
         "triangleBudget": MAX_TRIANGLES,
     }
 
-    report = {}
-    if REPORT_PATH.exists():
-        report = json.loads(REPORT_PATH.read_text(encoding="ascii"))
-    report["states"] = report.get("states", {})
+    report = {"states": {}}
+    if report_path.exists():
+        existing = json.loads(report_path.read_text(encoding="ascii"))
+        report["states"] = existing.get("states", {})
     report["states"][state] = state_report
-    REPORT_PATH.write_text(json.dumps(report, indent=2) + "\n", encoding="ascii")
+    report_path.write_text(json.dumps(report, indent=2) + "\n", encoding="ascii")
     print(json.dumps(state_report, indent=2))
     return report
 

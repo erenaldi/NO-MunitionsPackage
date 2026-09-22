@@ -12,6 +12,9 @@ namespace Erenaldi.Phantom
         private const int Width = 1024;
         private const int Height = 768;
         private const string RuntimeGeometryRoot = @"C:\Program Files (x86)\Steam\steamapps\common\Nuclear Option\BepInEx\config\Erenaldi.MunitionsPackage";
+        // Preview-only reference materials live under TexturePreviews so they
+        // can never become a bundle dependency of the candidate root.
+        private const string PreviewRoot = PhantomMeshBuilder.OutputRoot + "/TexturePreviews";
         // Extracted vanilla atlases live in a gitignored Assets location so no
         // vanilla texture data is committed under the tracked PhantomMod root.
         private const string ReferenceTextureRoot = "Assets/Reference/vanilla_textures";
@@ -80,8 +83,6 @@ namespace Erenaldi.Phantom
 
         private static void RenderRetractedViews(GameObject rackPrefab)
         {
-            var instance = Object.Instantiate(rackPrefab);
-            instance.name = "PhantomRackPreview";
             var cameraObject = new GameObject("PhantomRackCamera");
             var camera = cameraObject.AddComponent<Camera>();
             camera.clearFlags = CameraClearFlags.SolidColor;
@@ -96,17 +97,33 @@ namespace Erenaldi.Phantom
             try
             {
                 string outputRoot = Path.GetFullPath(Path.Combine(Application.dataPath, "../../../..", "cad"));
-                // Retracted full view: the rack display missile at a 3/4 angle.
+                // Retracted full view: the missile alone (pylon removed) so the
+                // dorsal slot/stack/fairing are inspectable without the gray
+                // pylon obscuring them. The rack-context view keeps the pylon.
+                var missileOnly = Object.Instantiate(rackPrefab);
+                missileOnly.name = "PhantomRetractedMissilePreview";
+                var pylon = missileOnly.transform.Find("pylon");
+                var missile = pylon != null ? pylon.Find("rdm9") : null;
+                if (missile == null)
+                {
+                    throw new System.InvalidOperationException("Phantom rack prefab has no pylon/rdm9 missile");
+                }
+                missile.SetParent(missileOnly.transform, false);
+                Object.DestroyImmediate(pylon.gameObject);
                 Render(camera, new Vector3(2.5f, 1.4f, 3.4f), new Vector3(0f, 0f, 0f),
                     Path.Combine(outputRoot, "Phantom_Unity_Retracted.png"));
+                Object.DestroyImmediate(missileOnly);
+
                 // Rack-context view: closer, framed on the pylon and the
                 // stowed missile as it would read on the loadout screen.
+                var rackInstance = Object.Instantiate(rackPrefab);
+                rackInstance.name = "PhantomRackPreview";
                 Render(camera, new Vector3(1.6f, 0.9f, 2.2f), new Vector3(0f, 0f, 0f),
                     Path.Combine(outputRoot, "Phantom_Unity_RackContext.png"));
+                Object.DestroyImmediate(rackInstance);
             }
             finally
             {
-                Object.DestroyImmediate(instance);
                 Object.DestroyImmediate(cameraObject);
                 Object.DestroyImmediate(key);
                 Object.DestroyImmediate(fill);
@@ -277,6 +294,10 @@ namespace Erenaldi.Phantom
         private static Material CreateReferenceMaterial(string name, string atlasBase)
         {
             EnsureReferenceTextures();
+            if (!AssetDatabase.IsValidFolder(PreviewRoot))
+            {
+                AssetDatabase.CreateFolder(PhantomMeshBuilder.OutputRoot, "TexturePreviews");
+            }
             var albedo = LoadReferenceTexture(atlasBase + "_b");
             var packed = LoadReferenceTexture(atlasBase + "_m");
             var ao = LoadReferenceTexture(atlasBase + "_ao");
@@ -300,7 +321,7 @@ namespace Erenaldi.Phantom
             material.SetFloat("_Metallic", 1f);
             material.SetFloat("_Smoothness", 1f);
             material.EnableKeyword("_METALLICSPECGLOSSMAP");
-            SaveAsset(material, PhantomMeshBuilder.OutputRoot, material.name + ".mat");
+            SaveAsset(material, PreviewRoot, material.name + ".mat");
             return material;
         }
 

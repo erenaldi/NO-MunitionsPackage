@@ -6,6 +6,7 @@ source identities are pinned by SHA-256.
 """
 
 import hashlib
+import tempfile
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -21,6 +22,7 @@ from export_phantom_unity_mesh import (
     LENGTH_METERS,
     MAX_TRIANGLES,
     MAXIMUM_SPAN_METERS,
+    NOZZLE_RECESS_METERS,
     OUTPUT_DIRECTORY,
     OUTPUTS,
     SOURCE,
@@ -31,6 +33,7 @@ from export_phantom_unity_mesh import (
     validate_groups,
     validate_labels,
     validate_mesh,
+    validate_nozzle_recess,
     validate_source,
     to_unity_mesh,
 )
@@ -266,6 +269,33 @@ class RetractedStateTests(unittest.TestCase):
             validate_bounds(assembly, body, "retracted")
 
 
+class NozzleRecessTests(unittest.TestCase):
+    """Regression boundary for the issue-005 aft-face z-fighting defect: the
+    derived nozzle lip must sit recessed inside the body aft face, never
+    coplanar with it and never proud of it."""
+
+    def body_with_aft(self, aft=-1.4):
+        return cylinder_z(0.1, 2.8)
+
+    def lip_with_aft(self, aft):
+        lip = trimesh.creation.cylinder(radius=0.05, height=0.018, sections=32)
+        lip.apply_translation((0.0, 0.0, aft + 0.009))
+        return lip
+
+    def test_coplanar_lip_rejected(self):
+        with self.assertRaisesRegex(ValueError, "recessed"):
+            validate_nozzle_recess(self.body_with_aft(), self.lip_with_aft(-1.4))
+
+    def test_proud_lip_rejected(self):
+        with self.assertRaisesRegex(ValueError, "proud"):
+            validate_nozzle_recess(self.body_with_aft(), self.lip_with_aft(-1.41))
+
+    def test_recessed_lip_accepted(self):
+        validate_nozzle_recess(
+            self.body_with_aft(), self.lip_with_aft(-1.4 + NOZZLE_RECESS_METERS)
+        )
+
+
 class RealSourceTests(unittest.TestCase):
     DEPLOYED_SHA256 = "5fb37c9c8a8e8e0c8ab4340948cc748bd5c5e1d28da575568ff2a8ec141e2fb7"
     RETRACTED_SHA256 = "6b86bc3d31891eae564dcd7e658b333fee400ed166a22699e63da99e387841cd"
@@ -280,21 +310,36 @@ class RealSourceTests(unittest.TestCase):
         )
 
     def test_deployed_end_to_end_export(self):
-        report = main("deployed")
-        state = report["states"]["deployed"]
-        self.assertEqual(state["sourceSha256"], self.DEPLOYED_SHA256)
-        self.assertEqual(set(state["groups"]), set(OUTPUTS))
-        self.assertAlmostEqual(state["assembly"]["length"], LENGTH_METERS, places=4)
-        self.assertEqual(state["assembly"]["triangles"], 18846)
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "Models"
+            report = main("deployed", output_directory=output, report_path=Path(tmp) / "report.json")
+            state = report["states"]["deployed"]
+            self.assertEqual(state["sourceSha256"], self.DEPLOYED_SHA256)
+            self.assertEqual(set(state["groups"]), set(OUTPUTS))
+            self.assertAlmostEqual(state["assembly"]["length"], LENGTH_METERS, places=4)
+            self.assertEqual(state["assembly"]["triangles"], 18846)
+            nozzle_aft = state["groups"]["nozzle"]["bounds"][0][2]
+            body_aft = state["groups"]["body"]["bounds"][0][2]
+            self.assertGreaterEqual(nozzle_aft - body_aft, NOZZLE_RECESS_METERS - 1e-6)
 
     def test_retracted_end_to_end_export(self):
-        report = main("retracted")
-        state = report["states"]["retracted"]
-        self.assertEqual(state["sourceSha256"], self.RETRACTED_SHA256)
-        self.assertEqual(set(state["groups"]), {"body", "wings", "fins", "nozzle", "fairing"})
-        self.assertAlmostEqual(state["assembly"]["length"], LENGTH_METERS, places=4)
-        self.assertLessEqual(state["assembly"]["maximumRadius"], 0.125 + 1e-6)
-        self.assertEqual(state["assembly"]["triangles"], 25192)
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "Models"
+            report = main("retracted", output_directory=output, report_path=Path(tmp) / "report.json")
+            state = report["states"]["retracted"]
+            self.assertEqual(state["sourceSha256"], self.RETRACTED_SHA256)
+            self.assertEqual(set(state["groups"]), {"body", "wings", "fins", "nozzle", "fairing"})
+            self.assertAlmostEqual(state["assembly"]["length"], LENGTH_METERS, places=4)
+            self.assertLessEqual(state["assembly"]["maximumRadius"], 0.125 + 1e-6)
+            self.assertEqual(state["assembly"]["triangles"], 25192)
+            nozzle_aft = state["groups"]["nozzle"]["bounds"][0][2]
+            body_aft = state["groups"]["body"]["bounds"][0][2]
+            self.assertGreaterEqual(nozzle_aft - body_aft, NOZZLE_RECESS_METERS - 1e-6)
+
+    def test_report_schema_is_canonical(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            report = main("deployed", output_directory=Path(tmp) / "Models", report_path=Path(tmp) / "report.json")
+            self.assertEqual(set(report), {"states"})
 
 
 if __name__ == "__main__":
