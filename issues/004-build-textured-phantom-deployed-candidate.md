@@ -2,7 +2,7 @@
 id: "004"
 title: Build a textured R5 Phantom deployed Unity candidate
 type: feature
-status: todo
+status: done
 blocked-by: []
 ---
 
@@ -27,3 +27,24 @@ Deliver the approved R5 deployed Phantom as a deterministic Unity candidate with
 - Run the Unity editor method that builds and validates the deployed candidate.
 - Run the GPU preview method without `-nographics`; inspect the generated images directly.
 - Compare palette/value/detail decisions against `reference/vanilla_textures/`, runtime AGM1 data, and `docs/TEXTURE_STYLE_FINDINGS.md`.
+
+## Review notes
+
+- Tests-first review found no critical defect. All 24 exporter tests pass, and
+  read-only checks against the real R5 STEP confirmed all nine labels, centered
+  bounds, watertight and consistently wound groups, 18,846 triangles, and a
+  manifest SHA-256 matching the source on disk.
+- The Python tests remain helper-level rather than end-to-end: they do not run
+  the real STEP through `main()` or pin the approved source hash. Issue 005 must
+  add real-source coverage while extending the exporter to the retracted state.
+- The three GPU images are nonblank and the deployed silhouette/material groups
+  are readable. Fine seams, service marks, rivets, and wear are too subdued in
+  the full view to establish final texture approval; issue 005 must improve their
+  representative-view readability without making the asset noisy.
+- The flush recessed nozzle has overlapping aft coplanar faces with the body and
+  is not exposed by the issue-004 camera packet. Issue 005 must add an aft-biased
+  review view and record any visible depth artifact without changing approved R5
+  CAD.
+- Unity validation is editor-method validation rather than an automated Unity
+  test suite. Runtime lighting, rack transform, state swapping, packaging, and
+  in-game behavior remain outside this issue.
