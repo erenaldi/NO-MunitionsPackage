@@ -10,14 +10,19 @@ namespace Erenaldi.Phantom
         internal const float TotalLength = 2.8f;
         internal const float BodyRadius = 0.1002f;
         internal const float DeployedSpan = 1.3987f;
+        // The retracted state must fit the 250 mm carriage envelope.
+        internal const float RetractedSpan = 0.247f;
+        private const float PylonTargetClearance = 0.009f;
         // Total across the four exported groups (Phantom_Export_Report.json);
         // the cylindrical unwrap adds seam-duplicate vertices, so only the
         // triangle count is fixed here.
         private const int ExpectedTriangleCount = 18846;
+        private const int ExpectedRetractedTriangleCount = 25192;
 
         internal const string OutputRoot = "Assets/Blueprinter/Mods/PhantomMod";
         private const string ModelsRoot = OutputRoot + "/Models";
         internal const string MissilePrefabName = "Erenaldi.RDM9";
+        internal const string RackPrefabName = "Erenaldi.RDM9_single";
 
         [MenuItem("Blueprinter/Phantom/Build Geometry")]
         public static void Build()
@@ -43,22 +48,264 @@ namespace Erenaldi.Phantom
             ValidateAssembly(bodyMesh, wingsMesh, finsMesh, nozzleMesh);
             ValidateTexturedMaterials(bodyMaterial, wingMaterial);
 
+            var retractedBodyMesh = LoadCadMesh(ModelsRoot + "/Phantom_Retracted_Body.obj", "MeshPhantomRetractedBody", true);
+            var retractedWingsMesh = LoadCadMesh(ModelsRoot + "/Phantom_Retracted_Wings.obj", "MeshPhantomRetractedWings", false);
+            var retractedFinsMesh = LoadCadMesh(ModelsRoot + "/Phantom_Retracted_Fins.obj", "MeshPhantomRetractedFins", false);
+            var retractedNozzleMesh = LoadCadMesh(ModelsRoot + "/Phantom_Retracted_Nozzle.obj", "MeshPhantomRetractedNozzle", true);
+            var retractedFairingMesh = LoadCadMesh(ModelsRoot + "/Phantom_Retracted_Fairing.obj", "MeshPhantomRetractedFairing", false);
+            ValidateRetractedAssembly(retractedBodyMesh, retractedWingsMesh, retractedFinsMesh, retractedNozzleMesh, retractedFairingMesh);
+
             SaveAsset(bodyMesh, "MeshPhantomBody.asset");
             SaveAsset(wingsMesh, "MeshPhantomWings.asset");
             SaveAsset(finsMesh, "MeshPhantomFins.asset");
             SaveAsset(nozzleMesh, "MeshPhantomNozzle.asset");
+            SaveAsset(retractedBodyMesh, "MeshPhantomRetractedBody.asset");
+            SaveAsset(retractedWingsMesh, "MeshPhantomRetractedWings.asset");
+            SaveAsset(retractedFinsMesh, "MeshPhantomRetractedFins.asset");
+            SaveAsset(retractedNozzleMesh, "MeshPhantomRetractedNozzle.asset");
+            SaveAsset(retractedFairingMesh, "MeshPhantomRetractedFairing.asset");
             SaveAsset(finsMaterial, "MatPhantomFins.mat");
             SaveAsset(nozzleMaterial, "MatPhantomNozzle.mat");
+
+            var pylonMesh = BuildPylonMesh();
+            var pylonMaterial = CreateFlatMaterial(shader, "MatPhantomPylon", new Color(0.45f, 0.47f, 0.5f), 0.06f, 0.42f);
+            SaveAsset(pylonMesh, "MeshPhantomPylon.asset");
+            SaveAsset(pylonMaterial, "MatPhantomPylon.mat");
 
             var missile = BuildMissilePrefab(bodyMesh, wingsMesh, finsMesh, nozzleMesh, bodyMaterial, wingMaterial, finsMaterial, nozzleMaterial);
             SaveAsPrefab(missile, MissilePrefabName + ".prefab");
             Object.DestroyImmediate(missile);
 
-            ValidateNoReferenceAssets(OutputRoot + "/" + MissilePrefabName + ".prefab");
+            var rack = BuildRackPrefab(pylonMesh, pylonMaterial, retractedBodyMesh, retractedWingsMesh, retractedFinsMesh, retractedNozzleMesh, retractedFairingMesh, bodyMaterial, wingMaterial, finsMaterial, nozzleMaterial);
+            SaveAsPrefab(rack, RackPrefabName + ".prefab");
+            Object.DestroyImmediate(rack);
+
+            ValidateCandidates();
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Debug.Log("[Phantom] CAD geometry built: " + OutputRoot);
+        }
+
+        [MenuItem("Blueprinter/Phantom/Validate Candidates")]
+        public static void ValidateCandidates()
+        {
+            var deployed = LoadPrefab(MissilePrefabName);
+            var rack = LoadPrefab(RackPrefabName);
+            ValidatePrefabIdentity(deployed, MissilePrefabName);
+            ValidatePrefabIdentity(rack, RackPrefabName);
+            ValidateDeployedHierarchy(deployed);
+            ValidateRackHierarchy(rack);
+            ValidateCandidateBounds(deployed, rack);
+            ValidateCandidateUvs(deployed, rack);
+            ValidateCandidateColliders(deployed, rack);
+            ValidateMaterialConsistency(deployed, rack);
+            ValidateNoReferenceAssets(OutputRoot + "/" + MissilePrefabName + ".prefab");
+            ValidateNoReferenceAssets(OutputRoot + "/" + RackPrefabName + ".prefab");
+            Debug.Log("[Phantom] Candidate validation passed for " + MissilePrefabName + " and " + RackPrefabName);
+        }
+
+        private static GameObject LoadPrefab(string prefabName)
+        {
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(OutputRoot + "/" + prefabName + ".prefab");
+            if (prefab == null)
+            {
+                throw new System.InvalidOperationException("Phantom prefab has not been built: " + prefabName);
+            }
+            return prefab;
+        }
+
+        private static void ValidatePrefabIdentity(GameObject prefab, string expectedName)
+        {
+            if (prefab.name != expectedName)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom prefab identity is " + prefab.name + "; expected " + expectedName);
+            }
+        }
+
+        private static void ValidateDeployedHierarchy(GameObject deployed)
+        {
+            var children = GetChildNames(deployed);
+            if (!children.Contains("Wings") || !children.Contains("Fins") || !children.Contains("Nozzle") || children.Count != 3)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom deployed prefab children are " + children + "; expected Wings/Fins/Nozzle");
+            }
+        }
+
+        private static void ValidateRackHierarchy(GameObject rack)
+        {
+            var children = GetChildNames(rack);
+            if (!children.Contains("pylon") || children.Count != 1)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom rack prefab children are " + children + "; expected pylon");
+            }
+            var pylon = rack.transform.Find("pylon").gameObject;
+            var pylonChildren = GetChildNames(pylon);
+            if (!pylonChildren.Contains("rdm9") || pylonChildren.Count != 1)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom rack pylon children are " + pylonChildren + "; expected rdm9");
+            }
+            var missile = pylon.transform.Find("rdm9").gameObject;
+            var missileChildren = GetChildNames(missile);
+            if (!missileChildren.Contains("Wings") || !missileChildren.Contains("Fins") ||
+                !missileChildren.Contains("Nozzle") || !missileChildren.Contains("Fairing") ||
+                missileChildren.Count != 4)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom rack missile children are " + missileChildren + "; expected Wings/Fins/Nozzle/Fairing");
+            }
+        }
+
+        private static List<string> GetChildNames(GameObject parent)
+        {
+            var names = new List<string>();
+            for (int i = 0; i < parent.transform.childCount; i++)
+            {
+                names.Add(parent.transform.GetChild(i).name);
+            }
+            return names;
+        }
+
+        private static void ValidateCandidateBounds(GameObject deployed, GameObject rack)
+        {
+            var deployedBody = GetMeshFilter(deployed).sharedMesh;
+            float deployedSpan = GetMaximumSpan(deployed);
+            if (Mathf.Abs(deployedSpan - DeployedSpan) > 0.002f)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom deployed span is " + deployedSpan.ToString("F3") + " m; expected " + DeployedSpan.ToString("F3") + " m");
+            }
+            ValidateLength(deployedBody, "deployed");
+
+            var missile = rack.transform.Find("pylon").transform.Find("rdm9").gameObject;
+            var retractedBody = GetMeshFilter(missile).sharedMesh;
+            ValidateLength(retractedBody, "retracted");
+            float retractedSpan = GetMaximumSpan(missile);
+            if (Mathf.Abs(retractedSpan - RetractedSpan) > 0.002f)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom retracted span is " + retractedSpan.ToString("F3") + " m; expected " + RetractedSpan.ToString("F3") + " m");
+            }
+        }
+
+        private static void ValidateLength(Mesh bodyMesh, string state)
+        {
+            float nose = TotalLength * 0.5f;
+            float aft = -nose;
+            if (Mathf.Abs(bodyMesh.bounds.max.z - nose) > 0.001f ||
+                Mathf.Abs(bodyMesh.bounds.min.z - aft) > 0.001f)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom " + state + " body is not centered at the " + TotalLength.ToString("F3") + " m length");
+            }
+        }
+
+        private static void ValidateCandidateUvs(GameObject deployed, GameObject rack)
+        {
+            foreach (var filter in deployed.GetComponentsInChildren<MeshFilter>(true))
+            {
+                if (!filter.sharedMesh.HasVertexAttribute(UnityEngine.Rendering.VertexAttribute.TexCoord0))
+                {
+                    throw new System.InvalidOperationException("Phantom deployed mesh has no UVs: " + filter.sharedMesh.name);
+                }
+            }
+            foreach (var filter in rack.GetComponentsInChildren<MeshFilter>(true))
+            {
+                if (!filter.sharedMesh.HasVertexAttribute(UnityEngine.Rendering.VertexAttribute.TexCoord0))
+                {
+                    throw new System.InvalidOperationException("Phantom rack mesh has no UVs: " + filter.sharedMesh.name);
+                }
+            }
+        }
+
+        private static void ValidateCandidateColliders(GameObject deployed, GameObject rack)
+        {
+            if (deployed.GetComponent<CapsuleCollider>() == null)
+            {
+                throw new System.InvalidOperationException("Phantom deployed prefab has no body capsule collider");
+            }
+            var pylon = rack.transform.Find("pylon").gameObject;
+            if (pylon.GetComponent<BoxCollider>() == null)
+            {
+                throw new System.InvalidOperationException("Phantom rack pylon has no box collider");
+            }
+            var missile = pylon.transform.Find("rdm9").gameObject;
+            if (missile.GetComponent<CapsuleCollider>() == null)
+            {
+                throw new System.InvalidOperationException("Phantom rack missile has no body capsule collider");
+            }
+        }
+
+        /// <summary>
+        /// The retracted rack display must share the deployed candidate's
+        /// material assets: body material on the body and hinge fairing, wing
+        /// material on the stowed stack, fins/nozzle materials on their groups.
+        /// </summary>
+        private static void ValidateMaterialConsistency(GameObject deployed, GameObject rack)
+        {
+            var deployedBodyMaterial = GetMeshRenderer(deployed).sharedMaterial;
+            var deployedWingsMaterial = GetMeshRenderer(deployed.transform.Find("Wings").gameObject).sharedMaterial;
+            var deployedFinsMaterial = GetMeshRenderer(deployed.transform.Find("Fins").gameObject).sharedMaterial;
+            var deployedNozzleMaterial = GetMeshRenderer(deployed.transform.Find("Nozzle").gameObject).sharedMaterial;
+
+            var missile = rack.transform.Find("pylon").transform.Find("rdm9").gameObject;
+            var rackBodyMaterial = GetMeshRenderer(missile).sharedMaterial;
+            var rackWingsMaterial = GetMeshRenderer(missile.transform.Find("Wings").gameObject).sharedMaterial;
+            var rackFinsMaterial = GetMeshRenderer(missile.transform.Find("Fins").gameObject).sharedMaterial;
+            var rackNozzleMaterial = GetMeshRenderer(missile.transform.Find("Nozzle").gameObject).sharedMaterial;
+            var rackFairingMaterial = GetMeshRenderer(missile.transform.Find("Fairing").gameObject).sharedMaterial;
+
+            AssertSameMaterial(rackBodyMaterial, deployedBodyMaterial, "body");
+            AssertSameMaterial(rackWingsMaterial, deployedWingsMaterial, "wings");
+            AssertSameMaterial(rackFinsMaterial, deployedFinsMaterial, "fins");
+            AssertSameMaterial(rackNozzleMaterial, deployedNozzleMaterial, "nozzle");
+            AssertSameMaterial(rackFairingMaterial, deployedBodyMaterial, "fairing");
+        }
+
+        private static void AssertSameMaterial(Material actual, Material expected, string label)
+        {
+            string actualPath = AssetDatabase.GetAssetPath(actual);
+            string expectedPath = AssetDatabase.GetAssetPath(expected);
+            if (actualPath != expectedPath)
+            {
+                throw new System.InvalidOperationException(
+                    "Phantom rack " + label + " material " + actualPath + " does not match deployed " + expectedPath);
+            }
+        }
+
+        private static MeshFilter GetMeshFilter(GameObject target)
+        {
+            var filter = target.GetComponent<MeshFilter>();
+            if (filter == null)
+            {
+                throw new System.InvalidOperationException("Phantom prefab node has no mesh filter: " + target.name);
+            }
+            return filter;
+        }
+
+        private static MeshRenderer GetMeshRenderer(GameObject target)
+        {
+            var renderer = target.GetComponent<MeshRenderer>();
+            if (renderer == null)
+            {
+                throw new System.InvalidOperationException("Phantom prefab node has no mesh renderer: " + target.name);
+            }
+            return renderer;
+        }
+
+        private static float GetMaximumSpan(GameObject root)
+        {
+            float maximum = 0f;
+            foreach (var filter in root.GetComponentsInChildren<MeshFilter>(true))
+            {
+                var bounds = filter.sharedMesh.bounds;
+                maximum = Mathf.Max(maximum, Mathf.Max(bounds.size.x, bounds.size.y));
+            }
+            return maximum;
         }
 
         private static Mesh LoadCadMesh(string path, string meshName, bool cylindrical)
@@ -175,6 +422,52 @@ namespace Erenaldi.Phantom
                     $"Phantom mesh totals are {triangleCount} triangles; expected {ExpectedTriangleCount}");
             }
             Debug.Log($"[Phantom] Assembly verified: length={TotalLength:F3} m, body radius={bodyRadius:F3} m, span={maximumSpan:F3} m, {triangleCount} triangles.");
+        }
+
+        private static void ValidateRetractedAssembly(Mesh bodyMesh, Mesh wingsMesh, Mesh finsMesh, Mesh nozzleMesh, Mesh fairingMesh)
+        {
+            float nose = TotalLength * 0.5f;
+            float aft = -nose;
+            if (Mathf.Abs(bodyMesh.bounds.max.z - nose) > 0.001f ||
+                Mathf.Abs(bodyMesh.bounds.min.z - aft) > 0.001f)
+            {
+                throw new System.InvalidOperationException($"Phantom retracted body is not centered at the {TotalLength:F3} m length");
+            }
+            float bodyRadius = GetMaximumRadialDistance(bodyMesh);
+            if (Mathf.Abs(bodyRadius - BodyRadius) > 0.001f)
+            {
+                throw new System.InvalidOperationException($"Phantom retracted body radius is {bodyRadius:F3} m; expected {BodyRadius:F3} m");
+            }
+            var meshes = new Mesh[] { bodyMesh, wingsMesh, finsMesh, nozzleMesh, fairingMesh };
+            float maximumSpan = 0f;
+            float maximumRadius = 0f;
+            int triangleCount = 0;
+            for (int i = 0; i < meshes.Length; i++)
+            {
+                maximumSpan = Mathf.Max(maximumSpan, Mathf.Max(meshes[i].bounds.size.x, meshes[i].bounds.size.y));
+                maximumRadius = Mathf.Max(maximumRadius, GetMaximumRadialDistance(meshes[i]));
+                if (!meshes[i].HasVertexAttribute(UnityEngine.Rendering.VertexAttribute.TexCoord0))
+                {
+                    throw new System.InvalidOperationException("Phantom retracted mesh has no UVs: " + meshes[i].name);
+                }
+                triangleCount += GetTriangleCount(meshes[i]);
+            }
+            if (Mathf.Abs(maximumSpan - RetractedSpan) > 0.002f)
+            {
+                throw new System.InvalidOperationException($"Phantom retracted maximum X/Y span is {maximumSpan:F3} m; expected {RetractedSpan:F3} m");
+            }
+            if (maximumRadius > 0.125f + 0.001f)
+            {
+                throw new System.InvalidOperationException($"Phantom retracted maximum radius is {maximumRadius:F3} m; exceeds the 0.125 m carriage envelope");
+            }
+            if (triangleCount != ExpectedRetractedTriangleCount)
+            {
+                throw new System.InvalidOperationException(
+                    $"Phantom retracted mesh totals are {triangleCount} triangles; expected {ExpectedRetractedTriangleCount}");
+            }
+            ValidateCenteredOnAxis(bodyMesh, "retracted body");
+            ValidateCenteredOnAxis(nozzleMesh, "retracted nozzle");
+            Debug.Log($"[Phantom] Retracted assembly verified: length={TotalLength:F3} m, span={maximumSpan:F3} m, radius={maximumRadius:F3} m, {triangleCount} triangles.");
         }
 
         private static void ValidateTexturedMaterials(Material bodyMaterial, Material wingMaterial)
@@ -321,7 +614,7 @@ namespace Erenaldi.Phantom
         }
 
         /// <summary>
-        /// The candidate prefab must never depend on vanilla reference assets
+        /// The candidate prefabs must never depend on vanilla reference assets
         /// (extracted atlases or preview-only reference materials/meshes).
         /// </summary>
         private static void ValidateNoReferenceAssets(string prefabPath)
@@ -355,6 +648,71 @@ namespace Erenaldi.Phantom
             return root;
         }
 
+        private static GameObject BuildRackPrefab(Mesh pylonMesh, Material pylonMaterial, Mesh bodyMesh, Mesh wingsMesh, Mesh finsMesh, Mesh nozzleMesh, Mesh fairingMesh, Material bodyMaterial, Material wingMaterial, Material finsMaterial, Material nozzleMaterial)
+        {
+            var root = new GameObject(RackPrefabName);
+            var pylon = new GameObject("pylon");
+            pylon.transform.SetParent(root.transform, false);
+            pylon.AddComponent<MeshFilter>().sharedMesh = pylonMesh;
+            pylon.AddComponent<MeshRenderer>().sharedMaterial = pylonMaterial;
+
+            var box = pylon.AddComponent<BoxCollider>();
+            box.center = new Vector3(0f, -0.08f, 0f);
+            box.size = new Vector3(0.18f, 0.16f, 0.6f);
+
+            var missile = new GameObject("rdm9");
+            missile.transform.SetParent(pylon.transform, false);
+            missile.transform.localPosition = new Vector3(0f, GetRackMissileOffsetY(bodyMesh), 0f);
+            missile.AddComponent<MeshFilter>().sharedMesh = bodyMesh;
+            missile.AddComponent<MeshRenderer>().sharedMaterial = bodyMaterial;
+            var missileCapsule = missile.AddComponent<CapsuleCollider>();
+            missileCapsule.center = Vector3.zero;
+            missileCapsule.height = TotalLength;
+            missileCapsule.radius = BodyRadius;
+            missileCapsule.direction = 2;
+
+            AddChildRenderer(missile, "Wings", wingsMesh, wingMaterial);
+            AddChildRenderer(missile, "Fins", finsMesh, finsMaterial);
+            AddChildRenderer(missile, "Nozzle", nozzleMesh, nozzleMaterial);
+            AddChildRenderer(missile, "Fairing", fairingMesh, bodyMaterial);
+
+            return root;
+        }
+
+        /// <summary>
+        /// The retracted missile rides directly under the pylon (no roll: the
+        /// whole state fits the 250 mm carriage envelope). Solve the mount
+        /// offset that restores the authored pylon-to-body clearance.
+        /// </summary>
+        private static float GetRackMissileOffsetY(Mesh bodyMesh)
+        {
+            const float pylonHalfWidth = 0.09f;
+            const float pylonHalfLength = 0.3f;
+            const float pylonBottom = -0.16f;
+            float highestMissilePoint = float.NegativeInfinity;
+            foreach (var vertex in bodyMesh.vertices)
+            {
+                if (Mathf.Abs(vertex.x) <= pylonHalfWidth + 0.0001f &&
+                    Mathf.Abs(vertex.z) <= pylonHalfLength + 0.0001f)
+                {
+                    highestMissilePoint = Mathf.Max(highestMissilePoint, vertex.y);
+                }
+            }
+            if (float.IsNegativeInfinity(highestMissilePoint))
+            {
+                throw new System.InvalidOperationException("No Phantom retracted vertices fall inside the pylon footprint");
+            }
+            float offset = pylonBottom - PylonTargetClearance - highestMissilePoint;
+            float clearance = pylonBottom - (offset + highestMissilePoint);
+            if (clearance < 0.008f || clearance > 0.010f)
+            {
+                throw new System.InvalidOperationException(
+                    $"Phantom pylon clearance is {clearance:F4} m; expected {PylonTargetClearance:F4} m");
+            }
+            Debug.Log($"[Phantom] Rack alignment verified: {clearance:F4} m pylon clearance, missile offset y={offset:F5} m.");
+            return offset;
+        }
+
         private static void AddChildRenderer(GameObject parent, string name, Mesh mesh, Material material)
         {
             var child = new GameObject(name);
@@ -379,6 +737,79 @@ namespace Erenaldi.Phantom
                 throw new System.InvalidOperationException($"Phantom material {name} was not configured");
             }
             return material;
+        }
+
+        private class SurfaceData
+        {
+            public readonly List<Vector3> vertices = new List<Vector3>();
+            public readonly List<Vector3> normals = new List<Vector3>();
+            public readonly List<Vector2> uvs = new List<Vector2>();
+            public readonly List<int> triangles = new List<int>();
+
+            public Mesh ToMesh(string name)
+            {
+                var mesh = new Mesh { name = name };
+                mesh.SetVertices(vertices);
+                mesh.SetTriangles(triangles, 0);
+                if (normals.Count == vertices.Count)
+                {
+                    mesh.SetNormals(normals);
+                }
+                if (uvs.Count == vertices.Count)
+                {
+                    mesh.SetUVs(0, uvs);
+                }
+                mesh.RecalculateBounds();
+                return mesh;
+            }
+        }
+
+        private static Mesh BuildPylonMesh()
+        {
+            var surface = new SurfaceData();
+            float width = 0.18f;
+            float height = 0.16f;
+            float depth = 0.6f;
+            Vector3 c = new Vector3(0f, -height * 0.5f, 0f);
+            Vector3 hx = new Vector3(width * 0.5f, 0f, 0f);
+            Vector3 hy = new Vector3(0f, height * 0.5f, 0f);
+            Vector3 hz = new Vector3(0f, 0f, depth * 0.5f);
+            AddDoubleSidedQuad(surface, c + hx + hy + hz, c + hx + hy - hz, c + hx - hy - hz, c + hx - hy + hz, new Vector3(1f, 0f, 0f));
+            AddDoubleSidedQuad(surface, c - hx + hy - hz, c - hx + hy + hz, c - hx - hy + hz, c - hx - hy - hz, new Vector3(-1f, 0f, 0f));
+            AddDoubleSidedQuad(surface, c - hx + hy + hz, c + hx + hy + hz, c + hx - hy + hz, c - hx - hy + hz, new Vector3(0f, 0f, 1f));
+            AddDoubleSidedQuad(surface, c + hx + hy - hz, c - hx + hy - hz, c - hx - hy - hz, c + hx - hy - hz, new Vector3(0f, 0f, -1f));
+            AddDoubleSidedQuad(surface, c - hx + hy + hz, c - hx + hy - hz, c + hx + hy - hz, c + hx + hy + hz, new Vector3(0f, 1f, 0f));
+            AddDoubleSidedQuad(surface, c + hx - hy + hz, c + hx - hy - hz, c - hx - hy - hz, c - hx - hy + hz, new Vector3(0f, -1f, 0f));
+            return surface.ToMesh("MeshPhantomPylon");
+        }
+
+        private static void AddDoubleSidedQuad(SurfaceData surface, Vector3 a, Vector3 b, Vector3 c, Vector3 d, Vector3 normal)
+        {
+            AddSingleQuad(surface, a, b, c, d, normal);
+            AddSingleQuad(surface, d, c, b, a, normal);
+        }
+
+        private static void AddSingleQuad(SurfaceData surface, Vector3 a, Vector3 b, Vector3 c, Vector3 d, Vector3 normal)
+        {
+            int s = surface.vertices.Count;
+            surface.vertices.Add(a);
+            surface.vertices.Add(b);
+            surface.vertices.Add(c);
+            surface.vertices.Add(d);
+            surface.normals.Add(normal);
+            surface.normals.Add(normal);
+            surface.normals.Add(normal);
+            surface.normals.Add(normal);
+            surface.uvs.Add(new Vector2(0f, 1f));
+            surface.uvs.Add(new Vector2(1f, 1f));
+            surface.uvs.Add(new Vector2(1f, 0f));
+            surface.uvs.Add(new Vector2(0f, 0f));
+            surface.triangles.Add(s);
+            surface.triangles.Add(s + 1);
+            surface.triangles.Add(s + 2);
+            surface.triangles.Add(s);
+            surface.triangles.Add(s + 2);
+            surface.triangles.Add(s + 3);
         }
 
         private static int GetTriangleCount(Mesh mesh)

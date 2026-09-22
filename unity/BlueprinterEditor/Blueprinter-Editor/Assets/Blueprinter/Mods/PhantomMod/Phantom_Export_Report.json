@@ -101,5 +101,238 @@
     ],
     "triangles": 18846,
     "triangleBudget": 75000
+  },
+  "states": {
+    "deployed": {
+      "source": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\RDM-9_Phantom_R5_Dart.step",
+      "sourceSha256": "5fb37c9c8a8e8e0c8ab4340948cc748bd5c5e1d28da575568ff2a8ec141e2fb7",
+      "approvalState": "candidate-awaiting-review",
+      "groups": {
+        "body": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Body.obj",
+          "labels": [
+            "smooth_body"
+          ],
+          "vertices": 8757,
+          "triangles": 17510,
+          "bounds": [
+            [
+              -0.10015721963695953,
+              -0.07766884021532187,
+              -1.4000000000000001
+            ],
+            [
+              0.09987963938109977,
+              0.0772132076038211,
+              1.4000000000000001
+            ]
+          ]
+        },
+        "wings": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Wings.obj",
+          "labels": [
+            "wing_port",
+            "wing_starboard"
+          ],
+          "vertices": 20,
+          "triangles": 32,
+          "bounds": [
+            [
+              -0.6993337551073004,
+              0.06661067142311472,
+              -0.308
+            ],
+            [
+              0.6993337551073004,
+              0.09903119170968985,
+              0.21
+            ]
+          ]
+        },
+        "fins": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Fins.obj",
+          "labels": [
+            "tail_fin_port",
+            "tail_fin_starboard",
+            "dorsal_fin",
+            "ventral_fin"
+          ],
+          "vertices": 32,
+          "triangles": 48,
+          "bounds": [
+            [
+              -0.1235,
+              -0.1235,
+              -1.34
+            ],
+            [
+              0.1235,
+              0.1235,
+              -1.1300000000000001
+            ]
+          ]
+        },
+        "nozzle": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Nozzle.obj",
+          "labels": [
+            "nozzle_lip",
+            "nozzle_recess"
+          ],
+          "vertices": 630,
+          "triangles": 1256,
+          "bounds": [
+            [
+              -0.047994628886893126,
+              -0.048,
+              -1.4000000000000001
+            ],
+            [
+              0.047994628886893126,
+              0.04797851674960816,
+              -1.335
+            ]
+          ]
+        }
+      },
+      "assembly": {
+        "length": 2.8000000000000003,
+        "bodyRadius": 0.1001574787306236,
+        "maximumRadius": 0.7062027805847829,
+        "maximumSpan": 1.398667510214601,
+        "carriageEnvelopeRadius": null,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangles": 18846,
+        "triangleBudget": 75000
+      }
+    },
+    "retracted": {
+      "source": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\RDM-9_Phantom_R5_Dart_Retracted.step",
+      "sourceSha256": "6b86bc3d31891eae564dcd7e658b333fee400ed166a22699e63da99e387841cd",
+      "approvalState": "candidate-awaiting-review",
+      "groups": {
+        "body": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Retracted_Body.obj",
+          "labels": [
+            "smooth_body"
+          ],
+          "vertices": 11934,
+          "triangles": 23864,
+          "bounds": [
+            [
+              -0.10015721963689107,
+              -0.07766884021725996,
+              -1.4000000000000001
+            ],
+            [
+              0.09987963938245346,
+              0.0772132076043403,
+              1.4000000000000001
+            ]
+          ]
+        },
+        "wings": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Retracted_Wings.obj",
+          "labels": [
+            "stowed_wing_stack"
+          ],
+          "vertices": 8,
+          "triangles": 12,
+          "bounds": [
+            [
+              -0.0025,
+              0.07100000000000001,
+              -0.9440000000000001
+            ],
+            [
+              0.0025,
+              0.0734,
+              -0.256
+            ]
+          ]
+        },
+        "fins": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Retracted_Fins.obj",
+          "labels": [
+            "tail_fin_port",
+            "tail_fin_starboard",
+            "dorsal_fin",
+            "ventral_fin"
+          ],
+          "vertices": 32,
+          "triangles": 48,
+          "bounds": [
+            [
+              -0.1235,
+              -0.1235,
+              -1.34
+            ],
+            [
+              0.1235,
+              0.1235,
+              -1.1300000000000001
+            ]
+          ]
+        },
+        "nozzle": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Retracted_Nozzle.obj",
+          "labels": [
+            "nozzle_lip",
+            "nozzle_recess"
+          ],
+          "vertices": 630,
+          "triangles": 1256,
+          "bounds": [
+            [
+              -0.047994628886893126,
+              -0.048,
+              -1.4000000000000001
+            ],
+            [
+              0.047994628886893126,
+              0.04797851674960816,
+              -1.335
+            ]
+          ]
+        },
+        "fairing": {
+          "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\unity\\BlueprinterEditor\\Blueprinter-Editor\\Assets\\Blueprinter\\Mods\\PhantomMod\\Models\\Phantom_Retracted_Fairing.obj",
+          "labels": [
+            "hinge_fairing"
+          ],
+          "vertices": 8,
+          "triangles": 12,
+          "bounds": [
+            [
+              -0.01,
+              0.073,
+              -1.0
+            ],
+            [
+              0.01,
+              0.079,
+              -0.9500000000000001
+            ]
+          ]
+        }
+      },
+      "assembly": {
+        "length": 2.8000000000000003,
+        "bodyRadius": 0.10015747873055675,
+        "maximumRadius": 0.12353643187335467,
+        "maximumSpan": 0.247,
+        "carriageEnvelopeRadius": 0.125,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangles": 25192,
+        "triangleBudget": 75000
+      }
+    }
   }
 }

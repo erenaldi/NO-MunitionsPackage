@@ -119,13 +119,13 @@ namespace Erenaldi.Phantom
                 color = MidGray;
             }
             color = ApplyGrunge(color, u, v, hash);
-            if (Mathf.Abs(v - 0.30f) < 0.0022f || Mathf.Abs(v - 0.60f) < 0.0022f)
+            if (Mathf.Abs(v - 0.30f) < 0.0035f || Mathf.Abs(v - 0.60f) < 0.0035f)
             {
-                color = Color.Lerp(color, SeamDark, 0.5f);
+                color = Color.Lerp(color, SeamDark, 0.65f);
             }
-            if (Mathf.Abs(v - 0.85f) < 0.0022f)
+            if (Mathf.Abs(v - 0.85f) < 0.0035f)
             {
-                color = Color.Lerp(color, SeamDark, 0.5f);
+                color = Color.Lerp(color, SeamDark, 0.65f);
             }
             return color;
         }
@@ -136,22 +136,56 @@ namespace Erenaldi.Phantom
             // is self-symmetric under the x-mirror (u -> (1.5-u) mod 1) and the
             // pair is symmetric under the y-mirror (u -> 1-u) and the 180 roll
             // (u -> u+0.5), so the marking reads on both longitudinal flanks.
-            StampRectBorder(pixels, 0.21f, 0.29f, 0.30f, 0.38f, 2, InkBlack);
-            StampXInBox(pixels, 0.23f, 0.27f, 0.318f, 0.362f, 2, InkBlack);
-            StampRectBorder(pixels, 0.71f, 0.79f, 0.30f, 0.38f, 2, InkBlack);
-            StampXInBox(pixels, 0.73f, 0.77f, 0.318f, 0.362f, 2, InkBlack);
+            StampRectBorder(pixels, 0.21f, 0.29f, 0.30f, 0.38f, 3, InkBlack);
+            StampXInBox(pixels, 0.23f, 0.27f, 0.318f, 0.362f, 3, InkBlack);
+            StampRectBorder(pixels, 0.71f, 0.79f, 0.30f, 0.38f, 3, InkBlack);
+            StampXInBox(pixels, 0.73f, 0.77f, 0.318f, 0.362f, 3, InkBlack);
+            // Chevron service marks on the aft gray band, mirrored about the
+            // u = 0.25 / u = 0.75 centers so all three cylindrical transforms
+            // keep the marking symmetric.
+            StampChevron(pixels, 0.25f, 0.44f, 0.012f, 3, InkBlack);
+            StampChevron(pixels, 0.75f, 0.44f, 0.012f, 3, InkBlack);
 
             foreach (float ring in SeamRings)
             {
                 int center = Mathf.RoundToInt(ring * (Height - 1));
                 for (int x = 0; x < Width; x++)
                 {
-                    for (int d = 1; d <= 6; d++)
+                    for (int d = 1; d <= 8; d++)
                     {
-                        float shade = Mathf.Lerp(0.9f, 1f, d / 6f);
+                        float shade = Mathf.Lerp(0.82f, 1f, d / 8f);
                         MultiplyPixel(pixels, x, center + d, shade);
                         MultiplyPixel(pixels, x, center - d, shade);
                     }
+                }
+            }
+        }
+
+        /// <summary>
+        /// A chevron (two diagonal strokes meeting at the apex) centered on
+        /// (centerU, v). The strokes are drawn symmetrically about the apex so
+        /// the marking stays symmetric under the u transforms.
+        /// </summary>
+        private static void StampChevron(Color[] pixels, float centerU, float v, float halfWidth, int widthPx, Color ink)
+        {
+            int apexX = Mathf.RoundToInt(centerU * (Width - 1));
+            int apexY = Mathf.RoundToInt(v * (Height - 1));
+            int half = Mathf.RoundToInt(halfWidth * (Width - 1));
+            int rise = Mathf.RoundToInt(halfWidth * 0.6f * (Height - 1));
+            int steps = Mathf.Max(half, 1);
+            for (int s = 0; s <= steps; s++)
+            {
+                float t = s / (float)steps;
+                int x = Mathf.RoundToInt(Mathf.Lerp(apexX - half, apexX, t));
+                int y = Mathf.RoundToInt(Mathf.Lerp(apexY - rise, apexY, t));
+                for (int w = 0; w < widthPx; w++)
+                {
+                    SetPixel(pixels, x, y + w, ink);
+                }
+                x = Mathf.RoundToInt(Mathf.Lerp(apexX + half, apexX, t));
+                for (int w = 0; w < widthPx; w++)
+                {
+                    SetPixel(pixels, x, y + w, ink);
                 }
             }
         }
@@ -232,11 +266,11 @@ namespace Erenaldi.Phantom
 
         private static Color ApplyGrunge(Color color, float u, float v, float hash)
         {
-            color *= Mathf.Lerp(0.965f, 1.035f, hash);
+            color *= Mathf.Lerp(0.945f, 1.055f, hash);
             float column = Hash(Mathf.FloorToInt(u * Width / 3f), 7);
-            color *= Mathf.Lerp(0.965f, 1.01f, column);
+            color *= Mathf.Lerp(0.95f, 1.015f, column);
             float blotch = ValueNoise(u * 9f, v * 5f, 13);
-            color *= Mathf.Lerp(0.975f, 1.02f, blotch);
+            color *= Mathf.Lerp(0.955f, 1.025f, blotch);
             return color;
         }
 
@@ -244,24 +278,24 @@ namespace Erenaldi.Phantom
         {
             foreach (float ring in SeamRings)
             {
-                if (Mathf.Abs(v - ring) < 0.0030f)
+                if (Mathf.Abs(v - ring) < 0.0045f)
                 {
-                    color = Color.Lerp(color, SeamDark, 0.60f);
+                    color = Color.Lerp(color, SeamDark, 0.72f);
                 }
             }
             // Longitudinal panel seams on the upper/lower flanks only.
             if (v > AxialSeamStartV && v < AxialSeamEndV &&
-                (Mathf.Abs(u - 0.25f) < 0.0014f || Mathf.Abs(u - 0.75f) < 0.0014f))
+                (Mathf.Abs(u - 0.25f) < 0.0022f || Mathf.Abs(u - 0.75f) < 0.0022f))
             {
-                color = Color.Lerp(color, SeamDark, 0.5f);
+                color = Color.Lerp(color, SeamDark, 0.65f);
             }
             // Rivet dots flanking each ring at the axial seams.
             foreach (float ring in SeamRings)
             {
                 foreach (float seamU in AxialSeamsU)
                 {
-                    if (NearDot(u, v, Mathf.Repeat(seamU - 0.014f, 1f), ring, 0.0011f) ||
-                        NearDot(u, v, Mathf.Repeat(seamU + 0.014f, 1f), ring, 0.0011f))
+                    if (NearDot(u, v, Mathf.Repeat(seamU - 0.014f, 1f), ring, 0.0018f) ||
+                        NearDot(u, v, Mathf.Repeat(seamU + 0.014f, 1f), ring, 0.0018f))
                     {
                         color = SeamDark;
                     }

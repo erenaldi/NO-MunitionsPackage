@@ -1,13 +1,18 @@
-"""Export the approved R5 Phantom deployed STEP as deterministic Unity OBJ groups.
+"""Export the approved R5 Phantom STEPs as deterministic Unity OBJ groups.
 
-Deployed-only candidate pass: accepts only RDM-9_Phantom_R5_Dart.step. R6 and the
-retracted state are rejected inputs. Output goes to the Phantom candidate asset
-root (Assets/Blueprinter/Mods/PhantomMod/Models) with a manifest beside it. All
-meshes are validated before any OBJ is written.
+Two candidate states, each from its own approved R5 master:
+
+- deployed:  RDM-9_Phantom_R5_Dart.step          (flight state)
+- retracted: RDM-9_Phantom_R5_Dart_Retracted.step (rack display state)
+
+R6 and any other source are rejected inputs. Output goes to the Phantom
+candidate asset root (Assets/Blueprinter/Mods/PhantomMod/Models) with a
+manifest beside it. All meshes are validated before any OBJ is written.
 """
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -15,8 +20,6 @@ import trimesh
 from cadgen import read_step
 
 
-SOURCE = Path(__file__).with_name("RDM-9_Phantom_R5_Dart.step")
-MODEL_LABEL = "RDM-9_Phantom_R5_Dart"
 OUTPUT_DIRECTORY = (
     Path(__file__).parents[1]
     / "unity"
@@ -39,35 +42,66 @@ MAXIMUM_SPAN_METERS = 1.3987
 BOUNDS_TOLERANCE = 0.001
 APPROVAL_STATE = "candidate-awaiting-review"
 
-BODY = {"smooth_body"}
-WINGS = {"wing_port", "wing_starboard"}
-FINS = {"tail_fin_port", "tail_fin_starboard", "dorsal_fin", "ventral_fin"}
-NOZZLE = {"nozzle_lip", "nozzle_recess"}
-
-LABEL_GROUPS = {
-    "body": BODY,
-    "wings": WINGS,
-    "fins": FINS,
-    "nozzle": NOZZLE,
+STATES = {
+    "deployed": {
+        "source": "RDM-9_Phantom_R5_Dart.step",
+        "model_label": "RDM-9_Phantom_R5_Dart",
+        "groups": {
+            "body": ("smooth_body",),
+            "wings": ("wing_port", "wing_starboard"),
+            "fins": ("tail_fin_port", "tail_fin_starboard", "dorsal_fin", "ventral_fin"),
+            "nozzle": ("nozzle_lip", "nozzle_recess"),
+        },
+        "outputs": {
+            "body": "Phantom_Body.obj",
+            "wings": "Phantom_Wings.obj",
+            "fins": "Phantom_Fins.obj",
+            "nozzle": "Phantom_Nozzle.obj",
+        },
+        "maximum_span": MAXIMUM_SPAN_METERS,
+        "carriage_radius": None,
+    },
+    "retracted": {
+        "source": "RDM-9_Phantom_R5_Dart_Retracted.step",
+        "model_label": "RDM-9_Phantom_R5_Dart_Retracted",
+        "groups": {
+            "body": ("smooth_body",),
+            "wings": ("stowed_wing_stack",),
+            "fins": ("tail_fin_port", "tail_fin_starboard", "dorsal_fin", "ventral_fin"),
+            "nozzle": ("nozzle_lip", "nozzle_recess"),
+            "fairing": ("hinge_fairing",),
+        },
+        "outputs": {
+            "body": "Phantom_Retracted_Body.obj",
+            "wings": "Phantom_Retracted_Wings.obj",
+            "fins": "Phantom_Retracted_Fins.obj",
+            "nozzle": "Phantom_Retracted_Nozzle.obj",
+            "fairing": "Phantom_Retracted_Fairing.obj",
+        },
+        "maximum_span": 0.247,
+        "carriage_radius": 0.125,
+    },
 }
+
+# Backward-compatible deployed-state aliases used by the helper tests.
+SOURCE = Path(__file__).with_name(STATES["deployed"]["source"])
+MODEL_LABEL = STATES["deployed"]["model_label"]
+LABEL_GROUPS = {name: set(labels) for name, labels in STATES["deployed"]["groups"].items()}
 EXPECTED_LABELS = frozenset().union(*LABEL_GROUPS.values())
-OUTPUTS = {
-    "body": "Phantom_Body.obj",
-    "wings": "Phantom_Wings.obj",
-    "fins": "Phantom_Fins.obj",
-    "nozzle": "Phantom_Nozzle.obj",
-}
+OUTPUTS = dict(STATES["deployed"]["outputs"])
 
 
-def validate_source(path):
-    if Path(path).name != SOURCE.name:
+def validate_source(path, state="deployed"):
+    expected = STATES[state]["source"]
+    if Path(path).name != expected:
         raise ValueError(
-            f"Phantom exporter accepts only {SOURCE.name}; got {Path(path).name}"
+            f"Phantom exporter accepts only {expected} for {state}; got {Path(path).name}"
         )
 
 
-def classify(label):
-    matches = [group for group, labels in LABEL_GROUPS.items() if label in labels]
+def classify(label, state="deployed"):
+    groups = STATES[state]["groups"]
+    matches = [group for group, labels in groups.items() if label in labels]
     if len(matches) > 1:
         raise ValueError(f"Ambiguous Phantom label mapping: {label}: {matches}")
     if matches:
@@ -75,16 +109,17 @@ def classify(label):
     raise ValueError(f"Unclassified Phantom CAD part: {label}")
 
 
-def validate_labels(labels):
+def validate_labels(labels, state="deployed"):
     """Map every label to exactly one group; reject duplicates, missing, unknown."""
+    expected = frozenset().union(*STATES[state]["groups"].values())
     seen = set()
     mapping = {}
     for label in labels:
         if label in seen:
             raise ValueError(f"Duplicate Phantom part label: {label}")
         seen.add(label)
-        mapping[label] = classify(label)
-    missing = EXPECTED_LABELS - seen
+        mapping[label] = classify(label, state)
+    missing = expected - seen
     if missing:
         raise ValueError(f"Missing Phantom part labels: {sorted(missing)}")
     return mapping
@@ -109,7 +144,8 @@ def validate_winding(mesh, group):
         raise ValueError(f"Phantom group '{group}' has inconsistent winding; fix the CAD source")
 
 
-def validate_bounds(assembly, body):
+def validate_bounds(assembly, body, state="deployed"):
+    spec = STATES[state]
     length = float(assembly.bounds[1][2] - assembly.bounds[0][2])
     radial = np.linalg.norm(assembly.vertices[:, :2], axis=1)
     maximum_radius = float(radial.max())
@@ -132,9 +168,14 @@ def validate_bounds(assembly, body):
         raise ValueError(f"Converted body radius is {body_radius:.6f} m")
     if np.linalg.norm(center[:2]) > 0.001:
         raise ValueError(f"Converted assembly is off-axis: {center[:2].tolist()}")
-    if span > MAXIMUM_SPAN_METERS + 0.001:
+    if span > spec["maximum_span"] + 0.001:
         raise ValueError(
-            f"Converted maximum span is {span:.6f} m; expected {MAXIMUM_SPAN_METERS} m"
+            f"Converted maximum span is {span:.6f} m; expected {spec['maximum_span']} m"
+        )
+    if spec["carriage_radius"] is not None and maximum_radius > spec["carriage_radius"] + 0.001:
+        raise ValueError(
+            f"Converted maximum radius is {maximum_radius:.6f} m; exceeds the "
+            f"{spec['carriage_radius']} m carriage envelope"
         )
     return length, body_radius, maximum_radius, span
 
@@ -170,15 +211,22 @@ def bounds_list(mesh):
     return [[float(value) for value in row] for row in mesh.bounds]
 
 
-def main():
-    validate_source(SOURCE)
-    model = read_step(SOURCE)
-    if model.label != MODEL_LABEL:
-        raise ValueError(f"Phantom exporter accepts only {MODEL_LABEL}; got {model.label}")
-    mapping = validate_labels([child.label for child in model.children])
+def main(state="deployed"):
+    if state not in STATES:
+        raise ValueError(f"Unknown Phantom state: {state}")
+    spec = STATES[state]
+    source = Path(__file__).with_name(spec["source"])
+    validate_source(source, state)
+    model = read_step(source)
+    if model.label != spec["model_label"]:
+        raise ValueError(
+            f"Phantom exporter accepts only {spec['model_label']} for {state}; got {model.label}"
+        )
+    mapping = validate_labels([child.label for child in model.children], state)
 
-    grouped = {name: [] for name in OUTPUTS}
-    part_labels = {name: [] for name in OUTPUTS}
+    outputs = spec["outputs"]
+    grouped = {name: [] for name in outputs}
+    part_labels = {name: [] for name in outputs}
     for child in model.children:
         group = mapping[child.label]
         mesh = to_unity_mesh(child)
@@ -187,7 +235,7 @@ def main():
         part_labels[group].append(child.label)
 
     combined = []
-    for group in OUTPUTS:
+    for group in outputs:
         if not grouped[group]:
             raise ValueError(f"Phantom mesh group is empty: {group}")
         mesh = trimesh.util.concatenate(grouped[group])
@@ -199,21 +247,21 @@ def main():
 
     assembly = trimesh.util.concatenate(combined)
     body = grouped["body"]
-    length, body_radius, maximum_radius, span = validate_bounds(assembly, body)
+    length, body_radius, maximum_radius, span = validate_bounds(assembly, body, state)
     total_triangles = validate_groups(grouped)
 
     OUTPUT_DIRECTORY.mkdir(parents=True, exist_ok=True)
-    report = {
-        "source": str(SOURCE),
-        "sourceSha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
+    state_report = {
+        "source": str(source),
+        "sourceSha256": hashlib.sha256(source.read_bytes()).hexdigest(),
         "approvalState": APPROVAL_STATE,
         "groups": {},
     }
-    for group, file_name in OUTPUTS.items():
+    for group, file_name in outputs.items():
         mesh = grouped[group]
         output = OUTPUT_DIRECTORY / file_name
         mesh.export(output, file_type="obj")
-        report["groups"][group] = {
+        state_report["groups"][group] = {
             "path": str(output),
             "labels": part_labels[group],
             "vertices": int(len(mesh.vertices)),
@@ -221,18 +269,26 @@ def main():
             "bounds": bounds_list(mesh),
         }
 
-    report["assembly"] = {
+    state_report["assembly"] = {
         "length": length,
         "bodyRadius": body_radius,
         "maximumRadius": maximum_radius,
         "maximumSpan": span,
+        "carriageEnvelopeRadius": spec["carriage_radius"],
         "center": [float(value) for value in assembly.bounds.mean(axis=0)],
         "triangles": total_triangles,
         "triangleBudget": MAX_TRIANGLES,
     }
+
+    report = {}
+    if REPORT_PATH.exists():
+        report = json.loads(REPORT_PATH.read_text(encoding="ascii"))
+    report["states"] = report.get("states", {})
+    report["states"][state] = state_report
     REPORT_PATH.write_text(json.dumps(report, indent=2) + "\n", encoding="ascii")
-    print(json.dumps(report, indent=2))
+    print(json.dumps(state_report, indent=2))
+    return report
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1] if len(sys.argv) > 1 else "deployed")

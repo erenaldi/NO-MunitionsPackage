@@ -1,8 +1,11 @@
 """Focused tests for export_phantom_unity_mesh validation helpers.
 
-Synthetic meshes only; no CAD sources, no exporter runs, no file writes.
+Synthetic-mesh helper tests plus real-source end-to-end coverage: the
+approved R5 deployed/retracted STEPs are run through main() and their
+source identities are pinned by SHA-256.
 """
 
+import hashlib
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -21,7 +24,9 @@ from export_phantom_unity_mesh import (
     OUTPUT_DIRECTORY,
     OUTPUTS,
     SOURCE,
+    STATES,
     classify,
+    main,
     validate_bounds,
     validate_groups,
     validate_labels,
@@ -62,7 +67,7 @@ class ValidateSourceTests(unittest.TestCase):
 
 class ValidateLabelsTests(unittest.TestCase):
     def test_ambiguous_mapping_rejected(self):
-        with patch.dict(LABEL_GROUPS, {"wrong_group": {"smooth_body"}}):
+        with patch.dict(STATES["deployed"]["groups"], {"wrong_group": {"smooth_body"}}):
             with self.assertRaisesRegex(ValueError, "Ambiguous"):
                 classify("smooth_body")
 
@@ -213,6 +218,83 @@ class CandidateOutputTests(unittest.TestCase):
             / "PhantomMod"
             / "Models",
         )
+
+
+class RetractedStateTests(unittest.TestCase):
+    RETRACTED_LABELS = [
+        "smooth_body",
+        "stowed_wing_stack",
+        "hinge_fairing",
+        "tail_fin_port",
+        "tail_fin_starboard",
+        "dorsal_fin",
+        "ventral_fin",
+        "nozzle_lip",
+        "nozzle_recess",
+    ]
+
+    def test_retracted_labels_classified(self):
+        mapping = validate_labels(self.RETRACTED_LABELS, "retracted")
+        self.assertEqual(mapping["stowed_wing_stack"], "wings")
+        self.assertEqual(mapping["hinge_fairing"], "fairing")
+        self.assertEqual(mapping["smooth_body"], "body")
+        self.assertEqual(set(mapping.values()), {"body", "wings", "fins", "nozzle", "fairing"})
+
+    def test_retracted_rejects_deployed_labels(self):
+        with self.assertRaisesRegex(ValueError, "Unclassified"):
+            classify("wing_port", "retracted")
+
+    def test_retracted_source_accepted(self):
+        validate_source(
+            Path(__file__).with_name("RDM-9_Phantom_R5_Dart_Retracted.step"), "retracted"
+        )
+
+    def test_retracted_source_rejects_deployed(self):
+        with self.assertRaisesRegex(ValueError, "accepts only"):
+            validate_source(SOURCE, "retracted")
+
+    def test_retracted_envelope_accepted(self):
+        assembly, body = BoundsTests().make_assembly(span=0.247)
+        length, body_radius, maximum_radius, span = validate_bounds(assembly, body, "retracted")
+        self.assertLessEqual(maximum_radius, 0.125 + 1e-6)
+        self.assertLessEqual(span, 0.247 + 0.001)
+
+    def test_retracted_envelope_rejected(self):
+        assembly = trimesh.creation.box(extents=(0.24, 0.24, 2.8))
+        body = cylinder_z(BODY_RADIUS_METERS, LENGTH_METERS)
+        with self.assertRaisesRegex(ValueError, "carriage"):
+            validate_bounds(assembly, body, "retracted")
+
+
+class RealSourceTests(unittest.TestCase):
+    DEPLOYED_SHA256 = "5fb37c9c8a8e8e0c8ab4340948cc748bd5c5e1d28da575568ff2a8ec141e2fb7"
+    RETRACTED_SHA256 = "6b86bc3d31891eae564dcd7e658b333fee400ed166a22699e63da99e387841cd"
+
+    def test_deployed_source_hash_pinned(self):
+        self.assertEqual(hashlib.sha256(SOURCE.read_bytes()).hexdigest(), self.DEPLOYED_SHA256)
+
+    def test_retracted_source_hash_pinned(self):
+        retracted = Path(__file__).with_name("RDM-9_Phantom_R5_Dart_Retracted.step")
+        self.assertEqual(
+            hashlib.sha256(retracted.read_bytes()).hexdigest(), self.RETRACTED_SHA256
+        )
+
+    def test_deployed_end_to_end_export(self):
+        report = main("deployed")
+        state = report["states"]["deployed"]
+        self.assertEqual(state["sourceSha256"], self.DEPLOYED_SHA256)
+        self.assertEqual(set(state["groups"]), set(OUTPUTS))
+        self.assertAlmostEqual(state["assembly"]["length"], LENGTH_METERS, places=4)
+        self.assertEqual(state["assembly"]["triangles"], 18846)
+
+    def test_retracted_end_to_end_export(self):
+        report = main("retracted")
+        state = report["states"]["retracted"]
+        self.assertEqual(state["sourceSha256"], self.RETRACTED_SHA256)
+        self.assertEqual(set(state["groups"]), {"body", "wings", "fins", "nozzle", "fairing"})
+        self.assertAlmostEqual(state["assembly"]["length"], LENGTH_METERS, places=4)
+        self.assertLessEqual(state["assembly"]["maximumRadius"], 0.125 + 1e-6)
+        self.assertEqual(state["assembly"]["triangles"], 25192)
 
 
 if __name__ == "__main__":
