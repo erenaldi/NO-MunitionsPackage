@@ -12,7 +12,7 @@ from cadgen import build123d as bd
 from housing import cassettes, housing, solid_box
 
 
-def section(x, width, height, corner_radius):
+def section(x, width, height, corner_radius, centre_z=-111.5):
     """Clock-stable rounded rectangle, 36 perimeter vertices in a +X plane."""
     half_y, half_z = width/2, height/2
     radius = min(corner_radius, half_y*.96, half_z*.96)
@@ -24,7 +24,7 @@ def section(x, width, height, corner_radius):
         for j in range(9):
             theta = math.radians(angle+j*90/8)
             vertices.append((x, cy+radius*math.cos(theta),
-                             -111.5+cz+radius*math.sin(theta)))
+                             centre_z+cz+radius*math.sin(theta)))
     return bd.Wire.make_polygon(vertices, close=True)
 
 

@@ -338,6 +338,9 @@ def _build_planar_feature(host, host_label, feature, stage):
         elif feature_id == "F03A" and suffix == "disc":
             part_label = f"{stage}_r18_F03A_disc"
             _set_label_color(cover, part_label, BODY_PAINT)
+        elif feature_id == "F05" and suffix == "center_strip":
+            part_label = f"{stage}_r18_F05_center_strip"
+            _set_label_color(cover, part_label, BODY_PAINT)
         elif feature_id == "F03B":
             part_label = f"{stage}_r18_F03B_keyed_cap"
             _set_label_color(cover, part_label, BODY_PAINT)

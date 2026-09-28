@@ -1,0 +1,281 @@
+[
+ {
+  "input": "STEP/S_EngineRead_O1_TripleFan_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O1_TripleFan_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1200,
+      0,
+      -20
+     ],
+     "orthographicHalfHeight": 230,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O1_TripleFan_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O1_TripleFan_rear.png",
+    "camera": {
+     "direction": [
+      -1,
+      -0.25,
+      0.15
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O1_TripleFan_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O1_TripleFan_throat.png",
+    "camera": {
+     "direction": [
+      0.75,
+      -0.85,
+      -0.55
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1010,
+      0,
+      -50
+     ],
+     "orthographicHalfHeight": 130,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O2_VaneCascade_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O2_VaneCascade_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1200,
+      0,
+      -20
+     ],
+     "orthographicHalfHeight": 230,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O2_VaneCascade_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O2_VaneCascade_rear.png",
+    "camera": {
+     "direction": [
+      -1,
+      -0.25,
+      0.15
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O2_VaneCascade_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O2_VaneCascade_throat.png",
+    "camera": {
+     "direction": [
+      0.75,
+      -0.85,
+      -0.55
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1010,
+      0,
+      -50
+     ],
+     "orthographicHalfHeight": 130,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O3_TwinEngine_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O3_TwinEngine_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1200,
+      0,
+      -20
+     ],
+     "orthographicHalfHeight": 230,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O3_TwinEngine_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O3_TwinEngine_rear.png",
+    "camera": {
+     "direction": [
+      -1,
+      -0.25,
+      0.15
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineRead_O3_TwinEngine_Context.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineRead_O3_TwinEngine_throat.png",
+    "camera": {
+     "direction": [
+      0.75,
+      -0.85,
+      -0.55
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1010,
+      0,
+      -50
+     ],
+     "orthographicHalfHeight": 130,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ }
+]

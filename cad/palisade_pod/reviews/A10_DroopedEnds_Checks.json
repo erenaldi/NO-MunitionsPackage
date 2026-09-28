@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "bare_parts": 9,
+  "filled_parts": 13,
+  "outer_xyz_mm": [
+    3460,
+    400,
+    223
+  ],
+  "tip_section_yz_zmin_zmax_mm": {
+    "forward": [
+      9.777,
+      5.043,
+      -174.007,
+      -168.964
+    ],
+    "aft": [
+      10.259,
+      5.327,
+      -114.163,
+      -108.837
+    ]
+  },
+  "forward_tip_centre_z_mm": -171.486,
+  "forward_drop_mm": 60,
+  "rear_shortening_mm": 40,
+  "A9_roof_lips_four_boxes_preserved": true,
+  "sensor_aperture_art_deferred": true,
+  "spear_max_fin_diameter_mm": 158.013,
+  "donor_aircraft_door_clearance_verified": false
+}

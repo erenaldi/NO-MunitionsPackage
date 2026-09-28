@@ -1,0 +1,37 @@
+{
+  "input": "STEP/halberd_r18_access_F02_focus.step",
+  "mode": "view",
+  "outputs": [
+    {
+      "path": "reviews/R18_access_F02_oblique.png",
+      "camera": {
+        "direction": [
+          0.55,
+          -0.75,
+          1.0
+        ]
+      }
+    },
+    {
+      "path": "reviews/R18_access_F02_grazing.png",
+      "camera": {
+        "direction": [
+          0.9,
+          -0.25,
+          0.18
+        ]
+      }
+    }
+  ],
+  "output": {
+    "viewLabels": false,
+    "padding": 0.08,
+    "sizeProfile": "diagnostic"
+  },
+  "quality": {
+    "tessellation": {
+      "chordTolerance": 5e-05,
+      "angleTolerance": 0.05
+    }
+  }
+}

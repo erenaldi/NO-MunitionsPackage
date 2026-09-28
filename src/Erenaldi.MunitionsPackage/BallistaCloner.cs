@@ -38,30 +38,18 @@ namespace Erenaldi.MunitionsPackage
         internal const float CruiseBurnTime = 80f;
         internal const float CruiseFuelMass = 8f;
         internal const float CruiseIgnitionDelay = 1f;
-        // Terminal motor profile, derived from the 49 kg propellant mass at
-        // Isp 250 s (high-energy composite solid): exhaust velocity 2452 m/s,
-        // mass flow 5.71 kg/s at 14 kN -> 8.6 s burn, 120 kNs total impulse,
-        // and a rocket-equation delta-v of ~850 m/s (167 -> 118 kg). The
-        // 168 kNs "doubled impulse" figure was a game-model artifact; 120 kNs
-        // is the physical number for this propellant mass.
-        //
-        // Terminal energy retention: what bleeds speed is drag (the 0.05
-        // folded drag above) and off-axis burn geometry. The motor effect for
-        // the terminal burn is therefore modeled as four levers set below:
-        //   1. FoldDelaySeconds 2 s / FoldRange 7.5 km - wings fold before the
-        //      burn so the drag cut lands first, not mid-sprint.
-        //   2. Fold time/range trigger - fold at the time OR range gate so the
-        //      fold always precedes ignition (time trigger at the 9.5 km fold,
-        //      range trigger on a late loft).
-        //   3. FoldDelay Ignition - ignition after the fold (drag low, wings
-        //      gone) rather than during, so the sprint energy lands on a clean
-        //      airframe.
-        //   4. Donor gear cleanup - gear, gear doors, and wings are destroyed
-        //      at the fold, so the donor's drag-cut gear curve cannot bleed
-        //      the sprint after ignition.
+        // Terminal motor profile: 30 kg of the 49 kg grain at Isp 250 s
+        // (exhaust velocity 2452 m/s, mass flow 5.71 kg/s at 14 kN) -> 5.25 s
+        // burn, 70 kNs total impulse, delta-v ~470 m/s. Terminal arrival is
+        // therefore ~Mach 2 (user direction): the dash adds ~460 m/s over the
+        // ~280 m/s loft exit, and the restored 0.15 supersonic drag trims the
+        // coast to Mach 2 by impact. The speed cap (1050) and drag stay
+        // untouched per user direction; the remaining 19 kg of the original
+        // grain allocation stays as dry motor mass so the calibrated 175 kg
+        // launch mass and the 45 kg warhead are unchanged.
         internal const float SprintThrust = 14000f;
-        internal const float SprintBurnTime = 8.6f;
-        internal const float SprintFuelMass = 49f;
+        internal const float SprintBurnTime = 5.25f;
+        internal const float SprintFuelMass = 30f;
         internal const float SprintReserveDelay = 3600f;
         // Sprint velocity ceiling raised (user direction): with drag restored
         // to 0.15 the dash self-limits near Mach 3 at terminal altitude

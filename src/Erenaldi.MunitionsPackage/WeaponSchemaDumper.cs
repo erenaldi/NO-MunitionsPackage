@@ -64,6 +64,7 @@ namespace Erenaldi.MunitionsPackage
                 ["generatedUtc"] = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
                 ["gameVersion"] = Application.version,
                 ["pluginVersion"] = Plugin.PluginVersion,
+                ["determinismNote"] = "Deterministic apart from generatedUtc, instanceId runtime IDs, runtime active/enabled state and runtime-computed bounds; the dump reads game assets without mutating them.",
                 ["weaponCount"] = weapons.Count,
                 ["unitCount"] = Encyclopedia.Lookup.Count,
                 ["types"] = DumpTypeSchemas(weapons),
@@ -197,7 +198,7 @@ namespace Erenaldi.MunitionsPackage
                 ["mountObjectName"] = mount != null ? mount.name : null,
                 ["mount"] = DumpSerializedObject(mount),
                 ["weaponInfo"] = DumpSerializedObject(mount?.info),
-                ["mountPrefab"] = DumpPrefab(mount?.prefab),
+                ["mountPrefab"] = DumpMountPrefab(mount?.prefab),
                 ["projectilePrefab"] = DumpPrefab(mount?.info?.weaponPrefab)
             };
         }
@@ -229,21 +230,181 @@ namespace Erenaldi.MunitionsPackage
                             ["physicalHardpointCount"] = set.hardpoints?.Count ?? 0,
                             ["weaponOptions"] = new JArray((set.weaponOptions ?? new List<WeaponMount>())
                                 .Where(option => option != null)
-                                .Select(option => option.jsonKey))
+                                .Select(option => option.jsonKey)),
+                            ["physicalHardpoints"] = DumpPhysicalHardpoints(aircraft.unitPrefab.transform, set.hardpoints)
                         });
                     }
                 }
 
+                var doorBayGearCandidates = DumpDoorBayGearCandidates(aircraft.unitPrefab);
                 result.Add(new JObject
                 {
                     ["lookupKey"] = pair.Key,
                     ["unitName"] = aircraft.unitName,
                     ["prefabName"] = aircraft.unitPrefab.name,
-                    ["hardpoints"] = hardpoints
+                    ["hardpoints"] = hardpoints,
+                    ["contextBounds"] = DumpAircraftContextBounds(aircraft.unitPrefab),
+                    ["doorBayGearCandidates"] = doorBayGearCandidates,
+                    ["namedGaps"] = BuildNamedGaps(doorBayGearCandidates)
                 });
             }
 
             return result;
+        }
+
+        private JArray DumpPhysicalHardpoints(Transform root, List<Hardpoint> hardpoints)
+        {
+            var result = new JArray();
+            if (hardpoints == null)
+            {
+                return result;
+            }
+            for (var index = 0; index < hardpoints.Count; index++)
+            {
+                var hardpoint = hardpoints[index];
+                if (hardpoint == null)
+                {
+                    result.Add(JValue.CreateNull());
+                    continue;
+                }
+                string componentType = null;
+                try
+                {
+                    componentType = hardpoint.GetType().FullName;
+                }
+                catch
+                {
+                }
+                try
+                {
+                    var transform = hardpoint.transform;
+                    if (transform == null)
+                    {
+                        result.Add(new JObject
+                        {
+                            ["physicalIndex"] = index,
+                            ["componentType"] = componentType,
+                            ["$error"] = "Hardpoint has no transform."
+                        });
+                        continue;
+                    }
+                    var gameObject = transform.gameObject;
+                    result.Add(new JObject
+                    {
+                        ["physicalIndex"] = index,
+                        ["hierarchyPath"] = GetHierarchyPath(root, transform),
+                        ["activeSelf"] = gameObject != null && gameObject.activeSelf,
+                        ["activeInHierarchy"] = gameObject != null && gameObject.activeInHierarchy,
+                        ["componentType"] = componentType,
+                        ["instanceId"] = gameObject != null ? gameObject.GetInstanceID() : 0,
+                        ["localTransform"] = DumpLocalPose(transform),
+                        ["rootRelativeTransform"] = DumpRootRelativePose(root, transform)
+                    });
+                }
+                catch (Exception exception)
+                {
+                    result.Add(new JObject
+                    {
+                        ["physicalIndex"] = index,
+                        ["componentType"] = componentType,
+                        ["$error"] = exception.GetType().Name,
+                        ["message"] = exception.Message
+                    });
+                }
+            }
+            return result;
+        }
+
+        private JObject DumpAircraftContextBounds(GameObject aircraft)
+        {
+            var matrix = aircraft.transform.worldToLocalMatrix;
+            return new JObject
+            {
+                ["coordinateSpace"] = "aircraft-root-local space",
+                ["renderers"] = MergeBounds<Renderer>(aircraft, matrix, renderer => renderer.bounds),
+                ["colliders"] = MergeBounds<Collider>(aircraft, matrix, collider => collider.bounds)
+            };
+        }
+
+        private static JObject MergeBounds<T>(GameObject root, Matrix4x4 matrix, Func<T, Bounds> selector) where T : Component
+        {
+            var min = new Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity);
+            var max = new Vector3(float.NegativeInfinity, float.NegativeInfinity, float.NegativeInfinity);
+            var count = 0;
+            foreach (var component in root.GetComponentsInChildren<T>(true))
+            {
+                if (component == null)
+                {
+                    continue;
+                }
+                var bounds = selector(component);
+                if (!IsFiniteBounds(bounds) || IsDegenerateBounds(bounds))
+                {
+                    continue;
+                }
+                foreach (var corner in BoundsCorners(bounds))
+                {
+                    var point = matrix.MultiplyPoint3x4(corner);
+                    min = Vector3.Min(min, point);
+                    max = Vector3.Max(max, point);
+                }
+                count++;
+            }
+            if (count == 0)
+            {
+                return new JObject { ["count"] = 0, ["min"] = null, ["max"] = null, ["size"] = null };
+            }
+            return new JObject
+            {
+                ["count"] = count,
+                ["min"] = Vector3ToObject(min),
+                ["max"] = Vector3ToObject(max),
+                ["size"] = Vector3ToObject(max - min)
+            };
+        }
+
+        private static readonly string[] DoorBayGearPatterns =
+        {
+            "door", "bay", "gear", "wheel", "hatch", "landing"
+        };
+
+        private JArray DumpDoorBayGearCandidates(GameObject aircraft)
+        {
+            var candidates = new List<JObject>();
+            foreach (var transform in aircraft.GetComponentsInChildren<Transform>(true))
+            {
+                if (transform == null || transform == aircraft.transform)
+                {
+                    continue;
+                }
+                var lower = (transform.name ?? string.Empty).ToLowerInvariant();
+                var matched = DoorBayGearPatterns.FirstOrDefault(pattern => lower.IndexOf(pattern, StringComparison.Ordinal) >= 0);
+                if (matched == null)
+                {
+                    continue;
+                }
+                candidates.Add(new JObject
+                {
+                    ["hierarchyPath"] = GetHierarchyPath(aircraft.transform, transform),
+                    ["matchedPattern"] = matched,
+                    ["identification"] = "name-heuristic",
+                    ["certainty"] = "candidate",
+                    ["activeSelf"] = transform.gameObject != null && transform.gameObject.activeSelf
+                });
+            }
+            return new JArray(candidates.OrderBy(candidate => (string)candidate["hierarchyPath"], StringComparer.Ordinal));
+        }
+
+        private static JArray BuildNamedGaps(JArray doorBayGearCandidates)
+        {
+            var gaps = new JArray(
+                "Door/bay/gear transforms are name-heuristic candidates only; their relationship to specific hardpoints is not asserted.",
+                "Door sweep, bay opening animation and landing-gear travel are not measured in this dump.");
+            if (doorBayGearCandidates == null || doorBayGearCandidates.Count == 0)
+            {
+                gaps.Add("No door/bay/gear transforms matched the name heuristics for this aircraft.");
+            }
+            return gaps;
         }
 
         private static IEnumerable<GameObject> CollectCargoUnitPrefabs(IReadOnlyCollection<WeaponRecord> weapons)
@@ -543,6 +704,168 @@ namespace Erenaldi.MunitionsPackage
             };
         }
 
+        private JObject DumpMountPrefab(GameObject prefab)
+        {
+            if (prefab == null)
+            {
+                return null;
+            }
+            var result = DumpPrefab(prefab);
+            result["transforms"] = DumpTransformHierarchy(prefab);
+            result["renderers"] = DumpRendererBounds(prefab);
+            result["colliders"] = DumpColliderBounds(prefab);
+            result["mountedMissiles"] = DumpMountedMissiles(prefab);
+            return result;
+        }
+
+        private JArray DumpTransformHierarchy(GameObject prefab)
+        {
+            var result = new JArray();
+            foreach (var transform in prefab.GetComponentsInChildren<Transform>(true))
+            {
+                if (transform == null)
+                {
+                    continue;
+                }
+                var isRoot = transform == prefab.transform;
+                result.Add(new JObject
+                {
+                    ["hierarchyPath"] = GetHierarchyPath(prefab.transform, transform),
+                    ["isRoot"] = isRoot,
+                    ["poseCoordinateSpace"] = isRoot ? "prefab-root parent space" : "parent transform space",
+                    ["activeSelf"] = transform.gameObject != null && transform.gameObject.activeSelf,
+                    ["localPosition"] = Vector3ToObject(transform.localPosition),
+                    ["localRotation"] = QuaternionToObject(transform.localRotation),
+                    ["localScale"] = Vector3ToObject(transform.localScale)
+                });
+            }
+            return result;
+        }
+
+        private JArray DumpRendererBounds(GameObject prefab)
+        {
+            var result = new JArray();
+            var matrix = prefab.transform.worldToLocalMatrix;
+            foreach (var renderer in prefab.GetComponentsInChildren<Renderer>(true))
+            {
+                if (renderer == null)
+                {
+                    continue;
+                }
+                result.Add(new JObject
+                {
+                    ["hierarchyPath"] = GetHierarchyPath(prefab.transform, renderer.transform),
+                    ["type"] = renderer.GetType().FullName,
+                    ["enabled"] = renderer.enabled,
+                    ["bounds"] = BoundsToObject(renderer.bounds, matrix, "prefab-root-local space"),
+                    ["worldBounds"] = BoundsToObject(renderer.bounds, Matrix4x4.identity, "world space")
+                });
+            }
+            return result;
+        }
+
+        private JArray DumpColliderBounds(GameObject prefab)
+        {
+            var result = new JArray();
+            var matrix = prefab.transform.worldToLocalMatrix;
+            foreach (var collider in prefab.GetComponentsInChildren<Collider>(true))
+            {
+                if (collider == null)
+                {
+                    continue;
+                }
+                var entry = new JObject
+                {
+                    ["hierarchyPath"] = GetHierarchyPath(prefab.transform, collider.transform),
+                    ["type"] = collider.GetType().FullName,
+                    ["enabled"] = collider.enabled,
+                    ["bounds"] = BoundsToObject(collider.bounds, matrix, "prefab-root-local space"),
+                    ["worldBounds"] = BoundsToObject(collider.bounds, Matrix4x4.identity, "world space")
+                };
+                if (collider is BoxCollider box)
+                {
+                    entry["shapeCoordinateSpace"] = "collider-local space";
+                    entry["center"] = Vector3ToObject(box.center);
+                    entry["size"] = Vector3ToObject(box.size);
+                }
+                else if (collider is SphereCollider sphere)
+                {
+                    entry["shapeCoordinateSpace"] = "collider-local space";
+                    entry["center"] = Vector3ToObject(sphere.center);
+                    entry["radius"] = sphere.radius;
+                }
+                else if (collider is CapsuleCollider capsule)
+                {
+                    entry["shapeCoordinateSpace"] = "collider-local space";
+                    entry["center"] = Vector3ToObject(capsule.center);
+                    entry["radius"] = capsule.radius;
+                    entry["height"] = capsule.height;
+                    entry["direction"] = capsule.direction;
+                    entry["directionAxis"] = CapsuleDirectionName(capsule.direction);
+                }
+                else if (collider is MeshCollider meshCollider)
+                {
+                    entry["sharedMesh"] = meshCollider.sharedMesh != null ? meshCollider.sharedMesh.name : null;
+                    entry["convex"] = meshCollider.convex;
+                }
+                result.Add(entry);
+            }
+            return result;
+        }
+
+        private JArray DumpMountedMissiles(GameObject prefab)
+        {
+            var result = new JArray();
+            foreach (var mounted in prefab.GetComponentsInChildren<MountedMissile>(true))
+            {
+                if (mounted == null)
+                {
+                    continue;
+                }
+                var entry = new JObject
+                {
+                    ["hierarchyPath"] = GetHierarchyPath(prefab.transform, mounted.transform),
+                    ["localPose"] = DumpLocalPose(mounted.transform)
+                };
+                TryAddMountedMissileField(entry, "railDirection", mounted, "railDirection");
+                TryAddMountedMissileField(entry, "railLength", mounted, "railLength");
+                TryAddMountedMissileField(entry, "railSpeed", mounted, "railSpeed");
+                TryAddMountedMissileField(entry, "railDelay", mounted, "railDelay");
+                TryAddMountedMissileField(entry, "mountedPosition", mounted, "mountedPosition");
+                TryAddMountedMissileField(entry, "railVector", mounted, "railVector");
+                result.Add(entry);
+            }
+            return result;
+        }
+
+        private static void TryAddMountedMissileField(JObject target, string name, MountedMissile mounted, string fieldName)
+        {
+            try
+            {
+                var value = HalberdCloner.GetField(mounted, fieldName);
+                if (value is Vector3 vector)
+                {
+                    target[name] = Vector3ToObject(vector);
+                }
+                else if (value is Enum enumValue)
+                {
+                    target[name] = DumpEnum(enumValue);
+                }
+                else if (value is float number)
+                {
+                    target[name] = number;
+                }
+                else if (value != null)
+                {
+                    target[name] = new JValue(value.ToString());
+                }
+            }
+            catch (Exception exception)
+            {
+                target[name] = new JObject { ["$error"] = exception.GetType().Name };
+            }
+        }
+
         private JObject DumpSerializedObject(object value)
         {
             if (value == null)
@@ -757,6 +1080,125 @@ namespace Erenaldi.MunitionsPackage
                 current = current.parent;
             }
             return string.Join("/", names);
+        }
+
+        private static JObject DumpLocalPose(Transform transform)
+        {
+            return new JObject
+            {
+                ["coordinateSpace"] = "local (parent) space",
+                ["position"] = Vector3ToObject(transform.localPosition),
+                ["rotation"] = QuaternionToObject(transform.localRotation),
+                ["scale"] = Vector3ToObject(transform.localScale)
+            };
+        }
+
+        private static JObject DumpRootRelativePose(Transform root, Transform transform)
+        {
+            var rootScale = root.lossyScale;
+            var scale = transform.lossyScale;
+            return new JObject
+            {
+                ["coordinateSpace"] = "aircraft-root space",
+                ["position"] = Vector3ToObject(root.InverseTransformPoint(transform.position)),
+                ["rotation"] = QuaternionToObject(Quaternion.Inverse(root.rotation) * transform.rotation),
+                ["scale"] = Vector3ToObject(new Vector3(
+                    rootScale.x != 0f ? scale.x / rootScale.x : 0f,
+                    rootScale.y != 0f ? scale.y / rootScale.y : 0f,
+                    rootScale.z != 0f ? scale.z / rootScale.z : 0f)),
+                ["scaleNote"] = "lossy-scale ratio; approximate under nonuniform or rotated ancestry"
+            };
+        }
+
+        private static JObject BoundsToObject(Bounds bounds, Matrix4x4 matrix, string coordinateSpace)
+        {
+            if (!IsFiniteBounds(bounds))
+            {
+                return new JObject
+                {
+                    ["coordinateSpace"] = coordinateSpace,
+                    ["finite"] = false
+                };
+            }
+            var min = new Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity);
+            var max = new Vector3(float.NegativeInfinity, float.NegativeInfinity, float.NegativeInfinity);
+            foreach (var corner in BoundsCorners(bounds))
+            {
+                var point = matrix.MultiplyPoint3x4(corner);
+                min = Vector3.Min(min, point);
+                max = Vector3.Max(max, point);
+            }
+            return new JObject
+            {
+                ["coordinateSpace"] = coordinateSpace,
+                ["min"] = Vector3ToObject(min),
+                ["max"] = Vector3ToObject(max),
+                ["size"] = Vector3ToObject(max - min)
+            };
+        }
+
+        private static IEnumerable<Vector3> BoundsCorners(Bounds bounds)
+        {
+            var min = bounds.min;
+            var max = bounds.max;
+            yield return new Vector3(min.x, min.y, min.z);
+            yield return new Vector3(max.x, min.y, min.z);
+            yield return new Vector3(min.x, max.y, min.z);
+            yield return new Vector3(max.x, max.y, min.z);
+            yield return new Vector3(min.x, min.y, max.z);
+            yield return new Vector3(max.x, min.y, max.z);
+            yield return new Vector3(min.x, max.y, max.z);
+            yield return new Vector3(max.x, max.y, max.z);
+        }
+
+        private static bool IsFiniteBounds(Bounds bounds)
+        {
+            return IsFinite(bounds.min) && IsFinite(bounds.max);
+        }
+
+        private static bool IsDegenerateBounds(Bounds bounds)
+        {
+            var size = bounds.size;
+            return size.x == 0f && size.y == 0f && size.z == 0f;
+        }
+
+        private static bool IsFinite(Vector3 value)
+        {
+            return float.IsFinite(value.x) && float.IsFinite(value.y) && float.IsFinite(value.z);
+        }
+
+        private static JObject Vector3ToObject(Vector3 value)
+        {
+            return new JObject { ["x"] = value.x, ["y"] = value.y, ["z"] = value.z };
+        }
+
+        private static JObject QuaternionToObject(Quaternion value)
+        {
+            return new JObject { ["x"] = value.x, ["y"] = value.y, ["z"] = value.z, ["w"] = value.w };
+        }
+
+        private static JObject DumpEnum(Enum value)
+        {
+            return new JObject
+            {
+                ["name"] = value.ToString(),
+                ["value"] = Convert.ToInt64(value, CultureInfo.InvariantCulture)
+            };
+        }
+
+        private static string CapsuleDirectionName(int direction)
+        {
+            switch (direction)
+            {
+                case 0:
+                    return "x";
+                case 1:
+                    return "y";
+                case 2:
+                    return "z";
+                default:
+                    return "unknown";
+            }
         }
 
         private static string Normalize(string value)

@@ -1,6 +1,6 @@
 # RDM-9 Phantom — handoff for a fresh session
 
-Prepared: 2026-09-26 15:43 -05:00.
+Prepared: 2026-09-26 15:43 -05:00. Updated 2026-09-28 with a Claude Code starter prompt: `CLAUDE_CODE_HANDOFF.md` in this folder is the paste-ready prompt for picking up the aft-exhaust / donor-fit stage in Claude Code; this document remains the longer in-repo handoff.
 
 ## Subsequent BUILD-session progress — 2026-09-26
 

@@ -7,7 +7,7 @@ Updated 2026-09-27. Scope: the current Phantom visual reboot, through CAD approv
 - Latest integrated candidate: `src/aft_exhaust_r1.py` → `STEP/S_AftExhaust_R1_{Stowed,Midfold,Deployed}.step` (34 components per full state), retaining IntakeR3's35 mm travel. See `AFT_EXHAUST_R1_BRIEF.md` and `DONOR_RACK_FINDINGS.md` for this pass.
 - Coordinates: mm; +X forward, +Y starboard, +Z dorsal; body X−1400..1400. Complete stowed assembly must remain inside radius 125 mm / diameter 250 mm.
 - The body derives from J/R7, with explicit wing, tail and intake pocket cuts. Preserve the accepted exterior outside those approved regions.
-- Latest intake setting: **35 mm forward outer-lip drop**, 3.04020552845° rotation. This is a checked trial, **not yet explicitly accepted**.
+- Latest intake setting: **35 mm forward outer-lip drop**, 3.04020552845° rotation. **Accepted by the user 2026-09-28** (35 mm travel only; the intake/passage visual read is a separate open item, see P03b).
 - Saved evidence: `reviews/ramp_intake_r3_checks.json` passes; 66 sampled cross-poses, minimum checked moving clearance 0.25 mm, stowed conservative radius 121.622367 mm. The main-wing outboard pins also have the earlier A5 continuous pin-only clearance evidence. This does not establish continuous clearance for every moving part or every possible deployment sequence.
 - Aft candidate evidence: `reviews/aft_exhaust_r1_checks.json` passes saved identity, open-passage and66-pose liner/peer checks (clearance lower bound18 mm). Actual donor fit report `reviews/agm1_reference_fit.json` **fails** at the unchanged mounting transform; this is an open fit gate, not a CAD-kernel error.
 
@@ -30,8 +30,8 @@ Statuses below refer to deliverables, not just whether a file exists.
 
 ### P01 — Confirm the intake setting and baseline
 
-- [ ] Accept or revise the 35 mm lip drop using stowed, side, mouth and deployed views.
-- [ ] Record one selected integrated source/STEP set as the baseline for subsequent work.
+- [x] Accept or revise the 35 mm lip drop using stowed, side, mouth and deployed views. User accepted 35 mm on 2026-09-28.
+- [x] Record one selected integrated source/STEP set as the baseline for subsequent work: `src/aft_exhaust_r1.py` → `STEP/S_AftExhaust_R1_*` (34 parts).
 - Exit: explicit intake decision and current contract pointers; no ambiguity between intake R1/R2/R3 or tail R3/R4.
 - Depends on: user review. Packaging research and planning below can proceed independently.
 
@@ -51,6 +51,12 @@ Statuses below refer to deliverables, not just whether a file exists.
 - [x] Build one focused aft candidate with rear, section and full-vehicle review views. `S_AftExhaust_R1_*` built; primary inspected the packet. User visual acceptance remains pending.
 - Exit: approved aft silhouette and cavity/attachment checks. An engine-performance model or sustained-propulsion gameplay change is not implied by these visuals.
 - Depends on: current fin/intake packaging; P01 before freezing the combined design. This is the recommended next geometry pass.
+
+### P03b — Engine read inside the intake-to-exhaust passage (new, 2026-09-28)
+
+- [ ] User review finding: the passage reads as an open hole straight through from the intake to the nozzle, with no indication of an engine. Propose visual-only options (e.g. compressor face/inlet fairing behind the mouth, mid-duct engine or core volume, turbine/nozzle-side hardware) and get the user's choice before building.
+- Exit: user-approved concept, then a built, checked candidate. Visual only: no airflow, thermal or propulsion claim; 250 mm envelope and accepted exterior stay locked.
+- Depends on: P01 (done). Interacts with P02 keep-outs only if the pylon zone is touched.
 
 ### P04 — Flush RF/electronics panel layout
 

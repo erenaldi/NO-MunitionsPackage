@@ -4,14 +4,19 @@ using UnityEngine;
 namespace Erenaldi.Kris
 {
     /// <summary>
-    /// Original vanilla-style textures for the IRM-S4 Kris, matched to the
-    /// measured language of the game's Missiles1 atlas (the vanilla IR-missile
-    /// family, per the runtime material dump): light neutral gray body over a
-    /// wide value range, sparse yellow-ochre accent, thin dark ring seams with
-    /// rivet dots, faint streak grunge, low metallic, semi-matte paint via
-    /// packed metallic(R)/smoothness(A) on URP Lit. Markings are purely
-    /// geometric — no stencil text, per user preference. No vanilla texture
-    /// data is used — everything is painted procedurally.
+    /// Original vanilla-style textures for the IRM-S4 Kris, redesigned as a mix
+    /// of the two vanilla IR-missile references (runtime material dump +
+    /// UV-region palette measurement, docs/kris_reference_uv_regions.json):
+    /// IRM-S2 (internal key AAM3, Missiles3 atlas) contributes the warm
+    /// gray-brown body tone (125,118,111), the muted ochre (227,190,87) and a
+    /// rust accent (104,59,34); MMR-S3 (internal key AAM1, Missiles1 atlas)
+    /// contributes the near-white panel (197,197,196) and the neutral-warm
+    /// light body. The original Kris form is kept: light body over a wide
+    /// value range, sparse ochre ring, charcoal tail/nose, thin dark ring
+    /// seams with rivet dots, faint streak grunge, low metallic, semi-matte
+    /// paint via packed metallic(R)/smoothness(A) on URP Lit. Markings are
+    /// purely geometric — no stencil text, per user preference. No vanilla
+    /// texture data is used — everything is painted procedurally.
     /// </summary>
     internal static class KrisTexturedMaterialBuilder
     {
@@ -24,16 +29,28 @@ namespace Erenaldi.Kris
         private const float TailDarkEnd = 0.05f;
         private const float OchreStart = 0.885f;
         private const float OchreEnd = 0.90f;
+        private const float RustStart = 0.905f;
+        private const float RustEnd = 0.91f;
         private const float NoseDarkStart = 0.96f;
+        // IRM-S2 (AAM3) gray-brown panel zone and MMR-S3 (AAM1) near-white
+        // panel zone, placed between the 0.42 seam and the ochre ring.
+        private const float MidZoneStart = 0.44f;
+        private const float MidZoneEnd = 0.48f;
+        private const float LightZoneStart = 0.55f;
+        private const float LightZoneEnd = 0.62f;
 
         private static readonly float[] SeamRings = { 0.05f, 0.42f, 0.885f, 0.96f };
+        private static readonly float[] PanelBoundaries = { 0.44f, 0.48f, 0.55f, 0.62f, 0.905f, 0.91f };
         private static readonly float[] AxialSeamsU = { 0.13f, 0.37f, 0.63f, 0.87f };
         private const float AxialSeamStartV = 0.07f;
         private const float AxialSeamEndV = 0.95f;
 
-        private static readonly Color Charcoal = new Color(53f / 255f, 53f / 255f, 52f / 255f);
-        private static readonly Color BaseGray = new Color(196f / 255f, 197f / 255f, 195f / 255f);
-        private static readonly Color Ochre = new Color(244f / 255f, 180f / 255f, 19f / 255f);
+        private static readonly Color Charcoal = new Color(42f / 255f, 39f / 255f, 36f / 255f);
+        private static readonly Color BaseGray = new Color(165f / 255f, 163f / 255f, 160f / 255f);
+        private static readonly Color MidGray = new Color(125f / 255f, 118f / 255f, 111f / 255f);
+        private static readonly Color LightGray = new Color(197f / 255f, 197f / 255f, 196f / 255f);
+        private static readonly Color Ochre = new Color(227f / 255f, 190f / 255f, 87f / 255f);
+        private static readonly Color Rust = new Color(104f / 255f, 59f / 255f, 34f / 255f);
         private static readonly Color SeamDark = new Color(30f / 255f, 29f / 255f, 28f / 255f);
         private static readonly Color InkBlack = new Color(22f / 255f, 22f / 255f, 22f / 255f);
 
@@ -84,6 +101,18 @@ namespace Erenaldi.Kris
             {
                 color = Ochre;
             }
+            else if (v >= RustStart && v <= RustEnd)
+            {
+                color = Rust;
+            }
+            else if (v >= MidZoneStart && v <= MidZoneEnd)
+            {
+                color = MidGray;
+            }
+            else if (v >= LightZoneStart && v <= LightZoneEnd)
+            {
+                color = LightGray;
+            }
             else
             {
                 color = BaseGray;
@@ -106,8 +135,14 @@ namespace Erenaldi.Kris
 
         private static void StampBodyDetail(Color[] pixels)
         {
-            StampRectBorder(pixels, 0.40f, 0.56f, 0.30f, 0.38f, 2, InkBlack);
-            StampXInBox(pixels, 0.44f, 0.52f, 0.318f, 0.362f, 2, InkBlack);
+            // Service panel pair centered on u = 0.25 and u = 0.75. Each panel
+            // is self-symmetric under the x-mirror (u -> (1.5-u) mod 1) and the
+            // pair is symmetric under the y-mirror (u -> 1-u) and the 180 roll
+            // (u -> u+0.5), so the marking reads on both longitudinal flanks.
+            StampRectBorder(pixels, 0.21f, 0.29f, 0.30f, 0.38f, 2, InkBlack);
+            StampXInBox(pixels, 0.23f, 0.27f, 0.318f, 0.362f, 2, InkBlack);
+            StampRectBorder(pixels, 0.71f, 0.79f, 0.30f, 0.38f, 2, InkBlack);
+            StampXInBox(pixels, 0.73f, 0.77f, 0.318f, 0.362f, 2, InkBlack);
 
             foreach (float ring in SeamRings)
             {
@@ -137,24 +172,39 @@ namespace Erenaldi.Kris
                     float smooth;
                     if (v <= TailDarkEnd || v >= NoseDarkStart)
                     {
-                        metal = 0.12f;
-                        smooth = 0.55f;
+                        metal = 0.10f;
+                        smooth = 0.50f;
                     }
                     else if (v >= OchreStart && v <= OchreEnd)
                     {
                         metal = 0.05f;
-                        smooth = 0.50f;
+                        smooth = 0.45f;
+                    }
+                    else if (v >= RustStart && v <= RustEnd)
+                    {
+                        metal = 0.12f;
+                        smooth = 0.40f;
+                    }
+                    else if (v >= MidZoneStart && v <= MidZoneEnd)
+                    {
+                        metal = 0.06f;
+                        smooth = 0.42f;
+                    }
+                    else if (v >= LightZoneStart && v <= LightZoneEnd)
+                    {
+                        metal = 0.05f;
+                        smooth = 0.40f;
                     }
                     else
                     {
                         metal = 0.06f;
-                        smooth = 0.46f;
+                        smooth = 0.42f;
                     }
                     smooth += (hash - 0.5f) * 0.05f;
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth));
                 }
             }
-            return FinishTexture("TexKrisBodyMS", pixels);
+            return FinishTexture("TexKrisBodyMS", pixels, true);
         }
 
         private static Texture2D CreatePlainPacked()
@@ -170,7 +220,7 @@ namespace Erenaldi.Kris
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth));
                 }
             }
-            return FinishTexture("TexKrisPlainMS", pixels);
+            return FinishTexture("TexKrisPlainMS", pixels, true);
         }
 
         private static Material CreateTexturedMaterial(string assetRoot, string name, Texture2D albedo, Texture2D packed, Color? tint = null)
@@ -215,6 +265,14 @@ namespace Erenaldi.Kris
                 if (Mathf.Abs(v - ring) < 0.0030f)
                 {
                     color = Color.Lerp(color, SeamDark, 0.60f);
+                }
+            }
+            // Subtle panel-zone boundary lines (IRM-S2/MMR-S3 panel zones).
+            foreach (float boundary in PanelBoundaries)
+            {
+                if (Mathf.Abs(v - boundary) < 0.0016f)
+                {
+                    color = Color.Lerp(color, SeamDark, 0.40f);
                 }
             }
             // Longitudinal panel seams on the upper/lower flanks only.
@@ -324,9 +382,9 @@ namespace Erenaldi.Kris
             pixels[y * Width + x] *= factor;
         }
 
-        private static Texture2D FinishTexture(string name, Color[] pixels)
+        private static Texture2D FinishTexture(string name, Color[] pixels, bool linear = false)
         {
-            var texture = new Texture2D(Width, Height, TextureFormat.RGBA32, true, false)
+            var texture = new Texture2D(Width, Height, TextureFormat.RGBA32, true, linear)
             {
                 name = name,
                 wrapMode = TextureWrapMode.Repeat,

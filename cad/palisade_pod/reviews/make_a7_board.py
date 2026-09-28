@@ -30,6 +30,17 @@ def main():
         )
         title = "Palisade A9 — continuous end curves against the user's drawing"
         output = "A9_ContinuousEnds_Review.png"
+    elif "--drooped" in sys.argv:
+        rows = (
+            (("User's marked continuous side envelope", USER_SKETCH),
+             ("A10 / drooped front, stubbier rear", ROOT / "A10_Filled_side.png")),
+            (("A9 / level continuous ends", ROOT / "A9_Filled_iso.png"),
+             ("A10 / drooped front tip", ROOT / "A10_Filled_iso.png")),
+            (("A10 / bare inverted-U housing", ROOT / "A10_Bare_iso.png"),
+             ("A10 / four plain box volumes", ROOT / "A10_Filled_iso.png")),
+        )
+        title = "Palisade A10 — drooped front and stubbier rear against the user's drawing"
+        output = "A10_DroopedEnds_Review.png"
     elif "--rounded" in sys.argv:
         rows = (
             (("A7 / side with larger end faces", ROOT / "A7_Filled_side.png"),

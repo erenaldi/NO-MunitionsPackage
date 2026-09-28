@@ -196,14 +196,49 @@ namespace Erenaldi.Ballista
             var mesh = Object.Instantiate(source);
             mesh.name = meshName;
             mesh.RecalculateNormals();
-            // Every group gets the seam-deduplicated full-2pi cylindrical
-            // unwrap (z-axis, v 0 tail .. 1 nose) so the textured materials
-            // can paint panel lines over the whole airframe.
-            var unwrapped = Erenaldi.Kris.KrisMeshBuilder.GenerateCylindricalUVs(mesh);
+            // Body/panel/hardware groups get the seam-deduplicated full-2pi
+            // cylindrical unwrap (z-axis, v 0 tail .. 1 nose) so the textured
+            // materials can paint panel lines over the whole airframe. The flat
+            // wing/fin panels get a planar unwrap instead: cylindrical mapping
+            // degenerates on a flat panel (u = atan2(y,x) is nearly constant
+            // per face and mirrors across the chord centerline).
+            var unwrapped = meshName.EndsWith("_wing")
+                ? GeneratePlanarUvs(mesh)
+                : Erenaldi.Kris.KrisMeshBuilder.GenerateCylindricalUVs(mesh);
             Object.DestroyImmediate(mesh);
             unwrapped.RecalculateBounds();
             Debug.Log($"[Ballista] Imported {path}: {unwrapped.vertices.Length} vertices, bounds {unwrapped.bounds}");
             return unwrapped;
+        }
+
+        /// <summary>
+        /// Planar unwrap onto the mesh's XZ plane (u along local x, v along
+        /// local z), matching the flat stowed wing/fin panels. No seam
+        /// duplication is needed: u spans 0..1 continuously.
+        /// </summary>
+        private static Mesh GeneratePlanarUvs(Mesh source)
+        {
+            var sourceVertices = source.vertices;
+            var sourceNormals = source.normals;
+            var bounds = source.bounds;
+            var sizeX = Mathf.Max(bounds.size.x, 0.001f);
+            var sizeZ = Mathf.Max(bounds.size.z, 0.001f);
+            var uvs = new List<Vector2>(sourceVertices.Length);
+            for (int i = 0; i < sourceVertices.Length; i++)
+            {
+                uvs.Add(new Vector2((sourceVertices[i].x - bounds.min.x) / sizeX, (sourceVertices[i].z - bounds.min.z) / sizeZ));
+            }
+            var mesh = new Mesh { name = source.name, indexFormat = source.indexFormat };
+            mesh.SetVertices(sourceVertices);
+            mesh.SetNormals(sourceNormals);
+            mesh.SetUVs(0, uvs);
+            mesh.subMeshCount = source.subMeshCount;
+            for (int subMesh = 0; subMesh < source.subMeshCount; subMesh++)
+            {
+                mesh.SetTriangles(source.GetTriangles(subMesh), subMesh);
+            }
+            mesh.RecalculateBounds();
+            return mesh;
         }
 
         private static int GetTriangleCount(Mesh mesh)

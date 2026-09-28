@@ -67,14 +67,25 @@ namespace Erenaldi.Halberd
             return CreateTexturedMaterial(assetRoot, name, albedo, packed);
         }
 
+        // The five plain part families (intakes, sustainer fins, hardware,
+        // sustainer nozzle, booster fins) share one albedo/MS texture pair;
+        // only the material tint differs.
+        private static Texture2D sharedPlainAlbedo;
+        private static Texture2D sharedPlainPacked;
+
         /// <summary>Neutral microsurface; the material tint sets the part family tone.</summary>
         internal static Material CreatePlainMaterial(string assetRoot, string name, Color tint)
         {
-            var pixels = new Color[Width * Height];
-            PaintBase(pixels, PaintPlainBase);
-            var albedo = FinishTexture("TexHalberdPlainAlbedo", pixels);
-            var packed = CreatePlainPacked();
-            return CreateTexturedMaterial(assetRoot, name, albedo, packed, tint);
+            if (sharedPlainAlbedo == null || sharedPlainPacked == null)
+            {
+                var pixels = new Color[Width * Height];
+                PaintBase(pixels, PaintPlainBase);
+                sharedPlainAlbedo = FinishTexture("TexHalberdPlainAlbedo", pixels);
+                sharedPlainPacked = CreatePlainPacked();
+                SaveAsset(sharedPlainAlbedo, assetRoot, sharedPlainAlbedo.name + ".asset");
+                SaveAsset(sharedPlainPacked, assetRoot, sharedPlainPacked.name + ".asset");
+            }
+            return CreateTexturedMaterial(assetRoot, name, sharedPlainAlbedo, sharedPlainPacked, tint, false);
         }
 
         // ------------------------------------------------------------------
@@ -126,9 +137,11 @@ namespace Erenaldi.Halberd
             {
                 color = Color.Lerp(color, SeamDark, 0.55f);
             }
-            for (int i = 0; i < 26; i++)
+            // Rivet rows at the axial-seam flank positions (same 8-position set as the
+            // body): symmetric under the y-mirror (u -> 1-u), the x-mirror
+            // (u -> (1.5-u) mod 1) and the 180 roll (u -> u+0.5).
+            foreach (float rivetU in new[] { 0.116f, 0.144f, 0.356f, 0.384f, 0.616f, 0.644f, 0.856f, 0.884f })
             {
-                float rivetU = 0.02f + i * 0.0385f;
                 if (NearDot(u, v, rivetU, 0.132f, 0.0012f) || NearDot(u, v, rivetU, 0.03f, 0.0012f))
                 {
                     color = SeamDark;
@@ -167,9 +180,14 @@ namespace Erenaldi.Halberd
 
         private static void StampBodyDetail(Color[] pixels)
         {
-            StampRectBorder(pixels, 0.42f, 0.58f, 0.30f, 0.395f, 3, InkBlack);
-            StampXInBox(pixels, 0.45f, 0.55f, 0.325f, 0.372f, 2, InkBlack);
-            StampXInBox(pixels, 0.08f, 0.17f, 0.315f, 0.365f, 2, InkBlack);
+            // Service panel pair centered on u = 0.25 and u = 0.75: each panel
+            // is self-symmetric under the x-mirror (u -> (1.5-u) mod 1) and the
+            // pair is symmetric under the y-mirror (u -> 1-u) and the 180 roll
+            // (u -> u+0.5), so the marking reads on both longitudinal flanks.
+            StampRectBorder(pixels, 0.21f, 0.29f, 0.30f, 0.395f, 3, InkBlack);
+            StampXInBox(pixels, 0.23f, 0.27f, 0.325f, 0.372f, 2, InkBlack);
+            StampRectBorder(pixels, 0.71f, 0.79f, 0.30f, 0.395f, 3, InkBlack);
+            StampXInBox(pixels, 0.73f, 0.77f, 0.325f, 0.372f, 2, InkBlack);
 
             // Baked seam shading (AO) around ring seams.
             foreach (float ring in BodySeamRings)
@@ -189,9 +207,17 @@ namespace Erenaldi.Halberd
 
         private static void StampBoosterDetail(Color[] pixels)
         {
-            StampRectBorder(pixels, 0.30f, 0.50f, 0.38f, 0.47f, 2, InkBlack);
-            StampXInBox(pixels, 0.335f, 0.465f, 0.395f, 0.455f, 2, InkBlack);
-            StampRectBorder(pixels, 0.62f, 0.74f, 0.60f, 0.68f, 2, InkBlack);
+            // Service panel pairs centered on u = 0.25 and u = 0.75 (both
+            // longitudinal flanks): each panel is self-symmetric under the
+            // x-mirror and the pair is symmetric under the y-mirror and the
+            // 180 roll. Two v-stacked pairs: rect+X at v 0.38-0.47 and plain
+            // rect at v 0.60-0.68.
+            StampRectBorder(pixels, 0.21f, 0.29f, 0.38f, 0.47f, 2, InkBlack);
+            StampXInBox(pixels, 0.23f, 0.27f, 0.395f, 0.455f, 2, InkBlack);
+            StampRectBorder(pixels, 0.71f, 0.79f, 0.38f, 0.47f, 2, InkBlack);
+            StampXInBox(pixels, 0.73f, 0.77f, 0.395f, 0.455f, 2, InkBlack);
+            StampRectBorder(pixels, 0.21f, 0.29f, 0.60f, 0.68f, 2, InkBlack);
+            StampRectBorder(pixels, 0.71f, 0.79f, 0.60f, 0.68f, 2, InkBlack);
 
             // Baked seam shading (AO) around ring seams.
             foreach (float ring in BoosterSeamRings)
@@ -248,7 +274,7 @@ namespace Erenaldi.Halberd
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth));
                 }
             }
-            return FinishTexture("TexHalberdBodyMS", pixels);
+            return FinishTexture("TexHalberdBodyMS", pixels, true);
         }
 
         private static Texture2D CreateBoosterPacked()
@@ -286,7 +312,7 @@ namespace Erenaldi.Halberd
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth));
                 }
             }
-            return FinishTexture("TexHalberdBoosterMS", pixels);
+            return FinishTexture("TexHalberdBoosterMS", pixels, true);
         }
 
         private static Texture2D CreatePlainPacked()
@@ -302,19 +328,22 @@ namespace Erenaldi.Halberd
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth));
                 }
             }
-            return FinishTexture("TexHalberdPlainMS", pixels);
+            return FinishTexture("TexHalberdPlainMS", pixels, true);
         }
 
         // ------------------------------------------------------------------
         // Material assembly
         // ------------------------------------------------------------------
 
-        private static Material CreateTexturedMaterial(string assetRoot, string name, Texture2D albedo, Texture2D packed, Color? tint = null)
+        private static Material CreateTexturedMaterial(string assetRoot, string name, Texture2D albedo, Texture2D packed, Color? tint = null, bool saveTextures = true)
         {
-            albedo.name = name + "Albedo";
-            packed.name = name + "MS";
-            SaveAsset(albedo, assetRoot, albedo.name + ".asset");
-            SaveAsset(packed, assetRoot, packed.name + ".asset");
+            if (saveTextures)
+            {
+                albedo.name = name + "Albedo";
+                packed.name = name + "MS";
+                SaveAsset(albedo, assetRoot, albedo.name + ".asset");
+                SaveAsset(packed, assetRoot, packed.name + ".asset");
+            }
 
             var shader = Shader.Find("Universal Render Pipeline/Lit");
             if (shader == null)
@@ -485,9 +514,9 @@ namespace Erenaldi.Halberd
             pixels[y * Width + x] *= factor;
         }
 
-        private static Texture2D FinishTexture(string name, Color[] pixels)
+        private static Texture2D FinishTexture(string name, Color[] pixels, bool linear = false)
         {
-            var texture = new Texture2D(Width, Height, TextureFormat.RGBA32, true, false)
+            var texture = new Texture2D(Width, Height, TextureFormat.RGBA32, true, linear)
             {
                 name = name,
                 wrapMode = TextureWrapMode.Repeat,

@@ -1,0 +1,712 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "halberd_r18_access_F02_focus:main_r18_F02_cover: material 'local/detail_paint' != detail_paint",
+    "halberd_r18_access_F02_focus:main_r18_F02_fastener_1: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F02_focus:main_r18_F02_fastener_2: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F02_focus:main_r18_F02_fastener_3: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F02_focus:main_r18_F02_fastener_4: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F04A_cover: material 'local/detail_paint' != detail_paint",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F04A_fastener_1: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F04A_fastener_2: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F04A_fastener_3: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F04A_fastener_4: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F04A_fastener_5: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F04A_fastener_6: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F03A_ring: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F03A_disc: material 'local/detail_paint' != detail_paint",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F03A_fastener_1: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_forward_F04A_F03A:main_r18_F03A_fastener_2: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F04B_focus:main_r18_F04B_cover: material 'local/detail_paint' != detail_paint",
+    "halberd_r18_access_F04B_focus:main_r18_F04B_fastener_1: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F04B_focus:main_r18_F04B_fastener_2: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F04B_focus:main_r18_F04B_fastener_3: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F04B_focus:main_r18_F04B_fastener_4: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F05_focus:main_r18_F05_terminal_left: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F05_focus:main_r18_F05_center_strip: material 'local/detail_paint' != detail_paint",
+    "halberd_r18_access_F05_focus:main_r18_F05_terminal_right: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F05_focus:main_r18_F05_fastener_1: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_F05_focus:main_r18_F05_fastener_2: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_booster_F10_F03B:booster_r18_F10_cover: material 'local/detail_paint' != detail_paint",
+    "halberd_r18_access_booster_F10_F03B:booster_r18_F10_fastener_1: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_booster_F10_F03B:booster_r18_F10_fastener_2: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_booster_F10_F03B:booster_r18_F10_fastener_3: material 'local/detail_metal' != detail_metal",
+    "halberd_r18_access_booster_F10_F03B:booster_r18_F03B_keyed_cap: material 'local/detail_paint' != detail_paint"
+  ],
+  "base_hash": "aa33330e16ed78918032a76e3374a82439a9d2445c5bca3d61c158ccb454fd21",
+  "full": {
+    "step": "STEP/halberd_r18_access.step",
+    "hash": "83c7a0a75ce0d898d972f9305be4bc740759eb4156651a6bee11d217674487a0",
+    "parts": 77,
+    "base_parts": 28,
+    "new_parts": 49,
+    "access_feature_parts": 31,
+    "nozzle_parts": 18,
+    "length_x_mm": 3370.0000002000006
+  },
+  "separated": {
+    "step": "STEP/halberd_r18_access_separated.step",
+    "hash": "dfca2b5eaad9c23651e0d0bf983d086b2018b8e0b088698ebe4d59cf4efc8ef1",
+    "parts": 77,
+    "booster_parts_moved": 21,
+    "delta_x_mm": -340.0,
+    "length_x_mm": 3710.0000002000006
+  },
+  "hosts": {
+    "main_body_intake_r12": {
+      "baseline_volume_mm3": 85039370.47855604,
+      "saved_volume_mm3": 85017094.4340832,
+      "removed_mm3": 22276.04447284341,
+      "declared_cutters": 32,
+      "extra_vs_expected_mm3": 0.0,
+      "missing_vs_expected_mm3": 0.0,
+      "gain_mm3": 0.0
+    },
+    "booster_body": {
+      "baseline_volume_mm3": 18404435.389901914,
+      "saved_volume_mm3": 18400527.897183772,
+      "removed_mm3": 3907.492718141526,
+      "declared_cutters": 14,
+      "extra_vs_expected_mm3": 0.0,
+      "missing_vs_expected_mm3": 0.0,
+      "gain_mm3": 0.0
+    }
+  },
+  "nose_joint_parts_unchanged": [
+    "main_joint_fastener_1",
+    "main_joint_fastener_2",
+    "main_joint_fastener_3",
+    "main_joint_fastener_4",
+    "main_joint_liner_1"
+  ],
+  "support": {
+    "booster_r18_F03B_keyed_cap": {
+      "common_face_area_mm2": 377.6288347638349,
+      "distance_mm": 0.0
+    },
+    "booster_r18_F10_cover": {
+      "common_face_area_mm2": 2989.145612371829,
+      "distance_mm": 0.0
+    },
+    "booster_r18_F10_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "booster_r18_F10_fastener_2": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "booster_r18_F10_fastener_3": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_2": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_3": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_4": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_5": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_6": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_7": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_fastener_8": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "booster_r18_nozzle_ring": {
+      "common_face_area_mm2": 1123.1193736583537,
+      "distance_mm": 0.0
+    },
+    "main_r18_F02_cover": {
+      "common_face_area_mm2": 4371.7341409355895,
+      "distance_mm": 0.0
+    },
+    "main_r18_F02_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 1.4210854715202004e-13
+    },
+    "main_r18_F02_fastener_2": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 1.4210854715202004e-13
+    },
+    "main_r18_F02_fastener_3": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 7.958078640513122e-13
+    },
+    "main_r18_F02_fastener_4": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 8.100187187665142e-13
+    },
+    "main_r18_F03A_disc": {
+      "common_face_area_mm2": 717.4371199647356,
+      "distance_mm": 0.0
+    },
+    "main_r18_F03A_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F03A_fastener_2": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F03A_ring": {
+      "common_face_area_mm2": 229.4619274182039,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04A_cover": {
+      "common_face_area_mm2": 7464.312156195305,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04A_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04A_fastener_2": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04A_fastener_3": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04A_fastener_4": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04A_fastener_5": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04A_fastener_6": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04B_cover": {
+      "common_face_area_mm2": 4914.997453024523,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04B_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04B_fastener_2": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04B_fastener_3": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F04B_fastener_4": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F05_center_strip": {
+      "common_face_area_mm2": 7199.174438390279,
+      "distance_mm": 0.0
+    },
+    "main_r18_F05_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F05_fastener_2": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_F05_terminal_left": {
+      "common_face_area_mm2": 170.72097805957674,
+      "distance_mm": 0.0
+    },
+    "main_r18_F05_terminal_right": {
+      "common_face_area_mm2": 162.65217291752091,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_1": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_2": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_3": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_4": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_5": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_6": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_7": {
+      "common_face_area_mm2": 3.835963169849477,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_fastener_8": {
+      "common_face_area_mm2": 3.835963169849478,
+      "distance_mm": 0.0
+    },
+    "main_r18_nozzle_ring": {
+      "common_face_area_mm2": 1123.1193736583537,
+      "distance_mm": 0.0
+    }
+  },
+  "overlap_pairs_tested": 125,
+  "overlap_violations": {},
+  "baseline_pair_overlaps_base_vs_full": {
+    "main_body_intake_r12/main_ogive": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/booster_body": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/main_nozzle_dark_recess": {
+      "base_mm3": 8172.885553305001,
+      "full_mm3": 8172.885553304754
+    },
+    "main_body_intake_r12/main_nozzle_dark_floor": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/main_fin_1": {
+      "base_mm3": 2817.082318973053,
+      "full_mm3": 2817.0823189731564
+    },
+    "main_body_intake_r12/main_intake_dark_recess_1": {
+      "base_mm3": 1929.4897419343556,
+      "full_mm3": 1929.48974193391
+    },
+    "main_body_intake_r12/main_intake_dark_floor_1": {
+      "base_mm3": 197.969012373848,
+      "full_mm3": 197.96901237385163
+    },
+    "main_body_intake_r12/main_fin_2": {
+      "base_mm3": 2817.0823189574467,
+      "full_mm3": 2817.08231895755
+    },
+    "main_body_intake_r12/main_intake_dark_recess_2": {
+      "base_mm3": 1929.4897419349147,
+      "full_mm3": 1929.489741934469
+    },
+    "main_body_intake_r12/main_intake_dark_floor_2": {
+      "base_mm3": 197.96901237376133,
+      "full_mm3": 197.969012373765
+    },
+    "main_body_intake_r12/main_fin_3": {
+      "base_mm3": 2817.082318964999,
+      "full_mm3": 2817.082318965103
+    },
+    "main_body_intake_r12/main_intake_dark_recess_3": {
+      "base_mm3": 1929.4897419335948,
+      "full_mm3": 1929.4897419331492
+    },
+    "main_body_intake_r12/main_intake_dark_floor_3": {
+      "base_mm3": 197.96901237365768,
+      "full_mm3": 197.96901237366131
+    },
+    "main_body_intake_r12/main_fin_4": {
+      "base_mm3": 2817.082318957443,
+      "full_mm3": 2817.0823189575462
+    },
+    "main_body_intake_r12/main_intake_dark_recess_4": {
+      "base_mm3": 1929.489741933851,
+      "full_mm3": 1929.4897419334054
+    },
+    "main_body_intake_r12/main_intake_dark_floor_4": {
+      "base_mm3": 197.96901237374388,
+      "full_mm3": 197.96901237374755
+    },
+    "main_body_intake_r12/booster_fin_fairing_1": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/booster_fin_fairing_2": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/booster_fin_fairing_3": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/booster_fin_fairing_4": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/main_joint_liner_1": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/main_joint_fastener_1": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/main_joint_fastener_2": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/main_joint_fastener_3": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "main_body_intake_r12/main_joint_fastener_4": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "booster_body/booster_nozzle_dark_recess": {
+      "base_mm3": 10866.749655800686,
+      "full_mm3": 10866.749655800191
+    },
+    "booster_body/booster_nozzle_dark_floor": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "booster_body/booster_fin_fairing_1": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "booster_body/booster_fin_fairing_2": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "booster_body/booster_fin_fairing_3": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    },
+    "booster_body/booster_fin_fairing_4": {
+      "base_mm3": 0.0,
+      "full_mm3": 0.0
+    }
+  },
+  "fastener_slot_volume_delta_mm3": {
+    "booster_r18_F10_fastener_1": 1.8340884366807586e-13,
+    "booster_r18_F10_fastener_2": 1.8340884366807586e-13,
+    "booster_r18_F10_fastener_3": 1.8340884366807586e-13,
+    "booster_r18_nozzle_fastener_1": 5.329070518200751e-15,
+    "booster_r18_nozzle_fastener_2": 7.549516567451064e-15,
+    "booster_r18_nozzle_fastener_3": 5.329070518200751e-15,
+    "booster_r18_nozzle_fastener_4": 7.549516567451064e-15,
+    "booster_r18_nozzle_fastener_5": 5.329070518200751e-15,
+    "booster_r18_nozzle_fastener_6": 7.549516567451064e-15,
+    "booster_r18_nozzle_fastener_7": 5.329070518200751e-15,
+    "booster_r18_nozzle_fastener_8": 7.549516567451064e-15,
+    "main_r18_F02_fastener_1": 2.1005419625907962e-13,
+    "main_r18_F02_fastener_2": 2.1538326677728037e-13,
+    "main_r18_F02_fastener_3": 2.078337502098293e-13,
+    "main_r18_F02_fastener_4": 2.0961010704922955e-13,
+    "main_r18_F03A_fastener_1": 1.9273471707492718e-13,
+    "main_r18_F03A_fastener_2": 1.9273471707492718e-13,
+    "main_r18_F04A_fastener_1": 1.9273471707492718e-13,
+    "main_r18_F04A_fastener_2": 1.9273471707492718e-13,
+    "main_r18_F04A_fastener_3": 1.9273471707492718e-13,
+    "main_r18_F04A_fastener_4": 1.9273471707492718e-13,
+    "main_r18_F04A_fastener_5": 1.9317880628477724e-13,
+    "main_r18_F04A_fastener_6": 1.9317880628477724e-13,
+    "main_r18_F04B_fastener_1": 1.9317880628477724e-13,
+    "main_r18_F04B_fastener_2": 1.9317880628477724e-13,
+    "main_r18_F04B_fastener_3": 1.9229062786507711e-13,
+    "main_r18_F04B_fastener_4": 1.9229062786507711e-13,
+    "main_r18_F05_fastener_1": 1.9095836023552692e-13,
+    "main_r18_F05_fastener_2": 1.9273471707492718e-13,
+    "main_r18_nozzle_fastener_1": 5.329070518200751e-15,
+    "main_r18_nozzle_fastener_2": 7.993605777301127e-15,
+    "main_r18_nozzle_fastener_3": 5.329070518200751e-15,
+    "main_r18_nozzle_fastener_4": 8.881784197001252e-15,
+    "main_r18_nozzle_fastener_5": 5.329070518200751e-15,
+    "main_r18_nozzle_fastener_6": 8.43769498715119e-15,
+    "main_r18_nozzle_fastener_7": 5.329070518200751e-15,
+    "main_r18_nozzle_fastener_8": 8.43769498715119e-15
+  },
+  "f03b_central_slot": {
+    "slot_probe_empty": true,
+    "beside_probe_solid": true
+  },
+  "nozzle": {
+    "main_nozzle": {
+      "open_probes": 24,
+      "dark_parts": [
+        "main_nozzle_dark_recess",
+        "main_nozzle_dark_floor"
+      ]
+    },
+    "booster_nozzle": {
+      "open_probes": 24,
+      "dark_parts": [
+        "booster_nozzle_dark_recess",
+        "booster_nozzle_dark_floor"
+      ]
+    }
+  },
+  "new_part_identity_delta_mm3": {
+    "main_r18_F02_cover": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F02_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F02_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F02_fastener_3": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F02_fastener_4": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04A_cover": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04A_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04A_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04A_fastener_3": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04A_fastener_4": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04A_fastener_5": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04A_fastener_6": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04B_cover": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04B_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04B_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04B_fastener_3": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F04B_fastener_4": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F05_terminal_left": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F05_center_strip": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F05_terminal_right": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F05_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F05_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F03A_ring": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F03A_disc": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F03A_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "main_r18_F03A_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_F03B_keyed_cap": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_F10_cover": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_F10_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_F10_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_F10_fastener_3": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_ring": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_3": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_4": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_5": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_6": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_7": [
+      0.0,
+      0.0
+    ],
+    "main_r18_nozzle_fastener_8": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_ring": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_1": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_2": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_3": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_4": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_5": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_6": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_7": [
+      0.0,
+      0.0
+    ],
+    "booster_r18_nozzle_fastener_8": [
+      0.0,
+      0.0
+    ]
+  },
+  "crops": {
+    "F02": {
+      "step": "STEP/halberd_r18_access_F02_focus.step",
+      "parts": 6,
+      "axial_bounds_mm": [
+        805.0,
+        995.0
+      ],
+      "document_hash": "6fa4cef4039e860dfdfc1ff7847dcd5fd5d3f546d9e92b110ffa34795cdfea4e"
+    },
+    "forward_F04A_F03A": {
+      "step": "STEP/halberd_r18_access_forward_F04A_F03A.step",
+      "parts": 12,
+      "axial_bounds_mm": [
+        330.0,
+        630.0
+      ],
+      "document_hash": "9c8c0e42e255f44add261a58002e08efa8effea470e5d8901fcacb5d2fcf61f1"
+    },
+    "F04B": {
+      "step": "STEP/halberd_r18_access_F04B_focus.step",
+      "parts": 6,
+      "axial_bounds_mm": [
+        -890.0,
+        -690.0
+      ],
+      "document_hash": "c8cacfe7292aee6b8e3ec354039ee9a3872ab86b7359e5e31ef3a7ca59707ee2"
+    },
+    "F05": {
+      "step": "STEP/halberd_r18_access_F05_focus.step",
+      "parts": 6,
+      "axial_bounds_mm": [
+        -145.0,
+        425.0
+      ],
+      "document_hash": "f23d59ecd646ba1eca7e3f19704489920af10cf5cd568c8c46f407d870dcb56a"
+    },
+    "booster_F10_F03B": {
+      "step": "STEP/halberd_r18_access_booster_F10_F03B.step",
+      "parts": 6,
+      "axial_bounds_mm": [
+        -1530.0,
+        -1320.0
+      ],
+      "document_hash": "40ad8d9742b8d7f6ef6cdf94693333bba7f03f5cc947d68163478a7888844dc4"
+    }
+  }
+}

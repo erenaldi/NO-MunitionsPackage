@@ -16,8 +16,8 @@
   "zones": [
     { "id": "AIR-CLOSE", "purpose": "IR, off-boresight, flare, and maneuver tests against multiple fighters", "centerKm": [0, 33] },
     { "id": "AIR-BVR", "purpose": "Radar, LOAL, notch, and long-range air tests", "centerKm": [-45, -45] },
-    { "id": "GROUND-AREA", "purpose": "Armor, soft-target, dispersion, and submunition tests", "centerKm": [13.5, 19.5] },
-    { "id": "IADS-HARD", "purpose": "Emitter, SAM, penetration, ECM, hard-kill, and fixed-coordinate tests", "centerKm": [27.8, -19] },
+    { "id": "GROUND-AREA", "purpose": "Armor, soft-target, and submunition tests", "centerKm": [13.5, 19.5] },
+    { "id": "IADS-HARD", "purpose": "Emitter, SAM, ECM, hard-kill, and fixed-coordinate tests", "centerKm": [27.8, -19] },
     { "id": "NAVAL-WATER", "purpose": "Ship, water-entry, and torpedo tests", "centerKm": [6, -37.4] }
   ],
   "lanes": [
@@ -26,15 +26,12 @@
     { "id": "L03", "weapon": "AGM-110 Ballista", "status": "reserved", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "AGM_heavy_single", "plannedRangeKm": 60, "missionTestRangeKm": 60 },
     { "id": "L04", "weapon": "ARAD-80", "status": "live", "zone": "IADS-HARD", "carrier": "Multirole1", "hardpointSetIndex": 4, "mountKey": "Erenaldi.ARAD80_single", "fallbackKey": "ARM1_single", "plannedRangeKm": 35, "missionTestRangeKm": 35 },
     { "id": "L05", "weapon": "RDM-9 Phantom", "status": "live", "zone": "IADS-HARD", "carrier": "trainer", "hardpointSetIndex": 1, "mountKey": "Erenaldi.RDM9_single", "fallbackKey": "AGM1_single", "plannedRangeKm": 30, "missionTestRangeKm": 30 },
-    { "id": "L06", "weapon": "GPO-2R Auger", "status": "reserved", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "bomb_penetrator1_mount", "plannedRangeKm": null, "missionTestRangeKm": 10 },
-    { "id": "L07", "weapon": "CDM-4 Bramble", "status": "reserved", "zone": "GROUND-AREA", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "bomb_cluster1_single", "plannedRangeKm": null, "missionTestRangeKm": 5 },
-    { "id": "L08", "weapon": "AGR-30 Hailstorm", "status": "reserved", "zone": "GROUND-AREA", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "Rocket2_4Pod", "plannedRangeKm": 40, "missionTestRangeKm": 25 },
-    { "id": "L09", "weapon": "ALM-5 Vesper", "status": "reserved-map-limited", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "CruiseMissile20kt_internalx2", "plannedRangeKm": 150, "missionTestRangeKm": 75 },
-    { "id": "L10", "weapon": "Tusko-D", "status": "reserved-map-limited", "zone": "NAVAL-WATER", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "AShM3_single", "plannedRangeKm": 400, "missionTestRangeKm": 80 },
-    { "id": "L11", "weapon": "ALBM-3 Trebuchet [U]", "status": "reserved-map-limited", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 150, "missionTestRangeKm": 75 },
-    { "id": "L12", "weapon": "ALBM-3 Trebuchet [C]", "status": "reserved-map-limited", "zone": "GROUND-AREA", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 150, "missionTestRangeKm": 75 },
-    { "id": "L13", "weapon": "TOR-42 Halcyon", "status": "blocked-water-phase", "zone": "NAVAL-WATER", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 8, "missionTestRangeKm": 8 },
-    { "id": "L14", "weapon": "RAT-44 Barracuda", "status": "blocked-water-phase", "zone": "NAVAL-WATER", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 15, "missionTestRangeKm": 15 },
-    { "id": "L15", "weapon": "HKP-1 Palisade", "status": "reserved", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "AGM2_6Pod", "plannedRangeKm": 4, "missionTestRangeKm": 4 }
+    { "id": "L06", "weapon": "ALM-5 Vesper", "status": "reserved-map-limited", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "CruiseMissile20kt_internalx2", "plannedRangeKm": 150, "missionTestRangeKm": 75 },
+    { "id": "L07", "weapon": "Tusko-D", "status": "reserved-map-limited", "zone": "NAVAL-WATER", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "AShM3_single", "plannedRangeKm": 400, "missionTestRangeKm": 80 },
+    { "id": "L08", "weapon": "ALBM-3 Trebuchet [U]", "status": "reserved-map-limited", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 150, "missionTestRangeKm": 75 },
+    { "id": "L09", "weapon": "ALBM-3 Trebuchet [C]", "status": "reserved-map-limited", "zone": "GROUND-AREA", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 150, "missionTestRangeKm": 75 },
+    { "id": "L10", "weapon": "TOR-42 Halcyon", "status": "blocked-water-phase", "zone": "NAVAL-WATER", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 8, "missionTestRangeKm": 8 },
+    { "id": "L11", "weapon": "RAT-44 Barracuda", "status": "blocked-water-phase", "zone": "NAVAL-WATER", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": null, "plannedRangeKm": 15, "missionTestRangeKm": 15 },
+    { "id": "L12", "weapon": "HKP-1 Palisade", "status": "reserved", "zone": "IADS-HARD", "carrier": "TBD", "hardpointSetIndex": null, "mountKey": null, "fallbackKey": "AGM2_6Pod", "plannedRangeKm": 4, "missionTestRangeKm": 4 }
   ]
 }

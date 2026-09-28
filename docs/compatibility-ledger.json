@@ -8,6 +8,41 @@
     "gameBuildId": "24724372",
     "note": "Fresh current-game evidence is required before any station is approved. Fit fields (mountedTransform, minimumStaticClearances, releaseDirection, neighboringStoreAssumptions, doorGearConstraints, evidenceArtifacts) are populated by later measurement slices; this seed contains donor-derived candidates only."
   },
+  "freshValidation": {
+    "validatedUtc": "2026-09-28",
+    "note": "Separate from seededFrom (historical 2026-09-15 dump). Candidate rows originate from the seed; this block records a cross-check against the fresh dump. It approves nothing.",
+    "source": {
+      "dump": "weapon-schema.json (BepInEx/config/Erenaldi.MunitionsPackage, not in repo)",
+      "dumpGeneratedUtc": "2026-09-28T23:14:32.3199053Z",
+      "dumpBytes": 18970411,
+      "dumpSha256": "abbf970b373d92414343b8c19ca96e9be70b738629cd7b6683e0939f35cf46ca",
+      "steamBuildId": "24724372",
+      "pluginDllSha256": "459e965e6cf243db4874f042b4053b608e37614462b3c952933d2a13e15b70ae",
+      "poseFormat": "named {x,y,z} / {x,y,z,w} objects"
+    },
+    "counts": { "aircraft": 14, "hardpointSets": 78, "physicalHardpoints": 114, "physicalHardpointSerializationErrors": 0 },
+    "donorSetCounts": { "AAM4_single": 6, "AAM1_single": 17, "AGM1_single": 9, "AGM_heavy_single": 11 },
+    "crossCheck": {
+      "Erenaldi.AAM44_single": { "schemaSets": 6, "ledgerSets": 6, "missing": 0, "stale": 0 },
+      "Erenaldi.IRMS4_single": { "schemaSets": 17, "ledgerSets": 17, "missing": 0, "stale": 0 },
+      "Erenaldi.RDM9_single": { "schemaSets": 9, "ledgerSets": 9, "missing": 0, "stale": 0 },
+      "Erenaldi.AGM110_single": {
+        "schemaUniqueSets": 22, "ledgerUniqueSets": 22, "configurationRows": 25, "missing": 0, "stale": 0,
+        "rowsByClass": { "external-single": 11, "external-multi": 8, "triple": 1, "internal": 5 },
+        "rowNote": "25 rows cover 22 unique sets because overlapping sets belong to multiple rack classes"
+      },
+      "setNameAndPhysicalCountMismatches": 0,
+      "approvedRecords": 0
+    },
+    "reconstructedSamples": [
+      { "donorKey": "AAM4_single", "aircraftKey": "Fighter1", "hardpointSetIndex": 2, "status": "candidate" },
+      { "donorKey": "AAM1_single", "aircraftKey": "AttackHelo1", "hardpointSetIndex": 3, "status": "candidate" },
+      { "donorKey": "AGM1_single", "aircraftKey": "COIN", "hardpointSetIndex": 2, "status": "candidate" },
+      { "donorKey": "AGM_heavy_single", "aircraftKey": "CAS1", "hardpointSetIndex": 2, "status": "candidate" }
+    ],
+    "unmeasured": ["mountedTransform", "minimumStaticClearances", "releaseDirection", "neighboringStoreAssumptions", "doorGearConstraints", "evidenceArtifacts"],
+    "statusChanges": "none"
+  },
   "weapons": [
     {
       "weaponKey": "Erenaldi.AAM44_single",

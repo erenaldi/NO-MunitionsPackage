@@ -11,6 +11,9 @@ obj/
 AssetRipperExport/
 _donotship/
 reference/
+# Extracted vanilla atlases staged for editor previews (never shipped)
+unity/BlueprinterEditor/Blueprinter-Editor/Assets/Reference/
+unity/BlueprinterEditor/Blueprinter-Editor/Assets/Reference.meta
 Library/
 Logs/
 Temp/

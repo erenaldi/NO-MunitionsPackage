@@ -1,0 +1,38 @@
+{
+ "O1_TripleFan": {
+  "parts": 28,
+  "non_mount_parts_outside_gt_0.5mm3": [],
+  "mount_parts_embedding_mm3": {
+   "o1_strut_1250_0": 21.6,
+   "o1_strut_1250_90": 21.6,
+   "o1_strut_1250_180": 21.6,
+   "o1_strut_1250_270": 21.6,
+   "o1_strut_1120_0": 21.72,
+   "o1_strut_1120_90": 21.26,
+   "o1_strut_1120_180": 21.72,
+   "o1_strut_1120_270": 21.78
+  }
+ },
+ "O2_VaneCascade": {
+  "parts": 39,
+  "non_mount_parts_outside_gt_0.5mm3": [],
+  "mount_parts_embedding_mm3": {
+   "o2_pylon_1235_port": 15.0,
+   "o2_pylon_1235_stbd": 15.0,
+   "o2_pylon_1110_port": 15.34,
+   "o2_pylon_1110_stbd": 15.34
+  }
+ },
+ "O3_TwinEngine": {
+  "parts": 38,
+  "non_mount_parts_outside_gt_0.5mm3": [],
+  "mount_parts_embedding_mm3": {
+   "o3_strut_1240_0": 7.2,
+   "o3_strut_1240_1": 7.2,
+   "o3_strut_up_1240": 7.5,
+   "o3_strut_1110_0": 7.36,
+   "o3_strut_1110_1": 7.36,
+   "o3_strut_up_1110": 6.81
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "input": "STEP/halberd_r18_access_separated.step",
+  "mode": "view",
+  "outputs": [
+    {
+      "path": "reviews/R18_access_separated_iso.png",
+      "camera": {
+        "direction": [
+          0.6,
+          -0.8,
+          0.5
+        ]
+      }
+    },
+    {
+      "path": "reviews/R18_access_separated_opposite.png",
+      "camera": {
+        "direction": [
+          -0.6,
+          0.8,
+          0.5
+        ]
+      }
+    }
+  ],
+  "output": {
+    "viewLabels": false,
+    "padding": 0.05,
+    "sizeProfile": "assembly"
+  }
+}

@@ -22,9 +22,10 @@ namespace Erenaldi.MunitionsPackage
         private const float InterceptorLength = 1.2f;
         private const float InterceptorDiameter = 0.14f;
         private const float InterceptorThrust = 18000f;
-        private const float InterceptorBurnTime = 2.5f;
+        private const float InterceptorBurnTime = 2f;
         private const float InterceptorFuelMass = 15f;
-        private const float InterceptorTopSpeed = 1050f;
+        internal const float InterceptorTopSpeed = 1050f;
+        private const float InterceptorThrustVectoring = 35f;
         private const float BlastYield = 5f;
         internal static float MinRange { get; set; } = 300f;
         internal static float MaxRange { get; set; } = 4000f;
@@ -106,6 +107,7 @@ namespace Erenaldi.MunitionsPackage
             infoClone.pierceDamage = 50f;
             infoClone.missile = true;
             infoClone.boresight = false;
+            infoClone.hideInDisplay = true;
             HalberdCloner.SetNestedField(infoClone, "effectiveness", "antiSurface", 0f);
             HalberdCloner.SetNestedField(infoClone, "effectiveness", "antiAir", 0f);
             HalberdCloner.SetNestedField(infoClone, "effectiveness", "antiMissile", 1f);
@@ -171,15 +173,26 @@ namespace Erenaldi.MunitionsPackage
             HalberdCloner.SetField(missile, "pierceDamage", 50f);
             HalberdCloner.SetField(missile, "gLimit", 35f);
             HalberdCloner.SetField(missile, "maxTurnRate", 360f);
+            HalberdCloner.SetField(missile, "torque", 20f);
             var motors = (Array)HalberdCloner.GetField(missile, "motors");
             if (motors == null || motors.Length != 2)
             {
                 throw new InvalidOperationException($"Cloned RAM-45 expected two motors but found {motors?.Length ?? 0}.");
             }
-            // RAM-45 motor 0 is its brief launcher impulse; motor 1 is the flight motor.
-            object boostMotor = motors.GetValue(motors.Length - 1);
-            HalberdCloner.ApplyMotor(boostMotor, InterceptorThrust, InterceptorBurnTime, InterceptorFuelMass, InterceptorTopSpeed);
-            HalberdCloner.SetField(boostMotor, "delayTimer", 0f);
+            // Motor 0 is a 0.01-second launch placeholder. The controller owns
+            // housing ejection, while motor 1 retains the donor's flight FX.
+            HalberdCloner.ApplyMotor(motors.GetValue(0), 0.1f, 0.01f, 0.01f, InterceptorTopSpeed);
+            object flightMotor = motors.GetValue(1);
+            HalberdCloner.ApplyMotor(
+                flightMotor,
+                InterceptorThrust,
+                InterceptorBurnTime,
+                InterceptorFuelMass,
+                InterceptorTopSpeed);
+            HalberdCloner.SetField(flightMotor, "delayTimer", 0f);
+            HalberdCloner.SetField(flightMotor, "thrustVectoring", InterceptorThrustVectoring);
+            missile.boosterIsAttached = true;
+            missileClone.AddComponent<PalisadeInterceptorController>();
             HalberdCloner.NormalizePartMasses(missileClone, InterceptorMassKg);
 
             var seeker = missileClone.GetComponent<SARHSeeker>();

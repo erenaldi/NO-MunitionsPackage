@@ -4,7 +4,7 @@ A planned collection of custom munitions for Nuclear Option, built as a
 Blueprinter `.nobp` addon and packaged for installation through the Nuclear
 Option Mod Manager (NOMM).
 
-The approved 15-weapon handoff is recorded in `MUNITIONS.md`. Phase 1 provides
+The approved 12-weapon handoff is recorded in `MUNITIONS.md`. Phase 1 provides
 a BepInEx diagnostic plugin that inventories the live weapon catalog, resolves
 the requested vanilla analogs, and dumps weapon and hardpoint schemas before
 gameplay implementation begins.
@@ -24,7 +24,7 @@ gameplay implementation begins.
 - `docs/CONTENT_DECISIONS.md`: original content checklist and handoff status
 - `docs/PHASE1_FINDINGS.md`: evidence from the first runtime schema dump
 - `docs/PROVING_GROUND.md`: install, test-zone, and Workshop mission workflow
-- `missions/Erenaldi.ProvingGround/`: version 6 in-game test mission and 15-weapon lane manifest
+- `missions/Erenaldi.ProvingGround/`: version 6 in-game test mission and 12-weapon lane manifest
 - `nomnom/`: draft NOMNOM registry manifest
 - `tools/`: local installation, log checking, and release preparation scripts
 - `src/Erenaldi.MunitionsPackage/`: BepInEx plugin and schema dumper source

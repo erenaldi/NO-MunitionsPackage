@@ -71,6 +71,17 @@ namespace Erenaldi.MunitionsPackage
                     registered++;
                 }
             }
+            if (weaponMount.jsonKey == PalisadeCloner.MountJsonKey)
+            {
+                var countermeasure = __result.GetComponentInChildren<PalisadeCountermeasure>(true);
+                var defense = __result.GetComponentInChildren<PalisadeDefense>(true);
+                countermeasure?.AttachToUnit(aircraft);
+                logger?.LogInfo(
+                    $"{label} runtime state on {aircraft.definition?.unitName ?? "unknown aircraft"}: " +
+                    $"countermeasure={(countermeasure != null ? "attached" : "missing")}, " +
+                    $"defense={(defense != null ? "attached" : "missing")}, " +
+                    $"mode={countermeasure?.Mode.ToString() ?? "unknown"}.");
+            }
             logger?.LogInfo(
                 $"{label} rack activated on {aircraft.definition?.unitName ?? "unknown aircraft"}; " +
                 $"registered {registered} weapon component(s), {alreadyRegistered} already registered.");

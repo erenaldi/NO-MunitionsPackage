@@ -51,6 +51,14 @@ namespace Erenaldi.Munitions
                     }
                 }
             };
+            foreach (var dependency in UnityEditor.AssetDatabase.GetDependencies(builds[0].assetNames, true))
+            {
+                if (dependency.ToLowerInvariant().Contains("/reference/") ||
+                    dependency.ToLowerInvariant().Contains("/texturepreviews/"))
+                {
+                    throw new System.InvalidOperationException("Shipping prefab depends on a reference/preview asset: " + dependency);
+                }
+            }
             if (BuildPipeline.BuildAssetBundles(bundleFolder, builds, BuildAssetBundleOptions.ForceRebuildAssetBundle, BuildTarget.StandaloneWindows64) == null)
             {
                 throw new System.InvalidOperationException("Failed to build munitions geometry bundle");
@@ -79,6 +87,12 @@ namespace Erenaldi.Munitions
                 ValidateTexturedMesh(bundle, HalberdMeshBuilder.MissilePrefabName, "Booster");
                 ValidateTexturedMesh(bundle, HalberdMeshBuilder.RackPrefabName, "pylon/aam4");
                 ValidateTexturedMesh(bundle, HalberdMeshBuilder.RackPrefabName, "pylon/aam4/Booster");
+                ValidateTexturedMaterial(bundle, HalberdMeshBuilder.MissilePrefabName, null);
+                ValidateTexturedMaterial(bundle, HalberdMeshBuilder.MissilePrefabName, "Booster");
+                ValidateTexturedMaterial(bundle, HalberdMeshBuilder.RackPrefabName, "pylon/aam4");
+                ValidateTexturedMaterial(bundle, HalberdMeshBuilder.RackPrefabName, "pylon/aam4/Booster");
+                ValidateTexturedMaterial(bundle, HalberdMeshBuilder.MissilePrefabName, "Intakes", false);
+                ValidateHalberdPlainShared(bundle, HalberdMeshBuilder.MissilePrefabName);
                 ValidateMissile(bundle, KrisMeshBuilder.MissilePrefabName, new[] { "Hardware", "Dark", "Seeker", "GridFins" });
                 ValidateRack(bundle, KrisMeshBuilder.RackPrefabName, new[] { "pylon/aam1/Hardware", "pylon/aam1/Dark", "pylon/aam1/Seeker", "pylon/aam1/GridFins" });
                 if (validateRebuiltKris)
@@ -86,6 +100,22 @@ namespace Erenaldi.Munitions
                     ValidateKrisGeometry(bundle, KrisMeshBuilder.MissilePrefabName, KrisMeshBuilder.RackPrefabName);
                 }
                 ValidateBallista(bundle, BallistaMeshBuilder.MissilePrefabName, BallistaMeshBuilder.RackPrefabName);
+                ValidateTexturedMaterial(bundle, KrisMeshBuilder.MissilePrefabName, null);
+                ValidateTexturedMaterial(bundle, KrisMeshBuilder.RackPrefabName, "pylon/aam1");
+                ValidateTexturedMaterial(bundle, BallistaMeshBuilder.MissilePrefabName, null);
+                ValidateTexturedMaterial(bundle, BallistaMeshBuilder.MissilePrefabName, "FixedHardware_Panel");
+                ValidateTexturedMaterial(bundle, BallistaMeshBuilder.MissilePrefabName, "WingLeft");
+                ValidateBallistaWingUvs(bundle, BallistaMeshBuilder.MissilePrefabName);
+                ValidateCylindricalUvs(bundle, HalberdMeshBuilder.MissilePrefabName, null, "Halberd body");
+                ValidateCylindricalUvs(bundle, HalberdMeshBuilder.MissilePrefabName, "Booster", "Halberd booster");
+                ValidateCylindricalUvs(bundle, KrisMeshBuilder.MissilePrefabName, null, "Kris body");
+                ValidateCylindricalUvs(bundle, BallistaMeshBuilder.MissilePrefabName, null, "Ballista body");
+                ValidateTextureMirrorSymmetry(bundle, HalberdMeshBuilder.MissilePrefabName, null, "Halberd body");
+                ValidateTextureMirrorSymmetry(bundle, HalberdMeshBuilder.MissilePrefabName, "Booster", "Halberd booster");
+                ValidateTextureMirrorSymmetry(bundle, KrisMeshBuilder.MissilePrefabName, null, "Kris body");
+                ValidateTextureMirrorSymmetry(bundle, BallistaMeshBuilder.MissilePrefabName, null, "Ballista body");
+                ValidateTextureMirrorSymmetry(bundle, BallistaMeshBuilder.MissilePrefabName, "WingLeft", "Ballista wing");
+                ValidateNoReferenceAssets(bundle);
             }
             finally
             {
@@ -211,6 +241,291 @@ namespace Erenaldi.Munitions
                     ", hasUvs=" + hasUvs +
                     ", material=" + (material != null) +
                     ", texture=" + (texture != null));
+            }
+        }
+
+        private static void ValidateTexturedMaterial(AssetBundle bundle, string prefabName, string childPath, bool expectWhiteTint = true)
+        {
+            var prefab = bundle.LoadAsset<GameObject>(prefabName);
+            var target = prefab == null ? null : childPath == null ? prefab.transform : prefab.transform.Find(childPath);
+            var material = target != null ? target.GetComponent<MeshRenderer>()?.sharedMaterial : null;
+            var albedo = material != null ? material.GetTexture("_BaseMap") ?? material.GetTexture("_MainTex") : null;
+            var packed = material != null ? material.GetTexture("_MetallicGlossMap") : null;
+            var label = prefabName + "/" + (childPath ?? "<root>");
+            if (material == null || albedo == null || packed == null)
+            {
+                throw new System.InvalidOperationException(
+                    "Built bundle textured material at " + label +
+                    ": material=" + (material != null) +
+                    ", albedo=" + (albedo != null) +
+                    ", packed=" + (packed != null));
+            }
+            if (expectWhiteTint &&
+                (Mathf.Abs(material.color.r - 1f) > 0.001f ||
+                 Mathf.Abs(material.color.g - 1f) > 0.001f ||
+                 Mathf.Abs(material.color.b - 1f) > 0.001f))
+            {
+                throw new System.InvalidOperationException("Built bundle textured material at " + label + " is not white-tinted");
+            }
+            if (Mathf.Abs(material.GetFloat("_Metallic") - 1f) > 0.001f ||
+                Mathf.Abs(material.GetFloat("_Smoothness") - 1f) > 0.001f ||
+                !material.IsKeywordEnabled("_METALLICSPECGLOSSMAP"))
+            {
+                throw new System.InvalidOperationException("Built bundle textured material at " + label + " is not texture-driven");
+            }
+            var albedo2d = albedo as Texture2D;
+            var packed2d = packed as Texture2D;
+            if (albedo2d == null || packed2d == null)
+            {
+                throw new System.InvalidOperationException("Built bundle material at " + label + " requires Texture2D maps");
+            }
+            if (albedo2d != null && !UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSRGBFormat(albedo2d.graphicsFormat))
+            {
+                throw new System.InvalidOperationException(
+                    "Built bundle albedo at " + label + " is not sRGB (format=" + albedo2d.graphicsFormat + "); expected sRGB");
+            }
+            if (packed2d != null && UnityEngine.Experimental.Rendering.GraphicsFormatUtility.IsSRGBFormat(packed2d.graphicsFormat))
+            {
+                throw new System.InvalidOperationException(
+                    "Built bundle packed MS at " + label + " is sRGB (format=" + packed2d.graphicsFormat + "); expected linear");
+            }
+        }
+
+        private static void ValidateHalberdPlainShared(AssetBundle bundle, string prefabName)
+        {
+            var prefab = bundle.LoadAsset<GameObject>(prefabName);
+            Texture2D sharedAlbedo = null;
+            Texture2D sharedPacked = null;
+            foreach (var childPath in new[] { "Intakes", "SustainerFins", "Hardware", "SustainerNozzle", "Booster/Fins" })
+            {
+                var child = prefab.transform.Find(childPath);
+                var material = child?.GetComponent<MeshRenderer>()?.sharedMaterial;
+                var albedo = material?.GetTexture("_BaseMap") as Texture2D;
+                var packed = material?.GetTexture("_MetallicGlossMap") as Texture2D;
+                if (albedo == null || packed == null)
+                {
+                    throw new System.InvalidOperationException("Built bundle Halberd plain material at " + childPath + " is missing textures");
+                }
+                if (sharedAlbedo == null)
+                {
+                    sharedAlbedo = albedo;
+                    sharedPacked = packed;
+                }
+                else if (albedo != sharedAlbedo || packed != sharedPacked)
+                {
+                    throw new System.InvalidOperationException("Built bundle Halberd plain materials do not share one albedo/MS texture pair");
+                }
+            }
+        }
+
+        private static void ValidateBallistaWingUvs(AssetBundle bundle, string prefabName)
+        {
+            var missile = bundle.LoadAsset<GameObject>(prefabName);
+            foreach (var wingPath in new[] { "WingLeft", "WingRight", "TailControl1", "TailControl2", "TailControl3", "TailControl4" })
+            {
+                var wing = missile.transform.Find(wingPath);
+                var mesh = wing != null ? wing.GetComponent<MeshFilter>()?.sharedMesh : null;
+                if (mesh == null || !mesh.HasVertexAttribute(UnityEngine.Rendering.VertexAttribute.TexCoord0))
+                {
+                    throw new System.InvalidOperationException("Built bundle Ballista wing " + wingPath + " has no UVs");
+                }
+                var vertices = mesh.vertices;
+                var uvs = mesh.uv;
+                float sumU = 0f, sumX = 0f, sumV = 0f, sumZ = 0f;
+                float sumU2 = 0f, sumX2 = 0f, sumV2 = 0f, sumZ2 = 0f;
+                float sumUx = 0f, sumVz = 0f;
+                for (int i = 0; i < vertices.Length; i++)
+                {
+                    float u = uvs[i].x, v = uvs[i].y, x = vertices[i].x, z = vertices[i].z;
+                    sumU += u; sumX += x; sumV += v; sumZ += z;
+                    sumU2 += u * u; sumX2 += x * x; sumV2 += v * v; sumZ2 += z * z;
+                    sumUx += u * x; sumVz += v * z;
+                }
+                float corrUx = Correlation(vertices.Length, sumU, sumX, sumU2, sumX2, sumUx);
+                float corrVz = Correlation(vertices.Length, sumV, sumZ, sumV2, sumZ2, sumVz);
+                if (float.IsNaN(corrUx) || float.IsNaN(corrVz) || float.IsInfinity(corrUx) || float.IsInfinity(corrVz) || corrUx < 0.9f || corrVz < 0.9f)
+                {
+                    throw new System.InvalidOperationException(
+                        "Built bundle Ballista wing " + wingPath + " UVs are not planar: corr(u,x)=" +
+                        corrUx.ToString("F3") + ", corr(v,z)=" + corrVz.ToString("F3"));
+                }
+            }
+        }
+
+        private static float Correlation(int n, float sumA, float sumB, float sumA2, float sumB2, float sumAB)
+        {
+            if (n < 2)
+            {
+                return 0f;
+            }
+            float numerator = n * sumAB - sumA * sumB;
+            float denominator = Mathf.Sqrt((n * sumA2 - sumA * sumA) * (n * sumB2 - sumB * sumB));
+            if (denominator < 1e-9f)
+            {
+                return 0f;
+            }
+            return numerator / denominator;
+        }
+
+        /// <summary>
+        /// The cylindrical unwrap (u = (atan2(y,x)+pi)/2pi, v = z-normalized)
+        /// maps the geometric mirror across the x-z plane (y -> -y) onto the
+        /// texture mirror u -> 1-u. Verify the actual mesh UVs follow that
+        /// formula so a texture symmetric under u -> 1-u is a real geometric
+        /// mirror on the body, not just a texture-internal coincidence. The u
+        /// coordinate is checked exactly (scale-independent); v is checked for
+        /// z-monotonicity only, because the Kris body unwrap normalizes v
+        /// against the pre-scale bounds (RecalculateBounds runs after the
+        /// unwrap there), which shifts v by a constant without breaking the
+        /// mirror mapping.
+        /// </summary>
+        private static void ValidateCylindricalUvs(AssetBundle bundle, string prefabName, string childPath, string label)
+        {
+            var prefab = bundle.LoadAsset<GameObject>(prefabName);
+            var target = prefab == null ? null : childPath == null ? prefab.transform : prefab.transform.Find(childPath);
+            var mesh = target != null ? target.GetComponent<MeshFilter>()?.sharedMesh : null;
+            if (mesh == null || !mesh.HasVertexAttribute(UnityEngine.Rendering.VertexAttribute.TexCoord0))
+            {
+                throw new System.InvalidOperationException("Built bundle has no cylindrical UVs at " + label);
+            }
+            var vertices = mesh.vertices;
+            var uvs = mesh.uv;
+            float maxUError = 0f;
+            float sumV = 0f, sumZ = 0f, sumV2 = 0f, sumZ2 = 0f, sumVz = 0f;
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                float expectedU = (Mathf.Atan2(vertices[i].y, vertices[i].x) + Mathf.PI) / (Mathf.PI * 2f);
+                float du = Mathf.Abs(uvs[i].x - expectedU);
+                du = Mathf.Min(du, 1f - du);
+                maxUError = Mathf.Max(maxUError, du);
+                float v = uvs[i].y;
+                float z = vertices[i].z;
+                sumV += v; sumZ += z; sumV2 += v * v; sumZ2 += z * z; sumVz += v * z;
+            }
+            float corrVz = Correlation(vertices.Length, sumV, sumZ, sumV2, sumZ2, sumVz);
+            if (maxUError > 0.01f)
+            {
+                throw new System.InvalidOperationException(
+                    "Built bundle cylindrical UVs at " + label + " deviate from the mirror-safe unwrap: max u error " +
+                    maxUError.ToString("F4") + " (expected <= 0.01)");
+            }
+            if (float.IsNaN(corrVz) || corrVz < 0.99f)
+            {
+                throw new System.InvalidOperationException(
+                    "Built bundle cylindrical UVs at " + label + " are not z-monotonic: corr(v,z)=" +
+                    corrVz.ToString("F3") + " (expected >= 0.99)");
+            }
+        }
+
+        /// <summary>
+        /// Pixel-based symmetry check on the shipped albedo texture for all
+        /// three cylindrical-unwrap transformations:
+        ///   y-mirror (x-z plane, y -> -y):  u -> 1-u
+        ///   x-mirror (y-z plane, x -> -x):  u -> (1.5-u) mod 1
+        ///   180 roll (z-axis):              u -> u+0.5 mod 1 (rotation, not
+        ///   a reflection)
+        /// A deterministic marking must match its transformed pixel under each
+        /// transformation. The tolerance is 0.12 max-channel difference,
+        /// justified by measurement: the stochastic grunge mirror diff peaks
+        /// at 0.098 on the lightest base (0.77, 400k-sample measurement), and
+        /// the faintest one-sided marking in these textures is 0.18 (Ballista
+        /// SeamLight on the dark base) — so 0.12 neither false-positives on
+        /// grunge nor hides the actual marks. A +/-1 pixel tolerance absorbs
+        /// the u = x/(W-1) rounding at each transformed position.
+        /// </summary>
+        private static void ValidateTextureMirrorSymmetry(AssetBundle bundle, string prefabName, string childPath, string label)
+        {
+            const float diffThreshold = 0.12f;
+            const float maxMismatchFraction = 0.0005f;
+            var prefab = bundle.LoadAsset<GameObject>(prefabName);
+            var target = prefab == null ? null : childPath == null ? prefab.transform : prefab.transform.Find(childPath);
+            var material = target != null ? target.GetComponent<MeshRenderer>()?.sharedMaterial : null;
+            var albedo = material != null ? material.GetTexture("_BaseMap") as Texture2D ?? material.GetTexture("_MainTex") as Texture2D : null;
+            if (albedo == null)
+            {
+                throw new System.InvalidOperationException("Built bundle has no albedo texture at " + label);
+            }
+            if (!albedo.isReadable)
+            {
+                throw new System.InvalidOperationException("Built bundle albedo at " + label + " is not readable for symmetry validation");
+            }
+            var pixels = albedo.GetPixels();
+            int width = albedo.width;
+            int height = albedo.height;
+            int mismatchedY = 0;
+            int mismatchedX = 0;
+            int mismatchedRoll = 0;
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    float u = x / (float)(width - 1);
+                    if (BestMirrorDiff(pixels, width, y, x, (1f - u) * (width - 1)) > diffThreshold)
+                    {
+                        mismatchedY++;
+                    }
+                    if (BestMirrorDiff(pixels, width, y, x, Mathf.Repeat(1.5f - u, 1f) * (width - 1)) > diffThreshold)
+                    {
+                        mismatchedX++;
+                    }
+                    if (BestMirrorDiff(pixels, width, y, x, Mathf.Repeat(u + 0.5f, 1f) * (width - 1)) > diffThreshold)
+                    {
+                        mismatchedRoll++;
+                    }
+                }
+            }
+            int total = width * height;
+            float fractionY = (float)mismatchedY / total;
+            float fractionX = (float)mismatchedX / total;
+            float fractionRoll = (float)mismatchedRoll / total;
+            if (fractionY > maxMismatchFraction || fractionX > maxMismatchFraction || fractionRoll > maxMismatchFraction)
+            {
+                throw new System.InvalidOperationException(
+                    "Built bundle texture at " + label + " is not symmetric under the cylindrical transforms: " +
+                    "y-mirror " + fractionY.ToString("P3") + ", x-mirror " + fractionX.ToString("P3") +
+                    ", 180 roll " + fractionRoll.ToString("P3") +
+                    " of pixels differ from their transformed mirror by more than " + diffThreshold +
+                    "; expected <= " + maxMismatchFraction.ToString("P3") + " each");
+            }
+        }
+
+        private static float BestMirrorDiff(Color[] pixels, int width, int y, int x, float mirrorXf)
+        {
+            int baseX = Mathf.FloorToInt(mirrorXf);
+            var color = pixels[y * width + x];
+            float best = float.MaxValue;
+            for (int d = -1; d <= 1; d++)
+            {
+                int mx = baseX + d;
+                if (mx < 0 || mx >= width)
+                {
+                    continue;
+                }
+                var mirror = pixels[y * width + mx];
+                float diff = Mathf.Max(
+                    Mathf.Abs(color.r - mirror.r),
+                    Mathf.Abs(color.g - mirror.g),
+                    Mathf.Abs(color.b - mirror.b));
+                best = Mathf.Min(best, diff);
+            }
+            return best;
+        }
+
+        /// <summary>
+        /// The shipped bundle must never contain vanilla reference assets
+        /// (extracted atlases or preview-only reference materials/meshes).
+        /// </summary>
+        private static void ValidateNoReferenceAssets(AssetBundle bundle)
+        {
+            foreach (var assetName in bundle.GetAllAssetNames())
+            {
+                var lower = assetName.ToLowerInvariant();
+                if (lower.Contains("weapons4") || lower.Contains("missiles3") ||
+                    lower.Contains("vanilla_textures") || lower.Contains("scythereference") ||
+                    lower.Contains("scimitarreference") || lower.Contains("texturepreviews"))
+                {
+                    throw new System.InvalidOperationException("Built bundle contains a vanilla reference asset: " + assetName);
+                }
             }
         }
 

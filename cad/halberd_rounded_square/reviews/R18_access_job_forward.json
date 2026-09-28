@@ -1,0 +1,57 @@
+{
+  "input": "STEP/halberd_r18_access_forward_F04A_F03A.step",
+  "mode": "view",
+  "outputs": [
+    {
+      "path": "reviews/R18_access_F04A_oblique.png",
+      "camera": {
+        "direction": [
+          0.45,
+          1.0,
+          0.6
+        ]
+      }
+    },
+    {
+      "path": "reviews/R18_access_F04A_grazing.png",
+      "camera": {
+        "direction": [
+          0.9,
+          0.5,
+          0.12
+        ]
+      }
+    },
+    {
+      "path": "reviews/R18_access_F03A_oblique.png",
+      "camera": {
+        "direction": [
+          0.45,
+          -1.0,
+          0.6
+        ]
+      }
+    },
+    {
+      "path": "reviews/R18_access_F03A_grazing.png",
+      "camera": {
+        "direction": [
+          0.9,
+          -0.5,
+          0.12
+        ]
+      }
+    }
+  ],
+  "output": {
+    "viewLabels": false,
+    "padding": 0.08,
+    "sizeProfile": "diagnostic"
+  },
+  "quality": {
+    "tessellation": {
+      "chordTolerance": 5e-05,
+      "angleTolerance": 0.05
+    }
+  }
+}

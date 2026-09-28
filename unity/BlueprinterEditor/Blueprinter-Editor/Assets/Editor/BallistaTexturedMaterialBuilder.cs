@@ -32,13 +32,14 @@ namespace Erenaldi.Ballista
 
         // Original STEP-palette base colors (user decision 2026-09-13: revert
         // fuselage/tail/wing underlying colors to the approved dark blue-gray
-        // family while keeping all texture detail).
+        // family while keeping all texture detail). Detail lines use a lighter
+        // blue-gray seam so panel seams/rivets/stamps stay readable against the
+        // dark base (near-black seams would be invisible on it).
         private static readonly Color Charcoal = new Color(56f / 255f, 55f / 255f, 53f / 255f);
         private static readonly Color ZoneGray = new Color(44f / 255f, 53f / 255f, 58f / 255f);
         private static readonly Color BaseGray = new Color(31f / 255f, 38f / 255f, 41f / 255f);
         private static readonly Color Orange = new Color(225f / 255f, 140f / 255f, 40f / 255f);
-        private static readonly Color SeamDark = new Color(30f / 255f, 29f / 255f, 28f / 255f);
-        private static readonly Color InkBlack = new Color(22f / 255f, 22f / 255f, 22f / 255f);
+        private static readonly Color SeamLight = new Color(0.28f, 0.33f, 0.36f);
 
         internal static Material CreateBodyMaterial(string assetRoot, string name)
         {
@@ -52,8 +53,14 @@ namespace Erenaldi.Ballista
                     pixels[y * Width + x] = PaintBody(u, v, Hash(x, y));
                 }
             }
-            StampRectBorder(pixels, 0.40f, 0.56f, 0.36f, 0.44f, 2, InkBlack);
-            StampXInBox(pixels, 0.44f, 0.52f, 0.375f, 0.425f, 2, InkBlack);
+            // Service panel pair centered on u = 0.25 and u = 0.75: each panel is
+            // self-symmetric under the x-mirror (u -> (1.5-u) mod 1) and the
+            // pair is symmetric under the y-mirror (u -> 1-u) and the 180 roll
+            // (u -> u+0.5), so the marking reads on both longitudinal flanks.
+            StampRectBorder(pixels, 0.21f, 0.29f, 0.36f, 0.44f, 2, SeamLight);
+            StampXInBox(pixels, 0.23f, 0.27f, 0.375f, 0.425f, 2, SeamLight);
+            StampRectBorder(pixels, 0.71f, 0.79f, 0.36f, 0.44f, 2, SeamLight);
+            StampXInBox(pixels, 0.73f, 0.77f, 0.375f, 0.425f, 2, SeamLight);
             BakeRingShading(pixels, SeamRings);
             var albedo = FinishTexture("TexBallistaBodyAlbedo", pixels);
             var packed = CreateBodyPacked();
@@ -73,7 +80,7 @@ namespace Erenaldi.Ballista
                     color = ApplyGrunge(color, u, v, Hash(x, y));
                     if (Mathf.Abs(v - 0.33f) < 0.0030f || Mathf.Abs(v - 0.67f) < 0.0030f)
                     {
-                        color = Color.Lerp(color, SeamDark, 0.55f);
+                        color = Color.Lerp(color, SeamLight, 0.55f);
                     }
                     pixels[y * Width + x] = color;
                 }
@@ -96,7 +103,7 @@ namespace Erenaldi.Ballista
                     color = ApplyGrunge(color, u, v, Hash(x, y));
                     if (Mathf.Abs(v - 0.5f) < 0.0026f)
                     {
-                        color = Color.Lerp(color, SeamDark, 0.5f);
+                        color = Color.Lerp(color, SeamLight, 0.5f);
                     }
                     pixels[y * Width + x] = color;
                 }
@@ -177,7 +184,7 @@ namespace Erenaldi.Ballista
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth));
                 }
             }
-            return FinishTexture("TexBallistaBodyMS", pixels);
+            return FinishTexture("TexBallistaBodyMS", pixels, true);
         }
 
         private static Texture2D CreatePacked(string name, float metal, float smooth)
@@ -191,7 +198,7 @@ namespace Erenaldi.Ballista
                     pixels[y * Width + x] = new Color(metal, metal, metal, Mathf.Clamp01(smooth + (hash - 0.5f) * 0.05f));
                 }
             }
-            return FinishTexture(name, pixels);
+            return FinishTexture(name, pixels, true);
         }
 
         private static Material CreateTexturedMaterial(string assetRoot, string name, Texture2D albedo, Texture2D packed)
@@ -235,7 +242,7 @@ namespace Erenaldi.Ballista
             {
                 if (Mathf.Abs(v - ring) < 0.0030f)
                 {
-                    color = Color.Lerp(color, SeamDark, 0.60f);
+                    color = Color.Lerp(color, SeamLight, 0.60f);
                 }
             }
             if (v > AxialSeamStartV && v < AxialSeamEndV)
@@ -244,7 +251,7 @@ namespace Erenaldi.Ballista
                 {
                     if (Mathf.Abs(u - seamU) < 0.0016f)
                     {
-                        color = Color.Lerp(color, SeamDark, 0.55f);
+                        color = Color.Lerp(color, SeamLight, 0.55f);
                     }
                 }
             }
@@ -255,7 +262,7 @@ namespace Erenaldi.Ballista
                     if (NearDot(u, v, Mathf.Repeat(seamU - 0.014f, 1f), ring, 0.0011f) ||
                         NearDot(u, v, Mathf.Repeat(seamU + 0.014f, 1f), ring, 0.0011f))
                     {
-                        color = SeamDark;
+                        color = SeamLight;
                     }
                 }
             }
@@ -348,9 +355,9 @@ namespace Erenaldi.Ballista
             pixels[y * Width + x] *= factor;
         }
 
-        private static Texture2D FinishTexture(string name, Color[] pixels)
+        private static Texture2D FinishTexture(string name, Color[] pixels, bool linear = false)
         {
-            var texture = new Texture2D(Width, Height, TextureFormat.RGBA32, true, false)
+            var texture = new Texture2D(Width, Height, TextureFormat.RGBA32, true, linear)
             {
                 name = name,
                 wrapMode = TextureWrapMode.Repeat,

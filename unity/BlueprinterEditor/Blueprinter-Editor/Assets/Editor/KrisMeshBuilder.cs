@@ -150,6 +150,13 @@ namespace Erenaldi.Kris
                 mesh.vertices = scaledVertices;
             }
             mesh.RecalculateNormals();
+            // Recalculate bounds BEFORE the cylindrical unwrap so v is
+            // normalized against the scaled bounds (the unwrap reads
+            // source.bounds). Previously this ran after the unwrap, leaving v
+            // normalized against the pre-scale bounds — a constant ~0.05 v
+            // shift that misplaced the texture zones. Geometry positions and
+            // topology are unchanged; only the v normalization is corrected.
+            mesh.RecalculateBounds();
             if (textured)
             {
                 var texturedMesh = GenerateCylindricalUVs(mesh);
