@@ -1,0 +1,902 @@
+[
+  {
+    "input": "Halberd_B1_Needle.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B1_Needle_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B1_Needle_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B1_Needle_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_separated_front.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.5
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B1_Needle_Seam.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B1_Needle_seam.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_seam_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B1_Needle_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B1_Needle_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B1_Needle_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B2_Broadhead.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B2_Broadhead_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B2_Broadhead_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B2_Broadhead_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_separated_front.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.5
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B2_Broadhead_Seam.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B2_Broadhead_seam.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_seam_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B2_Broadhead_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B2_Broadhead_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B2_Broadhead_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B3_Chisel.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B3_Chisel_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B3_Chisel_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B3_Chisel_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_separated_front.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.5
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B3_Chisel_Seam.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B3_Chisel_seam.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_seam_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B3_Chisel_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B3_Chisel_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B3_Chisel_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B4_Manta.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B4_Manta_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B4_Manta_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B4_Manta_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_separated_front.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.5
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B4_Manta_Seam.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B4_Manta_seam.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_seam_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B4_Manta_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B4_Manta_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B4_Manta_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B5_Sculpted.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B5_Sculpted_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B5_Sculpted_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B5_Sculpted_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_separated_front.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.5
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B5_Sculpted_Seam.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B5_Sculpted_seam.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_seam_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_B5_Sculpted_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_B5_Sculpted_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_B5_Sculpted_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  }
+]

@@ -1,0 +1,478 @@
+{
+  "ok": true,
+  "generated": "2026-09-14",
+  "method": "Reads only Halberd_Shoulder_Hybrid.step plus the config constants from generate_halberd_shoulder_hybrid.py; the build factory is never called. Outer 60 mm bands reuse check_outer_bands from check_halberd_shoulder_variants.py with width=208 height=208 corner=12 (0 difference expected). Circular forebody: 2 mm BREP slabs at x=960/1000 and the body end at x=1080 compared against a radius-86 cylinder; radome base cross-section at x=1080 must be 172 mm. Rear corner progression: booster section extrema and corner radii at the five loft stations (62.4 -> 78 -> 64 -> 12 -> 12) with the seam corner equal to the sustainer's 12-corner body. Intake probes at x=650, radial110; no excess beyond original transition envelope, retained native roof witnesses, curved intake continuation and complete cylinder restoration beyond the original X850 end, measured buried-void centroids decreasing radially toward the rear, inboard opening clearance and enlarged cut area against the original four-intake cutter on the same envelope.",
+  "tolerances_mm3": 0.001,
+  "hybrid": {
+    "file": "Halberd_Shoulder_Hybrid.step",
+    "label": "Halberd_Shoulder_Hybrid",
+    "part_count": 19,
+    "labels": [
+      "booster_body",
+      "booster_fin_1",
+      "booster_fin_2",
+      "booster_fin_3",
+      "booster_fin_4",
+      "booster_nozzle",
+      "intake_floor_1",
+      "intake_floor_2",
+      "intake_floor_3",
+      "intake_floor_4",
+      "mount_1",
+      "mount_2",
+      "radome",
+      "sustainer_body",
+      "sustainer_fin_1",
+      "sustainer_fin_2",
+      "sustainer_fin_3",
+      "sustainer_fin_4",
+      "sustainer_nozzle"
+    ],
+    "model_bbox_mm": {
+      "min": [
+        -1683.5000001,
+        -173.1881284821152,
+        -173.1881284821152
+      ],
+      "max": [
+        1683.5000001,
+        173.18812848211516,
+        173.18812848211516
+      ],
+      "size": [
+        3367.0000002,
+        346.3762569642304,
+        346.3762569642304
+      ]
+    },
+    "seam_mm": -336.7,
+    "seam_section_mm": {
+      "width": 208.00000020000533,
+      "height": 208.0000002,
+      "config_width": 208.0,
+      "config_height": 208.0
+    },
+    "outer_band": {
+      "cylinder_radius_mm": 72.48,
+      "full_band_mm3": {
+        "sustainer_minus_booster": 0,
+        "booster_minus_sustainer": 0
+      },
+      "half_slab_sustainer_mm3": {
+        "front_minus_rear": 0,
+        "rear_minus_front": 0
+      },
+      "half_slab_booster_mm3": {
+        "front_minus_rear": 0,
+        "rear_minus_front": 0
+      },
+      "extrusion_match_mm3": {
+        "expected_minus_sustainer": 0,
+        "sustainer_minus_expected": 0,
+        "expected_minus_booster": 0,
+        "booster_minus_expected": 0
+      }
+    },
+    "circular_forebody_mm3": {
+      "x860_mm3": {
+        "slab_minus_cylinder": 0,
+        "cylinder_minus_slab": 0
+      },
+      "x900_mm3": {
+        "slab_minus_cylinder": 0,
+        "cylinder_minus_slab": 0
+      },
+      "x960_mm3": {
+        "slab_minus_cylinder": 0,
+        "cylinder_minus_slab": 0
+      },
+      "x1000_mm3": {
+        "slab_minus_cylinder": 0,
+        "cylinder_minus_slab": 0
+      },
+      "x1080_mm3": {
+        "slab_minus_cylinder": 0,
+        "cylinder_minus_slab": 0
+      }
+    },
+    "radome_base": {
+      "base_x_mm": 1079.9999999,
+      "base_diameter_y_mm": 172.00564251963823,
+      "base_diameter_z_mm": 172.00564257108067,
+      "expected_diameter_mm": 172.0
+    },
+    "rear_corner_progression": [
+      {
+        "x_mm": -1683.5,
+        "section_mm": {
+          "width": 166.48666686666667,
+          "height": 166.48666686666667
+        },
+        "config_extent_mm": 166.4,
+        "corner_radius_mm": 62.400034719198096,
+        "config_corner_mm": 62.4
+      },
+      {
+        "x_mm": -1443.5,
+        "section_mm": {
+          "width": 208.00000020000002,
+          "height": 208.0000002
+        },
+        "config_extent_mm": 208.0,
+        "corner_radius_mm": 77.90249818802822,
+        "config_corner_mm": 78.0
+      },
+      {
+        "x_mm": -1000.0,
+        "section_mm": {
+          "width": 208.00000020000004,
+          "height": 208.0000002
+        },
+        "config_extent_mm": 208.0,
+        "corner_radius_mm": 63.88346009734751,
+        "config_corner_mm": 64.0
+      },
+      {
+        "x_mm": -516.7,
+        "section_mm": {
+          "width": 208.00000020000266,
+          "height": 208.0000002
+        },
+        "config_extent_mm": 208.0,
+        "corner_radius_mm": 11.913212813977038,
+        "config_corner_mm": 12.0
+      },
+      {
+        "x_mm": -336.7,
+        "section_mm": {
+          "width": 208.00000020000527,
+          "height": 208.0000002
+        },
+        "config_extent_mm": 208.0,
+        "corner_radius_mm": 11.913212813981774,
+        "config_corner_mm": 12.0
+      }
+    ],
+    "sustainer_seam_corner_mm": 11.913212813981774,
+    "contacts_mm": {
+      "sustainer_fin_1": 0.0,
+      "booster_fin_1": 0.0,
+      "intake_floor_1": 1.0048591735576161e-14,
+      "sustainer_fin_2": 0.0,
+      "booster_fin_2": 0.0,
+      "intake_floor_2": 0.0,
+      "sustainer_fin_3": 0.0,
+      "booster_fin_3": 1.4210854715202004e-14,
+      "intake_floor_3": 0.0,
+      "sustainer_fin_4": 1.4210854715202004e-14,
+      "booster_fin_4": 0.0,
+      "intake_floor_4": 0.0,
+      "mount_1": 0.0,
+      "mount_2": 0.0
+    },
+    "intake_probes": [
+      {
+        "index": 1,
+        "angle_degrees": 45,
+        "probe_center_mm": [
+          650.0,
+          77.78174593052023,
+          77.78174593052023
+        ],
+        "blocked_by": [],
+        "anchored_in_body_bbox": true
+      },
+      {
+        "index": 2,
+        "angle_degrees": 135,
+        "probe_center_mm": [
+          650.0,
+          77.78174593052023,
+          -77.78174593052022
+        ],
+        "blocked_by": [],
+        "anchored_in_body_bbox": true
+      },
+      {
+        "index": 3,
+        "angle_degrees": 225,
+        "probe_center_mm": [
+          650.0,
+          -77.78174593052022,
+          -77.78174593052024
+        ],
+        "blocked_by": [],
+        "anchored_in_body_bbox": true
+      },
+      {
+        "index": 4,
+        "angle_degrees": 315,
+        "probe_center_mm": [
+          650.0,
+          -77.78174593052024,
+          77.7817459305202
+        ],
+        "blocked_by": [],
+        "anchored_in_body_bbox": true
+      }
+    ],
+    "recessed_intakes": {
+      "protruding_body_volume_mm3": 0.0,
+      "round_forebody_restored_at_x_mm": 850,
+      "internal_paths": [
+        {
+          "index": 1,
+          "samples": [
+            {
+              "x_mm": 400,
+              "radial_center_mm": 74.32443285520702
+            },
+            {
+              "x_mm": 470,
+              "radial_center_mm": 80.37846954986779
+            },
+            {
+              "x_mm": 535,
+              "radial_center_mm": 86.01674699371954
+            },
+            {
+              "x_mm": 600,
+              "radial_center_mm": 95.9413504350423
+            },
+            {
+              "x_mm": 620,
+              "radial_center_mm": 98.97220337692939
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "samples": [
+            {
+              "x_mm": 400,
+              "radial_center_mm": 74.324432855207
+            },
+            {
+              "x_mm": 470,
+              "radial_center_mm": 80.37846954986776
+            },
+            {
+              "x_mm": 535,
+              "radial_center_mm": 86.01674699371945
+            },
+            {
+              "x_mm": 600,
+              "radial_center_mm": 95.94135043504225
+            },
+            {
+              "x_mm": 620,
+              "radial_center_mm": 98.97220337692946
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "samples": [
+            {
+              "x_mm": 400,
+              "radial_center_mm": 74.324432855207
+            },
+            {
+              "x_mm": 470,
+              "radial_center_mm": 80.37846954986776
+            },
+            {
+              "x_mm": 535,
+              "radial_center_mm": 86.0167469937195
+            },
+            {
+              "x_mm": 600,
+              "radial_center_mm": 95.94135043504225
+            },
+            {
+              "x_mm": 620,
+              "radial_center_mm": 98.97220337692944
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "samples": [
+            {
+              "x_mm": 400,
+              "radial_center_mm": 74.324432855207
+            },
+            {
+              "x_mm": 470,
+              "radial_center_mm": 80.37846954986777
+            },
+            {
+              "x_mm": 535,
+              "radial_center_mm": 86.01674699371948
+            },
+            {
+              "x_mm": 600,
+              "radial_center_mm": 95.94135043504227
+            },
+            {
+              "x_mm": 620,
+              "radial_center_mm": 98.97220337692946
+            }
+          ]
+        }
+      ],
+      "native_roofs": [
+        {
+          "index": 1,
+          "native_roof_volumes_mm3": [
+            3.9999999999999987,
+            3.9999999999999982
+          ]
+        },
+        {
+          "index": 2,
+          "native_roof_volumes_mm3": [
+            3.9999999999999973,
+            3.9999999999999973
+          ]
+        },
+        {
+          "index": 3,
+          "native_roof_volumes_mm3": [
+            3.9999999999999982,
+            3.9999999999999982
+          ]
+        },
+        {
+          "index": 4,
+          "native_roof_volumes_mm3": [
+            3.999999999999998,
+            3.9999999999999982
+          ]
+        }
+      ],
+      "new_corner_area_at_650_mm2": 6856.986780696247,
+      "original_cutter_area_same_hull_mm2": 2666.4035919850053,
+      "area_ratio": 2.5716237411724907
+    },
+    "nozzles": {
+      "sustainer_nozzle": {
+        "distance_to_body_mm": 0.0,
+        "body_backing_intrusion_mm3": 0,
+        "nozzle_backing_material_mm3": 63.999999999999986
+      },
+      "booster_nozzle": {
+        "distance_to_body_mm": 0.0,
+        "body_backing_intrusion_mm3": 0,
+        "nozzle_backing_material_mm3": 63.999999999999986
+      }
+    },
+    "smooth_intake_floor": [
+      {
+        "index": 1,
+        "floor_radius_by_x_mm": {
+          "700": 80.4117647058823,
+          "730": 80.94117647058819,
+          "760": 81.47058823529407,
+          "780": 81.82352941176467,
+          "790": 81.99999999999994,
+          "800": 82.29516158315178,
+          "810": 83.04865649963688,
+          "820": 84.16544117647058,
+          "830": 85.2389251997095,
+          "840": 85.87232207697895,
+          "849": 85.99983845361292,
+          "849.9": 85.99999983482817,
+          "850": 85.99999999943245,
+          "850.1": 86.0,
+          "851": 86.0,
+          "900": 86.0,
+          "950": 86.00000000000003
+        },
+        "missing_cylinder_850_950_mm3": 0.0,
+        "join_slope_mm_per_mm": 8.258591321919084e-07,
+        "join_curvature_per_mm": -1.640367202071502e-05,
+        "join_sampling_step_mm": 0.1
+      },
+      {
+        "index": 2,
+        "floor_radius_by_x_mm": {
+          "700": 80.41176470588229,
+          "730": 80.94117647058818,
+          "760": 81.47058823529406,
+          "780": 81.82352941176465,
+          "790": 81.99999999999993,
+          "800": 82.2951615831518,
+          "810": 83.04865649963686,
+          "820": 84.16544117647057,
+          "830": 85.2389251997095,
+          "840": 85.87232207697893,
+          "849": 85.99983845361291,
+          "849.9": 85.99999983482815,
+          "850": 85.99999999943246,
+          "850.1": 86.0,
+          "851": 86.0,
+          "900": 86.0,
+          "950": 85.99999999999999
+        },
+        "missing_cylinder_850_950_mm3": 0.0,
+        "join_slope_mm_per_mm": 8.258592743004556e-07,
+        "join_curvature_per_mm": -1.6403677705056907e-05,
+        "join_sampling_step_mm": 0.1
+      },
+      {
+        "index": 3,
+        "floor_radius_by_x_mm": {
+          "700": 80.4117647058823,
+          "730": 80.94117647058819,
+          "760": 81.47058823529407,
+          "780": 81.82352941176467,
+          "790": 81.99999999999994,
+          "800": 82.29516158315181,
+          "810": 83.04865649963688,
+          "820": 84.16544117647058,
+          "830": 85.23892519970951,
+          "840": 85.87232207697896,
+          "849": 85.99983845361292,
+          "849.9": 85.99999983482816,
+          "850": 85.99999999943252,
+          "850.1": 86.00000000000001,
+          "851": 86.00000000000001,
+          "900": 86.00000000000001,
+          "950": 86.0
+        },
+        "missing_cylinder_850_950_mm3": 0.0,
+        "join_slope_mm_per_mm": 8.258592743004556e-07,
+        "join_curvature_per_mm": -1.6403686231569736e-05,
+        "join_sampling_step_mm": 0.1
+      },
+      {
+        "index": 4,
+        "floor_radius_by_x_mm": {
+          "700": 80.41176470588229,
+          "730": 80.94117647058818,
+          "760": 81.47058823529406,
+          "780": 81.82352941176465,
+          "790": 81.99999999999993,
+          "800": 82.29516158315177,
+          "810": 83.04865649963686,
+          "820": 84.16544117647057,
+          "830": 85.2389251997095,
+          "840": 85.87232207697892,
+          "849": 85.99983845361291,
+          "849.9": 85.99999983482812,
+          "850": 85.99999999943245,
+          "850.1": 86.0,
+          "851": 86.0,
+          "900": 86.0,
+          "950": 86.00000000000001
+        },
+        "missing_cylinder_850_950_mm3": 0.0,
+        "join_slope_mm_per_mm": 8.258594164090027e-07,
+        "join_curvature_per_mm": -1.6403677705056907e-05,
+        "join_sampling_step_mm": 0.1
+      }
+    ]
+  },
+  "scope": "CAD exterior game visuals; aircraft rack fit and runtime not verified"
+}

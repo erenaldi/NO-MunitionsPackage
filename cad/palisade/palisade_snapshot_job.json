@@ -1,0 +1,17 @@
+{
+  "input": "HKP-1_Palisade_Interceptor.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": { "mode": "rendered" },
+  "outputs": [
+    { "path": "Palisade_iso.png", "camera": { "direction": [-1, -1, 0.7] } },
+    { "path": "Palisade_opposite.png", "camera": { "direction": [1, 1, -0.7] } },
+    { "path": "Palisade_side.png", "camera": { "direction": [0, -1, 0] } },
+    { "path": "Palisade_top.png", "camera": { "direction": [0, 0, 1] } },
+    { "path": "Palisade_bottom.png", "camera": { "direction": [0, 0, -1] } },
+    { "path": "Palisade_nose.png", "camera": { "direction": [1, 0, 0] } },
+    { "path": "Palisade_tail.png", "camera": { "direction": [-1, 0, 0] } },
+    { "path": "Palisade_cap_interface.png", "camera": { "direction": [-0.25, -1, 0.15] } }
+  ],
+  "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+}

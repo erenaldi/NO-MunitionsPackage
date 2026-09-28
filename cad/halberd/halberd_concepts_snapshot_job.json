@@ -1,0 +1,412 @@
+[
+  {
+    "input": "Halberd_Concept_Pod.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Pod_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Pod_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Pod_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_separated_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Pod_Intake.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Pod_intake.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_mouth.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Pod_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Pod_Upper.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Pod_upper_aft.png",
+        "camera": {
+          "direction": [
+            -1,
+            -0.5,
+            0.4
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Pod_Booster.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Pod_booster_face.png",
+        "camera": {
+          "direction": [
+            1,
+            -0.5,
+            0.4
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Shoulder.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Shoulder_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Shoulder_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Shoulder_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_separated_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Shoulder_Intake.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Shoulder_intake.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_mouth.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Concept_Shoulder_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Shoulder_Upper.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Shoulder_upper_aft.png",
+        "camera": {
+          "direction": [
+            -1,
+            -0.5,
+            0.4
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Concept_Shoulder_Booster.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Concept_Shoulder_booster_face.png",
+        "camera": {
+          "direction": [
+            1,
+            -0.5,
+            0.4
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  }
+]

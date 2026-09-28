@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "outer_xyz_mm": [
+    2980.0,
+    400.0,
+    251.0
+  ],
+  "foredeck_start_end_x_mm": [
+    740,
+    1325
+  ],
+  "front_sensor_end_x_mm": 1490,
+  "front_cover_is_additive_to_A4_roof": true,
+  "A4_front_sensor_rear_sensor_lips_and_four_boxes_identical": true,
+  "spear_max_fin_diameter_mm": 158.013,
+  "donor_door_sweep_aircraft_fit_verified": false
+}

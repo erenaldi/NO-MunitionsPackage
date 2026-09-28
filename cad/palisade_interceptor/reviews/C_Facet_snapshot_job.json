@@ -1,0 +1,75 @@
+{
+  "input": "STEP/C_Facet.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/C_Facet_iso.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.7
+        ]
+      }
+    },
+    {
+      "path": "reviews/C_Facet_opposed.png",
+      "camera": {
+        "direction": [
+          1,
+          1,
+          -0.7
+        ]
+      }
+    },
+    {
+      "path": "reviews/C_Facet_side.png",
+      "camera": {
+        "direction": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "path": "reviews/C_Facet_top.png",
+      "camera": {
+        "direction": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "path": "reviews/C_Facet_nose.png",
+      "camera": {
+        "direction": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "path": "reviews/C_Facet_tail.png",
+      "camera": {
+        "direction": [
+          -1,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "r5_factory_defaults_preserved": true,
+  "body": {
+    "valid": true,
+    "length_mm": 2800.0000001
+  },
+  "_Close": {
+    "valid": true,
+    "length_mm": 850.0000000999997
+  },
+  "_Tip": {
+    "valid": true,
+    "length_mm": 40.000000000015234
+  },
+  "body_and_shoulder_difference_mm3": 0,
+  "finished_width_mm": 19.9999999999945,
+  "endpoints_mm": [
+    [
+      1399.9999999999998,
+      -9.99999999999625,
+      40.0
+    ],
+    [
+      1399.9999999999998,
+      9.999999999998249,
+      40.0
+    ]
+  ],
+  "radius_mm": 4.0,
+  "symmetric_nose": true
+}

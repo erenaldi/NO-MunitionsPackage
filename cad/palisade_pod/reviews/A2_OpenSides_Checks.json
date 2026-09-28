@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "outer_xyz_mm": [
+    2980,
+    400,
+    223
+  ],
+  "cassette_xyz_mm": [
+    1310,
+    196,
+    180
+  ],
+  "spear_length_mm": 1200.0,
+  "spear_fin_diameter_mm": 158.013,
+  "illustrative_wall_mm": 6,
+  "illustrative_half_width_margin_mm": 12.994,
+  "illustrative_half_axial_margin_mm": 49.0,
+  "cassette_external_sides_flush_with_sensor_ends_y_mm": [
+    -200,
+    200
+  ],
+  "retained_side_frame_depth_below_top_mm": 43,
+  "original_A_bridge_and_sensor_geometry_preserved": true,
+  "actual_donor_door_and_aircraft_clearance_verified": false
+}

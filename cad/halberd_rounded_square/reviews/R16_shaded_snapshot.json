@@ -1,0 +1,52 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r16_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_focus_shaded.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            -1.0,
+            0.65
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_focus_shaded_grazing.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.18,
+            1.0,
+            0.08
+          ],
+          "up": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      }
+    ],
+    "quality": {
+      "tessellation": {
+        "chordTolerance": 5e-05,
+        "angleTolerance": 0.05
+      }
+    }
+  }
+]

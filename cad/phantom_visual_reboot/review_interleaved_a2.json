@@ -1,0 +1,188 @@
+[
+  {
+    "input": "STEP/O_Interleaved_A2_Module_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A2_module_end.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            97
+          ],
+          "orthographicHalfHeight": 65,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A2_Module_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A2_module_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.5
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            50,
+            0,
+            96
+          ],
+          "orthographicHalfHeight": 340,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A2_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A2_deployed_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.9
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A2_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A2_deployed_opposed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A2_Support_Exploded.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A2_support_exploded.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            1.5
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            50,
+            -30,
+            110
+          ],
+          "orthographicHalfHeight": 370,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A2_Support_Exploded.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A2_support_end.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            -50,
+            110
+          ],
+          "orthographicHalfHeight": 160,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

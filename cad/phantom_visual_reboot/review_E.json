@@ -1,0 +1,15 @@
+[
+  {"input":"STEP/E_Transition_Nose_R2.step","mode":"view","outputs":[
+    {"path":"reviews/E_body_iso.png","camera":{"direction":[1,-1,0.7]}},
+    {"path":"reviews/E_body_side.png","camera":{"direction":[0,-1,0]}},
+    {"path":"reviews/E_square_section.png","camera":{"direction":[-1,0,0]}}
+  ],"render":{"sizeProfile":"diagnostic","padding":0.12}},
+  {"input":"STEP/E_Transition_Nose_R2_Close.step","mode":"view","outputs":[
+    {"path":"reviews/E_nose_iso.png","camera":{"direction":[1,-1,0.7]}},
+    {"path":"reviews/E_nose_opposed.png","camera":{"direction":[-1,1,-0.7]}},
+    {"path":"reviews/E_nose_bottom.png","camera":{"direction":[0,0,-1]}},
+    {"path":"reviews/E_nose_top.png","camera":{"direction":[0,0,1]}},
+    {"path":"reviews/E_nose_side.png","camera":{"direction":[0,-1,0]}},
+    {"path":"reviews/E_nose_front_projection.png","camera":{"direction":[1,0,0]}}
+  ],"render":{"sizeProfile":"diagnostic","padding":0.12}}
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r10_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Halberd_R10_side.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        "width": 1800,
+        "height": 800
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r10_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Halberd_R10_oblique.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            -1,
+            0.6
+          ]
+        },
+        "width": 1800,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r10_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Halberd_R10_top.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "width": 1800,
+        "height": 650
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r10.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Halberd_R10_whole.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.35,
+            1,
+            0.65
+          ]
+        },
+        "width": 2200,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r10_separated.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Halberd_R10_separated.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            1,
+            0.65
+          ]
+        },
+        "width": 2200,
+        "height": 850
+      }
+    ]
+  }
+]

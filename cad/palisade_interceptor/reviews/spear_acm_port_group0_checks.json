@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "base": "Spear_UniformBarrel.step",
+  "single_group_port_count": 6,
+  "unmodified_basic_motor_groups": 3,
+  "full_parts": 22,
+  "focus_parts": 16,
+  "motor_group_ports": [
+    {
+      "x_mm": -549.0,
+      "clock_deg": -8.0,
+      "rim_max_radius_mm": 52.774
+    },
+    {
+      "x_mm": -549.0,
+      "clock_deg": 8.0,
+      "rim_max_radius_mm": 52.774
+    },
+    {
+      "x_mm": -535.0,
+      "clock_deg": -8.0,
+      "rim_max_radius_mm": 52.774
+    },
+    {
+      "x_mm": -535.0,
+      "clock_deg": 8.0,
+      "rim_max_radius_mm": 52.774
+    },
+    {
+      "x_mm": -521.0,
+      "clock_deg": -8.0,
+      "rim_max_radius_mm": 52.774
+    },
+    {
+      "x_mm": -521.0,
+      "clock_deg": 8.0,
+      "rim_max_radius_mm": 52.774
+    }
+  ],
+  "radial_envelope_mm": 79.006,
+  "forward_cap_slice_mm3": 1870.375,
+  "main_missile_preserved": true,
+  "blind_recesses": true,
+  "stage_shapes_preserved": true
+}

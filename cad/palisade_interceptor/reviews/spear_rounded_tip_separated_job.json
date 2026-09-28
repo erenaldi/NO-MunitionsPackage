@@ -1,0 +1,10 @@
+{
+  "input": "STEP/Spear_RoundedTip_Boattail_Separated.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_RoundedTip_separated.png", "camera": {"direction": [-1, -1, 0.8]}},
+    {"path": "reviews/Spear_RoundedTip_separated_opposed.png", "camera": {"direction": [1, 1, -0.8]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "outer_xyz_mm": [
+    3500,
+    400,
+    223
+  ],
+  "A2_level_roof_restored": true,
+  "A6_sensors_apertures_side_lips_and_boxes_preserved_except_smooth_shells": true,
+  "spear_max_fin_diameter_mm": 158.013,
+  "donor_door_aircraft_fit_verified": false
+}

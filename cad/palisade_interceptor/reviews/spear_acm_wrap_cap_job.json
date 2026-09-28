@@ -1,0 +1,14 @@
+{
+  "input": "STEP/Spear_ACMWrap_Cap_Focus.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_ACMWrap_cap_plus_y.png", "camera": {"direction": [0, 1, 0]}},
+    {"path": "reviews/Spear_ACMWrap_cap_minus_y.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_ACMWrap_cap_plus_z.png", "camera": {"direction": [0, 0, 1]}},
+    {"path": "reviews/Spear_ACMWrap_cap_minus_z.png", "camera": {"direction": [0, 0, -1]}},
+    {"path": "reviews/Spear_ACMWrap_cap_aft.png", "camera": {"direction": [-1, 0, 0]}},
+    {"path": "reviews/Spear_ACMWrap_cap_grazing.png", "camera": {"direction": [-1, 1, 0.55]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

@@ -1,0 +1,25 @@
+{
+  "input": "STEP/Spear_Broad_Fin_Focus.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/Spear_Broad_Fin_Focus_sketch_fin.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.8
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

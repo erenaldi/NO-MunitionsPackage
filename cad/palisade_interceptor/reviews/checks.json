@@ -1,0 +1,32 @@
+{
+  "A": {
+    "label": "Palisade_A_Spear",
+    "length_mm": 1200.0,
+    "cap_length_mm": 180.0,
+    "radial_envelope_mm": 101.00712846131209,
+    "solids": 11,
+    "state_geometry_preserved": true,
+    "body_cap_disjoint": true,
+    "nozzle_open_after_separation": true
+  },
+  "B": {
+    "label": "Palisade_B_Shoulder",
+    "length_mm": 1120.0,
+    "cap_length_mm": 215.0,
+    "radial_envelope_mm": 91.00791174397972,
+    "solids": 15,
+    "state_geometry_preserved": true,
+    "body_cap_disjoint": true,
+    "nozzle_open_after_separation": true
+  },
+  "C": {
+    "label": "Palisade_C_Facet",
+    "length_mm": 1280.0,
+    "cap_length_mm": 230.0,
+    "radial_envelope_mm": 103.00699005407353,
+    "solids": 11,
+    "state_geometry_preserved": true,
+    "body_cap_disjoint": true,
+    "nozzle_open_after_separation": true
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "scope": "B panel clearance probe, no B hardware or feasible assembly claim",
+  "zero_stroke_levelled_pairs": [
+    {
+      "a": "starboard_front",
+      "b": "starboard_rear",
+      "gap_mm": 6.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "port_front",
+      "gap_mm": 0.0,
+      "overlap_mm3": 4830.1977814385955
+    },
+    {
+      "a": "starboard_front",
+      "b": "port_rear",
+      "gap_mm": 452.99562517816275,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "port_front",
+      "gap_mm": 452.9956251782818,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "port_rear",
+      "gap_mm": 35.99999999999674,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "port_rear",
+      "gap_mm": 6.5,
+      "overlap_mm3": 0
+    }
+  ],
+  "minimum_symmetric_stroke_bracket_mm": [
+    21.063995361328125,
+    21.064453125
+  ],
+  "sampled_stroke_mm_per_side": 22.0,
+  "lift_starboard_mm": 5.5,
+  "panel_samples": [
+    {
+      "phase": "outward",
+      "fraction": 0.0,
+      "stroke_mm_per_side": 0.0,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.05,
+      "stroke_mm_per_side": 1.1,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.1,
+      "stroke_mm_per_side": 2.2,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.15,
+      "stroke_mm_per_side": 3.3,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.2,
+      "stroke_mm_per_side": 4.4,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.25,
+      "stroke_mm_per_side": 5.5,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.3,
+      "stroke_mm_per_side": 6.6,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.35,
+      "stroke_mm_per_side": 7.7,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.4,
+      "stroke_mm_per_side": 8.8,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.45,
+      "stroke_mm_per_side": 9.9,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.5,
+      "stroke_mm_per_side": 11.0,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.55,
+      "stroke_mm_per_side": 12.1,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.6,
+      "stroke_mm_per_side": 13.2,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.65,
+      "stroke_mm_per_side": 14.3,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.7,
+      "stroke_mm_per_side": 15.4,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.75,
+      "stroke_mm_per_side": 16.5,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.8,
+      "stroke_mm_per_side": 17.6,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.85,
+      "stroke_mm_per_side": 18.7,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.9,
+      "stroke_mm_per_side": 19.8,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 0.95,
+      "stroke_mm_per_side": 20.9,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 1.5
+    },
+    {
+      "phase": "outward",
+      "fraction": 1.0,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 0,
+      "min_panel_gap_mm": 2.557876839283685
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.0,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 0.0,
+      "min_panel_gap_mm": 2.557876839283685
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.05,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 0.275,
+      "min_panel_gap_mm": 2.406939742690681
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.1,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 0.55,
+      "min_panel_gap_mm": 2.2793055795447654
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.15,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 0.825,
+      "min_panel_gap_mm": 2.1790729508081847
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.2,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 1.1,
+      "min_panel_gap_mm": 2.1101502138340527
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.25,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 1.375,
+      "min_panel_gap_mm": 2.0756586725528585
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.3,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 1.65,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.35,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 1.925,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.4,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 2.2,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.45,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 2.475,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.5,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 2.75,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.55,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 3.025,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.6,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 3.3,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.65,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 3.575,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.7,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 3.85,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.75,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 4.125,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.8,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 4.4,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.85,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 4.675,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.9,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 4.95,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 0.95,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 5.225,
+      "min_panel_gap_mm": 2.071891388307769
+    },
+    {
+      "phase": "lift",
+      "fraction": 1.0,
+      "stroke_mm_per_side": 22.0,
+      "lift_mm": 5.5,
+      "min_panel_gap_mm": 2.071891388307769
+    }
+  ],
+  "panel_only_sampled_pass": true,
+  "naively_translated_support_gaps": [
+    {
+      "part": "starboard_fixed_root",
+      "housing_gap_mm": 4.5
+    },
+    {
+      "part": "starboard_carriage",
+      "housing_gap_mm": 5.385164807134504
+    },
+    {
+      "part": "port_fixed_root",
+      "housing_gap_mm": 0.0
+    },
+    {
+      "part": "port_carriage",
+      "housing_gap_mm": 0.0
+    }
+  ],
+  "deployed_width_mm": 1318.5880899791316,
+  "supported_mechanism_verified": false
+}

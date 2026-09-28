@@ -1,0 +1,25 @@
+{
+  "input": "STEP/Spear_Original_Fin_Focus.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/Spear_Original_Fin_Focus_fin_focus.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.8
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

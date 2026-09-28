@@ -1,0 +1,57 @@
+{
+  "scope": "A shelf support web bounds (-300.0, 250.0, -44.0, -42.0, 88.0, 93.0): collision-free support material through 21 original deployment samples (saved stowed parts, checker rigid-pose transforms). No source/build changes.",
+  "saved_source": "STEP\\O_Interleaved_A_Stowed.step",
+  "thresholds": {
+    "panel_gap_min_mm": 0.2,
+    "overlap_max_mm3": 0.001,
+    "radius_max_mm": 125.0
+  },
+  "attempts": [
+    {
+      "name": "continuous_web",
+      "primitive_mm": {
+        "x": [
+          -300.0,
+          250.0
+        ],
+        "y": [
+          -44.0,
+          -42.0
+        ],
+        "z": [
+          88.0,
+          93.0
+        ]
+      },
+      "radial_bound_mm": 102.88342918079665,
+      "attachment": {
+        "housing_gap_mm": 0.0,
+        "housing_overlap_mm3": 0,
+        "body_overlap_mm3": 0,
+        "body_overlap_outside_housing_mm3": 0
+      },
+      "min_starboard_rear_gap_mm": 6.210625039786734,
+      "sample_count": 21,
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "verdict": "VIABLE",
+  "selected": {
+    "attempt": "continuous_web",
+    "primitive_mm": {
+      "x": [
+        -300.0,
+        250.0
+      ],
+      "y": [
+        -44.0,
+        -42.0
+      ],
+      "z": [
+        88.0,
+        93.0
+      ]
+    }
+  }
+}

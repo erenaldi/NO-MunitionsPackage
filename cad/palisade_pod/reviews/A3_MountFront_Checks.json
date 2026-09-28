@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "unchanged_A2_roof_side_rails_rear_sensor_four_cells": true,
+  "forward_only_taper_inside_A2_hull": true,
+  "outer_xyz_mm": [
+    2980,
+    400,
+    223
+  ],
+  "approved_spear_max_fin_diameter_mm": 158.013,
+  "donor_door_and_aircraft_clearance_verified": false
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r9_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Halberd_R9_top_taper.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "target": [
+            -1235,
+            0,
+            136
+          ],
+          "orthographicHalfHeight": 24.0
+        },
+        "width": 1800,
+        "height": 600
+      }
+    ]
+  }
+]

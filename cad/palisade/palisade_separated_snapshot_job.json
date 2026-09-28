@@ -1,0 +1,11 @@
+{
+  "input": "HKP-1_Palisade_Separated_Review.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": { "mode": "rendered" },
+  "outputs": [
+    { "path": "Palisade_separated.png", "camera": { "direction": [-1, -1, 0.7] } },
+    { "path": "Palisade_main_nozzle.png", "camera": { "direction": [-1, -0.15, 0.1] } }
+  ],
+  "render": { "sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false }
+}

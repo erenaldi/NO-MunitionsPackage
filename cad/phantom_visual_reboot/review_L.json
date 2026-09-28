@@ -1,0 +1,28 @@
+[
+ {"input":"STEP/L_JoinedWing_R1_Stowed.step","mode":"view","outputs":[
+  {"path":"reviews/L_stowed_body_iso.png","camera":{"direction":[1,-1,0.7]}},
+  {"path":"reviews/L_stowed_body_side.png","camera":{"direction":[0,-1,0]}}
+ ]},
+ {"input":"STEP/L_JoinedWing_R1_Midfold.step","mode":"view","outputs":[
+  {"path":"reviews/L_midfold_body_iso.png","camera":{"direction":[1,-1,0.7]}},
+  {"path":"reviews/L_midfold_body_side.png","camera":{"direction":[0,-1,0]}}
+ ]},
+ {"input":"STEP/L_JoinedWing_R1_Deployed.step","mode":"view","outputs":[
+  {"path":"reviews/L_deployed_body_iso.png","camera":{"direction":[1,-1,0.7]}},
+  {"path":"reviews/L_deployed_body_side.png","camera":{"direction":[0,-1,0]}}
+ ]},
+ {"input":"STEP/L_JoinedWing_R1_Module_Stowed.step","mode":"view","outputs":[
+  {"path":"reviews/L_stowed_module_top.png","camera":{"direction":[0,0,1]}},
+  {"path":"reviews/L_stowed_module_iso.png","camera":{"direction":[1,-1,0.7]}},
+  {"path":"reviews/L_stowed_module_end.png","camera":{"direction":[-1,0,0]}}
+ ]},
+ {"input":"STEP/L_JoinedWing_R1_Module_Midfold.step","mode":"view","outputs":[
+  {"path":"reviews/L_midfold_module_top.png","camera":{"direction":[0,0,1]}},
+  {"path":"reviews/L_midfold_module_iso.png","camera":{"direction":[1,-1,0.7]}}
+ ]},
+ {"input":"STEP/L_JoinedWing_R1_Module_Deployed.step","mode":"view","outputs":[
+  {"path":"reviews/L_deployed_module_top.png","camera":{"direction":[0,0,1]}},
+  {"path":"reviews/L_deployed_module_iso.png","camera":{"direction":[1,-1,0.7]}},
+  {"path":"reviews/L_deployed_module_opposed.png","camera":{"direction":[-1,1,-0.7]}}
+ ]}
+]

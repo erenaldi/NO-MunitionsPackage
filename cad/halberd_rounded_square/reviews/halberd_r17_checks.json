@@ -1,0 +1,747 @@
+{
+  "ok": true,
+  "status": "PASS",
+  "baseline_r16_hash": "4d049aeacb914456de137e571ef0f226d7ae15316633568ffee372853c47b45e",
+  "layout_manifest_baseline_hash": "4d049aeacb914456de137e571ef0f226d7ae15316633568ffee372853c47b45e",
+  "scenes": {
+    "halberd_r17": {
+      "document_hash": "dedde9d95fce26d0a043b720082f78bcebd2002447942d08bcab500d69d456b8",
+      "leaf_count": 246,
+      "placements_valid": 246
+    },
+    "halberd_r17_separated": {
+      "document_hash": "3cdd65b2bcd5a9461ad98b133e77604a4bff9d9d2ef2815d58f1ca37a58e47b2",
+      "leaf_count": 246,
+      "placements_valid": 246
+    },
+    "halberd_r17_focus": {
+      "document_hash": "75e3ce6c8cbd84cc5f1590a240120d6dcc7413f7e16337d7a03ae84a8fd62510",
+      "leaf_count": 25,
+      "placements_valid": 25
+    },
+    "halberd_r17_main_fin_focus": {
+      "document_hash": "5876a90c6224f8a3366f56d87f02a40a79e0298a77d025c47ea3f56d2b294fa6",
+      "leaf_count": 7,
+      "placements_valid": 7
+    },
+    "halberd_r17_booster_fin_focus": {
+      "document_hash": "a3d5ba726320afe93c6a64b38d19e49ae353b785882ac6884583b81cf10c6856",
+      "leaf_count": 7,
+      "placements_valid": 7
+    },
+    "halberd_r17_nozzle_focus": {
+      "document_hash": "3001510c73a84e54f22c60e27a322e7284cb4f0c3fde7db19cad855526cc9b13",
+      "leaf_count": 24,
+      "placements_valid": 24
+    }
+  },
+  "saved_geometry_placements_validated": 555,
+  "inventory": {
+    "full_part_total": 246,
+    "unchanged_r16_part_total": 34,
+    "changed_host_total": 10,
+    "new_detail_total": 202,
+    "existing_r16_detail_total": 21,
+    "full_detail_total": 223,
+    "r16_primary_form_total": 23
+  },
+  "host_cuts": {
+    "booster_body": {
+      "cutter_count": 21,
+      "removed_volume_mm3": 12823.662668592635,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "booster_nozzle_r17_annular_seat",
+        "booster_nozzle_r17_fastener_seat_1",
+        "booster_nozzle_r17_fastener_seat_2",
+        "booster_nozzle_r17_fastener_seat_3",
+        "booster_nozzle_r17_fastener_seat_4",
+        "booster_nozzle_r17_fastener_seat_5",
+        "booster_nozzle_r17_fastener_seat_6",
+        "booster_nozzle_r17_fastener_seat_7",
+        "booster_nozzle_r17_fastener_seat_8",
+        "booster_access_xm1450_000_seat",
+        "booster_access_xm1450_000_screw_seat_1",
+        "booster_access_xm1450_000_screw_seat_2",
+        "booster_access_xm1450_090_seat",
+        "booster_access_xm1450_090_screw_seat_1",
+        "booster_access_xm1450_090_screw_seat_2",
+        "booster_access_xm1450_180_seat",
+        "booster_access_xm1450_180_screw_seat_1",
+        "booster_access_xm1450_180_screw_seat_2",
+        "booster_access_xm1450_270_seat",
+        "booster_access_xm1450_270_screw_seat_1",
+        "booster_access_xm1450_270_screw_seat_2"
+      ]
+    },
+    "booster_fin_fairing_1": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.0948497162096,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "booster_fin_fairing_1_r17_strip_pocket",
+        "booster_fin_fairing_1_r17_fastener_seat_1",
+        "booster_fin_fairing_1_r17_fastener_seat_2",
+        "booster_fin_fairing_1_r17_fastener_seat_3",
+        "booster_fin_fairing_1_r17_fastener_seat_4"
+      ]
+    },
+    "booster_fin_fairing_2": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.0948497121499,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "booster_fin_fairing_2_r17_strip_pocket",
+        "booster_fin_fairing_2_r17_fastener_seat_1",
+        "booster_fin_fairing_2_r17_fastener_seat_2",
+        "booster_fin_fairing_2_r17_fastener_seat_3",
+        "booster_fin_fairing_2_r17_fastener_seat_4"
+      ]
+    },
+    "booster_fin_fairing_3": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.09484970867027,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "booster_fin_fairing_3_r17_strip_pocket",
+        "booster_fin_fairing_3_r17_fastener_seat_1",
+        "booster_fin_fairing_3_r17_fastener_seat_2",
+        "booster_fin_fairing_3_r17_fastener_seat_3",
+        "booster_fin_fairing_3_r17_fastener_seat_4"
+      ]
+    },
+    "booster_fin_fairing_4": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.0948497120358,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "booster_fin_fairing_4_r17_strip_pocket",
+        "booster_fin_fairing_4_r17_fastener_seat_1",
+        "booster_fin_fairing_4_r17_fastener_seat_2",
+        "booster_fin_fairing_4_r17_fastener_seat_3",
+        "booster_fin_fairing_4_r17_fastener_seat_4"
+      ]
+    },
+    "main_body_intake_r12": {
+      "cutter_count": 113,
+      "removed_volume_mm3": 74120.94408414217,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "main_nozzle_r17_annular_seat",
+        "main_nozzle_r17_fastener_seat_1",
+        "main_nozzle_r17_fastener_seat_2",
+        "main_nozzle_r17_fastener_seat_3",
+        "main_nozzle_r17_fastener_seat_4",
+        "main_nozzle_r17_fastener_seat_5",
+        "main_nozzle_r17_fastener_seat_6",
+        "main_nozzle_r17_fastener_seat_7",
+        "main_nozzle_r17_fastener_seat_8",
+        "main_access_xm950_000_seat",
+        "main_access_xm950_000_screw_seat_1",
+        "main_access_xm950_000_screw_seat_2",
+        "main_access_xm950_090_seat",
+        "main_access_xm950_090_screw_seat_1",
+        "main_access_xm950_090_screw_seat_2",
+        "main_access_xm950_180_seat",
+        "main_access_xm950_180_screw_seat_1",
+        "main_access_xm950_180_screw_seat_2",
+        "main_access_xm950_270_seat",
+        "main_access_xm950_270_screw_seat_1",
+        "main_access_xm950_270_screw_seat_2",
+        "main_access_xm750_000_seat",
+        "main_access_xm750_000_screw_seat_1",
+        "main_access_xm750_000_screw_seat_2",
+        "main_access_xm750_090_seat",
+        "main_access_xm750_090_screw_seat_1",
+        "main_access_xm750_090_screw_seat_2",
+        "main_access_xm750_180_seat",
+        "main_access_xm750_180_screw_seat_1",
+        "main_access_xm750_180_screw_seat_2",
+        "main_access_xm750_270_seat",
+        "main_access_xm750_270_screw_seat_1",
+        "main_access_xm750_270_screw_seat_2",
+        "main_access_xm550_000_seat",
+        "main_access_xm550_000_screw_seat_1",
+        "main_access_xm550_000_screw_seat_2",
+        "main_access_xm550_090_seat",
+        "main_access_xm550_090_screw_seat_1",
+        "main_access_xm550_090_screw_seat_2",
+        "main_access_xm550_180_seat",
+        "main_access_xm550_180_screw_seat_1",
+        "main_access_xm550_180_screw_seat_2",
+        "main_access_xm550_270_seat",
+        "main_access_xm550_270_screw_seat_1",
+        "main_access_xm550_270_screw_seat_2",
+        "main_access_xm80_000_seat",
+        "main_access_xm80_000_screw_seat_1",
+        "main_access_xm80_000_screw_seat_2",
+        "main_access_xm80_090_seat",
+        "main_access_xm80_090_screw_seat_1",
+        "main_access_xm80_090_screw_seat_2",
+        "main_access_xm80_180_seat",
+        "main_access_xm80_180_screw_seat_1",
+        "main_access_xm80_180_screw_seat_2",
+        "main_access_xm80_270_seat",
+        "main_access_xm80_270_screw_seat_1",
+        "main_access_xm80_270_screw_seat_2",
+        "main_access_xp180_000_seat",
+        "main_access_xp180_000_screw_seat_1",
+        "main_access_xp180_000_screw_seat_2",
+        "main_access_xp180_090_seat",
+        "main_access_xp180_090_screw_seat_1",
+        "main_access_xp180_090_screw_seat_2",
+        "main_access_xp180_180_seat",
+        "main_access_xp180_180_screw_seat_1",
+        "main_access_xp180_180_screw_seat_2",
+        "main_access_xp180_270_seat",
+        "main_access_xp180_270_screw_seat_1",
+        "main_access_xp180_270_screw_seat_2",
+        "main_access_xp440_000_seat",
+        "main_access_xp440_000_screw_seat_1",
+        "main_access_xp440_000_screw_seat_2",
+        "main_access_xp440_090_seat",
+        "main_access_xp440_090_screw_seat_1",
+        "main_access_xp440_090_screw_seat_2",
+        "main_access_xp440_180_seat",
+        "main_access_xp440_180_screw_seat_1",
+        "main_access_xp440_180_screw_seat_2",
+        "main_access_xp440_270_seat",
+        "main_access_xp440_270_screw_seat_1",
+        "main_access_xp440_270_screw_seat_2",
+        "main_seam_xm850_000_groove",
+        "main_seam_xm850_000_screw_seat",
+        "main_seam_xm850_090_groove",
+        "main_seam_xm850_090_screw_seat",
+        "main_seam_xm850_180_groove",
+        "main_seam_xm850_180_screw_seat",
+        "main_seam_xm850_270_groove",
+        "main_seam_xm850_270_screw_seat",
+        "main_seam_xm650_000_groove",
+        "main_seam_xm650_000_screw_seat",
+        "main_seam_xm650_090_groove",
+        "main_seam_xm650_090_screw_seat",
+        "main_seam_xm650_180_groove",
+        "main_seam_xm650_180_screw_seat",
+        "main_seam_xm650_270_groove",
+        "main_seam_xm650_270_screw_seat",
+        "main_seam_xm200_000_groove",
+        "main_seam_xm200_000_screw_seat",
+        "main_seam_xm200_090_groove",
+        "main_seam_xm200_090_screw_seat",
+        "main_seam_xm200_180_groove",
+        "main_seam_xm200_180_screw_seat",
+        "main_seam_xm200_270_groove",
+        "main_seam_xm200_270_screw_seat",
+        "main_seam_xp320_000_groove",
+        "main_seam_xp320_000_screw_seat",
+        "main_seam_xp320_090_groove",
+        "main_seam_xp320_090_screw_seat",
+        "main_seam_xp320_180_groove",
+        "main_seam_xp320_180_screw_seat",
+        "main_seam_xp320_270_groove",
+        "main_seam_xp320_270_screw_seat"
+      ]
+    },
+    "main_fin_1": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.094224247213,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "main_fin_1_r17_strip_pocket",
+        "main_fin_1_r17_fastener_seat_1",
+        "main_fin_1_r17_fastener_seat_2",
+        "main_fin_1_r17_fastener_seat_3",
+        "main_fin_1_r17_fastener_seat_4"
+      ]
+    },
+    "main_fin_2": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.09421054188834,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "main_fin_2_r17_strip_pocket",
+        "main_fin_2_r17_fastener_seat_1",
+        "main_fin_2_r17_fastener_seat_2",
+        "main_fin_2_r17_fastener_seat_3",
+        "main_fin_2_r17_fastener_seat_4"
+      ]
+    },
+    "main_fin_3": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.094224256946,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "main_fin_3_r17_strip_pocket",
+        "main_fin_3_r17_fastener_seat_1",
+        "main_fin_3_r17_fastener_seat_2",
+        "main_fin_3_r17_fastener_seat_3",
+        "main_fin_3_r17_fastener_seat_4"
+      ]
+    },
+    "main_fin_4": {
+      "cutter_count": 5,
+      "removed_volume_mm3": 378.0942105473639,
+      "gained_volume_mm3": 0.0,
+      "cutter_labels": [
+        "main_fin_4_r17_strip_pocket",
+        "main_fin_4_r17_fastener_seat_1",
+        "main_fin_4_r17_fastener_seat_2",
+        "main_fin_4_r17_fastener_seat_3",
+        "main_fin_4_r17_fastener_seat_4"
+      ]
+    }
+  },
+  "new_detail_support": {
+    "details_checked": 202,
+    "minimum_common_face_area_mm2": 3.835963169849477,
+    "maximum_owner_overlap_mm3": 0.0,
+    "all_within_old_host_skin": true
+  },
+  "pair_interference": {
+    "new_detail_pairs_bbox_candidates_boolean_checked": 180,
+    "new_detail_pair_overlaps_ge_0_01_mm3": 0,
+    "new_vs_nonowner_baseline_bbox_candidates_boolean_checked": 20,
+    "new_vs_nonowner_overlaps_ge_0_01_mm3": 0,
+    "legacy_baseline_pairs_preserved": true
+  },
+  "fourfold_and_fold_copies_checked": 128,
+  "seam_checks": {
+    "groups_checked": 16,
+    "heads_visible_through_skin": 16,
+    "details": {
+      "main_seam_xm850_000": {
+        "liner_bounds_mm": [
+          -850.55,
+          -24.9,
+          99.39999999999999,
+          -849.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -858.78,
+          -1.78,
+          98.5,
+          -855.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm850_090": {
+        "liner_bounds_mm": [
+          -850.55,
+          -24.9,
+          99.39999999999999,
+          -849.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -858.78,
+          -1.78,
+          98.5,
+          -855.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm850_180": {
+        "liner_bounds_mm": [
+          -850.55,
+          -24.9,
+          99.39999999999999,
+          -849.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -858.78,
+          -1.78,
+          98.5,
+          -855.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm850_270": {
+        "liner_bounds_mm": [
+          -850.55,
+          -24.9,
+          99.39999999999999,
+          -849.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -858.78,
+          -1.78,
+          98.5,
+          -855.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm650_000": {
+        "liner_bounds_mm": [
+          -650.55,
+          -24.9,
+          99.39999999999999,
+          -649.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -658.78,
+          -1.78,
+          98.5,
+          -655.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm650_090": {
+        "liner_bounds_mm": [
+          -650.55,
+          -24.9,
+          99.39999999999999,
+          -649.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -658.78,
+          -1.78,
+          98.5,
+          -655.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm650_180": {
+        "liner_bounds_mm": [
+          -650.55,
+          -24.9,
+          99.39999999999999,
+          -649.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -658.78,
+          -1.78,
+          98.5,
+          -655.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm650_270": {
+        "liner_bounds_mm": [
+          -650.55,
+          -24.9,
+          99.39999999999999,
+          -649.4499999999999,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -658.78,
+          -1.78,
+          98.5,
+          -655.22,
+          1.78,
+          99.65000000000006
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm200_000": {
+        "liner_bounds_mm": [
+          -200.55,
+          -24.9,
+          99.39999999999999,
+          -199.45,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -208.78,
+          -1.78,
+          98.5,
+          -205.22,
+          1.78,
+          99.65000000000005
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm200_090": {
+        "liner_bounds_mm": [
+          -200.55,
+          -24.9,
+          99.39999999999999,
+          -199.45,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -208.78,
+          -1.78,
+          98.5,
+          -205.22,
+          1.78,
+          99.65000000000005
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm200_180": {
+        "liner_bounds_mm": [
+          -200.55,
+          -24.9,
+          99.39999999999999,
+          -199.45,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -208.78,
+          -1.78,
+          98.5,
+          -205.22,
+          1.78,
+          99.65000000000005
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xm200_270": {
+        "liner_bounds_mm": [
+          -200.55,
+          -24.9,
+          99.39999999999999,
+          -199.45,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          -208.78,
+          -1.78,
+          98.5,
+          -205.22,
+          1.78,
+          99.65000000000005
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xp320_000": {
+        "liner_bounds_mm": [
+          319.45,
+          -24.9,
+          99.39999999999999,
+          320.55,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          311.22,
+          -1.78,
+          98.5,
+          314.78,
+          1.78,
+          99.65000000000003
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xp320_090": {
+        "liner_bounds_mm": [
+          319.45,
+          -24.9,
+          99.39999999999999,
+          320.55,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          311.22,
+          -1.78,
+          98.5,
+          314.78,
+          1.78,
+          99.65000000000003
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xp320_180": {
+        "liner_bounds_mm": [
+          319.45,
+          -24.9,
+          99.39999999999999,
+          320.55,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          311.22,
+          -1.78,
+          98.5,
+          314.78,
+          1.78,
+          99.65000000000003
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      },
+      "main_seam_xp320_270": {
+        "liner_bounds_mm": [
+          319.45,
+          -24.9,
+          99.39999999999999,
+          320.55,
+          24.9,
+          99.8
+        ],
+        "screw_bounds_mm": [
+          311.22,
+          -1.78,
+          98.5,
+          314.78,
+          1.78,
+          99.65000000000003
+        ],
+        "body_at_98_4_mm": true,
+        "air_at_99_9_mm": true
+      }
+    }
+  },
+  "slot_checks": {
+    "fastener_heads_checked": 120
+  },
+  "nozzle_checks": {
+    "main": {
+      "ring_bounds_mm": [
+        -1123.133333333,
+        -72.75,
+        -72.75,
+        -1122.533333333,
+        72.75,
+        72.75
+      ],
+      "bore_open_clocks_degrees": [
+        0,
+        45,
+        90,
+        135,
+        180,
+        225,
+        270,
+        315
+      ],
+      "head_to_bore_radial_mm": 24.986999999999995
+    },
+    "booster": {
+      "ring_bounds_mm": [
+        -1684.8,
+        -72.75,
+        -72.75,
+        -1684.2,
+        72.75,
+        72.75
+      ],
+      "bore_open_clocks_degrees": [
+        0,
+        45,
+        90,
+        135,
+        180,
+        225,
+        270,
+        315
+      ],
+      "head_to_bore_radial_mm": 7.8870000000000005
+    }
+  },
+  "intake_channels": {
+    "1": {
+      "back_x_mm": -444.9739225656,
+      "blocked_samples": []
+    },
+    "2": {
+      "back_x_mm": -444.9739225656,
+      "blocked_samples": []
+    },
+    "3": {
+      "back_x_mm": -444.9739225656,
+      "blocked_samples": []
+    },
+    "4": {
+      "back_x_mm": -444.9739225656,
+      "blocked_samples": []
+    }
+  },
+  "focus_crops": {
+    "body": {
+      "clip_center_mm": [
+        -787.5,
+        0.0,
+        0.0
+      ],
+      "labels": 25
+    },
+    "main_fin": {
+      "clip_center_mm": [
+        -1031.0,
+        108.0,
+        111.0
+      ],
+      "labels": 7
+    },
+    "booster_fin": {
+      "clip_center_mm": [
+        -1407.0,
+        108.0,
+        110.0
+      ],
+      "labels": 7
+    },
+    "nozzle_pair": {
+      "main_shift_mm": [
+        0.0,
+        -130.0,
+        0.0
+      ],
+      "booster_shift_mm": [
+        0.0,
+        130.0,
+        0.0
+      ],
+      "labels": 24
+    }
+  },
+  "material_assignments_full": 235,
+  "material_assignments_separated": 235,
+  "material_assignments_focus": {
+    "halberd_r17_focus": 24,
+    "halberd_r17_main_fin_focus": 5,
+    "halberd_r17_booster_fin_focus": 5,
+    "halberd_r17_nozzle_focus": 22
+  },
+  "total_length_mm": 3370.0000002000006
+}

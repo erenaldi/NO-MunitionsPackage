@@ -1,12 +1,59 @@
 # AGM-110 Ballista RC2 — AGM-48/AGM-68 midpoint width rescale
 
+## Active context
+
+- **Current state:** `cad-review`. CAD, Unity, and historical runtime work exist,
+  but this contract does not record final user visual approval of the current RC2
+  packet or runtime acceptance of the current packaged artifact.
+- **Authoritative source:** `cad/ballista/ballista_geometry.py`, with
+  `cad/ballista/AGM-110_Ballista_Stowed.step` and
+  `cad/ballista/AGM-110_Ballista_Deployed.step` as generated pose masters.
+- **Approved concept / review packet:** user-directed reference work shaped the
+  candidate, but the 27-image packet remains documented as awaiting final visual
+  approval.
+- **Coordinate system and scale:** CAD millimeters, +X forward, +Z dorsal, +Y
+  lateral; Unity mapping `(X,Y,Z) -> (Y,Z,X) * 0.001`.
+- **Preserve:** broad chamfered body, long swept folding-wing identity, compact
+  tail controls, faceted seeker, recessed propulsion and intake features, and
+  distinct stowed/deployed states.
+- **Avoid:** board-like or weakly aligned wings, accidental loft inflation,
+  undocumented recentering or axis correction, exterior upper scoops, and donor
+  behavior inferred only from serialized fields.
+- **Emphasize:** shaped-charge standoff identity, clean wing-body integration,
+  visible deployment mechanics, and restrained vanilla-compatible detail.
+- **Rejected interpretations:** combined intake/scoop revisions that changed the
+  intended recess language and folding changes that did not preserve the approved
+  planform or motion reading.
+- **Hard constraints:** RC2 dimensions, label/group mapping, transform and pivot
+  datums, motion ownership, material separation, and runtime-owned components in
+  this contract.
+- **Open decisions:** explicit RC2 visual approval, authoritative current bundle
+  identity, final rack/deployment/FX review, and a recorded acceptance flight for
+  the current propulsion and transition behavior.
+- **Files required for the next gate:** this contract, the shared CAD source, both
+  pose masters, current deterministic reports, and the named review images.
+
+### Lifecycle evidence
+
+| Boundary | State and evidence |
+|---|---|
+| Intent / concept | References and user-directed revisions are documented, but there is no workflow-format approval record for the current RC2 packet. |
+| CAD | Both pose masters and deterministic checks are recorded as passing; user visual approval remains pending, so the controlling state is `cad-review`. |
+| Export | Current reports and Unity assets exist, but source identity and the applicable RC2 export must be re-verified before promotion. |
+| Engine | Prefabs and bundle work exist in the worktree. Their presence is not equivalent to representative engine visual approval. |
+| Runtime | Historical flight tests found and drove repairs for rack visibility, deployment, drag, propulsion sequencing, and FX. Final current-artifact runtime acceptance is not recorded. |
+
+The RC1 implementation-status wording retained below is historical. The active
+context and RC2 table govern current state; no existing file is promoted solely by
+modification time or proximity.
+
 **RC2 supersedes the RC1 numbers below.** Per user direction the central body
 cross-section moved to the midpoint of the AGM-48 and AGM-68 central body
 diameters, both slice-measured from runtime mesh dumps: AGM-48 **180 mm**
 (`AGM1.geometry.obj`), AGM-68 **300 mm** (`AGM_heavy.geometry.obj`) →
 **240 mm** body width/height (`LATERAL_SCALE = 0.8109` of RC1 laterals; axial
 constants are untouched). Key RC2 values, all enforced by
-`cad/check_ballista.py` and `cad/Ballista_checks.json`:
+`cad/ballista/check_ballista.py` and `cad/ballista/Ballista_checks.json`:
 
 | Property | RC2 value |
 |---|---|
@@ -29,20 +76,20 @@ numbers with the RC2 table above when in doubt.
 
 # AGM-110 Ballista RC1 — full-chord aligned wings and 40-degree deployment
 
-Status: CAD release candidate for user visual approval. Unity meshes, prefabs,
-animation, bundles, and gameplay integration have not been implemented in this
-pass. The exterior preserves the Ballista shaped-charge standoff identity;
+Historical RC1 status: CAD release candidate for user visual approval. Unity
+meshes, prefabs, animation, bundles, and gameplay integration had not been
+implemented in that pass. The exterior preserves the Ballista shaped-charge standoff identity;
 internal warhead and propulsion engineering are outside this art model.
 
 ## Masters and evidence
 
-- Shared source: `cad/ballista_geometry.py`.
-- Stowed master: `cad/AGM-110_Ballista_Stowed.step`, built by
-  `cad/generate_ballista_stowed.py`.
-- Deployed master: `cad/AGM-110_Ballista_Deployed.step`, built by
-  `cad/generate_ballista_deployed.py`.
+- Shared source: `cad/ballista/ballista_geometry.py`.
+- Stowed master: `cad/ballista/AGM-110_Ballista_Stowed.step`, built by
+  `cad/ballista/generate_ballista_stowed.py`.
+- Deployed master: `cad/ballista/AGM-110_Ballista_Deployed.step`, built by
+  `cad/ballista/generate_ballista_deployed.py`.
 - Both contain **58 labeled positive-volume solids**, classified into 13 semantic
-  groups by `semantic_group()`; `cad/check_ballista.py` independently enumerates
+  groups by `semantic_group()`; `cad/ballista/check_ballista.py` independently enumerates
   the expected labels. Review crops are diagnostic derivatives, not masters.
 - The intake revision supersedes the initial RC1 tree identities. Check the
   current source/output identity with `cadgen store why` before a later export.
@@ -188,7 +235,7 @@ read the source material intent rather than assume STEP carries a complete PBR s
 Initial export targets, **not measured delivery results**:
 
 - Reuse the existing OBJ/grouping approach demonstrated by
-  `cad/export_halberd_unity_mesh.py`; no Ballista exporter exists yet.
+  `cad/halberd/export_halberd_unity_mesh.py`; no Ballista exporter exists yet.
 - Start with 0.12 mm chord tolerance and 0.12 rad angular tolerance; examine the
   nozzle rim, optic chamfers, finite wing edges, and thin seams after export.
 - Provisional LOD0 ceiling: 75,000 triangles for the complete missile, matching
@@ -244,7 +291,7 @@ cadgen viewer --host 127.0.0.1 --json
 ```
 
 Full-chord revision results: both 58-occurrence validations pass with zero findings. The
-deterministic report `cad/Ballista_checks.json` passes bounds, positive-volume
+deterministic report `cad/ballista/Ballista_checks.json` passes bounds, positive-volume
 BREPs, label/group identity, fixed-part symmetric differences, mirrored controls,
 rigid wing transformations, attachment contact, and open optical/exhaust paths.
 The STEP round-trip also verifies cylindrical pocket-blend faces at all three
@@ -266,13 +313,13 @@ round-trip BREP bounds in `Ballista_checks.json` are centered at zero and govern
 this contract. The cached summary discrepancy remains a tooling issue to resolve
 before using that summary as an export bound oracle.
 
-The refreshed 27-image packet in `cad/ballista_snapshot_job.json` includes full-model
+The refreshed 27-image packet in `cad/ballista/ballista_snapshot_job.json` includes full-model
 opposed views and orthographics, material previews, seeker grazing views,
 propulsion/tail closeups and section, mounting views, and wing deployment/root
 details. Its cropped body caps are diagnostic cuts, not extra release geometry.
 The two `Ballista_wing_recess_*` images isolate the hull pockets without wings
 obscuring the curved shoulder and floor transitions.
-The five additional views in `cad/ballista_intake_snapshot_job.json` show the
+The five additional views in `cad/ballista/ballista_intake_snapshot_job.json` show the
 intake face, opposed obliques, grazing depth, and a half-section.
 The source repair pass seated the wing housings against the body, tapered the
 tail saddles, corrected the side-detail vertical mapping, and added the optical
@@ -282,16 +329,16 @@ budgets, rack fit, deployment timing, and multiplayer behavior remain unverified
 
 ### Review entrypoints
 
-- [Smoothed wing recesses, isolated hull](../cad/Ballista_wing_recess_smoothing.png)
-- [Smoothed recesses, opposite view](../cad/Ballista_wing_recess_opposite.png)
-- [Detailed intake](../cad/Ballista_intake_detail.png)
-- [Intake section](../cad/Ballista_intake_section.png)
-- [Deployed material view](../cad/Ballista_deployed_material.png)
-- [Deployed underside](../cad/Ballista_deployed_material_belly.png)
-- [Stowed material view](../cad/Ballista_stowed_material.png)
-- [Wing deployment: 0 / 20 / 40 degrees](../cad/Ballista_wing_deployment.png)
-- [Wing root](../cad/Ballista_wing_root_grazing.png)
-- [Seeker](../cad/Ballista_seeker_detail.png)
-- [Propulsion and tail](../cad/Ballista_propulsion_detail.png)
-- [Propulsion section](../cad/Ballista_propulsion_section.png)
-- [Dorsal mounting](../cad/Ballista_mount_detail.png)
+- [Smoothed wing recesses, isolated hull](../cad/ballista/Ballista_wing_recess_smoothing.png)
+- [Smoothed recesses, opposite view](../cad/ballista/Ballista_wing_recess_opposite.png)
+- [Detailed intake](../cad/ballista/Ballista_intake_detail.png)
+- [Intake section](../cad/ballista/Ballista_intake_section.png)
+- [Deployed material view](../cad/ballista/Ballista_deployed_material.png)
+- [Deployed underside](../cad/ballista/Ballista_deployed_material_belly.png)
+- [Stowed material view](../cad/ballista/Ballista_stowed_material.png)
+- [Wing deployment: 0 / 20 / 40 degrees](../cad/ballista/Ballista_wing_deployment.png)
+- [Wing root](../cad/ballista/Ballista_wing_root_grazing.png)
+- [Seeker](../cad/ballista/Ballista_seeker_detail.png)
+- [Propulsion and tail](../cad/ballista/Ballista_propulsion_detail.png)
+- [Propulsion section](../cad/ballista/Ballista_propulsion_section.png)
+- [Dorsal mounting](../cad/ballista/Ballista_mount_detail.png)

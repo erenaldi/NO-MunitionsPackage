@@ -38,13 +38,13 @@ engagements without restarting after one kill.
 |---|---|---|
 | `AIR-CLOSE` | Four spaced gun-only high-bravery fighters | Repeated dogfight/IR engagements, off-boresight, LOAL, flare, and maneuver testing |
 | `AIR-BVR` | Radar target near the southwest map corner, about 85 km from `AIR-CLOSE` | ARH, LOAL, notch, and long-range air testing |
-| `GROUND-AREA` | Three spaced IFVs | Cluster, rocket dispersion, and soft/armored area effects |
-| `IADS-HARD` | Search radar, radar SAM, pillboxes, fixed radar | SEAD, decoy, ECM, penetration, fixed-coordinate, hard-kill, and terminal-defense testing |
+| `GROUND-AREA` | Three spaced IFVs | Submunition carpet and soft/armored area effects |
+| `IADS-HARD` | Search radar, radar SAM, pillboxes, fixed radar | SEAD, decoy, ECM, fixed-coordinate, hard-kill, and terminal-defense testing |
 | `NAVAL-WATER` | Corvette | Ship strike, water entry, and torpedo testing |
 
 Each zone has a persistent, matching objective label on the tactical map.
 
-The complete 15-weapon mapping is in
+The complete 12-weapon mapping is in
 `missions/Erenaldi.ProvingGround/lane-manifest.json`. A `live` lane has a
 registered package mount. Reserved lanes describe the target environment and
 vanilla fallback but are not embedded as nonexistent custom keys.

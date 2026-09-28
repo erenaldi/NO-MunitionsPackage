@@ -1,0 +1,355 @@
+{
+  "scope": "stowed only; deployment unverified",
+  "parts": {
+    "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 121.62236650550894
+    },
+    "supported_housing": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 123.60016181219181
+    },
+    "starboard_front": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 114.76799541866653
+    },
+    "starboard_rear": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 106.4339833225819
+    },
+    "starboard_fixed_root": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 106.31204071035415
+    },
+    "starboard_carriage": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 100.92695378341705
+    },
+    "starboard_join": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 107.08057713702794
+    },
+    "port_front": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 123.83332658221865
+    },
+    "port_rear": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 115.69871566232557
+    },
+    "port_fixed_root": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 116.1077086157504
+    },
+    "port_carriage": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 110.72488428533127
+    },
+    "port_join": {
+      "valid_single_solid": true,
+      "radial_bound_mm": 116.81181447096145
+    }
+  },
+  "panel_pairs": [
+    {
+      "a": "starboard_front",
+      "b": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "clearance_mm": 7.75,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "supported_housing",
+      "clearance_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "starboard_rear",
+      "clearance_mm": 1.0,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "starboard_fixed_root",
+      "clearance_mm": 0.24999999999997152,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "starboard_carriage",
+      "clearance_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "starboard_join",
+      "clearance_mm": 0.24999999995787903,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "port_front",
+      "clearance_mm": 6.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "port_rear",
+      "clearance_mm": 1.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "port_fixed_root",
+      "clearance_mm": 4.9676415563751455,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "port_carriage",
+      "clearance_mm": 0.75,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_front",
+      "b": "port_join",
+      "clearance_mm": 20.1254119789258,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "clearance_mm": 2.75,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "supported_housing",
+      "clearance_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "starboard_front",
+      "clearance_mm": 1.0,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "starboard_fixed_root",
+      "clearance_mm": 278.00694469897996,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "starboard_carriage",
+      "clearance_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "starboard_join",
+      "clearance_mm": 0.2499999999556053,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "port_front",
+      "clearance_mm": 11.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "port_rear",
+      "clearance_mm": 6.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "port_fixed_root",
+      "clearance_mm": 283.9479806562169,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "port_carriage",
+      "clearance_mm": 5.75,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "starboard_rear",
+      "b": "port_join",
+      "clearance_mm": 28.139592130939178,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "clearance_mm": 18.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "supported_housing",
+      "clearance_mm": 5.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "starboard_front",
+      "clearance_mm": 6.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "starboard_rear",
+      "clearance_mm": 11.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "starboard_fixed_root",
+      "clearance_mm": 9.82577284344946,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "starboard_carriage",
+      "clearance_mm": 10.75,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "starboard_join",
+      "clearance_mm": 17.95918169965116,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "port_rear",
+      "clearance_mm": 1.0,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "port_fixed_root",
+      "clearance_mm": 0.2499999999997288,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "port_carriage",
+      "clearance_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_front",
+      "b": "port_join",
+      "clearance_mm": 0.24999999996003908,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "clearance_mm": 13.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "supported_housing",
+      "clearance_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "starboard_front",
+      "clearance_mm": 1.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "starboard_rear",
+      "clearance_mm": 6.5,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "starboard_fixed_root",
+      "clearance_mm": 284.0061939795383,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "starboard_carriage",
+      "clearance_mm": 10.75,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "starboard_join",
+      "clearance_mm": 23.948476700842857,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "port_front",
+      "clearance_mm": 1.0,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "port_fixed_root",
+      "clearance_mm": 278.0069446989798,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "port_carriage",
+      "clearance_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "a": "port_rear",
+      "b": "port_join",
+      "clearance_mm": 0.24999999996390443,
+      "overlap_mm3": 0
+    }
+  ],
+  "identity_mm3": {
+    "starboard_front": 0,
+    "starboard_rear": 0,
+    "port_front": 0,
+    "port_rear": 0
+  },
+  "support_contacts": [
+    {
+      "part": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "gap_mm": 0.0,
+      "overlap_mm3": 0
+    },
+    {
+      "part": "starboard_fixed_root",
+      "gap_mm": 0.0,
+      "overlap_mm3": 314.1592653589794
+    },
+    {
+      "part": "starboard_carriage",
+      "gap_mm": 0.0,
+      "overlap_mm3": 0
+    },
+    {
+      "part": "port_fixed_root",
+      "gap_mm": 0.0,
+      "overlap_mm3": 314.1592653589794
+    },
+    {
+      "part": "port_carriage",
+      "gap_mm": 0.0,
+      "overlap_mm3": 0
+    }
+  ],
+  "body_difference_mm3": 0,
+  "failures": [],
+  "passed": true
+}

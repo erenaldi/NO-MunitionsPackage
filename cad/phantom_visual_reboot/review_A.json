@@ -1,0 +1,24 @@
+[
+  {
+    "input": "STEP/A_Facet_Deployed.step", "mode": "view",
+    "outputs": [
+      {"path": "reviews/A_deployed_opposite.png", "camera": {"direction": [1, 1, -0.7]}},
+      {"path": "reviews/A_deployed_side.png", "camera": {"direction": [0, -1, 0]}},
+      {"path": "reviews/A_deployed_top.png", "camera": {"direction": [0, 0, 1]}},
+      {"path": "reviews/A_deployed_nose.png", "camera": {"direction": [1, 0, 0]}},
+      {"path": "reviews/A_deployed_tail.png", "camera": {"direction": [-1, 0, 0]}}
+    ],
+    "render": {"sizeProfile": "diagnostic", "padding": 0.11}
+  },
+  {
+    "input": "STEP/A_Facet_Stowed.step", "mode": "view",
+    "outputs": [
+      {"path": "reviews/A_stowed_opposite.png", "camera": {"direction": [1, 1, -0.7]}},
+      {"path": "reviews/A_stowed_side.png", "camera": {"direction": [0, -1, 0]}},
+      {"path": "reviews/A_stowed_top.png", "camera": {"direction": [0, 0, 1]}},
+      {"path": "reviews/A_stowed_nose.png", "camera": {"direction": [1, 0, 0]}},
+      {"path": "reviews/A_stowed_tail.png", "camera": {"direction": [-1, 0, 0]}}
+    ],
+    "render": {"sizeProfile": "diagnostic", "padding": 0.11}
+  }
+]

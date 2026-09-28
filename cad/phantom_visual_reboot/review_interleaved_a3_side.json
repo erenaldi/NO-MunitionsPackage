@@ -1,0 +1,33 @@
+[
+  {
+    "input": "STEP/O_Interleaved_A3_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A3_stowed_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1200,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

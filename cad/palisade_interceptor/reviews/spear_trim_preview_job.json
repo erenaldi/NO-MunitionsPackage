@@ -1,0 +1,11 @@
+{
+  "input": "STEP/Spear_Trim_Boattail.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {"mode": "rendered"},
+  "outputs": [
+    {"path": "reviews/Spear_Trim_preview_iso.png", "camera": {"direction": [-1, -1, 0.8]}},
+    {"path": "reviews/Spear_Trim_preview_side.png", "camera": {"direction": [0, -1, 0]}}
+  ],
+  "render": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

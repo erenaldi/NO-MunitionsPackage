@@ -1,0 +1,10 @@
+{
+  "input": "STEP/Spear_ACMPortGroup0_Cap_Focus.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_ACMPortGroup0_cap_minus_y.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_ACMPortGroup0_cap_plus_z.png", "camera": {"direction": [0, 0, 1]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "length_mm": 1200.0,
+  "radial_envelope_mm": 79.009,
+  "band_and_tip_section_radii_mm": {
+    "-599.5": 6.145,
+    "-566.0": 34.037,
+    "-520.0": 62.0,
+    "-500.0": 62.0,
+    "-470.0": 62.0,
+    "-440.0": 62.0,
+    "-421.0": 60.891
+  },
+  "prototype_nozzle": "thruster_0",
+  "detailed_nozzle_count": 1,
+  "dark_blind_throat": true,
+  "other_three_nozzles_original": true,
+  "blind_recess_and_open_bore": true,
+  "approved_fins_preserved": true,
+  "stage_shapes_preserved": true
+}

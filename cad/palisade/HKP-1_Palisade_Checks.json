@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "file": "HKP-1_Palisade_Interceptor.step",
+  "label": "HKP-1_Palisade_Interceptor",
+  "part_count": 11,
+  "labels": [
+    "body",
+    "main_nozzle",
+    "nozzle_0",
+    "nozzle_180",
+    "nozzle_270",
+    "nozzle_90",
+    "stabilizer_135",
+    "stabilizer_225",
+    "stabilizer_315",
+    "stabilizer_45",
+    "turning_cap"
+  ],
+  "model_bbox_mm": {
+    "min": [
+      -600.0,
+      -82.0,
+      -82.0
+    ],
+    "max": [
+      600.0000001,
+      82.0,
+      82.0
+    ],
+    "size": [
+      1200.0000000999999,
+      164.0,
+      164.0
+    ]
+  },
+  "maximum_radius_mm": {
+    "body": 70.0,
+    "turning_cap": 70.0,
+    "main_nozzle": 45.0,
+    "stabilizer_45": 82.055,
+    "stabilizer_135": 82.055,
+    "stabilizer_225": 82.055,
+    "stabilizer_315": 82.055,
+    "nozzle_0": 82.734,
+    "nozzle_90": 82.734,
+    "nozzle_180": 82.734,
+    "nozzle_270": 82.734
+  },
+  "body_radius_mm": 70.0,
+  "cap_length_mm": 170.0,
+  "nozzle_mouth_probe_blocked_by": [
+    "turning_cap",
+    "main_nozzle"
+  ],
+  "recess_center_probe_hits": [
+    "main_nozzle"
+  ],
+  "recess_annulus_probe_hits": [],
+  "nose_inner_probe_hits": [
+    "body"
+  ],
+  "nose_outer_probe_hits": [],
+  "cap_detachable": true,
+  "scope": "silhouette candidate; aircraft rack fit and Unity runtime not verified"
+}

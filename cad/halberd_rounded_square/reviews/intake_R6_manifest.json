@@ -1,0 +1,51 @@
+{
+  "revision": "R6",
+  "state": "concept-review",
+  "user_approved": false,
+  "artifacts": [
+    {
+      "path": "STEP/Selected_Intake_R6.step",
+      "sha256": "92aae861d1b659861e8146fcbbf519b37f1b47f28869410453f92db199247c24"
+    },
+    {
+      "path": "STEP/Selected_Intake_R6_Separated.step",
+      "sha256": "b54851138e94a993c7ca1ea1299c9d76f95529563967bd1c97842ef0d5332b55"
+    },
+    {
+      "path": "reviews/Intake_R6_taper.png",
+      "sha256": "df72b73a1d0252abf08900b5c1a25901701684dada51d822e554ded9dfa8488c"
+    },
+    {
+      "path": "reviews/Intake_R6_R5_comparison.png",
+      "sha256": "2616447e9d164fab3a2a57b96e22ae1f1a924d7f6ca4940ded689156cd6e3af8"
+    },
+    {
+      "path": "reviews/Intake_R6_profile.png",
+      "sha256": "4c58b3d0ae5c92158871d2110788ae1e250521c46ed1a8162334f858b33569d6"
+    },
+    {
+      "path": "reviews/Intake_R6_context.png",
+      "sha256": "0aac7ed7e9985438f34e658bd5f672e32c80f3ee7574ca4eaee524d03bed5f0f"
+    },
+    {
+      "path": "reviews/Intake_R6_opposite.png",
+      "sha256": "81da75e34df24543232075d93360e7cbb89c0b3f7971edab756729592d5160c7"
+    },
+    {
+      "path": "reviews/Intake_R6_front.png",
+      "sha256": "5134df0ed2d2d0b7121ae4322612308dd6694afc20e91e2dc61694c368008207"
+    },
+    {
+      "path": "reviews/Intake_R6_rear.png",
+      "sha256": "d47752e0a66f11526cea36b6854e823fcc4f8c5f4f3c01c92861141a3a50c22f"
+    },
+    {
+      "path": "reviews/Intake_R6_edges.png",
+      "sha256": "3ce3eae4f7dac6664ee31a15925209ab00df2fabe888ff0a855435b49da0205f"
+    },
+    {
+      "path": "reviews/Intake_R6_separated.png",
+      "sha256": "f8dc8c22d0ff690c9df54cf0664db91e7e4743071f71dac8234a4c172d0c3b9d"
+    }
+  ]
+}

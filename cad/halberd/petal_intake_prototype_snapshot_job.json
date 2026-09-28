@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Halberd_C4_Petal_Intake_Prototype.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Halberd_C4_Petal_Prototype_iso.png", "camera": {"direction": [-1, -1, 0.7]}},
+      {"path": "Halberd_C4_Petal_Prototype_opposite.png", "camera": {"direction": [1, 1, -0.7]}},
+      {"path": "Halberd_C4_Petal_Prototype_side.png", "camera": {"direction": [0, -1, 0]}}
+    ],
+    "render": {"sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false}
+  },
+  {
+    "input": "Halberd_C4_Petal_Intake_Prototype_Closeup.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Halberd_C4_Petal_Prototype_intake.png", "camera": {"direction": [1, -1, 0.7]}},
+      {"path": "Halberd_C4_Petal_Prototype_mouth.png", "camera": {"direction": [1, 0, 0]}},
+      {"path": "Halberd_C4_Petal_Prototype_grazing.png", "camera": {"direction": [0.15, -1, 0.12]}}
+    ],
+    "render": {"sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false}
+  }
+]

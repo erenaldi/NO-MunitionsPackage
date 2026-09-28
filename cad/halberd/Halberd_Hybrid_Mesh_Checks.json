@@ -1,0 +1,230 @@
+{
+  "ok": true,
+  "occt_tessellation_mm": 0.12,
+  "angular_tolerance": 0.12,
+  "occt_weld_decimal_places_mm": 6,
+  "viewer_weld_decimal_places_m": 8,
+  "parts": [
+    {
+      "label": "sustainer_body",
+      "vertices": 13524,
+      "triangles": 27044,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 49967426.01183807,
+      "cad_volume_mm3": 49999785.4399185
+    },
+    {
+      "label": "radome",
+      "vertices": 3317,
+      "triangles": 6630,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 7957400.568578496,
+      "cad_volume_mm3": 7994346.370067101
+    },
+    {
+      "label": "sustainer_nozzle",
+      "vertices": 896,
+      "triangles": 1788,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 619833.8313099508,
+      "cad_volume_mm3": 619831.9246174655
+    },
+    {
+      "label": "intake_floor_1",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 1358.8245503959915,
+      "cad_volume_mm3": 1359.3933244548994
+    },
+    {
+      "label": "sustainer_fin_1",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 119671.5959999998,
+      "cad_volume_mm3": 118472.112
+    },
+    {
+      "label": "intake_floor_2",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 1358.8245503960134,
+      "cad_volume_mm3": 1359.3933244548991
+    },
+    {
+      "label": "sustainer_fin_2",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 119671.5959999998,
+      "cad_volume_mm3": 118472.112
+    },
+    {
+      "label": "intake_floor_3",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 1358.824550396074,
+      "cad_volume_mm3": 1359.3933244548994
+    },
+    {
+      "label": "sustainer_fin_3",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 119671.5959999998,
+      "cad_volume_mm3": 118472.11200000002
+    },
+    {
+      "label": "intake_floor_4",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 1358.8245503960109,
+      "cad_volume_mm3": 1359.3933244548991
+    },
+    {
+      "label": "sustainer_fin_4",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 119671.5959999998,
+      "cad_volume_mm3": 118472.112
+    },
+    {
+      "label": "booster_body",
+      "vertices": 1086,
+      "triangles": 2168,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 51933782.415572554,
+      "cad_volume_mm3": 51940830.757625476
+    },
+    {
+      "label": "booster_nozzle",
+      "vertices": 1002,
+      "triangles": 2000,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 454861.5422479436,
+      "cad_volume_mm3": 454858.7263477057
+    },
+    {
+      "label": "booster_fin_1",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 221565.0070833325,
+      "cad_volume_mm3": 220901.89333333325
+    },
+    {
+      "label": "booster_fin_2",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 221565.00708333286,
+      "cad_volume_mm3": 220901.8933333332
+    },
+    {
+      "label": "booster_fin_3",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 221565.007083333,
+      "cad_volume_mm3": 220901.89333333328
+    },
+    {
+      "label": "booster_fin_4",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 221565.0070833333,
+      "cad_volume_mm3": 220901.89333333322
+    },
+    {
+      "label": "mount_1",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 15500.0,
+      "cad_volume_mm3": 15499.999999999996
+    },
+    {
+      "label": "mount_2",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 15500.0,
+      "cad_volume_mm3": 15499.999999999996
+    }
+  ],
+  "viewer_glb_geometries": [
+    {
+      "label": "GLTF",
+      "vertices": 4243,
+      "triangles": 8482,
+      "watertight": true,
+      "consistent_winding": true,
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "mesh_volume": 0.04996077637299982
+    }
+  ]
+}

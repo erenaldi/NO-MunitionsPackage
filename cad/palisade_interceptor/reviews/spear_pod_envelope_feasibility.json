@@ -1,0 +1,37 @@
+{
+  "source_step": "Spear_ACMWrap.step",
+  "measured_interceptor_length_mm": 1200.0,
+  "measured_radial_envelope_mm": 79.006,
+  "measured_diameter_envelope_mm": 158.013,
+  "nominal_pod_length_mm": 1800.0,
+  "nominal_box_outer_width_height_mm": 400.0,
+  "nominal_axial_surplus_mm": 600.0,
+  "study_wall_mm": 10.0,
+  "study_internal_divider_mm": 10.0,
+  "study_square_cell_center_y_z_mm": [
+    [
+      -90.0,
+      -90.0
+    ],
+    [
+      -90.0,
+      90.0
+    ],
+    [
+      90.0,
+      -90.0
+    ],
+    [
+      90.0,
+      90.0
+    ]
+  ],
+  "box_square_pack_min_inner_wall_clearance_mm": 20.994,
+  "box_adjacent_envelope_gap_mm": 21.987,
+  "box_gap_after_example_divider_mm": 11.987,
+  "round_400mm_shell_study_wall_clearance_mm": -16.286,
+  "round_shell_min_outer_diameter_for_example_walls_mm": 415.618,
+  "donor_launcher_local_transforms_verified": false,
+  "pod_skin_and_door_sweep_verified": false,
+  "note": "Geometric bounding-circle packing only; not a saved AGM2_6Pod placement/clearance result."
+}

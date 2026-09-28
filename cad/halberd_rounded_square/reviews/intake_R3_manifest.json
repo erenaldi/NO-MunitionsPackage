@@ -1,0 +1,109 @@
+{
+  "revision": "R3",
+  "state": "concept-review",
+  "user_approved": false,
+  "intakes_prototyped": 1,
+  "contract": "R3_DRAWING_CONTRACT.md",
+  "artifacts": [
+    {
+      "path": "STEP/Selected_Intake_R3.step",
+      "sha256": "d4ab635846747b0bf2f46e8e828ccf0ccea8649dd64a3e2c2884ee48af0680b6"
+    },
+    {
+      "path": "STEP/Selected_Intake_R3_Separated.step",
+      "sha256": "f266cc98286f555b880501a2d8cb2f39fbec8369fb6fc6d8c93d7b33780f55ba"
+    },
+    {
+      "path": "STEP/Selected_Intake_R3_Section.step",
+      "sha256": "76b6749c7c755775b38a04aea367bd722e4ed0e01edab742bcfaa3bd57e903e8"
+    },
+    {
+      "path": "reviews/Intake_R3_context.png",
+      "sha256": "bf03243c2a4922d6feac59fad7134e4c4d3d7e65e113fcc56f37ce0ca55a7752"
+    },
+    {
+      "path": "reviews/Intake_R3_opposite.png",
+      "sha256": "f48a92a4c675122b6c9b122c2486b601317332155465d42a2193d4965a765e45"
+    },
+    {
+      "path": "reviews/Intake_R3_front.png",
+      "sha256": "a425aa255ea6d0c1c80b47ad8d52a11aa9eaecacb5e3f3a7c0ce5c722c7ee4ab"
+    },
+    {
+      "path": "reviews/Intake_R3_rear.png",
+      "sha256": "810325770d1da6fbdb44eb082137790884c5a5b2e2174acd60940bc4ce02188f"
+    },
+    {
+      "path": "reviews/Intake_R3_profile.png",
+      "sha256": "883492823b2b7790688e992263779757387f9a2fb869a6902c6b7ec75be7d8ce"
+    },
+    {
+      "path": "reviews/Intake_R3_taper.png",
+      "sha256": "ad5f65e27fe1152e131d996898551cfb4097e5f3fe826efbcd61cca3f827c84c"
+    },
+    {
+      "path": "reviews/Intake_R3_mouth.png",
+      "sha256": "9814b2e8a5435925271afb1b0a151bef283824e64958eaaa90393bd1095fb9e5"
+    },
+    {
+      "path": "reviews/Intake_R3_fin_seat.png",
+      "sha256": "19e234180f9860fd7cf7dee34658713d2f1880694e63f38ff3b342733867bc2b"
+    },
+    {
+      "path": "reviews/Intake_R3_separated.png",
+      "sha256": "f2430dd041fb3185b164283b536e42a0a173cc5f74de33169164eab82edb7195"
+    },
+    {
+      "path": "reviews/Intake_R3_section.png",
+      "sha256": "03b9dc7a96bd3d90e91c0dd09bf04e75b98583a0fc3930fb98c1de799f275692"
+    },
+    {
+      "path": "reviews/Intake_R3_Drawing_Views.png",
+      "sha256": "a1954c24aafd5cbc6b44d15933a1991722389a79acbbf46358d8325921937e05"
+    },
+    {
+      "path": "reviews/Intake_R3_Details.png",
+      "sha256": "41ea09214dbf17ebec787137bd2c1db70acdf9b86ca7bf3c714bc032f6b2bc9c"
+    },
+    {
+      "path": "reviews/Intake_R3_Context.png",
+      "sha256": "bf03243c2a4922d6feac59fad7134e4c4d3d7e65e113fcc56f37ce0ca55a7752"
+    },
+    {
+      "path": "reviews/intake_R3_checks.json",
+      "sha256": "3fd9bb125c7ddef58e74f4e107febbe2921cf92604c557555dc9da8407247501"
+    },
+    {
+      "path": "src/intake_r3_shapes.py",
+      "sha256": "99ee4351999f98f22c18f3ac4328ad9849c7cb1d23bf97bb07818386f00724a1"
+    },
+    {
+      "path": "src/intake_r3.py",
+      "sha256": "44a2dfea886309713eeba9467e52d9e9df9bfeb3a77096e5be73ff8c2b3070fc"
+    },
+    {
+      "path": "src/intake_r3_separated.py",
+      "sha256": "1148bf4c0e0defeec31da53e2c2122b78a9427198900bcfdec46abb4c9b5d2ed"
+    },
+    {
+      "path": "src/intake_r3_section.py",
+      "sha256": "4cae03d967fb0cd396a52102705415c397b927b531aa636e3747e7d5967e19e8"
+    },
+    {
+      "path": "src/check_intake_r3.py",
+      "sha256": "800d03ff14da2eed6da15791bd278d35e825c86962a904a0ed9a693dddb0e875"
+    },
+    {
+      "path": "src/review_intake_r3.py",
+      "sha256": "f28c04c62769257252cfcc626d4e8d314d5143c5dbdfb01c563b3ea1e5ea1262"
+    },
+    {
+      "path": "src/study_shapes.py",
+      "sha256": "09088dd4fb2a410ba2d8caf642e9b49bc26e05d5c4143c56d455c9f8ec9a9300"
+    },
+    {
+      "path": "src/check_intake_revision.py",
+      "sha256": "8f947608beec66e4fb84d3995a77298b6477d93559cc0e3c5124818661fc6b7f"
+    }
+  ]
+}

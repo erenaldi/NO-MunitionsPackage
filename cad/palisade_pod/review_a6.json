@@ -1,0 +1,25 @@
+{
+  "jobs": [
+    {
+      "input": "STEP/A6_SketchedEnds_Bare.step", "mode": "view",
+      "outputs": [
+        {"path": "reviews/A6_Bare_iso.png", "camera": "iso"},
+        {"path": "reviews/A6_Bare_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A6_Bare_side.png", "camera": "front"},
+        {"path": "reviews/A6_Bare_bottom.png", "camera": "bottom"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    },
+    {
+      "input": "STEP/A6_SketchedEnds_Filled.step", "mode": "view",
+      "outputs": [
+        {"path": "reviews/A6_Filled_iso.png", "camera": "iso"},
+        {"path": "reviews/A6_Filled_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A6_Filled_side.png", "camera": "front"},
+        {"path": "reviews/A6_Filled_top.png", "camera": "top"},
+        {"path": "reviews/A6_Filled_bottom.png", "camera": "bottom"},
+        {"path": "reviews/A6_Filled_front.png", "camera": "right"},
+        {"path": "reviews/A6_Filled_rear.png", "camera": "left"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    }
+  ]
+}

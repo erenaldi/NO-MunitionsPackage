@@ -1,0 +1,13 @@
+{
+  "input": "STEP/Spear_CylinderFillet_Nozzle0.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_CylinderFillet_iso.png", "camera": {"direction": [-1, -1, 0.8]}},
+    {"path": "reviews/Spear_CylinderFillet_opposed.png", "camera": {"direction": [1, 1, -0.8]}},
+    {"path": "reviews/Spear_CylinderFillet_side.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_CylinderFillet_nozzle_side.png", "camera": {"direction": [0, 1, 0]}},
+    {"path": "reviews/Spear_CylinderFillet_tail.png", "camera": {"direction": [-1, 0, 0]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

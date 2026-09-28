@@ -1,0 +1,25 @@
+{
+  "input": "STEP/A_Spear.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/A_Spear_revision_iso.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.8
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

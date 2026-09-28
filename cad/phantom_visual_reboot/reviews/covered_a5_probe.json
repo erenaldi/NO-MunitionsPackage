@@ -1,0 +1,3527 @@
+{
+  "gate": "A5 covered recess feasibility only; no production build",
+  "inputs": {
+    "A4_stowed_step": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\O_Interleaved_A4_Stowed.step",
+    "A4_module_stowed_step": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\O_Interleaved_A4_Module_Stowed.step",
+    "nonbody_shift_mm": [
+      0.0,
+      0.0,
+      -5.5
+    ],
+    "cumulative_A2_shift_mm": 28.25
+  },
+  "spec_mm": {
+    "well": [
+      -450.3,
+      550.3,
+      -74.3,
+      74.3,
+      57.75,
+      84.0
+    ],
+    "cover": [
+      -455.0,
+      555.0,
+      -76.0,
+      76.0,
+      84.0,
+      86.0
+    ],
+    "cover_seat_cut": [
+      -455.0,
+      555.0,
+      -76.0,
+      76.0,
+      84.0,
+      100.0
+    ],
+    "cover_thickness": 2.0,
+    "slot_z_shift_mm": -5.5,
+    "pin_radial_clearance_mm": 0.3,
+    "pin_axial_clearance_mm": 0.3
+  },
+  "saved_A4_join_ranges": {
+    "starboard": {
+      "label": "starboard_join",
+      "saved_pin_bounds_z_mm": [
+        65.75,
+        81.25
+      ],
+      "saved_shaft_z_mm": [
+        65.75,
+        80.75
+      ],
+      "saved_cap_z_mm": [
+        80.75,
+        81.25
+      ],
+      "trial_shaft_z_mm": [
+        60.25,
+        75.25
+      ],
+      "trial_cap_z_mm": [
+        75.25,
+        75.75
+      ],
+      "axis_xy_mm": [
+        -399.98611100394214,
+        34.99999999998836
+      ]
+    },
+    "port": {
+      "label": "port_join",
+      "saved_pin_bounds_z_mm": [
+        71.25,
+        86.75
+      ],
+      "saved_shaft_z_mm": [
+        71.25,
+        86.25
+      ],
+      "saved_cap_z_mm": [
+        86.25,
+        86.75
+      ],
+      "trial_shaft_z_mm": [
+        65.75,
+        80.75
+      ],
+      "trial_cap_z_mm": [
+        80.75,
+        81.25
+      ],
+      "axis_xy_mm": [
+        -399.98611100394214,
+        -34.99999999998836
+      ]
+    }
+  },
+  "full_law_arc": {
+    "starboard": {
+      "centre_xy_mm": [
+        500.0,
+        30.0
+      ],
+      "radius_target_mm": 900.0,
+      "endpoint_angles_deg": [
+        179.68168847639768,
+        138.59037789072914
+      ],
+      "analytic_interior_extremum": {
+        "basis": "d((L^2-R^2+s^2)/(2s))/ds=0",
+        "separation_mm": 670.820393249937,
+        "fraction": 0.824042602841735,
+        "angle_deg": 138.18968510422138
+      },
+      "sector_angle_interval_deg": [
+        138.18968510422138,
+        179.68168847639768
+      ],
+      "sampled_1001_min_radius_mm": 899.9999999999999,
+      "sampled_1001_max_radius_mm": 900.0000000000001,
+      "sampled_1001_max_radius_error_mm": 1.1368683772161603e-13,
+      "sampled_1001_angle_interval_deg": [
+        138.18968513038132,
+        179.68168847639768
+      ],
+      "analytic_extrema_bound_all_1001_angle_evaluations": true
+    },
+    "port": {
+      "centre_xy_mm": [
+        500.0,
+        -30.0
+      ],
+      "radius_target_mm": 900.0,
+      "endpoint_angles_deg": [
+        -179.68168847639768,
+        -138.59037789072914
+      ],
+      "analytic_interior_extremum": {
+        "basis": "d((L^2-R^2+s^2)/(2s))/ds=0",
+        "separation_mm": 670.820393249937,
+        "fraction": 0.824042602841735,
+        "angle_deg": -138.18968510422138
+      },
+      "sector_angle_interval_deg": [
+        -179.68168847639768,
+        -138.18968510422138
+      ],
+      "sampled_1001_min_radius_mm": 899.9999999999999,
+      "sampled_1001_max_radius_mm": 900.0000000000001,
+      "sampled_1001_max_radius_error_mm": 1.1368683772161603e-13,
+      "sampled_1001_angle_interval_deg": [
+        -179.68168847639768,
+        -138.18968513038132
+      ],
+      "analytic_extrema_bound_all_1001_angle_evaluations": true
+    }
+  },
+  "original_A4_early_motion": [
+    {
+      "fraction": 0.0,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 2.5,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 8.0,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.0001,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 2.5,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 8.0,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.00025,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 2.5,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 8.0,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.0005,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 2.5,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 8.0,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.001,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 0.0,
+          "body_overlap_mm3": 11.980388757191324
+        },
+        "port": {
+          "body_gap_mm": 0.29053443210325725,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.002,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 0.0,
+          "body_overlap_mm3": 92.72591425413637
+        },
+        "port": {
+          "body_gap_mm": 0.0,
+          "body_overlap_mm3": 52.38049702164468
+        }
+      }
+    },
+    {
+      "fraction": 0.003,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 7.8703287132822055,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 9.546160785670505,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.005,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 26.993182730375757,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 28.012949567076312,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.01,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 63.0485298996636,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 63.59937697203388,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.02,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 112.99661414014743,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 113.32964991066072,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.05,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 205.87879714867717,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 206.06977107356195,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.1,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 297.4909448720992,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 297.6250659135921,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.15,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 357.034403411427,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 357.1467734947274,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.2,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 399.7835816843692,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 399.8842322145089,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.25,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 431.94644532638785,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 432.03977257328086,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.3,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 456.793374455952,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 456.8817349564909,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.35,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 476.28817390441867,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 476.37299275278724,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.4,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 491.70821005458293,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 491.79042242372714,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.45,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 503.9306202662118,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 504.0108777518453,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.5,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 513.5818633992806,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 513.6606417143381,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.55,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 521.1229349776003,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 521.2005949349358,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.6,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 526.901129284884,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 526.9779535766746,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.65,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 531.1830641781629,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 531.2592807086779,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.7,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 534.1765876059989,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 534.2523849268086,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.75,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 536.0457754225502,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 536.12131331493,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.8,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 536.9214711479301,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 536.9968881105505,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.85,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 536.9088568893873,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 536.9842755912331,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.9,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 536.0929933931001,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 536.1685247549937,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 0.95,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 534.5429381745952,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 534.6186845085567,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    },
+    {
+      "fraction": 1.0,
+      "join_pins": {
+        "starboard": {
+          "body_gap_mm": 532.3148474371352,
+          "body_overlap_mm3": 0.0
+        },
+        "port": {
+          "body_gap_mm": 532.3909049299896,
+          "body_overlap_mm3": 0.0
+        }
+      }
+    }
+  ],
+  "candidate_body": {
+    "valid": true,
+    "single_positive_solid": true,
+    "solid_count": 1,
+    "volume_mm3": 66736561.34586558,
+    "bounds_mm": {
+      "x": [
+        -1400.0000001,
+        1400.0000000000005
+      ],
+      "y": [
+        -86.0000001000023,
+        86.00000010000227
+      ],
+      "z": [
+        -86.0000001,
+        86.0000001
+      ]
+    },
+    "roof_top_z_mm": 86.0000001,
+    "cover_contact_gap_mm": 0.0,
+    "body_cover_overlap_mm3": 0.0,
+    "cover_landing_band_volume_mm3_z83_99_to84": 48.30840000143391,
+    "cover_landing_area_proxy_mm2": 4830.840000143391,
+    "cover_seat_area_bbox_mm2": 153520.0,
+    "pin_sweep_clipped_tool_metrics": [
+      {
+        "side": "starboard",
+        "feature": "shaft",
+        "nominal_radius_mm": 3.5,
+        "tool_radius_mm": 3.8,
+        "trial_z_with_clearance_mm": [
+          59.95,
+          75.55
+        ],
+        "sector_angle_interval_deg": [
+          138.18968510422138,
+          179.68168847639768
+        ],
+        "endpoint_discs": [
+          {
+            "xy_mm": [
+              -399.98611100394214,
+              34.99999999998836
+            ],
+            "radius_mm": 3.8
+          },
+          {
+            "xy_mm": [
+              -175.0,
+              625.2940449895328
+            ],
+            "radius_mm": 3.8
+          }
+        ],
+        "analytic_tool_body_intersection_volume_mm3": 6404.692535528339,
+        "clipped_tool_valid": true
+      },
+      {
+        "side": "starboard",
+        "feature": "cap",
+        "nominal_radius_mm": 7.0,
+        "tool_radius_mm": 7.3,
+        "trial_z_with_clearance_mm": [
+          74.95,
+          76.05
+        ],
+        "sector_angle_interval_deg": [
+          138.18968510422138,
+          179.68168847639768
+        ],
+        "endpoint_discs": [
+          {
+            "xy_mm": [
+              -399.98611100394214,
+              34.99999999998836
+            ],
+            "radius_mm": 7.3
+          },
+          {
+            "xy_mm": [
+              -175.0,
+              625.2940449895328
+            ],
+            "radius_mm": 7.3
+          }
+        ],
+        "analytic_tool_body_intersection_volume_mm3": 911.7194458553558,
+        "clipped_tool_valid": true
+      },
+      {
+        "side": "port",
+        "feature": "shaft",
+        "nominal_radius_mm": 3.5,
+        "tool_radius_mm": 3.8,
+        "trial_z_with_clearance_mm": [
+          65.45,
+          81.05
+        ],
+        "sector_angle_interval_deg": [
+          -179.68168847639768,
+          -138.18968510422138
+        ],
+        "endpoint_discs": [
+          {
+            "xy_mm": [
+              -399.98611100394214,
+              -34.99999999998836
+            ],
+            "radius_mm": 3.8
+          },
+          {
+            "xy_mm": [
+              -175.0,
+              -625.2940449895328
+            ],
+            "radius_mm": 3.8
+          }
+        ],
+        "analytic_tool_body_intersection_volume_mm3": 6387.657750445663,
+        "clipped_tool_valid": true
+      },
+      {
+        "side": "port",
+        "feature": "cap",
+        "nominal_radius_mm": 7.0,
+        "tool_radius_mm": 7.3,
+        "trial_z_with_clearance_mm": [
+          80.45,
+          81.55
+        ],
+        "sector_angle_interval_deg": [
+          -179.68168847639768,
+          -138.18968510422138
+        ],
+        "endpoint_discs": [
+          {
+            "xy_mm": [
+              -399.98611100394214,
+              -34.99999999998836
+            ],
+            "radius_mm": 7.3
+          },
+          {
+            "xy_mm": [
+              -175.0,
+              -625.2940449895328
+            ],
+            "radius_mm": 7.3
+          }
+        ],
+        "analytic_tool_body_intersection_volume_mm3": 890.0373000705994,
+        "clipped_tool_valid": true
+      }
+    ],
+    "shifted_panel_slot_extents_mm": [
+      [
+        -430.0,
+        530.0,
+        0.0,
+        100.0,
+        60.2,
+        64.8
+      ],
+      [
+        -430.0,
+        530.0,
+        0.0,
+        100.0,
+        70.7,
+        75.3
+      ],
+      [
+        -430.0,
+        530.0,
+        -100.0,
+        0.0,
+        65.7,
+        70.3
+      ],
+      [
+        -430.0,
+        530.0,
+        -100.0,
+        0.0,
+        76.2,
+        80.8
+      ]
+    ]
+  },
+  "candidate_cover": {
+    "valid_single_positive_solid": true,
+    "volume_mm3": 307039.99999999994,
+    "bounds_mm": {
+      "x": [
+        -455.0,
+        555.0
+      ],
+      "y": [
+        -76.0,
+        76.0
+      ],
+      "z": [
+        84.0,
+        86.0
+      ]
+    },
+    "body_gap_mm": 0.0,
+    "body_overlap_mm3": 0.0,
+    "positive_ledge_support_evidence": true,
+    "assumption": "2 mm trial cover; feasibility geometry only, no structural proof"
+  },
+  "candidate_motion_clearance": {
+    "sample_count": 30,
+    "fractions": [
+      0.0,
+      0.0001,
+      0.00025,
+      0.0005,
+      0.001,
+      0.002,
+      0.003,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "includes_all_21_regular_and_11_early_fractions": true,
+    "regular_21_fractions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "additional_early_fractions": [
+      0.0,
+      0.0001,
+      0.00025,
+      0.0005,
+      0.001,
+      0.002,
+      0.003,
+      0.005,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "per_part_minimum_clearance_and_max_overlap": {
+      "port_carriage": {
+        "body_gap_mm": 7.5,
+        "cover_gap_mm": 13.25,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "port_fixed_root": {
+        "body_gap_mm": 1.0,
+        "cover_gap_mm": 2.75,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "port_front": {
+        "body_gap_mm": 0.299999999999784,
+        "cover_gap_mm": 3.5,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "port_join": {
+        "body_gap_mm": 0.29999999999999716,
+        "cover_gap_mm": 2.75,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "port_rear": {
+        "body_gap_mm": 0.29999999999999716,
+        "cover_gap_mm": 14.0,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "starboard_carriage": {
+        "body_gap_mm": 2.0,
+        "cover_gap_mm": 18.75,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "starboard_fixed_root": {
+        "body_gap_mm": 1.0,
+        "cover_gap_mm": 8.25,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "starboard_front": {
+        "body_gap_mm": 0.29999999999999716,
+        "cover_gap_mm": 9.0,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "starboard_join": {
+        "body_gap_mm": 0.29999999999999716,
+        "cover_gap_mm": 8.25,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "starboard_rear": {
+        "body_gap_mm": 0.29999999999999716,
+        "cover_gap_mm": 19.5,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      },
+      "supported_housing": {
+        "body_gap_mm": 0.0,
+        "cover_gap_mm": 18.25,
+        "body_overlap_mm3": 0.0,
+        "cover_overlap_mm3": 0.0
+      }
+    },
+    "samples": [
+      {
+        "fraction": 0.0,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 13.25,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 2.75,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 2.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 14.16475133409248,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 8.25,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 8.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.0001,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 9.014471756613528,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 2.75,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 2.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 9.014471756613528,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 8.25,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 8.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.00025,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 2.1726958771050633,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 2.75,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 2.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 2.1726958771050633,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 7.450153559136277,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 8.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.0005,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 2.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 8.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.001,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.29999999999986926,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.002,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.17003386096199,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.29999999999984084,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 4.856904467990847,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.003,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 6.64990905028567,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.57558615106964,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.2999999999998266,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 8.298567768940424,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 16.868681064499686,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.005,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 26.606759118547355,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 37.52311732068372,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.2999999999998124,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 27.01026806522244,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 36.708096293076736,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.01,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 62.88245545487472,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 73.34758542739391,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.2999999999998124,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 63.04852989966403,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 72.93399953402287,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.02,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 112.90297003176588,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 123.1795540770857,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.2999999999997982,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 112.99661414014787,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 122.93373232205097,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.05,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 205.82651242133036,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 215.98413359308506,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.2999999999997982,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 205.8787971486776,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 215.84403156899106,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.1,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 297.4542545927642,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 307.56492187372993,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.2999999999997982,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 297.49094487209965,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 307.46655292436867,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.15,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 357.0036658867041,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 367.0963814508135,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 357.0344034114274,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 367.01396877269013,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.2,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 399.7560509659594,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 409.83909501561675,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 399.7835816843696,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 409.76527891369676,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.25,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 431.92091828811624,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 441.9979191360677,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 431.9464453263883,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 441.92947460043194,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.3,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 456.76920626692583,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 466.84210866100966,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 456.79337445595246,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 466.7773070952121,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.35,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 476.2649746400298,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 486.33495459577125,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 476.2881739044191,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 486.272750687997,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.4,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 491.6857238530804,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 501.7535530696234,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 491.7082100545834,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 501.6932608855648,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.45,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 503.9086688591524,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 513.9748850173403,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 503.93062026621226,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 513.9160266313828,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.5,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 513.5603166414409,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 523.6253122812992,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 513.5818633992811,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 523.567538777652,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.55,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 521.1016941603272,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 531.165767006847,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 521.1229349776007,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 531.1088137472132,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.6,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 526.8801170726326,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 536.9435003870761,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 526.9011292848844,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 536.8871600326515,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.65,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 531.16221822449,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 541.2251000587952,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 531.1830641781634,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 541.1692054557916,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.7,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 534.1558563305055,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 544.2183922643446,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 534.1765876059993,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 544.1628051225001,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.75,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 536.0251151156169,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.0874369888261,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 536.0457754225506,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.032040119465,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.8,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 536.9008439221803,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.9630660134151,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 536.9214711479307,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.9077578374579,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.85,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 536.8882291878602,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.9504527141704,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 536.9088568893877,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.8951432626147,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.9,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 536.0723348726277,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.1346513573787,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 536.0929933931004,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 546.0792592776671,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 0.95,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 534.5222208469404,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 544.5847147102886,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 534.5429381745957,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 544.5291649637203,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      },
+      {
+        "fraction": 1.0,
+        "parts": [
+          {
+            "label": "supported_housing",
+            "body_gap_mm": 0.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_front",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 9.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 19.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 8.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_carriage",
+            "body_gap_mm": 2.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 18.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "starboard_join",
+            "body_gap_mm": 532.2940449895307,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 542.356795597796,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_front",
+            "body_gap_mm": 0.299999999999784,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 3.5,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_rear",
+            "body_gap_mm": 0.29999999999999716,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 14.0,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_fixed_root",
+            "body_gap_mm": 1.0,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 2.75,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_carriage",
+            "body_gap_mm": 7.5,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 13.25,
+            "cover_overlap_mm3": 0.0
+          },
+          {
+            "label": "port_join",
+            "body_gap_mm": 532.3148474371358,
+            "body_overlap_mm3": 0.0,
+            "cover_gap_mm": 542.301017637907,
+            "cover_overlap_mm3": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "failures": [],
+  "saved_A4_part_inventory": {
+    "full_labels": [
+      "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "port_carriage",
+      "port_fixed_root",
+      "port_front",
+      "port_join",
+      "port_rear",
+      "starboard_carriage",
+      "starboard_fixed_root",
+      "starboard_front",
+      "starboard_join",
+      "starboard_rear",
+      "supported_housing"
+    ],
+    "module_labels": [
+      "port_carriage",
+      "port_fixed_root",
+      "port_front",
+      "port_join",
+      "port_rear",
+      "starboard_carriage",
+      "starboard_fixed_root",
+      "starboard_front",
+      "starboard_join",
+      "starboard_rear",
+      "supported_housing"
+    ],
+    "part_counts": [
+      12,
+      11
+    ]
+  },
+  "original_A4_early_collision_summary": {
+    "sample_fractions": [
+      0.0,
+      0.0001,
+      0.00025,
+      0.0005,
+      0.001,
+      0.002,
+      0.003,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "nonzero_join_pin_body_overlap_samples": [
+      {
+        "fraction": 0.001,
+        "side": "starboard",
+        "overlap_mm3": 11.980388757191324
+      },
+      {
+        "fraction": 0.002,
+        "side": "starboard",
+        "overlap_mm3": 92.72591425413637
+      },
+      {
+        "fraction": 0.002,
+        "side": "port",
+        "overlap_mm3": 52.38049702164468
+      }
+    ],
+    "regular_21_fractions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ]
+  },
+  "frame_floor_contact": {
+    "housing_bottom_z_mm": 57.75,
+    "expected_floor_z_mm": 57.75,
+    "gap_mm": 0.0,
+    "overlap_mm3": 0.0,
+    "pass": true
+  },
+  "stowed_radial_envelope": {
+    "radius_formula": "hypot(max(abs(Ybounds)), max(abs(Zbounds)))",
+    "limit_mm_exclusive": 125.0,
+    "radius_mm_by_part": {
+      "supported_housing": 98.9902141628151,
+      "starboard_front": 96.13339831930615,
+      "starboard_rear": 82.98120453398856,
+      "starboard_fixed_root": 85.66249179191556,
+      "starboard_carriage": 75.50869155269478,
+      "starboard_join": 86.61444740918816,
+      "port_front": 100.48323378762437,
+      "port_rear": 87.32485502943389,
+      "port_fixed_root": 90.56247843339978,
+      "port_carriage": 80.30916821882792,
+      "port_join": 91.46344898372804,
+      "RDM9_R7_symmetric_body_20mm_wedge_R4": 121.62236650550915,
+      "trial_cover": 114.76933388322858
+    },
+    "maximum_radius_mm": 121.62236650550915,
+    "pass": true
+  },
+  "criteria_summary": {
+    "body_single_valid_solid": true,
+    "cover_attaches_without_volume_overlap": true,
+    "frame_floor_contact": true,
+    "stowed_radial_envelope": true,
+    "full_law_arc_radius_and_extrema_checks": true,
+    "candidate_sampled_body_or_cover_interference": [],
+    "original_A4_pin_body_interference_missed_by_regular_21": [
+      {
+        "fraction": 0.001,
+        "side": "starboard",
+        "overlap_mm3": 11.980388757191324
+      },
+      {
+        "fraction": 0.002,
+        "side": "starboard",
+        "overlap_mm3": 92.72591425413637
+      },
+      {
+        "fraction": 0.002,
+        "side": "port",
+        "overlap_mm3": 52.38049702164468
+      }
+    ]
+  },
+  "passed_feasibility_probe": true
+}

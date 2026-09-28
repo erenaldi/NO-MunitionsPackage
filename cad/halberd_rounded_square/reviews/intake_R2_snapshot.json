@@ -1,0 +1,334 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_context.png",
+        "camera": {
+          "direction": [
+            0.35,
+            1,
+            0.65
+          ]
+        }
+      }
+    ],
+    "width": 2400,
+    "height": 900,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_opposite.png",
+        "camera": {
+          "direction": [
+            -0.35,
+            -1,
+            -0.65
+          ]
+        }
+      }
+    ],
+    "width": 2400,
+    "height": 900,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_side.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            0
+          ]
+        }
+      }
+    ],
+    "width": 2400,
+    "height": 900,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_top.png",
+        "camera": {
+          "preset": "top"
+        }
+      }
+    ],
+    "width": 2400,
+    "height": 900,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_front.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "width": 1600,
+    "height": 1000,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_rear.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "width": 1600,
+    "height": 1000,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_mouth.png",
+        "camera": {
+          "position": [
+            1250,
+            680,
+            700
+          ],
+          "target": [
+            570,
+            85,
+            85
+          ],
+          "zoom": 2.4
+        }
+      }
+    ],
+    "width": 1600,
+    "height": 1000,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_grazing.png",
+        "camera": {
+          "position": [
+            200,
+            200,
+            1250
+          ],
+          "target": [
+            -100,
+            60,
+            60
+          ],
+          "zoom": 0.95
+        }
+      }
+    ],
+    "width": 1600,
+    "height": 1000,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_aft_join.png",
+        "camera": {
+          "position": [
+            -300,
+            750,
+            750
+          ],
+          "target": [
+            -870,
+            95,
+            95
+          ],
+          "zoom": 2.1
+        }
+      }
+    ],
+    "width": 1600,
+    "height": 1000,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_separated.png",
+        "camera": {
+          "direction": [
+            -0.3,
+            1,
+            0.65
+          ]
+        }
+      }
+    ],
+    "width": 2400,
+    "height": 900,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2_Covered.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_covered_context.png",
+        "camera": {
+          "direction": [
+            0.35,
+            1,
+            0.65
+          ]
+        }
+      }
+    ],
+    "width": 2400,
+    "height": 900,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R2_Covered.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R2_covered_mouth.png",
+        "camera": {
+          "position": [
+            1250,
+            680,
+            700
+          ],
+          "target": [
+            570,
+            85,
+            85
+          ],
+          "zoom": 2.4
+        }
+      }
+    ],
+    "width": 1600,
+    "height": 1000,
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  }
+]

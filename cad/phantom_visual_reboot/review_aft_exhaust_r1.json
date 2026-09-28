@@ -1,0 +1,250 @@
+[
+  {
+    "input": "STEP/S_AftExhaust_R1_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_stowed_rear.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.65
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/S_AftExhaust_R1_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_deployed_rear.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.65
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/S_AftExhaust_R1_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_rear_opening.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1400,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 125,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/S_AftExhaust_R1_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_rear_close.png",
+        "camera": {
+          "direction": [
+            -1,
+            0.3,
+            0.2
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1360,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 170,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/S_AftExhaust_R1_AftSection.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_duct_section.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -827.5,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 470,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/S_AftExhaust_R1_Liner.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_liner.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1350,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 110,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "reference/agm1_mount/DonorPylon_Surface.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_actual_pylon.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            150
+          ],
+          "orthographicHalfHeight": 650,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "reference/agm1_mount/Phantom_DonorFit_Unchanged.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/S_Aft_R1_donor_fit_collision.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            60
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

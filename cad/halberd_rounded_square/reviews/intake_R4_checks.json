@@ -1,0 +1,132 @@
+{
+  "ok": true,
+  "parts": 16,
+  "housing_length_mm": 1816.5797418855318,
+  "added_channel_length_mm": 544.9739225656596,
+  "old_clear_back_x_mm": 100.0,
+  "new_clear_back_x_mm": -444.97392256565956,
+  "channel_removed_volume_mm3": 375292.2393352864,
+  "exterior_section_checks": [
+    {
+      "x": -1100.0,
+      "outer_area_mm2": 35957.629199351344
+    },
+    {
+      "x": -800.0,
+      "outer_area_mm2": 36688.745537417664
+    },
+    {
+      "x": -500.0,
+      "outer_area_mm2": 37208.73095603271
+    },
+    {
+      "x": -430.0,
+      "outer_area_mm2": 37233.93940762644
+    },
+    {
+      "x": -300.0,
+      "outer_area_mm2": 37277.7920369679
+    },
+    {
+      "x": -100.0,
+      "outer_area_mm2": 37485.413191021114
+    },
+    {
+      "x": 100.0,
+      "outer_area_mm2": 37785.18185325676
+    },
+    {
+      "x": 210.0,
+      "outer_area_mm2": 37855.90125196711
+    },
+    {
+      "x": 450.0,
+      "outer_area_mm2": 37730.936649281015
+    },
+    {
+      "x": 560.0,
+      "outer_area_mm2": 37735.505926992
+    }
+  ],
+  "original_parts_unchanged": true,
+  "intake_cup_contact_mm3": 2127.4587504802953,
+  "nozzles": [
+    {
+      "label": "main_nozzle_dark_recess",
+      "neutral_lip_depth_mm": 9.0,
+      "clear_floor_depth_mm": 40.0,
+      "contact_mm3": 8172.885553319764
+    },
+    {
+      "label": "booster_nozzle_dark_recess",
+      "neutral_lip_depth_mm": 9.0,
+      "clear_floor_depth_mm": 70.0,
+      "contact_mm3": 10866.749655890053
+    }
+  ],
+  "dark_colors": {
+    "main_intake_dark_recess": [
+      0.017642,
+      0.0241576,
+      0.0295568,
+      1.0
+    ],
+    "main_nozzle_dark_recess": [
+      0.0802198,
+      0.0802198,
+      0.0802198,
+      1.0
+    ],
+    "booster_nozzle_dark_recess": [
+      0.0802198,
+      0.0802198,
+      0.0802198,
+      1.0
+    ],
+    "main_nozzle_dark_floor": [
+      0.017642,
+      0.0241576,
+      0.0295568,
+      1.0
+    ],
+    "booster_nozzle_dark_floor": [
+      0.017642,
+      0.0241576,
+      0.0295568,
+      1.0
+    ]
+  },
+  "separated_shapes_unchanged": true,
+  "native_validation": [
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R4",
+      "occurrenceCount": 16,
+      "prototypeCount": 11,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R4_Separated",
+      "occurrenceCount": 16,
+      "prototypeCount": 11,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R4_Cutaway",
+      "occurrenceCount": 2,
+      "prototypeCount": 2,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    }
+  ]
+}

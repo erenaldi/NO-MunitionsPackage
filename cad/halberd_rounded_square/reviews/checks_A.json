@@ -1,0 +1,33 @@
+[
+  {
+    "key": "A",
+    "ok": true,
+    "parts": 15,
+    "length_mm": 3370.0000002000024,
+    "booster_length_mm": 561.6666668666687,
+    "seam_mm": -1123.3333333333333,
+    "maximum_span_yz_mm": [
+      276.3373302877028,
+      276.3373302877028
+    ],
+    "join_outer_perimeters_mm": [
+      679.8229715397102,
+      679.8229715397099
+    ],
+    "contacts_mm3": {
+      "main_intake_1": 154528.958,
+      "main_intake_2": 154528.959,
+      "main_intake_3": 154528.958,
+      "main_intake_4": 154528.956,
+      "main_fin_1": 2783.728,
+      "main_fin_2": 2783.728,
+      "main_fin_3": 2783.728,
+      "main_fin_4": 2783.728,
+      "booster_fin_1": 3080.307,
+      "booster_fin_2": 3082.57,
+      "booster_fin_3": 3080.307,
+      "booster_fin_4": 3080.307
+    },
+    "separated_translation_mm": -340
+  }
+]

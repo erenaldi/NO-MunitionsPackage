@@ -1,0 +1,282 @@
+{
+  "scope": "A shelf support under inner guide Y-19: collision-free support material through 21 original deployment samples (saved stowed parts, checker rigid-pose transforms). No source/build changes.",
+  "saved_source": "STEP\\O_Interleaved_A_Stowed.step",
+  "thresholds": {
+    "panel_gap_min_mm": 0.2,
+    "overlap_max_mm3": 0.001,
+    "radius_max_mm": 125.0
+  },
+  "attempts": [
+    {
+      "name": "continuous_web",
+      "primitive_mm": {
+        "x": [
+          -300.0,
+          250.0
+        ],
+        "y": [
+          -20.0,
+          -18.0
+        ],
+        "z": [
+          88.0,
+          93.0
+        ]
+      },
+      "radial_bound_mm": 95.12623192369179,
+      "attachment": {
+        "housing_gap_mm": 0.0,
+        "housing_overlap_mm3": 0,
+        "body_overlap_mm3": 0,
+        "body_overlap_outside_housing_mm3": 0
+      },
+      "min_starboard_rear_gap_mm": 0.0,
+      "sample_count": 21,
+      "passed": false,
+      "failures": [
+        [
+          "continuous_web",
+          0.0,
+          "starboard_rear",
+          "panel clearance",
+          0.0
+        ],
+        [
+          "continuous_web",
+          0.05,
+          "starboard_rear",
+          "panel clearance",
+          0.19635144133144422
+        ]
+      ]
+    },
+    {
+      "name": "discrete_posts",
+      "post_primitive_mm": {
+        "x_half_width": 5.0,
+        "y": [
+          -20.0,
+          -18.0
+        ],
+        "z": [
+          88.0,
+          93.0
+        ]
+      },
+      "stations": [
+        {
+          "station_mm": -250.0,
+          "primitive_mm": {
+            "x": [
+              -255.0,
+              -245.0
+            ],
+            "y": [
+              -20.0,
+              -18.0
+            ],
+            "z": [
+              88.0,
+              93.0
+            ]
+          },
+          "radial_bound_mm": 95.12623192369179,
+          "attachment": {
+            "housing_gap_mm": 0.0,
+            "housing_overlap_mm3": 0,
+            "body_overlap_mm3": 0,
+            "body_overlap_outside_housing_mm3": 0
+          },
+          "min_starboard_rear_gap_mm": 2.842170943040401e-14,
+          "passed": false,
+          "failures": [
+            [
+              "post_x-250.0",
+              0.0,
+              "starboard_rear",
+              "panel clearance",
+              2.842170943040401e-14
+            ]
+          ]
+        },
+        {
+          "station_mm": -50.0,
+          "primitive_mm": {
+            "x": [
+              -55.0,
+              -45.0
+            ],
+            "y": [
+              -20.0,
+              -18.0
+            ],
+            "z": [
+              88.0,
+              93.0
+            ]
+          },
+          "radial_bound_mm": 95.12623192369179,
+          "attachment": {
+            "housing_gap_mm": 0.0,
+            "housing_overlap_mm3": 0,
+            "body_overlap_mm3": 0,
+            "body_overlap_outside_housing_mm3": 0
+          },
+          "min_starboard_rear_gap_mm": 0.0,
+          "passed": false,
+          "failures": [
+            [
+              "post_x-50.0",
+              0.0,
+              "starboard_rear",
+              "panel clearance",
+              0.0
+            ]
+          ]
+        },
+        {
+          "station_mm": 150.0,
+          "primitive_mm": {
+            "x": [
+              145.0,
+              155.0
+            ],
+            "y": [
+              -20.0,
+              -18.0
+            ],
+            "z": [
+              88.0,
+              93.0
+            ]
+          },
+          "radial_bound_mm": 95.12623192369179,
+          "attachment": {
+            "housing_gap_mm": 0.0,
+            "housing_overlap_mm3": 0,
+            "body_overlap_mm3": 0,
+            "body_overlap_outside_housing_mm3": 0
+          },
+          "min_starboard_rear_gap_mm": 0.0,
+          "passed": false,
+          "failures": [
+            [
+              "post_x150.0",
+              0.0,
+              "starboard_rear",
+              "panel clearance",
+              0.0
+            ]
+          ]
+        },
+        {
+          "station_mm": 190.0,
+          "primitive_mm": {
+            "x": [
+              185.0,
+              195.0
+            ],
+            "y": [
+              -20.0,
+              -18.0
+            ],
+            "z": [
+              88.0,
+              93.0
+            ]
+          },
+          "radial_bound_mm": 95.12623192369179,
+          "attachment": {
+            "housing_gap_mm": 0.0,
+            "housing_overlap_mm3": 0,
+            "body_overlap_mm3": 0,
+            "body_overlap_outside_housing_mm3": 0
+          },
+          "min_starboard_rear_gap_mm": 1.933997035259415,
+          "passed": true,
+          "failures": []
+        },
+        {
+          "station_mm": 225.0,
+          "primitive_mm": {
+            "x": [
+              220.0,
+              230.0
+            ],
+            "y": [
+              -20.0,
+              -18.0
+            ],
+            "z": [
+              88.0,
+              93.0
+            ]
+          },
+          "radial_bound_mm": 95.12623192369179,
+          "attachment": {
+            "housing_gap_mm": 0.0,
+            "housing_overlap_mm3": 0,
+            "body_overlap_mm3": 0,
+            "body_overlap_outside_housing_mm3": 0
+          },
+          "min_starboard_rear_gap_mm": 33.57169990024338,
+          "passed": true,
+          "failures": []
+        },
+        {
+          "station_mm": 250.0,
+          "primitive_mm": {
+            "x": [
+              245.0,
+              255.0
+            ],
+            "y": [
+              -20.0,
+              -18.0
+            ],
+            "z": [
+              88.0,
+              93.0
+            ]
+          },
+          "radial_bound_mm": 95.12623192369179,
+          "attachment": {
+            "housing_gap_mm": 0.0,
+            "housing_overlap_mm3": 0,
+            "body_overlap_mm3": 0,
+            "body_overlap_outside_housing_mm3": 0
+          },
+          "min_starboard_rear_gap_mm": 53.79988655869433,
+          "passed": true,
+          "failures": []
+        }
+      ],
+      "viable_stations_mm": [
+        190.0,
+        225.0,
+        250.0
+      ],
+      "passed": true
+    }
+  ],
+  "verdict": "VIABLE",
+  "selected": {
+    "attempt": "discrete_posts",
+    "viable_stations_mm": [
+      190.0,
+      225.0,
+      250.0
+    ],
+    "post_primitive_mm": {
+      "x_half_width": 5.0,
+      "y": [
+        -20.0,
+        -18.0
+      ],
+      "z": [
+        88.0,
+        93.0
+      ]
+    }
+  }
+}

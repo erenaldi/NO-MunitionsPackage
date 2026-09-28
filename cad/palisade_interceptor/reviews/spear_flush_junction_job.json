@@ -1,0 +1,12 @@
+{
+  "input": "STEP/Spear_FlushJunction_Cap.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_FlushJunction_iso.png", "camera": {"direction": [-1, -1, 0.8]}},
+    {"path": "reviews/Spear_FlushJunction_opposed.png", "camera": {"direction": [1, 1, -0.8]}},
+    {"path": "reviews/Spear_FlushJunction_side.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_FlushJunction_top.png", "camera": {"direction": [0, 0, 1]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

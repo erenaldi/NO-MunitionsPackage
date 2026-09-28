@@ -1,0 +1,232 @@
+{
+  "source": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\AAM-44_Halberd_Detailed.step",
+  "sourceSha256": "545bea96e0d74a167810d48bc2ecb3b006a6483ab30364575526bf0bbf558078",
+  "approvalState": "candidate-awaiting-review",
+  "groups": {
+    "body": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_Body.obj",
+      "labels": [
+        "ramjet_body",
+        "forward_body",
+        "seeker_section",
+        "radome"
+      ],
+      "vertices": 2979,
+      "triangles": 5944,
+      "bounds": [
+        [
+          -0.1004901482134973,
+          -0.1005,
+          -0.3317
+        ],
+        [
+          0.10048875423193247,
+          0.10049594366778107,
+          1.6835000000000016
+        ]
+      ]
+    },
+    "intakes": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_Intakes.obj",
+      "labels": [
+        "intake_ramp_1",
+        "intake_lip_1",
+        "intake_duct_1",
+        "intake_cheek_1_1",
+        "intake_cheek_1_2",
+        "intake_ramp_2",
+        "intake_lip_2",
+        "intake_duct_2",
+        "intake_cheek_2_1",
+        "intake_cheek_2_2",
+        "intake_ramp_3",
+        "intake_lip_3",
+        "intake_duct_3",
+        "intake_cheek_3_1",
+        "intake_cheek_3_2"
+      ],
+      "vertices": 423,
+      "triangles": 810,
+      "bounds": [
+        [
+          -0.14336254469030052,
+          -0.149375,
+          0.03
+        ],
+        [
+          0.14336254469030052,
+          0.09893621130596429,
+          0.79
+        ]
+      ]
+    },
+    "sustainer_fins": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_SustainerFins.obj",
+      "labels": [
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3"
+      ],
+      "vertices": 648,
+      "triangles": 1284,
+      "bounds": [
+        [
+          -0.15045636945092344,
+          -0.17200000000000001,
+          -0.3
+        ],
+        [
+          0.15045636945092344,
+          0.08859807621135334,
+          0.13
+        ]
+      ]
+    },
+    "hardware": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_Hardware.obj",
+      "labels": [
+        "stage_joint_band",
+        "ramjet_joint_band",
+        "forward_joint_band",
+        "dorsal_launch_rail",
+        "suspension_lug_1",
+        "suspension_lug_2",
+        "dorsal_wiring_conduit"
+      ],
+      "vertices": 1942,
+      "triangles": 3868,
+      "bounds": [
+        [
+          -0.10248853043555303,
+          -0.10250000000000001,
+          -0.3087
+        ],
+        [
+          0.10248853043555303,
+          0.1085,
+          1.064
+        ]
+      ]
+    },
+    "sustainer_nozzle": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_SustainerNozzle.obj",
+      "labels": [
+        "sustainer_nozzle"
+      ],
+      "vertices": 1525,
+      "triangles": 3046,
+      "bounds": [
+        [
+          -0.1034884185373633,
+          -0.10350000000000001,
+          -0.3367
+        ],
+        [
+          0.1034884185373633,
+          0.1034536767413426,
+          -0.2547
+        ]
+      ]
+    },
+    "booster_body": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_BoosterBody.obj",
+      "labels": [
+        "booster_body",
+        "booster_forward_collar",
+        "booster_nozzle_outer"
+      ],
+      "vertices": 3631,
+      "triangles": 7678,
+      "bounds": [
+        [
+          -0.1034884185373633,
+          -0.10350000000000001,
+          -1.6835
+        ],
+        [
+          0.1034884185373633,
+          0.1034536767413426,
+          -0.3367
+        ]
+      ]
+    },
+    "booster_fins": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_BoosterFins.obj",
+      "labels": [
+        "booster_fin_1",
+        "booster_fin_root_1",
+        "booster_fin_2",
+        "booster_fin_root_2",
+        "booster_fin_3",
+        "booster_fin_root_3"
+      ],
+      "vertices": 471,
+      "triangles": 918,
+      "bounds": [
+        [
+          -0.19079353802500762,
+          -0.21800000000000003,
+          -1.5150000000000001
+        ],
+        [
+          0.19079353802500765,
+          0.11246410161513778,
+          -0.61
+        ]
+      ]
+    },
+    "booster_nozzle": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_BoosterNozzle.obj",
+      "labels": [
+        "booster_nozzle_inner"
+      ],
+      "vertices": 3376,
+      "triangles": 6752,
+      "bounds": [
+        [
+          -0.07999104814482187,
+          -0.08,
+          -1.6835
+        ],
+        [
+          0.07999104814482187,
+          0.07996419458268028,
+          -1.51
+        ]
+      ]
+    },
+    "booster_nozzle_recess": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\candidates\\halberd\\Halberd_BoosterNozzleRecess.obj",
+      "labels": [
+        "booster_nozzle_recess"
+      ],
+      "vertices": 210,
+      "triangles": 416,
+      "bounds": [
+        [
+          -0.021997538239826014,
+          -0.022,
+          -1.5865
+        ],
+        [
+          0.021997538239826014,
+          0.02199015351023708,
+          -1.5835000000000001
+        ]
+      ]
+    }
+  },
+  "assembly": {
+    "length": 3.3670000000000018,
+    "bodyRadius": 0.10050000002860991,
+    "maximumRadius": 0.2180366941594924,
+    "seamZ": -0.3367,
+    "center": [
+      1.3877787807814457e-17,
+      -0.05276794919243112,
+      7.771561172376096e-16
+    ],
+    "triangles": 30716,
+    "triangleBudget": 75000
+  }
+}

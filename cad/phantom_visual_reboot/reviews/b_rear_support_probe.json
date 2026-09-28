@@ -1,0 +1,49 @@
+{
+  "scope": "B starboard-rear support mechanism gate: stowed vertical budget under the starboard rear root vs shoe/tongue/stem package; measurement first, no B assembly, no feasibility claim",
+  "mechanism_under_study": {
+    "stage1": "longitudinal shoe on existing guides (Y18..20, Y40..42, Z88..88.5)",
+    "stage2": "captive transverse tongue sliding 22 mm",
+    "stage3": "telescoping vertical stem lifting rear pivot 5.5 mm",
+    "probe_constraints_not_additional_user_locks": [
+      "A stowed layer heights",
+      "fixed base/body",
+      "panel geometry unchanged",
+      "no cutouts in panels/body",
+      "min 0.25 mm moving clearance",
+      "radius 125 envelope"
+    ]
+  },
+  "saved_source": "STEP\\O_Interleaved_A_Stowed.step",
+  "measurements_mm": {
+    "starboard_rear_panel_z_bottom": 88.75,
+    "starboard_rear_panel_z_top": 92.75,
+    "starboard_rear_root_xy": [
+      199.99305530102,
+      30.0
+    ],
+    "housing_top_z_under_root_region": 88.0,
+    "existing_guide_top_z": {
+      "19": 88.5,
+      "41": 88.5
+    },
+    "current_carriage_slab_top_z": 88.5,
+    "current_carriage_bbox_z": [
+      88.0,
+      93.5
+    ],
+    "budget_housing_top_to_panel_bottom": 0.75,
+    "budget_guide_top_to_panel_bottom": 0.25
+  },
+  "package_assumptions_mm": {
+    "shoe_min": 0.5,
+    "tongue_min": 1.0,
+    "stem_retracted_min": 2.0,
+    "moving_clearance_each": 0.25,
+    "package_floor_height": 4.0,
+    "package_realistic_height": 4.5
+  },
+  "verdict": "BLOCKED",
+  "limitations": "Only the selected serially stacked package is rejected. No stage solids, retention or motion were built. Alternative side-supported/cam/linkage layouts and revised layer heights remain untested; body/panels/envelope remain user locks.",
+  "blocker": "Stowed vertical space under the starboard rear root is only 0.75 mm (housing top 88.00 -> panel bottom 88.75); the existing guides already occupy Z88..88.5, leaving 0.25 mm above them. The current carriage slab (Z88.00..88.50) already fills the between-guide height. The assumed stacked package totals 4.00 mm (shoe 0.5 + clearance 0.25 + tongue 1.0 + clearance 0.25 + retracted stem 2.0), i.e. 5.3x the available budget; the alternate assumed on-guide package totals 4.50 mm. No zero-thickness/floating/overlapping stage or new layer height is allowed in this probe, so this assumed package does not fit the current A geometry. This does not prove B impossible.",
+  "end_state_probe": "not run (blocked at measurement gate)"
+}

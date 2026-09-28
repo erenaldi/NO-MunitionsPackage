@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "root_chord_mm": 295.0,
+  "tip_chord_mm": 220.0,
+  "height_mm": 53.00000019999999,
+  "setbacks_mm": [
+    37.5,
+    37.5
+  ],
+  "clock_degrees": 45,
+  "contact_mm3": 3138.6189680409793,
+  "nozzle_clearances_mm": {
+    "booster_nozzle_dark_recess": 48.87948226998982,
+    "booster_nozzle_dark_floor": 75.70000000000002
+  },
+  "other_parts_unchanged": true,
+  "native_validation": [
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Halberd_R7",
+      "occurrenceCount": 17,
+      "prototypeCount": 13,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Halberd_R7_Separated",
+      "occurrenceCount": 17,
+      "prototypeCount": 13,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Booster_Fin_R7",
+      "occurrenceCount": 1,
+      "prototypeCount": 1,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    }
+  ]
+}

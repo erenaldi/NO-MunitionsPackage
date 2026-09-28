@@ -1,0 +1,35 @@
+{
+  "input": "STEP/B_Shoulder_Separated.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/B_Shoulder_separated.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.7
+        ]
+      }
+    },
+    {
+      "path": "reviews/B_Shoulder_separated_opposed.png",
+      "camera": {
+        "direction": [
+          1,
+          1,
+          -0.7
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

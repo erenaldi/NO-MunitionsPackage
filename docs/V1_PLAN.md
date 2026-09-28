@@ -1,6 +1,8 @@
 # V1 Implementation Plan
 
-Execution roadmap for the 15-weapon V1 roster defined in `MUNITIONS.md`.
+Execution roadmap for the 12-weapon V1 roster defined in `MUNITIONS.md`
+(GPO-2R Auger, CDM-4 Bramble, and AGR-30 Hailstorm are deferred to a possible
+later release; specs preserved in `MUNITIONS.md` § Deferred).
 Design authority for specs and analog decisions is `MUNITIONS.md`; runtime
 findings live in `docs/PHASE1_FINDINGS.md` and `docs/PALISADE_FINDINGS.md`;
 per-weapon test status is tracked in
@@ -15,36 +17,31 @@ per-weapon test status is tracked in
 | AGM-110 Ballista | L03 | implemented (cloner, wing fold) |
 | ARAD-80 | L04 | implemented (cloner, single-burn motor) — runtime validation pending |
 | RDM-9 Phantom | L05 | implemented; untargeted SAM engagement passed — range/lifetime/multiplayer gates pending |
-| GPO-2R Auger | L06 | pending (def) |
-| CDM-4 Bramble | L07 | pending (submunition engine) |
-| AGR-30 Hailstorm | L08 | pending (def-first dispersion test) |
-| ALM-5 Vesper | L09 | pending (jamming module) |
-| Tusko-D | L10 | pending (def) |
-| ALBM-3 Trebuchet [U] | L11 | pending (def + air-launch integration) |
-| ALBM-3 Trebuchet [C] | L12 | pending (shared submunition engine) |
-| TOR-42 Halcyon | L13 | blocked on water-phase spike |
-| RAT-44 Barracuda | L14 | blocked on water-phase spike |
-| HKP-1 Palisade | L15 | functional clone registered — SARH/interception and multiplayer validation pending |
+| ALM-5 Vesper | L06 | pending (jamming module) |
+| Tusko-D | L07 | pending (def) |
+| ALBM-3 Trebuchet [U] | L08 | pending (def + air-launch integration) |
+| ALBM-3 Trebuchet [C] | L09 | pending (shared submunition engine) |
+| TOR-42 Halcyon | L10 | blocked on water-phase spike |
+| RAT-44 Barracuda | L11 | blocked on water-phase spike |
+| HKP-1 Palisade | L12 | functional clone registered — SARH/interception and multiplayer validation pending; geometry candidate Gate-2 only |
 
 ## Phase order
 
 1. **HKP-1 Palisade runtime gates** (SARH viability, mode/HUD, interception, rearm, and multiplayer).
 2. Def-tuned batch: ARAD-80 and RDM-9 Phantom (runtime validation only),
-   GPO-2R Auger, Tusko-D, Trebuchet [U].
-3. Submunition engine: CDM-4 Bramble, then Trebuchet [C].
-4. Hailstorm dispersion test (`LaserSeeker.errorRate` def-first; salvo code
-   only if the footprint misses).
-5. Jamming module (Vesper; `RadarJammer`/`PowerSupply` pattern per
+   Tusko-D, Trebuchet [U].
+3. Submunition engine: Trebuchet [C].
+4. Jamming module (Vesper; `RadarJammer`/`PowerSupply` pattern per
    `PALISADE_FINDINGS.md` §4).
-6. Water-phase spike: TOR-42 Halcyon, then RAT-44 Barracuda; fallback is the
+5. Water-phase spike: TOR-42 Halcyon, then RAT-44 Barracuda; fallback is the
    waterline skipper.
-7. Proving-ground validation pass over all lanes; role tests per
+6. Proving-ground validation pass over all lanes; role tests per
    `docs/PROVING_GROUND.md`.
 
 ## HKP-1 Palisade — implementation plan
 
 All vanilla-system evidence is in `docs/PALISADE_FINDINGS.md`; spec is
-`MUNITIONS.md` §15; test lane L15 (IADS-HARD).
+`MUNITIONS.md` §12; test lane L12 (IADS-HARD).
 
 ### Components
 
@@ -79,14 +76,21 @@ All vanilla-system evidence is in `docs/PALISADE_FINDINGS.md`; spec is
 3. Interceptor def: clone **RAM-45** substrate → `Erenaldi.HKP1_int`
    micro-missile (1.2 m dart, Mach 3+, ~35 G, proximity HE-frag,
    `effectiveness.antiMissile > 0`, `targetRequirements` ~0.3-4 km,
-   `minAlignment` 180 degrees, no weapon-level `lineOfSight`). The runtime spike
-   retains RAM-45 SARH with zero tangible/guidance delay, 0.05 s arm delay, and
-   a widened seeker; ARH conversion is conditional on flight-test failure.
+   `minAlignment` 180 degrees, no weapon-level `lineOfSight`). The staged
+   controller applies 0.2 s housing ejection, a bounded pitch/yaw snap-turn
+   toward the SARH aimpoint, alignment-gated turning-cap release, and a 2.0 s
+   high-authority TVC main burn. SARH seeking remains active throughout; vanilla
+   steering and aerodynamics are suppressed only before main-motor ignition.
 4. Pod: `AGM2_6Pod` clone reduced to four `MountedMissile` children and carrying
    the two Palisade components; custom four-door geometry follows functional approval.
 5. Platform whitelist: KR-67 Ifrit, EW-25 Medusa + BepInEx config entries for
    modded heavies; station availability patched for whitelisted airframes
    only (`HardpointSpawnMountPatch` integration).
+
+The first CAD silhouette candidate is Gate 2 only: centered 1,200 mm length,
+140 mm body diameter, 170 mm turning cap, four tiny diagonal stabilizers, four
+cardinal hollow cap nozzles, and an exposed recessed main nozzle after separation.
+Unity export, prefab creation, and bundle integration remain gated on user approval.
 
 ### Config (BepInEx, `Phase 4` group)
 
@@ -102,7 +106,7 @@ cooldown, re-engage clearance threshold, rounds per pod, platform whitelist.
 - Mode HUD is local-only. Multiplayer must still verify mode/ammo consistency,
   remote interceptor visibility, and exactly one launch per engagement.
 
-### Verification (lane L15, IADS-HARD)
+### Verification (lane L12, IADS-HARD)
 
 - Mode states: Safe inhibits all launches; Smart Engage withholds fire while
   flares/jammer suffice and fires when they do not (flare-depleted and

@@ -1,0 +1,246 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r13_booster_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_before_oblique.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            -1,
+            0.6
+          ]
+        },
+        "width": 1800,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r14_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_after_oblique.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            -1,
+            0.6
+          ]
+        },
+        "width": 1800,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r13_booster_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_before_side.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        "width": 1800,
+        "height": 800
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r14_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_after_side.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        "width": 1800,
+        "height": 800
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r13_booster_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_before_top.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "width": 1800,
+        "height": 650
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r14_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_after_top.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "width": 1800,
+        "height": 650
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r14_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_after_opposite_oblique.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            -0.3,
+            1,
+            0.6
+          ]
+        },
+        "width": 1800,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r14.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_whole.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.35,
+            1,
+            0.65
+          ]
+        },
+        "width": 2200,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r14_separated.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R14_separated.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            1,
+            0.65
+          ]
+        },
+        "width": 2200,
+        "height": 850
+      }
+    ]
+  }
+]

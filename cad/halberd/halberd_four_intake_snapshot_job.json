@@ -1,0 +1,582 @@
+[
+  {
+    "input": "Halberd_C1_Razorback.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C1_Razorback_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C1_Razorback_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C1_Razorback_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C1_Razorback_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C1_Razorback_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C1_Razorback_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C1_Razorback_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C1_Razorback_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C1_Razorback_mouths.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C1_Razorback_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C1_Razorback_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C1_Razorback_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C2_Manta.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C2_Manta_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C2_Manta_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C2_Manta_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C2_Manta_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C2_Manta_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C2_Manta_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C2_Manta_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C2_Manta_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C2_Manta_mouths.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C2_Manta_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C2_Manta_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C2_Manta_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C3_Citadel.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C3_Citadel_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C3_Citadel_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C3_Citadel_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C3_Citadel_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C3_Citadel_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C3_Citadel_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C3_Citadel_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C3_Citadel_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C3_Citadel_mouths.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C3_Citadel_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C3_Citadel_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C3_Citadel_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C4_Petal.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C4_Petal_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C4_Petal_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C4_Petal_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C4_Petal_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C4_Petal_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C4_Petal_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C4_Petal_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C4_Petal_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C4_Petal_mouths.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_C4_Petal_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_C4_Petal_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_C4_Petal_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  }
+]

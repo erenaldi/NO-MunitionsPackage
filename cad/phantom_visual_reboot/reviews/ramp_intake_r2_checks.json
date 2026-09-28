@@ -1,0 +1,5765 @@
+{
+  "gate": "RampIntakeR2_saved_geometry_validation",
+  "units": "mm",
+  "scope": "Check only the four already-saved R2 STEP artifacts against saved R1 geometry: inventories/topology, unchanged parts and body cavity, ramp pose identities, measured lip drop, preserved stow envelope/flush, explicit mount contacts, deployed mouth void, and 66 sampled clearance pairs. No rebuild, rendering, continuous-sweep, airflow, or visual-approval claim.",
+  "thresholds": {
+    "saved_boolean_identity_mm3_exclusive": 0.01,
+    "saved_outer_lip_half_drop_deviation_mm_inclusive": 1e-05,
+    "saved_vertex_pick_residual_mm_inclusive": 0.0001,
+    "unexpected_overlap_mm3_exclusive": 0.001,
+    "new_pair_clearance_mm_exclusive": 0.2,
+    "fixed_mount_body_contact_mm3_exclusive": 1e-05,
+    "stowed_conservative_YZ_bbox_corner_radius_mm_exclusive": 125.0,
+    "saved_solid_topology": "one valid positive-volume solid per saved leaf"
+  },
+  "approved_pose_values": {
+    "hinge_axis_point_mm": [
+      -950.0,
+      0.0,
+      -83.0
+    ],
+    "R1_ramp_angle_deg": 5.0,
+    "R2_ramp_angle_deg": 2.497370647093458,
+    "R2_fraction_by_state": {
+      "Stowed": 0.0,
+      "Midfold": 0.5,
+      "Deployed": 1.0
+    }
+  },
+  "saved_artifacts": {
+    "R2_Stowed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R2_Stowed.step",
+      "size_bytes": 1393773,
+      "sha256": "7893f4f142d436d8b88e01182e9f670a729a33b0e53f5f69701818017d683de6",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "part_count": 33,
+      "expected_part_count": 33,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            60903776.71485137
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819491245
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819493012
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349893
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.1281949103
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819496586
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164165
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164166
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.374611641644
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164163
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.90725154214
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R2_Midfold": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R2_Midfold.step",
+      "size_bytes": 1393975,
+      "sha256": "6fa0f10070ce5d3b7707b3bad3ce6a55dd92b7c9a89ad13fa031ad54ed257313",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "part_count": 33,
+      "expected_part_count": 33,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            60903776.71485137
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420179
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.1281946426
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100622
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819469033
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420179
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349893
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819491036
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100622
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.1281949659
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164156
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164155
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164155
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164156
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.9072515421
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R2_Deployed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R2_Deployed.step",
+      "size_bytes": 1392217,
+      "sha256": "65dc1f57942519ddbf74b3488037c0beabac6730fef1bdb8a7749ebc533c52b5",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "part_count": 33,
+      "expected_part_count": 33,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            60903776.71485137
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.1281949611
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100623
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.1281948894
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349893
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819491036
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100623
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819496586
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164158
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.374611641615
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164164
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.3746116416
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.9072515419
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R2_Module_Deployed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R2_Module_Deployed.step",
+      "size_bytes": 104294,
+      "sha256": "3f4b54518b9777a857b110effe469511cc2504e7860b083bc73626320f139f53",
+      "document_labels": [
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin"
+      ],
+      "labels": [
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin"
+      ],
+      "part_count": 4,
+      "expected_part_count": 4,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.9072515419
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R1_Stowed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R1_Stowed.step",
+      "size_bytes": 1395031,
+      "sha256": "3bb4b9a4c78f5a1022f6cb6c0ffe347464dc9fd741f715e7251956f47d429ee6",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "part_count": 33,
+      "expected_part_count": 33,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            60903776.714852564
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.1281949117
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819492942
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349893
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819492037
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819496158
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164165
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164166
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.374611641644
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164163
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.90725152934
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R1_Midfold": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R1_Midfold.step",
+      "size_bytes": 1395235,
+      "sha256": "65c9acca036139f77dafb25545abe078283b7f526caa7754fb11de85ad80fe03",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "part_count": 33,
+      "expected_part_count": 33,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            60903776.714852564
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420179
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.1281946426
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100622
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819469033
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420179
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349893
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819492037
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100622
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819496158
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164156
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164155
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164155
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164156
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.9072515287
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R1_Deployed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R1_Deployed.step",
+      "size_bytes": 1393475,
+      "sha256": "17128fc7245018ea10a96c1dadb920362bdac2ce0d24ce799c00493cca67b49a",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "part_count": 33,
+      "expected_part_count": 33,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            60903776.714852564
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819496065
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100623
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.1281948896
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349893
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.1281949204
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100623
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819496155
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164158
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.374611641615
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164164
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.3746116416
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.9072515282
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R1_Module_Deployed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R1_Module_Deployed.step",
+      "size_bytes": 104552,
+      "sha256": "1ee6ab8ddbf892da073d56f7db1b323268ba2a33015a53921e12497388a0bf7b",
+      "document_labels": [
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin"
+      ],
+      "labels": [
+        "intake_r1_fixed_mount_negative_y",
+        "intake_r1_fixed_mount_positive_y",
+        "intake_r1_ramp",
+        "intake_r1_throughpin"
+      ],
+      "part_count": 4,
+      "expected_part_count": 4,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "intake_r1_ramp": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            329175.9072515282
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            330.4115008234633
+          ],
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            727.4750488468683
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R1_Body_Cavity": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R1_Body_Cavity.step",
+      "size_bytes": 673205,
+      "sha256": "80e5f1f8a79f7a45fcdd598ca247c390a70cfe1af4b8e76252f6364c574e42c4",
+      "document_labels": [
+        "=>[0:1:1:2]"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4"
+      ],
+      "part_count": 1,
+      "expected_part_count": 1,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            60903776.714852564
+          ],
+          "pass": true
+        }
+      }
+    },
+    "R4_Stowed_motion_input": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R4_Four_Stowed.step",
+      "size_bytes": 1234550,
+      "sha256": "23771543f8643da0a945bb123e004ae8e4e4b2faf5d9eececd8cc18846df989d",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r4_lower_port_fin_root",
+        "tail_r4_lower_port_fixed_knuckle_aft",
+        "tail_r4_lower_port_fixed_knuckle_forward",
+        "tail_r4_lower_port_throughpin",
+        "tail_r4_lower_starboard_fin_root",
+        "tail_r4_lower_starboard_fixed_knuckle_aft",
+        "tail_r4_lower_starboard_fixed_knuckle_forward",
+        "tail_r4_lower_starboard_throughpin",
+        "tail_r4_upper_port_fin_root",
+        "tail_r4_upper_port_fixed_knuckle_aft",
+        "tail_r4_upper_port_fixed_knuckle_forward",
+        "tail_r4_upper_port_throughpin",
+        "tail_r4_upper_starboard_fin_root",
+        "tail_r4_upper_starboard_fixed_knuckle_aft",
+        "tail_r4_upper_starboard_fixed_knuckle_forward",
+        "tail_r4_upper_starboard_throughpin",
+        "top_cover"
+      ],
+      "part_count": 29,
+      "expected_part_count": 29,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            66477310.08385518
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819491077
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819492872
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420898
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349893
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.1281949305
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819495721
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164162
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164163
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.37461164163
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            59504.3746116416
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            489.4315012994639
+          ],
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            1306.70619435247
+          ],
+          "pass": true
+        }
+      }
+    },
+    "A5_Stowed_motion_input": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\O_Interleaved_A5_Stowed.step",
+      "size_bytes": 796422,
+      "sha256": "beeb9d857a4df82bd5b473756f546048b9b2bb8b96e969f6a5b08c7a657f0be6",
+      "document_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "top_cover"
+      ],
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "top_cover"
+      ],
+      "part_count": 13,
+      "expected_part_count": 13,
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            66736561.3491234
+          ],
+          "pass": true
+        },
+        "supported_housing": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            334199.9999999999
+          ],
+          "pass": true
+        },
+        "starboard_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819494057
+          ],
+          "pass": true
+        },
+        "starboard_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.1281949529
+          ],
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            4020.060499349899
+          ],
+          "pass": true
+        },
+        "starboard_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420862
+          ],
+          "pass": true
+        },
+        "starboard_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "port_front": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            367856.12819490995
+          ],
+          "pass": true
+        },
+        "port_rear": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            183256.12819492802
+          ],
+          "pass": true
+        },
+        "port_fixed_root": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            5747.93645882431
+          ],
+          "pass": true
+        },
+        "port_carriage": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            730.1493150420861
+          ],
+          "pass": true
+        },
+        "port_join": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            654.2366701100632
+          ],
+          "pass": true
+        },
+        "top_cover": {
+          "valid": true,
+          "solid_count": 1,
+          "positive_solid_volumes_mm3": [
+            307039.99999999994
+          ],
+          "pass": true
+        }
+      }
+    }
+  },
+  "checks": {
+    "unchanged_32_nonramp_parts_match_R1": {
+      "Stowed": {
+        "compared_count": 32,
+        "expected_count": 32,
+        "parts": {
+          "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+            "state": "Stowed",
+            "label": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_carriage": {
+            "state": "Stowed",
+            "label": "port_carriage",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_fixed_root": {
+            "state": "Stowed",
+            "label": "port_fixed_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_front": {
+            "state": "Stowed",
+            "label": "port_front",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_join": {
+            "state": "Stowed",
+            "label": "port_join",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_rear": {
+            "state": "Stowed",
+            "label": "port_rear",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_carriage": {
+            "state": "Stowed",
+            "label": "starboard_carriage",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_fixed_root": {
+            "state": "Stowed",
+            "label": "starboard_fixed_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_front": {
+            "state": "Stowed",
+            "label": "starboard_front",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_join": {
+            "state": "Stowed",
+            "label": "starboard_join",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_rear": {
+            "state": "Stowed",
+            "label": "starboard_rear",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "supported_housing": {
+            "state": "Stowed",
+            "label": "supported_housing",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "top_cover": {
+            "state": "Stowed",
+            "label": "top_cover",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fin_root": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_starboard_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fixed_knuckle_aft": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_starboard_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fixed_knuckle_forward": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_starboard_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_throughpin": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_starboard_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fin_root": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_port_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fixed_knuckle_aft": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_port_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fixed_knuckle_forward": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_port_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_throughpin": {
+            "state": "Stowed",
+            "label": "tail_r4_upper_port_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fin_root": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_port_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fixed_knuckle_aft": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_port_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fixed_knuckle_forward": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_port_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_throughpin": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_port_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fin_root": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_starboard_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fixed_knuckle_aft": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_starboard_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fixed_knuckle_forward": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_starboard_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_throughpin": {
+            "state": "Stowed",
+            "label": "tail_r4_lower_starboard_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_fixed_mount_negative_y": {
+            "state": "Stowed",
+            "label": "intake_r1_fixed_mount_negative_y",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_fixed_mount_positive_y": {
+            "state": "Stowed",
+            "label": "intake_r1_fixed_mount_positive_y",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_throughpin": {
+            "state": "Stowed",
+            "label": "intake_r1_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "Midfold": {
+        "compared_count": 32,
+        "expected_count": 32,
+        "parts": {
+          "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+            "state": "Midfold",
+            "label": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_carriage": {
+            "state": "Midfold",
+            "label": "port_carriage",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_fixed_root": {
+            "state": "Midfold",
+            "label": "port_fixed_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_front": {
+            "state": "Midfold",
+            "label": "port_front",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_join": {
+            "state": "Midfold",
+            "label": "port_join",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_rear": {
+            "state": "Midfold",
+            "label": "port_rear",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_carriage": {
+            "state": "Midfold",
+            "label": "starboard_carriage",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_fixed_root": {
+            "state": "Midfold",
+            "label": "starboard_fixed_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_front": {
+            "state": "Midfold",
+            "label": "starboard_front",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_join": {
+            "state": "Midfold",
+            "label": "starboard_join",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_rear": {
+            "state": "Midfold",
+            "label": "starboard_rear",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "supported_housing": {
+            "state": "Midfold",
+            "label": "supported_housing",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "top_cover": {
+            "state": "Midfold",
+            "label": "top_cover",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fin_root": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_starboard_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fixed_knuckle_aft": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_starboard_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fixed_knuckle_forward": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_starboard_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_throughpin": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_starboard_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fin_root": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_port_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fixed_knuckle_aft": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_port_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fixed_knuckle_forward": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_port_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_throughpin": {
+            "state": "Midfold",
+            "label": "tail_r4_upper_port_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fin_root": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_port_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fixed_knuckle_aft": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_port_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fixed_knuckle_forward": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_port_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_throughpin": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_port_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fin_root": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_starboard_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fixed_knuckle_aft": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_starboard_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fixed_knuckle_forward": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_starboard_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_throughpin": {
+            "state": "Midfold",
+            "label": "tail_r4_lower_starboard_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_fixed_mount_negative_y": {
+            "state": "Midfold",
+            "label": "intake_r1_fixed_mount_negative_y",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_fixed_mount_positive_y": {
+            "state": "Midfold",
+            "label": "intake_r1_fixed_mount_positive_y",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_throughpin": {
+            "state": "Midfold",
+            "label": "intake_r1_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "Deployed": {
+        "compared_count": 32,
+        "expected_count": 32,
+        "parts": {
+          "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+            "state": "Deployed",
+            "label": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_carriage": {
+            "state": "Deployed",
+            "label": "port_carriage",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_fixed_root": {
+            "state": "Deployed",
+            "label": "port_fixed_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_front": {
+            "state": "Deployed",
+            "label": "port_front",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_join": {
+            "state": "Deployed",
+            "label": "port_join",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "port_rear": {
+            "state": "Deployed",
+            "label": "port_rear",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_carriage": {
+            "state": "Deployed",
+            "label": "starboard_carriage",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_fixed_root": {
+            "state": "Deployed",
+            "label": "starboard_fixed_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_front": {
+            "state": "Deployed",
+            "label": "starboard_front",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_join": {
+            "state": "Deployed",
+            "label": "starboard_join",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "starboard_rear": {
+            "state": "Deployed",
+            "label": "starboard_rear",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "supported_housing": {
+            "state": "Deployed",
+            "label": "supported_housing",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "top_cover": {
+            "state": "Deployed",
+            "label": "top_cover",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fin_root": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_starboard_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fixed_knuckle_aft": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_starboard_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_fixed_knuckle_forward": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_starboard_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_starboard_throughpin": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_starboard_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fin_root": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_port_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fixed_knuckle_aft": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_port_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_fixed_knuckle_forward": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_port_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_upper_port_throughpin": {
+            "state": "Deployed",
+            "label": "tail_r4_upper_port_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fin_root": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_port_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fixed_knuckle_aft": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_port_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_fixed_knuckle_forward": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_port_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_port_throughpin": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_port_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fin_root": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_starboard_fin_root",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fixed_knuckle_aft": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_starboard_fixed_knuckle_aft",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_fixed_knuckle_forward": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_starboard_fixed_knuckle_forward",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "tail_r4_lower_starboard_throughpin": {
+            "state": "Deployed",
+            "label": "tail_r4_lower_starboard_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_fixed_mount_negative_y": {
+            "state": "Deployed",
+            "label": "intake_r1_fixed_mount_negative_y",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_fixed_mount_positive_y": {
+            "state": "Deployed",
+            "label": "intake_r1_fixed_mount_positive_y",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          },
+          "intake_r1_throughpin": {
+            "state": "Deployed",
+            "label": "intake_r1_throughpin",
+            "symmetric_difference_mm3": 0.0,
+            "tolerance_mm3_exclusive": 0.01,
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "all_33_stowed_parts_identical_to_R1": {
+      "compared_count": 33,
+      "expected_count": 33,
+      "parts": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "state": "Stowed",
+          "label": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "port_carriage": {
+          "state": "Stowed",
+          "label": "port_carriage",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "state": "Stowed",
+          "label": "port_fixed_root",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "port_front": {
+          "state": "Stowed",
+          "label": "port_front",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "port_join": {
+          "state": "Stowed",
+          "label": "port_join",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "port_rear": {
+          "state": "Stowed",
+          "label": "port_rear",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "state": "Stowed",
+          "label": "starboard_carriage",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "state": "Stowed",
+          "label": "starboard_fixed_root",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "starboard_front": {
+          "state": "Stowed",
+          "label": "starboard_front",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "starboard_join": {
+          "state": "Stowed",
+          "label": "starboard_join",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "starboard_rear": {
+          "state": "Stowed",
+          "label": "starboard_rear",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "supported_housing": {
+          "state": "Stowed",
+          "label": "supported_housing",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "top_cover": {
+          "state": "Stowed",
+          "label": "top_cover",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fin_root": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_starboard_fin_root",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_aft": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_starboard_fixed_knuckle_aft",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_starboard_fixed_knuckle_forward": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_starboard_fixed_knuckle_forward",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_starboard_throughpin": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_starboard_throughpin",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_port_fin_root": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_port_fin_root",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_aft": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_port_fixed_knuckle_aft",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_port_fixed_knuckle_forward": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_port_fixed_knuckle_forward",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_upper_port_throughpin": {
+          "state": "Stowed",
+          "label": "tail_r4_upper_port_throughpin",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_port_fin_root": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_port_fin_root",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_aft": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_port_fixed_knuckle_aft",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_port_fixed_knuckle_forward": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_port_fixed_knuckle_forward",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_port_throughpin": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_port_throughpin",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fin_root": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_starboard_fin_root",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_aft": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_starboard_fixed_knuckle_aft",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_starboard_fixed_knuckle_forward": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_starboard_fixed_knuckle_forward",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "tail_r4_lower_starboard_throughpin": {
+          "state": "Stowed",
+          "label": "tail_r4_lower_starboard_throughpin",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "intake_r1_ramp": {
+          "state": "Stowed",
+          "label": "intake_r1_ramp",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "state": "Stowed",
+          "label": "intake_r1_fixed_mount_negative_y",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "state": "Stowed",
+          "label": "intake_r1_fixed_mount_positive_y",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "state": "Stowed",
+          "label": "intake_r1_throughpin",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "saved_ramp_pose_identity_two_independent_reconstructions": {
+      "Stowed": {
+        "fraction": 0.0,
+        "rotation_deg": 0.0,
+        "from_saved_R2_stowed": {
+          "state": "Stowed",
+          "fraction": 0.0,
+          "rotation_deg": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "from_saved_R1_pose_after_inverse_5deg_correction": {
+          "state": "Stowed",
+          "fraction": 0.0,
+          "correction_deg": -0.0,
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "pass": true
+      },
+      "Midfold": {
+        "fraction": 0.5,
+        "rotation_deg": 1.248685323546729,
+        "from_saved_R2_stowed": {
+          "state": "Midfold",
+          "fraction": 0.5,
+          "rotation_deg": 1.248685323546729,
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "from_saved_R1_pose_after_inverse_5deg_correction": {
+          "state": "Midfold",
+          "fraction": 0.5,
+          "correction_deg": -1.251314676453271,
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "pass": true
+      },
+      "Deployed": {
+        "fraction": 1.0,
+        "rotation_deg": 2.497370647093458,
+        "from_saved_R2_stowed": {
+          "state": "Deployed",
+          "fraction": 1.0,
+          "rotation_deg": 2.497370647093458,
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "from_saved_R1_pose_after_inverse_5deg_correction": {
+          "state": "Deployed",
+          "fraction": 1.0,
+          "correction_deg": -2.502629352906542,
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "pass": true
+      }
+    },
+    "deployed_module_matches_full_and_R1_module": {
+      "compared_to_R2_full_count": 4,
+      "expected_count": 4,
+      "parts": {
+        "intake_r1_ramp": {
+          "state": "Deployed",
+          "label": "intake_r1_ramp",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "intake_r1_fixed_mount_negative_y": {
+          "state": "Deployed",
+          "label": "intake_r1_fixed_mount_negative_y",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "intake_r1_fixed_mount_positive_y": {
+          "state": "Deployed",
+          "label": "intake_r1_fixed_mount_positive_y",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "intake_r1_throughpin": {
+          "state": "Deployed",
+          "label": "intake_r1_throughpin",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "body_and_cavity_identity_unchanged": {
+      "isolated_R1_body_cavity_path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\R_RampIntake_R1_Body_Cavity.step",
+      "compared_full_body_states": 3,
+      "expected_count": 3,
+      "states": {
+        "Stowed": {
+          "state": "Stowed",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "Midfold": {
+          "state": "Midfold",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        },
+        "Deployed": {
+          "state": "Deployed",
+          "symmetric_difference_mm3": 0.0,
+          "tolerance_mm3_exclusive": 0.01,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "measured_saved_outer_lip_drop_is_half_R1": {
+      "method": "independently pick corresponding lower forward-edge vertices from saved R1/R2 STEP B-reps; compare actual world-Z differences",
+      "required_half_of_saved_R1_drop_mm": 28.755687153867655,
+      "saved_R1_measurement": {
+        "description": "R1 saved baseline measured from saved edge vertices",
+        "selected_edge": "saved floor lower forward outer edge; y=+/-64 mm corners",
+        "angle_deg_used_for_vertex_correspondence": 5.0,
+        "stowed_saved_vertices": [
+          {
+            "xyz_mm": [
+              -290.0,
+              -64.0,
+              -86.0
+            ],
+            "pick_residual_mm": 0.0
+          },
+          {
+            "xyz_mm": [
+              -290.0,
+              64.0,
+              -86.0
+            ],
+            "pick_residual_mm": 0.0
+          }
+        ],
+        "deployed_saved_vertices": [
+          {
+            "xyz_mm": [
+              -292.7729664876896,
+              -64.0,
+              -143.5113743077353
+            ],
+            "pick_residual_mm": 5.845759065861076e-12
+          },
+          {
+            "xyz_mm": [
+              -292.7729664876896,
+              64.0,
+              -143.5113743077353
+            ],
+            "pick_residual_mm": 5.845759065861076e-12
+          }
+        ],
+        "per_corner_vertical_drop_mm": [
+          57.51137430773531,
+          57.51137430773531
+        ],
+        "measured_mean_vertical_drop_mm": 57.51137430773531
+      },
+      "saved_R2_measurement": {
+        "description": "R2 saved result measured from saved edge vertices",
+        "selected_edge": "saved floor lower forward outer edge; y=+/-64 mm corners",
+        "angle_deg_used_for_vertex_correspondence": 2.497370647093458,
+        "stowed_saved_vertices": [
+          {
+            "xyz_mm": [
+              -290.0,
+              -64.0,
+              -86.0
+            ],
+            "pick_residual_mm": 0.0
+          },
+          {
+            "xyz_mm": [
+              -290.0,
+              64.0,
+              -86.0
+            ],
+            "pick_residual_mm": 0.0
+          }
+        ],
+        "deployed_saved_vertices": [
+          {
+            "xyz_mm": [
+              -290.75757392793184,
+              -64.0,
+              -114.75568715386186
+            ],
+            "pick_residual_mm": 2.9836365489348967e-12
+          },
+          {
+            "xyz_mm": [
+              -290.75757392793184,
+              64.0,
+              -114.75568715386186
+            ],
+            "pick_residual_mm": 2.9836365489348967e-12
+          }
+        ],
+        "per_corner_vertical_drop_mm": [
+          28.755687153861857,
+          28.755687153861857
+        ],
+        "measured_mean_vertical_drop_mm": 28.755687153861857
+      },
+      "absolute_deviation_from_half_mm": 5.7980287238024175e-12,
+      "tolerance_mm_inclusive": 1e-05,
+      "pass": true
+    },
+    "stowed_flush_hardware_and_125mm_envelope": {
+      "full_stowed_part_count": 33,
+      "expected_part_count": 33,
+      "floor_tight_min_Z_mm": -86.0,
+      "belly_Z_mm": -86.0,
+      "stowed_floor_flush_error_mm": 0.0,
+      "stowed_floor_flush_tolerance_mm": 1e-06,
+      "hardware_tight_min_Z_by_part_mm": {
+        "intake_r1_fixed_mount_negative_y": -86.0,
+        "intake_r1_fixed_mount_positive_y": -86.0,
+        "intake_r1_throughpin": -85.5
+      },
+      "hardware_lowest_Z_mm": -86.0,
+      "hardware_above_or_on_belly": true,
+      "conservative_YZ_AABB_corner_radius_mm_by_part": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": 121.62236650584862,
+        "port_carriage": 80.30916835424209,
+        "port_fixed_root": 90.56247856728524,
+        "port_front": 100.48323392758662,
+        "port_join": 91.46344911847748,
+        "port_rear": 87.32485516937989,
+        "starboard_carriage": 75.508691689434,
+        "starboard_fixed_root": 85.66249192703887,
+        "starboard_front": 96.13339845988362,
+        "starboard_join": 86.61444754513528,
+        "starboard_rear": 82.98120467463191,
+        "supported_housing": 98.99021430399067,
+        "top_cover": 114.76933402438127,
+        "tail_r4_upper_starboard_fin_root": 120.91732727032964,
+        "tail_r4_upper_starboard_fixed_knuckle_aft": 120.91732727032962,
+        "tail_r4_upper_starboard_fixed_knuckle_forward": 120.91732727032962,
+        "tail_r4_upper_starboard_throughpin": 120.2102326509686,
+        "tail_r4_upper_port_fin_root": 120.91732727032964,
+        "tail_r4_upper_port_fixed_knuckle_aft": 120.91732727032961,
+        "tail_r4_upper_port_fixed_knuckle_forward": 120.91732727032961,
+        "tail_r4_upper_port_throughpin": 120.2102326509686,
+        "tail_r4_lower_port_fin_root": 120.91732727032964,
+        "tail_r4_lower_port_fixed_knuckle_aft": 120.91732727032961,
+        "tail_r4_lower_port_fixed_knuckle_forward": 120.91732727032961,
+        "tail_r4_lower_port_throughpin": 120.2102326509686,
+        "tail_r4_lower_starboard_fin_root": 120.91732727032964,
+        "tail_r4_lower_starboard_fixed_knuckle_aft": 120.91732727032961,
+        "tail_r4_lower_starboard_fixed_knuckle_forward": 120.91732727032961,
+        "tail_r4_lower_starboard_throughpin": 120.2102326509686,
+        "intake_r1_ramp": 107.20074640598357,
+        "intake_r1_fixed_mount_negative_y": 111.52129855502938,
+        "intake_r1_fixed_mount_positive_y": 111.52129855502938,
+        "intake_r1_throughpin": 111.77768127627267
+      },
+      "maximum_conservative_radius_mm": 121.62236650584862,
+      "radius_witness": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "radius_limit_mm_exclusive": 125.0,
+      "pass": true
+    },
+    "only_explicit_fixed_mount_body_contacts": {
+      "authorized_mount_body_pairs": [
+        [
+          "RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "intake_r1_fixed_mount_negative_y"
+        ],
+        [
+          "RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "intake_r1_fixed_mount_positive_y"
+        ]
+      ],
+      "states": {
+        "Stowed": {
+          "contacts": {
+            "intake_r1_fixed_mount_negative_y": {
+              "positive_body_contact_overlap_mm3": 327.53694354543006,
+              "minimum_mm3_exclusive": 1e-05,
+              "pass": true
+            },
+            "intake_r1_fixed_mount_positive_y": {
+              "positive_body_contact_overlap_mm3": 327.5369435454301,
+              "minimum_mm3_exclusive": 1e-05,
+              "pass": true
+            }
+          },
+          "compared_count": 2,
+          "expected_count": 2,
+          "pass": true
+        },
+        "Midfold": {
+          "contacts": {
+            "intake_r1_fixed_mount_negative_y": {
+              "positive_body_contact_overlap_mm3": 327.53694354543006,
+              "minimum_mm3_exclusive": 1e-05,
+              "pass": true
+            },
+            "intake_r1_fixed_mount_positive_y": {
+              "positive_body_contact_overlap_mm3": 327.5369435454301,
+              "minimum_mm3_exclusive": 1e-05,
+              "pass": true
+            }
+          },
+          "compared_count": 2,
+          "expected_count": 2,
+          "pass": true
+        },
+        "Deployed": {
+          "contacts": {
+            "intake_r1_fixed_mount_negative_y": {
+              "positive_body_contact_overlap_mm3": 327.53694354543006,
+              "minimum_mm3_exclusive": 1e-05,
+              "pass": true
+            },
+            "intake_r1_fixed_mount_positive_y": {
+              "positive_body_contact_overlap_mm3": 327.5369435454301,
+              "minimum_mm3_exclusive": 1e-05,
+              "pass": true
+            }
+          },
+          "compared_count": 2,
+          "expected_count": 2,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "deployed_forward_mouth_void_clear": {
+      "test_slab_x_mm": [
+        -305.1,
+        -304.9
+      ],
+      "test_y_mm": [
+        -62.0,
+        62.0
+      ],
+      "floor_at_test_plane_z_mm": -111.13165220211596,
+      "test_z_mm": [
+        -110.83165220211596,
+        -86.3
+      ],
+      "unobstructed_width_mm": 124.0,
+      "unobstructed_height_mm": 24.531652202115964,
+      "tested_final_part_count": 33,
+      "expected_final_part_count": 33,
+      "blockers_ge_0_001_mm3": [],
+      "pass": true,
+      "interpretation": "Geometric forward mouth clearance only; no airflow-performance claim."
+    },
+    "synchronous_66_sample_R2_clearance_and_overlap": {
+      "method": "66 saved-input synchronous pose samples: 61 uniform fractions plus five early fractions; inherited R4/A5 reconstruction; R2 ramp rotates saved Stowed ramp by angle*f",
+      "sample_count": 66,
+      "expected_sample_count": 66,
+      "uniform_sample_count": 61,
+      "early_fractions": [
+        0.001,
+        0.002,
+        0.005,
+        0.01,
+        0.02
+      ],
+      "new_part_count": 4,
+      "existing_part_count_per_sample": 29,
+      "candidate_pair_count_per_sample": 122,
+      "authorized_exceptions_only": [
+        [
+          "RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "intake_r1_fixed_mount_negative_y"
+        ],
+        [
+          "RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "intake_r1_fixed_mount_positive_y"
+        ]
+      ],
+      "fixed_mount_body_contacts_checked_separately": true,
+      "clearance_mm_exclusive": 0.2,
+      "unexpected_overlap_mm3_exclusive": 0.001,
+      "minimum_sampled_clearance": {
+        "clearance_mm": 0.24999999999973588,
+        "pair": [
+          "intake_r1_ramp",
+          "intake_r1_throughpin"
+        ],
+        "method": "exact_nearest_points_and_overlap",
+        "fraction": 0.5166666666666667
+      },
+      "maximum_unexpected_overlap": {
+        "overlap_mm3": 0.0,
+        "pair": null,
+        "fraction": null
+      },
+      "unique_identical_static_pair_results_cached": 49,
+      "all_samples_pass": true,
+      "continuous_sweep_claim": "None; specified discrete 66-sample check only.",
+      "samples": [
+        {
+          "sample": 0,
+          "fraction": 0.0,
+          "ramp_rotation_deg": 0.0,
+          "R4_fin_fold_deg": -0.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999999268,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 1,
+          "fraction": 0.001,
+          "ramp_rotation_deg": 0.002497370647093458,
+          "R4_fin_fold_deg": -0.135,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999988437,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 2,
+          "fraction": 0.002,
+          "ramp_rotation_deg": 0.004994741294186916,
+          "R4_fin_fold_deg": -0.27,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999993172,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 3,
+          "fraction": 0.005,
+          "ramp_rotation_deg": 0.01248685323546729,
+          "R4_fin_fold_deg": -0.675,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999993633,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 4,
+          "fraction": 0.01,
+          "ramp_rotation_deg": 0.02497370647093458,
+          "R4_fin_fold_deg": -1.35,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999981373,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 5,
+          "fraction": 0.016666666666666666,
+          "ramp_rotation_deg": 0.0416228441182243,
+          "R4_fin_fold_deg": -2.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.249999999999856,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 6,
+          "fraction": 0.02,
+          "ramp_rotation_deg": 0.04994741294186916,
+          "R4_fin_fold_deg": -2.7,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999982106,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 7,
+          "fraction": 0.03333333333333333,
+          "ramp_rotation_deg": 0.0832456882364486,
+          "R4_fin_fold_deg": -4.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999987,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 8,
+          "fraction": 0.05,
+          "ramp_rotation_deg": 0.1248685323546729,
+          "R4_fin_fold_deg": -6.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.249999999999866,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 9,
+          "fraction": 0.06666666666666667,
+          "ramp_rotation_deg": 0.1664913764728972,
+          "R4_fin_fold_deg": -9.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999977987,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 10,
+          "fraction": 0.08333333333333333,
+          "ramp_rotation_deg": 0.2081142205911215,
+          "R4_fin_fold_deg": -11.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999978828,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 11,
+          "fraction": 0.1,
+          "ramp_rotation_deg": 0.2497370647093458,
+          "R4_fin_fold_deg": -13.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.25,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 12,
+          "fraction": 0.11666666666666667,
+          "ramp_rotation_deg": 0.2913599088275701,
+          "R4_fin_fold_deg": -15.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999997508,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 13,
+          "fraction": 0.13333333333333333,
+          "ramp_rotation_deg": 0.3329827529457944,
+          "R4_fin_fold_deg": -18.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999988756,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 14,
+          "fraction": 0.15,
+          "ramp_rotation_deg": 0.3746055970640187,
+          "R4_fin_fold_deg": -20.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999984207,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 15,
+          "fraction": 0.16666666666666666,
+          "ramp_rotation_deg": 0.416228441182243,
+          "R4_fin_fold_deg": -22.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999990283,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 16,
+          "fraction": 0.18333333333333332,
+          "ramp_rotation_deg": 0.45785128530046726,
+          "R4_fin_fold_deg": -24.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999989678,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 17,
+          "fraction": 0.2,
+          "ramp_rotation_deg": 0.4994741294186916,
+          "R4_fin_fold_deg": -27.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999990627,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 18,
+          "fraction": 0.21666666666666667,
+          "ramp_rotation_deg": 0.5410969735369159,
+          "R4_fin_fold_deg": -29.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999986483,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 19,
+          "fraction": 0.23333333333333334,
+          "ramp_rotation_deg": 0.5827198176551402,
+          "R4_fin_fold_deg": -31.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999989803,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 20,
+          "fraction": 0.25,
+          "ramp_rotation_deg": 0.6243426617733645,
+          "R4_fin_fold_deg": -33.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999991362,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 21,
+          "fraction": 0.26666666666666666,
+          "ramp_rotation_deg": 0.6659655058915888,
+          "R4_fin_fold_deg": -36.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999979497,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 22,
+          "fraction": 0.2833333333333333,
+          "ramp_rotation_deg": 0.7075883500098131,
+          "R4_fin_fold_deg": -38.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999985847,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 23,
+          "fraction": 0.3,
+          "ramp_rotation_deg": 0.7492111941280374,
+          "R4_fin_fold_deg": -40.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999998232,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 24,
+          "fraction": 0.31666666666666665,
+          "ramp_rotation_deg": 0.7908340382462616,
+          "R4_fin_fold_deg": -42.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999999199,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 25,
+          "fraction": 0.3333333333333333,
+          "ramp_rotation_deg": 0.832456882364486,
+          "R4_fin_fold_deg": -45.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999989395,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 26,
+          "fraction": 0.35,
+          "ramp_rotation_deg": 0.8740797264827103,
+          "R4_fin_fold_deg": -47.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999999611,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 27,
+          "fraction": 0.36666666666666664,
+          "ramp_rotation_deg": 0.9157025706009345,
+          "R4_fin_fold_deg": -49.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999998675,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 28,
+          "fraction": 0.38333333333333336,
+          "ramp_rotation_deg": 0.957325414719159,
+          "R4_fin_fold_deg": -51.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999985192,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 29,
+          "fraction": 0.4,
+          "ramp_rotation_deg": 0.9989482588373833,
+          "R4_fin_fold_deg": -54.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999990785,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 30,
+          "fraction": 0.4166666666666667,
+          "ramp_rotation_deg": 1.0405711029556075,
+          "R4_fin_fold_deg": -56.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999992698,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 31,
+          "fraction": 0.43333333333333335,
+          "ramp_rotation_deg": 1.0821939470738318,
+          "R4_fin_fold_deg": -58.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999992686,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 32,
+          "fraction": 0.45,
+          "ramp_rotation_deg": 1.1238167911920562,
+          "R4_fin_fold_deg": -60.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999992017,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 33,
+          "fraction": 0.4666666666666667,
+          "ramp_rotation_deg": 1.1654396353102805,
+          "R4_fin_fold_deg": -63.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999998812,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 34,
+          "fraction": 0.48333333333333334,
+          "ramp_rotation_deg": 1.2070624794285048,
+          "R4_fin_fold_deg": -65.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999990147,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 35,
+          "fraction": 0.5,
+          "ramp_rotation_deg": 1.248685323546729,
+          "R4_fin_fold_deg": -67.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999988404,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 36,
+          "fraction": 0.5166666666666667,
+          "ramp_rotation_deg": 1.2903081676649535,
+          "R4_fin_fold_deg": -69.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999973588,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 37,
+          "fraction": 0.5333333333333333,
+          "ramp_rotation_deg": 1.3319310117831775,
+          "R4_fin_fold_deg": -72.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999999114,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 38,
+          "fraction": 0.55,
+          "ramp_rotation_deg": 1.373553855901402,
+          "R4_fin_fold_deg": -74.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999998559,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 39,
+          "fraction": 0.5666666666666667,
+          "ramp_rotation_deg": 1.4151767000196263,
+          "R4_fin_fold_deg": -76.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999992908,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 40,
+          "fraction": 0.5833333333333334,
+          "ramp_rotation_deg": 1.4567995441378505,
+          "R4_fin_fold_deg": -78.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.249999999999979,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 41,
+          "fraction": 0.6,
+          "ramp_rotation_deg": 1.4984223882560748,
+          "R4_fin_fold_deg": -81.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999992714,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 42,
+          "fraction": 0.6166666666666667,
+          "ramp_rotation_deg": 1.5400452323742992,
+          "R4_fin_fold_deg": -83.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999996317,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 43,
+          "fraction": 0.6333333333333333,
+          "ramp_rotation_deg": 1.5816680764925233,
+          "R4_fin_fold_deg": -85.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999980532,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 44,
+          "fraction": 0.65,
+          "ramp_rotation_deg": 1.6232909206107478,
+          "R4_fin_fold_deg": -87.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.25,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 45,
+          "fraction": 0.6666666666666666,
+          "ramp_rotation_deg": 1.664913764728972,
+          "R4_fin_fold_deg": -90.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999991732,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 46,
+          "fraction": 0.6833333333333333,
+          "ramp_rotation_deg": 1.7065366088471963,
+          "R4_fin_fold_deg": -92.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999994238,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 47,
+          "fraction": 0.7,
+          "ramp_rotation_deg": 1.7481594529654205,
+          "R4_fin_fold_deg": -94.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999998998,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 48,
+          "fraction": 0.7166666666666667,
+          "ramp_rotation_deg": 1.789782297083645,
+          "R4_fin_fold_deg": -96.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999991454,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 49,
+          "fraction": 0.7333333333333333,
+          "ramp_rotation_deg": 1.831405141201869,
+          "R4_fin_fold_deg": -99.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999998881,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 50,
+          "fraction": 0.75,
+          "ramp_rotation_deg": 1.8730279853200935,
+          "R4_fin_fold_deg": -101.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.25,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 51,
+          "fraction": 0.7666666666666667,
+          "ramp_rotation_deg": 1.914650829438318,
+          "R4_fin_fold_deg": -103.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999982153,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 52,
+          "fraction": 0.7833333333333333,
+          "ramp_rotation_deg": 1.956273673556542,
+          "R4_fin_fold_deg": -105.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999988298,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 53,
+          "fraction": 0.8,
+          "ramp_rotation_deg": 1.9978965176747665,
+          "R4_fin_fold_deg": -108.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999999202,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 54,
+          "fraction": 0.8166666666666667,
+          "ramp_rotation_deg": 2.0395193617929905,
+          "R4_fin_fold_deg": -110.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999987413,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 55,
+          "fraction": 0.8333333333333334,
+          "ramp_rotation_deg": 2.081142205911215,
+          "R4_fin_fold_deg": -112.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999997408,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 56,
+          "fraction": 0.85,
+          "ramp_rotation_deg": 2.122765050029439,
+          "R4_fin_fold_deg": -114.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999981365,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 57,
+          "fraction": 0.8666666666666667,
+          "ramp_rotation_deg": 2.1643878941476635,
+          "R4_fin_fold_deg": -117.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999996425,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 58,
+          "fraction": 0.8833333333333333,
+          "ramp_rotation_deg": 2.206010738265888,
+          "R4_fin_fold_deg": -119.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999999272,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 59,
+          "fraction": 0.9,
+          "ramp_rotation_deg": 2.2476335823841125,
+          "R4_fin_fold_deg": -121.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999985442,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 60,
+          "fraction": 0.9166666666666666,
+          "ramp_rotation_deg": 2.2892564265023365,
+          "R4_fin_fold_deg": -123.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999992176,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 61,
+          "fraction": 0.9333333333333333,
+          "ramp_rotation_deg": 2.330879270620561,
+          "R4_fin_fold_deg": -126.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999987696,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 62,
+          "fraction": 0.95,
+          "ramp_rotation_deg": 2.372502114738785,
+          "R4_fin_fold_deg": -128.25,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999988087,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 63,
+          "fraction": 0.9666666666666667,
+          "ramp_rotation_deg": 2.4141249588570095,
+          "R4_fin_fold_deg": -130.5,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.24999999999988137,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 64,
+          "fraction": 0.9833333333333333,
+          "ramp_rotation_deg": 2.4557478029752335,
+          "R4_fin_fold_deg": -132.75,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999998293,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        },
+        {
+          "sample": 65,
+          "fraction": 1.0,
+          "ramp_rotation_deg": 2.497370647093458,
+          "R4_fin_fold_deg": -135.0,
+          "new_part_count": 4,
+          "existing_part_count": 29,
+          "all_new_vs_existing_and_internal_pairs_expected": 122,
+          "nonexempt_pair_count_checked": 120,
+          "explicit_fixed_mount_body_exemptions": 2,
+          "minimum_clearance": {
+            "clearance_mm": 0.2499999999999162,
+            "pair": [
+              "intake_r1_ramp",
+              "intake_r1_throughpin"
+            ],
+            "method": "exact_nearest_points_and_overlap"
+          },
+          "maximum_unexpected_overlap": {
+            "overlap_mm3": 0.0,
+            "pair": null
+          },
+          "measurement_error_count": 0,
+          "pass": true
+        }
+      ]
+    }
+  },
+  "failures": [],
+  "expected_inventory": {
+    "full_assembly_labels": [
+      "RDM9_R7_symmetric_body_20mm_wedge_R4",
+      "port_carriage",
+      "port_fixed_root",
+      "port_front",
+      "port_join",
+      "port_rear",
+      "starboard_carriage",
+      "starboard_fixed_root",
+      "starboard_front",
+      "starboard_join",
+      "starboard_rear",
+      "supported_housing",
+      "top_cover",
+      "tail_r4_upper_starboard_fin_root",
+      "tail_r4_upper_starboard_fixed_knuckle_aft",
+      "tail_r4_upper_starboard_fixed_knuckle_forward",
+      "tail_r4_upper_starboard_throughpin",
+      "tail_r4_upper_port_fin_root",
+      "tail_r4_upper_port_fixed_knuckle_aft",
+      "tail_r4_upper_port_fixed_knuckle_forward",
+      "tail_r4_upper_port_throughpin",
+      "tail_r4_lower_port_fin_root",
+      "tail_r4_lower_port_fixed_knuckle_aft",
+      "tail_r4_lower_port_fixed_knuckle_forward",
+      "tail_r4_lower_port_throughpin",
+      "tail_r4_lower_starboard_fin_root",
+      "tail_r4_lower_starboard_fixed_knuckle_aft",
+      "tail_r4_lower_starboard_fixed_knuckle_forward",
+      "tail_r4_lower_starboard_throughpin",
+      "intake_r1_ramp",
+      "intake_r1_fixed_mount_negative_y",
+      "intake_r1_fixed_mount_positive_y",
+      "intake_r1_throughpin"
+    ],
+    "full_assembly_count": 33,
+    "module_labels": [
+      "intake_r1_ramp",
+      "intake_r1_fixed_mount_negative_y",
+      "intake_r1_fixed_mount_positive_y",
+      "intake_r1_throughpin"
+    ],
+    "module_count": 4
+  },
+  "passed": true,
+  "summary": {
+    "passed": true,
+    "failure_count": 0,
+    "saved_artifact_count": 11,
+    "R2_full_component_counts": {
+      "Stowed": 33,
+      "Midfold": 33,
+      "Deployed": 33
+    },
+    "R2_module_component_count": 4,
+    "measured_R1_lip_drop_mm": 57.51137430773531,
+    "measured_R2_lip_drop_mm": 28.755687153861857,
+    "half_drop_deviation_mm": 5.7980287238024175e-12,
+    "minimum_sampled_clearance": {
+      "clearance_mm": 0.24999999999973588,
+      "pair": [
+        "intake_r1_ramp",
+        "intake_r1_throughpin"
+      ],
+      "method": "exact_nearest_points_and_overlap",
+      "fraction": 0.5166666666666667
+    },
+    "maximum_unexpected_overlap": {
+      "overlap_mm3": 0.0,
+      "pair": null,
+      "fraction": null
+    },
+    "motion_sample_count": 66,
+    "stowed_radius_mm": 121.62236650584862,
+    "deployed_mouth_height_mm": 24.531652202115964,
+    "first_failures": []
+  }
+}

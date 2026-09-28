@@ -1,0 +1,33 @@
+[
+  {
+    "input": "STEP/O_Interleaved_A2_Support_Exploded.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A2_support_end.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            -50,
+            110
+          ],
+          "orthographicHalfHeight": 160,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

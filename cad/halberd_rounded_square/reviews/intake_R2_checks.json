@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "parts_open": 11,
+  "parts_covered": 12,
+  "length_mm": 3370.0000002000024,
+  "booster_length_mm": 561.6666668666687,
+  "preserved_exactly": [
+    "main_ogive",
+    "booster_body",
+    "main_fin_1",
+    "main_fin_2",
+    "main_fin_3",
+    "main_fin_4",
+    "booster_fin_1",
+    "booster_fin_2",
+    "booster_fin_3",
+    "booster_fin_4"
+  ],
+  "fin_clock_degrees": [
+    45.0,
+    135.0,
+    224.99999999999997,
+    315.0,
+    45.0,
+    135.0,
+    225.0,
+    315.0
+  ],
+  "intake_clock_degrees": 45,
+  "intakes_prototyped": 1,
+  "open_passage_probes": 3,
+  "roof_and_sidewall_probes": 20,
+  "cover_overlap_mm3": 472.9518691526798,
+  "cover_opening_probes": 12,
+  "widened_aperture_probes": 3,
+  "forward_notch_probes": 2,
+  "main_fin_exposed_volume_retention": {
+    "1": 0.9999087228986179,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0
+  },
+  "forward_transition_unchanged": true,
+  "native_validation": [
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R2",
+      "occurrenceCount": 11,
+      "prototypeCount": 5,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R2_Separated",
+      "occurrenceCount": 11,
+      "prototypeCount": 5,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R2_Covered",
+      "occurrenceCount": 12,
+      "prototypeCount": 6,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    }
+  ]
+}

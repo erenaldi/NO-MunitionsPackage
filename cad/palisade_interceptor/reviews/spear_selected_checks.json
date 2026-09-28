@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "assembled": "Spear_Selected_SketchLow_Boattail.step",
+  "separated": "Spear_Selected_SketchLow_Boattail_Separated.step",
+  "parts": 11,
+  "length_mm": 1200.0,
+  "radial_envelope_mm": 79.009,
+  "fin_tip_mm": 79.009,
+  "cap_aft_radius_mm": 34.193,
+  "fourfold_fin_equivalence": true,
+  "stage_shapes_preserved": true
+}

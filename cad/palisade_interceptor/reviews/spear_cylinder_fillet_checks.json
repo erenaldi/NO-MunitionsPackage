@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "length_mm": 1200.0,
+  "radial_envelope_mm": 79.009,
+  "cap_section_radii_mm": {
+    "-599.5": 43.692,
+    "-590.0": 57.238,
+    "-577.0": 60.76,
+    "-520.0": 60.76,
+    "-470.0": 60.76,
+    "-440.0": 60.76,
+    "-421.0": 60.76
+  },
+  "aft_edge_fillet_nominal_mm": 22.0,
+  "detailed_nozzles": 1,
+  "other_three_nozzles_original": true,
+  "core_and_fins_preserved": true,
+  "separation_shapes_preserved": true
+}

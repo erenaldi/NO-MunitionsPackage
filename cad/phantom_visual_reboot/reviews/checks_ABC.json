@@ -1,0 +1,180 @@
+[
+  {
+    "key": "A",
+    "ok": true,
+    "occurrences": 11,
+    "states": {
+      "deployed": {
+        "path": "STEP\\A_Facet_Deployed.step",
+        "length_mm": 2800.0000002,
+        "max_vertex_radius_mm": 522.8097,
+        "radius_by_part_mm": {
+          "faceted_body": 106.5692,
+          "flush_rf_port": 99.7823,
+          "flush_rf_starboard": 99.7823,
+          "hinge_seat_port": 70.516,
+          "hinge_seat_starboard": 70.516,
+          "wing_port": 522.4567,
+          "wing_starboard": 522.8097,
+          "tail_fin_045": 134.0102,
+          "tail_fin_135": 134.0102,
+          "tail_fin_225": 134.0102,
+          "tail_fin_315": 134.0102
+        }
+      },
+      "stowed": {
+        "path": "STEP\\A_Facet_Stowed.step",
+        "length_mm": 2800.0000002,
+        "max_vertex_radius_mm": 108.135,
+        "radius_by_part_mm": {
+          "faceted_body": 106.5692,
+          "flush_rf_port": 99.7823,
+          "flush_rf_starboard": 99.7823,
+          "hinge_seat_port": 70.516,
+          "hinge_seat_starboard": 70.516,
+          "wing_port": 103.2279,
+          "wing_starboard": 105.0,
+          "tail_fin_045": 108.135,
+          "tail_fin_135": 108.135,
+          "tail_fin_225": 108.135,
+          "tail_fin_315": 108.135
+        }
+      }
+    },
+    "inverse_pose_symmetric_difference_mm3": {
+      "faceted_body": 0,
+      "flush_rf_port": 0,
+      "flush_rf_starboard": 0,
+      "hinge_seat_port": 0,
+      "hinge_seat_starboard": 0,
+      "tail_fin_045": 0,
+      "tail_fin_135": 0,
+      "tail_fin_225": 0,
+      "tail_fin_315": 0,
+      "wing_port": 0,
+      "wing_starboard": 0
+    },
+    "wing_seat_contacts": true,
+    "mock_pad": {
+      "label": "R5-derived mock pad, not donor rack",
+      "zero_overlap": true,
+      "pad_floor_mm": 78.0
+    }
+  },
+  {
+    "key": "B",
+    "ok": true,
+    "occurrences": 11,
+    "states": {
+      "deployed": {
+        "path": "STEP\\B_Shoulder_Deployed.step",
+        "length_mm": 2800.0000002,
+        "max_vertex_radius_mm": 572.4771,
+        "radius_by_part_mm": {
+          "faceted_body": 116.7262,
+          "flush_rf_port": 113.7475,
+          "flush_rf_starboard": 113.7475,
+          "hinge_seat_port": 70.516,
+          "hinge_seat_starboard": 70.516,
+          "wing_port": 572.1547,
+          "wing_starboard": 572.4771,
+          "tail_fin_045": 127.0107,
+          "tail_fin_135": 127.0107,
+          "tail_fin_225": 127.0107,
+          "tail_fin_315": 127.0107
+        }
+      },
+      "stowed": {
+        "path": "STEP\\B_Shoulder_Stowed.step",
+        "length_mm": 2800.0000002,
+        "max_vertex_radius_mm": 121.5936,
+        "radius_by_part_mm": {
+          "faceted_body": 116.7262,
+          "flush_rf_port": 113.7475,
+          "flush_rf_starboard": 113.7475,
+          "hinge_seat_port": 70.516,
+          "hinge_seat_starboard": 70.516,
+          "wing_port": 120.0666,
+          "wing_starboard": 121.5936,
+          "tail_fin_045": 102.1611,
+          "tail_fin_135": 102.1611,
+          "tail_fin_225": 102.1611,
+          "tail_fin_315": 102.1611
+        }
+      }
+    },
+    "inverse_pose_symmetric_difference_mm3": {
+      "faceted_body": 0,
+      "flush_rf_port": 0,
+      "flush_rf_starboard": 0,
+      "hinge_seat_port": 0,
+      "hinge_seat_starboard": 0,
+      "tail_fin_045": 0,
+      "tail_fin_135": 0,
+      "tail_fin_225": 0,
+      "tail_fin_315": 0,
+      "wing_port": 0,
+      "wing_starboard": 0
+    },
+    "wing_seat_contacts": true,
+    "mock_pad": null
+  },
+  {
+    "key": "C",
+    "ok": true,
+    "occurrences": 11,
+    "states": {
+      "deployed": {
+        "path": "STEP\\C_Keel_Deployed.step",
+        "length_mm": 2800.0000002,
+        "max_vertex_radius_mm": 488.083,
+        "radius_by_part_mm": {
+          "faceted_body": 101.204,
+          "flush_rf_port": 74.8766,
+          "flush_rf_starboard": 74.8766,
+          "hinge_seat_port": 70.516,
+          "hinge_seat_starboard": 70.516,
+          "wing_port": 487.7048,
+          "wing_starboard": 488.083,
+          "tail_fin_045": 137.0099,
+          "tail_fin_135": 137.0099,
+          "tail_fin_225": 137.0099,
+          "tail_fin_315": 137.0099
+        }
+      },
+      "stowed": {
+        "path": "STEP\\C_Keel_Stowed.step",
+        "length_mm": 2800.0000002,
+        "max_vertex_radius_mm": 110.732,
+        "radius_by_part_mm": {
+          "faceted_body": 101.204,
+          "flush_rf_port": 74.8766,
+          "flush_rf_starboard": 74.8766,
+          "hinge_seat_port": 70.516,
+          "hinge_seat_starboard": 70.516,
+          "wing_port": 104.8618,
+          "wing_starboard": 101.0445,
+          "tail_fin_045": 110.732,
+          "tail_fin_135": 110.732,
+          "tail_fin_225": 110.732,
+          "tail_fin_315": 110.732
+        }
+      }
+    },
+    "inverse_pose_symmetric_difference_mm3": {
+      "faceted_body": 0,
+      "flush_rf_port": 0,
+      "flush_rf_starboard": 0,
+      "hinge_seat_port": 0,
+      "hinge_seat_starboard": 0,
+      "tail_fin_045": 0,
+      "tail_fin_135": 0,
+      "tail_fin_225": 0,
+      "tail_fin_315": 0,
+      "wing_port": 0,
+      "wing_starboard": 0
+    },
+    "wing_seat_contacts": true,
+    "mock_pad": null
+  }
+]

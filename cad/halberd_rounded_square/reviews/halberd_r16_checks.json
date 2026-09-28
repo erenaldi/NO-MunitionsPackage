@@ -1,0 +1,238 @@
+{
+  "ok": true,
+  "baseline_r15_hash": "6334f7f9030ae9f86c569905eac8284195796108e7d2f9129eb7e858df7d3576",
+  "full_hash": "4d049aeacb914456de137e571ef0f226d7ae15316633568ffee372853c47b45e",
+  "separated_hash": "7ea159cd5e829f8b5e035cad2ec02485237ad22dc5faf06fc2991f4c397ffd14",
+  "focus_hash": "edea2c92242dab0dbbdfc946c1e75b763ea91fbb1d10df4820a794b42be07bfa",
+  "parts_per_full_state": 44,
+  "unchanged_non_main_r15_parts": 38,
+  "focus_parts": 7,
+  "saved_geometry_placements_validated": 95,
+  "main_body_volume_removed_mm3": 517.3382208269762,
+  "annular_cut_volume_mm3": 465.4199910571521,
+  "seat_cuts": [
+    {
+      "clock_degrees": 0.0,
+      "volume_mm3": 12.97961468243728,
+      "tool_bounds_mm": [
+        1075.424,
+        -2.576,
+        93.5,
+        1080.576,
+        2.576,
+        95.3
+      ],
+      "blind_floor_radius_mm": 93.5,
+      "body_at_floor_interior_mm": 93.4
+    },
+    {
+      "clock_degrees": 90.0,
+      "volume_mm3": 12.979614385670047,
+      "tool_bounds_mm": [
+        1075.424,
+        93.5,
+        -2.5759999999999894,
+        1080.576,
+        95.3,
+        2.5760000000000107
+      ],
+      "blind_floor_radius_mm": 93.5,
+      "body_at_floor_interior_mm": 93.4
+    },
+    {
+      "clock_degrees": 180.0,
+      "volume_mm3": 12.979614675095357,
+      "tool_bounds_mm": [
+        1075.424,
+        -2.5759999999999885,
+        -95.3,
+        1080.576,
+        2.5760000000000116,
+        -93.5
+      ],
+      "blind_floor_radius_mm": 93.5,
+      "body_at_floor_interior_mm": 93.4
+    },
+    {
+      "clock_degrees": 270.0,
+      "volume_mm3": 12.979614910462043,
+      "tool_bounds_mm": [
+        1075.424,
+        -95.3,
+        -2.5760000000000214,
+        1080.576,
+        -93.5,
+        2.5759999999999788
+      ],
+      "blind_floor_radius_mm": 93.5,
+      "body_at_floor_interior_mm": 93.4
+    }
+  ],
+  "actual_r15_skin_radius_samples_mm": {
+    "0": {
+      "1075.0": 95.01008719488718,
+      "1078.0": 95.00450931345924,
+      "1081.0": 95.00113363510059,
+      "1083.7": 95.00001133596064,
+      "1084.0": 95.00000383943609,
+      "1084.9": 95.00000383943609
+    },
+    "90": {
+      "1075.0": 95.01008717605774,
+      "1078.0": 95.0045092983932,
+      "1081.0": 95.00113362630992,
+      "1083.7": 95.00001133534772,
+      "1084.0": 95.00000390245773,
+      "1084.9": 95.00000390245773
+    },
+    "180": {
+      "1075.0": 94.99999999990192,
+      "1078.0": 94.99999999990189,
+      "1081.0": 94.99999999990189,
+      "1083.7": 94.99999999990189,
+      "1084.0": 95.00000383943757,
+      "1084.9": 95.00000383943757
+    },
+    "270": {
+      "1075.0": 95.01008721369979,
+      "1078.0": 95.00450932850737,
+      "1081.0": 95.00113364387235,
+      "1083.7": 95.00001133655394,
+      "1084.0": 95.00000377638929,
+      "1084.9": 95.00000377638929
+    }
+  },
+  "countersink_fit": {
+    "stem_radial_mm": 0.06000000000000005,
+    "head_top_radial_mm": 0.13733333333333353,
+    "countersink_opening_radius_at_top_mm": 2.576,
+    "countersink_outer_radial_extent_mm": 95.3,
+    "skin_radius_at_x1078_mm": {
+      "0": {
+        "1075.0": 95.01008719488718,
+        "1078.0": 95.00450931345924,
+        "1081.0": 95.00113363510059,
+        "1083.7": 95.00001133596064,
+        "1084.0": 95.00000383943609,
+        "1084.9": 95.00000383943609
+      },
+      "90": {
+        "1075.0": 95.01008717605774,
+        "1078.0": 95.0045092983932,
+        "1081.0": 95.00113362630992,
+        "1083.7": 95.00001133534772,
+        "1084.0": 95.00000390245773,
+        "1084.9": 95.00000390245773
+      },
+      "180": {
+        "1075.0": 94.99999999990192,
+        "1078.0": 94.99999999990189,
+        "1081.0": 94.99999999990189,
+        "1083.7": 94.99999999990189,
+        "1084.0": 95.00000383943757,
+        "1084.9": 95.00000383943757
+      },
+      "270": {
+        "1075.0": 95.01008721369979,
+        "1078.0": 95.00450932850737,
+        "1081.0": 95.00113364387235,
+        "1083.7": 95.00001133655394,
+        "1084.0": 95.00000377638929,
+        "1084.9": 95.00000377638929
+      }
+    }
+  },
+  "liner_bounds_mm": [
+    1083.8,
+    1084.9,
+    94.8,
+    94.8
+  ],
+  "liner_axial_gaps_mm": [
+    0.09999999999990905,
+    0.09999999999990905
+  ],
+  "body_support_contacts": {
+    "main_joint_liner_1": {
+      "distance_mm": 0.0,
+      "common_face_area_mm2": 652.4459622976523,
+      "overlap_mm3": 0.0
+    },
+    "main_joint_fastener_1": {
+      "distance_mm": 0.0,
+      "common_face_area_mm2": 5.309291584566842,
+      "overlap_mm3": 0.0
+    },
+    "main_joint_fastener_2": {
+      "distance_mm": 0.0,
+      "common_face_area_mm2": 5.309291584566842,
+      "overlap_mm3": 0.0
+    },
+    "main_joint_fastener_3": {
+      "distance_mm": 0.0,
+      "common_face_area_mm2": 5.309291584566842,
+      "overlap_mm3": 0.0
+    },
+    "main_joint_fastener_4": {
+      "distance_mm": 0.0,
+      "common_face_area_mm2": 5.309291584566842,
+      "overlap_mm3": 0.0
+    }
+  },
+  "new_to_baseline_nonbody_pairs_checked": 190,
+  "new_to_baseline_overlap_candidates_boolean_checked": 0,
+  "new_joint_pair_clearances_mm": {
+    "main_joint_liner_1/main_joint_fastener_1": 4.019999999999982,
+    "main_joint_liner_1/main_joint_fastener_2": 4.019999999999982,
+    "main_joint_liner_1/main_joint_fastener_3": 4.019999999999982,
+    "main_joint_liner_1/main_joint_fastener_4": 4.019999999999982,
+    "main_joint_fastener_1/main_joint_fastener_2": 130.39049045079938,
+    "main_joint_fastener_1/main_joint_fastener_3": 187.0,
+    "main_joint_fastener_1/main_joint_fastener_4": 130.39049045079938,
+    "main_joint_fastener_2/main_joint_fastener_3": 130.39049045079938,
+    "main_joint_fastener_2/main_joint_fastener_4": 187.0,
+    "main_joint_fastener_3/main_joint_fastener_4": 130.39049045079938
+  },
+  "fastener_clearances_mm": {
+    "main_joint_fastener_1": {
+      "ogive_mm": 5.220000000000027,
+      "liner_mm": 4.019999999999982
+    },
+    "main_joint_fastener_2": {
+      "ogive_mm": 5.220000000000027,
+      "liner_mm": 4.019999999999982
+    },
+    "main_joint_fastener_3": {
+      "ogive_mm": 5.220000000000027,
+      "liner_mm": 4.019999999999982
+    },
+    "main_joint_fastener_4": {
+      "ogive_mm": 5.220000000000027,
+      "liner_mm": 4.019999999999982
+    }
+  },
+  "liner_ogive_gap_mm": 0.09999999999990905,
+  "material_assignments_full": 33,
+  "material_assignments_focus": 5,
+  "reference_crop": {
+    "source_hash": "c35d10d58c4529c0d492b9516b17bb9c850e4dcf0f94e917f1eebfbae9a986ca",
+    "crop_hash": "673a9a449b6eb6545664ff4e1e9513e68674db2686eef3eae312e654dc1e7541",
+    "labels": [
+      "body_section_5",
+      "near_side_panel_border",
+      "near_side_dark_panel",
+      "front_section_seam_1",
+      "front_section_seam_2",
+      "front_joint_fastener_1_1",
+      "front_joint_fastener_1_2",
+      "front_joint_fastener_2_1",
+      "front_joint_fastener_2_2",
+      "front_joint_fastener_3_1",
+      "front_joint_fastener_3_2",
+      "front_joint_fastener_4_1",
+      "front_joint_fastener_4_2"
+    ],
+    "valid_placements": 13
+  },
+  "total_length_mm": 3370.0000002000006
+}

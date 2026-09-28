@@ -1,0 +1,126 @@
+[
+  {
+    "input": "STEP/Q_Tail_R2_Clipped_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R2_Stowed_close.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            2.5
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1125,
+            0,
+            60
+          ],
+          "orthographicHalfHeight": 220,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R2_Clipped_Midfold.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R2_Midfold_close.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            2.5
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1125,
+            0,
+            60
+          ],
+          "orthographicHalfHeight": 220,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R2_Clipped_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R2_Deployed_close.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            2.5
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1125,
+            0,
+            60
+          ],
+          "orthographicHalfHeight": 220,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R2_Clipped_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R2_context.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.9
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

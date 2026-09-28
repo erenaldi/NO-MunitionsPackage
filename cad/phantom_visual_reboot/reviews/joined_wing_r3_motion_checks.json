@@ -1,0 +1,121 @@
+{
+  "scope": "21 simultaneous samples; continuous sweep, strength, actuation, locks and rack unverified",
+  "samples": [
+    {
+      "fraction": 0.0,
+      "minimum_panel_clearance_mm": 0.2499999999554916
+    },
+    {
+      "fraction": 0.05,
+      "minimum_panel_clearance_mm": 0.24999999995555275
+    },
+    {
+      "fraction": 0.1,
+      "minimum_panel_clearance_mm": 0.24999999995578565
+    },
+    {
+      "fraction": 0.15,
+      "minimum_panel_clearance_mm": 0.24999999995594635
+    },
+    {
+      "fraction": 0.2,
+      "minimum_panel_clearance_mm": 0.24999999995596198
+    },
+    {
+      "fraction": 0.25,
+      "minimum_panel_clearance_mm": 0.2499999999561455
+    },
+    {
+      "fraction": 0.3,
+      "minimum_panel_clearance_mm": 0.24999999995637268
+    },
+    {
+      "fraction": 0.35,
+      "minimum_panel_clearance_mm": 0.24999999995657163
+    },
+    {
+      "fraction": 0.4,
+      "minimum_panel_clearance_mm": 0.24999999995675964
+    },
+    {
+      "fraction": 0.45,
+      "minimum_panel_clearance_mm": 0.24999999995668326
+    },
+    {
+      "fraction": 0.5,
+      "minimum_panel_clearance_mm": 0.24999999995677058
+    },
+    {
+      "fraction": 0.55,
+      "minimum_panel_clearance_mm": 0.24999999995696953
+    },
+    {
+      "fraction": 0.6,
+      "minimum_panel_clearance_mm": 0.24999999995702638
+    },
+    {
+      "fraction": 0.65,
+      "minimum_panel_clearance_mm": 0.24999999995702638
+    },
+    {
+      "fraction": 0.7,
+      "minimum_panel_clearance_mm": 0.2499999999573106
+    },
+    {
+      "fraction": 0.75,
+      "minimum_panel_clearance_mm": 0.24999999995722394
+    },
+    {
+      "fraction": 0.8,
+      "minimum_panel_clearance_mm": 0.24999999995734934
+    },
+    {
+      "fraction": 0.85,
+      "minimum_panel_clearance_mm": 0.24999999995753797
+    },
+    {
+      "fraction": 0.9,
+      "minimum_panel_clearance_mm": 0.2499999999575664
+    },
+    {
+      "fraction": 0.95,
+      "minimum_panel_clearance_mm": 0.2499999999577085
+    },
+    {
+      "fraction": 1.0,
+      "minimum_panel_clearance_mm": 0.24999999995782218
+    }
+  ],
+  "saved_pose_identity": {
+    "Midfold": {
+      "RDM9_R7_symmetric_body_20mm_wedge_R4": 0,
+      "supported_housing": 0,
+      "starboard_front": 0,
+      "starboard_rear": 0,
+      "starboard_fixed_root": 0,
+      "starboard_carriage": 0,
+      "starboard_join": 0,
+      "port_front": 0,
+      "port_rear": 0,
+      "port_fixed_root": 0,
+      "port_carriage": 0,
+      "port_join": 0
+    },
+    "Deployed": {
+      "RDM9_R7_symmetric_body_20mm_wedge_R4": 0,
+      "supported_housing": 0,
+      "starboard_front": 0,
+      "starboard_rear": 0,
+      "starboard_fixed_root": 0,
+      "starboard_carriage": 0,
+      "starboard_join": 0,
+      "port_front": 0,
+      "port_rear": 0,
+      "port_fixed_root": 0,
+      "port_carriage": 0,
+      "port_join": 0
+    }
+  },
+  "failures": [],
+  "passed": true
+}

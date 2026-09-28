@@ -1,0 +1,15 @@
+[
+ {"input":"STEP/F_Transition_Nose_R3_Close.step","mode":"view","outputs":[
+  {"path":"reviews/F_front.png","camera":{"direction":[1,0,0]}},
+  {"path":"reviews/F_side.png","camera":{"direction":[0,-1,0]}},
+  {"path":"reviews/F_bottom.png","camera":{"direction":[0,0,-1]}},
+  {"path":"reviews/F_iso.png","camera":{"direction":[1,-1,-0.6]}}
+ ]},
+ {"input":"STEP/F_Transition_Nose_R3.step","mode":"view","outputs":[
+  {"path":"reviews/F_body.png","camera":{"direction":[1,-1,0.6]}}
+ ]},
+ {"input":"STEP/E_Transition_Nose_R2_Close.step","mode":"view","outputs":[
+  {"path":"reviews/E_before_front.png","camera":{"direction":[1,0,0]}},
+  {"path":"reviews/E_before_side.png","camera":{"direction":[0,-1,0]}}
+ ]}
+]

@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "outer_xyz_mm": [
+    2980,
+    400,
+    223
+  ],
+  "long_taper_start_end_x_mm": [
+    649.9,
+    1490
+  ],
+  "front_face_width_height_mm": [
+    270,
+    125
+  ],
+  "rear_A2_side_lips_apertures_four_boxes_preserved": true,
+  "approved_spear_fin_diameter_mm": 158.013,
+  "actual_rack_door_sweep_aircraft_fit_verified": false
+}

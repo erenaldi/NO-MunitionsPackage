@@ -1,0 +1,27 @@
+{
+  "jobs": [
+    {
+      "input": "STEP/A_Bridge_Bare.step", "mode": "view",
+      "outputs": [
+        {"path": "reviews/A_Bare_iso.png", "camera": "iso"},
+        {"path": "reviews/A_Bare_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A_Bare_side.png", "camera": "front"},
+        {"path": "reviews/A_Bare_underside.png", "camera": "bottom"},
+        {"path": "reviews/A_Bare_end.png", "camera": "right"}
+      ],
+      "output": {"sizeProfile": "assembly", "padding": 0.10}
+    },
+    {
+      "input": "STEP/A_Bridge_Filled.step", "mode": "view",
+      "outputs": [
+        {"path": "reviews/A_Filled_iso.png", "camera": "iso"},
+        {"path": "reviews/A_Filled_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A_Filled_side.png", "camera": "front"},
+        {"path": "reviews/A_Filled_top.png", "camera": "top"},
+        {"path": "reviews/A_Filled_underside.png", "camera": "bottom"},
+        {"path": "reviews/A_Filled_end.png", "camera": "right"}
+      ],
+      "output": {"sizeProfile": "assembly", "padding": 0.10}
+    }
+  ]
+}

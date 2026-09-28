@@ -10,8 +10,8 @@ spike, and proving-ground validation).
 No optimization code is written before this phase produces measurements.
 
 - Build a dedicated stress mission: large IADS network, maximum AI-aircraft
-  engagement, and mass-saturation events (CDM-4 Bramble salvos, ALBM-3
-  Trebuchet [C] bomblet carpets, HKP-1 Palisade engagements, heavy furballs).
+  engagement, and mass-saturation events (ALBM-3 Trebuchet [C] bomblet
+  carpets, HKP-1 Palisade engagements, heavy furballs).
 - Instrument with BepInEx timing patches (ProfilerMarkers, frame-time and
   allocation logging). Measure: frame time, GC allocations, physics ticks,
   draw calls, worst-frame analysis across the stress scenarios.
@@ -24,8 +24,8 @@ Content-serving optimizations come first; general game fixes only for items
 present in `docs/PERF_FINDINGS.md`.
 
 - Content-serving (mandatory):
-  - Object pooling for submunitions (CDM-4 Bramble, ALBM-3 Trebuchet [C]) and
-    HKP-1 Palisade interceptors.
+  - Object pooling for submunitions (ALBM-3 Trebuchet [C]) and HKP-1
+    Palisade interceptors.
   - Per-weapon FX/particle budgets with LOD fade.
   - LOD groups on custom geometry (AAM-44 Halberd, IRM-S4 Kris, AGM-110
     Ballista).

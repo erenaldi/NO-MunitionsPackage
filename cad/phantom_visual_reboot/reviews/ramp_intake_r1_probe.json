@@ -1,0 +1,1081 @@
+{
+  "gate": "R1_belly_ramp_in_memory_intake_feasibility",
+  "units": "mm",
+  "scope": "In-memory trial geometry only; no model source, saved CAD artifact, or render changed.",
+  "thresholds": {
+    "unexpected_overlap_mm3_exclusive": 0.001,
+    "moving_intake_clearance_mm_exclusive": 0.2,
+    "fixed_mount_body_contact_mm3_exclusive": 1e-05,
+    "new_solid_validity": "one valid positive-volume solid each",
+    "stowed_radius_mm_exclusive": 125.0,
+    "motion_sample_count": 66
+  },
+  "trial_dimensions_mm": {
+    "floor_x": [
+      -950.0,
+      -290.0
+    ],
+    "floor_y": [
+      -64.0,
+      64.0
+    ],
+    "floor_z": [
+      -86.0,
+      -83.0
+    ],
+    "hinge_axis_point": [
+      -950.0,
+      0.0,
+      -83.0
+    ],
+    "deployment_deg": 5.0,
+    "cheek_vertices_xz": [
+      [
+        -950.0,
+        -83.0
+      ],
+      [
+        -300.0,
+        -83.0
+      ],
+      [
+        -300.0,
+        -26.132368708149393
+      ]
+    ],
+    "cheek_y_intervals": [
+      [
+        -64.0,
+        -62.0
+      ],
+      [
+        62.0,
+        64.0
+      ]
+    ],
+    "early_motion_fractions": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.02
+    ]
+  },
+  "failures": [],
+  "saved_input": {
+    "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R4_Four_Stowed.step",
+    "part_count": 29,
+    "expected_part_count": 29,
+    "missing_labels": [],
+    "unexpected_labels": []
+  },
+  "construction": {
+    "moving_ramp": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        329175.90725154645
+      ],
+      "volume_mm3": 329175.90725154645,
+      "pass": true
+    },
+    "fixed_mount_negative_y": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        330.4115008234622
+      ],
+      "volume_mm3": 330.4115008234622,
+      "pass": true
+    },
+    "fixed_mount_positive_y": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        330.4115008234622
+      ],
+      "volume_mm3": 330.4115008234622,
+      "pass": true
+    },
+    "throughpin_with_caps": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        727.4750488468812
+      ],
+      "volume_mm3": 727.4750488468812,
+      "pass": true
+    },
+    "body_after_only_named_cuts": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        60903776.71485376
+      ],
+      "volume_mm3": 60903776.71485376,
+      "pass": true
+    },
+    "body_cutter_union": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        6768278.809087744
+      ],
+      "volume_mm3": 6768278.809087744,
+      "pass": true
+    },
+    "ramp_unbored_fusion": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        330080.6859357804
+      ],
+      "volume_mm3": 330080.6859357804,
+      "pass": true
+    },
+    "body_cutters_mm": {
+      "cavity_box": {
+        "x": [
+          -953.3,
+          -289.7
+        ],
+        "y": [
+          -64.3,
+          64.3
+        ],
+        "z": [
+          -100.0,
+          -25.8
+        ]
+      },
+      "aft_stub_box": {
+        "x": [
+          -1030.0,
+          -953.0
+        ],
+        "y": [
+          -58.0,
+          58.0
+        ],
+        "z": [
+          -77.0,
+          -28.0
+        ]
+      },
+      "moving_barrel_relief": {
+        "radius_mm": 3.3,
+        "y_mm": [
+          -64.3,
+          64.3
+        ]
+      },
+      "pin_shaft_relief": {
+        "radius_mm": 1.55,
+        "y_mm": [
+          -71.3,
+          71.3
+        ]
+      },
+      "pin_cap_reliefs": [
+        {
+          "radius_mm": 2.8,
+          "y_mm": [
+            -72.3,
+            -71.0
+          ]
+        },
+        {
+          "radius_mm": 2.8,
+          "y_mm": [
+            71.0,
+            72.3
+          ]
+        }
+      ],
+      "stub_to_cavity_intersection_mm3": 1705.1999999997413,
+      "cavity_stub_overlap_x_mm": 0.3
+    },
+    "source_body_topology": {
+      "valid": true,
+      "solid_count": 1,
+      "solid_volumes_mm3": [
+        66477310.08385518
+      ],
+      "volume_mm3": 66477310.08385518,
+      "pass": true
+    }
+  },
+  "fixed_mount_contacts": {
+    "fixed_mount_negative_y": {
+      "body_overlap_mm3": 327.5369435454282,
+      "positive_contact": true
+    },
+    "fixed_mount_positive_y": {
+      "body_overlap_mm3": 327.5369435454282,
+      "positive_contact": true
+    }
+  },
+  "stowed_flush": {
+    "ramp_assembly_outermost_z_mm": -86.00000010000002,
+    "nominal_belly_face_z_mm": -86.0,
+    "absolute_flush_error_mm": 1.0000002248489182e-07,
+    "pass": true
+  },
+  "body_connectivity": {
+    "cavity_stub_overlap_x_mm": 0.3,
+    "cavity_stub_intersection_volume_mm3": 1705.1999999997413,
+    "connected_cut_volume_single_solid": true,
+    "cut_body_remains_one_valid_solid": true,
+    "cut_body_volume_mm3": 60903776.71485376,
+    "removed_body_volume_mm3": 5573533.369001418,
+    "pass": true
+  },
+  "stowed_envelope": {
+    "part_count_including_4_new_parts": 33,
+    "conservative_bbox_corner_radius_mm_by_part": {
+      "RDM9_R7_symmetric_body_20mm_wedge_R4": 121.62236721295542,
+      "port_carriage": 80.30916835424209,
+      "port_fixed_root": 90.56247856728524,
+      "port_front": 100.48323392758667,
+      "port_join": 91.46344911847748,
+      "port_rear": 87.32485516937989,
+      "starboard_carriage": 75.508691689434,
+      "starboard_fixed_root": 85.66249192703887,
+      "starboard_front": 96.13339845988358,
+      "starboard_join": 86.61444754513528,
+      "starboard_rear": 82.98120467463191,
+      "supported_housing": 98.99021430399067,
+      "top_cover": 114.76933402438127,
+      "tail_r4_upper_starboard_fin_root": 120.91732727032964,
+      "tail_r4_upper_starboard_fixed_knuckle_aft": 120.91732727032962,
+      "tail_r4_upper_starboard_fixed_knuckle_forward": 120.91732727032962,
+      "tail_r4_upper_starboard_throughpin": 120.2102326509686,
+      "tail_r4_upper_port_fin_root": 120.91732727032964,
+      "tail_r4_upper_port_fixed_knuckle_aft": 120.91732727032961,
+      "tail_r4_upper_port_fixed_knuckle_forward": 120.91732727032961,
+      "tail_r4_upper_port_throughpin": 120.2102326509686,
+      "tail_r4_lower_port_fin_root": 120.91732727032964,
+      "tail_r4_lower_port_fixed_knuckle_aft": 120.91732727032961,
+      "tail_r4_lower_port_fixed_knuckle_forward": 120.91732727032961,
+      "tail_r4_lower_port_throughpin": 120.2102326509686,
+      "tail_r4_lower_starboard_fin_root": 120.91732727032964,
+      "tail_r4_lower_starboard_fixed_knuckle_aft": 120.91732727032961,
+      "tail_r4_lower_starboard_fixed_knuckle_forward": 120.91732727032961,
+      "tail_r4_lower_starboard_throughpin": 120.2102326509686,
+      "ramp_moving_assembly": 107.20074640598361,
+      "fixed_mount_negative_y": 111.52129855502938,
+      "fixed_mount_positive_y": 111.52129855502938,
+      "hinge_throughpin": 111.7776812762727
+    },
+    "maximum_radius_mm": 121.62236721295542,
+    "witness": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+    "limit_mm_exclusive": 125.0,
+    "pass": true
+  },
+  "motion": {
+    "method": "66 synchronous cross-samples against saved R4 parts, using the existing A5 saved-pose helper; intake ramp +5deg*f and R4 fin fold -135deg*f",
+    "sample_count": 66,
+    "expected_sample_count": 66,
+    "uniform_sample_count": 61,
+    "early_fractions": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "new_part_count": 4,
+    "existing_part_count_per_sample": 29,
+    "minimum_sampled_clearance": {
+      "clearance_mm": 0.24999999999989495,
+      "pair": [
+        "ramp_moving_assembly",
+        "hinge_throughpin"
+      ],
+      "fraction": 0.13333333333333333,
+      "method": "exact_nearest_points_and_overlap"
+    },
+    "maximum_unexpected_overlap": {
+      "overlap_mm3": 0.0,
+      "pair": null,
+      "fraction": null
+    },
+    "all_samples_pass": true,
+    "samples": [
+      {
+        "sample": 0,
+        "fraction": 0.0,
+        "ramp_angle_deg": 0.0,
+        "existing_tail_fold_angle_deg": -0.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999990988
+      },
+      {
+        "sample": 1,
+        "fraction": 0.001,
+        "ramp_angle_deg": 0.005,
+        "existing_tail_fold_angle_deg": -0.135,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999117
+      },
+      {
+        "sample": 2,
+        "fraction": 0.002,
+        "ramp_angle_deg": 0.01,
+        "existing_tail_fold_angle_deg": -0.27,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991093
+      },
+      {
+        "sample": 3,
+        "fraction": 0.005,
+        "ramp_angle_deg": 0.025,
+        "existing_tail_fold_angle_deg": -0.675,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999994243
+      },
+      {
+        "sample": 4,
+        "fraction": 0.01,
+        "ramp_angle_deg": 0.05,
+        "existing_tail_fold_angle_deg": -1.35,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999990208
+      },
+      {
+        "sample": 5,
+        "fraction": 0.016666666666666666,
+        "ramp_angle_deg": 0.08333333333333333,
+        "existing_tail_fold_angle_deg": -2.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993178
+      },
+      {
+        "sample": 6,
+        "fraction": 0.02,
+        "ramp_angle_deg": 0.1,
+        "existing_tail_fold_angle_deg": -2.7,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999990438
+      },
+      {
+        "sample": 7,
+        "fraction": 0.03333333333333333,
+        "ramp_angle_deg": 0.16666666666666666,
+        "existing_tail_fold_angle_deg": -4.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999989528
+      },
+      {
+        "sample": 8,
+        "fraction": 0.05,
+        "ramp_angle_deg": 0.25,
+        "existing_tail_fold_angle_deg": -6.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999992098
+      },
+      {
+        "sample": 9,
+        "fraction": 0.06666666666666667,
+        "ramp_angle_deg": 0.3333333333333333,
+        "existing_tail_fold_angle_deg": -9.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999994907
+      },
+      {
+        "sample": 10,
+        "fraction": 0.08333333333333333,
+        "ramp_angle_deg": 0.41666666666666663,
+        "existing_tail_fold_angle_deg": -11.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999994382
+      },
+      {
+        "sample": 11,
+        "fraction": 0.1,
+        "ramp_angle_deg": 0.5,
+        "existing_tail_fold_angle_deg": -13.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999257
+      },
+      {
+        "sample": 12,
+        "fraction": 0.11666666666666667,
+        "ramp_angle_deg": 0.5833333333333334,
+        "existing_tail_fold_angle_deg": -15.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999989736
+      },
+      {
+        "sample": 13,
+        "fraction": 0.13333333333333333,
+        "ramp_angle_deg": 0.6666666666666666,
+        "existing_tail_fold_angle_deg": -18.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999989495
+      },
+      {
+        "sample": 14,
+        "fraction": 0.15,
+        "ramp_angle_deg": 0.75,
+        "existing_tail_fold_angle_deg": -20.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999992187
+      },
+      {
+        "sample": 15,
+        "fraction": 0.16666666666666666,
+        "ramp_angle_deg": 0.8333333333333333,
+        "existing_tail_fold_angle_deg": -22.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999989592
+      },
+      {
+        "sample": 16,
+        "fraction": 0.18333333333333332,
+        "ramp_angle_deg": 0.9166666666666666,
+        "existing_tail_fold_angle_deg": -24.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999994424
+      },
+      {
+        "sample": 17,
+        "fraction": 0.2,
+        "ramp_angle_deg": 1.0,
+        "existing_tail_fold_angle_deg": -27.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999999642
+      },
+      {
+        "sample": 18,
+        "fraction": 0.21666666666666667,
+        "ramp_angle_deg": 1.0833333333333335,
+        "existing_tail_fold_angle_deg": -29.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999989644
+      },
+      {
+        "sample": 19,
+        "fraction": 0.23333333333333334,
+        "ramp_angle_deg": 1.1666666666666667,
+        "existing_tail_fold_angle_deg": -31.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999995307
+      },
+      {
+        "sample": 20,
+        "fraction": 0.25,
+        "ramp_angle_deg": 1.25,
+        "existing_tail_fold_angle_deg": -33.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991984
+      },
+      {
+        "sample": 21,
+        "fraction": 0.26666666666666666,
+        "ramp_angle_deg": 1.3333333333333333,
+        "existing_tail_fold_angle_deg": -36.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993242
+      },
+      {
+        "sample": 22,
+        "fraction": 0.2833333333333333,
+        "ramp_angle_deg": 1.4166666666666665,
+        "existing_tail_fold_angle_deg": -38.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991498
+      },
+      {
+        "sample": 23,
+        "fraction": 0.3,
+        "ramp_angle_deg": 1.5,
+        "existing_tail_fold_angle_deg": -40.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999235
+      },
+      {
+        "sample": 24,
+        "fraction": 0.31666666666666665,
+        "ramp_angle_deg": 1.5833333333333333,
+        "existing_tail_fold_angle_deg": -42.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999995512
+      },
+      {
+        "sample": 25,
+        "fraction": 0.3333333333333333,
+        "ramp_angle_deg": 1.6666666666666665,
+        "existing_tail_fold_angle_deg": -45.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999399
+      },
+      {
+        "sample": 26,
+        "fraction": 0.35,
+        "ramp_angle_deg": 1.75,
+        "existing_tail_fold_angle_deg": -47.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993375
+      },
+      {
+        "sample": 27,
+        "fraction": 0.36666666666666664,
+        "ramp_angle_deg": 1.8333333333333333,
+        "existing_tail_fold_angle_deg": -49.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999237
+      },
+      {
+        "sample": 28,
+        "fraction": 0.38333333333333336,
+        "ramp_angle_deg": 1.9166666666666667,
+        "existing_tail_fold_angle_deg": -51.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999123
+      },
+      {
+        "sample": 29,
+        "fraction": 0.4,
+        "ramp_angle_deg": 2.0,
+        "existing_tail_fold_angle_deg": -54.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999617
+      },
+      {
+        "sample": 30,
+        "fraction": 0.4166666666666667,
+        "ramp_angle_deg": 2.0833333333333335,
+        "existing_tail_fold_angle_deg": -56.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999992134
+      },
+      {
+        "sample": 31,
+        "fraction": 0.43333333333333335,
+        "ramp_angle_deg": 2.166666666666667,
+        "existing_tail_fold_angle_deg": -58.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999998957
+      },
+      {
+        "sample": 32,
+        "fraction": 0.45,
+        "ramp_angle_deg": 2.25,
+        "existing_tail_fold_angle_deg": -60.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999214
+      },
+      {
+        "sample": 33,
+        "fraction": 0.4666666666666667,
+        "ramp_angle_deg": 2.3333333333333335,
+        "existing_tail_fold_angle_deg": -63.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999994735
+      },
+      {
+        "sample": 34,
+        "fraction": 0.48333333333333334,
+        "ramp_angle_deg": 2.4166666666666665,
+        "existing_tail_fold_angle_deg": -65.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993383
+      },
+      {
+        "sample": 35,
+        "fraction": 0.5,
+        "ramp_angle_deg": 2.5,
+        "existing_tail_fold_angle_deg": -67.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991288
+      },
+      {
+        "sample": 36,
+        "fraction": 0.5166666666666667,
+        "ramp_angle_deg": 2.5833333333333335,
+        "existing_tail_fold_angle_deg": -69.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999638
+      },
+      {
+        "sample": 37,
+        "fraction": 0.5333333333333333,
+        "ramp_angle_deg": 2.6666666666666665,
+        "existing_tail_fold_angle_deg": -72.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991296
+      },
+      {
+        "sample": 38,
+        "fraction": 0.55,
+        "ramp_angle_deg": 2.75,
+        "existing_tail_fold_angle_deg": -74.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999995887
+      },
+      {
+        "sample": 39,
+        "fraction": 0.5666666666666667,
+        "ramp_angle_deg": 2.833333333333333,
+        "existing_tail_fold_angle_deg": -76.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991365
+      },
+      {
+        "sample": 40,
+        "fraction": 0.5833333333333334,
+        "ramp_angle_deg": 2.916666666666667,
+        "existing_tail_fold_angle_deg": -78.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999994896
+      },
+      {
+        "sample": 41,
+        "fraction": 0.6,
+        "ramp_angle_deg": 3.0,
+        "existing_tail_fold_angle_deg": -81.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991232
+      },
+      {
+        "sample": 42,
+        "fraction": 0.6166666666666667,
+        "ramp_angle_deg": 3.0833333333333335,
+        "existing_tail_fold_angle_deg": -83.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999992628
+      },
+      {
+        "sample": 43,
+        "fraction": 0.6333333333333333,
+        "ramp_angle_deg": 3.1666666666666665,
+        "existing_tail_fold_angle_deg": -85.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999999792
+      },
+      {
+        "sample": 44,
+        "fraction": 0.65,
+        "ramp_angle_deg": 3.25,
+        "existing_tail_fold_angle_deg": -87.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999888
+      },
+      {
+        "sample": 45,
+        "fraction": 0.6666666666666666,
+        "ramp_angle_deg": 3.333333333333333,
+        "existing_tail_fold_angle_deg": -90.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999994166
+      },
+      {
+        "sample": 46,
+        "fraction": 0.6833333333333333,
+        "ramp_angle_deg": 3.416666666666667,
+        "existing_tail_fold_angle_deg": -92.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999995245
+      },
+      {
+        "sample": 47,
+        "fraction": 0.7,
+        "ramp_angle_deg": 3.5,
+        "existing_tail_fold_angle_deg": -94.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999992878
+      },
+      {
+        "sample": 48,
+        "fraction": 0.7166666666666667,
+        "ramp_angle_deg": 3.5833333333333335,
+        "existing_tail_fold_angle_deg": -96.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999992212
+      },
+      {
+        "sample": 49,
+        "fraction": 0.7333333333333333,
+        "ramp_angle_deg": 3.6666666666666665,
+        "existing_tail_fold_angle_deg": -99.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999998093
+      },
+      {
+        "sample": 50,
+        "fraction": 0.75,
+        "ramp_angle_deg": 3.75,
+        "existing_tail_fold_angle_deg": -101.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999995468
+      },
+      {
+        "sample": 51,
+        "fraction": 0.7666666666666667,
+        "ramp_angle_deg": 3.8333333333333335,
+        "existing_tail_fold_angle_deg": -103.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999999628
+      },
+      {
+        "sample": 52,
+        "fraction": 0.7833333333333333,
+        "ramp_angle_deg": 3.9166666666666665,
+        "existing_tail_fold_angle_deg": -105.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991307
+      },
+      {
+        "sample": 53,
+        "fraction": 0.8,
+        "ramp_angle_deg": 4.0,
+        "existing_tail_fold_angle_deg": -108.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993439
+      },
+      {
+        "sample": 54,
+        "fraction": 0.8166666666666667,
+        "ramp_angle_deg": 4.083333333333333,
+        "existing_tail_fold_angle_deg": -110.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993933
+      },
+      {
+        "sample": 55,
+        "fraction": 0.8333333333333334,
+        "ramp_angle_deg": 4.166666666666667,
+        "existing_tail_fold_angle_deg": -112.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999992364
+      },
+      {
+        "sample": 56,
+        "fraction": 0.85,
+        "ramp_angle_deg": 4.25,
+        "existing_tail_fold_angle_deg": -114.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999496
+      },
+      {
+        "sample": 57,
+        "fraction": 0.8666666666666667,
+        "ramp_angle_deg": 4.333333333333334,
+        "existing_tail_fold_angle_deg": -117.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999998407
+      },
+      {
+        "sample": 58,
+        "fraction": 0.8833333333333333,
+        "ramp_angle_deg": 4.416666666666666,
+        "existing_tail_fold_angle_deg": -119.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999996192
+      },
+      {
+        "sample": 59,
+        "fraction": 0.9,
+        "ramp_angle_deg": 4.5,
+        "existing_tail_fold_angle_deg": -121.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999997138
+      },
+      {
+        "sample": 60,
+        "fraction": 0.9166666666666666,
+        "ramp_angle_deg": 4.583333333333333,
+        "existing_tail_fold_angle_deg": -123.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991832
+      },
+      {
+        "sample": 61,
+        "fraction": 0.9333333333333333,
+        "ramp_angle_deg": 4.666666666666667,
+        "existing_tail_fold_angle_deg": -126.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.2499999999999672
+      },
+      {
+        "sample": 62,
+        "fraction": 0.95,
+        "ramp_angle_deg": 4.75,
+        "existing_tail_fold_angle_deg": -128.25,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999991174
+      },
+      {
+        "sample": 63,
+        "fraction": 0.9666666666666667,
+        "ramp_angle_deg": 4.833333333333333,
+        "existing_tail_fold_angle_deg": -130.5,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999989878
+      },
+      {
+        "sample": 64,
+        "fraction": 0.9833333333333333,
+        "ramp_angle_deg": 4.916666666666666,
+        "existing_tail_fold_angle_deg": -132.75,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993922
+      },
+      {
+        "sample": 65,
+        "fraction": 1.0,
+        "ramp_angle_deg": 5.0,
+        "existing_tail_fold_angle_deg": -135.0,
+        "new_part_count": 4,
+        "existing_part_count": 29,
+        "nonexempt_pair_checks": 120,
+        "all_pair_checks_pass": true,
+        "minimum_clearance_mm": 0.24999999999993547
+      }
+    ]
+  },
+  "deployed_mouth": {
+    "test_plane_x_mm": -305.0,
+    "test_slab_x_mm": [
+      -305.1,
+      -304.9
+    ],
+    "z_between_floor_plus_0_3_and_belly_minus_0_3_mm": [
+      -139.13018797422097,
+      -86.3
+    ],
+    "y_between_cheek_inner_faces_mm": [
+      -62.0,
+      62.0
+    ],
+    "floor_top_at_test_plane_z_mm": -139.43018797422098,
+    "unobstructed_height_mm": 52.830187974220976,
+    "unobstructed_width_mm": 124.0,
+    "test_volume_mm3": 1310.188661760978,
+    "blockers_ge_0_001_mm3": [],
+    "pass": true,
+    "interpretation": "Geometric open-mouth volume only; not CFD or an airflow-performance claim."
+  },
+  "passed": true,
+  "summary": {
+    "passed": true,
+    "failure_count": 0,
+    "saved_part_count": 29,
+    "new_solid_count": 4,
+    "motion_sample_count": 66,
+    "minimum_sampled_clearance": {
+      "clearance_mm": 0.24999999999989495,
+      "pair": [
+        "ramp_moving_assembly",
+        "hinge_throughpin"
+      ],
+      "fraction": 0.13333333333333333,
+      "method": "exact_nearest_points_and_overlap"
+    },
+    "maximum_unexpected_overlap": {
+      "overlap_mm3": 0.0,
+      "pair": null,
+      "fraction": null
+    },
+    "mouth_height_mm": 52.830187974220976,
+    "mouth_width_mm": 124.0,
+    "stowed_radius_mm": 121.62236721295542,
+    "body_single_solid": true
+  }
+}

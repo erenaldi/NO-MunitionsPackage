@@ -1,0 +1,377 @@
+{
+  "ok": true,
+  "parts_per_state": 27,
+  "unchanged_R13_parts": 23,
+  "union_identity_tolerance_mm3": 0.05,
+  "stations": [
+    {
+      "station": 1,
+      "cleaned_volume_mm3": 127307.95536849125,
+      "original_fin_fairing_overlap_mm3": 15303.037138904368,
+      "union_missing_mm3": 0.0,
+      "union_added_mm3": 0.0,
+      "body_overlap_mm3": 0.0,
+      "body_distance_mm": 0.0,
+      "main_overlap_mm3": 0.0
+    },
+    {
+      "station": 2,
+      "cleaned_volume_mm3": 127307.95536837282,
+      "original_fin_fairing_overlap_mm3": 15303.037138904318,
+      "union_missing_mm3": 0.0,
+      "union_added_mm3": 0.0,
+      "body_overlap_mm3": 0.0,
+      "body_distance_mm": 1.4210854715202004e-14,
+      "main_overlap_mm3": 0.0
+    },
+    {
+      "station": 3,
+      "cleaned_volume_mm3": 127307.95556825487,
+      "original_fin_fairing_overlap_mm3": 15303.037138904348,
+      "union_missing_mm3": 0.0,
+      "union_added_mm3": 0.0,
+      "body_overlap_mm3": 0.0,
+      "body_distance_mm": 0.0,
+      "main_overlap_mm3": 0.0
+    },
+    {
+      "station": 4,
+      "cleaned_volume_mm3": 127307.95535106442,
+      "original_fin_fairing_overlap_mm3": 15303.037138904336,
+      "union_missing_mm3": 0.0,
+      "union_added_mm3": 0.0,
+      "body_overlap_mm3": 0.0,
+      "body_distance_mm": 4.0194366942304644e-14,
+      "main_overlap_mm3": 0.0
+    }
+  ],
+  "native_placement_checks": [
+    {
+      "document": "halberd_r14",
+      "document_hash": "b4c5df72cd9f527b23f40824424d87f350b3abc39dd089b6091533f2d3c1ad05",
+      "placements": [
+        {
+          "label": "main_body_intake_r12",
+          "ref": "#o1.1",
+          "volume_mm3": 85035435.79649216
+        },
+        {
+          "label": "main_ogive",
+          "ref": "#o1.2",
+          "volume_mm3": 9137694.418428266
+        },
+        {
+          "label": "booster_body",
+          "ref": "#o1.3",
+          "volume_mm3": 18404435.38990149
+        },
+        {
+          "label": "main_nozzle_dark_recess",
+          "ref": "#o1.4",
+          "volume_mm3": 26230.64446789164
+        },
+        {
+          "label": "main_nozzle_dark_floor",
+          "ref": "#o1.5",
+          "volume_mm3": 4139.645223708734
+        },
+        {
+          "label": "booster_nozzle_dark_recess",
+          "ref": "#o1.6",
+          "volume_mm3": 38398.033084324416
+        },
+        {
+          "label": "booster_nozzle_dark_floor",
+          "ref": "#o1.7",
+          "volume_mm3": 3277.592199563695
+        },
+        {
+          "label": "main_fin_1",
+          "ref": "#o1.8",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_1",
+          "ref": "#o1.9",
+          "volume_mm3": 6535.315768803834
+        },
+        {
+          "label": "main_intake_dark_floor_1",
+          "ref": "#o1.10",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_fin_2",
+          "ref": "#o1.11",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_2",
+          "ref": "#o1.12",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_2",
+          "ref": "#o1.13",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_3",
+          "ref": "#o1.14",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_3",
+          "ref": "#o1.15",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_3",
+          "ref": "#o1.16",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_4",
+          "ref": "#o1.17",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_4",
+          "ref": "#o1.18",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_4",
+          "ref": "#o1.19",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_service_cover_1",
+          "ref": "#o1.20",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_1",
+          "ref": "#o1.21",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_1",
+          "ref": "#o1.22",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_2",
+          "ref": "#o1.23",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "booster_fin_fairing_1",
+          "ref": "#o1.24",
+          "volume_mm3": 127307.95536849125
+        },
+        {
+          "label": "booster_fin_fairing_2",
+          "ref": "#o1.25",
+          "volume_mm3": 127307.95536837282
+        },
+        {
+          "label": "booster_fin_fairing_3",
+          "ref": "#o1.26",
+          "volume_mm3": 127307.95556825487
+        },
+        {
+          "label": "booster_fin_fairing_4",
+          "ref": "#o1.27",
+          "volume_mm3": 127307.95535106442
+        }
+      ]
+    },
+    {
+      "document": "halberd_r14_separated",
+      "document_hash": "4281fc27941747e7b8d64a62a5a4a7af66c8a6153008407f65eda2d9d83b0804",
+      "placements": [
+        {
+          "label": "main_body_intake_r12",
+          "ref": "#o1.1",
+          "volume_mm3": 85035435.79649216
+        },
+        {
+          "label": "main_ogive",
+          "ref": "#o1.2",
+          "volume_mm3": 9137694.418428266
+        },
+        {
+          "label": "booster_body",
+          "ref": "#o1.3",
+          "volume_mm3": 18404435.38990149
+        },
+        {
+          "label": "main_nozzle_dark_recess",
+          "ref": "#o1.4",
+          "volume_mm3": 26230.64446789164
+        },
+        {
+          "label": "main_nozzle_dark_floor",
+          "ref": "#o1.5",
+          "volume_mm3": 4139.645223708734
+        },
+        {
+          "label": "booster_nozzle_dark_recess",
+          "ref": "#o1.6",
+          "volume_mm3": 38398.03308432433
+        },
+        {
+          "label": "booster_nozzle_dark_floor",
+          "ref": "#o1.7",
+          "volume_mm3": 3277.592199563695
+        },
+        {
+          "label": "main_fin_1",
+          "ref": "#o1.8",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_1",
+          "ref": "#o1.9",
+          "volume_mm3": 6535.315768803834
+        },
+        {
+          "label": "main_intake_dark_floor_1",
+          "ref": "#o1.10",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_fin_2",
+          "ref": "#o1.11",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_2",
+          "ref": "#o1.12",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_2",
+          "ref": "#o1.13",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_3",
+          "ref": "#o1.14",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_3",
+          "ref": "#o1.15",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_3",
+          "ref": "#o1.16",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_4",
+          "ref": "#o1.17",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_4",
+          "ref": "#o1.18",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_4",
+          "ref": "#o1.19",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_service_cover_1",
+          "ref": "#o1.20",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_1",
+          "ref": "#o1.21",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_1",
+          "ref": "#o1.22",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_2",
+          "ref": "#o1.23",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "booster_fin_fairing_1",
+          "ref": "#o1.24",
+          "volume_mm3": 127307.95536849127
+        },
+        {
+          "label": "booster_fin_fairing_2",
+          "ref": "#o1.25",
+          "volume_mm3": 127307.95536837283
+        },
+        {
+          "label": "booster_fin_fairing_3",
+          "ref": "#o1.26",
+          "volume_mm3": 127307.95556825487
+        },
+        {
+          "label": "booster_fin_fairing_4",
+          "ref": "#o1.27",
+          "volume_mm3": 127307.95535106442
+        }
+      ]
+    },
+    {
+      "document": "halberd_r14_focus",
+      "placements": [
+        {
+          "label": "main_body_intake_r12",
+          "ref": "#o1.1",
+          "volume_mm3": 9213366.96311658
+        },
+        {
+          "label": "booster_body",
+          "ref": "#o1.2",
+          "volume_mm3": 16819736.19331728
+        },
+        {
+          "label": "booster_fin_fairing_1",
+          "ref": "#o1.3",
+          "volume_mm3": 127307.95536849118
+        }
+      ]
+    },
+    {
+      "document": "halberd_r13_booster_focus",
+      "placements": [
+        {
+          "label": "main_body_intake_r12",
+          "ref": "#o1.1",
+          "volume_mm3": 9213366.96311658
+        },
+        {
+          "label": "booster_body",
+          "ref": "#o1.2",
+          "volume_mm3": 16819736.19331728
+        },
+        {
+          "label": "booster_fin_1",
+          "ref": "#o1.3",
+          "volume_mm3": 56920.000000005275
+        },
+        {
+          "label": "booster_intake_fairing_1",
+          "ref": "#o1.4",
+          "volume_mm3": 274095.1927142426
+        }
+      ]
+    }
+  ]
+}

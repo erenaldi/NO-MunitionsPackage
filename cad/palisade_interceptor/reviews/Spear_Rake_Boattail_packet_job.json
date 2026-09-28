@@ -1,0 +1,25 @@
+{
+  "input": "STEP/Spear_Rake_Boattail.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/Spear_Rake_Boattail_revision_iso.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.8
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

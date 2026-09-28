@@ -1,0 +1,211 @@
+{
+  "ok": true,
+  "length_mm": 3370.0000002000024,
+  "booster_length_mm": 561.6666668666687,
+  "unchanged": [
+    "main_ogive",
+    "booster_body",
+    "booster_fin_1",
+    "booster_fin_2",
+    "booster_fin_3",
+    "booster_fin_4",
+    "main_fin_2",
+    "main_fin_3",
+    "main_fin_4"
+  ],
+  "core_removed_mm3": 0,
+  "terminal_width_mm": 7.928234016733652,
+  "taper_widths_aft_to_front_mm": [
+    8.19810159208309,
+    17.4837312989635,
+    30.148850217040817,
+    53.560560646877974,
+    76.03352761213634,
+    85.44454482592013
+  ],
+  "aperture_area_mm2": 1369.0002533629763,
+  "dense_taper_samples": [
+    [
+      -1100,
+      9.809780040923656
+    ],
+    [
+      -1050,
+      13.630134957298358
+    ],
+    [
+      -1000,
+      17.4837312989635
+    ],
+    [
+      -950,
+      21.54365003504213
+    ],
+    [
+      -900,
+      25.80099723177213
+    ],
+    [
+      -850,
+      30.148850217040817
+    ],
+    [
+      -800,
+      34.44183162229472
+    ],
+    [
+      -750,
+      38.53671555154704
+    ],
+    [
+      -700,
+      42.318247865458744
+    ],
+    [
+      -650,
+      45.71360927157637
+    ],
+    [
+      -600,
+      48.698011806023125
+    ],
+    [
+      -550,
+      51.29322594792245
+    ],
+    [
+      -500,
+      53.560560646877974
+    ],
+    [
+      -450,
+      55.589869443946114
+    ],
+    [
+      -400,
+      57.48629516595906
+    ],
+    [
+      -350,
+      59.35645233919198
+    ],
+    [
+      -300,
+      61.29547922907524
+    ],
+    [
+      -250,
+      63.37595932399066
+    ],
+    [
+      -200,
+      65.63931845348364
+    ],
+    [
+      -150,
+      68.09009567784398
+    ],
+    [
+      -100,
+      70.69346622523116
+    ],
+    [
+      -50,
+      73.37647174792804
+    ],
+    [
+      0,
+      76.03352761213634
+    ],
+    [
+      50,
+      78.53690055330085
+    ],
+    [
+      100,
+      80.7528089656154
+    ],
+    [
+      150,
+      82.56309793935253
+    ],
+    [
+      200,
+      83.89045037751387
+    ],
+    [
+      250,
+      84.7219512095599
+    ],
+    [
+      300,
+      85.12347780229376
+    ],
+    [
+      350,
+      85.23856346502151
+    ],
+    [
+      400,
+      85.26987021868229
+    ],
+    [
+      450,
+      85.44454482592013
+    ],
+    [
+      500,
+      85.96151945278783
+    ],
+    [
+      550,
+      86.90816664148316
+    ],
+    [
+      600,
+      88.11908158380957
+    ]
+  ],
+  "envelope_area_mm2": 1941.7019155311937,
+  "aperture_fraction": 0.7050517087162976,
+  "fin_housing_contact_mm3": 5975.221139861942,
+  "fin_core_contact_mm3": 0,
+  "fin_tip_radius_mm": 212.00000010000005,
+  "fin_root_min_radius_mm": 135.5263156894737,
+  "fin_exposed_volume_fraction": 0.8411903578984219,
+  "clock_degrees": 45,
+  "intakes_prototyped": 1,
+  "separated_shapes_unchanged": true,
+  "native_validation": [
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R3",
+      "occurrenceCount": 11,
+      "prototypeCount": 6,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R3_Separated",
+      "occurrenceCount": 11,
+      "prototypeCount": 6,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R3_Section",
+      "occurrenceCount": 1,
+      "prototypeCount": 1,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    }
+  ]
+}

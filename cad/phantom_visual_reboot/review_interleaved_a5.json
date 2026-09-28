@@ -1,0 +1,250 @@
+[
+  {
+    "input": "STEP/O_Interleaved_A5_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_stowed_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A5_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_stowed_opposed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A5_Midfold.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_mid_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.9
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A5_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_deployed_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.9
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A5_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_deployed_opposed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A5_Body_Pocket.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_pocket_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            1
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A5_Body_Pocket.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_port_pin_exit.png",
+        "camera": {
+          "direction": [
+            -1,
+            -2,
+            0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -399,
+            -80,
+            70
+          ],
+          "orthographicHalfHeight": 35,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/O_Interleaved_A5_Body_Pocket.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/O_A5_starboard_pin_exit.png",
+        "camera": {
+          "direction": [
+            -1,
+            2,
+            0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -399,
+            80,
+            65
+          ],
+          "orthographicHalfHeight": 35,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "full_parts": 199,
+  "focus_parts": 193,
+  "axial_rows": 6,
+  "ports_per_row": 16,
+  "total_blind_ports": 96,
+  "minimum_insert_center_spacing_mm": 19.532,
+  "cap_front_section_mm3": 1870.375,
+  "radial_envelope_mm": 79.006,
+  "all_saved_port_centers_blind": true,
+  "approved_body_fins_main_nozzle_unchanged": true,
+  "all_saved_stage_components_preserved": true
+}

@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "length_mm": 1200.0,
+  "radial_envelope_mm": 79.009,
+  "cap_rear_radius_sections_mm": {
+    "-599.5": 6.145,
+    "-595.0": 17.846,
+    "-580.0": 31.011,
+    "-566.0": 34.026,
+    "-523.0": 52.715,
+    "-485.0": 62.0,
+    "-421.0": 60.78
+  },
+  "tip_closed": true,
+  "cap_topology_and_self_intersections_checked": true,
+  "approved_fins_preserved": true,
+  "separation_shape_preserved": true
+}

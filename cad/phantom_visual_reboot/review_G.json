@@ -1,0 +1,15 @@
+[
+ {"input":"STEP/G_Transition_Nose_R4_Close.step","mode":"view","outputs":[
+  {"path":"reviews/G_upper_shoulders.png","camera":{"direction":[1,-0.25,0.65]}},
+  {"path":"reviews/G_front.png","camera":{"direction":[1,0,0]}},
+  {"path":"reviews/G_side.png","camera":{"direction":[0,-1,0]}},
+  {"path":"reviews/G_top.png","camera":{"direction":[0,0,1]}},
+  {"path":"reviews/G_opposed.png","camera":{"direction":[-1,1,-0.6]}}
+ ]},
+ {"input":"STEP/G_Transition_Nose_R4.step","mode":"view","outputs":[
+  {"path":"reviews/G_body.png","camera":{"direction":[1,-1,0.6]}}
+ ]},
+ {"input":"STEP/F_Transition_Nose_R3_Close.step","mode":"view","outputs":[
+  {"path":"reviews/F_before_shoulders.png","camera":{"direction":[1,-0.25,0.65]}}
+ ]}
+]

@@ -1,0 +1,18 @@
+{
+  "input": "STEP/halberd_r17_interfaces_main_fin.step",
+  "mode": "view",
+  "outputs": [
+    {
+      "path": "reviews/halberd_r17_main_fin_face.png",
+      "camera": {"direction": [-0.04, -0.70, 0.71]}
+    }
+  ],
+  "output": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.10,
+    "viewLabels": true
+  },
+  "quality": {
+    "tessellation": {"chordTolerance": 0.0005, "angleTolerance": 0.10}
+  }
+}

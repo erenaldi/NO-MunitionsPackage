@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "status": "PASS",
+  "source_step": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r18_layout_base.step",
+  "source_hash": "aa33330e16ed78918032a76e3374a82439a9d2445c5bca3d61c158ccb454fd21",
+  "R12_hash": "cd6b153aadd3141b102654bc46c213650c983aac4ac0f68d0feb9d8f4bf39365",
+  "R16_hash": "4d049aeacb914456de137e571ef0f226d7ae15316633568ffee372853c47b45e",
+  "parts": 28,
+  "removed_main_service_labels": [
+    "main_service_border_1",
+    "main_service_border_2",
+    "main_service_border_3",
+    "main_service_border_4",
+    "main_service_cover_1",
+    "main_service_cover_2",
+    "main_service_cover_3",
+    "main_service_cover_4",
+    "main_service_fastener_1",
+    "main_service_fastener_2",
+    "main_service_fastener_3",
+    "main_service_fastener_4",
+    "main_service_fastener_5",
+    "main_service_fastener_6",
+    "main_service_fastener_7",
+    "main_service_fastener_8"
+  ],
+  "preserved_nonbody_parts_exact": 27,
+  "main_equals_R12_minus_R16_joint_cuts": true,
+  "restoration_mask_delta_volume_mm3": 17808.36869264312,
+  "bbox_mm": {
+    "min_mm": [
+      -1685.0000001,
+      -150.89658720520967,
+      -150.89658720520967
+    ],
+    "max_mm": [
+      1685.0000001000005,
+      150.89658720520967,
+      150.89658720520967
+    ],
+    "size_mm": [
+      3370.0000002000006,
+      301.79317441041934,
+      301.79317441041934
+    ]
+  },
+  "baseline_bbox_mm": {
+    "min_mm": [
+      -1685.0000001,
+      -150.89658720520967,
+      -150.89658720520967
+    ],
+    "max_mm": [
+      1685.0000001000005,
+      150.89658720520967,
+      150.89658720520967
+    ],
+    "size_mm": [
+      3370.0000002000006,
+      301.79317441041934,
+      301.79317441041934
+    ]
+  },
+  "native_solid_checks": {
+    "single_positive_valid_closed_solid_per_part": 28,
+    "topology_errors": 0,
+    "self_intersections": 0
+  },
+  "materials_sidecar_hash_valid": true,
+  "retained_material_assignments": 17
+}

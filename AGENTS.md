@@ -3,12 +3,13 @@
 Local instructions for agents working in this repo. These may override the global `~/.config/opencode/AGENTS.md` except its **Boundaries** section, which always applies.
 
 ## Purpose & stack
-- BepInEx 5 plugin (netstandard2.1, C#) that adds 15 custom munitions to Nuclear Option by runtime-cloning vanilla ScriptableObjects/prefabs and re-registering them.
+- BepInEx 5 plugin (netstandard2.1, C#) that adds 12 custom munitions to Nuclear Option by runtime-cloning vanilla ScriptableObjects/prefabs and re-registering them.
 - Game: Nuclear Option 0.34.2 (Steam buildid 24724372), Unity 2022.3.62f2 (Mono), Mirage networking, Blueprinter 2.0.1 for `.nobp` asset bundles; NOMM distribution is a later phase. Beware: the installed `QoL` mod rewrites `Application.version` to a stale `0.34.1_qol-...` string — never use it as the game version; read the Steam `appmanifest_2168680.acf` buildid instead.
-- Design authority: `MUNITIONS.md` (15-weapon roster, specs, phase decisions); `docs/PHASE1_FINDINGS.md` (validated analogs); `docs/BUILD.md` (build/install workflow).
+- Design authority: `MUNITIONS.md` (12-weapon roster, specs, phase decisions); `docs/PHASE1_FINDINGS.md` (validated analogs); `docs/BUILD.md` (build/install workflow).
 
 ## Layout
 - `src/Erenaldi.MunitionsPackage/` — plugin source: `Plugin.cs` (entry, config, encyclopedia wait), `HalberdCloner.cs` (runtime clone + registration), `WeaponSchemaDumper.cs` (schema/hardpoint dumps), `HardpointSpawnMountPatch.cs` (Harmony postfix), `CustomGeometryLoader.cs` (embedded-bundle geometry transplant).
+- `cad/` — CAD sources/outputs, split per weapon: `halberd/ phantom/ kris/ ballista/ palisade/ shared/` (plus the study folders `halberd_rounded_square/`, `phantom_visual_reboot/`, `palisade_*`). Load only the one asset folder you are working on; see `cad/README.md`. Scripts run from inside their own folder.
 - `tools/` — `install_plugin.ps1` (guarded DLL installer), `check_log.ps1` (post-launch log validation).
 - `docs/` — phase findings + `GEOMETRY_PIPELINE.md` (custom art contract); `V1_PLAN.md` (implementation roadmap, incl. the Palisade plan); `V1_1_PLAN.md` (post-V1 milestone plan); `SESSION_LOG.md` (append-only session journal — mandatory reading and writing, see "Session records & handoff"); `nomnom/` — schema validation assets; `unity/` — Unity project for geometry authoring (created by Unity Hub).
 - Decompiled reference source (read-only, outside repo): `C:\Users\erena\AppData\Local\Temp\opencode\no-assembly-decompiled` and `...\mirage-decompiled` (via `dotnet tool run ilspycmd`, manifest in `.config/dotnet-tools.json`).
@@ -29,6 +30,20 @@ Local instructions for agents working in this repo. These may override the globa
 - New weapons are config-gated in BepInEx config (`Phase 2`, `Phase 3`, ...); log lines carry a `[Phase n]` prefix.
 - Build must stay error-free; the only tolerated warning is the known transitive `System.IO.Compression` MSB3277 from `Mirage`/`Assembly-CSharp`.
 
+## Visual-intent asset work
+
+- For reference-driven or high-fidelity CAD assets, load `cad` and `concept-asset-cad`, then follow `docs/ASSET_DESIGN_WORKFLOW.md` as the project-specific art-direction and acceptance overlay. Load `game-asset-cad` only when approved CAD enters engine export/integration. The separate `3d-design` skill is archived.
+- The primary multimodal model owns visual continuity and must directly inspect every concept board, CAD review packet, engine capture, and in-game capture. Text-only or image-blind review cannot pass a visual gate.
+- A text-only worker may use `subagents/multimodal-analyst` to describe observable facts in named local images or files; that evidence is not delegated design or visual approval. The primary model still inspects the actual views at every gate.
+- Start from the asset's compact context packet and files required for the current gate. Do not load the whole repository or session history by default.
+- Keep design, visual review, retrospective analysis, and broad repository exploration with the primary model by default. Delegating any of those activities requires explicit user approval, a fixed file list, a bounded investigation, and one narrow deliverable.
+- This restriction does not cover bounded implementation. With a non-OpenRouter primary model, once the relevant design or repeated-feature gate is approved and the brief is clear, default to `subagents/cad-builder` for a substantial CAD source/build/check/render pass; no additional permission to delegate that approved work is needed. The primary model inspects the actual views and decides the next visual gate before another pass.
+- For a novel coupled mechanism such as a four-layer joined wing, keep each CAD-builder brief to one verifiable gate: first the measured support/collision blocker, then an approved source/build pass, then complete saved-geometry/motion checks and the review packet. The primary checks each handoff before dispatching the next fresh worker; no feasibility shortcut replaces the full later checks or visual approval.
+- Detailed CAD starts only after the user approves one of three contrastive concept directions and feasibility has been checked. Rough reversible studies may support that decision.
+- Hard approval gates apply before repeated-feature propagation, detailed modeling after silhouette selection, production export, Unity integration, and completion claims.
+- Store approval and current lifecycle state in the per-asset delivery or reference contract. A dependent change reopens its owning gate and downstream gates, not unrelated approved work.
+- Distinguish CAD, export, engine, and runtime evidence. Never describe an asset as complete when a later applicable boundary remains pending or unverified.
+
 ## Session records & handoff
 
 Sessions can end abruptly or corrupt their own context (this has happened: on 2026-09-13 a session was found to have fabricated paths and tool outputs). The repo — never a conversation — is the only durable state:
@@ -44,5 +59,5 @@ Sessions can end abruptly or corrupt their own context (this has happened: on 20
 - Multiplayer requires the plugin on all peers (IndexLookup index sync); flying missiles activate client-side via Mirage `SendActive: ForceEnable`, so only mount visuals need explicit activation.
 - `P_` variant definitions are Blueprinter-generated and can have broken materials/transforms (they ship on zero aircraft) — prefer vanilla sources unless proven; the Halberd base was switched `P_AAM2` → `AAM4` for this reason.
 - Custom geometry ships via the Path-A transplant (`docs/GEOMETRY_PIPELINE.md`): pure-geometry bundle embedded in the plugin DLL, visuals swapped onto clones, vanilla components preserved, fallback to vanilla geometry when the bundle is absent.
-- Unity authoring toolchain (Unity Hub sign-in done; Editor 2022.3.62f2 + Blueprinter Editor install in progress by the user); no Blender installed yet.
+- Unity Editor 2022.3.62f2 and Blender 4.5 LTS are installed. The Blender–Onshape–Unity MCP workflow is archived and disabled in OpenCode; existing project assets and tooling remain available.
 - Git: checkpoint commits at verified milestones are expected and pre-authorized (see "Session records & handoff"); push and any history rewrite still require an explicit request.

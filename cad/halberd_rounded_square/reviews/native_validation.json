@@ -1,0 +1,62 @@
+[
+  {
+    "ok": true,
+    "entry": "cad/halberd_rounded_square/STEP/A_Trace",
+    "occurrenceCount": 15,
+    "prototypeCount": 6,
+    "selfIntersectionCheck": "every-placement",
+    "failureCount": 0,
+    "parts": [],
+    "errors": []
+  },
+  {
+    "ok": true,
+    "entry": "cad/halberd_rounded_square/STEP/A_Trace_Separated",
+    "occurrenceCount": 15,
+    "prototypeCount": 6,
+    "selfIntersectionCheck": "every-placement",
+    "failureCount": 0,
+    "parts": [],
+    "errors": []
+  },
+  {
+    "ok": true,
+    "entry": "cad/halberd_rounded_square/STEP/B_Chine",
+    "occurrenceCount": 15,
+    "prototypeCount": 6,
+    "selfIntersectionCheck": "every-placement",
+    "failureCount": 0,
+    "parts": [],
+    "errors": []
+  },
+  {
+    "ok": true,
+    "entry": "cad/halberd_rounded_square/STEP/B_Chine_Separated",
+    "occurrenceCount": 15,
+    "prototypeCount": 6,
+    "selfIntersectionCheck": "every-placement",
+    "failureCount": 0,
+    "parts": [],
+    "errors": []
+  },
+  {
+    "ok": true,
+    "entry": "cad/halberd_rounded_square/STEP/C_Shoulder",
+    "occurrenceCount": 15,
+    "prototypeCount": 6,
+    "selfIntersectionCheck": "every-placement",
+    "failureCount": 0,
+    "parts": [],
+    "errors": []
+  },
+  {
+    "ok": true,
+    "entry": "cad/halberd_rounded_square/STEP/C_Shoulder_Separated",
+    "occurrenceCount": 15,
+    "prototypeCount": 6,
+    "selfIntersectionCheck": "every-placement",
+    "failureCount": 0,
+    "parts": [],
+    "errors": []
+  }
+]

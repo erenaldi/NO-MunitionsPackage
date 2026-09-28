@@ -1,0 +1,318 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_context.png",
+        "camera": {
+          "direction": [
+            0.35,
+            1,
+            0.65
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_taper.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_profile.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            -1
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 1600,
+    "height": 1100,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_edges.png",
+        "camera": {
+          "position": [
+            1280,
+            680,
+            720
+          ],
+          "target": [
+            450,
+            80,
+            80
+          ],
+          "zoom": 1.9
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 1400,
+    "height": 1400,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_front_solid.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 1400,
+    "height": 1400,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_front_rendered.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 1400,
+    "height": 1100,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_booster_solid.png",
+        "camera": {
+          "position": [
+            -2150,
+            160,
+            130
+          ],
+          "target": [
+            -1660,
+            0,
+            0
+          ],
+          "zoom": 1.6
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 1400,
+    "height": 1100,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_booster_rendered.png",
+        "camera": {
+          "position": [
+            -2150,
+            160,
+            130
+          ],
+          "target": [
+            -1660,
+            0,
+            0
+          ],
+          "zoom": 1.6
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 1400,
+    "height": 1100,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_main_solid.png",
+        "camera": {
+          "position": [
+            -1550,
+            170,
+            140
+          ],
+          "target": [
+            -1100,
+            0,
+            0
+          ],
+          "zoom": 1.8
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 1400,
+    "height": 1100,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_main_rendered.png",
+        "camera": {
+          "position": [
+            -1550,
+            170,
+            140
+          ],
+          "target": [
+            -1100,
+            0,
+            0
+          ],
+          "zoom": 1.8
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R5_separated.png",
+        "camera": {
+          "direction": [
+            -0.4,
+            1,
+            0.65
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  }
+]

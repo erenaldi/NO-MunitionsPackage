@@ -1,0 +1,128 @@
+{
+  "ok": true,
+  "parts": 17,
+  "rear_taper_samples": [
+    {
+      "x": -1120.0,
+      "roof_height_mm": 136.02875010000002,
+      "roof_half_width_mm": 1.6359999999999997
+    },
+    {
+      "x": -1000.0,
+      "roof_height_mm": 137.06375010000002,
+      "roof_half_width_mm": 2.9320000000000013
+    },
+    {
+      "x": -850.0,
+      "roof_height_mm": 138.3575001,
+      "roof_half_width_mm": 4.5520000000000005
+    },
+    {
+      "x": -700.0,
+      "roof_height_mm": 139.65125010000003,
+      "roof_half_width_mm": 6.172
+    },
+    {
+      "x": -550.0,
+      "roof_height_mm": 140.94500010000004,
+      "roof_half_width_mm": 7.792000000000002
+    },
+    {
+      "x": -400.0,
+      "roof_height_mm": 142.23875010000003,
+      "roof_half_width_mm": 9.412000000000003
+    },
+    {
+      "x": -250.0,
+      "roof_height_mm": 143.53250010000002,
+      "roof_half_width_mm": 11.032000000000002
+    },
+    {
+      "x": -100.0,
+      "roof_height_mm": 144.82625010000004,
+      "roof_half_width_mm": 12.652000000000003
+    },
+    {
+      "x": 50.0,
+      "roof_height_mm": 146.12000010000003,
+      "roof_half_width_mm": 14.272000000000004
+    },
+    {
+      "x": 200.0,
+      "roof_height_mm": 147.41375010000002,
+      "roof_half_width_mm": 15.892000000000005
+    }
+  ],
+  "straight_front_samples": [
+    {
+      "x": 300.0,
+      "roof_height_mm": 147.05445554554458
+    },
+    {
+      "x": 400.0,
+      "roof_height_mm": 146.5594060405941
+    },
+    {
+      "x": 500.0,
+      "roof_height_mm": 146.06435653564358
+    },
+    {
+      "x": 600.0,
+      "roof_height_mm": 145.56930703069312
+    }
+  ],
+  "maximum_rear_edge_deviation_mm": 2.7283067881438767e-15,
+  "maximum_front_edge_deviation_mm": 1.4232575139917157e-14,
+  "rear_caps_rgba": {
+    "main_intake_dark_floor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "main_nozzle_dark_floor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "booster_nozzle_dark_floor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "side_colors_unchanged": true,
+  "kris_recess_rgba": [
+    0.0331048,
+    0.0395462,
+    0.0423114,
+    1.0
+  ],
+  "channel_back_x_mm": -444.97392256565956,
+  "intake_cup_combined_geometry_unchanged": true,
+  "fin_contact_mm3": 1523.6744451976792,
+  "native_validation": [
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R5",
+      "occurrenceCount": 17,
+      "prototypeCount": 12,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R5_Separated",
+      "occurrenceCount": 17,
+      "prototypeCount": 12,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    }
+  ]
+}

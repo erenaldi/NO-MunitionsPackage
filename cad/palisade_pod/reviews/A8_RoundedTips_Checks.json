@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "outer_xyz_mm": [
+    3500,
+    400,
+    223
+  ],
+  "forward_tip_section_width_height_mm": [
+    80.05,
+    36.05
+  ],
+  "aft_tip_section_width_height_mm": [
+    85.04,
+    40.06
+  ],
+  "end_sensor_cue_width_height_mm": [
+    60,
+    18
+  ],
+  "unchanged_A7_roof_lips_and_four_boxes": true,
+  "spear_fin_diameter_mm": 158.013,
+  "actual_donor_door_aircraft_clearance_verified": false
+}

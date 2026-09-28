@@ -1,0 +1,67 @@
+{
+  "revision": "R2",
+  "state": "concept-review",
+  "user_approved": false,
+  "artifacts": [
+    {
+      "path": "STEP/Selected_Intake_R2.step",
+      "sha256": "8dc87a9cbde442f726058125fecc75a106d7b6b78305b5585d319ee96271b95e"
+    },
+    {
+      "path": "STEP/Selected_Intake_R2_Covered.step",
+      "sha256": "4411e9e7ecbb608fd5f1f4cd1fbe14e9e316ce9afc6a7062e07693e891b8dcf3"
+    },
+    {
+      "path": "STEP/Selected_Intake_R2_Separated.step",
+      "sha256": "c8fba52b1693986294a7eceda14bc44534d32dfe5b169fc8428a042a2613f62e"
+    },
+    {
+      "path": "reviews/Intake_R2_context.png",
+      "sha256": "a27f249c0334e21267f31200805b9af9b2c9219574572107bdd1044b9cb8ad6a"
+    },
+    {
+      "path": "reviews/Intake_R2_opposite.png",
+      "sha256": "1bbdc88c582cce31a09f2dfcaf79737551b8fff39af8df1d382a380ae53974bc"
+    },
+    {
+      "path": "reviews/Intake_R2_side.png",
+      "sha256": "67dc0f42dfbd92d6c172e28cce7516d8eeb1f3c39db0cbbdd2a3c9fec4d31f27"
+    },
+    {
+      "path": "reviews/Intake_R2_top.png",
+      "sha256": "4c71316c7d7f70b2f1ab19ac9a6548409dd79fde4b38a8ed20b1364d4bba9d33"
+    },
+    {
+      "path": "reviews/Intake_R2_front.png",
+      "sha256": "9b655f54e018628a8df6e7306888bcc78d6b9adaebe7920702fafc4ebb4c026e"
+    },
+    {
+      "path": "reviews/Intake_R2_rear.png",
+      "sha256": "28ddc056ee7036a8f1cbdb966ccfe779fba61b7065a013afeb07afaa70e0c98a"
+    },
+    {
+      "path": "reviews/Intake_R2_mouth.png",
+      "sha256": "bcff6b236b7efcd6e224f5662b2427b416388451dd24b670e551954fc0ade4d2"
+    },
+    {
+      "path": "reviews/Intake_R2_grazing.png",
+      "sha256": "6943ea33f2fb1f6512eec83fd4dc2b857c63cd0af8407020c5b2659c0305c30f"
+    },
+    {
+      "path": "reviews/Intake_R2_aft_join.png",
+      "sha256": "09ee1874fd4ce8d94986244cf07a1c6d54f1ce9ceee7ae96a0e6e05fdec68664"
+    },
+    {
+      "path": "reviews/Intake_R2_separated.png",
+      "sha256": "9f29bd62284fb966028f763365b1db8ae5fb4048b1ed3bf69fc11a9a79ae7060"
+    },
+    {
+      "path": "reviews/Intake_R2_covered_context.png",
+      "sha256": "29bc1ac8995612092ced2c6b468603e7bafbf8bcfe54525b747f0a920172d2ad"
+    },
+    {
+      "path": "reviews/Intake_R2_covered_mouth.png",
+      "sha256": "b2eba1894d9db79e177aa15a08bbd7d2bd1ee52d1f42da758dde32f131cdd32b"
+    }
+  ]
+}

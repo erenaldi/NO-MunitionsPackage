@@ -1,0 +1,19 @@
+{
+  "input": "STEP/halberd_r18_f02_probe.step",
+  "mode": "view",
+  "outputs": [
+    {
+      "path": "reviews/R18_F02_probe_oblique.png",
+      "camera": { "direction": [0.55, -0.75, 1.0] }
+    },
+    {
+      "path": "reviews/R18_F02_probe_grazing.png",
+      "camera": { "direction": [0.15, 1.0, 0.16] }
+    }
+  ],
+  "output": {
+    "viewLabels": false,
+    "padding": 0.1,
+    "sizeProfile": "diagnostic"
+  }
+}

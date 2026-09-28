@@ -1,0 +1,47 @@
+{
+  "Trim": {
+    "fin_tip_radius_mm": 94.008,
+    "cap_aft_radius_mm": 34.193,
+    "cap_shoulder_radius_mm": 62.0,
+    "single_fin_only": true,
+    "main_body_unchanged": true,
+    "thrusters_seated": true,
+    "state_geometry_preserved": true
+  },
+  "Rake": {
+    "fin_tip_radius_mm": 95.008,
+    "cap_aft_radius_mm": 34.193,
+    "cap_shoulder_radius_mm": 62.0,
+    "single_fin_only": true,
+    "main_body_unchanged": true,
+    "thrusters_seated": true,
+    "state_geometry_preserved": true
+  },
+  "Broad": {
+    "fin_tip_radius_mm": 92.008,
+    "cap_aft_radius_mm": 34.193,
+    "cap_shoulder_radius_mm": 62.0,
+    "single_fin_only": true,
+    "main_body_unchanged": true,
+    "thrusters_seated": true,
+    "state_geometry_preserved": true
+  },
+  "SketchSpan": {
+    "fin_tip_radius_mm": 92.008,
+    "cap_aft_radius_mm": 34.193,
+    "cap_shoulder_radius_mm": 62.0,
+    "single_fin_only": true,
+    "main_body_unchanged": true,
+    "thrusters_seated": true,
+    "state_geometry_preserved": true
+  },
+  "SketchLow": {
+    "fin_tip_radius_mm": 79.009,
+    "cap_aft_radius_mm": 34.193,
+    "cap_shoulder_radius_mm": 62.0,
+    "single_fin_only": true,
+    "main_body_unchanged": true,
+    "thrusters_seated": true,
+    "state_geometry_preserved": true
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "ok": true,
+  "generated": "2026-09-21",
+  "scope": "concept-stage exterior CAD; no aerodynamic or runtime claim",
+  "concepts": {
+    "Razorback": {
+      "file": "Halberd_C1_Razorback.step",
+      "part_count": 19,
+      "bounds_mm": {
+        "min": [
+          -1683.5000001,
+          -172.86993043058123,
+          -172.86993043058123
+        ],
+        "max": [
+          1683.5000001000003,
+          172.8699304305812,
+          172.8699304305812
+        ]
+      },
+      "body_excess_mm3": 0.0,
+      "booster_excess_mm3": 0.0,
+      "intake_floor_excess_mm3": {
+        "intake_floor_1": 0.0,
+        "intake_floor_2": 0.0,
+        "intake_floor_3": 0.0,
+        "intake_floor_4": 0.0
+      },
+      "intake_probes": [
+        {
+          "index": 1,
+          "angle_degrees": 45,
+          "aft_void_mm": [
+            380.0,
+            50.91168824543143,
+            50.91168824543143
+          ],
+          "front_void_mm": [
+            780.0,
+            72.12489168102785,
+            72.12489168102785
+          ],
+          "front_radius_minus_aft_radius_mm": 30.0
+        },
+        {
+          "index": 2,
+          "angle_degrees": 135,
+          "aft_void_mm": [
+            380.0,
+            50.91168824543143,
+            -50.91168824543142
+          ],
+          "front_void_mm": [
+            780.0,
+            72.12489168102785,
+            -72.12489168102785
+          ],
+          "front_radius_minus_aft_radius_mm": 30.0
+        },
+        {
+          "index": 3,
+          "angle_degrees": 225,
+          "aft_void_mm": [
+            380.0,
+            -50.91168824543142,
+            -50.911688245431435
+          ],
+          "front_void_mm": [
+            780.0,
+            -72.12489168102785,
+            -72.12489168102786
+          ],
+          "front_radius_minus_aft_radius_mm": 30.0
+        },
+        {
+          "index": 4,
+          "angle_degrees": 315,
+          "aft_void_mm": [
+            380.0,
+            -50.911688245431435,
+            50.91168824543141
+          ],
+          "front_void_mm": [
+            780.0,
+            -72.12489168102786,
+            72.12489168102783
+          ],
+          "front_radius_minus_aft_radius_mm": 30.0
+        }
+      ],
+      "contacts_mm": {
+        "intake_floor_1": 0.0,
+        "sustainer_fin_1": 0.0,
+        "booster_fin_1": 1.4210854715202004e-14,
+        "intake_floor_2": 0.0,
+        "sustainer_fin_2": 0.0,
+        "booster_fin_2": 1.4210854715202004e-14,
+        "intake_floor_3": 0.0,
+        "sustainer_fin_3": 0.0,
+        "booster_fin_3": 1.4210854715202004e-14,
+        "intake_floor_4": 0.0,
+        "sustainer_fin_4": 0.0,
+        "booster_fin_4": 0.0,
+        "mount_1": 0.0,
+        "mount_2": 0.0,
+        "sustainer_nozzle": 0.0,
+        "booster_nozzle": 0.0
+      },
+      "maximum_bbox_corner_radius_mm": 244.47500014142136
+    },
+    "Manta": {
+      "file": "Halberd_C2_Manta.step",
+      "part_count": 19,
+      "bounds_mm": {
+        "min": [
+          -1683.5000001,
+          -155.58116963057014,
+          -155.58116963057014
+        ],
+        "max": [
+          1683.5000001,
+          155.58116963057014,
+          155.58116963057014
+        ]
+      },
+      "body_excess_mm3": 0.0,
+      "booster_excess_mm3": 0.0,
+      "intake_floor_excess_mm3": {
+        "intake_floor_1": 0.0,
+        "intake_floor_2": 0.0,
+        "intake_floor_3": 0.0,
+        "intake_floor_4": 0.0
+      },
+      "intake_probes": [
+        {
+          "index": 1,
+          "angle_degrees": 45,
+          "aft_void_mm": [
+            340.0,
+            48.79036790187178,
+            48.79036790187178
+          ],
+          "front_void_mm": [
+            780.0,
+            72.12489168102785,
+            72.12489168102785
+          ],
+          "front_radius_minus_aft_radius_mm": 33.0
+        },
+        {
+          "index": 2,
+          "angle_degrees": 135,
+          "aft_void_mm": [
+            340.0,
+            48.79036790187178,
+            -48.790367901871775
+          ],
+          "front_void_mm": [
+            780.0,
+            72.12489168102785,
+            -72.12489168102785
+          ],
+          "front_radius_minus_aft_radius_mm": 33.0
+        },
+        {
+          "index": 3,
+          "angle_degrees": 225,
+          "aft_void_mm": [
+            340.0,
+            -48.790367901871775,
+            -48.79036790187179
+          ],
+          "front_void_mm": [
+            780.0,
+            -72.12489168102785,
+            -72.12489168102786
+          ],
+          "front_radius_minus_aft_radius_mm": 33.0
+        },
+        {
+          "index": 4,
+          "angle_degrees": 315,
+          "aft_void_mm": [
+            340.0,
+            -48.79036790187179,
+            48.79036790187177
+          ],
+          "front_void_mm": [
+            780.0,
+            -72.12489168102786,
+            72.12489168102783
+          ],
+          "front_radius_minus_aft_radius_mm": 33.0
+        }
+      ],
+      "contacts_mm": {
+        "intake_floor_1": 0.0,
+        "sustainer_fin_1": 0.0,
+        "booster_fin_1": 2.0097183471152322e-14,
+        "intake_floor_2": 0.0,
+        "sustainer_fin_2": 0.0,
+        "booster_fin_2": 3.1776437161565096e-14,
+        "intake_floor_3": 0.0,
+        "sustainer_fin_3": 0.0,
+        "booster_fin_3": 0.0,
+        "intake_floor_4": 0.0,
+        "sustainer_fin_4": 0.0,
+        "booster_fin_4": 1.4210854715202004e-14,
+        "mount_1": 0.0,
+        "mount_2": 0.0,
+        "sustainer_nozzle": 0.0,
+        "booster_nozzle": 0.0
+      },
+      "maximum_bbox_corner_radius_mm": 220.0250001414214
+    },
+    "Citadel": {
+      "file": "Halberd_C3_Citadel.step",
+      "part_count": 19,
+      "bounds_mm": {
+        "min": [
+          -1683.5000001000003,
+          -170.67789940890296,
+          -170.67789940890296
+        ],
+        "max": [
+          1683.5000001000003,
+          170.67789940890293,
+          170.67789940890293
+        ]
+      },
+      "body_excess_mm3": 0.0,
+      "booster_excess_mm3": 0.0,
+      "intake_floor_excess_mm3": {
+        "intake_floor_1": 0.0,
+        "intake_floor_2": 0.0,
+        "intake_floor_3": 0.0,
+        "intake_floor_4": 0.0
+      },
+      "intake_probes": [
+        {
+          "index": 1,
+          "angle_degrees": 45,
+          "aft_void_mm": [
+            400.0,
+            52.32590180780452,
+            52.32590180780452
+          ],
+          "front_void_mm": [
+            780.0,
+            71.41778489984131,
+            71.41778489984131
+          ],
+          "front_radius_minus_aft_radius_mm": 27.0
+        },
+        {
+          "index": 2,
+          "angle_degrees": 135,
+          "aft_void_mm": [
+            400.0,
+            52.32590180780452,
+            -52.32590180780451
+          ],
+          "front_void_mm": [
+            780.0,
+            71.41778489984131,
+            -71.4177848998413
+          ],
+          "front_radius_minus_aft_radius_mm": 27.0
+        },
+        {
+          "index": 3,
+          "angle_degrees": 225,
+          "aft_void_mm": [
+            400.0,
+            -52.32590180780451,
+            -52.32590180780453
+          ],
+          "front_void_mm": [
+            780.0,
+            -71.4177848998413,
+            -71.41778489984132
+          ],
+          "front_radius_minus_aft_radius_mm": 27.0
+        },
+        {
+          "index": 4,
+          "angle_degrees": 315,
+          "aft_void_mm": [
+            400.0,
+            -52.32590180780453,
+            52.325901807804506
+          ],
+          "front_void_mm": [
+            780.0,
+            -71.41778489984132,
+            71.41778489984128
+          ],
+          "front_radius_minus_aft_radius_mm": 27.0
+        }
+      ],
+      "contacts_mm": {
+        "intake_floor_1": 0.0,
+        "sustainer_fin_1": 0.0,
+        "booster_fin_1": 1.4210854715202004e-14,
+        "intake_floor_2": 0.0,
+        "sustainer_fin_2": 0.0,
+        "booster_fin_2": 1.4210854715202004e-14,
+        "intake_floor_3": 0.0,
+        "sustainer_fin_3": 0.0,
+        "booster_fin_3": 0.0,
+        "intake_floor_4": 0.0,
+        "sustainer_fin_4": 0.0,
+        "booster_fin_4": 0.0,
+        "mount_1": 0.0,
+        "mount_2": 0.0,
+        "sustainer_nozzle": 0.0,
+        "booster_nozzle": 0.0
+      },
+      "maximum_bbox_corner_radius_mm": 241.3750001414214
+    },
+    "Petal": {
+      "file": "Halberd_C4_Petal.step",
+      "part_count": 19,
+      "bounds_mm": {
+        "min": [
+          -1683.5000001,
+          -161.39712290582952,
+          -161.39712290582952
+        ],
+        "max": [
+          1683.5000001000003,
+          161.3971229058295,
+          161.3971229058295
+        ]
+      },
+      "body_excess_mm3": 0.0,
+      "booster_excess_mm3": 0.0,
+      "intake_floor_excess_mm3": {
+        "intake_floor_1": 0.0,
+        "intake_floor_2": 0.0,
+        "intake_floor_3": 0.0,
+        "intake_floor_4": 0.0
+      },
+      "intake_probes": [
+        {
+          "index": 1,
+          "angle_degrees": 45,
+          "aft_void_mm": [
+            350.0,
+            42.42640687119285,
+            42.42640687119285
+          ],
+          "front_void_mm": [
+            820.0,
+            57.9827560572969,
+            57.9827560572969
+          ],
+          "front_radius_minus_aft_radius_mm": 22.0
+        },
+        {
+          "index": 2,
+          "angle_degrees": 135,
+          "aft_void_mm": [
+            350.0,
+            42.42640687119285,
+            -42.426406871192846
+          ],
+          "front_void_mm": [
+            820.0,
+            57.9827560572969,
+            -57.98275605729689
+          ],
+          "front_radius_minus_aft_radius_mm": 22.0
+        },
+        {
+          "index": 3,
+          "angle_degrees": 225,
+          "aft_void_mm": [
+            350.0,
+            -42.426406871192846,
+            -42.42640687119286
+          ],
+          "front_void_mm": [
+            820.0,
+            -57.98275605729689,
+            -57.98275605729691
+          ],
+          "front_radius_minus_aft_radius_mm": 22.0
+        },
+        {
+          "index": 4,
+          "angle_degrees": 315,
+          "aft_void_mm": [
+            350.0,
+            -42.42640687119286,
+            42.42640687119284
+          ],
+          "front_void_mm": [
+            820.0,
+            -57.98275605729691,
+            57.98275605729688
+          ],
+          "front_radius_minus_aft_radius_mm": 22.0
+        }
+      ],
+      "contacts_mm": {
+        "intake_floor_1": 0.0,
+        "sustainer_fin_1": 0.0,
+        "booster_fin_1": 5.123796534383003e-14,
+        "intake_floor_2": 0.0,
+        "sustainer_fin_2": 0.0,
+        "booster_fin_2": 1.4210854715202004e-14,
+        "intake_floor_3": 0.0,
+        "sustainer_fin_3": 0.0,
+        "booster_fin_3": 0.0,
+        "intake_floor_4": 0.0,
+        "sustainer_fin_4": 0.0,
+        "booster_fin_4": 0.0,
+        "mount_1": 0.0,
+        "mount_2": 0.0,
+        "sustainer_nozzle": 0.0,
+        "booster_nozzle": 0.0
+      },
+      "maximum_bbox_corner_radius_mm": 228.2500001414214
+    }
+  }
+}

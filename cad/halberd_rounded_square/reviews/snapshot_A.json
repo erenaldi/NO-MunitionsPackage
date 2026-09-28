@@ -1,0 +1,136 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\A_Trace.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_iso.png",
+        "camera": {
+          "direction": [
+            0.35,
+            -1,
+            0.55
+          ]
+        }
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_opposite.png",
+        "camera": {
+          "direction": [
+            -0.35,
+            1,
+            -0.55
+          ]
+        }
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_front.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_rear.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_nose_detail.png",
+        "camera": {
+          "position": [
+            1900,
+            -1800,
+            1100
+          ],
+          "target": [
+            1080,
+            0,
+            0
+          ],
+          "zoom": 1.6
+        }
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_intake_detail.png",
+        "camera": {
+          "position": [
+            1900,
+            -1700,
+            1200
+          ],
+          "target": [
+            510,
+            0,
+            0
+          ],
+          "zoom": 2.4
+        }
+      }
+    ],
+    "render": {
+      "width": 2000,
+      "height": 1000,
+      "padding": 0.12,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\A_Trace_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\A_separated.png",
+        "camera": {
+          "direction": [
+            -0.25,
+            -1,
+            0.55
+          ]
+        }
+      }
+    ],
+    "render": {
+      "width": 2000,
+      "height": 1000,
+      "padding": 0.12,
+      "viewLabels": false
+    }
+  }
+]

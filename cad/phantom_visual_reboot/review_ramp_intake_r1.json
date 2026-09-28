@@ -1,0 +1,281 @@
+[
+  {
+    "input": "STEP/R_RampIntake_R1_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_stowed_belly.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            -0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_deployed_belly.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            -0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_deployed_opposed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            -0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_stowed_side.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -620,
+            0,
+            -85
+          ],
+          "orthographicHalfHeight": 320,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_deployed_side.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -620,
+            0,
+            -85
+          ],
+          "orthographicHalfHeight": 320,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_mouth.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            -0.3
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -300,
+            0,
+            -111
+          ],
+          "orthographicHalfHeight": 110,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Body_Cavity.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_body_cavity.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            -0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Module_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_module_stowed.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -620,
+            0,
+            -70
+          ],
+          "orthographicHalfHeight": 230,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/R_RampIntake_R1_Module_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/R_Intake_R1_module_deployed.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.8
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -620,
+            0,
+            -90
+          ],
+          "orthographicHalfHeight": 230,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

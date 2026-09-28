@@ -1,0 +1,511 @@
+{
+  "status": "F02_SAVED_PROBE_PASS",
+  "saved_base_hash": "aa33330e16ed78918032a76e3374a82439a9d2445c5bca3d61c158ccb454fd21",
+  "base_leaf_count": 28,
+  "host": "main_body_intake_r12",
+  "native_surface": {
+    "clock_degrees": 0,
+    "center_skin_radius_mm": 97.7612043805093,
+    "sampled_skin_radius_range_mm": [
+      96.19168475897823,
+      99.01382807417758
+    ],
+    "sampled_skin_points": [
+      {
+        "offset_mm": [
+          -62.0,
+          -16.0
+        ],
+        "point_mm": [
+          837.9999999822361,
+          -16.0,
+          99.0138270743331
+        ],
+        "ray_point_mm": [
+          838.0,
+          -16.0,
+          99.01382807417758
+        ],
+        "radius_mm": 99.01382807417758,
+        "projection_error_mm": 1.0000022784210295e-06,
+        "outward_normal": [
+          0.01776390762064682,
+          -1.1697658399439163e-14,
+          0.9998422093440771
+        ],
+        "backed_wall_mm": 198.1207577003603
+      },
+      {
+        "offset_mm": [
+          -62.0,
+          0.0
+        ],
+        "point_mm": [
+          837.999999982236,
+          -2.5808446634005924e-17,
+          99.01382707433315
+        ],
+        "ray_point_mm": [
+          838.0,
+          0.0,
+          99.01382807417758
+        ],
+        "radius_mm": 99.01382807417758,
+        "projection_error_mm": 1.0000022236061047e-06,
+        "outward_normal": [
+          0.017763907620643858,
+          -1.9870705231734157e-16,
+          0.9998422093440772
+        ],
+        "backed_wall_mm": 198.12075770036031
+      },
+      {
+        "offset_mm": [
+          -62.0,
+          16.0
+        ],
+        "point_mm": [
+          837.999999982236,
+          15.999999999999893,
+          99.01382707433315
+        ],
+        "ray_point_mm": [
+          838.0,
+          16.0,
+          99.01382807417758
+        ],
+        "radius_mm": 99.01382807417758,
+        "projection_error_mm": 1.0000022236061104e-06,
+        "outward_normal": [
+          0.017763907620643837,
+          -3.203772357139912e-20,
+          0.9998422093440771
+        ],
+        "backed_wall_mm": 198.12075770036031
+      },
+      {
+        "offset_mm": [
+          0.0,
+          -16.0
+        ],
+        "point_mm": [
+          899.9999999783089,
+          -15.999999999999996,
+          97.76120338074367
+        ],
+        "ray_point_mm": [
+          900.0,
+          -16.0,
+          97.7612043805093
+        ],
+        "radius_mm": 97.7612043805093,
+        "projection_error_mm": 1.0000009115969835e-06,
+        "outward_normal": [
+          0.021691095901827842,
+          -1.1594038858221506e-13,
+          0.9997647205010676
+        ],
+        "backed_wall_mm": 195.66034412805172
+      },
+      {
+        "offset_mm": [
+          0.0,
+          0.0
+        ],
+        "point_mm": [
+          899.9999999783089,
+          -1.353767387705923e-16,
+          97.76120338074408
+        ],
+        "ray_point_mm": [
+          900.0,
+          0.0,
+          97.7612043805093
+        ],
+        "radius_mm": 97.7612043805093,
+        "projection_error_mm": 1.0000004995791587e-06,
+        "outward_normal": [
+          0.02169109590182403,
+          -5.205322308121858e-16,
+          0.9997647205010677
+        ],
+        "backed_wall_mm": 195.66034412805212
+      },
+      {
+        "offset_mm": [
+          0.0,
+          16.0
+        ],
+        "point_mm": [
+          899.9999999783089,
+          16.0,
+          97.76120338074408
+        ],
+        "ray_point_mm": [
+          900.0,
+          16.0,
+          97.7612043805093
+        ],
+        "radius_mm": 97.7612043805093,
+        "projection_error_mm": 1.0000004995791587e-06,
+        "outward_normal": [
+          0.021691095901824064,
+          -1.048640030413282e-27,
+          0.9997647205010677
+        ],
+        "backed_wall_mm": 195.66034412805212
+      },
+      {
+        "offset_mm": [
+          60.0,
+          -16.0
+        ],
+        "point_mm": [
+          959.9999999991309,
+          -15.99999999760816,
+          96.1916847306316
+        ],
+        "ray_point_mm": [
+          960.0,
+          -16.0,
+          96.19168476000414
+        ],
+        "radius_mm": 96.19168476000414,
+        "projection_error_mm": 2.9482581401134586e-08,
+        "outward_normal": [
+          0.02948081628664451,
+          -0.08112755340610163,
+          0.996267635502335
+        ],
+        "backed_wall_mm": 193.5103897406864
+      },
+      {
+        "offset_mm": [
+          60.0,
+          0.0
+        ],
+        "point_mm": [
+          959.9999999798997,
+          9.608249002163038e-17,
+          96.48065577020641
+        ],
+        "ray_point_mm": [
+          960.0,
+          0.0,
+          96.4806567700034
+        ],
+        "radius_mm": 96.4806567700034,
+        "projection_error_mm": 9.999990268025307e-07,
+        "outward_normal": [
+          0.020100304523497127,
+          5.970476925136431e-16,
+          0.9997979684706619
+        ],
+        "backed_wall_mm": 193.0788619137447
+      },
+      {
+        "offset_mm": [
+          60.0,
+          16.0
+        ],
+        "point_mm": [
+          959.999999999131,
+          15.999999997608478,
+          96.19168472961006
+        ],
+        "ray_point_mm": [
+          960.0,
+          16.0,
+          96.19168475897823
+        ],
+        "radius_mm": 96.19168475897823,
+        "projection_error_mm": 2.9478191646690765e-08,
+        "outward_normal": [
+          0.029480816289260983,
+          0.08112755354922413,
+          0.9962676354906028
+        ],
+        "backed_wall_mm": 193.51038974195097
+      }
+    ],
+    "minimum_available_backing_mm": 193.0788619137447,
+    "maximum_native_projection_error_mm": 1.0000022784210295e-06
+  },
+  "feature": {
+    "outline_vertex_count": 8,
+    "pocket_depth_mm": 0.8,
+    "cover_setback_mm": 0.18,
+    "perimeter_gap_mm": 0.3,
+    "pocket_volume_mm3": 3916.799989564588,
+    "pocket_bounds_mm": [
+      829.9999999,
+      -22.0000001,
+      95.48339509047699,
+      970.0000001,
+      22.0000001,
+      99.15234481337438
+    ],
+    "screw_support": [
+      {
+        "offset_x_mm": -55.0,
+        "offset_tangent_mm": -13.0,
+        "point_mm": [
+          844.9999999815091,
+          -12.999999999999911,
+          98.8868721159837
+        ],
+        "ray_point_mm": [
+          845.0,
+          -13.0,
+          98.88687311581089
+        ],
+        "outward_normal": [
+          0.018490935081800254,
+          -9.307002758801351e-15,
+          0.9998290280441955
+        ],
+        "projection_error_mm": 9.99998151574382e-07,
+        "measured_skin_radius_mm": 98.88687311581089,
+        "available_wall_mm": 197.87456996219225,
+        "remaining_wall_after_seat_mm": 196.85456996219224,
+        "seat_depth_mm": 1.02,
+        "head_top_recess_mm": 0.18,
+        "countersink_top_radius_mm": 1.802
+      },
+      {
+        "offset_x_mm": -55.0,
+        "offset_tangent_mm": 13.0,
+        "point_mm": [
+          844.9999999815091,
+          12.999999999999913,
+          98.88687211598375
+        ],
+        "ray_point_mm": [
+          845.0,
+          13.0,
+          98.88687311581089
+        ],
+        "outward_normal": [
+          0.01849093508179835,
+          -3.9619969545478937e-19,
+          0.9998290280441956
+        ],
+        "projection_error_mm": 9.999981089491068e-07,
+        "measured_skin_radius_mm": 98.88687311581089,
+        "available_wall_mm": 197.87456996219228,
+        "remaining_wall_after_seat_mm": 196.85456996219227,
+        "seat_depth_mm": 1.02,
+        "head_top_recess_mm": 0.18,
+        "countersink_top_radius_mm": 1.802
+      },
+      {
+        "offset_x_mm": 52.0,
+        "offset_tangent_mm": -7.0,
+        "point_mm": [
+          951.9999999793812,
+          -7.000000000000002,
+          96.6436288753244
+        ],
+        "ray_point_mm": [
+          952.0,
+          -7.0,
+          96.64362987511049
+        ],
+        "outward_normal": [
+          0.02061880366826189,
+          3.439978127739582e-14,
+          0.9997874098703633
+        ],
+        "projection_error_mm": 9.999986862981656e-07,
+        "measured_skin_radius_mm": 96.64362987511049,
+        "available_wall_mm": 193.41107157557144,
+        "remaining_wall_after_seat_mm": 192.39107157557143,
+        "seat_depth_mm": 1.02,
+        "head_top_recess_mm": 0.18,
+        "countersink_top_radius_mm": 1.802
+      },
+      {
+        "offset_x_mm": 52.0,
+        "offset_tangent_mm": 7.0,
+        "point_mm": [
+          951.9999999793812,
+          6.999999999999998,
+          96.64362887532432
+        ],
+        "ray_point_mm": [
+          952.0,
+          7.0,
+          96.64362987511049
+        ],
+        "outward_normal": [
+          0.020618803668266593,
+          2.405297036205072e-20,
+          0.9997874098703632
+        ],
+        "projection_error_mm": 9.999987573373338e-07,
+        "measured_skin_radius_mm": 96.64362987511049,
+        "available_wall_mm": 193.41107157557138,
+        "remaining_wall_after_seat_mm": 192.39107157557137,
+        "seat_depth_mm": 1.02,
+        "head_top_recess_mm": 0.18,
+        "countersink_top_radius_mm": 1.802
+      }
+    ],
+    "part_labels": [
+      "r18_F02_cover",
+      "r18_F02_fastener_1",
+      "r18_F02_fastener_2",
+      "r18_F02_fastener_3",
+      "r18_F02_fastener_4"
+    ],
+    "part_support_common_face_area_mm2": {
+      "r18_F02_cover": 4371.7341409290975,
+      "r18_F02_fastener_1": 3.835963169849477,
+      "r18_F02_fastener_2": 3.835963169849477,
+      "r18_F02_fastener_3": 3.835963169849477,
+      "r18_F02_fastener_4": 3.835963169849477
+    },
+    "host_removed_volume_mm3": 3920.496933702883,
+    "localized_host_cut_bounds_mm": [
+      829.9999999,
+      -22.0000001,
+      95.48339509047699,
+      970.0000001,
+      22.0000001,
+      99.15234481337438
+    ]
+  },
+  "checks": {
+    "valid_closed_positive_single_native_solids": 7,
+    "host_envelope_additions_mm3": 0.0,
+    "cover/head_outside_original_host_mm3": {
+      "r18_F02_cover": 0.0,
+      "r18_F02_fastener_1": 0.0,
+      "r18_F02_fastener_2": 0.0,
+      "r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_4": 0.0
+    },
+    "cover/head_overlap_with_pocketed_host_mm3": {
+      "r18_F02_cover": 0.0,
+      "r18_F02_fastener_1": 0.0,
+      "r18_F02_fastener_2": 0.0,
+      "r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_4": 0.0
+    },
+    "feature_part_pair_overlaps_mm3": {
+      "r18_F02_cover/r18_F02_fastener_1": 0.0,
+      "r18_F02_cover/r18_F02_fastener_2": 0.0,
+      "r18_F02_cover/r18_F02_fastener_3": 0.0,
+      "r18_F02_cover/r18_F02_fastener_4": 0.0,
+      "r18_F02_fastener_1/r18_F02_fastener_2": 0.0,
+      "r18_F02_fastener_1/r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_1/r18_F02_fastener_4": 0.0,
+      "r18_F02_fastener_2/r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_2/r18_F02_fastener_4": 0.0,
+      "r18_F02_fastener_3/r18_F02_fastener_4": 0.0
+    },
+    "head_slot_overlap_mm3": {
+      "r18_F02_fastener_1": 0.0,
+      "r18_F02_fastener_2": 0.0,
+      "r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_4": 0.0
+    }
+  },
+  "saved_probe_artifact": {
+    "status": "passed",
+    "saved_step": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r18_f02_probe.step",
+    "saved_document_hash": "77d054c1d28c148d644024f8fee2b1bbdf4e038d04133c501023c1754f021190",
+    "source_document_hash": "aa33330e16ed78918032a76e3374a82439a9d2445c5bca3d61c158ccb454fd21",
+    "saved_part_count": 6,
+    "saved_part_labels": [
+      "main_body_intake_r12_r18_access_cut",
+      "r18_F02_cover",
+      "r18_F02_fastener_1",
+      "r18_F02_fastener_2",
+      "r18_F02_fastener_3",
+      "r18_F02_fastener_4"
+    ],
+    "axial_crop_mm": [
+      804.9999999,
+      995.0000001000001
+    ],
+    "saved_geometry_source_delta_mm3": {
+      "main_body_intake_r12_r18_access_cut": {
+        "saved_extra_mm3": 0.0,
+        "source_missing_mm3": 0.0
+      },
+      "r18_F02_cover": {
+        "saved_extra_mm3": 0.0,
+        "source_missing_mm3": 0.0
+      },
+      "r18_F02_fastener_1": {
+        "saved_extra_mm3": 0.0,
+        "source_missing_mm3": 0.0
+      },
+      "r18_F02_fastener_2": {
+        "saved_extra_mm3": 0.0,
+        "source_missing_mm3": 0.0
+      },
+      "r18_F02_fastener_3": {
+        "saved_extra_mm3": 0.0,
+        "source_missing_mm3": 0.0
+      },
+      "r18_F02_fastener_4": {
+        "saved_extra_mm3": 0.0,
+        "source_missing_mm3": 0.0
+      }
+    },
+    "saved_support_common_face_area_mm2": {
+      "r18_F02_cover": 4371.7341409355895,
+      "r18_F02_fastener_1": 3.835963169849477,
+      "r18_F02_fastener_2": 3.835963169849477,
+      "r18_F02_fastener_3": 3.835963169849477,
+      "r18_F02_fastener_4": 3.835963169849477
+    },
+    "saved_part_pair_overlaps_mm3": {
+      "main_body_intake_r12_r18_access_cut/r18_F02_cover": 0.0,
+      "main_body_intake_r12_r18_access_cut/r18_F02_fastener_1": 0.0,
+      "main_body_intake_r12_r18_access_cut/r18_F02_fastener_2": 0.0,
+      "main_body_intake_r12_r18_access_cut/r18_F02_fastener_3": 0.0,
+      "main_body_intake_r12_r18_access_cut/r18_F02_fastener_4": 0.0,
+      "r18_F02_cover/r18_F02_fastener_1": 0.0,
+      "r18_F02_cover/r18_F02_fastener_2": 0.0,
+      "r18_F02_cover/r18_F02_fastener_3": 0.0,
+      "r18_F02_cover/r18_F02_fastener_4": 0.0,
+      "r18_F02_fastener_1/r18_F02_fastener_2": 0.0,
+      "r18_F02_fastener_1/r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_1/r18_F02_fastener_4": 0.0,
+      "r18_F02_fastener_2/r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_2/r18_F02_fastener_4": 0.0,
+      "r18_F02_fastener_3/r18_F02_fastener_4": 0.0
+    },
+    "saved_head_slot_overlap_mm3": {
+      "r18_F02_fastener_1": 0.0,
+      "r18_F02_fastener_2": 0.0,
+      "r18_F02_fastener_3": 0.0,
+      "r18_F02_fastener_4": 0.0
+    },
+    "saved_native_colors": {
+      "main_body_intake_r12_r18_access_cut": "Color: (0.462077, 0.5088813, 0.5457245, 1.0) near 'SLATEGRAY'",
+      "r18_F02_cover": "Color: (0.462077, 0.5088813, 0.5457245, 1.0) near 'SLATEGRAY'",
+      "r18_F02_fastener_1": "Color: (0.2422811, 0.2917706, 0.3277781, 1.0) near 'GRAY29'",
+      "r18_F02_fastener_2": "Color: (0.2422811, 0.2917706, 0.3277781, 1.0) near 'GRAY29'",
+      "r18_F02_fastener_3": "Color: (0.2422811, 0.2917706, 0.3277781, 1.0) near 'GRAY29'",
+      "r18_F02_fastener_4": "Color: (0.2422811, 0.2917706, 0.3277781, 1.0) near 'GRAY29'"
+    },
+    "sidecar_material_names": [
+      "detail_border",
+      "detail_metal",
+      "detail_paint",
+      "interior",
+      "occlusion"
+    ],
+    "sidecar_assignments": {
+      "o1.2": "detail_paint",
+      "o1.3": "detail_metal",
+      "o1.4": "detail_metal",
+      "o1.5": "detail_metal",
+      "o1.6": "detail_metal"
+    }
+  }
+}

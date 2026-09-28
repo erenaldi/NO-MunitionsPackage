@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "bare_parts": 9,
+  "filled_parts": 13,
+  "outer_xyz_mm": [
+    3500,
+    400,
+    223
+  ],
+  "tip_section_yz_mm": {
+    "forward": [
+      9.766,
+      5.037
+    ],
+    "aft": [
+      10.053,
+      5.206
+    ]
+  },
+  "A8_roof_lips_four_boxes_preserved": true,
+  "sensor_aperture_art_deferred": true,
+  "spear_max_fin_diameter_mm": 158.013,
+  "donor_aircraft_door_clearance_verified": false
+}

@@ -1,0 +1,13 @@
+{
+  "input": "STEP/Spear_UniformBarrel.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_UniformBarrel_iso.png", "camera": {"direction": [-1, -1, 0.8]}},
+    {"path": "reviews/Spear_UniformBarrel_opposed.png", "camera": {"direction": [1, 1, -0.8]}},
+    {"path": "reviews/Spear_UniformBarrel_side.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_UniformBarrel_top.png", "camera": {"direction": [0, 0, 1]}},
+    {"path": "reviews/Spear_UniformBarrel_tail.png", "camera": {"direction": [-1, 0, 0]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

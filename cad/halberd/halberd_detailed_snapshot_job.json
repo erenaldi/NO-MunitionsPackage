@@ -1,0 +1,219 @@
+[
+  {
+    "input": "AAM-44_Halberd_BoosterFin_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_booster_fin_iso.png", "camera": { "direction": [-1, -1, 0.55] } },
+      { "path": "Halberd_booster_fin_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Halberd_booster_fin_edge.png", "camera": { "direction": [1, 0, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_BoosterFin_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_booster_fin_rendered.png", "camera": { "direction": [-1, -1, 0.55] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Nozzle_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_nozzle_aft.png", "camera": { "direction": [-1, 0, 0] } },
+      { "path": "Halberd_nozzle_iso.png", "camera": { "direction": [-1, -1, 0.6] } },
+      { "path": "Halberd_nozzle_opposite.png", "camera": { "direction": [-1, 1, -0.35] } },
+      { "path": "Halberd_nozzle_side.png", "camera": { "direction": [0, -1, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Nozzle_Review.step",
+    "mode": "section",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_nozzle_cutaway.png", "camera": { "direction": [1, -1, 0.6] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Nozzle_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_nozzle_rendered.png", "camera": { "direction": [-1, -1, 0.6] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Mount_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_mount_iso.png", "camera": { "direction": [-1, -1, 0.5] } },
+      { "path": "Halberd_mount_opposite.png", "camera": { "direction": [-1, 1, 0.35] } },
+      { "path": "Halberd_mount_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Halberd_mount_top.png", "camera": { "direction": [0, 0, 1] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Mount_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_mount_rendered.png", "camera": { "direction": [-1, -1, 0.5] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Intake_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_intake_iso.png", "camera": { "direction": [-1, -1, 0.55] } },
+      { "path": "Halberd_intake_opposite.png", "camera": { "direction": [-1, 1, 0.35] } },
+      { "path": "Halberd_intake_mouth.png", "camera": { "direction": [1, 0, -0.08] } },
+      { "path": "Halberd_intake_grazing.png", "camera": { "direction": [0, -1, -0.12] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Intake_Context_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_intake_context_iso.png", "camera": { "direction": [-1, -1, 0.55] } },
+      { "path": "Halberd_intake_context_opposite.png", "camera": { "direction": [-1, 1, 0.35] } },
+      { "path": "Halberd_intake_context_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Halberd_intake_context_top.png", "camera": { "direction": [0, 0, 1] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Intake_Context_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_intake_context_rendered.png", "camera": { "direction": [-1, -1, 0.55] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Detailed.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_detailed_iso.png", "camera": { "direction": [-1, -1, 0.75] } },
+      { "path": "Halberd_detailed_opposite.png", "camera": { "direction": [1, 1, -0.75] } },
+      { "path": "Halberd_detailed_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Halberd_detailed_top.png", "camera": { "direction": [0, 0, 1] } },
+      { "path": "Halberd_detailed_nose.png", "camera": { "direction": [1, 0, 0] } },
+      { "path": "Halberd_detailed_tail.png", "camera": { "direction": [-1, 0, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "assembly" }
+  },
+  {
+    "input": "AAM-44_Halberd_Detailed.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_detailed_rendered.png", "camera": { "direction": [-1, -1, 0.75] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "assembly" }
+  },
+  {
+    "input": "AAM-44_Halberd_UpperStage_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_upper_stage_iso.png", "camera": { "direction": [-1, -1, 0.75] } },
+      { "path": "Halberd_upper_stage_tail.png", "camera": { "direction": [-1, 0, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_UpperStage_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_upper_stage_rendered.png", "camera": { "direction": [-1, -1, 0.75] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Booster_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_booster_iso.png", "camera": { "direction": [-1, 1, 0.75] } },
+      { "path": "Halberd_booster_nose.png", "camera": { "direction": [1, 0, 0] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_Booster_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_booster_rendered.png", "camera": { "direction": [-1, 1, 0.75] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.12, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_SustainerSeam_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "outputs": [
+      { "path": "Halberd_seam_iso.png", "camera": { "direction": [-1, -1, 0.6] } },
+      { "path": "Halberd_seam_opposite.png", "camera": { "direction": [-1, 1, 0.35] } },
+      { "path": "Halberd_seam_side.png", "camera": { "direction": [0, -1, 0] } },
+      { "path": "Halberd_seam_top.png", "camera": { "direction": [0, 0, 1] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_SustainerSeam_Review.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": { "mode": "rendered" },
+    "outputs": [
+      { "path": "Halberd_seam_rendered.png", "camera": { "direction": [-1, -1, 0.6] } }
+    ],
+    "render": { "viewLabels": false, "padding": 0.1, "sizeProfile": "diagnostic" }
+  },
+  {
+    "input": "AAM-44_Halberd_SustainerNozzle_Review.step",
+    "mode": "view", "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Halberd_sustainer_nozzle_close.png", "camera": {"direction": [-1, -0.65, 0.4]}},
+      {"path": "Halberd_sustainer_nozzle_aft.png", "camera": {"direction": [-1, 0, 0]}}
+    ],
+    "render": {"sizeProfile": "diagnostic", "padding": 0.1}
+  },
+  {
+    "input": "AAM-44_Halberd_SustainerNozzle_Review.step", "mode": "section",
+    "outputs": [{"path": "Halberd_sustainer_nozzle_section.png", "camera": "top"}],
+    "render": {"sizeProfile": "diagnostic"}
+  },
+  {
+    "input": "AAM-44_Halberd_Separated_Review.step", "mode": "view",
+    "theme": "snapshot", "display": {"mode": "rendered"},
+    "outputs": [
+      {"path": "Halberd_separated_iso.png", "camera": {"direction": [-1, -1, 0.7]}},
+      {"path": "Halberd_separated_opposite.png", "camera": {"direction": [1, 1, -0.7]}}
+    ],
+    "render": {"sizeProfile": "assembly", "padding": 0.1}
+  }
+]

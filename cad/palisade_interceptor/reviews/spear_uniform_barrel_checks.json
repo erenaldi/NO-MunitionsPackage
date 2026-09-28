@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "total_length_mm": 1200.0,
+  "cap_length_mm": 130.0,
+  "barrel_and_cap_radius_mm": 54.56,
+  "body_station_radii_mm": {
+    "-469.0": 54.56,
+    "-400.0": 54.56,
+    "-255.0": 54.56,
+    "0.0": 54.56,
+    "190.0": 54.56,
+    "300.0": 54.56,
+    "354.5": 54.56
+  },
+  "cap_station_radii_mm": {
+    "-599.5": 37.492,
+    "-577.0": 54.56,
+    "-535.0": 54.56,
+    "-500.0": 54.56,
+    "-471.0": 54.56
+  },
+  "maximum_radial_envelope_mm": 79.006,
+  "pointed_nose_exactly_preserved": true,
+  "fin_roots_attached_to_narrow_barrel": true,
+  "cap_nozzle_stations_x_mm": {
+    "thruster_0": -535.0,
+    "thruster_90": -535.0,
+    "thruster_180": -535.0,
+    "thruster_270": -535.0
+  },
+  "nozzle_and_stage_geometry_preserved": true
+}

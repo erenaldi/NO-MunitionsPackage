@@ -1,0 +1,56 @@
+{
+  "revision": "R8",
+  "runtime": "cadgen 0.6.6",
+  "state": "cad-review",
+  "user_approved": false,
+  "artifacts": [
+    {
+      "path": "STEP/Selected_Halberd_R8.step",
+      "sha256": "d4ab30134d97ffdc14c2ac2e6181443a70fbbdd407ec77c9fc95ed51c454df72"
+    },
+    {
+      "path": "STEP/Selected_Halberd_R8.step.json",
+      "sha256": "76810f7360016d223bd11bf29c2271eff49eee02b70e11b244cc12854bd31f1f"
+    },
+    {
+      "path": "STEP/Selected_Halberd_R8_Separated.step",
+      "sha256": "c19d452c1781e0a0df0056cc806c6b7273a22c89cddf816282fdffc25ecf241c"
+    },
+    {
+      "path": "STEP/Selected_Halberd_R8_Separated.step.json",
+      "sha256": "38abcaca71d426536abe6045ef0811329a6fb54247a4defa6f6a9f3e097ea27e"
+    },
+    {
+      "path": "reviews/Halberd_R8_iso.png",
+      "sha256": "3424501ae727c82dde9db0558e3812d16499549330cecd08249e1c1509bf8258"
+    },
+    {
+      "path": "reviews/Halberd_R8_opposite.png",
+      "sha256": "e1ad651947c7f02f94e8bca98fdc3e415e444b7d4c171da9e9ee757d69130073"
+    },
+    {
+      "path": "reviews/Halberd_R8_side.png",
+      "sha256": "327cdb5bdb32caebab7643ae177f903bd7033fe2b02e46280c15123f7ef7f726"
+    },
+    {
+      "path": "reviews/Halberd_R8_taper.png",
+      "sha256": "a50c3c7cf21fd7b4ccc35554a65e5116c0d6a6e33434494804f8cf98d5164761"
+    },
+    {
+      "path": "reviews/Halberd_R8_front.png",
+      "sha256": "16ee5b7b4b1b70f2fd657c2d0a80f14197951b1659ba8898c29c60934b5c0d14"
+    },
+    {
+      "path": "reviews/Halberd_R8_rear.png",
+      "sha256": "ec65360bd18155d328532202bbc48523e69e23e11304c1a413a0a6672d90a1d5"
+    },
+    {
+      "path": "reviews/Halberd_R8_booster_shift.png",
+      "sha256": "b613b95e5ad6d3a999bf669691af18b32d52dcc4979714d3e2d3c95324027fa9"
+    },
+    {
+      "path": "reviews/Halberd_R8_separated.png",
+      "sha256": "d9497a5f68a3cd17001144f3c51e1a0d5e23e3902d7daa21eb341bb43472b0e4"
+    }
+  ]
+}

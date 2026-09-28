@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "parts": 11,
+  "length_mm": 3370.0000002000024,
+  "booster_length_mm": 561.6666668666687,
+  "preserved_exactly": [
+    "main_ogive",
+    "booster_body",
+    "main_fin_1",
+    "main_fin_2",
+    "main_fin_3",
+    "main_fin_4",
+    "booster_fin_1",
+    "booster_fin_2",
+    "booster_fin_3",
+    "booster_fin_4"
+  ],
+  "fin_clock_degrees": [
+    45.0,
+    135.0,
+    224.99999999999997,
+    315.0,
+    45.0,
+    135.0,
+    225.0,
+    315.0
+  ],
+  "intake_clock_degrees": 45,
+  "intakes_prototyped": 1,
+  "open_passage_probes": 3,
+  "protected_core": true,
+  "roof_and_sidewalls_continuous": true,
+  "forward_transition_unchanged": true,
+  "separated_shapes_unchanged": true
+}

@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "length_mm": 1200.0,
+  "radial_envelope_mm": 79.009,
+  "prior_body_radius_at_minus419_5_mm": 60.792,
+  "prior_body_stations_mm": {
+    "-419.5": 60.792,
+    "-409.0": 61.383,
+    "-399.0": 61.947,
+    "-398.5": 61.975,
+    "-380.0": 61.378
+  },
+  "new_body_stations_mm": {
+    "-419.5": 62.0,
+    "-409.0": 62.0,
+    "-399.0": 62.0,
+    "-398.5": 62.0,
+    "-380.0": 61.378
+  },
+  "new_cap_radius_at_minus420_5_mm": 62.0,
+  "unchanged_body_from_minus398_forward": true,
+  "one_detailed_nozzle_only": true,
+  "stage_geometry_preserved": true
+}

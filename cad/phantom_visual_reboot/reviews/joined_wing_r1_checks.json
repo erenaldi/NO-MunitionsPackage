@@ -1,0 +1,251 @@
+{
+  "states": {
+    "Stowed": {
+      "valid_solids": 7,
+      "module_valid_solids": 6,
+      "pose": {
+        "front": [
+          500.0,
+          35.0
+        ],
+        "rear": [
+          199.9930553010222,
+          35.0
+        ],
+        "joint": [
+          -399.98611100394214,
+          39.99999999998836
+        ],
+        "front_angle": 179.68168847639768,
+        "rear_angle": 179.52252964433941,
+        "separation": 300.0069446989778
+      },
+      "stowed_radial_bounds_mm": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": 121.62236650550894,
+        "joined_wing_dorsal_housing": 108.37463956110766,
+        "fixed_forward_root": 114.23659658795863,
+        "sliding_rear_root_carriage": 106.56101538555271,
+        "forward_lifting_panel": 121.02485088461233,
+        "rear_lifting_panel": 110.89502243213379,
+        "outboard_join_pin": 115.03912377969014
+      }
+    },
+    "Midfold": {
+      "valid_solids": 7,
+      "module_valid_solids": 6,
+      "pose": {
+        "front": [
+          500.0,
+          35.0
+        ],
+        "rear": [
+          -25.003472349488902,
+          35.0
+        ],
+        "joint": [
+          -191.0703301939094,
+          611.560316641443
+        ],
+        "front_angle": 140.16174104277542,
+        "rear_angle": 106.06800516569302,
+        "separation": 525.0034723494889
+      },
+      "stowed_radial_bounds_mm": {}
+    },
+    "Deployed": {
+      "valid_solids": 7,
+      "module_valid_solids": 6,
+      "pose": {
+        "front": [
+          500.0,
+          35.0
+        ],
+        "rear": [
+          -250.0,
+          35.0
+        ],
+        "joint": [
+          -175.0,
+          630.2940449895328
+        ],
+        "front_angle": 138.59037789072914,
+        "rear_angle": 82.81924421854171,
+        "separation": 750.0
+      },
+      "stowed_radial_bounds_mm": {}
+    }
+  },
+  "sampled_motion": [
+    {
+      "fraction": 0.0,
+      "rear_root_x": 199.9930553010222,
+      "outboard_joint": [
+        -399.98611100394214,
+        39.99999999998836
+      ]
+    },
+    {
+      "fraction": 0.05,
+      "rear_root_x": 177.4934025359711,
+      "outboard_joint": [
+        -358.9134451266805,
+        303.82651242133255
+      ]
+    },
+    {
+      "fraction": 0.1,
+      "rear_root_x": 154.99374977091998,
+      "outboard_joint": [
+        -324.6652231942203,
+        395.45425459276635
+      ]
+    },
+    {
+      "fraction": 0.15,
+      "rear_root_x": 132.49409700586887,
+      "outboard_joint": [
+        -295.98801538825194,
+        455.0036658867063
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "rear_root_x": 109.99444424081776,
+      "outboard_joint": [
+        -271.9176363410726,
+        497.7560509659616
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "rear_root_x": 87.49479147576665,
+      "outboard_joint": [
+        -251.7002624988537,
+        529.9209182881184
+      ]
+    },
+    {
+      "fraction": 0.3,
+      "rear_root_x": 64.99513871071554,
+      "outboard_joint": [
+        -234.73802965182608,
+        554.769206266928
+      ]
+    },
+    {
+      "fraction": 0.35,
+      "rear_root_x": 42.49548594566443,
+      "outboard_joint": [
+        -220.55068324614456,
+        574.2649746400319
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "rear_root_x": 19.995833180613317,
+      "outboard_joint": [
+        -208.74801428545948,
+        589.6857238530825
+      ]
+    },
+    {
+      "fraction": 0.45,
+      "rear_root_x": -2.5038195844377924,
+      "outboard_joint": [
+        -199.00970034209217,
+        601.9086688591545
+      ]
+    },
+    {
+      "fraction": 0.5,
+      "rear_root_x": -25.003472349488902,
+      "outboard_joint": [
+        -191.0703301939094,
+        611.560316641443
+      ]
+    },
+    {
+      "fraction": 0.55,
+      "rear_root_x": -47.50312511454001,
+      "outboard_joint": [
+        -184.70812093842812,
+        619.1016941603293
+      ]
+    },
+    {
+      "fraction": 0.6,
+      "rear_root_x": -70.00277787959112,
+      "outboard_joint": [
+        -179.7363073151049,
+        624.8801170726348
+      ]
+    },
+    {
+      "fraction": 0.65,
+      "rear_root_x": -92.50243064464223,
+      "outboard_joint": [
+        -175.99649291586638,
+        629.1622182244921
+      ]
+    },
+    {
+      "fraction": 0.7,
+      "rear_root_x": -115.00208340969334,
+      "outboard_joint": [
+        -173.3534608585436,
+        632.1558563305076
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "rear_root_x": -137.50173617474445,
+      "outboard_joint": [
+        -171.69108335656745,
+        634.0251151156191
+      ]
+    },
+    {
+      "fraction": 0.8,
+      "rear_root_x": -160.00138893979556,
+      "outboard_joint": [
+        -170.90906795291812,
+        634.9008439221825
+      ]
+    },
+    {
+      "fraction": 0.85,
+      "rear_root_x": -182.50104170484667,
+      "outboard_joint": [
+        -170.92034734523497,
+        634.8882291878624
+      ]
+    },
+    {
+      "fraction": 0.9,
+      "rear_root_x": -205.00069446989778,
+      "outboard_joint": [
+        -171.64896902344424,
+        634.0723348726299
+      ]
+    },
+    {
+      "fraction": 0.95,
+      "rear_root_x": -227.5003472349489,
+      "outboard_joint": [
+        -173.02837651479274,
+        632.5222208469426
+      ]
+    },
+    {
+      "fraction": 1.0,
+      "rear_root_x": -250.0,
+      "outboard_joint": [
+        -175.0,
+        630.2940449895328
+      ]
+    }
+  ],
+  "minimum_sampled_panel_clearance_mm": 0.2499999999554916,
+  "rearward_carriage_travel_mm": 449.9930553010222,
+  "all_rigid_parts_identical_after_inverse_pose": true
+}

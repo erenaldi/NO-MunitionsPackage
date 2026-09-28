@@ -1,0 +1,9 @@
+{
+  "input": "STEP/Spear_ACMPortGroup0_Separated.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_ACMPortGroup0_separated.png", "camera": {"direction": [-1, 1, 0.8]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

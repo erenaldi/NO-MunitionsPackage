@@ -1,0 +1,2131 @@
+{
+  "source_step": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\O_Interleaved_A2_Stowed.step",
+  "trial": {
+    "all_nonbody_components_drop_mm": 22.75,
+    "well_extents_mm": {
+      "x": [
+        -450.3,
+        550.3
+      ],
+      "y": [
+        -74.3,
+        74.3
+      ],
+      "z": [
+        63.25,
+        100.0
+      ]
+    },
+    "slots_mm": [
+      {
+        "name": "starboard_rear",
+        "x": [
+          -430.0,
+          530.0
+        ],
+        "y": [
+          -100.0,
+          100.0
+        ],
+        "z": [
+          65.7,
+          70.3
+        ]
+      },
+      {
+        "name": "port_rear",
+        "x": [
+          -430.0,
+          530.0
+        ],
+        "y": [
+          -100.0,
+          100.0
+        ],
+        "z": [
+          71.2,
+          75.8
+        ]
+      },
+      {
+        "name": "starboard_front",
+        "x": [
+          -430.0,
+          530.0
+        ],
+        "y": [
+          -100.0,
+          100.0
+        ],
+        "z": [
+          76.2,
+          80.8
+        ]
+      },
+      {
+        "name": "port_front",
+        "x": [
+          -430.0,
+          530.0
+        ],
+        "y": [
+          -100.0,
+          100.0
+        ],
+        "z": [
+          81.7,
+          86.3
+        ]
+      }
+    ],
+    "floor_z_mm": 63.25,
+    "no_automatic_widening": true
+  },
+  "checks": {
+    "component_inventory": {
+      "saved_part_count": 12,
+      "retained_nonbody_count": 11,
+      "retained_labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing"
+      ],
+      "nonbody_transform": [
+        0.0,
+        0.0,
+        -22.75
+      ]
+    },
+    "body": {
+      "source_valid_single_solid": true,
+      "recessed_valid_single_positive_solid": true,
+      "original_body_bounds_mm": {
+        "x": [
+          -1400.0000001,
+          1399.9999999999998
+        ],
+        "y": [
+          -86.0000001,
+          86.000000100002
+        ],
+        "z": [
+          -86.0000001,
+          86.0000001
+        ]
+      },
+      "recessed_body_bounds_mm": {
+        "x": [
+          -1400.0000001,
+          1399.9999999999998
+        ],
+        "y": [
+          -86.0000001,
+          86.000000100002
+        ],
+        "z": [
+          -86.0000001,
+          86.00000010000021
+        ]
+      },
+      "outside_cutter_symmetric_difference_mm3": 0.0,
+      "removed_volume_mm3": 3750655.9176407456,
+      "source_intersection_cutter_volume_mm3": 3750655.917769521,
+      "removed_volume_error_mm3": 0.00012877536937594414
+    },
+    "floor_seating": {
+      "translated_housing_bounds_mm": {
+        "x": [
+          -450.0,
+          550.0
+        ],
+        "y": [
+          -74.0,
+          74.0
+        ],
+        "z": [
+          63.25,
+          71.25
+        ]
+      },
+      "requested_floor_z_mm": 63.25,
+      "housing_bottom_z_error_mm": 0.0,
+      "housing_to_body_gap_mm": 0.0,
+      "housing_body_overlap_mm3": 0.0
+    },
+    "support_path": [
+      {
+        "part": "starboard_fixed_root",
+        "housing_gap_mm": 0.0
+      },
+      {
+        "part": "starboard_carriage",
+        "housing_gap_mm": 0.0
+      },
+      {
+        "part": "port_fixed_root",
+        "housing_gap_mm": 0.0
+      },
+      {
+        "part": "port_carriage",
+        "housing_gap_mm": 0.0
+      }
+    ],
+    "stowed_datums_envelope": {
+      "panel_top_z_mm_by_label": {
+        "starboard_rear": 70.0,
+        "starboard_front": 80.5,
+        "port_rear": 75.5,
+        "port_front": 86.0
+      },
+      "uppermost_panel_top_z_mm": 86.0,
+      "hardware_top_z_mm_by_label": {
+        "starboard_fixed_root": 81.25,
+        "starboard_carriage": 70.75,
+        "starboard_join": 81.25,
+        "port_fixed_root": 86.75,
+        "port_carriage": 76.25,
+        "port_join": 86.75
+      },
+      "uppermost_hinge_hardware_top_z_mm": 86.75,
+      "radial_bound_mm_by_label": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": 121.62236650550894,
+        "supported_housing": 102.72566621833124,
+        "starboard_front": 100.48323378762778,
+        "starboard_rear": 87.32485502943386,
+        "starboard_fixed_root": 90.56247843339978,
+        "starboard_carriage": 80.30916821882792,
+        "starboard_join": 91.46344898372787,
+        "port_front": 104.94108000405951,
+        "port_rear": 91.79259396003394,
+        "port_fixed_root": 95.5278100869061,
+        "port_carriage": 85.19426330452069,
+        "port_join": 96.38237650109235
+      },
+      "complete_stowed_radial_bound_mm": 121.62236650550894,
+      "radial_limit_mm_exclusive": 125.0
+    },
+    "motion": {
+      "law_source": "joined_wing_r1.pose via src/interleaved_wing_a.py; original rigid-transform sample logic",
+      "sample_count": 21,
+      "fractions": [
+        0.0,
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "minimum_panel_body_clearance_mm_by_label": {
+        "starboard_rear": 0.29999999999999716,
+        "starboard_front": 0.299999999999784,
+        "port_rear": 0.29999999999999716,
+        "port_front": 0.299999999999784
+      },
+      "minimum_panel_clearance_sample_by_label": {
+        "starboard_rear": 0.05,
+        "starboard_front": 0.15,
+        "port_rear": 0.05,
+        "port_front": 0.15
+      },
+      "worst_hardware_body_overlap": {
+        "overlap_mm3": 0.0,
+        "fraction": null,
+        "part": null
+      },
+      "hardware_body_tested_at_all_samples": true,
+      "panel_body_clearance_limit_mm_exclusive": 0.2
+    }
+  },
+  "sample_results": [
+    {
+      "fraction": 0.0,
+      "panel_body_clearance_mm": {
+        "starboard_rear": 2.75,
+        "starboard_front": 13.25,
+        "port_rear": 8.25,
+        "port_front": 14.164751334092111
+      },
+      "hardware_body_pairs": [
+        {
+          "part": "starboard_fixed_root",
+          "gap_mm": 1.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "starboard_carriage",
+          "gap_mm": 2.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "starboard_join",
+          "gap_mm": 2.5,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_fixed_root",
+          "gap_mm": 1.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_carriage",
+          "gap_mm": 7.5,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_join",
+          "gap_mm": 8.0,
+          "overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "fraction": 0.5,
+      "panel_body_clearance_mm": {
+        "starboard_rear": 0.29999999999999716,
+        "starboard_front": 0.299999999999784,
+        "port_rear": 0.29999999999999716,
+        "port_front": 0.299999999999784
+      },
+      "hardware_body_pairs": [
+        {
+          "part": "starboard_fixed_root",
+          "gap_mm": 1.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "starboard_carriage",
+          "gap_mm": 2.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "starboard_join",
+          "gap_mm": 513.5818633992801,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_fixed_root",
+          "gap_mm": 1.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_carriage",
+          "gap_mm": 7.5,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_join",
+          "gap_mm": 513.6606417143297,
+          "overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "fraction": 1.0,
+      "panel_body_clearance_mm": {
+        "starboard_rear": 0.29999999999999716,
+        "starboard_front": 0.299999999999784,
+        "port_rear": 0.29999999999999716,
+        "port_front": 0.299999999999784
+      },
+      "hardware_body_pairs": [
+        {
+          "part": "starboard_fixed_root",
+          "gap_mm": 1.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "starboard_carriage",
+          "gap_mm": 2.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "starboard_join",
+          "gap_mm": 532.3148474371349,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_fixed_root",
+          "gap_mm": 1.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_carriage",
+          "gap_mm": 7.5,
+          "overlap_mm3": 0.0
+        },
+        {
+          "part": "port_join",
+          "gap_mm": 532.3909049299812,
+          "overlap_mm3": 0.0
+        }
+      ]
+    }
+  ],
+  "original_body_panel_intrusions": [
+    {
+      "fraction": 0.0,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 183256.128194953,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -411.98611100394453,
+          211.99305530102
+        ],
+        "y": [
+          -35.78937496022125,
+          52.20756943118154
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.0,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 367856.12819494057,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -411.98611100394214,
+          512.0
+        ],
+        "y": [
+          -59.85972221150561,
+          60.138425922359
+        ],
+        "z": [
+          76.5,
+          80.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.0,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 183256.1281949282,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -411.98611100393657,
+          211.9930553010202
+        ],
+        "y": [
+          -52.20756943118178,
+          35.789374960213216
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.0,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 367856.1281949099,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -411.98611100393987,
+          512.0000000000005
+        ],
+        "y": [
+          -60.138425922353676,
+          59.859722211500646
+        ],
+        "z": [
+          82.0,
+          86.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.05,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 54140.86934835664,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -68.17913411098499,
+          189.49340253596912
+        ],
+        "y": [
+          -17.803648558675548,
+          86.00000000000207
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.05,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 120785.9792774656,
+      "source_overlap_bounds_mm": {
+        "x": [
+          58.82510954765793,
+          512.0
+        ],
+        "y": [
+          -48.423941389853155,
+          85.98749215959809
+        ],
+        "z": [
+          76.5,
+          80.5000000000002
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.05,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 54140.86934834792,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -68.17913411096919,
+          189.4934025359691
+        ],
+        "y": [
+          -86.00000000000006,
+          17.80364855866844
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.05,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 114974.19695166785,
+      "source_overlap_bounds_mm": {
+        "x": [
+          64.59830575306225,
+          512.0000001000002
+        ],
+        "y": [
+          -84.00000008187011,
+          48.42394148984838
+        ],
+        "z": [
+          81.99999990000006,
+          86.0000001000002
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.1,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 39335.45529094227,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -22.551401903573293,
+          166.9937497709182
+        ],
+        "y": [
+          -7.743559751471935,
+          86.00000000000202
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.1,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 90056.3890671991,
+      "source_overlap_bounds_mm": {
+        "x": [
+          168.42972966671482,
+          512.0
+        ],
+        "y": [
+          -42.45390413628955,
+          85.98749215959873
+        ],
+        "z": [
+          76.49999999999979,
+          80.5000000000002
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.1,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 39335.45529093624,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -22.551401903559793,
+          166.9937497709181
+        ],
+        "y": [
+          -86.00000000000003,
+          7.743559751465433
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.1,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 85590.77548461223,
+      "source_overlap_bounds_mm": {
+        "x": [
+          172.6481912137867,
+          512.0000001000002
+        ],
+        "y": [
+          -84.00000008187016,
+          42.45390423628496
+        ],
+        "z": [
+          81.99999990000002,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.15,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 32774.51567195939,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -14.284138140672582,
+          144.49409700586727
+        ],
+        "y": [
+          0.36712038192206364,
+          86.00000000000202
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.15,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 76632.35534923113,
+      "source_overlap_bounds_mm": {
+        "x": [
+          216.2875014265137,
+          512.0
+        ],
+        "y": [
+          -37.93203304197216,
+          85.98749215959833
+        ],
+        "z": [
+          76.49999999999996,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.15,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 32774.51567195472,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -14.284138140660616,
+          144.4940970058671
+        ],
+        "y": [
+          -86.0,
+          -0.36712038192779417
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.15,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 72750.54193318805,
+      "source_overlap_bounds_mm": {
+        "x": [
+          219.80959336283667,
+          512.0000001000002
+        ],
+        "y": [
+          -84.00000008187014,
+          37.93203314196772
+        ],
+        "z": [
+          81.99999990000003,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.2,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 28905.6134457722,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -18.266386685416848,
+          121.99444424081634
+        ],
+        "y": [
+          7.271173259570446,
+          86.00000000000202
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.2,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 68905.17578127801,
+      "source_overlap_bounds_mm": {
+        "x": [
+          243.84245255974275,
+          512.0
+        ],
+        "y": [
+          -34.33742888505266,
+          85.9874921595981
+        ],
+        "z": [
+          76.5,
+          80.50000000000033
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.2,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 28905.613445768344,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -18.266386685405735,
+          121.99444424081611
+        ],
+        "y": [
+          -86.0,
+          -7.271173259575619
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.2,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 65356.09128233425,
+      "source_overlap_bounds_mm": {
+        "x": [
+          246.9550462346491,
+          512.0000001000001
+        ],
+        "y": [
+          -84.00000008187031,
+          34.33742898504834
+        ],
+        "z": [
+          81.9999998999998,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.25,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 26302.621215601324,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -28.037547167916657,
+          99.4947914757654
+        ],
+        "y": [
+          13.310248991460696,
+          86.000000000002
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.25,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 63867.6067126457,
+      "source_overlap_bounds_mm": {
+        "x": [
+          261.8137737321144,
+          512.0
+        ],
+        "y": [
+          -31.42222296410425,
+          85.9874921595981
+        ],
+        "z": [
+          76.5,
+          80.5000000000014
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.25,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 26302.621215598032,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -28.03754716790604,
+          99.49479147576514
+        ],
+        "y": [
+          -86.00000000000006,
+          -13.31024899146528
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.25,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 60533.32108894594,
+      "source_overlap_bounds_mm": {
+        "x": [
+          264.6544939294575,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187017,
+          31.42222306410006
+        ],
+        "z": [
+          81.99999989999999,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.3,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 24410.95557656146,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -41.077372421069185,
+          76.99513871071443
+        ],
+        "y": [
+          18.000000000001876,
+          86.00000000000205
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.3,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 60346.098369186635,
+      "source_overlap_bounds_mm": {
+        "x": [
+          274.3821600185315,
+          512.0
+        ],
+        "y": [
+          -29.03576945776787,
+          85.98749215959825
+        ],
+        "z": [
+          76.49999999999997,
+          80.50000000000024
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.3,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 24410.955576558626,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -41.077372421059295,
+          76.99513871071414
+        ],
+        "y": [
+          -86.0,
+          -18.000000000001506
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.3,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 57160.61656794409,
+      "source_overlap_bounds_mm": {
+        "x": [
+          277.02985450017127,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187024,
+          29.035769557763814
+        ],
+        "z": [
+          81.9999998999999,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.35,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 22964.643216163124,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -56.17257313539159,
+          54.49548594566345
+        ],
+        "y": [
+          18.00000000000196,
+          86.00000000000205
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.35,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 57776.99211719377,
+      "source_overlap_bounds_mm": {
+        "x": [
+          283.55524159528545,
+          512.0
+        ],
+        "y": [
+          -27.07548569572461,
+          85.98749215960015
+        ],
+        "z": [
+          76.49999999999972,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.35,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 22964.64321616066,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -56.17257313538204,
+          54.495485945663134
+        ],
+        "y": [
+          -86.0,
+          -18.00000000000162
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.35,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 54699.19603581401,
+      "source_overlap_bounds_mm": {
+        "x": [
+          286.0602482799355,
+          512.0000001000001
+        ],
+        "y": [
+          -84.00000008187007,
+          27.07548579572058
+        ],
+        "z": [
+          81.99999990000012,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.4,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 21818.42282173045,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -72.6576674015145,
+          31.995833180612465
+        ],
+        "y": [
+          18.000000000002018,
+          86.000000000002
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.4,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 55852.36539713171,
+      "source_overlap_bounds_mm": {
+        "x": [
+          290.42979648005667,
+          512.0
+        ],
+        "y": [
+          -25.466864654849132,
+          85.98749215959998
+        ],
+        "z": [
+          76.49999999999976,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.4,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 21818.422821728305,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -72.657667401505,
+          31.99583318061213
+        ],
+        "y": [
+          -86.00000000000011,
+          -18.00000000000167
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.4,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 52854.67219804131,
+      "source_overlap_bounds_mm": {
+        "x": [
+          292.8267160830714,
+          512.0000001000001
+        ],
+        "y": [
+          -84.00000008187033,
+          25.46686475484509
+        ],
+        "z": [
+          81.99999989999979,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.45,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 20885.556359318987,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -90.13339712454142,
+          10.095086575494868
+        ],
+        "y": [
+          18.000000000002043,
+          86.00000000000202
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.45,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 54388.48337586189,
+      "source_overlap_bounds_mm": {
+        "x": [
+          295.660361315367,
+          512.0
+        ],
+        "y": [
+          -24.153507010343766,
+          85.98749215959987
+        ],
+        "z": [
+          76.49999999999976,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.45,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 20885.55635931705,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -90.13339712453208,
+          10.095086575494967
+        ],
+        "y": [
+          -86.00000000000003,
+          -18.000000000001737
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.45,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 51451.346653245586,
+      "source_overlap_bounds_mm": {
+        "x": [
+          297.9743021843825,
+          512.0000001000001
+        ],
+        "y": [
+          -84.0000000818701,
+          24.15350711033981
+        ],
+        "z": [
+          81.99999990000009,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.5,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 20110.75996364938,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -108.34395152076927,
+          -10.782379816154155
+        ],
+        "y": [
+          18.000000000002103,
+          86.000000000002
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.5,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 53268.436606478346,
+      "source_overlap_bounds_mm": {
+        "x": [
+          299.66351314894507,
+          512.0
+        ],
+        "y": [
+          -23.091468668239614,
+          85.9874921595981
+        ],
+        "z": [
+          76.5,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.5,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 20110.75996364766,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -108.34395152076003,
+          -10.782379816154029
+        ],
+        "y": [
+          -86.00000000000006,
+          -18.000000000001826
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.5,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 50377.3946499594,
+      "source_overlap_bounds_mm": {
+        "x": [
+          301.9134757892468,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187003,
+          23.091468768235686
+        ],
+        "z": [
+          81.99999990000018,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.55,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 19456.9998118238,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -127.11696154858767,
+          -31.802937821323802
+        ],
+        "y": [
+          18.00000000000213,
+          86.00000000000205
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.55,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 52414.12815032885,
+      "source_overlap_bounds_mm": {
+        "x": [
+          302.7176146185758,
+          512.0
+        ],
+        "y": [
+          -22.24576503383355,
+          85.98749215959812
+        ],
+        "z": [
+          76.5,
+          80.50000000000139
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.55,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 19456.99981182227,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -127.11696154857881,
+          -31.802937821323663
+        ],
+        "y": [
+          -86.0,
+          -18.000000000001847
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.55,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 49558.09478435598,
+      "source_overlap_bounds_mm": {
+        "x": [
+          304.91847221900406,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187017,
+          22.245765133829714
+        ],
+        "z": [
+          81.99999989999999,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.6,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 18898.478039064055,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -146.3315569183105,
+          -52.94607064674137
+        ],
+        "y": [
+          18.00000000000216,
+          86.00000000000205
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.6,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 51771.383152999995,
+      "source_overlap_bounds_mm": {
+        "x": [
+          305.015830479163,
+          512.0
+        ],
+        "y": [
+          -21.588071923937214,
+          85.98749215959816
+        ],
+        "z": [
+          76.49999999999999,
+          80.50000000000097
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.6,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 18898.47803906267,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -146.33155691830174,
+          -52.94607064674122
+        ],
+        "y": [
+          -86.0,
+          -18.000000000001897
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.6,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 48941.59801336487,
+      "source_overlap_bounds_mm": {
+        "x": [
+          307.1795591116457,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187027,
+          21.588072023933336
+        ],
+        "z": [
+          81.99999989999986,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.65,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 18416.6509625991,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -165.90019050934762,
+          -74.19540190437888
+        ],
+        "y": [
+          18.00000000000216,
+          86.000000000002
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.65,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 51301.49364749575,
+      "source_overlap_bounds_mm": {
+        "x": [
+          306.6962317613852,
+          512.0
+        ],
+        "y": [
+          -21.095143229795106,
+          85.98749215959867
+        ],
+        "z": [
+          76.49999999999993,
+          80.50000000000054
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.65,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 18416.650962597912,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -165.90019050933876,
+          -74.19540190437873
+        ],
+        "y": [
+          -86.00000000000003,
+          -18.000000000001926
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.65,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 48490.84613459898,
+      "source_overlap_bounds_mm": {
+        "x": [
+          308.83271212376644,
+          512.0000001
+        ],
+        "y": [
+          -84.0000000818702,
+          21.09514332979127
+        ],
+        "z": [
+          81.99999989999996,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.7,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 17997.845017876436,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -185.7577280658944,
+          -95.53767607127705
+        ],
+        "y": [
+          18.00000000000216,
+          86.000000000002
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.7,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 50976.156891069375,
+      "source_overlap_bounds_mm": {
+        "x": [
+          307.85981834258155,
+          512.0
+        ],
+        "y": [
+          -20.74768341000685,
+          85.98749215960078
+        ],
+        "z": [
+          76.4999999999997,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.7,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 17997.84501787536,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -185.75772806588571,
+          -95.53767607127688
+        ],
+        "y": [
+          -86.0,
+          -18.000000000001947
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.7,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 48178.733279289474,
+      "source_overlap_bounds_mm": {
+        "x": [
+          309.9773795013128,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187136,
+          20.747683510003107
+        ],
+        "z": [
+          81.99999989999837,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.75,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 17631.76561102751,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -205.85460464532684,
+          -116.96203808641452
+        ],
+        "y": [
+          18.00000000000219,
+          86.00000000000207
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.75,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 50774.311617812986,
+      "source_overlap_bounds_mm": {
+        "x": [
+          308.58178479453954,
+          512.0
+        ],
+        "y": [
+          -20.52952180466724,
+          85.98749215960032
+        ],
+        "z": [
+          76.49999999999974,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.75,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 17631.765611026567,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -205.85460464531826,
+          -116.96203808641434
+        ],
+        "y": [
+          -86.00000000000006,
+          -18.000000000001982
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.75,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 47985.08126104882,
+      "source_overlap_bounds_mm": {
+        "x": [
+          310.68758568083484,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187,
+          20.529521904663397
+        ],
+        "z": [
+          81.99999990000019,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.8,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 17310.52992954059,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -226.44496839679047,
+          -138.4595112881957
+        ],
+        "y": [
+          18.00000000000219,
+          86.00000000000205
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.8,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 50680.08880450181,
+      "source_overlap_bounds_mm": {
+        "x": [
+          308.91881843789315,
+          512.0
+        ],
+        "y": [
+          -20.42699446412002,
+          85.98749215959828
+        ],
+        "z": [
+          76.49999999999996,
+          80.5000000000011
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.8,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 17310.52992953972,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -226.44496839678254,
+          -138.45951128819553
+        ],
+        "y": [
+          -86.0,
+          -18.000000000002018
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.8,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 47894.68016170699,
+      "source_overlap_bounds_mm": {
+        "x": [
+          311.019123583978,
+          512.0000001
+        ],
+        "y": [
+          -84.0000000818702,
+          20.426994564116185
+        ],
+        "z": [
+          81.99999989999995,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.85,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 17028.02012129119,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -248.00621798386905,
+          -159.7016535631921
+        ],
+        "y": [
+          18.00000000000219,
+          86.00000000000205
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.85,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 50681.44453868474,
+      "source_overlap_bounds_mm": {
+        "x": [
+          308.91396893010017,
+          512.0
+        ],
+        "y": [
+          -20.428472812638333,
+          85.9874921595981
+        ],
+        "z": [
+          76.5,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.85,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 17028.02012129042,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -248.00621798386103,
+          -159.70165356319177
+        ],
+        "y": [
+          -86.0,
+          -18.000000000002018
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.85,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 47895.980920219896,
+      "source_overlap_bounds_mm": {
+        "x": [
+          311.01435317925876,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187025,
+          20.428472912634582
+        ],
+        "z": [
+          81.99999989999985,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.9,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 16779.43940524452,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -269.5089960789594,
+          -180.14302648549642
+        ],
+        "y": [
+          18.00000000000216,
+          86.00000000000205
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.9,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 50769.225566548776,
+      "source_overlap_bounds_mm": {
+        "x": [
+          308.599977288711,
+          512.0
+        ],
+        "y": [
+          -20.523998711437955,
+          85.98749215960214
+        ],
+        "z": [
+          76.49999999999953,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.9,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 16779.43940524386,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -269.5089960789514,
+          -180.14302648549614
+        ],
+        "y": [
+          -86.0,
+          -18.000000000002014
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.9,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 47980.201550282705,
+      "source_overlap_bounds_mm": {
+        "x": [
+          310.70548161788207,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187072,
+          20.523998811434204
+        ],
+        "z": [
+          81.99999989999921,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.95,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 16561.00076061626,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -290.95812608144723,
+          -200.6071492902119
+        ],
+        "y": [
+          18.00000000000219,
+          86.000000000002
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.95,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 50936.51817144599,
+      "source_overlap_bounds_mm": {
+        "x": [
+          308.00159601580845,
+          512.0
+        ],
+        "y": [
+          -20.704998183508614,
+          85.98749215959822
+        ],
+        "z": [
+          76.49999999999999,
+          80.5000000000011
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.95,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 16561.000760615658,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -290.9581260814392,
+          -200.6071492902118
+        ],
+        "y": [
+          -86.0,
+          -18.000000000002053
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 0.95,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 48140.704242260545,
+      "source_overlap_bounds_mm": {
+        "x": [
+          310.116849038315,
+          512.0000001
+        ],
+        "y": [
+          -84.0000000818722,
+          20.704998283504807
+        ],
+        "z": [
+          81.99999989999726,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 1.0,
+      "panel": "starboard_rear",
+      "source_body_overlap_mm3": 16369.704655437017,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -312.35734494885634,
+          -221.0838879310976
+        ],
+        "y": [
+          18.00000000000219,
+          86.00000000000202
+        ],
+        "z": [
+          66.0,
+          70.0
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 1.0,
+      "panel": "starboard_front",
+      "source_body_overlap_mm3": 51178.188072213154,
+      "source_overlap_bounds_mm": {
+        "x": [
+          307.13722895189176,
+          512.0
+        ],
+        "y": [
+          -20.96405430584622,
+          85.98749215959833
+        ],
+        "z": [
+          76.49999999999997,
+          80.50000000000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 1.0,
+      "panel": "port_rear",
+      "source_body_overlap_mm3": 16369.704655436479,
+      "source_overlap_bounds_mm": {
+        "x": [
+          -312.3573449488483,
+          -221.08388793109754
+        ],
+        "y": [
+          -86.0,
+          -18.000000000002046
+        ],
+        "z": [
+          71.5,
+          75.5
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    },
+    {
+      "fraction": 1.0,
+      "panel": "port_front",
+      "source_body_overlap_mm3": 48372.555114146046,
+      "source_overlap_bounds_mm": {
+        "x": [
+          309.2665439692675,
+          512.0000001
+        ],
+        "y": [
+          -84.00000008187017,
+          20.964054405842404
+        ],
+        "z": [
+          81.99999989999999,
+          86.00000010000021
+        ]
+      },
+      "outside_trial_cutter_mm3": 0.0
+    }
+  ],
+  "failures": [],
+  "original_body_sweep_intrusion_bounds_mm_by_panel": {
+    "starboard_rear": {
+      "x": [
+        -411.98611100394453,
+        211.99305530102
+      ],
+      "y": [
+        -35.78937496022125,
+        86.00000000000207
+      ],
+      "z": [
+        66.0,
+        70.0
+      ]
+    },
+    "starboard_front": {
+      "x": [
+        -411.98611100394214,
+        512.0
+      ],
+      "y": [
+        -59.85972221150561,
+        85.98749215960214
+      ],
+      "z": [
+        76.49999999999953,
+        80.5000000000014
+      ]
+    },
+    "port_rear": {
+      "x": [
+        -411.98611100393657,
+        211.9930553010202
+      ],
+      "y": [
+        -86.00000000000011,
+        35.789374960213216
+      ],
+      "z": [
+        71.5,
+        75.5
+      ]
+    },
+    "port_front": {
+      "x": [
+        -411.98611100393987,
+        512.0000001000002
+      ],
+      "y": [
+        -84.0000000818722,
+        59.859722211500646
+      ],
+      "z": [
+        81.99999989999726,
+        86.00000010000021
+      ]
+    }
+  },
+  "required_opening_extents_from_residual_intrusions_mm": [],
+  "passed": true
+}

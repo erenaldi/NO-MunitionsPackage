@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "outer_xyz_mm": [
+    3500,
+    400,
+    223
+  ],
+  "forward_extension_mm": 300,
+  "aft_extension_mm": 220,
+  "front_tip_width_height_mm": [
+    140,
+    53
+  ],
+  "aft_tip_width_height_mm": [
+    160,
+    70
+  ],
+  "A4_roof_side_lips_four_boxes_preserved": true,
+  "spear_fin_diameter_mm": 158.013,
+  "illustrative_width_margin_per_side_with_6mm_walls_mm": 12.994,
+  "actual_aircraft_and_door_clearance_verified": false
+}

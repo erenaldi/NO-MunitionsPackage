@@ -1,0 +1,9 @@
+{
+  "input": "STEP/Spear_UniformBarrel.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_UniformBarrel_ACM_oldside.png", "camera": {"direction": [0, 1, 0]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

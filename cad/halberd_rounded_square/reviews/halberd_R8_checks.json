@@ -1,0 +1,461 @@
+{
+  "ok": true,
+  "runtime": "cadgen 0.6.6",
+  "parts_per_state": 23,
+  "booster_fin_shift_mm": 170.0,
+  "stage_seam_x_mm": -1123.3333333333333,
+  "booster_leading_root_to_seam_mm": 66.66666666666674,
+  "channel_back_x_mm": -444.9739225656,
+  "housing_replication_exact": true,
+  "static_parts_unchanged": true,
+  "stations": [
+    {
+      "station": 1,
+      "clock_degrees": 45.0,
+      "booster_root_x_mm": [
+        -1485.0,
+        -1190.0
+      ],
+      "booster_contact_mm3": 5009.303056922949,
+      "main_contact_mm3": 1561.7976024465825,
+      "nozzle_clearances_mm": {
+        "booster_nozzle_dark_recess": 147.28937504110743,
+        "booster_nozzle_dark_floor": 149.57101992030408
+      },
+      "main_booster_fin_gap_mm": 118.24845902142499
+    },
+    {
+      "station": 2,
+      "clock_degrees": 135.0,
+      "booster_root_x_mm": [
+        -1485.0,
+        -1190.0
+      ],
+      "booster_contact_mm3": 5009.303056922922,
+      "main_contact_mm3": 1561.7976024433522,
+      "nozzle_clearances_mm": {
+        "booster_nozzle_dark_recess": 147.28937504110743,
+        "booster_nozzle_dark_floor": 149.57101992030408
+      },
+      "main_booster_fin_gap_mm": 118.24845902142499
+    },
+    {
+      "station": 3,
+      "clock_degrees": 225.0,
+      "booster_root_x_mm": [
+        -1485.0,
+        -1190.0
+      ],
+      "booster_contact_mm3": 5009.303018071682,
+      "main_contact_mm3": 1561.7976022602825,
+      "nozzle_clearances_mm": {
+        "booster_nozzle_dark_recess": 147.28937504110743,
+        "booster_nozzle_dark_floor": 149.57101992030408
+      },
+      "main_booster_fin_gap_mm": 118.24845902142499
+    },
+    {
+      "station": 4,
+      "clock_degrees": 315.0,
+      "booster_root_x_mm": [
+        -1485.0,
+        -1190.0
+      ],
+      "booster_contact_mm3": 5009.3030602959225,
+      "main_contact_mm3": 1561.7976022635066,
+      "nozzle_clearances_mm": {
+        "booster_nozzle_dark_recess": 147.28937504110743,
+        "booster_nozzle_dark_floor": 149.57101992030408
+      },
+      "main_booster_fin_gap_mm": 118.24845902142499
+    }
+  ],
+  "minimum_interstation_clearances_mm": {
+    "main_fin": 186.00629959843505,
+    "booster_fin": 147.0782104868019,
+    "main_intake_dark_recess": 138.86475624182998,
+    "main_intake_dark_floor": 143.593765068062
+  },
+  "native_placement_checks": [
+    {
+      "document": "Selected_Halberd_R8",
+      "document_hash": "d4ab30134d97ffdc14c2ac2e6181443a70fbbdd407ec77c9fc95ed51c454df72",
+      "occurrences": [
+        {
+          "ref": "#o1.1",
+          "label": "main_body_four_intakes_r8",
+          "volume_mm3": 84137425.43831375,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.2",
+          "label": "main_ogive",
+          "volume_mm3": 9137694.418428266,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.3",
+          "label": "booster_body",
+          "volume_mm3": 18404435.38990149,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.4",
+          "label": "main_nozzle_dark_recess",
+          "volume_mm3": 26230.64446789164,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.5",
+          "label": "main_nozzle_dark_floor",
+          "volume_mm3": 4139.645223708734,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.6",
+          "label": "booster_nozzle_dark_recess",
+          "volume_mm3": 38398.033084324416,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.7",
+          "label": "booster_nozzle_dark_floor",
+          "volume_mm3": 3277.592199563695,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.8",
+          "label": "main_fin_1",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.9",
+          "label": "booster_fin_1",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.10",
+          "label": "main_intake_dark_recess_1",
+          "volume_mm3": 6535.315768803834,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.11",
+          "label": "main_intake_dark_floor_1",
+          "volume_mm3": 590.8326482530816,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.12",
+          "label": "main_fin_2",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.13",
+          "label": "booster_fin_2",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.14",
+          "label": "main_intake_dark_recess_2",
+          "volume_mm3": 6535.315768803835,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.15",
+          "label": "main_intake_dark_floor_2",
+          "volume_mm3": 590.8326482530817,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.16",
+          "label": "main_fin_3",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.17",
+          "label": "booster_fin_3",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.18",
+          "label": "main_intake_dark_recess_3",
+          "volume_mm3": 6535.315768803835,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.19",
+          "label": "main_intake_dark_floor_3",
+          "volume_mm3": 590.8326482530817,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.20",
+          "label": "main_fin_4",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.21",
+          "label": "booster_fin_4",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.22",
+          "label": "main_intake_dark_recess_4",
+          "volume_mm3": 6535.315768803835,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.23",
+          "label": "main_intake_dark_floor_4",
+          "volume_mm3": 590.8326482530816,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        }
+      ]
+    },
+    {
+      "document": "Selected_Halberd_R8_Separated",
+      "document_hash": "c19d452c1781e0a0df0056cc806c6b7273a22c89cddf816282fdffc25ecf241c",
+      "occurrences": [
+        {
+          "ref": "#o1.1",
+          "label": "main_body_four_intakes_r8",
+          "volume_mm3": 84137425.43831375,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.2",
+          "label": "main_ogive",
+          "volume_mm3": 9137694.418428266,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.3",
+          "label": "booster_body",
+          "volume_mm3": 18404435.38990149,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.4",
+          "label": "main_nozzle_dark_recess",
+          "volume_mm3": 26230.64446789164,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.5",
+          "label": "main_nozzle_dark_floor",
+          "volume_mm3": 4139.645223708734,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.6",
+          "label": "booster_nozzle_dark_recess",
+          "volume_mm3": 38398.03308432433,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.7",
+          "label": "booster_nozzle_dark_floor",
+          "volume_mm3": 3277.592199563695,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.8",
+          "label": "main_fin_1",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.9",
+          "label": "booster_fin_1",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.10",
+          "label": "main_intake_dark_recess_1",
+          "volume_mm3": 6535.315768803834,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.11",
+          "label": "main_intake_dark_floor_1",
+          "volume_mm3": 590.8326482530816,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.12",
+          "label": "main_fin_2",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.13",
+          "label": "booster_fin_2",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.14",
+          "label": "main_intake_dark_recess_2",
+          "volume_mm3": 6535.315768803835,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.15",
+          "label": "main_intake_dark_floor_2",
+          "volume_mm3": 590.8326482530817,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.16",
+          "label": "main_fin_3",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.17",
+          "label": "booster_fin_3",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.18",
+          "label": "main_intake_dark_recess_3",
+          "volume_mm3": 6535.315768803835,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.19",
+          "label": "main_intake_dark_floor_3",
+          "volume_mm3": 590.8326482530817,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.20",
+          "label": "main_fin_4",
+          "volume_mm3": 37625.052631585946,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.21",
+          "label": "booster_fin_4",
+          "volume_mm3": 37709.5000000035,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.22",
+          "label": "main_intake_dark_recess_4",
+          "volume_mm3": 6535.315768803835,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        },
+        {
+          "ref": "#o1.23",
+          "label": "main_intake_dark_floor_4",
+          "volume_mm3": 590.8326482530816,
+          "topology_ok": true,
+          "closed": true,
+          "self_intersections": 0
+        }
+      ]
+    }
+  ]
+}

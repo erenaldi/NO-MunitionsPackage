@@ -1,0 +1,51 @@
+{
+  "revision": "R4",
+  "state": "concept-review",
+  "user_approved": false,
+  "artifacts": [
+    {
+      "path": "STEP/Selected_Intake_R4.step",
+      "sha256": "0b6fdbf346cbecf2137a134d8ed8975a247a3e350eb0a73d5f3003723421ad8d"
+    },
+    {
+      "path": "STEP/Selected_Intake_R4_Separated.step",
+      "sha256": "2702796378b4f9df148ca7453d35a74b56e5be04751bc6fb743de130b302e9d5"
+    },
+    {
+      "path": "STEP/Selected_Intake_R4_Cutaway.step",
+      "sha256": "f209a4aa64051041028a9ae7e734cc4a391692046b6b9bd4c305b458905ec931"
+    },
+    {
+      "path": "reviews/Intake_R4_context.png",
+      "sha256": "93c8a2ba71e42db4f6052209b72a08482b938b0b82aaacd140e2d7ad333a6dfb"
+    },
+    {
+      "path": "reviews/Intake_R4_front.png",
+      "sha256": "358418e6e93cdafb0a0821c1b5299e0cfd0e5dd9f8dc4dffce3ffa0a101e2ff1"
+    },
+    {
+      "path": "reviews/Intake_R4_inlet.png",
+      "sha256": "d352a00a9f7de748b2a44a91f235355e6b51798799316886ca357c4528e891b6"
+    },
+    {
+      "path": "reviews/Intake_R4_down_channel.png",
+      "sha256": "4721701812189129eb116f284bbfa846739b89c783a9b3db4c39aa99cf104faf"
+    },
+    {
+      "path": "reviews/Intake_R4_booster_nozzle.png",
+      "sha256": "13c404268c786366c9ba6029155ef4e4cffa8802f68861d9d68f2c84fbc9863d"
+    },
+    {
+      "path": "reviews/Intake_R4_main_nozzle.png",
+      "sha256": "a6b535dfe6141eec1f281cc244281c8592d080efc0b72a720c9ff5ecd58c1461"
+    },
+    {
+      "path": "reviews/Intake_R4_separated.png",
+      "sha256": "a37d98fcb6c6f57bb3b4f7e88da2580c35ca3063e40f2bdf709a30c94cc4e82e"
+    },
+    {
+      "path": "reviews/Intake_R4_cutaway.png",
+      "sha256": "c9309abe81dee59bb8a5d86bb66a4885a1e0bfd1e346ec093facbab8b3f041e8"
+    }
+  ]
+}

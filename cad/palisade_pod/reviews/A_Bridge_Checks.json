@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "bare_parts": 11,
+  "filled_parts": 15,
+  "outer_xyz_mm": [
+    2980.0,
+    400.0,
+    223.0
+  ],
+  "four_centers_xyz_mm": {
+    "cassette_aft_port": [
+      -664.0,
+      -95.0,
+      -133.0
+    ],
+    "cassette_aft_starboard": [
+      -664.0,
+      95.0,
+      -133.0
+    ],
+    "cassette_forward_port": [
+      664.0,
+      -95.0,
+      -133.0
+    ],
+    "cassette_forward_starboard": [
+      664.0,
+      95.0,
+      -133.0
+    ]
+  },
+  "spear_length_mm": 1200.0,
+  "spear_fin_diameter_mm": 158.013,
+  "study_cassette_wall_mm": 6.0,
+  "minimum_sample_transverse_inner_margin_mm": 4.994,
+  "minimum_sample_axial_inner_margin_mm": 49.0,
+  "measured_transverse_skin_gap_mm": 10.0,
+  "measured_axial_skin_gap_mm": 18.0,
+  "actual_AGM2_stations_door_sweeps_pylon_aircraft_fit_verified": false
+}

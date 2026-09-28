@@ -1,0 +1,684 @@
+[
+ {
+  "input": "STEP/L_JoinedWing_R1_Module_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_stowed_module_top.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      0,
+      1,
+      0
+     ],
+     "target": [
+      50.0,
+      2.569,
+      94.5
+     ],
+     "orthographicHalfHeight": 412.5,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Module_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_stowed_module_top.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      0,
+      1,
+      0
+     ],
+     "target": [
+      50.0,
+      2.569,
+      94.5
+     ],
+     "orthographicHalfHeight": 412.5,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Module_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_stowed_module_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      2.569,
+      94.5
+     ],
+     "orthographicHalfHeight": 328.182,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Module_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_stowed_module_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      2.569,
+      94.5
+     ],
+     "orthographicHalfHeight": 328.182,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_stowed_body_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      2.569,
+      94.5
+     ],
+     "orthographicHalfHeight": 328.182,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_stowed_body_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      2.569,
+      94.5
+     ],
+     "orthographicHalfHeight": 328.182,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_stowed_body_end_env.png",
+    "camera": {
+     "direction": [
+      -1,
+      0,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "orthographicHalfHeight": 140.0,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Stowed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_stowed_body_end_env.png",
+    "camera": {
+     "direction": [
+      -1,
+      0,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "orthographicHalfHeight": 140.0,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Module_Midfold.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_midfold_module_top.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      0,
+      1,
+      0
+     ],
+     "target": [
+      50.0,
+      281.78,
+      94.5
+     ],
+     "orthographicHalfHeight": 412.5,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Module_Midfold.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_midfold_module_top.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      0,
+      1,
+      0
+     ],
+     "target": [
+      50.0,
+      281.78,
+      94.5
+     ],
+     "orthographicHalfHeight": 412.5,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Module_Midfold.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_midfold_module_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      281.78,
+      94.5
+     ],
+     "orthographicHalfHeight": 491.063,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Module_Midfold.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_midfold_module_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      281.78,
+      94.5
+     ],
+     "orthographicHalfHeight": 491.063,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Midfold.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_midfold_body_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      281.78,
+      94.5
+     ],
+     "orthographicHalfHeight": 491.063,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Midfold.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_midfold_body_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      281.78,
+      94.5
+     ],
+     "orthographicHalfHeight": 491.063,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Module_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_deployed_module_top.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      0,
+      1,
+      0
+     ],
+     "target": [
+      50.0,
+      291.147,
+      94.5
+     ],
+     "orthographicHalfHeight": 412.5,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Module_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_deployed_module_top.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      0,
+      1,
+      0
+     ],
+     "target": [
+      50.0,
+      291.147,
+      94.5
+     ],
+     "orthographicHalfHeight": 412.5,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Module_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_deployed_module_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      291.147,
+      94.5
+     ],
+     "orthographicHalfHeight": 496.528,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Module_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_deployed_module_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      291.147,
+      94.5
+     ],
+     "orthographicHalfHeight": 496.528,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_deployed_body_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      291.147,
+      94.5
+     ],
+     "orthographicHalfHeight": 496.528,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_deployed_body_iso.png",
+    "camera": {
+     "direction": [
+      1,
+      -1,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      50.0,
+      291.147,
+      94.5
+     ],
+     "orthographicHalfHeight": 496.528,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/L_JoinedWing_R1_Module_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/L2_deployed_module_opposed.png",
+    "camera": {
+     "direction": [
+      -1,
+      1,
+      -0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -175.0,
+      630.294,
+      97.5
+     ],
+     "orthographicHalfHeight": 220.0,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/M_JoinedWing_R2_Module_Deployed.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/M2_deployed_module_opposed.png",
+    "camera": {
+     "direction": [
+      -1,
+      1,
+      -0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -175.0,
+      630.294,
+      97.5
+     ],
+     "orthographicHalfHeight": 220.0,
+     "projection": "orthographic"
+    }
+   }
+  ]
+ }
+]

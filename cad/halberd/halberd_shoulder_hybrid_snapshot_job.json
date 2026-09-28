@@ -1,0 +1,447 @@
+[
+  {
+    "input": "Halberd_Shoulder_Hybrid.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_iso.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_top.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_nose.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_tail.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_nose_edges.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_separated.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_separated_front.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.5
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Intakes.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_intakes.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_intakes_opposite.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            -0.7
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_intake_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_intake_mouths.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_intake_roofs.png",
+        "camera": {
+          "direction": [
+            0,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Nose.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_nose_transition.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.5
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_nose_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Seam.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_seam.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_seam_side.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Upper.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_upper_aft.png",
+        "camera": {
+          "direction": [
+            -1,
+            -0.5,
+            0.4
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Booster.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_booster.png",
+        "camera": {
+          "direction": [
+            -1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_booster_front.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.6
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_InternalPath.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_internal_path.png",
+        "camera": {
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_internal_path_iso.png",
+        "camera": {
+          "direction": [
+            0.2,
+            -1,
+            0.25
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Toe.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_toe_blend.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_toe_grazing.png",
+        "camera": {
+          "direction": [
+            0.15,
+            -1,
+            0.12
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_toe_reference.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.6
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "Halberd_Shoulder_Hybrid_Toe.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "outputs": [
+      {
+        "path": "Halberd_Hybrid_toe_edges.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.6
+          ]
+        }
+      },
+      {
+        "path": "Halberd_Hybrid_toe_reference_edges.png",
+        "camera": {
+          "direction": [
+            1,
+            1,
+            0.6
+          ]
+        }
+      }
+    ],
+    "render": {
+      "sizeProfile": "diagnostic",
+      "padding": 0.1,
+      "viewLabels": false
+    }
+  }
+]

@@ -1,0 +1,212 @@
+{
+  "ok": true,
+  "datums_mm": {
+    "nose": 1683.5,
+    "tail": -1683.5,
+    "seam": -336.7
+  },
+  "envelope_radius_mm": 220.0,
+  "models": [
+    {
+      "file": "Halberd_Concept_Pod.step",
+      "label": "Halberd_Pod_Three_Intakes",
+      "part_count": 16,
+      "labels": [
+        "booster_body",
+        "booster_fin_1",
+        "booster_fin_2",
+        "booster_fin_3",
+        "booster_nozzle",
+        "intake_pod_1",
+        "intake_pod_2",
+        "intake_pod_3",
+        "mount_shoe_1",
+        "mount_shoe_2",
+        "radome",
+        "sustainer_body",
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3",
+        "sustainer_nozzle"
+      ],
+      "model_bbox_mm": {
+        "min": [
+          -1683.5000001,
+          -188.52398731743872,
+          -216.0000001
+        ],
+        "max": [
+          1683.5000001,
+          188.52398731743872,
+          110.5331244060695
+        ],
+        "size": [
+          3367.0000002,
+          377.04797463487745,
+          326.5331245060695
+        ]
+      },
+      "seam_mm": -336.7,
+      "envelope_radius_mm": 220.0,
+      "measured_max_radius_mm": {
+        "sustainer_body": 99.0,
+        "radome": 93.19,
+        "sustainer_nozzle": 88.0,
+        "intake_pod_1": 160.0,
+        "sustainer_fin_1": 191.01,
+        "intake_pod_2": 160.0,
+        "sustainer_fin_2": 191.01,
+        "intake_pod_3": 160.0,
+        "sustainer_fin_3": 191.01,
+        "booster_body": 108.0,
+        "booster_nozzle": 103.0,
+        "booster_fin_1": 216.02,
+        "booster_fin_2": 216.02,
+        "booster_fin_3": 216.02,
+        "mount_shoe_1": 107.73,
+        "mount_shoe_2": 107.73
+      },
+      "intake_probes": [
+        {
+          "index": 1,
+          "angle_degrees": 60,
+          "probe_center_mm": [
+            580.0,
+            113.44932789576144,
+            65.50000000000001
+          ],
+          "blocked_by": []
+        },
+        {
+          "index": 2,
+          "angle_degrees": 180,
+          "probe_center_mm": [
+            580.0,
+            1.6018051083064063e-14,
+            -131.0
+          ],
+          "blocked_by": []
+        },
+        {
+          "index": 3,
+          "angle_degrees": 300,
+          "probe_center_mm": [
+            580.0,
+            -113.44932789576144,
+            65.50000000000001
+          ],
+          "blocked_by": []
+        }
+      ]
+    },
+    {
+      "file": "Halberd_Concept_Shoulder.step",
+      "label": "Halberd_Shoulder_Four_Intakes",
+      "part_count": 19,
+      "labels": [
+        "booster_body",
+        "booster_fin_1",
+        "booster_fin_2",
+        "booster_fin_3",
+        "booster_fin_4",
+        "booster_nozzle",
+        "intake_floor_1",
+        "intake_floor_2",
+        "intake_floor_3",
+        "intake_floor_4",
+        "mount_shoe_1",
+        "mount_shoe_2",
+        "radome",
+        "sustainer_body",
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3",
+        "sustainer_fin_4",
+        "sustainer_nozzle"
+      ],
+      "model_bbox_mm": {
+        "min": [
+          -1683.5000001,
+          -150.94962021379826,
+          -150.94962021379826
+        ],
+        "max": [
+          1683.5000001,
+          150.94962021379823,
+          150.94962021379823
+        ],
+        "size": [
+          3367.0000002,
+          301.8992404275965,
+          301.8992404275965
+        ]
+      },
+      "seam_mm": -336.7,
+      "envelope_radius_mm": 220.0,
+      "measured_max_radius_mm": {
+        "sustainer_body": 126.45,
+        "radome": 86.03,
+        "sustainer_nozzle": 91.0,
+        "intake_floor_1": 115.0,
+        "sustainer_fin_1": 197.01,
+        "intake_floor_2": 115.0,
+        "sustainer_fin_2": 197.01,
+        "intake_floor_3": 115.0,
+        "sustainer_fin_3": 197.01,
+        "intake_floor_4": 115.0,
+        "sustainer_fin_4": 197.01,
+        "booster_body": 103.0,
+        "booster_nozzle": 97.0,
+        "booster_fin_1": 211.01,
+        "booster_fin_2": 211.01,
+        "booster_fin_3": 211.01,
+        "booster_fin_4": 211.01,
+        "mount_shoe_1": 108.19,
+        "mount_shoe_2": 108.19
+      },
+      "intake_probes": [
+        {
+          "index": 1,
+          "angle_degrees": 45,
+          "probe_center_mm": [
+            535.0,
+            96.87362902255704,
+            96.87362902255703
+          ],
+          "blocked_by": []
+        },
+        {
+          "index": 2,
+          "angle_degrees": 135,
+          "probe_center_mm": [
+            535.0,
+            96.87362902255703,
+            -96.873629022557
+          ],
+          "blocked_by": []
+        },
+        {
+          "index": 3,
+          "angle_degrees": 225,
+          "probe_center_mm": [
+            535.0000000000002,
+            -96.87362902255703,
+            -96.87362902255704
+          ],
+          "blocked_by": []
+        },
+        {
+          "index": 4,
+          "angle_degrees": 315,
+          "probe_center_mm": [
+            535.0,
+            -96.87362902255704,
+            96.87362902255698
+          ],
+          "blocked_by": []
+        }
+      ]
+    }
+  ],
+  "scope": "CAD exterior concept studies; aircraft rack fit and runtime not verified"
+}

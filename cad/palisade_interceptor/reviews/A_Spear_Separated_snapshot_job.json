@@ -1,0 +1,35 @@
+{
+  "input": "STEP/A_Spear_Separated.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/A_Spear_separated.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.7
+        ]
+      }
+    },
+    {
+      "path": "reviews/A_Spear_separated_opposed.png",
+      "camera": {
+        "direction": [
+          1,
+          1,
+          -0.7
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

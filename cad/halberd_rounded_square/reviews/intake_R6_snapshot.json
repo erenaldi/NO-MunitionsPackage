@@ -1,0 +1,242 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_taper.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R5.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_R5_comparison.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_profile.png",
+        "camera": {
+          "direction": [
+            0,
+            1,
+            -1
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_context.png",
+        "camera": {
+          "direction": [
+            0.35,
+            1,
+            0.65
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_opposite.png",
+        "camera": {
+          "direction": [
+            -0.35,
+            -1,
+            -0.65
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 1400,
+    "height": 1400,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_front.png",
+        "camera": {
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 1400,
+    "height": 1400,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_rear.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "solid"
+    },
+    "width": 1800,
+    "height": 1100,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_edges.png",
+        "camera": {
+          "position": [
+            -100,
+            2000,
+            2000
+          ],
+          "target": [
+            -470,
+            90,
+            90
+          ],
+          "zoom": 2.1
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\Selected_Intake_R6_Separated.step",
+    "mode": "view",
+    "theme": "snapshot",
+    "display": {
+      "mode": "rendered"
+    },
+    "width": 2400,
+    "height": 850,
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\Intake_R6_separated.png",
+        "camera": {
+          "direction": [
+            -0.4,
+            1,
+            0.65
+          ]
+        }
+      }
+    ],
+    "render": {
+      "padding": 0.08,
+      "viewLabels": false
+    }
+  }
+]

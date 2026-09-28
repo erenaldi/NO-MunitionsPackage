@@ -1,0 +1,12 @@
+{
+  "input": "STEP/Spear_ACMPortGroup0_Cap_Focus.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_ACMPortGroup0_cap_mouth.png", "camera": {"direction": [0, 1, 0.3]}},
+    {"path": "reviews/Spear_ACMPortGroup0_cap_side.png", "camera": {"direction": [0, 1, 0]}},
+    {"path": "reviews/Spear_ACMPortGroup0_cap_grazing.png", "camera": {"direction": [-1, 1, 0.55]}},
+    {"path": "reviews/Spear_ACMPortGroup0_cap_aft.png", "camera": {"direction": [-1, 0, 0]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

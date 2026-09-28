@@ -1,0 +1,281 @@
+[
+  {
+    "input": "STEP/Q_Tail_R4_Four_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_stowed_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Four_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_stowed_opposed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1000,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Four_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_deployed_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.9
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Four_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_deployed_opposed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            0.7
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Four_Midfold.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_midfold_iso.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            0.9
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 1100,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Focus_Stowed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_tail_stowed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            1
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1210,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 240,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Focus_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_tail_deployed.png",
+        "camera": {
+          "direction": [
+            -1,
+            1,
+            1
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1210,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 260,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Focus_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_tail_opposed.png",
+        "camera": {
+          "direction": [
+            1,
+            -1,
+            -1
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1210,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 260,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  },
+  {
+    "input": "STEP/Q_Tail_R4_Focus_Deployed.step",
+    "mode": "view",
+    "output": {
+      "tightFrame": false
+    },
+    "outputs": [
+      {
+        "path": "reviews/Q_Tail_R4_tail_end.png",
+        "camera": {
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "target": [
+            -1210,
+            0,
+            0
+          ],
+          "orthographicHalfHeight": 240,
+          "projection": "orthographic"
+        }
+      }
+    ]
+  }
+]

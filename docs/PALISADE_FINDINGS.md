@@ -135,3 +135,50 @@ energy system is `PowerSupply`:
 - Multiplayer must verify one launch per decision, remote visibility, mode/ammo
   consistency, and rearm. Custom 1.8 m four-door pod and 1.2 m interceptor
   geometry remains gated on functional approval.
+- `WeaponInfo.hideInDisplay` has no reader in the 0.34.2 game assembly.
+  Palisade therefore marks its interceptor hidden and patches manual station
+  initialization/cycling/fire to skip hidden stations while retaining the
+  station and its network index for direct automatic `LaunchMount` calls.
+- Rack activation reasserts the Palisade countermeasure/defense attachment and
+  logs its runtime mode. State-change diagnostics expose the first authority,
+  mode, warning, envelope, readiness, assignment, radar, or launch gate that
+  prevents an engagement.
+- Flight evidence at 20:xx on 2026-09-14 showed two equipped racks attaching
+  and cycling to Max Coverage, followed by both defenses reporting no
+  countermeasure component. Mounted racks are not reliably descendants of the
+  aircraft root, so Palisade now registers each rack explicitly against its
+  `Aircraft` instance. The registry elects one coordinator, pools the shared
+  weapon-station ammo without double-counting the countermeasure HUD, and
+  removes preview/sortie entries when racks are destroyed.
+- The next flight reached Max Coverage assessment but rejected a Scythe at
+  3,938 m as unreachable. The old gate compared impact time against
+  `distance / interceptorSpeed`, incorrectly treating the incoming threat as
+  stationary. Palisade now solves the constant-speed relative-motion
+  interception quadratic, compares that intercept time against impact time,
+  and logs TTI, intercept time, closure, and interceptor speed on rejection.
+
+## 6. Approved interceptor sequence and control authority (2026-09-14)
+
+User approved the following on 2026-09-14:
+
+- **Pitch/yaw snap-turn (not axial roll):** the interceptor snaps toward the SARH-owned aimpoint using pitch and yaw only; axial roll is not used for the snap maneuver.
+- **Alignment-gated cap release:** after at least 0.1 s of snap-turning, the detachable cap releases when the interceptor is within 5 degrees and below 60 deg/s angular rate; a 0.55 s timeout forces the handoff if it cannot settle.
+- **Full sequence:**
+  1. **0.2 s controller-applied axial ejection** — the interceptor is pushed out along its launch axis.
+  2. **Snap-turn toward SARH-owned aimpoint** — pitch/yaw rotation aligns the interceptor with the seeker's target.
+  3. **Cap release** — detachable cap releases once the alignment gate is met (<=5°, <=60°/s, >=0.1 s or 0.55 s timeout).
+  4. **RAM-45 motor 1 ignition** — 18 kN thrust, 2.0 s burn, 15 kg propellant, 1,050 m/s speed ceiling, with 35-degree TVC capped at 35 G and a 0.2 s ramp.
+- **RAM-45 motor 0:** retains its nonzero 0.1 N, 0.01 s, 0.01 kg placeholder profile so vanilla delta-V/range calculation never divides zero fuel by a zero burn rate; it advances immediately after cap release.
+- **Local-authority torque limits:** maximum 60 rad/s² and 720°/s.
+- **Vanilla steering/aero:** suppressed only during pre-ignition phases; SARH Seek continues throughout.
+- **Remote missile rotation:** velocity-derived and not synchronized across peers, so sub-second snap rotation and cap timing can differ visually; physics forces are LocalSim-only.
+
+## 7. Geometry candidate status
+
+The HKP-1 Palisade interceptor CAD candidate is **Gate-2 only** — it is a design-review artifact, not an approved Unity asset.
+
+- **Candidate files** under `cad/`: `palisade_geometry.py`, generate/check/review/snapshot scripts, `HKP-1_Palisade_Interceptor.step`, separated review STEP, 10 PNG review views, and `Palisade_Review.png`.
+- **Candidate dimensions:** centered X −600…600 mm, body radius 70 mm, near-hemisphere nose 70 mm long, cap 170 mm long, four diagonal tiny fins, four cardinal hollow cap nozzles, recessed main nozzle.
+- **Validation:** 11 valid closed solids, exact 1200 mm length, radial envelope ≤85 mm, symmetry/contact/no-intersection/nozzle probe checks pass.
+- **Main-agent visual review:** found no remaining asymmetry, collision, or blocked opening; the silhouette reads as requested.
+- **User approval is required** before Unity export, prefab creation, or bundle generation.

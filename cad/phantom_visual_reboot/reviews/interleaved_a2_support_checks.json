@@ -1,0 +1,138 @@
+{
+  "scope": "saved A2 vs A and direct housing support volumes",
+  "states": {
+    "Stowed": {
+      "unchanged_parts_difference_mm3": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": 0,
+        "starboard_front": 0,
+        "starboard_rear": 0,
+        "starboard_fixed_root": 0,
+        "starboard_carriage": 0,
+        "starboard_join": 0,
+        "port_front": 0,
+        "port_rear": 0,
+        "port_fixed_root": 0,
+        "port_carriage": 0,
+        "port_join": 0
+      },
+      "housing_removed_mm3": 0
+    },
+    "Module_Stowed": {
+      "unchanged_parts_difference_mm3": {
+        "starboard_front": 0,
+        "starboard_rear": 0,
+        "starboard_fixed_root": 0,
+        "starboard_carriage": 0,
+        "starboard_join": 0,
+        "port_front": 0,
+        "port_rear": 0,
+        "port_fixed_root": 0,
+        "port_carriage": 0,
+        "port_join": 0
+      },
+      "housing_removed_mm3": 0
+    },
+    "Midfold": {
+      "unchanged_parts_difference_mm3": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": 0,
+        "starboard_front": 0,
+        "starboard_rear": 0,
+        "starboard_fixed_root": 0,
+        "starboard_carriage": 0,
+        "starboard_join": 0,
+        "port_front": 0,
+        "port_rear": 0,
+        "port_fixed_root": 0,
+        "port_carriage": 0,
+        "port_join": 0
+      },
+      "housing_removed_mm3": 0
+    },
+    "Deployed": {
+      "unchanged_parts_difference_mm3": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": 0,
+        "starboard_front": 0,
+        "starboard_rear": 0,
+        "starboard_fixed_root": 0,
+        "starboard_carriage": 0,
+        "starboard_join": 0,
+        "port_front": 0,
+        "port_rear": 0,
+        "port_fixed_root": 0,
+        "port_carriage": 0,
+        "port_join": 0
+      },
+      "housing_removed_mm3": 0
+    }
+  },
+  "supports": [
+    {
+      "bounds_mm": [
+        -300,
+        250,
+        -44,
+        -42,
+        88,
+        93
+      ],
+      "missing_volume_mm3": 0
+    },
+    {
+      "bounds_mm": [
+        -255,
+        -245,
+        -70,
+        -42,
+        88,
+        93
+      ],
+      "missing_volume_mm3": 0
+    },
+    {
+      "bounds_mm": [
+        -55,
+        -45,
+        -70,
+        -42,
+        88,
+        93
+      ],
+      "missing_volume_mm3": 0
+    },
+    {
+      "bounds_mm": [
+        145,
+        155,
+        -70,
+        -42,
+        88,
+        93
+      ],
+      "missing_volume_mm3": 0
+    },
+    {
+      "bounds_mm": [
+        185,
+        195,
+        -20,
+        -18,
+        88,
+        93
+      ],
+      "missing_volume_mm3": 0
+    },
+    {
+      "bounds_mm": [
+        220,
+        230,
+        -20,
+        -18,
+        88,
+        93
+      ],
+      "missing_volume_mm3": 0
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

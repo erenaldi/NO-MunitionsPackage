@@ -1,0 +1,13 @@
+[
+  {
+    "input": "STEP/O_Interleaved_A_Module_Stowed.step",
+    "mode": "view",
+    "output": {"tightFrame": false},
+    "outputs": [
+      {
+        "path": "reviews/A_module_end.png",
+        "camera": {"direction": [-1, 0, 0], "up": [0, 0, 1], "target": [0, 0, 97], "orthographicHalfHeight": 65, "projection": "orthographic"}
+      }
+    ]
+  }
+]

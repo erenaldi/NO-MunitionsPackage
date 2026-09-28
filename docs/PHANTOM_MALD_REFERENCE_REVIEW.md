@@ -2,7 +2,80 @@
 
 Date: 2026-09-14
 
+> **Current direction (2026-09-23):** The user reopened the RDM-9 silhouette
+> and chose a clean-sheet TALD/Kh-69/GBU-39-inspired paired-state design.
+> `plans/2026-09-23-rdm9-phantom-visual-reboot.md` and `MUNITIONS.md` section 5
+> govern new concept work. The R5 context and scores below are historical
+> evidence, not approval of the new exterior; no new concept has been selected.
+
+## Active context
+
+- **Current state:** `cad-review`. R5 remains the committed design of record; the
+  later R6 tucked-wing candidate was rejected and does not supersede it. Final
+  texture, Unity, rack-fit, and runtime acceptance remain pending.
+- **Authoritative source:** `MUNITIONS.md` section 5 and the committed R5 family
+  defined by `cad/phantom/phantom_r2_lib.py` and its R5 artifacts. Untracked R6 files are
+  rejected diagnostic evidence, not a release master.
+- **Approved concept / review packet:** R5 is the design of record: R4's sharp
+  upward wedge and swept wing language with thinner deployed panels and an
+  internal dorsal-bay retracted state. The latest adversarial review retained R5
+  after rejecting R6.
+- **Coordinate system and scale:** centered 2,800 mm length; CAD +X nose, +Z
+  dorsal, +Y starboard; configuration-specific appendage envelopes are documented
+  below.
+- **Preserve:** broad shallow body, high sharp wedge nose, recognizable swept
+  MALD-like wing planform, four-fin tail, recessed exhaust, and sparse game-scale
+  detail.
+- **Avoid:** pencil or rounded nose readings, board-like wings, hidden geometry
+  presented as visible folding, floating roots, proud nozzle lips, and checks that
+  only prove the model agrees with itself.
+- **Emphasize:** the upward wedge, thin visibly aerodynamic wings, compact carriage
+  logic, and a clear relationship between deployed and retracted states.
+- **Rejected interpretations:** the original narrow/tall body, needle or blunt
+  nose, near-square R3 wings, and R6's barely visible tucked strips with no valid
+  state correspondence to the deployed wing.
+- **Hard constraints:** user-specified dimensions and axes, source identity,
+  attachment and pylon zones, configuration-specific envelopes, and no
+  runtime-owned components in geometry.
+- **Open decisions:** final user CAD/material review of R5, texture parity, Unity
+  delivery, actual rack fit, state swap, and runtime acceptance. Reopen concept
+  selection only if the user requests another folding direction.
+- **Files required for the next gate:** this review, `MUNITIONS.md` section 5, the
+  committed R5 source/artifacts, its review boards, and the applicable texture or
+  Unity delivery files. Do not load unrelated weapon histories. If concept work is
+  reopened, first create a contrastive board for external fold, visible tuck, and
+  internal stow.
+
+### Lifecycle evidence
+
+| Boundary | State and evidence |
+|---|---|
+| Intent / concept | R5 is the committed design of record. R6 was reviewed and rejected without changing that authority. |
+| CAD | R5 deterministic and visual-review evidence exists; final workflow-format user CAD approval is not recorded, so the current state remains `cad-review`. |
+| Export | No source-bound production export is recorded for the active R5 delivery boundary. |
+| Engine | R5 Unity delivery and representative engine review are not established. |
+| Runtime | Rack fit, state swap, and current packaged behavior remain unverified for R5. |
+
+### Workflow regression criteria
+
+Use this history to verify `ASSET_DESIGN_WORKFLOW.md`:
+
+- Detailed references and valid topology cannot substitute for a visual north star.
+- The primary multimodal model must inspect the actual board; an image-blind review
+  cannot pass.
+- Shape-language checks must reject a technically pointed nose that still reads
+  blunt or pencil-like, and mathematically valid wings that do not read as wings.
+- "Folding," "visibly tucked," and "internally stowed" are separate concepts.
+  Show them contrastively before changing CAD; R5 remains authoritative unless the
+  user explicitly reopens that decision.
+- A user correction reopens the owning visual gate and every dependent boundary,
+  even when the previous candidate passed deterministic checks.
+
 ## Fidelity Brief
+
+This is the 2026-09-14 baseline brief. The active context and later R3-R5 sections
+record superseding decisions, including the sharp upward wedge and deployed wing
+language; do not use this baseline alone as the current visual authority.
 
 - Asset: RDM-9 Phantom radar-decoy missile exterior.
 - Intended use: sparse, vanilla-compatible Nuclear Option game asset viewed at aircraft-loadout and combat distances.
@@ -56,19 +129,19 @@ The paired RF panels, compact appendages, and ventral keel remain explicit hybri
 
 An adversarial review of the round-1 session found the shipped geometry drifting from its own claims and the art direction under-served: the non-ruled spline loft crowned the 200 × 154 mm spec midbody to 209.87 × 155.11 mm, the 60 mm nozzle lip stood ~4 mm proud of the 56 mm tail-face semi-minor (contradicting the recessed exhaust), the tailplane roots left a visible aft root gap, and the nose still read pencil-sharp. Reference provenance spot-checks passed (Wikimedia museum image verified; the RTX source page live with captions matching this review's four RTX image descriptions).
 
-The round-2 candidates replace the hybrid on a shared repaired airframe (`cad/phantom_r2_lib.py`):
+The round-2 candidates replace the hybrid on a shared repaired airframe (`cad/phantom/phantom_r2_lib.py`):
 
 - Ruled, station-densified loft clamped to exactly 200 × 154 mm. A measured probe showed a plateau pin destabilizing the non-ruled interpolator to a 779 mm bulge; ruled lofting between the elliptical stations is deterministic and lands on spec.
 - Nozzle bore shrunk to 64 mm with a 96 mm flush lip fully inside the tail face; a checker gate requires `(nozzle_lip - smooth_body)` to be empty, so the ring can never stand proud again.
 - Upward wedge nose per the 2026-09-20 user direction (rounded body, upward wedge nose facilitating the radar emitters): the ventral line climbs from −77 to +24 mm across the forward 800 mm and the 70 × 12 mm cap blade rides at +30 mm; from x=1300 to the tip no body material lies below the centerline (measured).
 - Every appendage root must overlap the body wall by ≥500 mm³ (round 1 only asserted contact, which is how the tailplane root gap shipped), and no part may enter a 700 × 80 mm dorsal pylon-pad mockup zone.
 - Candidates: **Sled** (long stowed-panel wings with raised emitter insets, low dorsal spine), **Rails** (heavier mid-body slivers, tail surfaces, tall dorsal fin), **Dart** (clean body, four real-span tail fins).
-- Verification per candidate: `cad/check_phantom_r2.py` PASS; `cadgen step inspect validate` ok=true with zero failures; `refs --facts` reports centered 2800.0000002 mm; eight-view boards plus comparison and pylon-context mockups under `cad/Phantom_R2_*.png`; two independent image-capable review passes (second pass: wedge reads, bore proportionate, no floating parts or cracks).
+- Verification per candidate: `cad/phantom/check_phantom_r2.py` PASS; `cadgen step inspect validate` ok=true with zero failures; `refs --facts` reports centered 2800.0000002 mm; eight-view boards plus comparison and pylon-context mockups under `cad/Phantom_R2_*.png`; two independent image-capable review passes (second pass: wedge reads, bore proportionate, no floating parts or cracks).
 - Known residuals: faint ruled-loft tangent seams at station junctions (read as panel lines at game scale); Dart fins intentionally minimal; rack fit remains unverified pending runtime integration; colors are the round-1 placeholder palette pending the texture-parity pass.
 
 ### R3 Dart of record (2026-09-20)
 
-User selection from the candidate board: the Dart silhouette, with the side RF/lens emitter panels removed and dorsal pop-out wings added, rendered deployed like the real ADM-160 spring-out wings. The wing roots stay buried in the dorsal crown inside the 125 mm carriage radius; the deployed span (~1.10 m) intentionally exceeds the 250 mm carriage envelope, so the wing pair is exempt from the radial envelope gates (bounded instead to 600 mm lateral / 200 mm height) and the rack visual shows deployed wings — an accepted tradeoff documented in `cad/Phantom_R3_Context_Board.png`. Wing geometry: 600 mm root chord, 240 mm tip chord, ±550 mm semi-span, 5° dihedral, 5 mm plate, hinge buried at z=68 in the dorsal crown. The paired RF/lens panel rows in the fidelity brief are retired for this design; recognition now rides on the deployed wing planform, the upward wedge nose, and the four-fin tail. Verification: `check_phantom_r2.py dart3` PASS (with the wing exemption and wing-limit gates), `cadgen step inspect validate` ok=true 0 failures for the candidate and its pylon-context compound, and the eight-view board `cad/Phantom_R3_Dart_Review.png`.
+User selection from the candidate board: the Dart silhouette, with the side RF/lens emitter panels removed and dorsal pop-out wings added, rendered deployed like the real ADM-160 spring-out wings. The wing roots stay buried in the dorsal crown inside the 125 mm carriage radius; the deployed span (~1.10 m) intentionally exceeds the 250 mm carriage envelope, so the wing pair is exempt from the radial envelope gates (bounded instead to 600 mm lateral / 200 mm height) and the rack visual shows deployed wings — an accepted tradeoff documented in `cad/phantom/Phantom_R3_Context_Board.png`. Wing geometry: 600 mm root chord, 240 mm tip chord, ±550 mm semi-span, 5° dihedral, 5 mm plate, hinge buried at z=68 in the dorsal crown. The paired RF/lens panel rows in the fidelity brief are retired for this design; recognition now rides on the deployed wing planform, the upward wedge nose, and the four-fin tail. Verification: `check_phantom_r2.py dart3` PASS (with the wing exemption and wing-limit gates), `cadgen step inspect validate` ok=true 0 failures for the candidate and its pylon-context compound, and the eight-view board `cad/phantom/Phantom_R3_Dart_Review.png`.
 
 ### R4 dart4 of record (2026-09-20)
 

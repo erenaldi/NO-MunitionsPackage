@@ -1,0 +1,22 @@
+[
+  {"input":"STEP/B_Shoulder_Deployed.step","mode":"view","outputs":[
+    {"path":"reviews/B_deployed_opposite.png","camera":{"direction":[1,1,-0.7]}},
+    {"path":"reviews/B_deployed_nose.png","camera":{"direction":[1,0,0]}}
+  ],"render":{"sizeProfile":"diagnostic","padding":0.11}},
+  {"input":"STEP/B_Shoulder_Stowed.step","mode":"view","outputs":[
+    {"path":"reviews/B_stowed_opposite.png","camera":{"direction":[1,1,-0.7]}},
+    {"path":"reviews/B_stowed_nose.png","camera":{"direction":[1,0,0]}}
+  ],"render":{"sizeProfile":"diagnostic","padding":0.11}},
+  {"input":"STEP/C_Keel_Deployed.step","mode":"view","outputs":[
+    {"path":"reviews/C_deployed_opposite.png","camera":{"direction":[1,1,-0.7]}},
+    {"path":"reviews/C_deployed_nose.png","camera":{"direction":[1,0,0]}}
+  ],"render":{"sizeProfile":"diagnostic","padding":0.11}},
+  {"input":"STEP/C_Keel_Stowed.step","mode":"view","outputs":[
+    {"path":"reviews/C_stowed_opposite.png","camera":{"direction":[1,1,-0.7]}},
+    {"path":"reviews/C_stowed_nose.png","camera":{"direction":[1,0,0]}}
+  ],"render":{"sizeProfile":"diagnostic","padding":0.11}},
+  {"input":"STEP/A_Facet_Stowed_MockPad.step","mode":"view","outputs":[
+    {"path":"reviews/A_mock_pad_iso.png","camera":"iso"},
+    {"path":"reviews/A_mock_pad_side.png","camera":{"direction":[0,-1,0]}}
+  ],"render":{"sizeProfile":"diagnostic","padding":0.11}}
+]

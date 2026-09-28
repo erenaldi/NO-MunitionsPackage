@@ -1,0 +1,95 @@
+[
+  {
+    "key": "A",
+    "ok": true,
+    "parts": 15,
+    "length_mm": 3370.0000002000024,
+    "booster_length_mm": 561.6666668666687,
+    "seam_mm": -1123.3333333333333,
+    "maximum_span_yz_mm": [
+      276.3373302877028,
+      276.3373302877028
+    ],
+    "join_outer_perimeters_mm": [
+      679.8229715397102,
+      679.8229715397099
+    ],
+    "contacts_mm3": {
+      "main_intake_1": 154528.958,
+      "main_intake_2": 154528.959,
+      "main_intake_3": 154528.958,
+      "main_intake_4": 154528.956,
+      "main_fin_1": 2783.728,
+      "main_fin_2": 2783.728,
+      "main_fin_3": 2783.728,
+      "main_fin_4": 2783.728,
+      "booster_fin_1": 3080.307,
+      "booster_fin_2": 3082.57,
+      "booster_fin_3": 3080.307,
+      "booster_fin_4": 3080.307
+    },
+    "separated_translation_mm": -340
+  },
+  {
+    "key": "B",
+    "ok": true,
+    "parts": 15,
+    "length_mm": 3370.0000002000024,
+    "booster_length_mm": 561.6666668666687,
+    "seam_mm": -1123.3333333333333,
+    "maximum_span_yz_mm": [
+      370.0000002,
+      370.0000002
+    ],
+    "join_outer_perimeters_mm": [
+      679.8229715397102,
+      679.8229715397099
+    ],
+    "contacts_mm3": {
+      "main_intake_1": 115196.121,
+      "main_intake_2": 115196.121,
+      "main_intake_3": 115196.119,
+      "main_intake_4": 115196.121,
+      "main_fin_1": 2931.116,
+      "main_fin_2": 2931.116,
+      "main_fin_3": 2931.116,
+      "main_fin_4": 2931.116,
+      "booster_fin_1": 2680.294,
+      "booster_fin_2": 2680.294,
+      "booster_fin_3": 2683.978,
+      "booster_fin_4": 2680.294
+    },
+    "separated_translation_mm": -340
+  },
+  {
+    "key": "C",
+    "ok": true,
+    "parts": 15,
+    "length_mm": 3370.0000002000024,
+    "booster_length_mm": 561.6666668666687,
+    "seam_mm": -1123.3333333333333,
+    "maximum_span_yz_mm": [
+      293.30789303617996,
+      293.30789303617996
+    ],
+    "join_outer_perimeters_mm": [
+      679.8229715397102,
+      679.8229715397099
+    ],
+    "contacts_mm3": {
+      "main_intake_1": 184825.145,
+      "main_intake_2": 184825.147,
+      "main_intake_3": 184825.145,
+      "main_intake_4": 184825.144,
+      "main_fin_1": 2187.779,
+      "main_fin_2": 2187.779,
+      "main_fin_3": 2187.779,
+      "main_fin_4": 2187.779,
+      "booster_fin_1": 1568.197,
+      "booster_fin_2": 1570.482,
+      "booster_fin_3": 1568.197,
+      "booster_fin_4": 1568.197
+    },
+    "separated_translation_mm": -340
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "input": "STEP/C_Facet_Separated.step",
+  "mode": "view",
+  "theme": "snapshot",
+  "display": {
+    "mode": "rendered"
+  },
+  "outputs": [
+    {
+      "path": "reviews/C_Facet_separated.png",
+      "camera": {
+        "direction": [
+          -1,
+          -1,
+          0.7
+        ]
+      }
+    },
+    {
+      "path": "reviews/C_Facet_separated_opposed.png",
+      "camera": {
+        "direction": [
+          1,
+          1,
+          -0.7
+        ]
+      }
+    }
+  ],
+  "render": {
+    "sizeProfile": "diagnostic",
+    "padding": 0.1,
+    "viewLabels": false
+  }
+}

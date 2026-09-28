@@ -1,0 +1,43 @@
+{
+  "jobs": [
+    {
+      "input": "STEP/A7_LevelBeam_Bare.step", "mode": "view",
+      "display": {"mode": "shaded"},
+      "outputs": [
+        {"path": "reviews/A7_Bare_iso.png", "camera": "iso"},
+        {"path": "reviews/A7_Bare_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A7_Bare_side.png", "camera": "front"},
+        {"path": "reviews/A7_Bare_bottom.png", "camera": "bottom"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    },
+    {
+      "input": "STEP/A7_LevelBeam_Filled.step", "mode": "view",
+      "display": {"mode": "shaded"},
+      "outputs": [
+        {"path": "reviews/A7_Filled_iso.png", "camera": "iso"},
+        {"path": "reviews/A7_Filled_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A7_Filled_side.png", "camera": "front"},
+        {"path": "reviews/A7_Filled_top.png", "camera": "top"},
+        {"path": "reviews/A7_Filled_bottom.png", "camera": "bottom"},
+        {"path": "reviews/A7_Filled_front.png", "camera": "right"},
+        {"path": "reviews/A7_Filled_rear.png", "camera": "left"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    },
+    {
+      "input": "STEP/A6_SketchedEnds_Filled.step", "mode": "view",
+      "display": {"mode": "shaded"},
+      "outputs": [
+        {"path": "reviews/A6_Filled_shaded_iso.png", "camera": "iso"},
+        {"path": "reviews/A6_Filled_shaded_side.png", "camera": "front"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    },
+    {
+      "input": "STEP/A7_LevelBeam_Filled.step", "mode": "view",
+      "display": {"mode": "shaded_edges"},
+      "outputs": [
+        {"path": "reviews/A7_Filled_front_edges.png", "camera": "right"},
+        {"path": "reviews/A7_Filled_rear_edges.png", "camera": "left"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    }
+  ]
+}

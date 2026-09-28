@@ -1,0 +1,3253 @@
+{
+  "gate": "rear_fin_R2_clipped_saved_validation",
+  "units": "mm",
+  "scope": "Saved R2/A5/R1 STEP validation only; no source rebuild or visual approval.",
+  "thresholds": {
+    "saved_A5_component_symmetric_difference_mm3_exclusive": 0.01,
+    "translated_R1_Tall_component_symmetric_difference_mm3_exclusive": 0.01,
+    "saved_fin_pose_symmetric_difference_mm3_exclusive": 0.01,
+    "unexpected_overlap_mm3_exclusive": 0.001,
+    "motion_clearance_mm_exclusive": 0.2,
+    "foot_body_contact_mm3_exclusive": 1e-05,
+    "stowed_tail_radial_bound_mm_exclusive": 125.0,
+    "tail_root_X_bbox_expected_mm": [
+      -1325.0,
+      -1085.0
+    ],
+    "hardware_union_X_bbox_expected_mm": [
+      -1336.0,
+      -1074.0
+    ],
+    "bbox_endpoint_tolerance_mm": 0.01,
+    "fold_samples": [
+      0.0,
+      0.03333333333333333,
+      0.06666666666666667,
+      0.1,
+      0.13333333333333333,
+      0.16666666666666666,
+      0.2,
+      0.23333333333333334,
+      0.26666666666666666,
+      0.3,
+      0.3333333333333333,
+      0.36666666666666664,
+      0.4,
+      0.43333333333333335,
+      0.4666666666666667,
+      0.5,
+      0.5333333333333333,
+      0.5666666666666667,
+      0.6,
+      0.6333333333333333,
+      0.6666666666666666,
+      0.7,
+      0.7333333333333333,
+      0.7666666666666667,
+      0.8,
+      0.8333333333333334,
+      0.8666666666666667,
+      0.9,
+      0.9333333333333333,
+      0.9666666666666667,
+      1.0
+    ],
+    "translation_mm": [
+      -80.0,
+      0.0,
+      0.0
+    ],
+    "fold_axis": [
+      [
+        0.0,
+        82.0,
+        88.5
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "fold_angle_deg": -135.0
+  },
+  "saved_artifacts": {
+    "R2_Stowed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R2_Clipped_Stowed.step",
+      "size_bytes": 883791,
+      "sha256": "a341c90f1c0e0886490b16ef74fc008ff4e9ac2819b9da9d0fe0a87ed41eb524",
+      "part_count": 17,
+      "expected_part_count": 17,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r1_fin_root",
+        "tail_r1_fixed_knuckle_aft",
+        "tail_r1_fixed_knuckle_forward",
+        "tail_r1_throughpin",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.349298224
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949305
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495721
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349893
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100632
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819491077
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819492872
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100632
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fin_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            59138.84930637685
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_aft": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            1306.70619435247
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "A5_Stowed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\O_Interleaved_A5_Stowed.step",
+      "size_bytes": 796422,
+      "sha256": "beeb9d857a4df82bd5b473756f546048b9b2bb8b96e969f6a5b08c7a657f0be6",
+      "part_count": 13,
+      "expected_part_count": 13,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.3491234
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819494057
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.1281949529
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349899
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420862
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100632
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819490995
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819492802
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.93645882431
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420861
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100632
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "R1_Tall_Stowed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R1_Tall_Stowed.step",
+      "size_bytes": 883769,
+      "sha256": "cb5ef1af522822b7e964e30a86a506f0841974a1d73e94779cf13d6f73bf9b4c",
+      "part_count": 17,
+      "expected_part_count": 17,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r1_fin_root",
+        "tail_r1_fixed_knuckle_aft",
+        "tail_r1_fixed_knuckle_forward",
+        "tail_r1_throughpin",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.349298224
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949305
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495721
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349893
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100632
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819491077
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819492872
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100632
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fin_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            59138.84930637685
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_aft": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            1306.70619435247
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "R2_Midfold": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R2_Clipped_Midfold.step",
+      "size_bytes": 883808,
+      "sha256": "c6b9440cc0ec4be33326cf43d432283581c49e1a5b5ddf424196c2be6467caf3",
+      "part_count": 17,
+      "expected_part_count": 17,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r1_fin_root",
+        "tail_r1_fixed_knuckle_aft",
+        "tail_r1_fixed_knuckle_forward",
+        "tail_r1_throughpin",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.349298224
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949305
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495724
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349893
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420179
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100622
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281946426
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819469033
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420179
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100622
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fin_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            59138.84930637687
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_aft": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            1306.70619435247
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "A5_Midfold": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\O_Interleaved_A5_Midfold.step",
+      "size_bytes": 796266,
+      "sha256": "df972dce028b58c0d0df9befb72353ed7e678b3e17d7fd03b6c28de30fb6778e",
+      "part_count": 13,
+      "expected_part_count": 13,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.3491234
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949407
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495297
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349899
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420141
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100622
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819464266
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819469033
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.93645882431
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420141
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100622
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "R1_Tall_Midfold": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R1_Tall_Midfold.step",
+      "size_bytes": 883788,
+      "sha256": "2993396b43806e65a9a97b7675ebab215c6ef641ee7b09223e927f68ad6c17a6",
+      "part_count": 17,
+      "expected_part_count": 17,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r1_fin_root",
+        "tail_r1_fixed_knuckle_aft",
+        "tail_r1_fixed_knuckle_forward",
+        "tail_r1_throughpin",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.349298224
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949305
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495724
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349893
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420179
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100622
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281946426
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819469033
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420179
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100622
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fin_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            59138.84930637687
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_aft": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            1306.70619435247
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "R2_Deployed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R2_Clipped_Deployed.step",
+      "size_bytes": 882043,
+      "sha256": "7def590e884249043ddaf391491886580e70381887099b911248b443825d3b0b",
+      "part_count": 17,
+      "expected_part_count": 17,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r1_fin_root",
+        "tail_r1_fixed_knuckle_aft",
+        "tail_r1_fixed_knuckle_forward",
+        "tail_r1_throughpin",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.349298224
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949305
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495724
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349893
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100623
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819496024
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819488975
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100623
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fin_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            59138.84930637674
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_aft": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            1306.70619435247
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "A5_Deployed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\O_Interleaved_A5_Deployed.step",
+      "size_bytes": 794645,
+      "sha256": "9d3bc5d04dd401339a99489555f3da822bb12ea7c10ed4c77666a1eca274e561",
+      "part_count": 13,
+      "expected_part_count": 13,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.3491234
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949407
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495294
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349899
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420861
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100623
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819495983
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819488993
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.93645882431
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420861
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100623
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    },
+    "R1_Tall_Deployed": {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\STEP\\Q_Tail_R1_Tall_Deployed.step",
+      "size_bytes": 882028,
+      "sha256": "46c32e41364f62f2a03d499a593c80c1f4e9472dc85287cf6ca46fdb4bf1f89d",
+      "part_count": 17,
+      "expected_part_count": 17,
+      "labels": [
+        "RDM9_R7_symmetric_body_20mm_wedge_R4",
+        "port_carriage",
+        "port_fixed_root",
+        "port_front",
+        "port_join",
+        "port_rear",
+        "starboard_carriage",
+        "starboard_fixed_root",
+        "starboard_front",
+        "starboard_join",
+        "starboard_rear",
+        "supported_housing",
+        "tail_r1_fin_root",
+        "tail_r1_fixed_knuckle_aft",
+        "tail_r1_fixed_knuckle_forward",
+        "tail_r1_throughpin",
+        "top_cover"
+      ],
+      "duplicate_labels": [],
+      "missing_labels": [],
+      "unexpected_labels": [],
+      "topology": {
+        "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            66736561.349298224
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "supported_housing": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            334199.9999999999
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.1281949305
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819495724
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            4020.060499349893
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "starboard_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100623
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_front": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            367856.12819496024
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_rear": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            183256.12819488975
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_fixed_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            5747.9364588243025
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_carriage": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            730.1493150420898
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "port_join": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            654.2366701100623
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "top_cover": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            307039.99999999994
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fin_root": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            59138.84930637674
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_aft": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            489.4315012994639
+          ],
+          "valid": true,
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "solid_count": 1,
+          "positive_volumes_mm3": [
+            1306.70619435247
+          ],
+          "valid": true,
+          "pass": true
+        }
+      }
+    }
+  },
+  "checks": {
+    "A5_base_identity": {
+      "Stowed": {
+        "component_count_compared": 13,
+        "expected_component_count": 13,
+        "maximum_symmetric_difference_mm3": 0.0,
+        "symmetric_difference_mm3_by_label": {
+          "RDM9_R7_symmetric_body_20mm_wedge_R4": 0.0,
+          "port_carriage": 0.0,
+          "port_fixed_root": 0.0,
+          "port_front": 0.0,
+          "port_join": 0.0,
+          "port_rear": 0.0,
+          "starboard_carriage": 0.0,
+          "starboard_fixed_root": 0.0,
+          "starboard_front": 0.0,
+          "starboard_join": 0.0,
+          "starboard_rear": 0.0,
+          "supported_housing": 0.0,
+          "top_cover": 0.0
+        },
+        "pass": true
+      },
+      "Midfold": {
+        "component_count_compared": 13,
+        "expected_component_count": 13,
+        "maximum_symmetric_difference_mm3": 0.0,
+        "symmetric_difference_mm3_by_label": {
+          "RDM9_R7_symmetric_body_20mm_wedge_R4": 0.0,
+          "port_carriage": 0.0,
+          "port_fixed_root": 0.0,
+          "port_front": 0.0,
+          "port_join": 0.0,
+          "port_rear": 0.0,
+          "starboard_carriage": 0.0,
+          "starboard_fixed_root": 0.0,
+          "starboard_front": 0.0,
+          "starboard_join": 0.0,
+          "starboard_rear": 0.0,
+          "supported_housing": 0.0,
+          "top_cover": 0.0
+        },
+        "pass": true
+      },
+      "Deployed": {
+        "component_count_compared": 13,
+        "expected_component_count": 13,
+        "maximum_symmetric_difference_mm3": 0.0,
+        "symmetric_difference_mm3_by_label": {
+          "RDM9_R7_symmetric_body_20mm_wedge_R4": 0.0,
+          "port_carriage": 0.0,
+          "port_fixed_root": 0.0,
+          "port_front": 0.0,
+          "port_join": 0.0,
+          "port_rear": 0.0,
+          "starboard_carriage": 0.0,
+          "starboard_fixed_root": 0.0,
+          "starboard_front": 0.0,
+          "starboard_join": 0.0,
+          "starboard_rear": 0.0,
+          "supported_housing": 0.0,
+          "top_cover": 0.0
+        },
+        "pass": true
+      }
+    },
+    "translated_R1_Tall_identity": {
+      "Stowed": {
+        "component_count_compared": 4,
+        "expected_component_count": 4,
+        "maximum_symmetric_difference_mm3": 0.0,
+        "symmetric_difference_mm3_by_label": {
+          "tail_r1_fin_root": 0.0,
+          "tail_r1_fixed_knuckle_aft": 0.0,
+          "tail_r1_fixed_knuckle_forward": 0.0,
+          "tail_r1_throughpin": 0.0
+        },
+        "pass": true
+      },
+      "Midfold": {
+        "component_count_compared": 4,
+        "expected_component_count": 4,
+        "maximum_symmetric_difference_mm3": 0.0,
+        "symmetric_difference_mm3_by_label": {
+          "tail_r1_fin_root": 0.0,
+          "tail_r1_fixed_knuckle_aft": 0.0,
+          "tail_r1_fixed_knuckle_forward": 0.0,
+          "tail_r1_throughpin": 0.0
+        },
+        "pass": true
+      },
+      "Deployed": {
+        "component_count_compared": 4,
+        "expected_component_count": 4,
+        "maximum_symmetric_difference_mm3": 0.0,
+        "symmetric_difference_mm3_by_label": {
+          "tail_r1_fin_root": 0.0,
+          "tail_r1_fixed_knuckle_aft": 0.0,
+          "tail_r1_fixed_knuckle_forward": 0.0,
+          "tail_r1_throughpin": 0.0
+        },
+        "pass": true
+      }
+    },
+    "saved_fin_pose_identity": {
+      "Stowed": {
+        "fraction": 0.0,
+        "angle_deg": -0.0,
+        "fin_symmetric_difference_mm3": 0.0,
+        "pass": true
+      },
+      "Midfold": {
+        "fraction": 0.5,
+        "angle_deg": -67.5,
+        "fin_symmetric_difference_mm3": 0.0,
+        "pass": true
+      },
+      "Deployed": {
+        "fraction": 1.0,
+        "angle_deg": -135.0,
+        "fin_symmetric_difference_mm3": 0.0,
+        "pass": true
+      }
+    },
+    "saved_tail_envelopes": {
+      "Stowed": {
+        "tail_root_X_bbox_mm": [
+          -1325.0000001,
+          -1084.9999999
+        ],
+        "hardware_union_X_bbox_mm": [
+          -1336.0000001,
+          -1073.9999999
+        ],
+        "tail_part_X_bbox_mm": {
+          "tail_r1_fin_root": [
+            -1325.0000001,
+            -1084.9999999
+          ],
+          "tail_r1_fixed_knuckle_aft": [
+            -1335.0000001,
+            -1325.9999999
+          ],
+          "tail_r1_fixed_knuckle_forward": [
+            -1084.0000001,
+            -1074.9999999
+          ],
+          "tail_r1_throughpin": [
+            -1336.0000001,
+            -1073.9999999
+          ]
+        },
+        "stowed_tail_part_conservative_YZ_radius_mm": {
+          "tail_r1_fin_root": 124.88895081351274,
+          "tail_r1_fixed_knuckle_aft": 124.88895081351271,
+          "tail_r1_fixed_knuckle_forward": 124.88895081351271,
+          "tail_r1_throughpin": 124.18232577585265
+        },
+        "root_bbox_matches_expected_within_tolerance": true,
+        "hardware_bbox_matches_expected_within_tolerance": true,
+        "stowed_radius_below_125_mm": true,
+        "pass": true
+      },
+      "Midfold": {
+        "tail_root_X_bbox_mm": [
+          -1325.0000001,
+          -1084.9999999
+        ],
+        "hardware_union_X_bbox_mm": [
+          -1336.0000001,
+          -1073.9999999
+        ],
+        "tail_part_X_bbox_mm": {
+          "tail_r1_fin_root": [
+            -1325.0000001,
+            -1084.9999999
+          ],
+          "tail_r1_fixed_knuckle_aft": [
+            -1335.0000001,
+            -1325.9999999
+          ],
+          "tail_r1_fixed_knuckle_forward": [
+            -1084.0000001,
+            -1074.9999999
+          ],
+          "tail_r1_throughpin": [
+            -1336.0000001,
+            -1073.9999999
+          ]
+        },
+        "stowed_tail_part_conservative_YZ_radius_mm": null,
+        "root_bbox_matches_expected_within_tolerance": true,
+        "hardware_bbox_matches_expected_within_tolerance": true,
+        "stowed_radius_below_125_mm": true,
+        "pass": true
+      },
+      "Deployed": {
+        "tail_root_X_bbox_mm": [
+          -1325.0000001,
+          -1084.9999999
+        ],
+        "hardware_union_X_bbox_mm": [
+          -1336.0000001,
+          -1073.9999999
+        ],
+        "tail_part_X_bbox_mm": {
+          "tail_r1_fin_root": [
+            -1325.0000001,
+            -1084.9999999
+          ],
+          "tail_r1_fixed_knuckle_aft": [
+            -1335.0000001,
+            -1325.9999999
+          ],
+          "tail_r1_fixed_knuckle_forward": [
+            -1084.0000001,
+            -1074.9999999
+          ],
+          "tail_r1_throughpin": [
+            -1336.0000001,
+            -1073.9999999
+          ]
+        },
+        "stowed_tail_part_conservative_YZ_radius_mm": null,
+        "root_bbox_matches_expected_within_tolerance": true,
+        "hardware_bbox_matches_expected_within_tolerance": true,
+        "stowed_radius_below_125_mm": true,
+        "pass": true
+      }
+    },
+    "authorized_foot_body_contacts": {
+      "tail_r1_fixed_knuckle_aft": {
+        "foot_X_mm": [
+          -1335.0,
+          -1326.0
+        ],
+        "foot_body_overlap_mm3": 194.79427304511805,
+        "isolated_knuckle_body_overlap_mm3": 0.0,
+        "combined_support_body_overlap_mm3": 194.79427304511802,
+        "pass": true
+      },
+      "tail_r1_fixed_knuckle_forward": {
+        "foot_X_mm": [
+          -1084.0,
+          -1075.0
+        ],
+        "foot_body_overlap_mm3": 194.7942730451195,
+        "isolated_knuckle_body_overlap_mm3": 0.0,
+        "combined_support_body_overlap_mm3": 194.79427304511938,
+        "pass": true
+      }
+    },
+    "saved_state_interactions": {
+      "Stowed": {
+        "AABB_intersecting_pairs_exactly_tested": 5,
+        "unexpected_overlaps_ge_0_001_mm3": [],
+        "pass": true
+      },
+      "Midfold": {
+        "AABB_intersecting_pairs_exactly_tested": 5,
+        "unexpected_overlaps_ge_0_001_mm3": [],
+        "pass": true
+      },
+      "Deployed": {
+        "AABB_intersecting_pairs_exactly_tested": 5,
+        "unexpected_overlaps_ge_0_001_mm3": [],
+        "pass": true
+      }
+    },
+    "saved_stationary_hardware_vs_A5": {
+      "Stowed": {
+        "tail_r1_fixed_knuckle_aft": {
+          "minimum_clearance_mm": 871.0051664599929,
+          "witness_pair": "A5:top_cover",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 11,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "minimum_clearance_mm": 620.0072580220332,
+          "witness_pair": "A5:top_cover",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 11,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "minimum_clearance_mm": 1.3654246317035295,
+          "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 12,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        }
+      },
+      "Midfold": {
+        "tail_r1_fixed_knuckle_aft": {
+          "minimum_clearance_mm": 871.0051664599929,
+          "witness_pair": "A5:top_cover",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 11,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "minimum_clearance_mm": 620.0072580220332,
+          "witness_pair": "A5:top_cover",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 11,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "minimum_clearance_mm": 1.3654246317035295,
+          "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 12,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        }
+      },
+      "Deployed": {
+        "tail_r1_fixed_knuckle_aft": {
+          "minimum_clearance_mm": 871.0051664599929,
+          "witness_pair": "A5:top_cover",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 11,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        },
+        "tail_r1_fixed_knuckle_forward": {
+          "minimum_clearance_mm": 620.0072580220332,
+          "witness_pair": "A5:top_cover",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 11,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        },
+        "tail_r1_throughpin": {
+          "minimum_clearance_mm": 1.3654246317035295,
+          "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+          "exact_pairs_tested": 1,
+          "AABB_lower_bound_pairs_pruned": 12,
+          "overlaps_ge_0_001_mm3": [],
+          "pass": true
+        }
+      }
+    },
+    "saved_pin_fit": {
+      "nominal_radial_clearance_mm": 0.25,
+      "pin_to_tail_surface_clearances": [
+        {
+          "pair": [
+            "tail_r1_throughpin",
+            "tail_r1_fin_root"
+          ],
+          "overlap_mm3": 0.0,
+          "surface_clearance_mm": 0.24999999999999284,
+          "pass": true
+        },
+        {
+          "pair": [
+            "tail_r1_throughpin",
+            "tail_r1_fixed_knuckle_aft"
+          ],
+          "overlap_mm3": 0.0,
+          "surface_clearance_mm": 0.25,
+          "pass": true
+        },
+        {
+          "pair": [
+            "tail_r1_throughpin",
+            "tail_r1_fixed_knuckle_forward"
+          ],
+          "overlap_mm3": 0.0,
+          "surface_clearance_mm": 0.2500000000000284,
+          "pass": true
+        }
+      ],
+      "measured_cap_to_knuckle_axial_gaps_mm": [
+        0.2999998999998752,
+        0.2999998999998752
+      ],
+      "expected_cap_to_knuckle_axial_gap_mm": 0.3,
+      "pass": true
+    },
+    "31_sample_saved_geometry_motion": {
+      "fin_vs_stationary_hardware_and_A5": [
+        {
+          "minimum_clearance_mm": 0.24999999999999284,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 0,
+          "fraction": 0.0,
+          "angle_deg": -0.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999999528,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 1,
+          "fraction": 0.03333333333333333,
+          "angle_deg": -4.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.249999999999986,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 2,
+          "fraction": 0.06666666666666667,
+          "angle_deg": -9.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998554,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 3,
+          "fraction": 0.1,
+          "angle_deg": -13.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998251,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 4,
+          "fraction": 0.13333333333333333,
+          "angle_deg": -18.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998415,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 5,
+          "fraction": 0.16666666666666666,
+          "angle_deg": -22.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999999317,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 6,
+          "fraction": 0.2,
+          "angle_deg": -27.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999999112,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 7,
+          "fraction": 0.23333333333333334,
+          "angle_deg": -31.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.249999999999986,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 8,
+          "fraction": 0.26666666666666666,
+          "angle_deg": -36.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998862,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 9,
+          "fraction": 0.3,
+          "angle_deg": -40.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999997685,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 10,
+          "fraction": 0.3333333333333333,
+          "angle_deg": -45.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.2499999999999791,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 11,
+          "fraction": 0.36666666666666664,
+          "angle_deg": -49.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.2499999999999712,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 12,
+          "fraction": 0.4,
+          "angle_deg": -54.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999999514,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 13,
+          "fraction": 0.43333333333333335,
+          "angle_deg": -58.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998956,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 14,
+          "fraction": 0.4666666666666667,
+          "angle_deg": -63.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998085,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 15,
+          "fraction": 0.5,
+          "angle_deg": -67.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.2499999999999858,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 16,
+          "fraction": 0.5333333333333333,
+          "angle_deg": -72.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999997274,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 17,
+          "fraction": 0.5666666666666667,
+          "angle_deg": -76.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.2499999999999952,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 18,
+          "fraction": 0.6,
+          "angle_deg": -81.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.2499999999999728,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 19,
+          "fraction": 0.6333333333333333,
+          "angle_deg": -85.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998013,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 20,
+          "fraction": 0.6666666666666666,
+          "angle_deg": -90.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999998027,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 21,
+          "fraction": 0.7,
+          "angle_deg": -94.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.2499999999999858,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 22,
+          "fraction": 0.7333333333333333,
+          "angle_deg": -99.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999997435,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 23,
+          "fraction": 0.7666666666666667,
+          "angle_deg": -103.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.2499999999999697,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 24,
+          "fraction": 0.8,
+          "angle_deg": -108.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999994607,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 25,
+          "fraction": 0.8333333333333334,
+          "angle_deg": -112.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999996297,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 26,
+          "fraction": 0.8666666666666667,
+          "angle_deg": -117.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999999015,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 27,
+          "fraction": 0.9,
+          "angle_deg": -121.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.249999999999978,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 28,
+          "fraction": 0.9333333333333333,
+          "angle_deg": -126.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999994976,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 29,
+          "fraction": 0.9666666666666667,
+          "angle_deg": -130.5,
+          "obstacle_pair_count": 16,
+          "pass": true
+        },
+        {
+          "minimum_clearance_mm": 0.24999999999997943,
+          "witness_pair": "hardware:tail_r1_throughpin",
+          "exact_pairs_tested": 2,
+          "AABB_lower_bound_pairs_pruned": 14,
+          "overlaps_ge_0_001_mm3": [],
+          "sample": 30,
+          "fraction": 1.0,
+          "angle_deg": -135.0,
+          "obstacle_pair_count": 16,
+          "pass": true
+        }
+      ],
+      "stationary_hardware_vs_moving_A5": [
+        {
+          "sample": 0,
+          "fraction": 0.0,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 1,
+          "fraction": 0.03333333333333333,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 2,
+          "fraction": 0.06666666666666667,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 3,
+          "fraction": 0.1,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 4,
+          "fraction": 0.13333333333333333,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 5,
+          "fraction": 0.16666666666666666,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 6,
+          "fraction": 0.2,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 7,
+          "fraction": 0.23333333333333334,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 8,
+          "fraction": 0.26666666666666666,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 9,
+          "fraction": 0.3,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 10,
+          "fraction": 0.3333333333333333,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 11,
+          "fraction": 0.36666666666666664,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 12,
+          "fraction": 0.4,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 13,
+          "fraction": 0.43333333333333335,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 14,
+          "fraction": 0.4666666666666667,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 15,
+          "fraction": 0.5,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 16,
+          "fraction": 0.5333333333333333,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 17,
+          "fraction": 0.5666666666666667,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 18,
+          "fraction": 0.6,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 19,
+          "fraction": 0.6333333333333333,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 20,
+          "fraction": 0.6666666666666666,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 21,
+          "fraction": 0.7,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 22,
+          "fraction": 0.7333333333333333,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 23,
+          "fraction": 0.7666666666666667,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 24,
+          "fraction": 0.8,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 25,
+          "fraction": 0.8333333333333334,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 26,
+          "fraction": 0.8666666666666667,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 27,
+          "fraction": 0.9,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 28,
+          "fraction": 0.9333333333333333,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 29,
+          "fraction": 0.9666666666666667,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        {
+          "sample": 30,
+          "fraction": 1.0,
+          "parts": {
+            "tail_r1_fixed_knuckle_aft": {
+              "minimum_clearance_mm": 871.0051664599929,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_fixed_knuckle_forward": {
+              "minimum_clearance_mm": 620.0072580220332,
+              "witness_pair": "A5:top_cover",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 11,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            },
+            "tail_r1_throughpin": {
+              "minimum_clearance_mm": 1.3654246317035295,
+              "witness_pair": "A5:RDM9_R7_symmetric_body_20mm_wedge_R4",
+              "exact_pairs_tested": 1,
+              "AABB_lower_bound_pairs_pruned": 12,
+              "overlaps_ge_0_001_mm3": [],
+              "pass": true
+            }
+          },
+          "pass": true
+        }
+      ],
+      "summary": {
+        "expected_sample_count": 31,
+        "fin_sample_count": 31,
+        "stationary_hardware_sample_count": 31,
+        "minimum_fin_to_hardware_or_A5_clearance_mm": 0.24999999999994607,
+        "minimum_fin_witness": "hardware:tail_r1_throughpin",
+        "minimum_stationary_hardware_to_A5_clearance_mm": 1.3654246317035295,
+        "fin_all_samples_pass": true,
+        "hardware_all_samples_pass": true
+      }
+    }
+  },
+  "failures": [],
+  "passed": true,
+  "summary": {
+    "passed": true,
+    "failure_count": 0,
+    "R2_saved_artifacts_imported": 3,
+    "base_components_boolean_compared": 39,
+    "translated_R1_tail_parts_boolean_compared": 12,
+    "tail_root_X_bbox_stowed_mm": [
+      -1325.0000001,
+      -1084.9999999
+    ],
+    "hardware_union_X_bbox_stowed_mm": [
+      -1336.0000001,
+      -1073.9999999
+    ],
+    "maximum_stowed_tail_radius_mm": 124.88895081351274,
+    "foot_body_overlap_mm3": {
+      "tail_r1_fixed_knuckle_aft": 194.79427304511805,
+      "tail_r1_fixed_knuckle_forward": 194.7942730451195
+    },
+    "knuckle_body_overlap_mm3": {
+      "tail_r1_fixed_knuckle_aft": 0.0,
+      "tail_r1_fixed_knuckle_forward": 0.0
+    },
+    "pin_clearance_mm": {
+      "tail_r1_fin_root": 0.24999999999999284,
+      "tail_r1_fixed_knuckle_aft": 0.25,
+      "tail_r1_fixed_knuckle_forward": 0.2500000000000284
+    },
+    "cap_axial_gaps_mm": [
+      0.2999998999998752,
+      0.2999998999998752
+    ],
+    "motion": {
+      "expected_sample_count": 31,
+      "fin_sample_count": 31,
+      "stationary_hardware_sample_count": 31,
+      "minimum_fin_to_hardware_or_A5_clearance_mm": 0.24999999999994607,
+      "minimum_fin_witness": "hardware:tail_r1_throughpin",
+      "minimum_stationary_hardware_to_A5_clearance_mm": 1.3654246317035295,
+      "fin_all_samples_pass": true,
+      "hardware_all_samples_pass": true
+    }
+  }
+}

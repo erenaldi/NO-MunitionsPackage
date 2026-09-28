@@ -1,0 +1,12 @@
+{
+  "input": "STEP/Spear_ACMWrap.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_ACMWrap_side_plus_y.png", "camera": {"direction": [0, 1, 0]}},
+    {"path": "reviews/Spear_ACMWrap_side_minus_y.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_ACMWrap_iso.png", "camera": {"direction": [-1, 1, 0.8]}},
+    {"path": "reviews/Spear_ACMWrap_iso_opposite.png", "camera": {"direction": [1, -1, -0.8]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

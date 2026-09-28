@@ -1,0 +1,11 @@
+[
+  {
+    "input": "STEP/R_RampIntake_R3_Deployed.step",
+    "mode": "view",
+    "output": {"tightFrame": false},
+    "outputs": [
+      {"path": "reviews/R_Intake_R3_deployed_side.png", "camera": {"direction": [0,1,0], "up": [0,0,1], "target": [-620,0,-85], "orthographicHalfHeight": 320, "projection": "orthographic"}},
+      {"path": "reviews/R_Intake_R3_deployed_belly.png", "camera": {"direction": [1,-1,-0.8], "up": [0,0,1], "target": [0,0,0], "orthographicHalfHeight": 1100, "projection": "orthographic"}}
+    ]
+  }
+]

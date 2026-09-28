@@ -1,0 +1,9 @@
+{
+  "input": "STEP/Spear_FlushJunction_Cap_Separated.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_FlushJunction_separated.png", "camera": {"direction": [-1, -1, 0.8]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

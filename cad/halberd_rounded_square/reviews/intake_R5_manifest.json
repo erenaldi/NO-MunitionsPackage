@@ -1,0 +1,59 @@
+{
+  "revision": "R5",
+  "state": "concept-review",
+  "user_approved": false,
+  "artifacts": [
+    {
+      "path": "STEP/Selected_Intake_R5.step",
+      "sha256": "4cdb43ccf4c078e913291d2718d42411d75552b17c9733f7fe8c68a936a6b781"
+    },
+    {
+      "path": "STEP/Selected_Intake_R5_Separated.step",
+      "sha256": "5ff8bd6d594578d33463a1e879278c1d79c6c4d097c094ec4c77b1f32ccc95af"
+    },
+    {
+      "path": "reviews/Intake_R5_context.png",
+      "sha256": "508d2e9e772682b7ad5c27530de6b154e6ff380d28ccebdc58cbc2b888c21359"
+    },
+    {
+      "path": "reviews/Intake_R5_taper.png",
+      "sha256": "2616447e9d164fab3a2a57b96e22ae1f1a924d7f6ca4940ded689156cd6e3af8"
+    },
+    {
+      "path": "reviews/Intake_R5_profile.png",
+      "sha256": "a0b14f9da3457f9ffa347596eaa715806ae9d5a0dfe5fd2b8159ec09ad34e0b0"
+    },
+    {
+      "path": "reviews/Intake_R5_edges.png",
+      "sha256": "d6b58555e456abd3afce4fdb8b55a88b2676cd92eaab28b35395039fd2e8c837"
+    },
+    {
+      "path": "reviews/Intake_R5_front_solid.png",
+      "sha256": "0a79a229d81ff4b5e7d91e8fd8e892979819d66a7356762bc02ae0929efd943a"
+    },
+    {
+      "path": "reviews/Intake_R5_front_rendered.png",
+      "sha256": "b1d6f8c41a945e35ad348e4c558b9c7d3f53115f25b4738114c1a11bcd0c50fc"
+    },
+    {
+      "path": "reviews/Intake_R5_booster_solid.png",
+      "sha256": "0095e9f68c76d6b0fa9b52f9a685ae332204e60d77002e28d731d59b0ab532ea"
+    },
+    {
+      "path": "reviews/Intake_R5_booster_rendered.png",
+      "sha256": "3d64eb326548d8f51fbbc59cec22e513b9dbcfd6cac69e3885b690d6c56ff279"
+    },
+    {
+      "path": "reviews/Intake_R5_main_solid.png",
+      "sha256": "0f48ae59e16b5e6d46779524209d39d80deaca51fe76decf399a2ad9799030cd"
+    },
+    {
+      "path": "reviews/Intake_R5_main_rendered.png",
+      "sha256": "d88c825960d3e1b78fa2b017c978932b1deec90bbeeb2c6e177b11f6fe3d33bd"
+    },
+    {
+      "path": "reviews/Intake_R5_separated.png",
+      "sha256": "b92ce174d1fe389c2ca3e7d61a71c3c92cf496a357a7489e2698cb5523270f27"
+    }
+  ]
+}

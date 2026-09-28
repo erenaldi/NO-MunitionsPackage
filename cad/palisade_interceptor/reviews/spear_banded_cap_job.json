@@ -1,0 +1,12 @@
+{
+  "input": "STEP/Spear_BandedCap_Nozzle0.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_BandedCap_iso.png", "camera": {"direction": [-1, 1, 0.65]}},
+    {"path": "reviews/Spear_BandedCap_side.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_BandedCap_nozzle_side.png", "camera": {"direction": [0, 1, 0]}},
+    {"path": "reviews/Spear_BandedCap_tail.png", "camera": {"direction": [-1, 0, 0]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

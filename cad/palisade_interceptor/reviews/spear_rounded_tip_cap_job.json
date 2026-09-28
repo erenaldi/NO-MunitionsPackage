@@ -1,0 +1,11 @@
+{
+  "input": "STEP/Spear_RoundedTip_Cap_Focus.step",
+  "mode": "view",
+  "display": {"mode": "shaded"},
+  "outputs": [
+    {"path": "reviews/Spear_RoundedTip_cap_iso.png", "camera": {"direction": [-1, -1, 0.8]}},
+    {"path": "reviews/Spear_RoundedTip_cap_side.png", "camera": {"direction": [0, -1, 0]}},
+    {"path": "reviews/Spear_RoundedTip_cap_aft.png", "camera": {"direction": [-1, 0, 0]}}
+  ],
+  "output": {"sizeProfile": "diagnostic", "padding": 0.10, "viewLabels": false}
+}

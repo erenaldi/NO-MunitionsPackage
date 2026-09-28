@@ -67,8 +67,8 @@ inspection, but Phase 1 does not assume provenance.
   harmless termination, designated-target behavior, and multiplayer remain
   unverified.
 - AGR-18 exposes `LaserSeeker.errorRate`; no dedicated salvo-dispersion field
-  was found. Hailstorm needs a firing test before deciding whether this field
-  alone produces the requested footprint.
+  was found. Hailstorm (deferred) would have needed a firing test before
+  deciding whether this field alone produces the requested footprint.
 - No water-phase missile field or component was found. The only relevant live
   serialized fields were buoyancy on `AeroPart` and a gun water-impact effect.
   Halcyon therefore requires the planned physics/networking spike.
@@ -82,11 +82,11 @@ inspection, but Phase 1 does not assume provenance.
 1. Ambiguous mappings prefer role-aligned variants: `AAM4` (Halberd, switched
    from `P_AAM2`), `P_KEM1`, `ARM1_mini`, `bomb_demo_mini`, and the Piledriver
    MIRV substrate for Trebuchet [C]. Trebuchet [U] remains unitary.
-2. Hailstorm starts with a definition-only `LaserSeeker.errorRate` test and
-   receives custom salvo dispersion only if it misses the specified footprint.
-3. MAD-2 Thistle, AShM-150 Kestrel, and AShM-450 Maelstrom were cut from the
-   roster; the missing-`AShM-200` analog finding no longer blocks any weapon.
-4. HKP-1 Palisade uses RAM-45 as its interceptor substrate and the vanilla
+2. MAD-2 Thistle, AShM-150 Kestrel, and AShM-450 Maelstrom were cut from the
+   roster; GPO-2R Auger, CDM-4 Bramble, and AGR-30 Hailstorm are deferred to a
+   possible later release. The missing-`AShM-200` analog finding no longer
+   blocks any weapon.
+3. HKP-1 Palisade uses RAM-45 as its interceptor substrate and the vanilla
    ship anti-missile defense pipeline as its guidance reference.
 
 Blueprinter reports no loaded bundles and no external weapon-pack plugin is

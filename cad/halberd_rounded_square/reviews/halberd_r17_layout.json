@@ -1,0 +1,3755 @@
+{
+  "status": "R17_GATE2_BUILT_CHECKER_PENDING",
+  "baseline_step": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r16.step",
+  "baseline_document_hash": "4d049aeacb914456de137e571ef0f226d7ae15316633568ffee372853c47b45e",
+  "full_source": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\src\\halberd_r17_shapes.py",
+  "baseline_labels": [
+    "main_body_intake_r12",
+    "main_ogive",
+    "booster_body",
+    "main_nozzle_dark_recess",
+    "main_nozzle_dark_floor",
+    "booster_nozzle_dark_recess",
+    "booster_nozzle_dark_floor",
+    "main_fin_1",
+    "main_intake_dark_recess_1",
+    "main_intake_dark_floor_1",
+    "main_fin_2",
+    "main_intake_dark_recess_2",
+    "main_intake_dark_floor_2",
+    "main_fin_3",
+    "main_intake_dark_recess_3",
+    "main_intake_dark_floor_3",
+    "main_fin_4",
+    "main_intake_dark_recess_4",
+    "main_intake_dark_floor_4",
+    "main_service_cover_1",
+    "main_service_border_1",
+    "main_service_fastener_1",
+    "main_service_fastener_2",
+    "booster_fin_fairing_1",
+    "booster_fin_fairing_2",
+    "booster_fin_fairing_3",
+    "booster_fin_fairing_4",
+    "main_service_cover_2",
+    "main_service_border_2",
+    "main_service_fastener_3",
+    "main_service_fastener_4",
+    "main_service_cover_3",
+    "main_service_border_3",
+    "main_service_fastener_5",
+    "main_service_fastener_6",
+    "main_service_cover_4",
+    "main_service_border_4",
+    "main_service_fastener_7",
+    "main_service_fastener_8",
+    "main_joint_liner_1",
+    "main_joint_fastener_1",
+    "main_joint_fastener_2",
+    "main_joint_fastener_3",
+    "main_joint_fastener_4"
+  ],
+  "changed_hosts": {
+    "booster_body": {
+      "cutter_labels_ordered": [
+        "booster_nozzle_r17_annular_seat",
+        "booster_nozzle_r17_fastener_seat_1",
+        "booster_nozzle_r17_fastener_seat_2",
+        "booster_nozzle_r17_fastener_seat_3",
+        "booster_nozzle_r17_fastener_seat_4",
+        "booster_nozzle_r17_fastener_seat_5",
+        "booster_nozzle_r17_fastener_seat_6",
+        "booster_nozzle_r17_fastener_seat_7",
+        "booster_nozzle_r17_fastener_seat_8",
+        "booster_access_xm1450_000_seat",
+        "booster_access_xm1450_000_screw_seat_1",
+        "booster_access_xm1450_000_screw_seat_2",
+        "booster_access_xm1450_090_seat",
+        "booster_access_xm1450_090_screw_seat_1",
+        "booster_access_xm1450_090_screw_seat_2",
+        "booster_access_xm1450_180_seat",
+        "booster_access_xm1450_180_screw_seat_1",
+        "booster_access_xm1450_180_screw_seat_2",
+        "booster_access_xm1450_270_seat",
+        "booster_access_xm1450_270_screw_seat_1",
+        "booster_access_xm1450_270_screw_seat_2"
+      ],
+      "cutter_count": 21,
+      "final_host_label": "booster_body"
+    },
+    "booster_fin_fairing_1": {
+      "cutter_labels_ordered": [
+        "booster_fin_fairing_1_r17_strip_pocket",
+        "booster_fin_fairing_1_r17_fastener_seat_1",
+        "booster_fin_fairing_1_r17_fastener_seat_2",
+        "booster_fin_fairing_1_r17_fastener_seat_3",
+        "booster_fin_fairing_1_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "booster_fin_fairing_1"
+    },
+    "booster_fin_fairing_2": {
+      "cutter_labels_ordered": [
+        "booster_fin_fairing_2_r17_strip_pocket",
+        "booster_fin_fairing_2_r17_fastener_seat_1",
+        "booster_fin_fairing_2_r17_fastener_seat_2",
+        "booster_fin_fairing_2_r17_fastener_seat_3",
+        "booster_fin_fairing_2_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "booster_fin_fairing_2"
+    },
+    "booster_fin_fairing_3": {
+      "cutter_labels_ordered": [
+        "booster_fin_fairing_3_r17_strip_pocket",
+        "booster_fin_fairing_3_r17_fastener_seat_1",
+        "booster_fin_fairing_3_r17_fastener_seat_2",
+        "booster_fin_fairing_3_r17_fastener_seat_3",
+        "booster_fin_fairing_3_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "booster_fin_fairing_3"
+    },
+    "booster_fin_fairing_4": {
+      "cutter_labels_ordered": [
+        "booster_fin_fairing_4_r17_strip_pocket",
+        "booster_fin_fairing_4_r17_fastener_seat_1",
+        "booster_fin_fairing_4_r17_fastener_seat_2",
+        "booster_fin_fairing_4_r17_fastener_seat_3",
+        "booster_fin_fairing_4_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "booster_fin_fairing_4"
+    },
+    "main_body_intake_r12": {
+      "cutter_labels_ordered": [
+        "main_nozzle_r17_annular_seat",
+        "main_nozzle_r17_fastener_seat_1",
+        "main_nozzle_r17_fastener_seat_2",
+        "main_nozzle_r17_fastener_seat_3",
+        "main_nozzle_r17_fastener_seat_4",
+        "main_nozzle_r17_fastener_seat_5",
+        "main_nozzle_r17_fastener_seat_6",
+        "main_nozzle_r17_fastener_seat_7",
+        "main_nozzle_r17_fastener_seat_8",
+        "main_access_xm950_000_seat",
+        "main_access_xm950_000_screw_seat_1",
+        "main_access_xm950_000_screw_seat_2",
+        "main_access_xm950_090_seat",
+        "main_access_xm950_090_screw_seat_1",
+        "main_access_xm950_090_screw_seat_2",
+        "main_access_xm950_180_seat",
+        "main_access_xm950_180_screw_seat_1",
+        "main_access_xm950_180_screw_seat_2",
+        "main_access_xm950_270_seat",
+        "main_access_xm950_270_screw_seat_1",
+        "main_access_xm950_270_screw_seat_2",
+        "main_access_xm750_000_seat",
+        "main_access_xm750_000_screw_seat_1",
+        "main_access_xm750_000_screw_seat_2",
+        "main_access_xm750_090_seat",
+        "main_access_xm750_090_screw_seat_1",
+        "main_access_xm750_090_screw_seat_2",
+        "main_access_xm750_180_seat",
+        "main_access_xm750_180_screw_seat_1",
+        "main_access_xm750_180_screw_seat_2",
+        "main_access_xm750_270_seat",
+        "main_access_xm750_270_screw_seat_1",
+        "main_access_xm750_270_screw_seat_2",
+        "main_access_xm550_000_seat",
+        "main_access_xm550_000_screw_seat_1",
+        "main_access_xm550_000_screw_seat_2",
+        "main_access_xm550_090_seat",
+        "main_access_xm550_090_screw_seat_1",
+        "main_access_xm550_090_screw_seat_2",
+        "main_access_xm550_180_seat",
+        "main_access_xm550_180_screw_seat_1",
+        "main_access_xm550_180_screw_seat_2",
+        "main_access_xm550_270_seat",
+        "main_access_xm550_270_screw_seat_1",
+        "main_access_xm550_270_screw_seat_2",
+        "main_access_xm80_000_seat",
+        "main_access_xm80_000_screw_seat_1",
+        "main_access_xm80_000_screw_seat_2",
+        "main_access_xm80_090_seat",
+        "main_access_xm80_090_screw_seat_1",
+        "main_access_xm80_090_screw_seat_2",
+        "main_access_xm80_180_seat",
+        "main_access_xm80_180_screw_seat_1",
+        "main_access_xm80_180_screw_seat_2",
+        "main_access_xm80_270_seat",
+        "main_access_xm80_270_screw_seat_1",
+        "main_access_xm80_270_screw_seat_2",
+        "main_access_xp180_000_seat",
+        "main_access_xp180_000_screw_seat_1",
+        "main_access_xp180_000_screw_seat_2",
+        "main_access_xp180_090_seat",
+        "main_access_xp180_090_screw_seat_1",
+        "main_access_xp180_090_screw_seat_2",
+        "main_access_xp180_180_seat",
+        "main_access_xp180_180_screw_seat_1",
+        "main_access_xp180_180_screw_seat_2",
+        "main_access_xp180_270_seat",
+        "main_access_xp180_270_screw_seat_1",
+        "main_access_xp180_270_screw_seat_2",
+        "main_access_xp440_000_seat",
+        "main_access_xp440_000_screw_seat_1",
+        "main_access_xp440_000_screw_seat_2",
+        "main_access_xp440_090_seat",
+        "main_access_xp440_090_screw_seat_1",
+        "main_access_xp440_090_screw_seat_2",
+        "main_access_xp440_180_seat",
+        "main_access_xp440_180_screw_seat_1",
+        "main_access_xp440_180_screw_seat_2",
+        "main_access_xp440_270_seat",
+        "main_access_xp440_270_screw_seat_1",
+        "main_access_xp440_270_screw_seat_2",
+        "main_seam_xm850_000_groove",
+        "main_seam_xm850_000_screw_seat",
+        "main_seam_xm850_090_groove",
+        "main_seam_xm850_090_screw_seat",
+        "main_seam_xm850_180_groove",
+        "main_seam_xm850_180_screw_seat",
+        "main_seam_xm850_270_groove",
+        "main_seam_xm850_270_screw_seat",
+        "main_seam_xm650_000_groove",
+        "main_seam_xm650_000_screw_seat",
+        "main_seam_xm650_090_groove",
+        "main_seam_xm650_090_screw_seat",
+        "main_seam_xm650_180_groove",
+        "main_seam_xm650_180_screw_seat",
+        "main_seam_xm650_270_groove",
+        "main_seam_xm650_270_screw_seat",
+        "main_seam_xm200_000_groove",
+        "main_seam_xm200_000_screw_seat",
+        "main_seam_xm200_090_groove",
+        "main_seam_xm200_090_screw_seat",
+        "main_seam_xm200_180_groove",
+        "main_seam_xm200_180_screw_seat",
+        "main_seam_xm200_270_groove",
+        "main_seam_xm200_270_screw_seat",
+        "main_seam_xp320_000_groove",
+        "main_seam_xp320_000_screw_seat",
+        "main_seam_xp320_090_groove",
+        "main_seam_xp320_090_screw_seat",
+        "main_seam_xp320_180_groove",
+        "main_seam_xp320_180_screw_seat",
+        "main_seam_xp320_270_groove",
+        "main_seam_xp320_270_screw_seat"
+      ],
+      "cutter_count": 113,
+      "final_host_label": "main_body_intake_r12"
+    },
+    "main_fin_1": {
+      "cutter_labels_ordered": [
+        "main_fin_1_r17_strip_pocket",
+        "main_fin_1_r17_fastener_seat_1",
+        "main_fin_1_r17_fastener_seat_2",
+        "main_fin_1_r17_fastener_seat_3",
+        "main_fin_1_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "main_fin_1"
+    },
+    "main_fin_2": {
+      "cutter_labels_ordered": [
+        "main_fin_2_r17_strip_pocket",
+        "main_fin_2_r17_fastener_seat_1",
+        "main_fin_2_r17_fastener_seat_2",
+        "main_fin_2_r17_fastener_seat_3",
+        "main_fin_2_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "main_fin_2"
+    },
+    "main_fin_3": {
+      "cutter_labels_ordered": [
+        "main_fin_3_r17_strip_pocket",
+        "main_fin_3_r17_fastener_seat_1",
+        "main_fin_3_r17_fastener_seat_2",
+        "main_fin_3_r17_fastener_seat_3",
+        "main_fin_3_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "main_fin_3"
+    },
+    "main_fin_4": {
+      "cutter_labels_ordered": [
+        "main_fin_4_r17_strip_pocket",
+        "main_fin_4_r17_fastener_seat_1",
+        "main_fin_4_r17_fastener_seat_2",
+        "main_fin_4_r17_fastener_seat_3",
+        "main_fin_4_r17_fastener_seat_4"
+      ],
+      "cutter_count": 5,
+      "final_host_label": "main_fin_4"
+    }
+  },
+  "new_parts": [
+    {
+      "label": "main_r17_nozzle_ring",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_3",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_4",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_5",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_6",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_7",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_nozzle_fastener_8",
+      "owner_host": "main_body_intake_r12",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_ring",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_1",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_2",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_3",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_4",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_5",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_6",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_7",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_nozzle_fastener_8",
+      "owner_host": "booster_body",
+      "family": "nozzle",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_000_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_000_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_000_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_000_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_090_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_090_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_090_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_090_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_180_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_180_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_180_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_180_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_270_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_270_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_270_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm950_270_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_000_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_000_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_000_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_000_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_090_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_090_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_090_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_090_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_180_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_180_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_180_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_180_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_270_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_270_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_270_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm750_270_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_000_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_000_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_000_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_000_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_090_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_090_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_090_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_090_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_180_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_180_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_180_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_180_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_270_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_270_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_270_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm550_270_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_000_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_000_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_000_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_000_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_090_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_090_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_090_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_090_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_180_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_180_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_180_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_180_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_270_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_270_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_270_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xm80_270_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_000_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_000_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_000_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_000_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_090_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_090_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_090_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_090_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_180_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_180_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_180_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_180_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_270_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_270_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_270_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp180_270_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_000_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_000_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_000_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_000_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_090_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_090_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_090_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_090_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_180_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_180_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_180_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_180_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_270_cover",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_270_border",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_270_screw_1",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_access_xp440_270_screw_2",
+      "owner_host": "main_body_intake_r12",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_000_cover",
+      "owner_host": "booster_body",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_000_border",
+      "owner_host": "booster_body",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_000_screw_1",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_000_screw_2",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_090_cover",
+      "owner_host": "booster_body",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_090_border",
+      "owner_host": "booster_body",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_090_screw_1",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_090_screw_2",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_180_cover",
+      "owner_host": "booster_body",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_180_border",
+      "owner_host": "booster_body",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_180_screw_1",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_180_screw_2",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_270_cover",
+      "owner_host": "booster_body",
+      "family": "service_cover",
+      "color_linear": [
+        0.462077,
+        0.5088813,
+        0.5457245,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_270_border",
+      "owner_host": "booster_body",
+      "family": "service_border",
+      "color_linear": [
+        0.0802198,
+        0.0998987,
+        0.1169707,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_270_screw_1",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_access_xm1450_270_screw_2",
+      "owner_host": "booster_body",
+      "family": "service_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_000_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_000_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_090_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_090_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_180_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_180_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_270_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm850_270_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_000_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_000_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_090_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_090_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_180_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_180_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_270_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm650_270_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_000_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_000_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_090_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_090_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_180_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_180_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_270_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xm200_270_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_000_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_000_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_090_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_090_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_180_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_180_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_270_liner",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_liner",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_seam_xp320_270_screw",
+      "owner_host": "main_body_intake_r12",
+      "family": "seam_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_1_inset_strip",
+      "owner_host": "main_fin_1",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_1_fastener_1",
+      "owner_host": "main_fin_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_1_fastener_2",
+      "owner_host": "main_fin_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_1_fastener_3",
+      "owner_host": "main_fin_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_1_fastener_4",
+      "owner_host": "main_fin_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_2_inset_strip",
+      "owner_host": "main_fin_2",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_2_fastener_1",
+      "owner_host": "main_fin_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_2_fastener_2",
+      "owner_host": "main_fin_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_2_fastener_3",
+      "owner_host": "main_fin_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_2_fastener_4",
+      "owner_host": "main_fin_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_3_inset_strip",
+      "owner_host": "main_fin_3",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_3_fastener_1",
+      "owner_host": "main_fin_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_3_fastener_2",
+      "owner_host": "main_fin_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_3_fastener_3",
+      "owner_host": "main_fin_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_3_fastener_4",
+      "owner_host": "main_fin_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_4_inset_strip",
+      "owner_host": "main_fin_4",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_4_fastener_1",
+      "owner_host": "main_fin_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_4_fastener_2",
+      "owner_host": "main_fin_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_4_fastener_3",
+      "owner_host": "main_fin_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "main_r17_fin_4_fastener_4",
+      "owner_host": "main_fin_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_1_inset_strip",
+      "owner_host": "booster_fin_fairing_1",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_1_fastener_1",
+      "owner_host": "booster_fin_fairing_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_1_fastener_2",
+      "owner_host": "booster_fin_fairing_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_1_fastener_3",
+      "owner_host": "booster_fin_fairing_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_1_fastener_4",
+      "owner_host": "booster_fin_fairing_1",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_2_inset_strip",
+      "owner_host": "booster_fin_fairing_2",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_2_fastener_1",
+      "owner_host": "booster_fin_fairing_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_2_fastener_2",
+      "owner_host": "booster_fin_fairing_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_2_fastener_3",
+      "owner_host": "booster_fin_fairing_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_2_fastener_4",
+      "owner_host": "booster_fin_fairing_2",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_3_inset_strip",
+      "owner_host": "booster_fin_fairing_3",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_3_fastener_1",
+      "owner_host": "booster_fin_fairing_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_3_fastener_2",
+      "owner_host": "booster_fin_fairing_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_3_fastener_3",
+      "owner_host": "booster_fin_fairing_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_3_fastener_4",
+      "owner_host": "booster_fin_fairing_3",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_4_inset_strip",
+      "owner_host": "booster_fin_fairing_4",
+      "family": "fin_strip",
+      "color_linear": [
+        0.3864294,
+        0.4341536,
+        0.4735315,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_4_fastener_1",
+      "owner_host": "booster_fin_fairing_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_4_fastener_2",
+      "owner_host": "booster_fin_fairing_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_4_fastener_3",
+      "owner_host": "booster_fin_fairing_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    },
+    {
+      "label": "booster_r17_fin_fairing_4_fastener_4",
+      "owner_host": "booster_fin_fairing_4",
+      "family": "fin_fastener",
+      "color_linear": [
+        0.2422811,
+        0.2917706,
+        0.3277781,
+        1.0
+      ]
+    }
+  ],
+  "intended_contact_groups": [
+    {
+      "key": "main_nozzle_lip",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_r17_nozzle_ring",
+        "main_r17_nozzle_fastener_1",
+        "main_r17_nozzle_fastener_2",
+        "main_r17_nozzle_fastener_3",
+        "main_r17_nozzle_fastener_4",
+        "main_r17_nozzle_fastener_5",
+        "main_r17_nozzle_fastener_6",
+        "main_r17_nozzle_fastener_7",
+        "main_r17_nozzle_fastener_8"
+      ],
+      "intended_contact": "recessed annular seat and individual axial screw seats"
+    },
+    {
+      "key": "booster_nozzle_lip",
+      "host_label": "booster_body",
+      "detail_labels": [
+        "booster_r17_nozzle_ring",
+        "booster_r17_nozzle_fastener_1",
+        "booster_r17_nozzle_fastener_2",
+        "booster_r17_nozzle_fastener_3",
+        "booster_r17_nozzle_fastener_4",
+        "booster_r17_nozzle_fastener_5",
+        "booster_r17_nozzle_fastener_6",
+        "booster_r17_nozzle_fastener_7",
+        "booster_r17_nozzle_fastener_8"
+      ],
+      "intended_contact": "recessed annular seat and individual axial screw seats"
+    },
+    {
+      "key": "main_access_xm950_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm950_000_cover",
+        "main_access_xm950_000_border",
+        "main_access_xm950_000_screw_1",
+        "main_access_xm950_000_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm950_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm950_090_cover",
+        "main_access_xm950_090_border",
+        "main_access_xm950_090_screw_1",
+        "main_access_xm950_090_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm950_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm950_180_cover",
+        "main_access_xm950_180_border",
+        "main_access_xm950_180_screw_1",
+        "main_access_xm950_180_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm950_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm950_270_cover",
+        "main_access_xm950_270_border",
+        "main_access_xm950_270_screw_1",
+        "main_access_xm950_270_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm750_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm750_000_cover",
+        "main_access_xm750_000_border",
+        "main_access_xm750_000_screw_1",
+        "main_access_xm750_000_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm750_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm750_090_cover",
+        "main_access_xm750_090_border",
+        "main_access_xm750_090_screw_1",
+        "main_access_xm750_090_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm750_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm750_180_cover",
+        "main_access_xm750_180_border",
+        "main_access_xm750_180_screw_1",
+        "main_access_xm750_180_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm750_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm750_270_cover",
+        "main_access_xm750_270_border",
+        "main_access_xm750_270_screw_1",
+        "main_access_xm750_270_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm550_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm550_000_cover",
+        "main_access_xm550_000_border",
+        "main_access_xm550_000_screw_1",
+        "main_access_xm550_000_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm550_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm550_090_cover",
+        "main_access_xm550_090_border",
+        "main_access_xm550_090_screw_1",
+        "main_access_xm550_090_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm550_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm550_180_cover",
+        "main_access_xm550_180_border",
+        "main_access_xm550_180_screw_1",
+        "main_access_xm550_180_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm550_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm550_270_cover",
+        "main_access_xm550_270_border",
+        "main_access_xm550_270_screw_1",
+        "main_access_xm550_270_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm80_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm80_000_cover",
+        "main_access_xm80_000_border",
+        "main_access_xm80_000_screw_1",
+        "main_access_xm80_000_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm80_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm80_090_cover",
+        "main_access_xm80_090_border",
+        "main_access_xm80_090_screw_1",
+        "main_access_xm80_090_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm80_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm80_180_cover",
+        "main_access_xm80_180_border",
+        "main_access_xm80_180_screw_1",
+        "main_access_xm80_180_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xm80_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xm80_270_cover",
+        "main_access_xm80_270_border",
+        "main_access_xm80_270_screw_1",
+        "main_access_xm80_270_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp180_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp180_000_cover",
+        "main_access_xp180_000_border",
+        "main_access_xp180_000_screw_1",
+        "main_access_xp180_000_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp180_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp180_090_cover",
+        "main_access_xp180_090_border",
+        "main_access_xp180_090_screw_1",
+        "main_access_xp180_090_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp180_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp180_180_cover",
+        "main_access_xp180_180_border",
+        "main_access_xp180_180_screw_1",
+        "main_access_xp180_180_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp180_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp180_270_cover",
+        "main_access_xp180_270_border",
+        "main_access_xp180_270_screw_1",
+        "main_access_xp180_270_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp440_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp440_000_cover",
+        "main_access_xp440_000_border",
+        "main_access_xp440_000_screw_1",
+        "main_access_xp440_000_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp440_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp440_090_cover",
+        "main_access_xp440_090_border",
+        "main_access_xp440_090_screw_1",
+        "main_access_xp440_090_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp440_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp440_180_cover",
+        "main_access_xp440_180_border",
+        "main_access_xp440_180_screw_1",
+        "main_access_xp440_180_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_access_xp440_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_access_xp440_270_cover",
+        "main_access_xp440_270_border",
+        "main_access_xp440_270_screw_1",
+        "main_access_xp440_270_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "booster_access_xm1450_000",
+      "host_label": "booster_body",
+      "detail_labels": [
+        "booster_access_xm1450_000_cover",
+        "booster_access_xm1450_000_border",
+        "booster_access_xm1450_000_screw_1",
+        "booster_access_xm1450_000_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "booster_access_xm1450_090",
+      "host_label": "booster_body",
+      "detail_labels": [
+        "booster_access_xm1450_090_cover",
+        "booster_access_xm1450_090_border",
+        "booster_access_xm1450_090_screw_1",
+        "booster_access_xm1450_090_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "booster_access_xm1450_180",
+      "host_label": "booster_body",
+      "detail_labels": [
+        "booster_access_xm1450_180_cover",
+        "booster_access_xm1450_180_border",
+        "booster_access_xm1450_180_screw_1",
+        "booster_access_xm1450_180_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "booster_access_xm1450_270",
+      "host_label": "booster_body",
+      "detail_labels": [
+        "booster_access_xm1450_270_cover",
+        "booster_access_xm1450_270_border",
+        "booster_access_xm1450_270_screw_1",
+        "booster_access_xm1450_270_screw_2"
+      ],
+      "intended_contact": "cover and border seat floors at Z=98.8 mm; screw feet contact matching host bores at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm850_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm850_000_liner",
+        "main_seam_xm850_000_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm850_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm850_090_liner",
+        "main_seam_xm850_090_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm850_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm850_180_liner",
+        "main_seam_xm850_180_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm850_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm850_270_liner",
+        "main_seam_xm850_270_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm650_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm650_000_liner",
+        "main_seam_xm650_000_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm650_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm650_090_liner",
+        "main_seam_xm650_090_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm650_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm650_180_liner",
+        "main_seam_xm650_180_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm650_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm650_270_liner",
+        "main_seam_xm650_270_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm200_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm200_000_liner",
+        "main_seam_xm200_000_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm200_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm200_090_liner",
+        "main_seam_xm200_090_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm200_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm200_180_liner",
+        "main_seam_xm200_180_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xm200_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xm200_270_liner",
+        "main_seam_xm200_270_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xp320_000",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xp320_000_liner",
+        "main_seam_xp320_000_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xp320_090",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xp320_090_liner",
+        "main_seam_xp320_090_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xp320_180",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xp320_180_liner",
+        "main_seam_xp320_180_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_seam_xp320_270",
+      "host_label": "main_body_intake_r12",
+      "detail_labels": [
+        "main_seam_xp320_270_liner",
+        "main_seam_xp320_270_screw"
+      ],
+      "intended_contact": "liner floor at Z=99.4 mm; screw foot contacts matching blind host seat at Z=98.5 mm"
+    },
+    {
+      "key": "main_fin_1_root_interface",
+      "host_label": "main_fin_1",
+      "detail_labels": [
+        "main_r17_fin_1_inset_strip",
+        "main_r17_fin_1_fastener_1",
+        "main_r17_fin_1_fastener_2",
+        "main_r17_fin_1_fastener_3",
+        "main_r17_fin_1_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    },
+    {
+      "key": "main_fin_2_root_interface",
+      "host_label": "main_fin_2",
+      "detail_labels": [
+        "main_r17_fin_2_inset_strip",
+        "main_r17_fin_2_fastener_1",
+        "main_r17_fin_2_fastener_2",
+        "main_r17_fin_2_fastener_3",
+        "main_r17_fin_2_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    },
+    {
+      "key": "main_fin_3_root_interface",
+      "host_label": "main_fin_3",
+      "detail_labels": [
+        "main_r17_fin_3_inset_strip",
+        "main_r17_fin_3_fastener_1",
+        "main_r17_fin_3_fastener_2",
+        "main_r17_fin_3_fastener_3",
+        "main_r17_fin_3_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    },
+    {
+      "key": "main_fin_4_root_interface",
+      "host_label": "main_fin_4",
+      "detail_labels": [
+        "main_r17_fin_4_inset_strip",
+        "main_r17_fin_4_fastener_1",
+        "main_r17_fin_4_fastener_2",
+        "main_r17_fin_4_fastener_3",
+        "main_r17_fin_4_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    },
+    {
+      "key": "booster_fin_1_root_interface",
+      "host_label": "booster_fin_fairing_1",
+      "detail_labels": [
+        "booster_r17_fin_fairing_1_inset_strip",
+        "booster_r17_fin_fairing_1_fastener_1",
+        "booster_r17_fin_fairing_1_fastener_2",
+        "booster_r17_fin_fairing_1_fastener_3",
+        "booster_r17_fin_fairing_1_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    },
+    {
+      "key": "booster_fin_2_root_interface",
+      "host_label": "booster_fin_fairing_2",
+      "detail_labels": [
+        "booster_r17_fin_fairing_2_inset_strip",
+        "booster_r17_fin_fairing_2_fastener_1",
+        "booster_r17_fin_fairing_2_fastener_2",
+        "booster_r17_fin_fairing_2_fastener_3",
+        "booster_r17_fin_fairing_2_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    },
+    {
+      "key": "booster_fin_3_root_interface",
+      "host_label": "booster_fin_fairing_3",
+      "detail_labels": [
+        "booster_r17_fin_fairing_3_inset_strip",
+        "booster_r17_fin_fairing_3_fastener_1",
+        "booster_r17_fin_fairing_3_fastener_2",
+        "booster_r17_fin_fairing_3_fastener_3",
+        "booster_r17_fin_fairing_3_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    },
+    {
+      "key": "booster_fin_4_root_interface",
+      "host_label": "booster_fin_fairing_4",
+      "detail_labels": [
+        "booster_r17_fin_fairing_4_inset_strip",
+        "booster_r17_fin_fairing_4_fastener_1",
+        "booster_r17_fin_fairing_4_fastener_2",
+        "booster_r17_fin_fairing_4_fastener_3",
+        "booster_r17_fin_fairing_4_fastener_4"
+      ],
+      "intended_contact": "pilot conformal inset and four recessed screw seats"
+    }
+  ],
+  "family_counts": {
+    "nozzle": 18,
+    "service_cover": 28,
+    "service_border": 28,
+    "service_fastener": 56,
+    "seam_liner": 16,
+    "seam_fastener": 16,
+    "fin_strip": 8,
+    "fin_fastener": 32,
+    "new_detail_total": 202,
+    "existing_r16_detail_total": 21,
+    "full_detail_total": 223,
+    "r16_primary_form_total": 23,
+    "full_part_total": 246,
+    "changed_host_total": 10,
+    "unchanged_r16_part_total": 34
+  },
+  "pose_transforms": [
+    {
+      "group": "main_access_xm950_000",
+      "translation_mm": [
+        -950.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "screw_x_sites_mm": [
+        -978.0,
+        -922.0
+      ]
+    },
+    {
+      "group": "main_access_xm950_090",
+      "translation_mm": [
+        -950.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "screw_x_sites_mm": [
+        -978.0,
+        -922.0
+      ]
+    },
+    {
+      "group": "main_access_xm950_180",
+      "translation_mm": [
+        -950.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "screw_x_sites_mm": [
+        -978.0,
+        -922.0
+      ]
+    },
+    {
+      "group": "main_access_xm950_270",
+      "translation_mm": [
+        -950.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "screw_x_sites_mm": [
+        -978.0,
+        -922.0
+      ]
+    },
+    {
+      "group": "main_access_xm750_000",
+      "translation_mm": [
+        -750.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "screw_x_sites_mm": [
+        -798.0,
+        -702.0
+      ]
+    },
+    {
+      "group": "main_access_xm750_090",
+      "translation_mm": [
+        -750.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "screw_x_sites_mm": [
+        -798.0,
+        -702.0
+      ]
+    },
+    {
+      "group": "main_access_xm750_180",
+      "translation_mm": [
+        -750.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "screw_x_sites_mm": [
+        -798.0,
+        -702.0
+      ]
+    },
+    {
+      "group": "main_access_xm750_270",
+      "translation_mm": [
+        -750.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "screw_x_sites_mm": [
+        -798.0,
+        -702.0
+      ]
+    },
+    {
+      "group": "main_access_xm550_000",
+      "translation_mm": [
+        -550.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "screw_x_sites_mm": [
+        -574.0,
+        -526.0
+      ]
+    },
+    {
+      "group": "main_access_xm550_090",
+      "translation_mm": [
+        -550.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "screw_x_sites_mm": [
+        -574.0,
+        -526.0
+      ]
+    },
+    {
+      "group": "main_access_xm550_180",
+      "translation_mm": [
+        -550.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "screw_x_sites_mm": [
+        -574.0,
+        -526.0
+      ]
+    },
+    {
+      "group": "main_access_xm550_270",
+      "translation_mm": [
+        -550.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "screw_x_sites_mm": [
+        -574.0,
+        -526.0
+      ]
+    },
+    {
+      "group": "main_access_xm80_000",
+      "translation_mm": [
+        -80.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "screw_x_sites_mm": [
+        -113.0,
+        -47.0
+      ]
+    },
+    {
+      "group": "main_access_xm80_090",
+      "translation_mm": [
+        -80.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "screw_x_sites_mm": [
+        -113.0,
+        -47.0
+      ]
+    },
+    {
+      "group": "main_access_xm80_180",
+      "translation_mm": [
+        -80.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "screw_x_sites_mm": [
+        -113.0,
+        -47.0
+      ]
+    },
+    {
+      "group": "main_access_xm80_270",
+      "translation_mm": [
+        -80.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "screw_x_sites_mm": [
+        -113.0,
+        -47.0
+      ]
+    },
+    {
+      "group": "main_access_xp180_000",
+      "translation_mm": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "screw_x_sites_mm": [
+        132.0,
+        228.0
+      ]
+    },
+    {
+      "group": "main_access_xp180_090",
+      "translation_mm": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "screw_x_sites_mm": [
+        132.0,
+        228.0
+      ]
+    },
+    {
+      "group": "main_access_xp180_180",
+      "translation_mm": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "screw_x_sites_mm": [
+        132.0,
+        228.0
+      ]
+    },
+    {
+      "group": "main_access_xp180_270",
+      "translation_mm": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "screw_x_sites_mm": [
+        132.0,
+        228.0
+      ]
+    },
+    {
+      "group": "main_access_xp440_000",
+      "translation_mm": [
+        440.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "screw_x_sites_mm": [
+        416.0,
+        464.0
+      ]
+    },
+    {
+      "group": "main_access_xp440_090",
+      "translation_mm": [
+        440.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "screw_x_sites_mm": [
+        416.0,
+        464.0
+      ]
+    },
+    {
+      "group": "main_access_xp440_180",
+      "translation_mm": [
+        440.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "screw_x_sites_mm": [
+        416.0,
+        464.0
+      ]
+    },
+    {
+      "group": "main_access_xp440_270",
+      "translation_mm": [
+        440.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "screw_x_sites_mm": [
+        416.0,
+        464.0
+      ]
+    },
+    {
+      "group": "booster_access_xm1450_000",
+      "translation_mm": [
+        -1450.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "screw_x_sites_mm": [
+        -1483.0,
+        -1417.0
+      ]
+    },
+    {
+      "group": "booster_access_xm1450_090",
+      "translation_mm": [
+        -1450.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "screw_x_sites_mm": [
+        -1483.0,
+        -1417.0
+      ]
+    },
+    {
+      "group": "booster_access_xm1450_180",
+      "translation_mm": [
+        -1450.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "screw_x_sites_mm": [
+        -1483.0,
+        -1417.0
+      ]
+    },
+    {
+      "group": "booster_access_xm1450_270",
+      "translation_mm": [
+        -1450.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "screw_x_sites_mm": [
+        -1483.0,
+        -1417.0
+      ]
+    },
+    {
+      "group": "main_seam_xm850_000",
+      "translation_mm": [
+        -850.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0
+    },
+    {
+      "group": "main_seam_xm850_090",
+      "translation_mm": [
+        -850.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0
+    },
+    {
+      "group": "main_seam_xm850_180",
+      "translation_mm": [
+        -850.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0
+    },
+    {
+      "group": "main_seam_xm850_270",
+      "translation_mm": [
+        -850.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0
+    },
+    {
+      "group": "main_seam_xm650_000",
+      "translation_mm": [
+        -650.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0
+    },
+    {
+      "group": "main_seam_xm650_090",
+      "translation_mm": [
+        -650.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0
+    },
+    {
+      "group": "main_seam_xm650_180",
+      "translation_mm": [
+        -650.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0
+    },
+    {
+      "group": "main_seam_xm650_270",
+      "translation_mm": [
+        -650.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0
+    },
+    {
+      "group": "main_seam_xm200_000",
+      "translation_mm": [
+        -200.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0
+    },
+    {
+      "group": "main_seam_xm200_090",
+      "translation_mm": [
+        -200.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0
+    },
+    {
+      "group": "main_seam_xm200_180",
+      "translation_mm": [
+        -200.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0
+    },
+    {
+      "group": "main_seam_xm200_270",
+      "translation_mm": [
+        -200.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0
+    },
+    {
+      "group": "main_seam_xp320_000",
+      "translation_mm": [
+        320.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0
+    },
+    {
+      "group": "main_seam_xp320_090",
+      "translation_mm": [
+        320.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0
+    },
+    {
+      "group": "main_seam_xp320_180",
+      "translation_mm": [
+        320.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0
+    },
+    {
+      "group": "main_seam_xp320_270",
+      "translation_mm": [
+        320.0,
+        0.0,
+        0.0
+      ],
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0
+    },
+    {
+      "group": "main_fin_1_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "source_occurrence": "main_fin_1"
+    },
+    {
+      "group": "main_fin_2_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "source_occurrence": "main_fin_1"
+    },
+    {
+      "group": "main_fin_3_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "source_occurrence": "main_fin_1"
+    },
+    {
+      "group": "main_fin_4_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "source_occurrence": "main_fin_1"
+    },
+    {
+      "group": "booster_fin_1_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -0.0,
+      "source_occurrence": "booster_fin_fairing_1"
+    },
+    {
+      "group": "booster_fin_2_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -90.0,
+      "source_occurrence": "booster_fin_fairing_1"
+    },
+    {
+      "group": "booster_fin_3_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -180.0,
+      "source_occurrence": "booster_fin_fairing_1"
+    },
+    {
+      "group": "booster_fin_4_root_interface",
+      "rotation_axis": "X",
+      "rotation_degrees": -270.0,
+      "source_occurrence": "booster_fin_fairing_1"
+    }
+  ],
+  "unchanged_baseline_labels": [
+    "booster_nozzle_dark_floor",
+    "booster_nozzle_dark_recess",
+    "main_intake_dark_floor_1",
+    "main_intake_dark_floor_2",
+    "main_intake_dark_floor_3",
+    "main_intake_dark_floor_4",
+    "main_intake_dark_recess_1",
+    "main_intake_dark_recess_2",
+    "main_intake_dark_recess_3",
+    "main_intake_dark_recess_4",
+    "main_joint_fastener_1",
+    "main_joint_fastener_2",
+    "main_joint_fastener_3",
+    "main_joint_fastener_4",
+    "main_joint_liner_1",
+    "main_nozzle_dark_floor",
+    "main_nozzle_dark_recess",
+    "main_ogive",
+    "main_service_border_1",
+    "main_service_border_2",
+    "main_service_border_3",
+    "main_service_border_4",
+    "main_service_cover_1",
+    "main_service_cover_2",
+    "main_service_cover_3",
+    "main_service_cover_4",
+    "main_service_fastener_1",
+    "main_service_fastener_2",
+    "main_service_fastener_3",
+    "main_service_fastener_4",
+    "main_service_fastener_5",
+    "main_service_fastener_6",
+    "main_service_fastener_7",
+    "main_service_fastener_8"
+  ],
+  "focus_leaf_counts": {
+    "body": 25,
+    "main_fin": 7,
+    "booster_fin": 7,
+    "nozzle_pair": 24
+  }
+}

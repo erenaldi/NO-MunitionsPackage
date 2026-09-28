@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "source": "Halberd_Shoulder_Hybrid_Intakes.step",
+  "source_sha256": "36555489dfcb5117dc1fc0dcae1e9932e684a690ce64941ff9fc542db06d38e8",
+  "output": "Halberd_Shoulder_Hybrid_Intakes_Closed.glb",
+  "output_sha256": "bf9c87f03312d496aa359989bd10816ac058db17174501c0613310b4d805c2c5",
+  "backend": "OCCT / build123d; native GLB review bypasses STEP viewport tessellation",
+  "basis": "CAD (X,Y,Z) mm -> glTF (X,Z,-Y) metres; scale 0.001",
+  "chord_tolerance_mm": 0.12,
+  "angular_tolerance_rad": 0.12,
+  "parts": [
+    {
+      "label": "sustainer_body",
+      "vertices": 13314,
+      "triangles": 26624,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.02341387731825383
+    },
+    {
+      "label": "radome",
+      "vertices": 307,
+      "triangles": 610,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.001156303662298135
+    },
+    {
+      "label": "intake_floor_1",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "intake_floor_2",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "intake_floor_3",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "intake_floor_4",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "mount_2",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.5499991156161917e-05
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+{
+  "input": "Halberd_Shoulder_Hybrid_Closed.glb",
+  "mode": "view",
+  "theme": "snapshot",
+  "outputs": [
+    {"path": "Halberd_Hybrid_closed_mesh.png", "camera": {"direction": [1, -1, 0.6]}},
+    {"path": "Halberd_Hybrid_closed_mesh_opposite.png", "camera": {"direction": [-1, 1, -0.6]}}
+  ],
+  "render": {"sizeProfile": "assembly", "padding": 0.1, "viewLabels": false}
+},
+{
+  "input": "Halberd_Shoulder_Hybrid_Intakes_Closed.glb",
+  "mode": "view",
+  "theme": "snapshot",
+  "outputs": [
+    {"path": "Halberd_Hybrid_closed_intakes.png", "camera": {"direction": [1, -1, 0.6]}},
+    {"path": "Halberd_Hybrid_closed_intakes_opposite.png", "camera": {"direction": [1, 1, 0.6]}}
+  ],
+  "render": {"sizeProfile": "diagnostic", "padding": 0.1, "viewLabels": false}
+}
+]

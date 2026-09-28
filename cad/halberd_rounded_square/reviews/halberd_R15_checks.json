@@ -1,0 +1,522 @@
+{
+  "ok": true,
+  "parts_per_state": 39,
+  "unchanged_R14_parts": 26,
+  "new_seats": 3,
+  "seat_depth_mm": 1.2,
+  "service_detail_parts": 16,
+  "cover_recess_mm": 0.15,
+  "fastener_recess_mm": 0.35,
+  "contact_volumes_mm3": {
+    "main_service_cover_1": 465.0979431347591,
+    "main_service_cover_2": 465.09794313475913,
+    "main_service_cover_3": 465.09794313475913,
+    "main_service_cover_4": 465.09794313475913,
+    "main_service_border_1": 89.67037157538226,
+    "main_service_border_2": 89.67037157536063,
+    "main_service_border_3": 89.67037157536056,
+    "main_service_border_4": 89.67037157538228,
+    "main_service_fastener_1": 1.5927874753700138,
+    "main_service_fastener_2": 1.5927874753700135,
+    "main_service_fastener_3": 1.5927874753700138,
+    "main_service_fastener_4": 1.5927874753700135,
+    "main_service_fastener_5": 1.5927874753700138,
+    "main_service_fastener_6": 1.5927874753700135,
+    "main_service_fastener_7": 1.5927874753700138,
+    "main_service_fastener_8": 1.5927874753700138
+  },
+  "native_placement_checks": [
+    {
+      "document": "halberd_r15",
+      "document_hash": "6334f7f9030ae9f86c569905eac8284195796108e7d2f9129eb7e858df7d3576",
+      "placements": [
+        {
+          "label": "main_body_intake_r12",
+          "ref": "#o1.1",
+          "volume_mm3": 85022079.31623927
+        },
+        {
+          "label": "main_ogive",
+          "ref": "#o1.2",
+          "volume_mm3": 9137694.418428266
+        },
+        {
+          "label": "booster_body",
+          "ref": "#o1.3",
+          "volume_mm3": 18404435.38990149
+        },
+        {
+          "label": "main_nozzle_dark_recess",
+          "ref": "#o1.4",
+          "volume_mm3": 26230.64446789164
+        },
+        {
+          "label": "main_nozzle_dark_floor",
+          "ref": "#o1.5",
+          "volume_mm3": 4139.645223708734
+        },
+        {
+          "label": "booster_nozzle_dark_recess",
+          "ref": "#o1.6",
+          "volume_mm3": 38398.033084324416
+        },
+        {
+          "label": "booster_nozzle_dark_floor",
+          "ref": "#o1.7",
+          "volume_mm3": 3277.592199563695
+        },
+        {
+          "label": "main_fin_1",
+          "ref": "#o1.8",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_1",
+          "ref": "#o1.9",
+          "volume_mm3": 6535.315768803834
+        },
+        {
+          "label": "main_intake_dark_floor_1",
+          "ref": "#o1.10",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_fin_2",
+          "ref": "#o1.11",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_2",
+          "ref": "#o1.12",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_2",
+          "ref": "#o1.13",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_3",
+          "ref": "#o1.14",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_3",
+          "ref": "#o1.15",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_3",
+          "ref": "#o1.16",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_4",
+          "ref": "#o1.17",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_4",
+          "ref": "#o1.18",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_4",
+          "ref": "#o1.19",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_service_cover_1",
+          "ref": "#o1.20",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_1",
+          "ref": "#o1.21",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_1",
+          "ref": "#o1.22",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_2",
+          "ref": "#o1.23",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "booster_fin_fairing_1",
+          "ref": "#o1.24",
+          "volume_mm3": 127307.95536849125
+        },
+        {
+          "label": "booster_fin_fairing_2",
+          "ref": "#o1.25",
+          "volume_mm3": 127307.95536837282
+        },
+        {
+          "label": "booster_fin_fairing_3",
+          "ref": "#o1.26",
+          "volume_mm3": 127307.95556825487
+        },
+        {
+          "label": "booster_fin_fairing_4",
+          "ref": "#o1.27",
+          "volume_mm3": 127307.95535106442
+        },
+        {
+          "label": "main_service_cover_2",
+          "ref": "#o1.28",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_2",
+          "ref": "#o1.29",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_3",
+          "ref": "#o1.30",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_fastener_4",
+          "ref": "#o1.31",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_cover_3",
+          "ref": "#o1.32",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_3",
+          "ref": "#o1.33",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_5",
+          "ref": "#o1.34",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_6",
+          "ref": "#o1.35",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_cover_4",
+          "ref": "#o1.36",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_4",
+          "ref": "#o1.37",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_7",
+          "ref": "#o1.38",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_fastener_8",
+          "ref": "#o1.39",
+          "volume_mm3": 7.004080794651716
+        }
+      ]
+    },
+    {
+      "document": "halberd_r15_separated",
+      "document_hash": "97f23b10440776df9ad49f1f8b01a1f9137aa88121aa65877f0aecffea8b4701",
+      "placements": [
+        {
+          "label": "main_body_intake_r12",
+          "ref": "#o1.1",
+          "volume_mm3": 85022079.31623927
+        },
+        {
+          "label": "main_ogive",
+          "ref": "#o1.2",
+          "volume_mm3": 9137694.418428266
+        },
+        {
+          "label": "booster_body",
+          "ref": "#o1.3",
+          "volume_mm3": 18404435.38990149
+        },
+        {
+          "label": "main_nozzle_dark_recess",
+          "ref": "#o1.4",
+          "volume_mm3": 26230.64446789164
+        },
+        {
+          "label": "main_nozzle_dark_floor",
+          "ref": "#o1.5",
+          "volume_mm3": 4139.645223708734
+        },
+        {
+          "label": "booster_nozzle_dark_recess",
+          "ref": "#o1.6",
+          "volume_mm3": 38398.03308432433
+        },
+        {
+          "label": "booster_nozzle_dark_floor",
+          "ref": "#o1.7",
+          "volume_mm3": 3277.592199563695
+        },
+        {
+          "label": "main_fin_1",
+          "ref": "#o1.8",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_1",
+          "ref": "#o1.9",
+          "volume_mm3": 6535.315768803834
+        },
+        {
+          "label": "main_intake_dark_floor_1",
+          "ref": "#o1.10",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_fin_2",
+          "ref": "#o1.11",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_2",
+          "ref": "#o1.12",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_2",
+          "ref": "#o1.13",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_3",
+          "ref": "#o1.14",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_3",
+          "ref": "#o1.15",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_3",
+          "ref": "#o1.16",
+          "volume_mm3": 590.8326482530817
+        },
+        {
+          "label": "main_fin_4",
+          "ref": "#o1.17",
+          "volume_mm3": 37625.052631585946
+        },
+        {
+          "label": "main_intake_dark_recess_4",
+          "ref": "#o1.18",
+          "volume_mm3": 6535.315768803835
+        },
+        {
+          "label": "main_intake_dark_floor_4",
+          "ref": "#o1.19",
+          "volume_mm3": 590.8326482530816
+        },
+        {
+          "label": "main_service_cover_1",
+          "ref": "#o1.20",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_1",
+          "ref": "#o1.21",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_1",
+          "ref": "#o1.22",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_2",
+          "ref": "#o1.23",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "booster_fin_fairing_1",
+          "ref": "#o1.24",
+          "volume_mm3": 127307.95536849127
+        },
+        {
+          "label": "booster_fin_fairing_2",
+          "ref": "#o1.25",
+          "volume_mm3": 127307.95536837283
+        },
+        {
+          "label": "booster_fin_fairing_3",
+          "ref": "#o1.26",
+          "volume_mm3": 127307.95556825487
+        },
+        {
+          "label": "booster_fin_fairing_4",
+          "ref": "#o1.27",
+          "volume_mm3": 127307.95535106442
+        },
+        {
+          "label": "main_service_cover_2",
+          "ref": "#o1.28",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_2",
+          "ref": "#o1.29",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_3",
+          "ref": "#o1.30",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_fastener_4",
+          "ref": "#o1.31",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_cover_3",
+          "ref": "#o1.32",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_3",
+          "ref": "#o1.33",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_5",
+          "ref": "#o1.34",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_6",
+          "ref": "#o1.35",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_cover_4",
+          "ref": "#o1.36",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_4",
+          "ref": "#o1.37",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_7",
+          "ref": "#o1.38",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_fastener_8",
+          "ref": "#o1.39",
+          "volume_mm3": 7.004080794651716
+        }
+      ]
+    },
+    {
+      "document": "halberd_r15_focus",
+      "placements": [
+        {
+          "label": "main_body_intake_r12",
+          "ref": "#o1.1",
+          "volume_mm3": 9114585.712152723
+        },
+        {
+          "label": "main_service_cover_1",
+          "ref": "#o1.2",
+          "volume_mm3": 3697.4808911770624
+        },
+        {
+          "label": "main_service_border_1",
+          "ref": "#o1.3",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_1",
+          "ref": "#o1.4",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_2",
+          "ref": "#o1.5",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_cover_2",
+          "ref": "#o1.6",
+          "volume_mm3": 3697.480891176764
+        },
+        {
+          "label": "main_service_border_2",
+          "ref": "#o1.7",
+          "volume_mm3": 269.01111472589366
+        },
+        {
+          "label": "main_service_fastener_3",
+          "ref": "#o1.8",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_4",
+          "ref": "#o1.9",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_cover_3",
+          "ref": "#o1.10",
+          "volume_mm3": 3697.480891176654
+        },
+        {
+          "label": "main_service_border_3",
+          "ref": "#o1.11",
+          "volume_mm3": 269.01111472589366
+        },
+        {
+          "label": "main_service_fastener_5",
+          "ref": "#o1.12",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_fastener_6",
+          "ref": "#o1.13",
+          "volume_mm3": 7.004080794651716
+        },
+        {
+          "label": "main_service_cover_4",
+          "ref": "#o1.14",
+          "volume_mm3": 3697.4808911769514
+        },
+        {
+          "label": "main_service_border_4",
+          "ref": "#o1.15",
+          "volume_mm3": 269.0111147261611
+        },
+        {
+          "label": "main_service_fastener_7",
+          "ref": "#o1.16",
+          "volume_mm3": 7.004080794651715
+        },
+        {
+          "label": "main_service_fastener_8",
+          "ref": "#o1.17",
+          "volume_mm3": 7.004080794651715
+        }
+      ]
+    }
+  ]
+}

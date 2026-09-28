@@ -1,0 +1,632 @@
+{
+  "ok": true,
+  "generated": "2026-09-14",
+  "method": "60 mm slabs each side of the seam; common central cylinder of radius min(width,height)*0.31+8 removed so internal nozzle/dish recesses are ignored; slabs translated to a common origin; symmetric BREP difference compared in both directions (volume <= 1e-3 mm3); half slabs compared for zero taper; section extent matched against the full 60 mm extrusion of the config profile. Config constants read from halberd_shoulder_variants.py; build factories never called.",
+  "tolerances_mm3": 0.001,
+  "variants": [
+    {
+      "file": "Halberd_B1_Needle.step",
+      "label": "B1_Needle",
+      "part_count": 15,
+      "labels": [
+        "booster_body",
+        "booster_fin_1",
+        "booster_fin_2",
+        "booster_fin_3",
+        "booster_fin_4",
+        "booster_nozzle",
+        "mount_1",
+        "mount_2",
+        "radome",
+        "sustainer_body",
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3",
+        "sustainer_fin_4",
+        "sustainer_nozzle"
+      ],
+      "model_bbox_mm": {
+        "min": [
+          -1800.0000001,
+          -132.17593517329541,
+          -132.17593517329541
+        ],
+        "max": [
+          1800.0000001000003,
+          132.1759351732954,
+          132.1759351732954
+        ],
+        "size": [
+          3600.0000002000006,
+          264.3518703465908,
+          264.3518703465908
+        ]
+      },
+      "seam_mm": -360.0,
+      "seam_section_mm": {
+        "width": 170.00000020000004,
+        "height": 170.0000002,
+        "config_width": 170,
+        "config_height": 170
+      },
+      "outer_band": {
+        "cylinder_radius_mm": 60.7,
+        "full_band_mm3": {
+          "sustainer_minus_booster": 0,
+          "booster_minus_sustainer": 0
+        },
+        "half_slab_sustainer_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "half_slab_booster_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "extrusion_match_mm3": {
+          "expected_minus_sustainer": 0,
+          "sustainer_minus_expected": 0,
+          "expected_minus_booster": 0,
+          "booster_minus_expected": 0
+        }
+      },
+      "inlet_probes": [
+        {
+          "index": 0,
+          "angle_degrees": 45.0,
+          "probe_center_mm": [
+            375.0,
+            71.23401871576773,
+            71.23401871576773
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 1,
+          "angle_degrees": 135.0,
+          "probe_center_mm": [
+            375.0,
+            71.23401871576773,
+            -71.23401871576773
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 2,
+          "angle_degrees": -135.0,
+          "probe_center_mm": [
+            375.0,
+            -71.23401871576773,
+            -71.23401871576773
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 3,
+          "angle_degrees": -45.0,
+          "probe_center_mm": [
+            375.0,
+            -71.23401871576773,
+            71.23401871576773
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        }
+      ],
+      "nozzles": {
+        "sustainer_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        },
+        "booster_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        }
+      }
+    },
+    {
+      "file": "Halberd_B2_Broadhead.step",
+      "label": "B2_Broadhead",
+      "part_count": 14,
+      "labels": [
+        "booster_body",
+        "booster_fin_1",
+        "booster_fin_2",
+        "booster_fin_3",
+        "booster_fin_4",
+        "booster_nozzle",
+        "mount_1",
+        "radome",
+        "sustainer_body",
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3",
+        "sustainer_fin_4",
+        "sustainer_nozzle"
+      ],
+      "model_bbox_mm": {
+        "min": [
+          -1500.0000001000003,
+          -192.9871183553385,
+          -192.9871183553385
+        ],
+        "max": [
+          1500.0000001000003,
+          192.98711835533848,
+          192.98711835533848
+        ],
+        "size": [
+          3000.0000002000006,
+          385.974236710677,
+          385.974236710677
+        ]
+      },
+      "seam_mm": -300.0,
+      "seam_section_mm": {
+        "width": 250.00000020000007,
+        "height": 250.0000002,
+        "config_width": 250,
+        "config_height": 250
+      },
+      "outer_band": {
+        "cylinder_radius_mm": 85.5,
+        "full_band_mm3": {
+          "sustainer_minus_booster": 0,
+          "booster_minus_sustainer": 0
+        },
+        "half_slab_sustainer_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "half_slab_booster_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "extrusion_match_mm3": {
+          "expected_minus_sustainer": 0,
+          "sustainer_minus_expected": 0,
+          "expected_minus_booster": 0,
+          "booster_minus_expected": 0
+        }
+      },
+      "inlet_probes": [
+        {
+          "index": 0,
+          "angle_degrees": 45.0,
+          "probe_center_mm": [
+            515.0,
+            105.96194077712559,
+            105.96194077712559
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 1,
+          "angle_degrees": 135.0,
+          "probe_center_mm": [
+            515.0,
+            105.96194077712559,
+            -105.96194077712559
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 2,
+          "angle_degrees": -135.0,
+          "probe_center_mm": [
+            515.0,
+            -105.96194077712559,
+            -105.96194077712559
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 3,
+          "angle_degrees": -45.0,
+          "probe_center_mm": [
+            515.0,
+            -105.96194077712559,
+            105.96194077712559
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        }
+      ],
+      "nozzles": {
+        "sustainer_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.99999999999999
+        },
+        "booster_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        }
+      }
+    },
+    {
+      "file": "Halberd_B3_Chisel.step",
+      "label": "B3_Chisel",
+      "part_count": 15,
+      "labels": [
+        "booster_body",
+        "booster_fin_1",
+        "booster_fin_2",
+        "booster_fin_3",
+        "booster_fin_4",
+        "booster_nozzle",
+        "mount_1",
+        "mount_2",
+        "radome",
+        "sustainer_body",
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3",
+        "sustainer_fin_4",
+        "sustainer_nozzle"
+      ],
+      "model_bbox_mm": {
+        "min": [
+          -1680.0000001000003,
+          -166.82416745143624,
+          -166.82416745143624
+        ],
+        "max": [
+          1680.0000001000003,
+          166.82416745143624,
+          166.82416745143624
+        ],
+        "size": [
+          3360.0000002000006,
+          333.6483349028725,
+          333.6483349028725
+        ]
+      },
+      "seam_mm": -336.0,
+      "seam_section_mm": {
+        "width": 208.00000020000533,
+        "height": 208.0000002,
+        "config_width": 208,
+        "config_height": 208
+      },
+      "outer_band": {
+        "cylinder_radius_mm": 72.48,
+        "full_band_mm3": {
+          "sustainer_minus_booster": 0,
+          "booster_minus_sustainer": 0
+        },
+        "half_slab_sustainer_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "half_slab_booster_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "extrusion_match_mm3": {
+          "expected_minus_sustainer": 0,
+          "sustainer_minus_expected": 0,
+          "expected_minus_booster": 0,
+          "booster_minus_expected": 0
+        }
+      },
+      "inlet_probes": [
+        {
+          "index": 0,
+          "angle_degrees": 45.0,
+          "probe_center_mm": [
+            525.0,
+            100.48528137423857,
+            100.48528137423857
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 1,
+          "angle_degrees": 135.0,
+          "probe_center_mm": [
+            525.0,
+            100.48528137423857,
+            -100.48528137423857
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 2,
+          "angle_degrees": -135.0,
+          "probe_center_mm": [
+            525.0,
+            -100.48528137423857,
+            -100.48528137423857
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 3,
+          "angle_degrees": -45.0,
+          "probe_center_mm": [
+            525.0,
+            -100.48528137423857,
+            100.48528137423857
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        }
+      ],
+      "nozzles": {
+        "sustainer_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        },
+        "booster_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        }
+      }
+    },
+    {
+      "file": "Halberd_B4_Manta.step",
+      "label": "B4_Manta",
+      "part_count": 14,
+      "labels": [
+        "booster_body",
+        "booster_fin_1",
+        "booster_fin_2",
+        "booster_fin_3",
+        "booster_fin_4",
+        "booster_nozzle",
+        "mount_1",
+        "radome",
+        "sustainer_body",
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3",
+        "sustainer_fin_4",
+        "sustainer_nozzle"
+      ],
+      "model_bbox_mm": {
+        "min": [
+          -1600.0000001000003,
+          -287.60665835892974,
+          -107.06474473012773
+        ],
+        "max": [
+          1600.0000001000003,
+          287.6066583589297,
+          107.06474473012781
+        ],
+        "size": [
+          3200.0000002000006,
+          575.2133167178595,
+          214.12948946025554
+        ]
+      },
+      "seam_mm": -320.0,
+      "seam_section_mm": {
+        "width": 320.0000002,
+        "height": 144.00000020000004,
+        "config_width": 320,
+        "config_height": 144
+      },
+      "outer_band": {
+        "cylinder_radius_mm": 52.64,
+        "full_band_mm3": {
+          "sustainer_minus_booster": 0,
+          "booster_minus_sustainer": 0
+        },
+        "half_slab_sustainer_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "half_slab_booster_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "extrusion_match_mm3": {
+          "expected_minus_sustainer": 0,
+          "sustainer_minus_expected": 0,
+          "expected_minus_booster": 0,
+          "booster_minus_expected": 0
+        }
+      },
+      "inlet_probes": [
+        {
+          "index": 0,
+          "angle_degrees": 45.0,
+          "probe_center_mm": [
+            380.0,
+            149.45584412271572,
+            61.45584412271571
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 1,
+          "angle_degrees": 135.0,
+          "probe_center_mm": [
+            380.0,
+            149.45584412271572,
+            -61.45584412271571
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 2,
+          "angle_degrees": -135.0,
+          "probe_center_mm": [
+            380.0,
+            -149.45584412271572,
+            -61.45584412271571
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 3,
+          "angle_degrees": -45.0,
+          "probe_center_mm": [
+            380.0,
+            -149.45584412271572,
+            61.45584412271571
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        }
+      ],
+      "nozzles": {
+        "sustainer_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.99999999999999
+        },
+        "booster_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        }
+      }
+    },
+    {
+      "file": "Halberd_B5_Sculpted.step",
+      "label": "B5_Sculpted",
+      "part_count": 15,
+      "labels": [
+        "booster_body",
+        "booster_fin_1",
+        "booster_fin_2",
+        "booster_fin_3",
+        "booster_fin_4",
+        "booster_nozzle",
+        "mount_1",
+        "mount_2",
+        "radome",
+        "sustainer_body",
+        "sustainer_fin_1",
+        "sustainer_fin_2",
+        "sustainer_fin_3",
+        "sustainer_fin_4",
+        "sustainer_nozzle"
+      ],
+      "model_bbox_mm": {
+        "min": [
+          -1750.0000001,
+          -173.1881284821152,
+          -173.1881284821152
+        ],
+        "max": [
+          1750.0000001,
+          173.18812848211516,
+          173.18812848211516
+        ],
+        "size": [
+          3500.0000002,
+          346.3762569642304,
+          346.3762569642304
+        ]
+      },
+      "seam_mm": -350.0,
+      "seam_section_mm": {
+        "width": 226.0000002,
+        "height": 226.0000002,
+        "config_width": 226,
+        "config_height": 226
+      },
+      "outer_band": {
+        "cylinder_radius_mm": 78.06,
+        "full_band_mm3": {
+          "sustainer_minus_booster": 0,
+          "booster_minus_sustainer": 0
+        },
+        "half_slab_sustainer_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "half_slab_booster_mm3": {
+          "front_minus_rear": 0,
+          "rear_minus_front": 0
+        },
+        "extrusion_match_mm3": {
+          "expected_minus_sustainer": 0,
+          "sustainer_minus_expected": 0,
+          "expected_minus_booster": 0,
+          "booster_minus_expected": 0
+        }
+      },
+      "inlet_probes": [
+        {
+          "index": 0,
+          "angle_degrees": 45.0,
+          "probe_center_mm": [
+            485.0,
+            88.10407640085654,
+            88.10407640085654
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 1,
+          "angle_degrees": 135.0,
+          "probe_center_mm": [
+            485.0,
+            88.10407640085654,
+            -88.10407640085654
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 2,
+          "angle_degrees": -135.0,
+          "probe_center_mm": [
+            485.0,
+            -88.10407640085654,
+            -88.10407640085654
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        },
+        {
+          "index": 3,
+          "angle_degrees": -45.0,
+          "probe_center_mm": [
+            485.0,
+            -88.10407640085654,
+            88.10407640085654
+          ],
+          "blocked_by": [],
+          "anchored_in_body_bbox": true
+        }
+      ],
+      "nozzles": {
+        "sustainer_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        },
+        "booster_nozzle": {
+          "distance_to_body_mm": 0.0,
+          "body_backing_intrusion_mm3": 0,
+          "nozzle_backing_material_mm3": 63.999999999999986
+        }
+      }
+    }
+  ],
+  "scope": "CAD exterior silhouette studies; aircraft rack fit and runtime not verified"
+}

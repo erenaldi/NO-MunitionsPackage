@@ -1,0 +1,204 @@
+[
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r16_focus.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_focus_oblique.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            -1.0,
+            0.65
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_focus_oblique_opposed.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            -0.3,
+            1.0,
+            0.65
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_focus_side.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "up": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_focus_grazing.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.18,
+            1.0,
+            0.08
+          ],
+          "up": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_focus_end.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "up": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "width": 1500,
+        "height": 1500
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r16.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_whole.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.35,
+            1.0,
+            0.65
+          ]
+        },
+        "width": 2200,
+        "height": 850
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_opposite.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            -0.35,
+            -1.0,
+            0.65
+          ]
+        },
+        "width": 2200,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r16_separated.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_separated.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.3,
+            1.0,
+            0.65
+          ]
+        },
+        "width": 2200,
+        "height": 850
+      }
+    ]
+  },
+  {
+    "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\kris_joint_reference.step",
+    "mode": "view",
+    "display": {
+      "mode": "shaded_edges"
+    },
+    "output": {
+      "padding": 0.08,
+      "viewLabels": false
+    },
+    "outputs": [
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_Kris_joint_oblique.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.35,
+            1.0,
+            0.65
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R16_Kris_joint_side.png",
+        "camera": {
+          "projection": "orthographic",
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "up": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "width": 1800,
+        "height": 1200
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {"input":"STEP/R5_ABC_Deployed_TrueScale.step","mode":"view","outputs":[
+    {"path":"reviews/R5_ABC_deployed_true_scale.png","camera":{"direction":[0,0,1]}}
+  ],"render":{"sizeProfile":"presentation","padding":0.10,"viewLabels":false}},
+  {"input":"STEP/R5_ABC_Stowed_TrueScale.step","mode":"view","outputs":[
+    {"path":"reviews/R5_ABC_stowed_true_scale.png","camera":{"direction":[0,0,1]}}
+  ],"render":{"sizeProfile":"presentation","padding":0.10,"viewLabels":false}}
+]

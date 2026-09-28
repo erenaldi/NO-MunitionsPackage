@@ -1,0 +1,165 @@
+{
+  "ok": true,
+  "source": "Halberd_Shoulder_Hybrid.step",
+  "source_sha256": "ab03c814d6770706e4de83c0a7c50828560e4e920927a0ea911ef966835c0231",
+  "output": "Halberd_Shoulder_Hybrid_Closed.glb",
+  "output_sha256": "220d1c8fe7cddf4ec9ad73c313e7001ce4227b06c6a36725b93371b8f15761e3",
+  "backend": "OCCT / build123d; native GLB review bypasses STEP viewport tessellation",
+  "basis": "CAD (X,Y,Z) mm -> glTF (X,Z,-Y) metres; scale 0.001",
+  "chord_tolerance_mm": 0.12,
+  "angular_tolerance_rad": 0.12,
+  "parts": [
+    {
+      "label": "sustainer_body",
+      "vertices": 13524,
+      "triangles": 27044,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.049967428130118584
+    },
+    {
+      "label": "radome",
+      "vertices": 3317,
+      "triangles": 6630,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0079573995011969
+    },
+    {
+      "label": "sustainer_nozzle",
+      "vertices": 896,
+      "triangles": 1788,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.0006198338161223484
+    },
+    {
+      "label": "intake_floor_1",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "sustainer_fin_1",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00011967160194870807
+    },
+    {
+      "label": "intake_floor_2",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "sustainer_fin_2",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00011967160194870807
+    },
+    {
+      "label": "intake_floor_3",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "sustainer_fin_3",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00011967160194870807
+    },
+    {
+      "label": "intake_floor_4",
+      "vertices": 271,
+      "triangles": 538,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.3588232476405885e-06
+    },
+    {
+      "label": "sustainer_fin_4",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00011967160194870807
+    },
+    {
+      "label": "booster_body",
+      "vertices": 1086,
+      "triangles": 2168,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.05193378524320439
+    },
+    {
+      "label": "booster_nozzle",
+      "vertices": 1002,
+      "triangles": 2000,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00045486166764929146
+    },
+    {
+      "label": "booster_fin_1",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00022156500510885904
+    },
+    {
+      "label": "booster_fin_2",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00022156500510885904
+    },
+    {
+      "label": "booster_fin_3",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00022156500510885904
+    },
+    {
+      "label": "booster_fin_4",
+      "vertices": 9,
+      "triangles": 14,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 0.00022156500510885904
+    },
+    {
+      "label": "mount_1",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.5499996744096282e-05
+    },
+    {
+      "label": "mount_2",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_m3": 1.5499991156161917e-05
+    }
+  ]
+}

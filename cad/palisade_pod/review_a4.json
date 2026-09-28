@@ -1,0 +1,24 @@
+{
+  "jobs": [
+    {
+      "input": "STEP/A4_LongFront_Bare.step", "mode": "view",
+      "outputs": [
+        {"path": "reviews/A4_Bare_iso.png", "camera": "iso"},
+        {"path": "reviews/A4_Bare_under_iso.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A4_Bare_side.png", "camera": "front"},
+        {"path": "reviews/A4_Bare_top.png", "camera": "top"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    },
+    {
+      "input": "STEP/A4_LongFront_Filled.step", "mode": "view",
+      "outputs": [
+        {"path": "reviews/A4_Filled_iso.png", "camera": "iso"},
+        {"path": "reviews/A4_Filled_under_iso.png", "camera": {"direction": [-1, 1, -0.8]}},
+        {"path": "reviews/A4_Filled_side.png", "camera": "front"},
+        {"path": "reviews/A4_Filled_top.png", "camera": "top"},
+        {"path": "reviews/A4_Filled_bottom.png", "camera": "bottom"},
+        {"path": "reviews/A4_Filled_end.png", "camera": "right"}
+      ], "output": {"sizeProfile": "assembly", "padding": 0.10}
+    }
+  ]
+}

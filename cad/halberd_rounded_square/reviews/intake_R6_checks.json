@@ -1,0 +1,150 @@
+{
+  "ok": true,
+  "parts": 17,
+  "cubic_samples": [
+    {
+      "u": 0.05,
+      "x": 143.33333333333331,
+      "roof_half_width_mm": 15.998200000000004,
+      "roof_height_mm": 146.92500010000006
+    },
+    {
+      "u": 0.1,
+      "x": 76.66666666666666,
+      "roof_half_width_mm": 15.985600000000003,
+      "roof_height_mm": 146.35000010000005
+    },
+    {
+      "u": 0.15,
+      "x": 10.000000000000028,
+      "roof_half_width_mm": 15.951400000000003,
+      "roof_height_mm": 145.77500010000006
+    },
+    {
+      "u": 0.2,
+      "x": -56.666666666666686,
+      "roof_half_width_mm": 15.884800000000004,
+      "roof_height_mm": 145.20000010000004
+    },
+    {
+      "u": 0.25,
+      "x": -123.33333333333331,
+      "roof_half_width_mm": 15.775000000000006,
+      "roof_height_mm": 144.62500010000005
+    },
+    {
+      "u": 0.3,
+      "x": -189.99999999999994,
+      "roof_half_width_mm": 15.611200000000004,
+      "roof_height_mm": 144.05000010000006
+    },
+    {
+      "u": 0.35,
+      "x": -256.66666666666663,
+      "roof_half_width_mm": 15.382600000000004,
+      "roof_height_mm": 143.47500010000005
+    },
+    {
+      "u": 0.4,
+      "x": -323.33333333333337,
+      "roof_half_width_mm": 15.078400000000002,
+      "roof_height_mm": 142.90000010000006
+    },
+    {
+      "u": 0.45,
+      "x": -390.0,
+      "roof_half_width_mm": 14.687800000000003,
+      "roof_height_mm": 142.32500010000004
+    },
+    {
+      "u": 0.5,
+      "x": -456.66666666666663,
+      "roof_half_width_mm": 14.200000000000003,
+      "roof_height_mm": 141.75000010000005
+    },
+    {
+      "u": 0.55,
+      "x": -523.3333333333334,
+      "roof_half_width_mm": 13.604200000000002,
+      "roof_height_mm": 141.17500010000006
+    },
+    {
+      "u": 0.6,
+      "x": -589.9999999999999,
+      "roof_half_width_mm": 12.889600000000003,
+      "roof_height_mm": 140.60000010000005
+    },
+    {
+      "u": 0.65,
+      "x": -656.6666666666666,
+      "roof_half_width_mm": 12.0454,
+      "roof_height_mm": 140.02500010000006
+    },
+    {
+      "u": 0.7,
+      "x": -723.3333333333333,
+      "roof_half_width_mm": 11.060800000000004,
+      "roof_height_mm": 139.45000010000004
+    },
+    {
+      "u": 0.75,
+      "x": -790.0,
+      "roof_half_width_mm": 9.925000000000002,
+      "roof_height_mm": 138.87500010000005
+    },
+    {
+      "u": 0.8,
+      "x": -856.6666666666667,
+      "roof_half_width_mm": 8.627199999999998,
+      "roof_height_mm": 138.30000010000006
+    },
+    {
+      "u": 0.85,
+      "x": -923.3333333333333,
+      "roof_half_width_mm": 7.156600000000003,
+      "roof_height_mm": 137.72500010000005
+    },
+    {
+      "u": 0.9,
+      "x": -990.0,
+      "roof_half_width_mm": 5.5024000000000015,
+      "roof_height_mm": 137.15000010000006
+    },
+    {
+      "u": 0.95,
+      "x": -1056.6666666666665,
+      "roof_half_width_mm": 3.653800000000003,
+      "roof_height_mm": 136.57500010000004
+    }
+  ],
+  "first_half_width_reduction_fraction": 0.1249999999999998,
+  "final_quarter_width_reduction_fraction": 0.5781250000000002,
+  "inlet_unchanged": true,
+  "side_roof_profile_unchanged": true,
+  "front_edge_maximum_deviation_mm": 1.4232575139917157e-14,
+  "fin_contact_mm3": 1561.7976024662723,
+  "channel_back_x_mm": -444.97392256565956,
+  "nonhousing_parts_and_colors_unchanged": true,
+  "native_validation": [
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R6",
+      "occurrenceCount": 17,
+      "prototypeCount": 12,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "entry": "cad/halberd_rounded_square/STEP/Selected_Intake_R6_Separated",
+      "occurrenceCount": 17,
+      "prototypeCount": 12,
+      "selfIntersectionCheck": "every-placement",
+      "failureCount": 0,
+      "parts": [],
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "input": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\STEP\\halberd_r18_layout_base.step",
+  "mode": "view",
+  "display": {
+    "mode": "shaded_edges"
+  },
+  "output": {
+    "padding": 0.08,
+    "viewLabels": false
+  },
+  "outputs": [
+    {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R18_base_upper.png",
+      "camera": {
+        "projection": "orthographic",
+        "direction": [0.0, 0.0, 1.0],
+        "up": [0.0, -1.0, 0.0]
+      },
+      "width": 2800,
+      "height": 620
+    },
+    {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R18_base_lateral_positive.png",
+      "camera": {
+        "projection": "orthographic",
+        "direction": [0.0, 1.0, 0.0],
+        "up": [0.0, 0.0, 1.0]
+      },
+      "width": 2800,
+      "height": 620
+    },
+    {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R18_base_lower.png",
+      "camera": {
+        "projection": "orthographic",
+        "direction": [0.0, 0.0, -1.0],
+        "up": [0.0, 1.0, 0.0]
+      },
+      "width": 2800,
+      "height": 620
+    },
+    {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R18_base_lateral_negative.png",
+      "camera": {
+        "projection": "orthographic",
+        "direction": [0.0, -1.0, 0.0],
+        "up": [0.0, 0.0, -1.0]
+      },
+      "width": 2800,
+      "height": 620
+    },
+    {
+      "path": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\halberd_rounded_square\\reviews\\R18_base_whole.png",
+      "camera": {
+        "projection": "orthographic",
+        "direction": [0.35, 1.0, 0.65],
+        "up": [0.0, 0.0, 1.0]
+      },
+      "width": 2800,
+      "height": 620
+    }
+  ]
+}
