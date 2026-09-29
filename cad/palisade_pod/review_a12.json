@@ -1,0 +1,226 @@
+{
+ "jobs": [
+  {
+   "input": "STEP/A12_Crop_C1_front.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C1_front_a.png",
+     "camera": {
+      "direction": [
+       1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C1_front_b.png",
+     "camera": {
+      "direction": [
+       1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C1_front_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  },
+  {
+   "input": "STEP/A12_Crop_C1_rear.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C1_rear_a.png",
+     "camera": {
+      "direction": [
+       -1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C1_rear_b.png",
+     "camera": {
+      "direction": [
+       -1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C1_rear_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  },
+  {
+   "input": "STEP/A12_Crop_C2_front.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C2_front_a.png",
+     "camera": {
+      "direction": [
+       1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C2_front_b.png",
+     "camera": {
+      "direction": [
+       1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C2_front_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  },
+  {
+   "input": "STEP/A12_Crop_C2_rear.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C2_rear_a.png",
+     "camera": {
+      "direction": [
+       -1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C2_rear_b.png",
+     "camera": {
+      "direction": [
+       -1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C2_rear_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  },
+  {
+   "input": "STEP/A12_Crop_C3_front.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C3_front_a.png",
+     "camera": {
+      "direction": [
+       1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C3_front_b.png",
+     "camera": {
+      "direction": [
+       1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C3_front_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  },
+  {
+   "input": "STEP/A12_Crop_C3_rear.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C3_rear_a.png",
+     "camera": {
+      "direction": [
+       -1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C3_rear_b.png",
+     "camera": {
+      "direction": [
+       -1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C3_rear_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  }
+ ]
+}

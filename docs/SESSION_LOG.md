@@ -2,6 +2,12 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-29 — Palisade A12 additive sensor concepts C1/C2/C3 built and checked (awaiting user pick)
+
+- User direction: sensors first, on the front and rear; nothing may be subtracted from the existing front/back, only built on top; must look sleek and grounded. Built three contrastive studies on the approved A11 nose and A10 rear cap: C1 two-step tip caps (4+8 mm skin, lens button), C2 stadium cheek pads (6 mm, +1.5 mm lens window), C3 long lower chine bars (7 mm, lens strip). Method: sensor = (footprint prism ∩ shell offset by T) − shell, so shells are untouched. Nothing on the roof (pod hangs under the airframe) or below the Z -223 belly. Sources `cad/palisade_pod/src/sensors.py`, `A12_Sensors_C{1,2,3}.py` -> `STEP/A12_Sensors_C*.step`; review-only crops `A12_Crop_C*_{front,rear}.step`; `review_a12.json`, renders `reviews/A12_C*_{front,rear}_{a,b,side}.png`.
+- Verified: `checks/check_a12.py` PASS -> `reviews/A12_Sensors_Checks.json`: every non-sensor part Boolean-identical to A11 (nothing subtracted); each sensor a valid solid, zero overlap with shells/each other, seated (gap 0.0 mm to shell or supporting sensor), inside Z -223.05..0.05 and |Y| <= 200.05; X spans C1 3488 mm (lens buttons protrude ~6 mm past shell tips), C2/C3 3482 mm. The check caught a real defect in the first C2 (front pad reached Y -202.1 mm); pads moved out along the taper and rebuilt. An earlier check run produced no report because output was piped through `tail`; reran with exit status checked.
+- Not verified/decided: user visual pick (nothing approved); renders are neutral grey (no lens colour); C3 bar tails fade into the lower curve; sensor field of view/function not modelled. Next: user picks or blends a concept, then a detail pass.
+
 ## 2026-09-28 23:10 -05:00 — Palisade A11 nose APPROVED by user and recorded
 
 - User viewed A11 (renders + CAD Viewer) and said "Approve, record it". A11 supersedes A10's forward shell as the approved housing silhouette; A10 files kept as previous state. Recorded in `cad/palisade_pod/REVIEW.md` (header note + new A11 section), `MUNITIONS.md` §12 dated entry, `plans/2026-09-27-palisade-pod-housing-concepts.md` active context, and the entry below.
@@ -13,6 +19,27 @@ Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "
 - Colour-extracted the teal stroke (2.027 px/mm from the 223 mm beam height): nose ~487 mm long, tip near mid-height (Z about -135) rather than on the belly, underside rising toward the tip. Implemented as a smooth fit, `src/teal_nose.py` `profile()`: independent superellipse roof (n1.75,m1.4) and belly (n1.88,m2.59), asymmetric, blunt 24x12 tip (first symmetric-ellipse attempt rejected by user); stations densified near tip to remove a belly loft wobble; forward shell only. New `src/A11_TealNose_{Bare,Filled}.py` -> `STEP/A11_TealNose_*.step`, `review_a11.json`, `reviews/A11_*.png`. A10 files untouched (approved fallback). Rear, A2 sides, boxes unchanged.
 - Verified: `checks/check_a11.py` PASS -> `reviews/A11_TealNose_Checks.json` (9/13 parts; every part except `forward_sensor_shell` Boolean-identical to A10; nose 1325..1812; tip 24x12 centred ~-135; roof monotonically descending, belly monotonically rising; envelope 3482x400x223; Spear 1200/158.013). Primary inspected `A11_Bare_side.png` and `A11_Filled_iso.png`: smooth rounded nose.
 - Not done: user visual approval (A10 remains the approved silhouette until then); sensor apertures; fit evidence. Not committed.
+
+## 2026-09-28 — Session end: R19 handoff written
+
+- User approved the forward prototype and asked to propagate to the full body; this session stopped before any full-body work. No geometry changed after the prototype (doc hash `129c3297...e314a`, checker PASS).
+- Handoff for the next session: `cad/halberd_rounded_square/HANDOFF_R19_SURFACE_DETAIL.md` (runtime, decisions, verified state, reusable helpers, OCC pitfalls, next step). Approval recorded in `R19_SURFACE_DETAIL_DIRECTION.md`.
+- Next: plan and build full-body R19 detailing in a fresh session. Nothing staged or committed.
+
+## 2026-09-28 — Surface-detail method saved for reuse (shared helper + CAD notes)
+
+- User asked to keep the fast method for future use. New `cad/shared/surface_detail.py`: `clock_frame`, `skin_point` (ray hit), `backing_depth` (ray-based wall), `checked_cut`, `seated_hardware` (asset-agnostic; fastener tools passed in). `src/halberd_r19_surface_proto.py` now imports it via `sys.path` (private copies removed); `cad/README.md` shared row updated. Lessons added to `~/.claude/domain/cad.md` ("Surface detailing construction").
+- Verified: rebuild after the refactor gives the identical document hash `129c3297...e314a`; screw points identical, backing depth vs R18 `available_wall` differs <=6e-14 mm; `cadgen store why` lists `surface_detail.py` in the build closure. Build 40 s.
+- Next: unchanged (user approval of round details, then full-body propagation). Nothing staged or committed.
+
+## 2026-09-28 — Halberd R19 prototype: round details + build speed-up (26 min -> 61 s)
+
+- User reviewed first packet: "Fantastic, but there should be some circular details too". Added 4 round engraved panels to the forward prototype, each with different hardware: C01 Ø28 4-bolt (+Y, X=870), C02 Ø20 3-bolt (clock 225, X=900), C03 Ø14 centre screw (clock 315, X=960), C04 Ø24 plus-pattern (-Z, X=1010). Recorded in `R19_SURFACE_DETAIL_DIRECTION.md`.
+- Speed: profiled. Booleans cost 0.1-0.5 s; R18 `measured_skin_point` cost 3-10 s per point (stepped inside tests + all-face scan), ~67 s per panel. R19 now uses its own single ray/face intersection `skin_point` + `slotted_hardware` (R18 shared helpers untouched). Verified identical to R18 method on 6 sites: point diff <=1.0e-7 mm, normal dot 1.0, same face; ~0.02 s vs 3-10 s. Removed a redundant in-build Boolean head-overlap guard (checker keeps it). Build 61 s (was ~26 min); checker 107 s (bisection probes -> ray hits with inside/outside sanity checks); renders 37 s.
+- Tried and rejected: one multi-tool OCC cut for all panel cutters. It removed 331.3 mm3 where at most 322.2 was possible (wrong geometry) and was not faster (14.4 s vs 17 s). Sequential checked cuts kept.
+- Checker fix (not a relaxation): the "panel centre skin intact" probe hit C03's legitimate centre screw seat; it now probes the nearest interior point >2.5 mm from every screw.
+- Verified: `checks/check_halberd_r19_surface_proto.py` PASS, 64 parts, 24 ring heads, 13 panels, 32 panel fasteners, 790.97 mm3 removed = metadata, doc hash `129c3297...e314a`. Renders `reviews/R19_proto_*.png` re-inspected by primary.
+- Next: user approval of round details, then propagate rings/panels to the full body, stage joint and booster aft joint. Nothing staged or committed.
 
 ## 2026-09-28 — Halberd R19 surface-detail prototype (radial screw ring + Kris-density panels)
 

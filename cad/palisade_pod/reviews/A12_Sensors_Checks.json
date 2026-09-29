@@ -1,0 +1,312 @@
+{
+ "ok": true,
+ "shells_identical_to_A11": true,
+ "additive_only": true,
+ "user_visual_approval": false,
+ "concepts": {
+  "C1": {
+   "parts": 6,
+   "x_span_mm": 3488.0,
+   "sensors": {
+    "sensor_front_cap_step": {
+     "volume_mm3": 709922.7,
+     "x": [
+      1560.0,
+      1812.0
+     ],
+     "z": [
+      -218.2,
+      -22.9
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_cap": {
+     "volume_mm3": 423339.7,
+     "x": [
+      1640.0,
+      1812.0
+     ],
+     "z": [
+      -214.5,
+      -38.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_lens": {
+     "volume_mm3": 1275.2,
+     "x": [
+      1812.0,
+      1815.0
+     ],
+     "z": [
+      -143.0,
+      -127.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_cap_step": {
+     "volume_mm3": 517694.2,
+     "x": [
+      -1670.0,
+      -1490.0
+     ],
+     "z": [
+      -213.4,
+      -9.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_cap": {
+     "volume_mm3": 298378.6,
+     "x": [
+      -1670.0,
+      -1550.0
+     ],
+     "z": [
+      -204.0,
+      -19.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_lens": {
+     "volume_mm3": 433.9,
+     "x": [
+      -1673.0,
+      -1670.0
+     ],
+     "z": [
+      -116.0,
+      -107.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    }
+   }
+  },
+  "C2": {
+   "parts": 8,
+   "x_span_mm": 3482.0,
+   "sensors": {
+    "sensor_front_port_pad": {
+     "volume_mm3": 69450.4,
+     "x": [
+      1485.0,
+      1685.0
+     ],
+     "z": [
+      -153.0,
+      -91.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_port_lens": {
+     "volume_mm3": 8978.8,
+     "x": [
+      1498.0,
+      1672.0
+     ],
+     "z": [
+      -140.0,
+      -104.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_starboard_pad": {
+     "volume_mm3": 69450.4,
+     "x": [
+      1485.0,
+      1685.0
+     ],
+     "z": [
+      -153.0,
+      -91.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_starboard_lens": {
+     "volume_mm3": 8978.8,
+     "x": [
+      1498.0,
+      1672.0
+     ],
+     "z": [
+      -140.0,
+      -104.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_port_pad": {
+     "volume_mm3": 35970.4,
+     "x": [
+      -1565.0,
+      -1455.0
+     ],
+     "z": [
+      -142.5,
+      -80.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_port_lens": {
+     "volume_mm3": 4119.5,
+     "x": [
+      -1552.0,
+      -1468.0
+     ],
+     "z": [
+      -129.5,
+      -93.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_starboard_pad": {
+     "volume_mm3": 35970.4,
+     "x": [
+      -1565.0,
+      -1455.0
+     ],
+     "z": [
+      -142.5,
+      -80.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_starboard_lens": {
+     "volume_mm3": 4119.5,
+     "x": [
+      -1552.0,
+      -1468.0
+     ],
+     "z": [
+      -129.5,
+      -93.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    }
+   }
+  },
+  "C3": {
+   "parts": 8,
+   "x_span_mm": 3482.0,
+   "sensors": {
+    "sensor_front_port_bar": {
+     "volume_mm3": 58373.5,
+     "x": [
+      1460.0,
+      1740.0
+     ],
+     "z": [
+      -180.0,
+      -150.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_port_lens": {
+     "volume_mm3": 4293.0,
+     "x": [
+      1480.0,
+      1720.0
+     ],
+     "z": [
+      -171.0,
+      -159.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_starboard_bar": {
+     "volume_mm3": 58373.5,
+     "x": [
+      1460.0,
+      1740.0
+     ],
+     "z": [
+      -180.0,
+      -150.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_starboard_lens": {
+     "volume_mm3": 4293.0,
+     "x": [
+      1480.0,
+      1720.0
+     ],
+     "z": [
+      -171.0,
+      -159.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_port_bar": {
+     "volume_mm3": 33203.5,
+     "x": [
+      -1580.0,
+      -1420.0
+     ],
+     "z": [
+      -180.0,
+      -150.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_port_lens": {
+     "volume_mm3": 2130.6,
+     "x": [
+      -1560.0,
+      -1440.0
+     ],
+     "z": [
+      -171.0,
+      -159.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_starboard_bar": {
+     "volume_mm3": 33203.5,
+     "x": [
+      -1580.0,
+      -1420.0
+     ],
+     "z": [
+      -180.0,
+      -150.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_starboard_lens": {
+     "volume_mm3": 2130.6,
+     "x": [
+      -1560.0,
+      -1440.0
+     ],
+     "z": [
+      -171.0,
+      -159.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    }
+   }
+  }
+ }
+}
