@@ -2,7 +2,7 @@
   "jobs": [
     {
       "input": "STEP/A10_DroopedEnds_Bare.step", "mode": "view",
-      "display": {"mode": "shaded"},
+      "display": {"mode": "solid"},
       "outputs": [
         {"path": "reviews/A10_Bare_iso.png", "camera": "iso"},
         {"path": "reviews/A10_Bare_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},
@@ -12,7 +12,7 @@
     },
     {
       "input": "STEP/A10_DroopedEnds_Filled.step", "mode": "view",
-      "display": {"mode": "shaded"},
+      "display": {"mode": "solid"},
       "outputs": [
         {"path": "reviews/A10_Filled_iso.png", "camera": "iso"},
         {"path": "reviews/A10_Filled_opposed.png", "camera": {"direction": [-1, 1, -0.8]}},

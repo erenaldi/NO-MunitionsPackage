@@ -1,10 +1,13 @@
 # HKP-1 Palisade housing — three concept directions
 
-Date: 2026-09-27. Lifecycle: A2 **open-side housing silhouette** remains
-`concept-approved`; the revised **front and rear A9 continuous curves** are
-`cad-review`. The user
-selected A's basic form, requested the four box skins fill the sides, and
-approved revised A2 bare/filled views. The interceptor visual approval at
+Date: 2026-09-27 (A10 approval 2026-09-28). Lifecycle: A2 **open-side
+housing silhouette** remains `concept-approved`; the **A10 housing
+silhouette** — a 558 mm teal-dome wedge nose (`roof = -211 mm·t³`, belly
+flush at −223, blunt 24×12 mm tip) plus a stubbier 345 mm level rear cap —
+is the **user-approved housing silhouette**. The user selected A's basic
+form, requested the four box skins fill the sides, and approved A2
+bare/filled views. Sensor end apertures remain deferred until a separately
+reviewed feature gate. The interceptor visual approval at
 `../palisade_interceptor/STEP/Spear_ACMWrap.step`
 is independent. Authority: `../../plans/2026-09-27-palisade-pod-housing-concepts.md`.
 
@@ -22,6 +25,7 @@ is independent. Authority: `../../plans/2026-09-27-palisade-pod-housing-concepts
   sweep, detailed boxes, individual split shutters and powered release logic.
 - Next-gate files: this review, `reviews/Palisade_Underside_Comparison.png`,
   `reviews/Palisade_Dorsal_Comparison.png`, `reviews/A2_OpenSides_Review.png`,
+  `reviews/A10_DroopedEnds_Review.png`, `reviews/A10_DroopedEnds_Checks.json`,
   `reviews/A9_ContinuousEnds_Review.png`, `reviews/A9_ContinuousEnds_Checks.json`,
   `reviews/A8_RoundedTips_Review.png`, `reviews/A8_RoundedTips_Checks.json`,
   `reviews/A7_LevelBeam_Review.png`, `reviews/A7_LevelBeam_Checks.json`,
@@ -474,3 +478,51 @@ window position. Restoring two outward-looking apertures must be a separately
 reviewed local feature that does not undo the selected continuous outline.
 The 3.5 m length, actual aircraft/pylon fit, donor doors and powered release
 are still unverified.
+
+## A10 — approved teal-dome wedge nose and stubbier level rear
+
+After A9, the user judged the level continuous ends **"still not close"**:
+the front tip must drop down like their drawing and the rear be slightly
+stubbier. The iteration chain: a cosine-eased fold (rejected — **"the
+frontal nose is gone; it should have the same slope as A9 but a vertical
+tangent intersection at a lower height than exactly halfway"**), a 60 mm
+nodding A9-slope teardrop (approved in concept, then **"lengthen the front
+tip by 2x"**), a 930 mm 2× pass corrected to **1.2× (558 mm)**, a
+horizontal-belly wedge with the A9-slope roof (rejected — **"the bottom
+slope isn't as horizontal in the drawing"**), and finally the user's teal
+outline over the render defining a **dome**: roof holds the beam top,
+descends gently through the middle, plunges at the end and rounds into the
+flush belly line. `src/drooped_ends.py` implements that outline:
+`roof = -211 mm·t³`, belly constant −223 mm, blunt 24×12 mm tip, 558 mm
+forward fairing, level A9-profile 345 mm rear cap (385−40). The user then
+approved this silhouette.
+
+- First dense-grid lesson: the 15-station non-ruled loft **folded** where
+  the cosine collapse converged hardest (empty x-slices around X 1650–1700,
+  a −243.7 mm overshoot and broken identical-copy Booleans); the A9 sqrt
+  law at 15 stations is the stable construction and was kept.
+- [The teal-outline render versus the user's drawing](reviews/A10_DroopedEnds_Review.png),
+  plus eleven saved-STEP solid views generated from `review_a10.json`.
+  The self-updated cadgen renamed the display mode `shaded` to `solid` and
+  needed a viewer-daemon restart and a BOM-free job file.
+- [A10 bare](http://127.0.0.1:3248/?file=STEP/A10_DroopedEnds_Bare.step),
+  [A10 filled](http://127.0.0.1:3248/?file=STEP/A10_DroopedEnds_Filled.step).
+- `checks/check_a10.py` PASS from both serialized STEPs: 9/13 valid closed
+  positive-volume solids; every part except the two end shells
+  Boolean-identical to A9's approved open-side frame; no apertures; forward
+  shell spans X 1325–1883, aft −1670..−1325; dome probes hold the roof
+  curve at four stations; tip sections 24.3×12.1 mm forward at
+  Z −223..−211 and 10.26×5.33 mm aft; belly flush with the beam underside;
+  downward exits clear; outer 3553×400×223 mm; saved approved Spear still
+  measures 1200 mm length and 158.013 mm maximum fin envelope. Result:
+  `reviews/A10_DroopedEnds_Checks.json`.
+- Primary directly inspected side/iso renders at every gate, including the
+  closeup the user annotated. Approval (2026-09-28) covers the housing
+  **concept-level silhouette only**: sensor apertures remain deferred, the
+  3553×400×223 mm envelope is a study dimension, and aircraft/pylon/door
+  fit, shutters, ejection runtime, export and in-game visuals remain open
+  gates.
+
+**Next:** reintroduce outward sensor apertures as a separately reviewed
+local feature on the approved curves, then the fit-evidence gates in
+`../../cad/palisade_interceptor/POD_FIT_FEASIBILITY.md`.

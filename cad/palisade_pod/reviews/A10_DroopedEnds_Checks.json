@@ -3,16 +3,16 @@
   "bare_parts": 9,
   "filled_parts": 13,
   "outer_xyz_mm": [
-    3460,
+    3553,
     400,
     223
   ],
   "tip_section_yz_zmin_zmax_mm": {
     "forward": [
-      9.777,
-      5.043,
-      -174.007,
-      -168.964
+      24.294,
+      12.062,
+      -223.0,
+      -210.938
     ],
     "aft": [
       10.259,
@@ -21,8 +21,11 @@
       -108.837
     ]
   },
-  "forward_tip_centre_z_mm": -171.486,
-  "forward_drop_mm": 60,
+  "forward_tip_centre_z_mm": -216.969,
+  "roof_law": "roof=-211mm*t^3, belly flush -223, blunt 24x12 tip",
+  "roof_drop_mm": 211,
+  "belly_flush_with_beam_underside": true,
+  "front_fairing_length_mm": 558,
   "rear_shortening_mm": 40,
   "A9_roof_lips_four_boxes_preserved": true,
   "sensor_aperture_art_deferred": true,

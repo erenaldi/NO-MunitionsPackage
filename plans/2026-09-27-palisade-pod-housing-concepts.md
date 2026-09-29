@@ -4,23 +4,15 @@ Date: 2026-09-27. The user confirmed this concept in the alignment interview.
 
 ## Active context
 
-- Current state (2026-09-27): `concept-approved` for the **pod housing
-  silhouette only**. The user selected A's basic form, removed the long side
-  covers so the box skins fill the side shell, then approved the revised A2
-  bare/filled packet. A later user side sketch reopened the **front and rear
-  sensor-end silhouettes** for `cad-review`; A2's open sides and four-place
-  layout remain approved. The user rejected the short A3
-  front proportions, requested a longer/lower front, then requested independent
-  reference-image analysis after A4 remained too cap-like. A5's reference-led
-  front-cover study was rejected as still not matching the intended shape.
-  The user annotated **both ends** of the A4 filled side view; A6 is the
-  checked first two-end study, not visually approved. After requesting a
-  separate image-analysis pass, the user saved the red drawing and A7 now
-  has been reviewed and redirected: make both end tips more rounded without
-  imposing broad flat faces. A8 was rejected as jagged; user explicitly
-  deferred visible end apertures for this silhouette pass. A9 is a checked
-  continuous-curve/no-aperture candidate awaiting their visual judgment.
-  Exact scope:
+- Current state (2026-09-28): `concept-approved` for the **pod housing
+  silhouette**. A2's open sides and four-place layout remain approved, and
+  the **A10 end silhouettes are now user-approved**: a 558 mm (1.2× A9)
+  teal-dome wedge nose — roof `-211 mm·t³` holding the beam top then
+  plunging to a blunt 24×12 mm tip seated on a belly line flush with the
+  beam underside — plus a stubbier 345 mm level rear cap. The path ran
+  A3–A9 front/end iterations, a fold, a nodding nose and length passes;
+  sensor end apertures remain deferred until a separately reviewed feature
+  gate on the approved curves. Exact scope:
   `cad/palisade_pod/REVIEW.md`.
   The interceptor visual concept is separately user-approved at
   `cad/palisade_interceptor/STEP/Spear_ACMWrap.step`.
@@ -52,6 +44,8 @@ Date: 2026-09-27. The user confirmed this concept in the alignment interview.
   sensor windows/materials, actual donor transform
   mapping and flight-clearance/fallback timing.
 - Next-gate files: this brief, `cad/palisade_pod/REVIEW.md`,
+  `cad/palisade_pod/reviews/A10_DroopedEnds_Review.png`,
+  `cad/palisade_pod/reviews/A10_DroopedEnds_Checks.json`,
   `cad/palisade_pod/reviews/A9_ContinuousEnds_Review.png`,
   `cad/palisade_pod/reviews/A8_RoundedTips_Review.png`,
   `cad/palisade_pod/reviews/A7_LevelBeam_Review.png`,
