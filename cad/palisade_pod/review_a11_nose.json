@@ -1,0 +1,3 @@
+{"jobs":[{"input":"STEP/A11_TealNose_Bare.step","mode":"view","display":{"mode":"solid"},
+"outputs":[{"path":"reviews/A11_Nose_side.png","camera":"front"},{"path":"reviews/A11_Nose_under.png","camera":{"direction":[0.6,-1,-0.5]}}],
+"output":{"sizeProfile":"assembly","padding":0.10}}]}

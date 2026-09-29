@@ -5,7 +5,12 @@ Date: 2026-09-27. The user confirmed this concept in the alignment interview.
 ## Active context
 
 - Current state (2026-09-28): `concept-approved` for the **pod housing
-  silhouette**. A2's open sides and four-place layout remain approved, and
+  silhouette**. **A11 (2026-09-28) supersedes A10's forward shell**: a ~487 mm
+  nose traced from the user's teal outline with independent roof/belly curves
+  and a blunt 12 mm tip near Z −135 (`cad/palisade_pod/STEP/A11_TealNose_*.step`,
+  evidence `reviews/A11_TealNose_Checks.json`); the A10 rear cap, A2 sides and
+  boxes are unchanged; envelope 3482×400×223 mm. The A10 text below describes
+  the previous state. A2's open sides and four-place layout remain approved, and
   the **A10 end silhouettes are now user-approved**: a 558 mm (1.2× A9)
   teal-dome wedge nose — roof `-211 mm·t³` holding the beam top then
   plunging to a blunt 24×12 mm tip seated on a belly line flush with the

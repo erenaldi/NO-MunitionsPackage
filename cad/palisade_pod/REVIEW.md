@@ -1,6 +1,6 @@
 # HKP-1 Palisade housing — three concept directions
 
-Date: 2026-09-27 (A10 approval 2026-09-28). Lifecycle: A2 **open-side
+Date: 2026-09-27 (A10 approval 2026-09-28; **A11 nose approval 2026-09-28 supersedes A10's forward shell** — see the A11 section; the rest of this header describes A10 and remains valid for the rear cap, A2 sides and boxes). Lifecycle: A2 **open-side
 housing silhouette** remains `concept-approved`; the **A10 housing
 silhouette** — a 558 mm teal-dome wedge nose (`roof = -211 mm·t³`, belly
 flush at −223, blunt 24×12 mm tip) plus a stubbier 345 mm level rear cap —
@@ -526,3 +526,37 @@ approved this silhouette.
 **Next:** reintroduce outward sensor apertures as a separately reviewed
 local feature on the approved curves, then the fit-evidence gates in
 `../../cad/palisade_interceptor/POD_FIT_FEASIBILITY.md`.
+
+## A11 — approved teal-outline nose (supersedes A10 forward shell)
+
+After A10, the user asked to tweak the front from a new side-view reference
+drawing and said to use the **teal outline** (not the sky-blue body or the
+red line). The outline was extracted by colour and scaled from the known
+223 mm beam height (2.027 px/mm): about 487 mm long with the tip near
+mid-height (Z about −135) instead of on the belly line. The user then said
+the stroke is hand-drawn, inaccurate and unsmooth, so intent was
+interpreted. A first symmetric-ellipse reading was rejected — **"the top
+and bottom are not meant to be symmetrical"** — so the roof and belly are
+independent curves: `src/teal_nose.py` `profile()` uses least-squares
+superellipse fits, roof `n=1.75, m=1.4` (within ~4 mm of the stroke) and
+belly `n=1.88, m=2.59` (within ~5 mm away from the tip cap), blunt 12 mm tip
+centred at Z −135, 19 loft stations (denser near the tip; the coarser grid
+left a belly wobble). The user then **approved A11 (2026-09-28, "Approve,
+record it")** after viewing the side/iso renders and the CAD Viewer.
+
+- Approved files: `STEP/A11_TealNose_{Bare,Filled}.step` (sources
+  `src/A11_TealNose_{Bare,Filled}.py`, `src/teal_nose.py`, job
+  `review_a11.json`, renders `reviews/A11_*.png`). A10 files are preserved
+  as the previous approved state.
+- Changed vs A10: **forward shell only** (X 1325–1812). Rear cap, A2 open
+  sides, lips, bridge, rails and four placeholder boxes are Boolean-identical
+  to A10. Study envelope now **3482×400×223 mm** — a study dimension, not
+  an aircraft-fit claim.
+- `checks/check_a11.py` PASS -> `reviews/A11_TealNose_Checks.json`: 9/13
+  parts, only `forward_sensor_shell` differs from A10, tip ~24×12 mm centred
+  near −135, roof monotonically descending, belly monotonically rising,
+  envelope 3482×400×223, Spear 1200 mm / 158.013 mm.
+- Scope: concept-level silhouette approval only. Sensor apertures stay
+  deferred (separate gate, local feature on these curves); AGM2 donor poses,
+  door sweeps, pylon/aircraft clearance, shutters, ejection/fallback runtime,
+  Unity export and in-game visuals remain open.

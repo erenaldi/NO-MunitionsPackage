@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "outer_xyz_mm": [
+    3482.0,
+    400.0,
+    223.0
+  ],
+  "front_fairing_length_mm": 487,
+  "tip_section_yz_zmin_zmax_mm": [
+    23.991,
+    12.811,
+    -141.667,
+    -128.856
+  ],
+  "slice_zmin_zmax_by_x_mm": {
+    "1350.0": [
+      -222.881,
+      -0.505
+    ],
+    "1450.0": [
+      -220.485,
+      -8.642
+    ],
+    "1550.0": [
+      -214.975,
+      -24.849
+    ],
+    "1650.0": [
+      -205.293,
+      -49.553
+    ],
+    "1750.0": [
+      -187.176,
+      -86.383
+    ],
+    "1790.0": [
+      -172.418,
+      -108.182
+    ]
+  },
+  "law": "independent superellipse roof (n1.75,m1.4) and belly (n1.88,m2.59), tip 12mm at -135",
+  "only_forward_shell_differs_from_A10": true,
+  "user_visual_approval": false,
+  "donor_aircraft_door_clearance_verified": false
+}

@@ -2,6 +2,30 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-28 23:10 -05:00 — Palisade A11 nose APPROVED by user and recorded
+
+- User viewed A11 (renders + CAD Viewer) and said "Approve, record it". A11 supersedes A10's forward shell as the approved housing silhouette; A10 files kept as previous state. Recorded in `cad/palisade_pod/REVIEW.md` (header note + new A11 section), `MUNITIONS.md` §12 dated entry, `plans/2026-09-27-palisade-pod-housing-concepts.md` active context, and the entry below.
+- Scope: concept-level silhouette only. Evidence unchanged: `checks/check_a11.py` PASS (`reviews/A11_TealNose_Checks.json`). Still open: sensor apertures (separate visual gate), fit evidence per `cad/palisade_interceptor/POD_FIT_FEASIBILITY.md`, shutters, ejection/fallback runtime, export, in-game visuals. Next: apertures on the A11 curves, or the AGM2_6Pod rack-prefab pose probe.
+
+## 2026-09-28 22:40 -05:00 — Palisade A11 teal-outline nose built (awaiting user visual decision)
+
+- Resumed from `Palisade_Handoff_2026-09-28.zip`; its A10 files, `REVIEW.md`, `MUNITIONS.md`, pod brief and interceptor files were byte-identical to the checkout (`cmp`). User chose to tweak the front via a reference drawing: side view with a hand-drawn teal outline (sky-blue body and red line to be ignored). User then said the outline is inaccurate and unsmooth, so intent is interpreted, not digitised.
+- Colour-extracted the teal stroke (2.027 px/mm from the 223 mm beam height): nose ~487 mm long, tip near mid-height (Z about -135) rather than on the belly, underside rising toward the tip. Implemented as a smooth fit, `src/teal_nose.py` `profile()`: independent superellipse roof (n1.75,m1.4) and belly (n1.88,m2.59), asymmetric, blunt 24x12 tip (first symmetric-ellipse attempt rejected by user); stations densified near tip to remove a belly loft wobble; forward shell only. New `src/A11_TealNose_{Bare,Filled}.py` -> `STEP/A11_TealNose_*.step`, `review_a11.json`, `reviews/A11_*.png`. A10 files untouched (approved fallback). Rear, A2 sides, boxes unchanged.
+- Verified: `checks/check_a11.py` PASS -> `reviews/A11_TealNose_Checks.json` (9/13 parts; every part except `forward_sensor_shell` Boolean-identical to A10; nose 1325..1812; tip 24x12 centred ~-135; roof monotonically descending, belly monotonically rising; envelope 3482x400x223; Spear 1200/158.013). Primary inspected `A11_Bare_side.png` and `A11_Filled_iso.png`: smooth rounded nose.
+- Not done: user visual approval (A10 remains the approved silhouette until then); sensor apertures; fit evidence. Not committed.
+
+## 2026-09-28 — Halberd R19 surface-detail prototype (radial screw ring + Kris-density panels)
+
+- User direction (chat): detailing = radial screws and paneling. Screw rings at section joints only; dense panels like the Kris model. Recorded in `cad/halberd_rounded_square/R19_SURFACE_DETAIL_DIRECTION.md` (supersedes R18 quiet-skin reservation for paneling; R17 critique lessons kept).
+- Prototype (forward section X=690-1100 only, built on saved `STEP/halberd_r18_access.step`): `src/halberd_r19_surface_proto.py` -> `STEP/halberd_r19_surface_proto_forward.step` (+ sidecar, `reviews/halberd_r19_surface_proto.json`). Nose-joint ring extended from the 4 R16 heads to 24 at 15 deg (identical R16 head/seat); new 0.40x0.40 mm circumferential seam groove at X=1060; 9 engraved hairline panels (0.40 mm groove) at 7 clocks with 20 R17 slotted heads; F02 unchanged.
+- Found/fixed: OCC silently no-ops the ring seat cuts on the long host (removed ~0 mm3) and the first build shipped 16 buried heads. Seats are now cut on a local slab and rejoined at the seam groove; every cut fails loudly if it removes nothing. Build takes ~26 min.
+- Verified: `checks/check_halberd_r19_surface_proto.py` PASS (`reviews/halberd_r19_surface_proto_checks.json`): 52 valid parts, host = R18 crop minus cuts (no gain, 676.68 mm3 removed = metadata), 24 ring heads on 15 deg pitch identical to R16, zero detail overlaps, groove probes for all 9 panels and the seam at 12 clocks, sidecar coverage. Renders `reviews/R19_proto_{iso,opposite,lower,side_pos,joint}.png` inspected by primary.
+- Open: user visual approval of ring pitch, groove form and panel density/variety before propagating to the rest of the body, stage joint and booster aft joint. Nothing staged or committed.
+
+## 2026-09-28 — Phantom B2E: ramp +15 mm tangential (35 -> ~50 mm lip drop)
+
+- User asked for the engine-carrying main ramp to come down another 15 mm tangentially. Angle 3.0402 -> 4.3424 deg about hinge X-950/Z-83 (lever 660.007 mm); measured lip drop 49.96 mm. Built `src/engine_bay_b2e.py` -> `STEP/S_EngineBay_B2E_*` (cutaway + full), check `checks/check_engine_bay_b2e.py` clean (static poses), images rendered. This overrides the earlier accepted 35 mm intake travel at the user's request; R3 regression evidence (`ramp_intake_r3_checks.json`) does NOT cover 4.34 deg. Not verified: pose sweeps, other-part clearances at the new angle, aero. No commit/push.
+
 ## 2026-09-28 — Phantom B2D detail pass verified (static poses)
 
 - Reran after fixes (background runs; foreground runs hit a classifier error): build OK, `checks/check_engine_bay_b2d.py` -> zero non-expected interference in Stowed and Deployed (one extra defect found and fixed: hinge barrels 1.5 mm into body, aperture widened to hinge+4 mm). Re-rendered all `reviews/EngineBay_B2D_*.png`; primary inspected intake-face, mount and stowed-belly views. Limits: no motion sweep; mount pads hidden in the cutaway (check-only); review-copy cuts unapproved. Details in `ENGINE_READ_STUDY.md` (B2D). This supersedes the "not yet rerun" entry below. No commit/push.
