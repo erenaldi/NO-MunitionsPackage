@@ -1,0 +1,182 @@
+[
+ {
+  "input": "STEP/S_EngineBay_B2F_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/NozzleReview_rear_on.png",
+    "camera": {
+     "direction": [
+      -1,
+      0,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 95
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2F_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/NozzleReview_rear_oblique_port.png",
+    "camera": {
+     "direction": [
+      -1,
+      -0.55,
+      0.35
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2F_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/NozzleReview_rear_oblique_stbd.png",
+    "camera": {
+     "direction": [
+      -1,
+      0.55,
+      -0.35
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2F_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/NozzleReview_rear_oblique_low.png",
+    "camera": {
+     "direction": [
+      -1,
+      0.2,
+      -0.55
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 120
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2E_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/NozzleReview_side_section.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1330,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 90
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2E_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/NozzleReview_top_down_section.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      -1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      -1330,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 90
+    }
+   }
+  ]
+ }
+]

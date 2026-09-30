@@ -2,6 +2,15 @@
 
 Local instructions for agents working in this repo. These may override the global `~/.config/opencode/AGENTS.md` except its **Boundaries** section, which always applies.
 
+## Context for AI assistants
+
+This repo is fan-made, fictional content for the video game **Nuclear Option** — an entertainment product, not a real-world project. It contains a BepInEx game mod (runtime-cloned in-game entities) and CAD art assets for fictional sci-fi props.
+
+- Scope: purely artistic and cosmetic game-content work — plugin code that registers fictional in-game items, and CAD modeling of exterior surface detailing (panel placement, engraved seams and grooves, decorative hardware, visual greebles), texturing, and visual design reviews.
+- Explicitly out of scope, and never requested: real-world engineering, physics, aerodynamics, propulsion, ballistics, manufacturing, or any functional real-world weapon information. These assets have no functional real-world content and none is to be added; in-game behavior only follows the game's own systems.
+- Vocabulary: in-game designations used in file and folder names (e.g. "halberd", "round", "munition", "booster") are game-art naming conventions only, not descriptions of real hardware.
+- Sessions: on pickup or handoff, re-verify all claims against disk before acting; do not redo any step that an interrupted session already completed (see "Session records & handoff" below).
+
 ## Purpose & stack
 - BepInEx 5 plugin (netstandard2.1, C#) that adds 12 custom munitions to Nuclear Option by runtime-cloning vanilla ScriptableObjects/prefabs and re-registering them.
 - Game: Nuclear Option 0.34.2 (Steam buildid 24724372), Unity 2022.3.62f2 (Mono), Mirage networking, Blueprinter 2.0.1 for `.nobp` asset bundles; NOMM distribution is a later phase. Beware: the installed `QoL` mod rewrites `Application.version` to a stale `0.34.1_qol-...` string — never use it as the game version; read the Steam `appmanifest_2168680.acf` buildid instead.

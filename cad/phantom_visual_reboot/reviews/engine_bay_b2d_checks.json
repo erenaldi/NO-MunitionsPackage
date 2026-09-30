@@ -1,0 +1,180 @@
+{
+ "Stowed": {
+  "non_expected_interference_gt_0.5mm3": {},
+  "cross_group_mm3": {
+   "engine_vs_door": 0.0,
+   "engine_vs_nozzle": 0.0,
+   "door_vs_nozzle": 0.0
+  },
+  "expected_contact_parts": {
+   "b2d_mount_pad_0_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_0_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_1_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_1_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_2_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_2_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_3_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_3_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_nozzle_ring": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 13.157,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_45": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_135": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_225": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_315": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   }
+  },
+  "part_count": 34
+ },
+ "Deployed": {
+  "non_expected_interference_gt_0.5mm3": {},
+  "cross_group_mm3": {
+   "engine_vs_door": 0.0,
+   "engine_vs_nozzle": 0.0,
+   "door_vs_nozzle": 0.0
+  },
+  "expected_contact_parts": {
+   "b2d_mount_pad_0_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_0_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_1_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_1_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_2_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_2_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_3_port": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_mount_pad_3_stbd": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_nozzle_ring": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 13.157,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_45": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_135": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_225": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   },
+   "b2d_tail_strut_315": {
+    "body": 0,
+    "ramp": 0,
+    "liner": 0,
+    "expected_contact": true
+   }
+  },
+  "part_count": 34
+ }
+}

@@ -1,0 +1,38 @@
+{
+  "report": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\reviews\\ramp_intake_r3_checks.json",
+  "passed": true,
+  "failure_count": 0,
+  "saved_artifact_count": 11,
+  "R3_full_component_counts": {
+    "Stowed": 33,
+    "Midfold": 33,
+    "Deployed": 33
+  },
+  "R3_module_component_count": 4,
+  "measured_R3_lip_drop_mm": 34.99999999999514,
+  "lip_drop_deviation_from_35mm_mm": 4.860112312599085e-12,
+  "minimum_sampled_clearance": {
+    "clearance_mm": 0.24999999999974265,
+    "pair": [
+      "intake_r1_ramp",
+      "intake_r1_throughpin"
+    ],
+    "method": "exact_nearest_points_and_overlap",
+    "fraction": 0.6
+  },
+  "maximum_unexpected_overlap": {
+    "overlap_mm3": 0.0,
+    "pair": null,
+    "fraction": null
+  },
+  "motion_sample_count": 66,
+  "nonramp_comparison_counts_by_state": {
+    "Stowed": 32,
+    "Midfold": 32,
+    "Deployed": 32
+  },
+  "stowed_radius_mm": 121.62236650584862,
+  "deployed_mouth_width_mm": 124.0,
+  "deployed_mouth_height_mm": 30.656886184664273,
+  "first_failures": []
+}

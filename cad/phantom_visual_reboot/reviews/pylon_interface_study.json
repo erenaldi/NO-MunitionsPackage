@@ -1,0 +1,112 @@
+{
+ "grid_mm": 2.0,
+ "pylon_lowest_surface_z_min_mm": 77.91937816686035,
+ "leaves": {
+  "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+   "cells_over_pylon_underside": 3413,
+   "footprint_area_mm2": 13652.0,
+   "max_required_lowering_mm": 8.080618931723535,
+   "worst_cell_xy_mm": [
+    -554.1659535901816,
+    65.28040262315739
+   ],
+   "column_thickness_at_worst_cell_mm": 172.0,
+   "median_required_lowering_mm": 3.9623161050761553,
+   "mean_column_thickness_over_footprint_mm": 93.37949018458832
+  },
+  "port_front": {
+   "cells_over_pylon_underside": 155,
+   "footprint_area_mm2": 620.0,
+   "max_required_lowering_mm": 0.5049887909394073,
+   "worst_cell_xy_mm": [
+    457.83404640981837,
+    59.280402623157386
+   ],
+   "column_thickness_at_worst_cell_mm": 4.0,
+   "median_required_lowering_mm": 0.32880441668804394,
+   "mean_column_thickness_over_footprint_mm": 4.0
+  },
+  "top_cover": {
+   "cells_over_pylon_underside": 9693,
+   "footprint_area_mm2": 38772.0,
+   "max_required_lowering_mm": 8.08062183313966,
+   "worst_cell_xy_mm": [
+    375.83404640981837,
+    65.28040262315739
+   ],
+   "column_thickness_at_worst_cell_mm": 2.000000000000014,
+   "median_required_lowering_mm": 3.9623330533330687,
+   "mean_column_thickness_over_footprint_mm": 2.0000000000000004
+  }
+ },
+ "overall_max_required_lowering_mm": 8.08062183313966,
+ "hybrid_lowering_then_relief": {
+  "0": {
+   "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+    "max_residual_intrusion_mm": 8.080618931723535,
+    "residual_area_mm2": 13652.0,
+    "residual_volume_mm3_upper_bound": 56303.430521503426
+   },
+   "port_front": {
+    "max_residual_intrusion_mm": 0.5049887909394073,
+    "residual_area_mm2": 620.0,
+    "residual_volume_mm3_upper_bound": 204.64201064818207
+   },
+   "top_cover": {
+    "max_residual_intrusion_mm": 8.08062183313966,
+    "residual_area_mm2": 38772.0,
+    "residual_volume_mm3_upper_bound": 161995.05438028247
+   }
+  },
+  "2": {
+   "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+    "max_residual_intrusion_mm": 6.080618931723535,
+    "residual_area_mm2": 10112.0,
+    "residual_volume_mm3_upper_bound": 32196.058606466024
+   },
+   "top_cover": {
+    "max_residual_intrusion_mm": 6.080621833139659,
+    "residual_area_mm2": 28928.0,
+    "residual_volume_mm3_upper_bound": 93164.3615739955
+   }
+  },
+  "4": {
+   "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+    "max_residual_intrusion_mm": 4.080618931723535,
+    "residual_area_mm2": 6656.0,
+    "residual_volume_mm3_upper_bound": 14883.457778298904
+   },
+   "top_cover": {
+    "max_residual_intrusion_mm": 4.080621833139659,
+    "residual_area_mm2": 19184.0,
+    "residual_volume_mm3_upper_bound": 43350.20077477221
+   }
+  },
+  "6": {
+   "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+    "max_residual_intrusion_mm": 2.080618931723535,
+    "residual_area_mm2": 3824.0,
+    "residual_volume_mm3_upper_bound": 4217.187562076763
+   },
+   "top_cover": {
+    "max_residual_intrusion_mm": 2.0806218331396593,
+    "residual_area_mm2": 11140.0,
+    "residual_volume_mm3_upper_bound": 12389.191031613755
+   }
+  },
+  "8": {
+   "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+    "max_residual_intrusion_mm": 0.08061893172353507,
+    "residual_area_mm2": 540.0,
+    "residual_volume_mm3_upper_bound": 42.48506864939702
+   },
+   "top_cover": {
+    "max_residual_intrusion_mm": 0.08062183313965932,
+    "residual_area_mm2": 1584.0,
+    "residual_volume_mm3_upper_bound": 127.17660053888346
+   }
+  },
+  "9.5": {},
+  "10.5": {}
+ }
+}

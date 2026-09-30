@@ -1,0 +1,6 @@
+check_ramp_intake_r3 exit 0
+check_aft_exhaust_r1 exit 0
+check_tail_fin_r4 exit 0
+check_interleaved_a5 exit 0
+check_agm1_reference_fit exit 1 (nonzero expected by design)
+finished

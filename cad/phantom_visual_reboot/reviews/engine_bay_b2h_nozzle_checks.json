@@ -1,0 +1,32 @@
+{
+ "part_count": 16,
+ "all_valid_solids": true,
+ "outside_liner_void_mm3": {
+  "b2h_nozzle_ring": 682.412,
+  "b2g_turbine_stage": 62.137
+ },
+ "overlap_edges": {
+  "b2h_nozzle_ring <-> b2h_nozzle_flap_dorsal": 364.898,
+  "b2h_nozzle_ring <-> b2h_nozzle_flap_starboard": 364.898,
+  "b2h_nozzle_ring <-> b2h_nozzle_flap_ventral": 364.898,
+  "b2h_nozzle_ring <-> b2h_nozzle_flap_port": 364.898,
+  "b2h_nozzle_ring <-> b2h_nozzle_facet_dorsal_starboard": 58.885,
+  "b2h_nozzle_ring <-> b2h_nozzle_facet_starboard_ventral": 58.885,
+  "b2h_nozzle_ring <-> b2h_nozzle_facet_ventral_port": 58.885,
+  "b2h_nozzle_ring <-> b2h_nozzle_facet_port_dorsal": 58.885,
+  "b2h_nozzle_ring <-> b2h_tail_strut_45": 6.062,
+  "b2h_nozzle_ring <-> b2h_tail_strut_135": 6.062,
+  "b2h_nozzle_ring <-> b2h_tail_strut_225": 6.062,
+  "b2h_nozzle_ring <-> b2h_tail_strut_315": 6.062,
+  "b2h_nozzle_ring <-> LINER": 682.412,
+  "b2h_tail_strut_45 <-> b2g_tail_cone": 37.111,
+  "b2h_tail_strut_135 <-> b2g_tail_cone": 37.111,
+  "b2h_tail_strut_225 <-> b2g_tail_cone": 37.111,
+  "b2h_tail_strut_315 <-> b2g_tail_cone": 37.111,
+  "b2g_tail_cone <-> b2g_tail_shaft": 95.033,
+  "b2g_tail_shaft <-> b2g_turbine_stage": 47.517,
+  "b2g_turbine_stage <-> LINER": 62.125
+ },
+ "parts_not_attached_to_liner_chain": [],
+ "petal_petal_overlap_mm3": {}
+}

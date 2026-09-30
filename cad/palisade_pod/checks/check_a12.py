@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     a11 = saved("A11_TealNose_Bare.step")
     report = {}
-    for n in (1, 2, 3):
+    for n in (1, 2, 3, 4, 5):
         study = saved(f"A12_Sensors_C{n}.step")
         base = {k: v for k, v in study.items() if not k.startswith("sensor_")}
         sensors = {k: v for k, v in study.items() if k.startswith("sensor_")}

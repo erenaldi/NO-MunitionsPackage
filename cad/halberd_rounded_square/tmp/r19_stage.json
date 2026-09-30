@@ -1,0 +1,5 @@
+{"input":"STEP/halberd_r18_access_separated.step","mode":"view","outputs":[
+{"path":"tmp/r19_stage_main_aft.png","camera":{"direction":[-1,0.45,0.35],"target":[-1123,0,0],"orthographicHalfHeight":190}},
+{"path":"tmp/r19_stage_booster_fwd.png","camera":{"direction":[1,0.45,0.35],"target":[-1463,0,0],"orthographicHalfHeight":190}},
+{"path":"tmp/r19_stage_side.png","camera":{"direction":[0.05,1,0.25],"target":[-1300,0,0],"orthographicHalfHeight":330}}],
+"output":{"viewLabels":false,"padding":0.02,"sizeProfile":"diagnostic"},"quality":{"tessellation":{"chordTolerance":0.0002,"angleTolerance":0.08}}}

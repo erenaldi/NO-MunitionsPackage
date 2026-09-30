@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "failure_count": 0,
+  "document_hash": "d9f4db0f55b62b91a0256337afce4fe46e326843c101b194dca0f083a3031fc9",
+  "leaves": 335,
+  "new_hardware": 250,
+  "raised_parts": 13,
+  "replaced_r18": [
+    "main_r18_F05_center_strip",
+    "main_r18_F05_fastener_1",
+    "main_r18_F05_fastener_2",
+    "main_r18_F05_terminal_left",
+    "main_r18_F05_terminal_right"
+  ],
+  "panels": 58,
+  "rings": {
+    "nose": 24,
+    "RMA": 20,
+    "RBF": 20,
+    "RBA": 28
+  },
+  "seams": [
+    "nose",
+    "RMA",
+    "RBF",
+    "RBA"
+  ]
+}

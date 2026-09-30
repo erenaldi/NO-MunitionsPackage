@@ -1,0 +1,42 @@
+{
+ "overall_max_required_lowering_mm": 8.08062183313966,
+ "leaves": {
+  "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+   "cells_over_pylon_underside": 3413,
+   "footprint_area_mm2": 13652.0,
+   "max_required_lowering_mm": 8.080618931723535,
+   "worst_cell_xy_mm": [
+    -554.1659535901816,
+    65.28040262315739
+   ],
+   "column_thickness_at_worst_cell_mm": 172.0,
+   "median_required_lowering_mm": 3.9623161050761553,
+   "mean_column_thickness_over_footprint_mm": 93.37949018458832
+  },
+  "port_front": {
+   "cells_over_pylon_underside": 155,
+   "footprint_area_mm2": 620.0,
+   "max_required_lowering_mm": 0.5049887909394073,
+   "worst_cell_xy_mm": [
+    457.83404640981837,
+    59.280402623157386
+   ],
+   "column_thickness_at_worst_cell_mm": 4.0,
+   "median_required_lowering_mm": 0.32880441668804394,
+   "mean_column_thickness_over_footprint_mm": 4.0
+  },
+  "top_cover": {
+   "cells_over_pylon_underside": 9693,
+   "footprint_area_mm2": 38772.0,
+   "max_required_lowering_mm": 8.08062183313966,
+   "worst_cell_xy_mm": [
+    375.83404640981837,
+    65.28040262315739
+   ],
+   "column_thickness_at_worst_cell_mm": 2.000000000000014,
+   "median_required_lowering_mm": 3.9623330533330687,
+   "mean_column_thickness_over_footprint_mm": 2.0000000000000004
+  }
+ }
+}
+exit 0

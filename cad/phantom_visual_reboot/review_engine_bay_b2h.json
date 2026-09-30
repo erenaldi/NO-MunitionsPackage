@@ -1,0 +1,182 @@
+[
+ {
+  "input": "STEP/S_EngineBay_B2H_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2H_rear_axial.png",
+    "camera": {
+     "direction": [
+      -1,
+      0,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 85
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2H_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2H_rear_oblique_a.png",
+    "camera": {
+     "direction": [
+      -1,
+      -0.55,
+      0.35
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2H_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2H_rear_oblique_b.png",
+    "camera": {
+     "direction": [
+      -1,
+      0.55,
+      -0.35
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2H_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2H_rear_full.png",
+    "camera": {
+     "direction": [
+      -1,
+      -0.45,
+      0.3
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1300,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 260
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_Nozzle_B2H_Section.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2H_nozzle_section_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1345,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 80
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_Nozzle_B2H_Section.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2H_nozzle_section_oblique.png",
+    "camera": {
+     "direction": [
+      -0.6,
+      -0.8,
+      0.3
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1345,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 75
+    }
+   }
+  ]
+ }
+]

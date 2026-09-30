@@ -3880,11 +3880,11 @@
       "authorized_mount_body_pairs": [
         [
           "RDM9_R7_symmetric_body_20mm_wedge_R4",
-          "intake_r1_fixed_mount_positive_y"
+          "intake_r1_fixed_mount_negative_y"
         ],
         [
           "RDM9_R7_symmetric_body_20mm_wedge_R4",
-          "intake_r1_fixed_mount_negative_y"
+          "intake_r1_fixed_mount_positive_y"
         ]
       ],
       "states": {
@@ -3984,11 +3984,11 @@
       "authorized_exceptions_only": [
         [
           "RDM9_R7_symmetric_body_20mm_wedge_R4",
-          "intake_r1_fixed_mount_positive_y"
+          "intake_r1_fixed_mount_negative_y"
         ],
         [
           "RDM9_R7_symmetric_body_20mm_wedge_R4",
-          "intake_r1_fixed_mount_negative_y"
+          "intake_r1_fixed_mount_positive_y"
         ]
       ],
       "fixed_mount_body_contacts_checked_separately": true,

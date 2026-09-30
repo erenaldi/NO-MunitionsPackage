@@ -1,0 +1,53 @@
+[
+ {
+  "input": "reference/agm1_mount/Phantom_DonorFit_Lowered_9574.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/Phantom_DonorFit_Lowered_9574_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      0,
+      0,
+      80
+     ],
+     "orthographicHalfHeight": 900
+    }
+   },
+   {
+    "path": "reviews/Phantom_DonorFit_Lowered_9574_close.png",
+    "camera": {
+     "direction": [
+      0.3,
+      -1,
+      0.15
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -300,
+      0,
+      70
+     ],
+     "orthographicHalfHeight": 200
+    }
+   }
+  ]
+ }
+]

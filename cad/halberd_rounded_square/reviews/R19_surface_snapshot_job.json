@@ -1,0 +1,79 @@
+[
+  {
+    "input": "STEP/halberd_r19_surface.step",
+    "mode": "view",
+    "outputs": [
+      {
+        "path": "reviews/R19_surface_whole_iso.png",
+        "camera": {
+          "direction": [
+            0.55,
+            -0.75,
+            1.0
+          ]
+        }
+      },
+      {
+        "path": "reviews/R19_surface_whole_opposite.png",
+        "camera": {
+          "direction": [
+            -0.4,
+            0.8,
+            -0.9
+          ]
+        }
+      },
+      {
+        "path": "reviews/R19_surface_whole_top.png",
+        "camera": {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "path": "reviews/R19_surface_whole_lower.png",
+        "camera": {
+          "direction": [
+            0.3,
+            -0.2,
+            -1.0
+          ]
+        }
+      },
+      {
+        "path": "reviews/R19_surface_whole_side.png",
+        "camera": {
+          "direction": [
+            0.0,
+            1.0,
+            0.05
+          ]
+        }
+      },
+      {
+        "path": "reviews/R19_surface_housing_close.png",
+        "camera": {
+          "direction": [
+            0.25,
+            0.55,
+            0.8
+          ]
+        }
+      }
+    ],
+    "output": {
+      "viewLabels": false,
+      "padding": 0.04,
+      "sizeProfile": "diagnostic"
+    },
+    "quality": {
+      "tessellation": {
+        "chordTolerance": 5e-05,
+        "angleTolerance": 0.05
+      }
+    }
+  }
+]

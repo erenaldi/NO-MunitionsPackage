@@ -1,0 +1,7 @@
+{"input":"STEP/kris_full_reference.step","mode":"view",
+ "outputs":[
+  {"path":"reviews/Kris_strake_fwd_oblique.png","camera":{"position":[640,-150,-230],"target":[820,0,-85],"up":[0,0,1]}},
+  {"path":"reviews/Kris_strake_root_grazing.png","camera":{"position":[900,-40,-200],"target":[900,0,-85],"up":[0,0,1]}},
+  {"path":"reviews/Kris_strake_top_side.png","camera":{"position":[1100,-300,-90],"target":[1000,0,-85],"up":[0,0,1]}}],
+ "output":{"viewLabels":false,"padding":0.05,"sizeProfile":"diagnostic"},
+ "quality":{"tessellation":{"chordTolerance":0.0001,"angleTolerance":0.05}}}

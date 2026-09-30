@@ -2,6 +2,17 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-29 — Phantom P04 flush-RF layout study built (awaiting user placement decision)
+
+- Re-verified the B2H handoff on disk (STEP hashes, `engine_bay_b2h_integrated_checks.json` 0 failures). Built a NON-CUTTING annotated layout: `cad/phantom_visual_reboot/src/rf_layout_p04.py` -> `STEP/S_RF_Layout_P04_Study.step` (66 unchanged baseline leaves + 0.6 mm proud colour patches). Teal = recommended RF: A nose cheeks (X 815..960, Z -12..30, warped nose facet), B flank pair (X -650..-350, Z +-28), C belly pair (X 130..420, |Y| 22..62). Amber = optional D dorsal-aft (X -1030..-830, Y +-40). Red = keep-outs: top pylon strip (X -770..686, Y +-67, from recovered pylon bounds), aft fin band X -1335..-1075 on all four faces, belly ramp/door X -953..53, wing-slot flank strips X -455..555 Z 62..86.
+- Verified: `checks/check_rf_layout_p04.py` -> `reviews/rf_layout_p04_checks.json`: 0 failures (7 RF patches valid, no overlap with keep-outs or any baseline leaf, inside 125 mm). Renders `reviews/RF_P04_*.png` (job `review_rf_p04.json`) inspected by the primary. Layout is independent of the 9.574 mm lowering (pure Z translation).
+- Not done: user placement approval; no pocket/border cut; RF-vs-service-panel labelling beyond colours; aft fin band extents are approximate (from leaf bboxes); nose-cheek patch is a Y-shifted skin, not a designed panel outline. Not committed.
+- Next: user picks/edits zones; then build the flush pockets in a separate pass.
+
+## 2026-09-29 — Phantom B2H handoff prompt written
+
+- User asked for a handoff prompt to another session that makes the benign nature of the work explicit. Wrote `cad/phantom_visual_reboot/CLAUDE_CODE_HANDOFF_B2H.md` (fictional game-asset context statement, read-first list, verified state: B2H baseline, integrated check 0 failures, pylon lowering 9.574 mm verified, uncommitted Phantom work, open items, tooling gotchas incl. background runs and viewer port drift, boundaries). Verified before writing: B2H/Placed/Lowered STEPs exist, `engine_bay_b2h_integrated_checks.json` failure_count 0, `pylon_lowering_verification.json` clear at 9.1/9.574 and not at 8.1. No geometry changed; no commit/push.
+
 ## 2026-09-29 — Palisade A12 additive sensor concepts C1/C2/C3 built and checked (awaiting user pick)
 
 - User direction: sensors first, on the front and rear; nothing may be subtracted from the existing front/back, only built on top; must look sleek and grounded. Built three contrastive studies on the approved A11 nose and A10 rear cap: C1 two-step tip caps (4+8 mm skin, lens button), C2 stadium cheek pads (6 mm, +1.5 mm lens window), C3 long lower chine bars (7 mm, lens strip). Method: sensor = (footprint prism ∩ shell offset by T) − shell, so shells are untouched. Nothing on the roof (pod hangs under the airframe) or below the Z -223 belly. Sources `cad/palisade_pod/src/sensors.py`, `A12_Sensors_C{1,2,3}.py` -> `STEP/A12_Sensors_C*.step`; review-only crops `A12_Crop_C*_{front,rear}.step`; `review_a12.json`, renders `reviews/A12_C*_{front,rear}_{a,b,side}.png`.
@@ -26,6 +37,77 @@ Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "
 - Handoff for the next session: `cad/halberd_rounded_square/HANDOFF_R19_SURFACE_DETAIL.md` (runtime, decisions, verified state, reusable helpers, OCC pitfalls, next step). Approval recorded in `R19_SURFACE_DETAIL_DIRECTION.md`.
 - Next: plan and build full-body R19 detailing in a fresh session. Nothing staged or committed.
 
+## 2026-09-29 — Halberd R19: same objects, evenly distributed along the body
+
+- User (cosmetic game-asset detailing): keep the same number of objects, evenly distributed across the body; junction features exempt. Recorded in `R19_SURFACE_DETAIL_DIRECTION.md`.
+- `src/halberd_r19_surface.py`: new `plan_layout()` stations all 65 movable designs:
+  - 56 evenly spaced main stations + 9 booster stations;
+  - category scheduling by zone, rotating lanes, blocked intervals, proportional kind mixing.
+  The design tables keep only size/outline/screws. The steps build from the plan. Rings/seams, the F05 pair and R18 hatches are unchanged.
+- The dry run (pure layout) was done before building:
+  - main spacing mean 37 mm;
+  - 4-8 designs per 250 mm band;
+  - every band mixes kinds.
+  Fixed during the dry run: clamping long parts into their zone, and a proportional kind merge (the first merge left the forward section all rectangles).
+- Verified: build ~5 min, first try, all build guards passed. `checks/check_halberd_r19_surface.py` PASS, doc hash `d9f4db0f...31fc9`, with counts identical to the previous build: 335 leaves, 58 panels, 13 raised, 250 hardware, rings 24/20/20/28. Primary inspected `reviews/R19_surface_whole_{iso,opposite,side}.png` and the mid crop.
+- Open: user visual review. Nothing staged or committed.
+
+## 2026-09-29 — Halberd R19: quieter mid-section, new design families, raised + mirrored F05
+
+- User feedback (cosmetic game-asset detailing): mid-section too dense, designs not varied; raise the "center strip" and mirror it. User picked F05 (underside), top-face mirror, ~2 mm. Recorded in `cad/halberd_rounded_square/R19_SURFACE_DETAIL_DIRECTION.md`.
+- `src/halberd_r19_surface.py` changes:
+  - thinned layout (quiet X -650..250; aft stations spread);
+  - new raised plates (1.5 mm), bosses with recess, vent grilles (slots 0.6 mm) and hinge-row panels;
+  - F05 replaced by raised pieces (2.0/2.5 mm, filling the R18 pocket) plus an exact XY mirror on +Z with its own 0.8 mm pocket;
+  - raised parts in group `r19_surface_raised` (paint), hardware in `r19_surface_hardware` (metal).
+  New review crop `src/halberd_r19_surface_mid_focus.py` -> `STEP/halberd_r19_surface_mid_focus.step`. Build ~3.5 min.
+- Guards/checks caught three real placement problems, all fixed by moving parts:
+  - RP3 on a housing flank failed planarity;
+  - RB1/RB2 reached past the ±30 mm flat face (only visible after sampling bosses on their actual circle, not bbox corners);
+  - RB3 on a flank overlapped the skin by 0.10 mm3.
+  A chamfer on the F05 end piece's acute corner stepped down to 0.2 mm (recorded in metadata `top_chamfer_used_mm`).
+- Checker extended:
+  - declared F05 replacements;
+  - raised parts seated (distance <= 0.01 mm), at their heights (+/-0.02 mm), and the F05 mirror twin matches;
+  - vent slot probes;
+  - raised parts use the paint material.
+  Checker fix (not a relaxation): the interior-skin probe on grille panels hit a vent slot; it now avoids slot footprints as it does screw seats.
+- Verified: `checks/check_halberd_r19_surface.py` PASS, doc hash `9ecae8f3...c0c7`, 335 leaves (250 hardware, 13 raised, 5 R18 F05 leaves replaced), 58 panels, rings 24/20/20/28. Primary inspected the renders:
+  - `reviews/R19_surface_whole_{iso,opposite,side,lower}.png`;
+  - `R19_surface_mid_{iso,top_grazing,lower_grazing}.png`.
+- Open: user visual review. Nothing staged or committed.
+
+## 2026-09-29 — Halberd R19: staggered panels + intake-housing designs, checked
+
+- User asked (cosmetic game-asset detailing) to offset panels sideways and add designs to the bare intake housings. On disk, `src/halberd_r19_surface.py` already had this change: sideways offsets on 71 of 92 panels, plus the `HOUSING_RECT`/`HOUSING_ROUND` tables (24 flank panels + 8 ridge-top pieces). Source edited 16:59, STEP rebuilt 17:05, renders 17:07, but no check or journal entry: an earlier session ended mid-pass. `cadgen store why` = current; metadata 92 panels / 322 hardware.
+- Checker fixes, not relaxations:
+  - The interior-skin probe crashed (StopIteration) on the 10 mm centre-screw ridge caps. It now also probes 1 mm inside the outline, and reports a failure instead of crashing when no clear point exists.
+  - The host removal-vs-metadata tolerance was 0.005 mm3 absolute, calibrated on the prototype crop. At full scale it tripped on a 0.20 mm3 difference. A diff proved the in-memory and saved main bodies are identical: 2284 faces each, and the Boolean difference is empty both ways, yet the volumes differ by 0.35 mm3 (integration noise, ~4e-9 relative). Tolerance is now max(0.005, 1e-8 x host volume); the Boolean gain, overlap and probe checks are unchanged.
+- Verified: `checks/check_halberd_r19_surface.py` PASS on doc hash `5b3412db...d6fc`, 399 leaves, 322 new hardware, 92 panels, rings 24/20/20/28, 4 seams (~5.5 min). Primary inspected `reviews/R19_surface_whole_{iso,opposite,side}.png`: the side view now shows two alternating lanes, and housing flanks/ridge tops carry panels.
+- Open: user visual review. Nothing staged or committed.
+
+## 2026-09-29 — Halberd R19 full-body cosmetic surface detailing
+
+- User approved the prototype and asked to propagate it to the full body (cosmetic game-asset detailing). Recorded in `cad/halberd_rounded_square/R19_SURFACE_DETAIL_DIRECTION.md`.
+- New `src/halberd_r19_surface.py` -> `STEP/halberd_r19_surface.step` (+ sidecar, `reviews/halberd_r19_surface.json`). It is built on saved `STEP/halberd_r18_access.step`:
+  - 60 engraved panels (44 rectangular, 16 round) on flat cardinal faces;
+  - 4 joint rings with seams: nose 24, RMA 20, RBF 20, RBA 28;
+  - 246 new heads in group `r19_surface_hardware` (metal).
+  Build ~5 min; renders ~100 s.
+- `src/halberd_r19_surface_proto.py` gained optional `tangent_offset`, `stage` and `extended_seat` parameters. Their defaults leave prototype output unchanged; the prototype was not rebuilt this entry.
+- Found/fixed: the booster forward ring seat at clock 206.4 deg silently no-opped even on a fresh slab. Cause: the R17 seat tool's top rim sits 0.02 mm above curved skin (near-tangent). Fix: `seat_tool_extended()` continues the countersink cone 0.3 mm above the skin. Tested on all 20 RBF seats: 0 fails vs 1, and removal per seat is consistent. The lesson was added to `~/.claude/domain/cad.md`.
+- Verified: `checks/check_halberd_r19_surface.py` PASS (`reviews/halberd_r19_surface_checks.json`), doc hash `d9e2455e...21098`, 323 leaves. It checks:
+  - all leaves valid single solids;
+  - every R18 leaf present and unchanged;
+  - hosts only lose material, with removal = metadata;
+  - no hardware overlap with hosts or each other;
+  - >= 2 mm to R18 details;
+  - ring counts and axial bands;
+  - groove probes for all 60 panels and 4 seams at 12 clocks;
+  - hardware metal, and R18 materials unchanged.
+  Checker ~150 s. Renders `reviews/R19_surface_whole_{iso,opposite,top,lower,side}.png` inspected by the primary.
+- Open: user visual review (noted: centreline panel columns read slightly like a dotted line in side view). Separated variant/focus crops and engine export not done. Nothing staged or committed.
+
 ## 2026-09-28 — Surface-detail method saved for reuse (shared helper + CAD notes)
 
 - User asked to keep the fast method for future use. New `cad/shared/surface_detail.py`: `clock_frame`, `skin_point` (ray hit), `backing_depth` (ray-based wall), `checked_cut`, `seated_hardware` (asset-agnostic; fastener tools passed in). `src/halberd_r19_surface_proto.py` now imports it via `sys.path` (private copies removed); `cad/README.md` shared row updated. Lessons added to `~/.claude/domain/cad.md` ("Surface detailing construction").
@@ -48,6 +130,38 @@ Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "
 - Found/fixed: OCC silently no-ops the ring seat cuts on the long host (removed ~0 mm3) and the first build shipped 16 buried heads. Seats are now cut on a local slab and rejoined at the seam groove; every cut fails loudly if it removes nothing. Build takes ~26 min.
 - Verified: `checks/check_halberd_r19_surface_proto.py` PASS (`reviews/halberd_r19_surface_proto_checks.json`): 52 valid parts, host = R18 crop minus cuts (no gain, 676.68 mm3 removed = metadata), 24 ring heads on 15 deg pitch identical to R16, zero detail overlaps, groove probes for all 9 panels and the seam at 12 clocks, sidecar coverage. Renders `reviews/R19_proto_{iso,opposite,lower,side_pos,joint}.png` inspected by primary.
 - Open: user visual approval of ring pitch, groove form and panel density/variety before propagating to the rest of the body, stage joint and booster aft joint. Nothing staged or committed.
+
+## 2026-09-29 — Phantom pylon fit decision applied as a placement artifact
+
+- User chose a straight 9.574 mm lowering applied in the CAD asset frame. Built `src/donor_fit_lowered.py` -> `STEP/S_EngineBay_B2H_Stowed_Placed.step` and reference-only `reference/agm1_mount/Phantom_DonorFit_Lowered_9574.step`; renders inspected. Recorded in `ENGINE_BAY_B2H_CONTRACT.md`, `DONOR_RACK_FINDINGS.md`, checklist. Verified clear at 9.574 mm by `verify_pylon_lowering.py` (equivalent relative placement; placed file not itself re-run through the surface check). Not assessed: aircraft/bay clearance, release states, envelope/hitbox reference. Next: P04 RF-panel layout (annotated all-side layout for the user's review before any cut). No commit/push.
+
+## 2026-09-29 — Phantom mounting-interface study (P02 follow-on), nothing applied
+
+- User chose "mounting-interface study first". Added `checks/study_pylon_interface.py` (-> `reviews/pylon_interface_study.json`) and `checks/verify_pylon_lowering.py` (-> `reviews/pylon_lowering_verification.json`); findings appended to `DONOR_RACK_FINDINGS.md`. Results: relief-only/hybrid options would remove the 2 mm A5 top cover over ~11-39k mm2, so straight lowering is the only practical route; exact surface check: 8.1 mm still intersects (cover 3,059 mm2, body 1,040 mm2), 9.1 mm clear (bbox gap +0.53), 9.574 mm clear (bbox gap +1.00). The earlier height-map estimate (8.08 mm) was a grid underestimate. Not assessed: aircraft/bay clearance below, release states, envelope reference (own axis vs donor mount origin), where the offset is applied. Awaiting the user's choice of lowering amount and application point. No model file changed; no commit/push.
+
+## 2026-09-29 — Phantom B2H frozen as working baseline; integrated regression (step 1)
+
+- Wrote `cad/phantom_visual_reboot/ENGINE_BAY_B2H_CONTRACT.md` (identity, sha256 of the two baseline STEPs, parameters, feature status table, evidence, residuals) and marked B2H current in `IMPLEMENTATION_CHECKLIST.md`.
+- New `src/check_engine_bay_b2h_integrated.py` -> `reviews/engine_bay_b2h_integrated_checks.json`: **0 failures** (66 valid leaves/state; non-body/non-ramp leaves identical to matching R3 state, body only lost material; lip drop 49.96 mm; stowed conservative radius 121.62 mm < 125; 36 static overlap pairs/state all classified as intentional mounts/attachments; 29-pose ramp-group and door sweeps + 5-pose sweeps vs deployed-state wings/fins + 25 async door x ramp combos: no unexpected overlap). Two checker bugs found and fixed on the way (wrongly assumed wings/fins identical across states; boolean symdiff false mismatch on the fan/face frame, now verified by volume/COM/bbox/vertex-set invariants and the unreliable boolean reported).
+- Existing checkers rerun on their own saved artifacts: `check_ramp_intake_r3`, `check_aft_exhaust_r1`, `check_tail_fin_r4`, `check_interleaved_a5` all exit 0; `checks/check_agm1_reference_fit.py` still exits 1 as designed (vertical bbox overlap 8.574 mm, unapplied lowering 9.574 mm; unchanged). Side effect: the rerun rewrote `reviews/ramp_intake_r3_checks.json` with two list items reordered (no value change).
+- Limits: sampled poses only, AABB-touching pairs give "no overlap" not an exact clearance (lowest disjoint AABB gap 1.0 mm), R3 evidence covers only the 3.04 deg setting (4.34 deg covered by the new sweep), mount pads are face contact only, door pocket/chamber/duct unapproved as exterior cuts. Next: user decision on the mounting-offset approach (P02 follow-on), then P04. No commit/push.
+
+## 2026-09-29 — Phantom B2H: square rear nozzle
+
+- User flagged the B2G rear corners (round petals inside the rounded-square opening) and chose a square nozzle. Built `src/engine_bay_b2h.py` -> `STEP/S_EngineBay_B2H_{Deployed,Stowed}_Full.step`, `STEP/S_Nozzle_B2H_Section.step`, `checks/check_engine_bay_b2h_nozzle.py` (16 parts valid, all attached to the liner chain, no flap/facet contact after widening seams to 1.0 mm), renders `reviews/EngineBay_B2H_*.png` (inspected axial + oblique). Accepted rounded-square opening/liner unchanged. Not re-scored; motion/airflow unchecked. Details in `ENGINE_READ_STUDY.md` (B2H). No commit/push.
+
+## 2026-09-29 — Phantom B2G: rear-nozzle review fixes applied
+
+- Applied the review fixes: attached tail cone (struts in ring plane, shaft + turbine stage anchored to the liner), tapered master/slave petals with engraved centre lines and rings, lighter trim colour, wording correction (petals flare, not converge; noted in `ENGINE_READ_STUDY.md`). New `src/engine_bay_b2g.py`, `checks/check_engine_bay_b2g_nozzle.py` (all 20 parts valid, everything connected to the liner, no petal-petal contact), `STEP/S_EngineBay_B2G_{Deployed,Stowed}_Full.step`, `STEP/S_Nozzle_B2G_Section.step`, renders `reviews/EngineBay_B2G_*.png` (primary inspected axial, oblique, side section). Not re-scored; motion/airflow unchecked. No commit/push.
+
+## 2026-09-29 — Phantom B2F rear nozzle design review (read-only)
+
+- User asked for a design review of the rear nozzle (fictional game asset; cosmetic scope, no refusal had occurred). Reviewed the B2F nozzle (unchanged since B2D: 12 flat petals, mount ring, tail cone + 4 struts, R1 liner) with `cad-review`: provisional-free grade **6.7/10, medium confidence** (weights fixed beforehand: brief 25, form 20, geometry 20, interfaces 15, detail 10; delivery N/A; no reference images). Evidence: axial/oblique/full-rear renders + side section (review-only captures in the session scratchpad, not in the repo) and boolean measurements of the 18 nozzle parts.
+- Findings: all 18 parts valid solids, no petal/liner/petal-petal interference; petals overlap the ring (74 mm3 each), ring embeds 26 mm3 into the liner at 4 flats. **Defect:** the tail cone + 4 struts float: struts sit at X-1347.5..-1342.5 (3.5 mm forward of the ring at X-1354..-1351), end near r45 on the diagonals, and touch neither ring nor liner (volume overlap 0); only strut-cone contact exists. Petals **flare** (r44 forward -> r52 at the exit), not "converge" as older notes (`ENGINE_READ_STUDY.md` O1/B2) say. Through the nozzle the view ends on a flat blank engine-aft wall; ring/struts render near-black against the black liner; petals are plain flat rectangles with ~4 mm slits, no cosmetic engraving (B2F did not cover the nozzle). Nothing was edited. Suggested fixes (not applied): attach cone struts to the ring/liner, taper/overlap the petals, give the view down the nozzle a focal detail, lighter trim colour, correct the docs wording. No commit/push.
+
+## 2026-09-29 — Phantom B2F: restrained cosmetic engraving (door, ramp, bay surround, intake frame)
+
+- User confirmed no refusal had occurred (nothing was blocked) and asked for cosmetic detailing on door + ramp + engine bay, restrained. Built `src/engine_bay_cosmetic.py` -> `STEP/S_EngineBay_B2F_{Deployed,Stowed}_Full.step`, renders `reviews/EngineBay_B2F_*.png`, `reviews/engine_bay_b2f_engraving.json`. Subtractive only. Verified engraved volumes vs intended: belly/ramp/door >= 99.8%, intake face frame 84% (rings partly clipped by the frame edge). Details in `ENGINE_READ_STUDY.md` (B2F). Not done: other surfaces, raised greebles, materials. No commit/push.
 
 ## 2026-09-28 — Phantom B2E: ramp +15 mm tangential (35 -> ~50 mm lip drop)
 

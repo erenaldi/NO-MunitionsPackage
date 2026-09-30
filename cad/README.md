@@ -14,7 +14,7 @@ Scripts locate their inputs/outputs with `Path(__file__)`, so each folder is sel
 | `kris/` | IRM-S4 Kris + PL-10 stencil/hybrid, Unity export |
 | `ballista/` | AGM-110 Ballista stowed/deployed, Unity export |
 | `palisade/` | HKP-1 Palisade flat set; `palisade_interceptor/` and `palisade_pod/` are the redesign studies |
-| `shared/` | Asset-agnostic helpers (`inspect_step.py`, `diff_step.py`) and cross-weapon comparison images |
+| `shared/` | Asset-agnostic helpers (`inspect_step.py`, `diff_step.py`, `surface_detail.py` for fast conformal skin points, seated fasteners and checked cuts) and cross-weapon comparison images |
 | `candidates/` | Unity-candidate export output (`candidates/halberd`) |
 | `stencil/`, `texture_dump/`, `pipeline-validation/` | Reference stencils, dumped textures, pipeline calibration |
 

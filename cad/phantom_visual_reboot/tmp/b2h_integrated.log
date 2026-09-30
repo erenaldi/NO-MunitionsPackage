@@ -1,0 +1,17 @@
+inventory 1.6
+peers 5.3
+pose model 19.7
+envelope 19.7
+static Stowed 36 31.6
+static Deployed 36 43.2
+sweep ramp_group_sweep_vs_fixed_peers 0 74.7
+sweep door_sweep_vs_fixed_peers 0 82.3
+sweep ramp_group_vs_deployed_state_wings_and_fins 0 87.4
+sweep door_vs_deployed_state_wings_and_fins 0 88.7
+async grid 89.7
+{
+ "failure_count": 0,
+ "failures": [],
+ "elapsed_s": 89.7
+}
+exit 0

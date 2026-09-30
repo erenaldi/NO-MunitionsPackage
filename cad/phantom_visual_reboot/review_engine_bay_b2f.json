@@ -1,0 +1,152 @@
+[
+ {
+  "input": "STEP/S_EngineBay_B2F_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2F_ramp_underside.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      -1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      -620,
+      0,
+      -120
+     ],
+     "orthographicHalfHeight": 420
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2F_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2F_door_open.png",
+    "camera": {
+     "direction": [
+      0.15,
+      -0.7,
+      -0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -110,
+      0,
+      -70
+     ],
+     "orthographicHalfHeight": 230
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2F_Stowed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2F_door_closed.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      -1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      -110,
+      0,
+      -86
+     ],
+     "orthographicHalfHeight": 230
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2F_Stowed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2F_stowed_belly.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      -1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      -450,
+      0,
+      -86
+     ],
+     "orthographicHalfHeight": 700
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2F_Deployed_Full.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2F_face.png",
+    "camera": {
+     "direction": [
+      0.8,
+      -0.3,
+      -0.6
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -320,
+      0,
+      -110
+     ],
+     "orthographicHalfHeight": 140
+    }
+   }
+  ]
+ }
+]

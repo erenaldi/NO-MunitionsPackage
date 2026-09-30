@@ -1,0 +1,50 @@
+{
+  "report": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\reviews\\tail_fin_r4_checks.json",
+  "passed": true,
+  "failure_count": 0,
+  "R4_saved_states_imported": 3,
+  "R4_saved_component_count_each": 29,
+  "saved_R3_tail_boolean_comparisons": 48,
+  "nonbody_A5_state_comparisons": 36,
+  "motion": {
+    "sample_count": 66,
+    "expected_sample_count": 66,
+    "uniform_sample_count": 61,
+    "early_fractions": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "all_29_parts_per_sample": true,
+    "all_unique_pair_count_per_sample": 406,
+    "authorized_attachment_exemptions_count": 10,
+    "minimum_moving_part_clearance_mm": {
+      "minimum_clearance_mm": 0.24999999999995004,
+      "witness_pair": "tail_r4_lower_starboard_fin_root:tail_r4_lower_starboard_throughpin",
+      "fraction": 0.9666666666666667
+    },
+    "minimum_fin_fin_gap_mm": {
+      "minimum_clearance_mm": 52.009090157900246,
+      "witness_pair": "tail_r4_upper_starboard_fin_root:tail_r4_upper_port_fin_root",
+      "fraction": 0.0
+    },
+    "minimum_pin_to_fin_bore_clearance_mm": {
+      "minimum_clearance_mm": 0.24999999999995004,
+      "witness_pair": "tail_r4_lower_starboard_fin_root:tail_r4_lower_starboard_throughpin",
+      "fraction": 0.9666666666666667
+    },
+    "nominal_pin_to_fin_bore_radial_gap_mm": 0.25,
+    "maximum_unexpected_overlap": {
+      "overlap_mm3": 0.0,
+      "fraction": null,
+      "pair": null
+    },
+    "all_samples_pass": true,
+    "continuous_A5_pin_sweep_proof": "inherited from immutable A5 saved checker; not rerun"
+  },
+  "stowed_radius_mm": 121.6223665066609,
+  "pocket_station_count": 4,
+  "failed_checks": []
+}

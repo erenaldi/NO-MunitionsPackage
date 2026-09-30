@@ -1,0 +1,4820 @@
+{
+  "source_step": "STEP/halberd_r18_access.step",
+  "source_document_hash": "83c7a0a75ce0d898d972f9305be4bc740759eb4156651a6bee11d217674487a0",
+  "rings": {
+    "nose": {
+      "x_mm": 1078.0,
+      "heads": 24,
+      "r16_kept": 4
+    },
+    "RMA": {
+      "x_mm": -1108.0,
+      "perimeter_mm": 826.6705160435598,
+      "section_radius_mm": [
+        99.99999997486998,
+        137.97890510385565
+      ],
+      "kept_clocks": [
+        0.0,
+        14.48367121648683,
+        27.963533889369568,
+        62.036466115167585,
+        75.51632878755372,
+        90.00000000059272,
+        104.4836712135575,
+        117.96353388589907,
+        152.03646611170026,
+        165.51632878462766,
+        180.00000000118897,
+        194.48367121760134,
+        207.963533893937,
+        242.0364661023515,
+        255.5163287792158,
+        269.99999999913473,
+        284.48367121916203,
+        297.9635338835501,
+        332.03646611086106,
+        345.51632878351325
+      ],
+      "skipped": [
+        [
+          38.30034467774595,
+          "intake ridge"
+        ],
+        [
+          45.0000000008956,
+          "intake ridge"
+        ],
+        [
+          51.699655323203714,
+          "intake ridge"
+        ],
+        [
+          128.30034467725196,
+          "intake ridge"
+        ],
+        [
+          134.9999999999658,
+          "intake ridge"
+        ],
+        [
+          141.69965532270962,
+          "intake ridge"
+        ],
+        [
+          218.30034467697274,
+          "intake ridge"
+        ],
+        [
+          224.99999999943714,
+          "intake ridge"
+        ],
+        [
+          231.69965532243037,
+          "intake ridge"
+        ],
+        [
+          308.3003446766768,
+          "intake ridge"
+        ],
+        [
+          314.9999999988769,
+          "intake ridge"
+        ],
+        [
+          321.69965532213445,
+          "intake ridge"
+        ]
+      ],
+      "heads": 20
+    },
+    "RBF": {
+      "x_mm": -1138.0,
+      "perimeter_mm": 679.8089556892254,
+      "section_radius_mm": [
+        99.99999997486998,
+        112.4264068889555
+      ],
+      "kept_clocks": [
+        0.0,
+        13.645766154224207,
+        26.359930350223816,
+        63.64006964776653,
+        76.35423384285433,
+        89.99999999341635,
+        103.64576614469505,
+        116.35993034036936,
+        153.6400696379121,
+        166.3542338333253,
+        179.99999998683282,
+        193.64576614177372,
+        206.35993034143408,
+        243.64006965093068,
+        256.35423385102354,
+        270.0000000090452,
+        283.6457661660823,
+        296.3599303534668,
+        333.6400696499717,
+        346.3542338457758
+      ],
+      "skipped": [
+        [
+          38.81026746168935,
+          "booster_fin_fairing_1"
+        ],
+        [
+          51.18973253677992,
+          "booster_fin_fairing_1"
+        ],
+        [
+          128.81026745148856,
+          "booster_fin_fairing_2"
+        ],
+        [
+          141.18973252657915,
+          "booster_fin_fairing_2"
+        ],
+        [
+          218.8102674564914,
+          "booster_fin_fairing_3"
+        ],
+        [
+          231.18973253550234,
+          "booster_fin_fairing_3"
+        ],
+        [
+          308.8102674640487,
+          "booster_fin_fairing_4"
+        ],
+        [
+          321.189732538799,
+          "booster_fin_fairing_4"
+        ]
+      ],
+      "heads": 20
+    },
+    "RBA": {
+      "x_mm": -1515.0,
+      "perimeter_mm": 679.8089556892256,
+      "section_radius_mm": [
+        99.99999997486998,
+        112.42640688895546
+      ],
+      "kept_clocks": [
+        0.0,
+        13.645766154224212,
+        26.359930350223838,
+        38.81026746168938,
+        51.18973253677994,
+        63.64006964776656,
+        76.35423384285437,
+        89.99999999341638,
+        103.64576614469507,
+        116.35993034036942,
+        128.81026745148858,
+        141.18973252657915,
+        153.64006963791212,
+        166.3542338333253,
+        179.99999998683282,
+        193.6457661417737,
+        206.359930341434,
+        218.8102674564913,
+        231.1897325355022,
+        243.6400696509306,
+        256.3542338510234,
+        270.0000000090452,
+        283.64576616608224,
+        296.35993035346667,
+        308.8102674640486,
+        321.18973253879886,
+        333.64006964997157,
+        346.35423384577587
+      ],
+      "skipped": [],
+      "heads": 28
+    }
+  },
+  "panels": {
+    "P05": {
+      "clock_degrees": 0.0,
+      "center_x_mm": -1020.0,
+      "tangent_offset_mm": 16.0,
+      "length_mm": 112.0,
+      "width_mm": 22.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 41.73066435586218,
+      "outline_patch_area_mm2": 104.32666088965533,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -47.0,
+          "offset_tangent_mm": 10.0,
+          "point_mm": [
+            -1067.0,
+            10.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": -47.0,
+          "offset_tangent_mm": 22.0,
+          "point_mm": [
+            -1067.0,
+            22.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 47.0,
+          "offset_tangent_mm": 10.0,
+          "point_mm": [
+            -973.0,
+            10.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 47.0,
+          "offset_tangent_mm": 22.0,
+          "point_mm": [
+            -973.0,
+            22.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P08": {
+      "clock_degrees": 270.0,
+      "center_x_mm": -947.1875,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 30.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 12.930664355862298,
+      "outline_patch_area_mm2": 32.32666088965523,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -9.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -956.1875,
+            -99.99999997486998,
+            17.999999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        },
+        {
+          "offset_x_mm": 9.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -938.1875,
+            -99.99999997486998,
+            17.999999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "N02": {
+      "clock_degrees": 180.0,
+      "center_x_mm": -871.2946428571429,
+      "tangent_offset_mm": -17.0,
+      "length_mm": 100.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 37.25066435586213,
+      "outline_patch_area_mm2": 93.1266608896557,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -42.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -913.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": -30.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -901.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": -18.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -889.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": -6.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -877.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 6.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -865.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 18.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -853.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 30.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -841.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 42.0,
+          "offset_tangent_mm": -10.5,
+          "point_mm": [
+            -829.2946428571429,
+            10.500000000000012,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H01": {
+      "clock_degrees": 15.0,
+      "center_x_mm": -761.0,
+      "tangent_offset_mm": -91.0,
+      "length_mm": 110.0,
+      "width_mm": 22.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 41.0906611520651,
+      "outline_patch_area_mm2": 102.72877309681957,
+      "center_normal_dot_radial": 0.9995372747829248,
+      "screw_sites": [
+        {
+          "offset_x_mm": -48.0,
+          "offset_tangent_mm": -97.0,
+          "point_mm": [
+            -809.0,
+            -73.05163894038242,
+            102.14679249847433
+          ],
+          "outward_normal": [
+            -0.017591189238063527,
+            0.29160035785893607,
+            0.9563784718184173
+          ],
+          "measured_skin_radius_mm": 79.75906951314293,
+          "available_wall_mm": 92.41539081897854,
+          "remaining_wall_after_seat_mm": 91.39539081897854
+        },
+        {
+          "offset_x_mm": -48.0,
+          "offset_tangent_mm": -85.0,
+          "point_mm": [
+            -809.0,
+            -61.566499771107836,
+            98.64547574833117
+          ],
+          "outward_normal": [
+            -0.020030863005252305,
+            0.29150945150701985,
+            0.956358198694057
+          ],
+          "measured_skin_radius_mm": 79.34962999082234,
+          "available_wall_mm": 131.84306719755412,
+          "remaining_wall_after_seat_mm": 130.8230671975541
+        },
+        {
+          "offset_x_mm": 48.0,
+          "offset_tangent_mm": -97.0,
+          "point_mm": [
+            -713.0,
+            -72.65337639934458,
+            103.63312853637902
+          ],
+          "outward_normal": [
+            -0.014545938945728944,
+            0.2761020754069678,
+            0.9610182410423603
+          ],
+          "measured_skin_radius_mm": 81.29783780927075,
+          "available_wall_mm": 99.04533870387299,
+          "remaining_wall_after_seat_mm": 98.02533870387299
+        },
+        {
+          "offset_x_mm": 48.0,
+          "offset_tangent_mm": -85.0,
+          "point_mm": [
+            -713.0,
+            -61.11800278302834,
+            100.31928929488544
+          ],
+          "outward_normal": [
+            -0.016185693470386214,
+            0.2760501854009814,
+            0.9610069294583503
+          ],
+          "measured_skin_radius_mm": 81.08248928601769,
+          "available_wall_mm": 140.3198676261668,
+          "remaining_wall_after_seat_mm": 139.2998676261668
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "T05": {
+      "clock_degrees": 45.0,
+      "center_x_mm": -719.5089285714287,
+      "tangent_offset_mm": 0.0,
+      "length_mm": 160.0,
+      "width_mm": 10.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 53.2506699010243,
+      "outline_patch_area_mm2": 133.12670247845688,
+      "center_normal_dot_radial": 0.9999728620537794,
+      "screw_sites": [
+        {
+          "offset_x_mm": -73.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            -792.5089285714287,
+            99.07566449796379,
+            99.07566449796379
+          ],
+          "outward_normal": [
+            -0.007367167432147328,
+            0.7070875917607474,
+            0.7070875917607474
+          ],
+          "measured_skin_radius_mm": 140.11414843414695,
+          "available_wall_mm": 280.2511133936136,
+          "remaining_wall_after_seat_mm": 279.2311133936136
+        },
+        {
+          "offset_x_mm": 73.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            -646.5089285714287,
+            99.83625375000763,
+            99.83625375000763
+          ],
+          "outward_normal": [
+            -0.0073671674321481315,
+            0.7070875917607474,
+            0.7070875917607474
+          ],
+          "measured_skin_radius_mm": 141.18978406978258,
+          "available_wall_mm": 282.4025598239794,
+          "remaining_wall_after_seat_mm": 281.3825598239794
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "Z10": {
+      "clock_degrees": 180.0,
+      "center_x_mm": -681.5625,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 36.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 14.85066435586159,
+      "outline_patch_area_mm2": 37.12666088965456,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -11.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -692.5625,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 11.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -670.5625,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "Z01": {
+      "clock_degrees": 90.0,
+      "center_x_mm": -605.6696428571429,
+      "tangent_offset_mm": -16.0,
+      "length_mm": 90.0,
+      "width_mm": 22.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 34.690664355861294,
+      "outline_patch_area_mm2": 86.72666088965485,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -38.0,
+          "offset_tangent_mm": -22.0,
+          "point_mm": [
+            -643.6696428571429,
+            100.00000002512002,
+            22.000000000000004
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": -38.0,
+          "offset_tangent_mm": -10.0,
+          "point_mm": [
+            -643.6696428571429,
+            100.00000002512002,
+            10.000000000000005
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 38.0,
+          "offset_tangent_mm": -22.0,
+          "point_mm": [
+            -567.6696428571429,
+            100.00000002512002,
+            22.000000000000004
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 38.0,
+          "offset_tangent_mm": -10.0,
+          "point_mm": [
+            -567.6696428571429,
+            100.00000002512002,
+            10.000000000000005
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H20": {
+      "clock_degrees": 105.0,
+      "center_x_mm": -567.7232142857143,
+      "tangent_offset_mm": -91.0,
+      "length_mm": 40.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 16.130663013011336,
+      "outline_patch_area_mm2": 40.326672170700675,
+      "center_normal_dot_radial": 0.9999303461597253,
+      "screw_sites": [
+        {
+          "offset_x_mm": -13.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            -580.7232142857143,
+            103.68654429582483,
+            66.42740660727746
+          ],
+          "outward_normal": [
+            -0.011556635397610128,
+            0.9646829613609139,
+            -0.26316008101196564
+          ],
+          "measured_skin_radius_mm": 82.96083302727024,
+          "available_wall_mm": 127.57479502066282,
+          "remaining_wall_after_seat_mm": 126.55479502066282
+        },
+        {
+          "offset_x_mm": 13.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            -554.7232142857143,
+            103.96859688518006,
+            66.35183084373662
+          ],
+          "outward_normal": [
+            -0.01090840371651207,
+            0.9651335467289098,
+            -0.26153057891350473
+          ],
+          "measured_skin_radius_mm": 83.2528353546527,
+          "available_wall_mm": 128.65864212150788,
+          "remaining_wall_after_seat_mm": 127.63864212150789
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P01": {
+      "clock_degrees": 180.0,
+      "center_x_mm": -415.9375,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 36.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 14.850664355862012,
+      "outline_patch_area_mm2": 37.12666088965538,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -11.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            -426.9375,
+            18.00000000000001,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 11.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            -404.9375,
+            18.00000000000001,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P02": {
+      "clock_degrees": 90.0,
+      "center_x_mm": -377.99107142857144,
+      "tangent_offset_mm": 17.0,
+      "length_mm": 72.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 28.29066435586182,
+      "outline_patch_area_mm2": 70.72666088965647,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -28.0,
+          "offset_tangent_mm": 17.0,
+          "point_mm": [
+            -405.99107142857144,
+            100.00000002512002,
+            -16.999999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 28.0,
+          "offset_tangent_mm": 17.0,
+          "point_mm": [
+            -349.99107142857144,
+            100.00000002512002,
+            -16.999999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H10": {
+      "clock_degrees": 285.0,
+      "center_x_mm": -264.1517857142858,
+      "tangent_offset_mm": -91.0,
+      "length_mm": 90.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 33.41066192975593,
+      "outline_patch_area_mm2": 83.52666764802746,
+      "center_normal_dot_radial": 0.9999846635861361,
+      "screw_sites": [
+        {
+          "offset_x_mm": -38.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            -302.1517857142858,
+            -105.97741444917787,
+            -65.813569799722
+          ],
+          "outward_normal": [
+            -0.005926765490394708,
+            -0.9664414287538949,
+            0.25681868748000425
+          ],
+          "measured_skin_radius_mm": 85.33251632944909,
+          "available_wall_mm": 14.087249612511568,
+          "remaining_wall_after_seat_mm": 13.067249612511569
+        },
+        {
+          "offset_x_mm": 38.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            -226.15178571428578,
+            -106.37119277851369,
+            -65.70805721437961
+          ],
+          "outward_normal": [
+            -0.004829716263687861,
+            -0.9660370137285995,
+            0.25835859178115544
+          ],
+          "measured_skin_radius_mm": 85.74018565417214,
+          "available_wall_mm": 12.625956910424405,
+          "remaining_wall_after_seat_mm": 11.605956910424405
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H16": {
+      "clock_degrees": 75.0,
+      "center_x_mm": -226.20535714285722,
+      "tangent_offset_mm": 91.0,
+      "length_mm": 44.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 17.41066389571786,
+      "outline_patch_area_mm2": 43.52666264897539,
+      "center_normal_dot_radial": 0.9999882205763068,
+      "screw_sites": [
+        {
+          "offset_x_mm": -15.0,
+          "offset_tangent_mm": 91.0,
+          "point_mm": [
+            -241.20535714285722,
+            106.2994913771783,
+            -65.72726954696356
+          ],
+          "outward_normal": [
+            -0.0050334765396862395,
+            0.9661393636759357,
+            0.257971692380739
+          ],
+          "measured_skin_radius_mm": 85.66595490126755,
+          "available_wall_mm": 12.915569768742804,
+          "remaining_wall_after_seat_mm": 11.895569768742805
+        },
+        {
+          "offset_x_mm": 15.0,
+          "offset_tangent_mm": 91.0,
+          "point_mm": [
+            -211.20535714285722,
+            106.43949980730793,
+            -65.68975440117677
+          ],
+          "outward_normal": [
+            -0.004633940526859875,
+            0.9659253092056352,
+            0.2587794884282591
+          ],
+          "measured_skin_radius_mm": 85.81090229403736,
+          "available_wall_mm": 12.337920007646858,
+          "remaining_wall_after_seat_mm": 11.317920007646858
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "B09": {
+      "clock_degrees": 180.0,
+      "center_x_mm": -188.25892857142867,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 40.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 16.130664355862148,
+      "outline_patch_area_mm2": 40.326660889655386,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -13.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -201.25892857142867,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 13.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -175.25892857142867,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "T07": {
+      "clock_degrees": 135.0,
+      "center_x_mm": -150.3125,
+      "tangent_offset_mm": 0.0,
+      "length_mm": 90.0,
+      "width_mm": 10.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 30.85066416401413,
+      "outline_patch_area_mm2": 77.12665945079448,
+      "center_normal_dot_radial": 0.9999728620537793,
+      "screw_sites": [
+        {
+          "offset_x_mm": -38.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            -188.3125,
+            102.22323511230556,
+            -102.22323511230555
+          ],
+          "outward_normal": [
+            -0.007367167432156836,
+            0.7070875917604447,
+            -0.7070875917610502
+          ],
+          "measured_skin_radius_mm": 144.56548548547607,
+          "available_wall_mm": 12.161382921068707,
+          "remaining_wall_after_seat_mm": 11.141382921068708
+        },
+        {
+          "offset_x_mm": 38.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            -112.3125,
+            102.61915828460295,
+            -102.61915828460293
+          ],
+          "outward_normal": [
+            -0.0073671674321612035,
+            0.7070875917604719,
+            -0.7070875917610229
+          ],
+          "measured_skin_radius_mm": 145.12540540539683,
+          "available_wall_mm": 10.546779453450219,
+          "remaining_wall_after_seat_mm": 9.526779453450219
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "Z09": {
+      "clock_degrees": 270.0,
+      "center_x_mm": -36.47321428571445,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 70.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 27.010664355862453,
+      "outline_patch_area_mm2": 67.52666088965623,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -28.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -64.47321428571445,
+            -99.99999997486998,
+            17.999999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        },
+        {
+          "offset_x_mm": 28.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -8.473214285714448,
+            -99.99999997486998,
+            17.999999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H11": {
+      "clock_degrees": 165.0,
+      "center_x_mm": 77.36607142857133,
+      "tangent_offset_mm": 91.0,
+      "length_mm": 80.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 30.850664362033715,
+      "outline_patch_area_mm2": 77.12676816300254,
+      "center_normal_dot_radial": 0.9999035486756959,
+      "screw_sites": [
+        {
+          "offset_x_mm": -33.0,
+          "offset_tangent_mm": 91.0,
+          "point_mm": [
+            44.36607142857133,
+            -65.47135602989749,
+            -107.25457362521234
+          ],
+          "outward_normal": [
+            -0.0022839886682503407,
+            0.2701967210505085,
+            -0.9628024279826661
+          ],
+          "measured_skin_radius_mm": 86.65472880298968,
+          "available_wall_mm": 7.280099933127184,
+          "remaining_wall_after_seat_mm": 6.260099933127185
+        },
+        {
+          "offset_x_mm": 33.0,
+          "offset_tangent_mm": 91.0,
+          "point_mm": [
+            110.36607142857133,
+            -65.43505328183122,
+            -107.3900573254501
+          ],
+          "outward_normal": [
+            -0.0019878227423106992,
+            0.2739485455988921,
+            -0.9617422954851247
+          ],
+          "measured_skin_radius_mm": 86.79499185067965,
+          "available_wall_mm": 5.936604928021453,
+          "remaining_wall_after_seat_mm": 4.916604928021453
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H08": {
+      "clock_degrees": 345.0,
+      "center_x_mm": 115.3125,
+      "tangent_offset_mm": 91.0,
+      "length_mm": 56.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 22.530664563083423,
+      "outline_patch_area_mm2": 56.326706444965396,
+      "center_normal_dot_radial": 0.999870129281671,
+      "screw_sites": [
+        {
+          "offset_x_mm": -18.0,
+          "offset_tangent_mm": 96.5,
+          "point_mm": [
+            97.3125,
+            70.73321157202331,
+            108.86742957827059
+          ],
+          "outward_normal": [
+            -0.0023652629667151722,
+            -0.2731934023078452,
+            0.9619562206600476
+          ],
+          "measured_skin_radius_mm": 86.85075959525234,
+          "available_wall_mm": 6.390808720598899,
+          "remaining_wall_after_seat_mm": 5.370808720598898
+        },
+        {
+          "offset_x_mm": -6.0,
+          "offset_tangent_mm": 96.5,
+          "point_mm": [
+            109.3125,
+            70.72593168801178,
+            108.89459847527479
+          ],
+          "outward_normal": [
+            -0.002322738290555872,
+            -0.2738865174478465,
+            0.9617592112619063
+          ],
+          "measured_skin_radius_mm": 86.87888690716879,
+          "available_wall_mm": 6.156212428977268,
+          "remaining_wall_after_seat_mm": 5.136212428977268
+        },
+        {
+          "offset_x_mm": 6.0,
+          "offset_tangent_mm": 96.5,
+          "point_mm": [
+            121.3125,
+            70.71877750796861,
+            108.92129823868243
+          ],
+          "outward_normal": [
+            -0.002284277381464185,
+            -0.2745832179846219,
+            0.96156062652235
+          ],
+          "measured_skin_radius_mm": 86.90652853624731,
+          "available_wall_mm": 5.921220350797791,
+          "remaining_wall_after_seat_mm": 4.901220350797791
+        },
+        {
+          "offset_x_mm": 18.0,
+          "offset_tangent_mm": 96.5,
+          "point_mm": [
+            133.3125,
+            70.7117363745779,
+            108.94757610623944
+          ],
+          "outward_normal": [
+            -0.002249901420448919,
+            -0.2752828325914425,
+            0.9613606503409791
+          ],
+          "measured_skin_radius_mm": 86.93373338660106,
+          "available_wall_mm": 5.68587535029809,
+          "remaining_wall_after_seat_mm": 4.665875350298091
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "T01": {
+      "clock_degrees": 45.0,
+      "center_x_mm": 191.2053571428571,
+      "tangent_offset_mm": 0.0,
+      "length_mm": 140.0,
+      "width_mm": 10.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 46.85066435850976,
+      "outline_patch_area_mm2": 117.12996321097634,
+      "center_normal_dot_radial": 0.9999728620537794,
+      "screw_sites": [
+        {
+          "offset_x_mm": -63.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            128.2053571428571,
+            103.87213977137219,
+            103.87213977137219
+          ],
+          "outward_normal": [
+            -0.007367167432149597,
+            0.7070875917607474,
+            0.7070875917607474
+          ],
+          "measured_skin_radius_mm": 146.89738881738833,
+          "available_wall_mm": 5.437029898605389,
+          "remaining_wall_after_seat_mm": 4.417029898605389
+        },
+        {
+          "offset_x_mm": 63.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            254.2053571428571,
+            104.14350810718976,
+            104.14350810718976
+          ],
+          "outward_normal": [
+            0.004950434388736032,
+            0.7070981166710045,
+            0.7070981166710045
+          ],
+          "measured_skin_radius_mm": 147.28116159830014,
+          "available_wall_mm": 3.575893247390199,
+          "remaining_wall_after_seat_mm": 2.555893247390199
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P06": {
+      "clock_degrees": 90.0,
+      "center_x_mm": 229.15178571428555,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 42.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 17.41066435586217,
+      "outline_patch_area_mm2": 43.52666088965557,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -14.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            215.15178571428555,
+            100.00000002512002,
+            18.000000000000004
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 14.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            243.15178571428555,
+            100.00000002512002,
+            18.000000000000004
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H22": {
+      "clock_degrees": 15.0,
+      "center_x_mm": 267.0982142857142,
+      "tangent_offset_mm": -91.0,
+      "length_mm": 70.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 27.010664352844547,
+      "outline_patch_area_mm2": 67.52669591517109,
+      "center_normal_dot_radial": 0.9998107255928448,
+      "screw_sites": [
+        {
+          "offset_x_mm": -28.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            239.09821428571422,
+            -65.39605643079685,
+            107.53559555484566
+          ],
+          "outward_normal": [
+            0.0012105556635949315,
+            0.27863326063633265,
+            0.9603968141461897
+          ],
+          "measured_skin_radius_mm": 86.94566411291196,
+          "available_wall_mm": 3.735780326767843,
+          "remaining_wall_after_seat_mm": 2.715780326767843
+        },
+        {
+          "offset_x_mm": 28.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            295.0982142857142,
+            -65.4136786476706,
+            107.46982854613083
+          ],
+          "outward_normal": [
+            0.001220682864240833,
+            0.27641336509712994,
+            0.9610380645578123
+          ],
+          "measured_skin_radius_mm": 86.87757709533267,
+          "available_wall_mm": 3.4223012385605744,
+          "remaining_wall_after_seat_mm": 2.4023012385605744
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "B02": {
+      "clock_degrees": 270.0,
+      "center_x_mm": 305.0446428571429,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 64.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 25.09066435586236,
+      "outline_patch_area_mm2": 62.726660889655356,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -25.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            280.0446428571429,
+            -99.99999997486998,
+            17.999999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        },
+        {
+          "offset_x_mm": 25.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            330.0446428571429,
+            -99.99999997486998,
+            17.999999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "H02": {
+      "clock_degrees": 105.0,
+      "center_x_mm": 494.77678571428555,
+      "tangent_offset_mm": -91.0,
+      "length_mm": 60.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 23.170664357458023,
+      "outline_patch_area_mm2": 57.926684694187344,
+      "center_normal_dot_radial": 0.9999505817719305,
+      "screw_sites": [
+        {
+          "offset_x_mm": -23.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            471.77678571428555,
+            107.25870855841282,
+            65.47024807788569
+          ],
+          "outward_normal": [
+            0.0012534353424699424,
+            0.96306218566641,
+            -0.26927616946042476
+          ],
+          "measured_skin_radius_mm": 86.65900960083974,
+          "available_wall_mm": 2.6784564453687745,
+          "remaining_wall_after_seat_mm": 1.6584564453687745
+        },
+        {
+          "offset_x_mm": 23.0,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            517.7767857142856,
+            107.2028187355478,
+            65.4852237107875
+          ],
+          "outward_normal": [
+            0.0012621674651691357,
+            0.9635892249825176,
+            -0.26738401678275553
+          ],
+          "measured_skin_radius_mm": 86.60114819850024,
+          "available_wall_mm": 2.5236342689112465,
+          "remaining_wall_after_seat_mm": 1.5036342689112465
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "Y09": {
+      "clock_degrees": 180.0,
+      "center_x_mm": 532.7232142857142,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 44.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 18.050664355860967,
+      "outline_patch_area_mm2": 45.12666088965455,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -15.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            517.7232142857142,
+            18.00000000000001,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 15.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            547.7232142857142,
+            18.00000000000001,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P04": {
+      "clock_degrees": 180.0,
+      "center_x_mm": 608.6160714285713,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 62.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 23.810664355861498,
+      "outline_patch_area_mm2": 59.52666088965474,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -23.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            585.6160714285713,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 23.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            631.6160714285713,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P03": {
+      "clock_degrees": 0.0,
+      "center_x_mm": 634.0,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 44.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 18.05066435586124,
+      "outline_patch_area_mm2": 45.1266608896548,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -15.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            619.0,
+            -18.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 15.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            649.0,
+            -18.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P07": {
+      "clock_degrees": 45.0,
+      "center_x_mm": 722.4553571428571,
+      "tangent_offset_mm": 9.0,
+      "length_mm": 56.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 22.53066434650732,
+      "outline_patch_area_mm2": 56.69908168918792,
+      "center_normal_dot_radial": 0.9917002509876744,
+      "screw_sites": [
+        {
+          "offset_x_mm": -20.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            702.4553571428571,
+            85.45061910750204,
+            72.72269704614419
+          ],
+          "outward_normal": [
+            -6.775960276386795e-17,
+            0.7921517012392282,
+            0.6103242435163432
+          ],
+          "measured_skin_radius_mm": 111.84542445500693,
+          "available_wall_mm": 223.29318475862394,
+          "remaining_wall_after_seat_mm": 222.27318475862393
+        },
+        {
+          "offset_x_mm": 20.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            742.4553571428571,
+            85.44876882292697,
+            72.72084676156912
+          ],
+          "outward_normal": [
+            0.0021094290535443095,
+            0.7921456441763978,
+            0.6103284597013546
+          ],
+          "measured_skin_radius_mm": 111.84280775746662,
+          "available_wall_mm": 223.2898075590106,
+          "remaining_wall_after_seat_mm": 222.2698075590106
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "N01": {
+      "clock_degrees": 315.0,
+      "center_x_mm": 798.3482142857142,
+      "tangent_offset_mm": 9.0,
+      "length_mm": 44.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 18.05066441194703,
+      "outline_patch_area_mm2": 45.34370085950668,
+      "center_normal_dot_radial": 0.9912645566271681,
+      "screw_sites": [
+        {
+          "offset_x_mm": -15.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            783.3482142857142,
+            -72.1914886818402,
+            84.91941074319801
+          ],
+          "outward_normal": [
+            0.03279383132644267,
+            -0.6115690268243086,
+            0.7905111574520002
+          ],
+          "measured_skin_radius_mm": 111.09418238176215,
+          "available_wall_mm": 222.2605904059042,
+          "remaining_wall_after_seat_mm": 221.2405904059042
+        },
+        {
+          "offset_x_mm": 15.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            813.3482142857142,
+            -71.2978945383957,
+            84.02581659975351
+          ],
+          "outward_normal": [
+            0.04996652298613984,
+            -0.6136649215304797,
+            0.787983953303407
+          ],
+          "measured_skin_radius_mm": 109.83044942484578,
+          "available_wall_mm": 220.38232264269084,
+          "remaining_wall_after_seat_mm": 219.36232264269083
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "Y07": {
+      "clock_degrees": 90.0,
+      "center_x_mm": 836.2946428571427,
+      "tangent_offset_mm": 9.0,
+      "length_mm": 56.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 21.89066445569947,
+      "outline_patch_area_mm2": 54.72678461288084,
+      "center_normal_dot_radial": 0.9998455328768928,
+      "screw_sites": [
+        {
+          "offset_x_mm": -18.0,
+          "offset_tangent_mm": 13.5,
+          "point_mm": [
+            818.2946428571427,
+            99.34087059842298,
+            -13.499999999999995
+          ],
+          "outward_normal": [
+            0.015329463564210492,
+            0.999882496869924,
+            2.7071238493510113e-14
+          ],
+          "measured_skin_radius_mm": 99.34087059842298,
+          "available_wall_mm": 198.75115763112322,
+          "remaining_wall_after_seat_mm": 197.7311576311232
+        },
+        {
+          "offset_x_mm": -6.0,
+          "offset_tangent_mm": 13.5,
+          "point_mm": [
+            830.2946428571427,
+            99.1473756255036,
+            -13.499999999999995
+          ],
+          "outward_normal": [
+            0.01688011821552467,
+            0.9998575206543331,
+            1.9175558539515735e-14
+          ],
+          "measured_skin_radius_mm": 99.1473756255036,
+          "available_wall_mm": 198.37886553263283,
+          "remaining_wall_after_seat_mm": 197.35886553263282
+        },
+        {
+          "offset_x_mm": 6.0,
+          "offset_tangent_mm": 13.5,
+          "point_mm": [
+            842.2946428571427,
+            98.93653900442817,
+            -13.499999999999995
+          ],
+          "outward_normal": [
+            0.01821851475516654,
+            0.9998340290868859,
+            1.193070717808315e-14
+          ],
+          "measured_skin_radius_mm": 98.93653900442817,
+          "available_wall_mm": 197.97097595395607,
+          "remaining_wall_after_seat_mm": 196.95097595395606
+        },
+        {
+          "offset_x_mm": 18.0,
+          "offset_tangent_mm": 13.5,
+          "point_mm": [
+            854.2946428571427,
+            98.71090767679584,
+            -13.499999999999995
+          ],
+          "outward_normal": [
+            0.01934468704545045,
+            0.9998128740334932,
+            6.392779949692205e-15
+          ],
+          "measured_skin_radius_mm": 98.71090767679584,
+          "available_wall_mm": 197.53207773567186,
+          "remaining_wall_after_seat_mm": 196.51207773567185
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "P09": {
+      "clock_degrees": 135.0,
+      "center_x_mm": 912.1875,
+      "tangent_offset_mm": 9.0,
+      "length_mm": 48.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 18.69066435396303,
+      "outline_patch_area_mm2": 46.85960133694128,
+      "center_normal_dot_radial": 0.9912599510208024,
+      "screw_sites": [
+        {
+          "offset_x_mm": -17.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            895.1875,
+            67.51795913454313,
+            -80.24588119590096
+          ],
+          "outward_normal": [
+            0.07389717409561097,
+            0.6220966894109368,
+            -0.779445262147789
+          ],
+          "measured_skin_radius_mm": 104.48481351182329,
+          "available_wall_mm": 211.18454123223935,
+          "remaining_wall_after_seat_mm": 210.16454123223934
+        },
+        {
+          "offset_x_mm": 17.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            929.1875,
+            65.71316611687108,
+            -78.44108817822891
+          ],
+          "outward_normal": [
+            0.07396255423491521,
+            0.6259156070006839,
+            -0.7763756780605718
+          ],
+          "measured_skin_radius_mm": 101.9324507489552,
+          "available_wall_mm": 206.2206754038906,
+          "remaining_wall_after_seat_mm": 205.20067540389059
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "N08": {
+      "clock_degrees": 270.0,
+      "center_x_mm": 950.1339285714284,
+      "tangent_offset_mm": 9.0,
+      "length_mm": 50.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 19.970664547401533,
+      "outline_patch_area_mm2": 49.99326900211992,
+      "center_normal_dot_radial": 0.999785189523646,
+      "screw_sites": [
+        {
+          "offset_x_mm": -18.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            932.1339285714284,
+            -97.06303854628723,
+            8.999999999999982
+          ],
+          "outward_normal": [
+            0.02149860838567266,
+            -0.9997688782100989,
+            4.7453203196108005e-20
+          ],
+          "measured_skin_radius_mm": 97.06303854628723,
+          "available_wall_mm": 194.26102227254472,
+          "remaining_wall_after_seat_mm": 193.2410222725447
+        },
+        {
+          "offset_x_mm": 18.0,
+          "offset_tangent_mm": 9.0,
+          "point_mm": [
+            968.1339285714284,
+            -96.31306346796367,
+            8.999999999999982
+          ],
+          "outward_normal": [
+            0.020887947304359562,
+            -0.9997078823266183,
+            0.012159098298748767
+          ],
+          "measured_skin_radius_mm": 96.31306346796367,
+          "available_wall_mm": 192.76806736618508,
+          "remaining_wall_after_seat_mm": 191.74806736618507
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "Y01": {
+      "clock_degrees": 180.0,
+      "center_x_mm": 1016.0,
+      "tangent_offset_mm": -9.0,
+      "length_mm": 50.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 19.97066460760635,
+      "outline_patch_area_mm2": 50.04658781406405,
+      "center_normal_dot_radial": 0.997755362274759,
+      "screw_sites": [
+        {
+          "offset_x_mm": -18.0,
+          "offset_tangent_mm": -9.0,
+          "point_mm": [
+            998.0,
+            9.000000000000012,
+            -95.67950305041359
+          ],
+          "outward_normal": [
+            0.02087210502440245,
+            0.04724279475038634,
+            -0.9986653461375453
+          ],
+          "measured_skin_radius_mm": 95.67950305041359,
+          "available_wall_mm": 191.783171656272,
+          "remaining_wall_after_seat_mm": 190.763171656272
+        },
+        {
+          "offset_x_mm": 18.0,
+          "offset_tangent_mm": -9.0,
+          "point_mm": [
+            1034.0,
+            9.000000000000012,
+            -95.00303557776073
+          ],
+          "outward_normal": [
+            0.015686312496972023,
+            0.07773172457247288,
+            -0.9968509008850003
+          ],
+          "measured_skin_radius_mm": 95.00303557776073,
+          "available_wall_mm": 190.84160810782407,
+          "remaining_wall_after_seat_mm": 189.82160810782406
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "C01": {
+      "clock_degrees": 90.0,
+      "center_x_mm": -985.1339285714286,
+      "tangent_offset_mm": 13.0,
+      "length_mm": 28.0,
+      "width_mm": 28.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 13.873273158252779,
+      "outline_patch_area_mm2": 34.683182895631376,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -7.4246212024587495,
+          "offset_tangent_mm": 5.5753787975412505,
+          "point_mm": [
+            -992.5585497738873,
+            100.00000002512002,
+            -5.575378797541244
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": -7.4246212024587495,
+          "offset_tangent_mm": 20.42462120245875,
+          "point_mm": [
+            -992.5585497738873,
+            100.00000002512002,
+            -20.424621202458745
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 7.4246212024587495,
+          "offset_tangent_mm": 5.5753787975412505,
+          "point_mm": [
+            -977.7093073689698,
+            100.00000002512002,
+            -5.575378797541244
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 7.4246212024587495,
+          "offset_tangent_mm": 20.42462120245875,
+          "point_mm": [
+            -977.7093073689698,
+            100.00000002512002,
+            -20.424621202458745
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "C03": {
+      "clock_degrees": 270.0,
+      "center_x_mm": -833.3482142857143,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 14.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 6.8361056142114585,
+      "outline_patch_area_mm2": 17.090264035528577,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            -833.3482142857143,
+            -99.99999997486998,
+            -18.000000000000018
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.19999999998998,
+          "remaining_wall_after_seat_mm": 198.17999999998997
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "H24": {
+      "clock_degrees": 195.0,
+      "center_x_mm": -643.6160714285714,
+      "tangent_offset_mm": -91.0,
+      "length_mm": 22.0,
+      "width_mm": 22.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 10.857076176815031,
+      "outline_patch_area_mm2": 27.143046594411658,
+      "center_normal_dot_radial": 0.9998640288700351,
+      "screw_sites": [
+        {
+          "offset_x_mm": -7.5,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            -651.1160714285714,
+            66.65503463485541,
+            -102.83702493167723
+          ],
+          "outward_normal": [
+            -0.013468740125568044,
+            -0.26898869710762546,
+            -0.9630491544400899
+          ],
+          "measured_skin_radius_mm": 82.08134586477112,
+          "available_wall_mm": 123.9641878964263,
+          "remaining_wall_after_seat_mm": 122.9441878964263
+        },
+        {
+          "offset_x_mm": 7.5,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            -636.1160714285714,
+            66.6035726413676,
+            -103.02908370603257
+          ],
+          "outward_normal": [
+            -0.013040783138446442,
+            -0.2675607575428001,
+            -0.9634527383313927
+          ],
+          "measured_skin_radius_mm": 82.28017973909994,
+          "available_wall_mm": 124.81810744765201,
+          "remaining_wall_after_seat_mm": 123.79810744765201
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -98.5,
+          "point_mm": [
+            -643.6160714285714,
+            73.85447218440774,
+            -104.94613299950078
+          ],
+          "outward_normal": [
+            -0.01251107259894124,
+            -0.2682822529941504,
+            -0.963259106258958
+          ],
+          "measured_skin_radius_mm": 82.25523626606615,
+          "available_wall_mm": 97.45530145552468,
+          "remaining_wall_after_seat_mm": 96.43530145552468
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -83.5,
+          "point_mm": [
+            -643.6160714285714,
+            59.40368267382238,
+            -100.92166408514473
+          ],
+          "outward_normal": [
+            -0.013994566785696569,
+            -0.2682405110175906,
+            -0.9632503207108226
+          ],
+          "measured_skin_radius_mm": 82.10803734669935,
+          "available_wall_mm": 147.81896083665094,
+          "remaining_wall_after_seat_mm": 146.79896083665093
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "T04": {
+      "clock_degrees": 225.0,
+      "center_x_mm": -491.8303571428572,
+      "tangent_offset_mm": 0.0,
+      "length_mm": 12.0,
+      "width_mm": 12.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 5.8305936910669685,
+      "outline_patch_area_mm2": 14.576969546655064,
+      "center_normal_dot_radial": 0.9999728620537793,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            -491.8303571428572,
+            -100.64205415376321,
+            -100.64205415376324
+          ],
+          "outward_normal": [
+            -0.007367167432139196,
+            -0.7070875917607474,
+            -0.7070875917607474
+          ],
+          "measured_skin_radius_mm": 142.32935792933944,
+          "available_wall_mm": 284.6818931140768,
+          "remaining_wall_after_seat_mm": 283.6618931140768
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "B01": {
+      "clock_degrees": 0.0,
+      "center_x_mm": -453.88392857142856,
+      "tangent_offset_mm": -15.0,
+      "length_mm": 24.0,
+      "width_mm": 24.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 11.862653859955042,
+      "outline_patch_area_mm2": 29.65663464988762,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -8.5,
+          "offset_tangent_mm": -15.0,
+          "point_mm": [
+            -462.38392857142856,
+            -15.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 8.5,
+          "offset_tangent_mm": -15.0,
+          "point_mm": [
+            -445.38392857142856,
+            -15.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -23.5,
+          "point_mm": [
+            -453.88392857142856,
+            -23.5,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -6.5,
+          "point_mm": [
+            -453.88392857142856,
+            -6.5,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "B08": {
+      "clock_degrees": 0.0,
+      "center_x_mm": -302.09821428571433,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 14.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 6.836105614211455,
+      "outline_patch_area_mm2": 17.09026403552849,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -302.09821428571433,
+            18.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "H05": {
+      "clock_degrees": 255.0,
+      "center_x_mm": -74.41964285714289,
+      "tangent_offset_mm": 91.0,
+      "length_mm": 16.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 7.841723281416149,
+      "outline_patch_area_mm2": 19.60352163741024,
+      "center_normal_dot_radial": 0.9999802453492967,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 91.0,
+          "point_mm": [
+            -74.41964285714289,
+            -106.94724536045038,
+            65.55370439025177
+          ],
+          "outward_normal": [
+            -0.0031414811701351666,
+            -0.9644976656300479,
+            -0.26407268713414134
+          ],
+          "measured_skin_radius_mm": 86.3365591709149,
+          "available_wall_mm": 9.66414225495623,
+          "remaining_wall_after_seat_mm": 8.64414225495623
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "T06": {
+      "clock_degrees": 315.0,
+      "center_x_mm": 1.4732142857142208,
+      "tangent_offset_mm": 0.0,
+      "length_mm": 10.0,
+      "width_mm": 10.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 4.825556988925162,
+      "outline_patch_area_mm2": 12.063709290350857,
+      "center_normal_dot_radial": 0.9999728620537791,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            1.4732142857142208,
+            -103.21192671831561,
+            103.21192671831555
+          ],
+          "outward_normal": [
+            -0.007367167432168601,
+            -0.707087591760956,
+            0.7070875917605386
+          ],
+          "measured_skin_radius_mm": 145.96370656369993,
+          "available_wall_mm": 8.129426705409333,
+          "remaining_wall_after_seat_mm": 7.109426705409334
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "C04": {
+      "clock_degrees": 90.0,
+      "center_x_mm": 39.41964285714289,
+      "tangent_offset_mm": 15.0,
+      "length_mm": 24.0,
+      "width_mm": 24.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 11.862653859955131,
+      "outline_patch_area_mm2": 29.65663464988768,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -8.5,
+          "offset_tangent_mm": 15.0,
+          "point_mm": [
+            30.91964285714289,
+            100.00000002512002,
+            -14.999999999999995
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 8.5,
+          "offset_tangent_mm": 15.0,
+          "point_mm": [
+            47.91964285714289,
+            100.00000002512002,
+            -14.999999999999995
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 6.5,
+          "point_mm": [
+            39.41964285714289,
+            100.00000002512002,
+            -6.499999999999994
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 23.5,
+          "point_mm": [
+            39.41964285714289,
+            100.00000002512002,
+            -23.499999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "H19": {
+      "clock_degrees": 195.0,
+      "center_x_mm": 342.99107142857133,
+      "tangent_offset_mm": -91.0,
+      "length_mm": 20.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 9.856668370248816,
+      "outline_patch_area_mm2": 24.628083371204866,
+      "center_normal_dot_radial": 0.9998669021088148,
+      "screw_sites": [
+        {
+          "offset_x_mm": -6.5,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            336.49107142857133,
+            65.42679859214414,
+            -107.42086424676307
+          ],
+          "outward_normal": [
+            0.0012282461153259475,
+            -0.27475954503211936,
+            -0.9615121859993367
+          ],
+          "measured_skin_radius_mm": 86.82688552250676,
+          "available_wall_mm": 3.1897361465999197,
+          "remaining_wall_after_seat_mm": 2.1697361465999196
+        },
+        {
+          "offset_x_mm": 6.5,
+          "offset_tangent_mm": -91.0,
+          "point_mm": [
+            349.49107142857133,
+            65.43093577554728,
+            -107.40542406810229
+          ],
+          "outward_normal": [
+            0.001230635212283831,
+            -0.2742378480778152,
+            -0.96166110882089
+          ],
+          "measured_skin_radius_mm": 86.81090067331797,
+          "available_wall_mm": 3.1165452110375833,
+          "remaining_wall_after_seat_mm": 2.0965452110375833
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -97.5,
+          "point_mm": [
+            342.99107142857133,
+            71.68001139965497,
+            -109.19762782210802
+          ],
+          "outward_normal": [
+            0.0015007433209236066,
+            -0.27449873229123245,
+            -0.961586290324478
+          ],
+          "measured_skin_radius_mm": 86.92465677947934,
+          "available_wall_mm": 3.4275603751257195,
+          "remaining_wall_after_seat_mm": 2.4075603751257195
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -84.5,
+          "point_mm": [
+            342.99107142857133,
+            59.17772096727912,
+            -105.62866795968534
+          ],
+          "outward_normal": [
+            0.0009581360846952206,
+            -0.27449891541047844,
+            -0.9615869318026916
+          ],
+          "measured_skin_radius_mm": 86.7131371466781,
+          "available_wall_mm": 2.878740433054603,
+          "remaining_wall_after_seat_mm": 1.858740433054603
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "T02": {
+      "clock_degrees": 225.0,
+      "center_x_mm": 418.88392857142844,
+      "tangent_offset_mm": 0.0,
+      "length_mm": 10.0,
+      "width_mm": 10.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 4.825486315913916,
+      "outline_patch_area_mm2": 12.063715789784823,
+      "center_normal_dot_radial": 0.9999877465246079,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 0.0,
+          "point_mm": [
+            418.88392857142844,
+            -103.56704605482939,
+            -103.56704605482942
+          ],
+          "outward_normal": [
+            0.004950434388736032,
+            -0.7070981166710045,
+            -0.7070981166710045
+          ],
+          "measured_skin_radius_mm": 146.46592114565868,
+          "available_wall_mm": 3.4578693067408874,
+          "remaining_wall_after_seat_mm": 2.4378693067408874
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "Y08": {
+      "clock_degrees": 0.0,
+      "center_x_mm": 456.8303571428571,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 16.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 7.841415263360206,
+      "outline_patch_area_mm2": 19.60353815840034,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            456.8303571428571,
+            -18.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "C02": {
+      "clock_degrees": 90.0,
+      "center_x_mm": 646.0,
+      "tangent_offset_mm": 17.0,
+      "length_mm": 20.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 9.85203456165771,
+      "outline_patch_area_mm2": 24.63008640414398,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 23.5,
+          "point_mm": [
+            646.0,
+            100.00000002512002,
+            -23.499999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": -5.629165124598852,
+          "offset_tangent_mm": 13.75,
+          "point_mm": [
+            640.3708348754011,
+            100.00000002512002,
+            -13.749999999999995
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 5.629165124598852,
+          "offset_tangent_mm": 13.75,
+          "point_mm": [
+            651.6291651245989,
+            100.00000002512002,
+            -13.749999999999995
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "N03": {
+      "clock_degrees": 180.0,
+      "center_x_mm": 760.4017857142856,
+      "tangent_offset_mm": 9.0,
+      "length_mm": 18.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 8.846629462171853,
+      "outline_patch_area_mm2": 22.116660334528063,
+      "center_normal_dot_radial": 0.9999881638569552,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 14.5,
+          "point_mm": [
+            760.4017857142856,
+            -14.499999999999988,
+            -99.94932634797055
+          ],
+          "outward_normal": [
+            0.0048654029633125725,
+            0.0,
+            -0.9999881638569552
+          ],
+          "measured_skin_radius_mm": 99.94932634797055,
+          "available_wall_mm": 199.90564514332272,
+          "remaining_wall_after_seat_mm": 198.8856451433227
+        },
+        {
+          "offset_x_mm": 4.763139720814413,
+          "offset_tangent_mm": 6.250000000000002,
+          "point_mm": [
+            765.1649254350999,
+            -6.249999999999989,
+            -99.92364330042622
+          ],
+          "outward_normal": [
+            0.005912944189379106,
+            0.0,
+            -0.9999825183927034
+          ],
+          "measured_skin_radius_mm": 99.92364330042622,
+          "available_wall_mm": 199.85761663203283,
+          "remaining_wall_after_seat_mm": 198.83761663203282
+        },
+        {
+          "offset_x_mm": -4.7631397208144115,
+          "offset_tangent_mm": 6.249999999999997,
+          "point_mm": [
+            755.6386459934712,
+            -6.249999999999985,
+            -99.96993992359961
+          ],
+          "outward_normal": [
+            0.003784393480609077,
+            0.0,
+            -0.9999928391573532
+          ],
+          "measured_skin_radius_mm": 99.96993992359961,
+          "available_wall_mm": 199.944109078186,
+          "remaining_wall_after_seat_mm": 198.92410907818598
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "N09": {
+      "clock_degrees": 225.0,
+      "center_x_mm": 874.2410714285713,
+      "tangent_offset_mm": 8.5,
+      "length_mm": 20.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 9.8520713631192,
+      "outline_patch_area_mm2": 24.726730939665742,
+      "center_normal_dot_radial": 0.991597082314122,
+      "screw_sites": [
+        {
+          "offset_x_mm": -6.5,
+          "offset_tangent_mm": 8.5,
+          "point_mm": [
+            867.7410714285713,
+            -81.34381381550966,
+            -69.3229985353384
+          ],
+          "outward_normal": [
+            0.06973451332357189,
+            -0.7782481868644253,
+            -0.6240727980722754
+          ],
+          "measured_skin_radius_mm": 106.53752471304574,
+          "available_wall_mm": 214.9079876827612,
+          "remaining_wall_after_seat_mm": 213.88798768276118
+        },
+        {
+          "offset_x_mm": 6.5,
+          "offset_tangent_mm": 8.5,
+          "point_mm": [
+            880.7410714285713,
+            -80.6851061409435,
+            -68.66429086077224
+          ],
+          "outward_normal": [
+            0.07223600248640065,
+            -0.7769396971572315,
+            -0.6254171942999442
+          ],
+          "measured_skin_radius_mm": 105.60597138603504,
+          "available_wall_mm": 213.22810824256948,
+          "remaining_wall_after_seat_mm": 212.20810824256947
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 2.0,
+          "point_mm": [
+            874.2410714285713,
+            -76.7297190658119,
+            -73.90129194106571
+          ],
+          "outward_normal": [
+            0.07206295735368616,
+            -0.7230199716333922,
+            -0.6870582586627496
+          ],
+          "measured_skin_radius_mm": 106.51220933994864,
+          "available_wall_mm": 214.69215802146667,
+          "remaining_wall_after_seat_mm": 213.67215802146666
+        },
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 15.0,
+          "point_mm": [
+            874.2410714285713,
+            -84.91663569694992,
+            -63.70343226135351
+          ],
+          "outward_normal": [
+            0.0688960197420516,
+            -0.8272971444870618,
+            -0.5575237871044215
+          ],
+          "measured_skin_radius_mm": 105.0902578737219,
+          "available_wall_mm": 212.71079728459185,
+          "remaining_wall_after_seat_mm": 211.69079728459184
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "Y02": {
+      "clock_degrees": 45.0,
+      "center_x_mm": 988.0803571428569,
+      "tangent_offset_mm": -8.5,
+      "length_mm": 20.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 9.851937639730616,
+      "outline_patch_area_mm2": 24.703253028309234,
+      "center_normal_dot_radial": 0.9937407280130339,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -2.0,
+          "point_mm": [
+            988.0803571428569,
+            68.0875180794307,
+            70.91594520417691
+          ],
+          "outward_normal": [
+            0.06095541534663187,
+            0.6899768162210274,
+            0.721260306974822
+          ],
+          "measured_skin_radius_mm": 98.29029149625421,
+          "available_wall_mm": 197.7507727195636,
+          "remaining_wall_after_seat_mm": 196.7307727195636
+        },
+        {
+          "offset_x_mm": 5.629165124598852,
+          "offset_tangent_mm": -11.749999999999998,
+          "point_mm": [
+            993.7095222674558,
+            60.4298813705707,
+            77.04689072845458
+          ],
+          "outward_normal": [
+            0.05752324709342431,
+            0.6085675354980692,
+            0.7914143230834498
+          ],
+          "measured_skin_radius_mm": 97.21075780685834,
+          "available_wall_mm": 196.8064576660987,
+          "remaining_wall_after_seat_mm": 195.7864576660987
+        },
+        {
+          "offset_x_mm": -5.62916512459885,
+          "offset_tangent_mm": -11.750000000000004,
+          "point_mm": [
+            982.451192018258,
+            60.91012742295018,
+            77.52713678083407
+          ],
+          "outward_normal": [
+            0.06178050554990251,
+            0.6072759716419192,
+            0.7920852627087324
+          ],
+          "measured_skin_radius_mm": 97.88992828740955,
+          "available_wall_mm": 198.29561770167427,
+          "remaining_wall_after_seat_mm": 197.27561770167426
+        }
+      ],
+      "outline": "circle",
+      "stage": "main"
+    },
+    "BZ1": {
+      "clock_degrees": 90.0,
+      "center_x_mm": -1440.0,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 60.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 23.810664355863146,
+      "outline_patch_area_mm2": 59.526660889655076,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -23.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -1463.0,
+            100.00000002512002,
+            -17.999999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 23.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -1417.0,
+            100.00000002512002,
+            -17.999999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "booster"
+    },
+    "BN3": {
+      "clock_degrees": 180.0,
+      "center_x_mm": -1290.6666666666667,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 36.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 14.850664355862893,
+      "outline_patch_area_mm2": 37.12666088965481,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -11.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -1301.6666666666667,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 11.0,
+          "offset_tangent_mm": 18.0,
+          "point_mm": [
+            -1279.6666666666667,
+            -17.99999999999999,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "booster"
+    },
+    "BN1": {
+      "clock_degrees": 270.0,
+      "center_x_mm": -1216.0,
+      "tangent_offset_mm": 18.0,
+      "length_mm": 50.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 19.970664355862947,
+      "outline_patch_area_mm2": 49.92666088965434,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -18.0,
+          "offset_tangent_mm": 22.5,
+          "point_mm": [
+            -1234.0,
+            -99.99999997486998,
+            22.499999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        },
+        {
+          "offset_x_mm": -6.0,
+          "offset_tangent_mm": 22.5,
+          "point_mm": [
+            -1222.0,
+            -99.99999997486998,
+            22.499999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        },
+        {
+          "offset_x_mm": 6.0,
+          "offset_tangent_mm": 22.5,
+          "point_mm": [
+            -1210.0,
+            -99.99999997486998,
+            22.499999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        },
+        {
+          "offset_x_mm": 18.0,
+          "offset_tangent_mm": 22.5,
+          "point_mm": [
+            -1198.0,
+            -99.99999997486998,
+            22.499999999999982
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "booster"
+    },
+    "BY1": {
+      "clock_degrees": 180.0,
+      "center_x_mm": -1477.3333333333333,
+      "tangent_offset_mm": 15.0,
+      "length_mm": 24.0,
+      "width_mm": 24.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 11.862653859954957,
+      "outline_patch_area_mm2": 29.65663464988762,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -6.0104076400856545,
+          "offset_tangent_mm": 8.989592359914345,
+          "point_mm": [
+            -1483.343740973419,
+            -8.989592359914333,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 199.20000000000002,
+          "remaining_wall_after_seat_mm": 198.18
+        },
+        {
+          "offset_x_mm": -6.0104076400856545,
+          "offset_tangent_mm": 21.010407640085653,
+          "point_mm": [
+            -1483.343740973419,
+            -21.010407640085642,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 6.0104076400856545,
+          "offset_tangent_mm": 8.989592359914345,
+          "point_mm": [
+            -1471.3229256932475,
+            -8.989592359914333,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 199.20000000000002,
+          "remaining_wall_after_seat_mm": 198.18
+        },
+        {
+          "offset_x_mm": 6.0104076400856545,
+          "offset_tangent_mm": 21.010407640085653,
+          "point_mm": [
+            -1471.3229256932475,
+            -21.010407640085642,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "circle",
+      "stage": "booster"
+    },
+    "BB2": {
+      "clock_degrees": 180.0,
+      "center_x_mm": -1402.6666666666667,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 14.0,
+      "width_mm": 14.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 6.83610561421132,
+      "outline_patch_area_mm2": 17.09026403552855,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            -1402.6666666666667,
+            18.00000000000001,
+            -100.0
+          ],
+          "outward_normal": [
+            -0.0,
+            0.0,
+            -1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "circle",
+      "stage": "booster"
+    },
+    "BN2": {
+      "clock_degrees": 90.0,
+      "center_x_mm": -1253.3333333333333,
+      "tangent_offset_mm": 17.0,
+      "length_mm": 20.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 9.85203456165788,
+      "outline_patch_area_mm2": 24.63008640414398,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": 23.5,
+          "point_mm": [
+            -1253.3333333333333,
+            100.00000002512002,
+            -23.499999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 5.629165124598852,
+          "offset_tangent_mm": 13.750000000000002,
+          "point_mm": [
+            -1247.7041682087345,
+            100.00000002512002,
+            -13.749999999999996
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": -5.62916512459885,
+          "offset_tangent_mm": 13.749999999999996,
+          "point_mm": [
+            -1258.962498457932,
+            100.00000002512002,
+            -13.749999999999991
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "circle",
+      "stage": "booster"
+    },
+    "BZ2": {
+      "clock_degrees": 0.0,
+      "center_x_mm": -1178.6666666666665,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 16.0,
+      "width_mm": 16.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 7.841415263360497,
+      "outline_patch_area_mm2": 19.60353815840034,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": 0.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            -1178.6666666666665,
+            -18.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "circle",
+      "stage": "booster"
+    },
+    "LV1": {
+      "clock_degrees": 0.0,
+      "center_x_mm": -909.2410714285714,
+      "tangent_offset_mm": -16.0,
+      "length_mm": 70.0,
+      "width_mm": 22.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 28.2906643558612,
+      "outline_patch_area_mm2": 70.72666088965501,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -28.0,
+          "offset_tangent_mm": -16.0,
+          "point_mm": [
+            -937.2410714285714,
+            -16.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        },
+        {
+          "offset_x_mm": 28.0,
+          "offset_tangent_mm": -16.0,
+          "point_mm": [
+            -881.2410714285714,
+            -16.0,
+            100.0
+          ],
+          "outward_normal": [
+            0.0,
+            -0.0,
+            1.0
+          ],
+          "measured_skin_radius_mm": 100.0,
+          "available_wall_mm": 200.0,
+          "remaining_wall_after_seat_mm": 198.98
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "LV2": {
+      "clock_degrees": 270.0,
+      "center_x_mm": -340.0446428571429,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 50.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 20.610664355862156,
+      "outline_patch_area_mm2": 51.5266608896555,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -18.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            -358.0446428571429,
+            -99.99999997486998,
+            -18.000000000000018
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        },
+        {
+          "offset_x_mm": 18.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            -322.0446428571429,
+            -99.99999997486998,
+            -18.000000000000018
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.99999999999,
+          "remaining_wall_after_seat_mm": 198.97999999998999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "LV3": {
+      "clock_degrees": 270.0,
+      "center_x_mm": 380.9375,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 60.0,
+      "width_mm": 18.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 23.81066435586168,
+      "outline_patch_area_mm2": 59.526660889655,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -23.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            357.9375,
+            -99.99999997486998,
+            -18.000000000000018
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.19999999998998,
+          "remaining_wall_after_seat_mm": 198.17999999998997
+        },
+        {
+          "offset_x_mm": 23.0,
+          "offset_tangent_mm": -18.0,
+          "point_mm": [
+            403.9375,
+            -99.99999997486998,
+            -18.000000000000018
+          ],
+          "outward_normal": [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          "measured_skin_radius_mm": 99.99999997486998,
+          "available_wall_mm": 199.19999999998998,
+          "remaining_wall_after_seat_mm": 198.17999999998997
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "main"
+    },
+    "LV4": {
+      "clock_degrees": 90.0,
+      "center_x_mm": -1365.3333333333333,
+      "tangent_offset_mm": -17.0,
+      "length_mm": 70.0,
+      "width_mm": 20.0,
+      "groove_width_mm": 0.4,
+      "groove_depth_mm": 0.4,
+      "groove_volume_mm3": 27.65066435586345,
+      "outline_patch_area_mm2": 69.12666088965504,
+      "center_normal_dot_radial": 1.0,
+      "screw_sites": [
+        {
+          "offset_x_mm": -28.0,
+          "offset_tangent_mm": -17.0,
+          "point_mm": [
+            -1393.3333333333333,
+            100.00000002512002,
+            17.000000000000004
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        },
+        {
+          "offset_x_mm": 28.0,
+          "offset_tangent_mm": -17.0,
+          "point_mm": [
+            -1337.3333333333333,
+            100.00000002512002,
+            17.000000000000004
+          ],
+          "outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "measured_skin_radius_mm": 100.00000002512002,
+          "available_wall_mm": 199.99999999999002,
+          "remaining_wall_after_seat_mm": 198.97999999999
+        }
+      ],
+      "outline": "chamfered_rectangle",
+      "stage": "booster"
+    }
+  },
+  "seams": {
+    "nose": {
+      "x_mm": [
+        1060.0,
+        1060.4
+      ],
+      "volume_mm3": 95.42780278148484,
+      "radius_max_mm": 95.24278553294953
+    },
+    "RMA": {
+      "x_mm": [
+        -1096.4,
+        -1096.0
+      ],
+      "volume_mm3": 89.09257091716535,
+      "radius_max_mm": 138.06595934360058,
+      "depth_range_mm": [
+        0.2897165976328836,
+        0.4
+      ]
+    },
+    "RBF": {
+      "x_mm": [
+        -1150.0,
+        -1149.6
+      ],
+      "volume_mm3": 101.7082666189308,
+      "radius_max_mm": 112.41602892061529,
+      "depth_range_mm": [
+        0.3558211437818601,
+        0.4
+      ]
+    },
+    "RBA": {
+      "x_mm": [
+        -1508.4,
+        -1508.0
+      ],
+      "volume_mm3": 101.7082666259953,
+      "radius_max_mm": 112.41602892061522,
+      "depth_range_mm": [
+        0.3558211437818603,
+        0.4
+      ]
+    }
+  },
+  "f05": {
+    "pocket_depth_mm": 0.8000000000000114,
+    "strip_height_mm": 2.0,
+    "terminal_height_mm": 2.5,
+    "mirror_plane": "XY"
+  },
+  "plan": [
+    {
+      "id": "P05",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 0.0,
+      "x": -1020.0,
+      "tangent": 16.0,
+      "length": 112.0,
+      "width": 22.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "RB1",
+      "stage": "main",
+      "kind": "boss",
+      "clock": 180.0,
+      "x": -1023.0803571428571,
+      "tangent": 15.0,
+      "length": 24.0,
+      "width": 24.0,
+      "slots": null,
+      "category": "planar"
+    },
+    {
+      "id": "C01",
+      "stage": "main",
+      "kind": "round",
+      "clock": 90.0,
+      "x": -985.1339285714286,
+      "tangent": 13.0,
+      "length": 28.0,
+      "width": 28.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "P08",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 270.0,
+      "x": -947.1875,
+      "tangent": 18.0,
+      "length": 30.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "LV1",
+      "stage": "main",
+      "kind": "louvre",
+      "clock": 0.0,
+      "x": -909.2410714285714,
+      "tangent": -16.0,
+      "length": 70.0,
+      "width": 22.0,
+      "slots": 5,
+      "category": "planar"
+    },
+    {
+      "id": "N02",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": -871.2946428571429,
+      "tangent": -17.0,
+      "length": 100.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "C03",
+      "stage": "main",
+      "kind": "round",
+      "clock": 270.0,
+      "x": -833.3482142857143,
+      "tangent": -18.0,
+      "length": 14.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H01",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 15.0,
+      "x": -761.0,
+      "tangent": -91.0,
+      "length": 110.0,
+      "width": 22.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "RP1",
+      "stage": "main",
+      "kind": "plate",
+      "clock": 0.0,
+      "x": -757.4553571428571,
+      "tangent": 16.0,
+      "length": 100.0,
+      "width": 22.0,
+      "slots": null,
+      "category": "planar"
+    },
+    {
+      "id": "T05",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 45.0,
+      "x": -719.5089285714287,
+      "tangent": 0.0,
+      "length": 160.0,
+      "width": 10.0,
+      "slots": null,
+      "category": "ridge"
+    },
+    {
+      "id": "Z10",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": -681.5625,
+      "tangent": 18.0,
+      "length": 36.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H24",
+      "stage": "main",
+      "kind": "round",
+      "clock": 195.0,
+      "x": -643.6160714285714,
+      "tangent": -91.0,
+      "length": 22.0,
+      "width": 22.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "Z01",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 90.0,
+      "x": -605.6696428571429,
+      "tangent": -16.0,
+      "length": 90.0,
+      "width": 22.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H20",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 105.0,
+      "x": -567.7232142857143,
+      "tangent": -91.0,
+      "length": 40.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "RB3",
+      "stage": "main",
+      "kind": "boss",
+      "clock": 270.0,
+      "x": -529.7767857142858,
+      "tangent": 17.0,
+      "length": 20.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "planar"
+    },
+    {
+      "id": "T04",
+      "stage": "main",
+      "kind": "round",
+      "clock": 225.0,
+      "x": -491.8303571428572,
+      "tangent": 0.0,
+      "length": 12.0,
+      "width": 12.0,
+      "slots": null,
+      "category": "ridge"
+    },
+    {
+      "id": "B01",
+      "stage": "main",
+      "kind": "round",
+      "clock": 0.0,
+      "x": -453.88392857142856,
+      "tangent": -15.0,
+      "length": 24.0,
+      "width": 24.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "P01",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": -415.9375,
+      "tangent": -18.0,
+      "length": 36.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "P02",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 90.0,
+      "x": -377.99107142857144,
+      "tangent": 17.0,
+      "length": 72.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "LV2",
+      "stage": "main",
+      "kind": "louvre",
+      "clock": 270.0,
+      "x": -340.0446428571429,
+      "tangent": -18.0,
+      "length": 50.0,
+      "width": 18.0,
+      "slots": 4,
+      "category": "planar"
+    },
+    {
+      "id": "B08",
+      "stage": "main",
+      "kind": "round",
+      "clock": 0.0,
+      "x": -302.09821428571433,
+      "tangent": 18.0,
+      "length": 14.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H10",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 285.0,
+      "x": -264.1517857142858,
+      "tangent": -91.0,
+      "length": 90.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "H16",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 75.0,
+      "x": -226.20535714285722,
+      "tangent": 91.0,
+      "length": 44.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "B09",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": -188.25892857142867,
+      "tangent": 18.0,
+      "length": 40.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "T07",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 135.0,
+      "x": -150.3125,
+      "tangent": 0.0,
+      "length": 90.0,
+      "width": 10.0,
+      "slots": null,
+      "category": "ridge"
+    },
+    {
+      "id": "RP3",
+      "stage": "main",
+      "kind": "plate",
+      "clock": 90.0,
+      "x": -112.36607142857144,
+      "tangent": -18.0,
+      "length": 70.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "planar"
+    },
+    {
+      "id": "H05",
+      "stage": "main",
+      "kind": "round",
+      "clock": 255.0,
+      "x": -74.41964285714289,
+      "tangent": 91.0,
+      "length": 16.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "Z09",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 270.0,
+      "x": -36.47321428571445,
+      "tangent": 18.0,
+      "length": 70.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "T06",
+      "stage": "main",
+      "kind": "round",
+      "clock": 315.0,
+      "x": 1.4732142857142208,
+      "tangent": 0.0,
+      "length": 10.0,
+      "width": 10.0,
+      "slots": null,
+      "category": "ridge"
+    },
+    {
+      "id": "C04",
+      "stage": "main",
+      "kind": "round",
+      "clock": 90.0,
+      "x": 39.41964285714289,
+      "tangent": 15.0,
+      "length": 24.0,
+      "width": 24.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H11",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 165.0,
+      "x": 77.36607142857133,
+      "tangent": 91.0,
+      "length": 80.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "H08",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 345.0,
+      "x": 115.3125,
+      "tangent": 91.0,
+      "length": 56.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "RB2",
+      "stage": "main",
+      "kind": "boss",
+      "clock": 270.0,
+      "x": 153.25892857142844,
+      "tangent": -16.0,
+      "length": 22.0,
+      "width": 22.0,
+      "slots": null,
+      "category": "planar"
+    },
+    {
+      "id": "T01",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 45.0,
+      "x": 191.2053571428571,
+      "tangent": 0.0,
+      "length": 140.0,
+      "width": 10.0,
+      "slots": null,
+      "category": "ridge"
+    },
+    {
+      "id": "P06",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 90.0,
+      "x": 229.15178571428555,
+      "tangent": -18.0,
+      "length": 42.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H22",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 15.0,
+      "x": 267.0982142857142,
+      "tangent": -91.0,
+      "length": 70.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "B02",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 270.0,
+      "x": 305.0446428571429,
+      "tangent": 18.0,
+      "length": 64.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H19",
+      "stage": "main",
+      "kind": "round",
+      "clock": 195.0,
+      "x": 342.99107142857133,
+      "tangent": -91.0,
+      "length": 20.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "LV3",
+      "stage": "main",
+      "kind": "louvre",
+      "clock": 270.0,
+      "x": 380.9375,
+      "tangent": -18.0,
+      "length": 60.0,
+      "width": 18.0,
+      "slots": 4,
+      "category": "planar"
+    },
+    {
+      "id": "T02",
+      "stage": "main",
+      "kind": "round",
+      "clock": 225.0,
+      "x": 418.88392857142844,
+      "tangent": 0.0,
+      "length": 10.0,
+      "width": 10.0,
+      "slots": null,
+      "category": "ridge"
+    },
+    {
+      "id": "Y08",
+      "stage": "main",
+      "kind": "round",
+      "clock": 0.0,
+      "x": 456.8303571428571,
+      "tangent": -18.0,
+      "length": 16.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "H02",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 105.0,
+      "x": 494.77678571428555,
+      "tangent": -91.0,
+      "length": 60.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flank"
+    },
+    {
+      "id": "Y09",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": 532.7232142857142,
+      "tangent": -18.0,
+      "length": 44.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "RP2",
+      "stage": "main",
+      "kind": "plate",
+      "clock": 0.0,
+      "x": 570.6696428571427,
+      "tangent": 17.0,
+      "length": 90.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "planar"
+    },
+    {
+      "id": "P04",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": 608.6160714285713,
+      "tangent": 18.0,
+      "length": 62.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "C02",
+      "stage": "main",
+      "kind": "round",
+      "clock": 90.0,
+      "x": 646.0,
+      "tangent": 17.0,
+      "length": 20.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "P03",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 0.0,
+      "x": 634.0,
+      "tangent": -18.0,
+      "length": 44.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "P07",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 45.0,
+      "x": 722.4553571428571,
+      "tangent": 9.0,
+      "length": 56.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "N03",
+      "stage": "main",
+      "kind": "round",
+      "clock": 180.0,
+      "x": 760.4017857142856,
+      "tangent": 9.0,
+      "length": 18.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "N01",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 315.0,
+      "x": 798.3482142857142,
+      "tangent": 9.0,
+      "length": 44.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "Y07",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 90.0,
+      "x": 836.2946428571427,
+      "tangent": 9.0,
+      "length": 56.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "N09",
+      "stage": "main",
+      "kind": "round",
+      "clock": 225.0,
+      "x": 874.2410714285713,
+      "tangent": 8.5,
+      "length": 20.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "P09",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 135.0,
+      "x": 912.1875,
+      "tangent": 9.0,
+      "length": 48.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "N08",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 270.0,
+      "x": 950.1339285714284,
+      "tangent": 9.0,
+      "length": 50.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "Y02",
+      "stage": "main",
+      "kind": "round",
+      "clock": 45.0,
+      "x": 988.0803571428569,
+      "tangent": -8.5,
+      "length": 20.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "Y01",
+      "stage": "main",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": 1016.0,
+      "tangent": -9.0,
+      "length": 50.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "flat"
+    },
+    {
+      "id": "BY1",
+      "stage": "booster",
+      "kind": "round",
+      "clock": 180.0,
+      "x": -1477.3333333333333,
+      "tangent": 15.0,
+      "length": 24.0,
+      "width": 24.0,
+      "slots": null,
+      "category": "booster"
+    },
+    {
+      "id": "BZ1",
+      "stage": "booster",
+      "kind": "rect",
+      "clock": 90.0,
+      "x": -1440.0,
+      "tangent": 18.0,
+      "length": 60.0,
+      "width": 18.0,
+      "slots": null,
+      "category": "booster"
+    },
+    {
+      "id": "BB2",
+      "stage": "booster",
+      "kind": "round",
+      "clock": 180.0,
+      "x": -1402.6666666666667,
+      "tangent": -18.0,
+      "length": 14.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "booster"
+    },
+    {
+      "id": "LV4",
+      "stage": "booster",
+      "kind": "louvre",
+      "clock": 90.0,
+      "x": -1365.3333333333333,
+      "tangent": -17.0,
+      "length": 70.0,
+      "width": 20.0,
+      "slots": 5,
+      "category": "booster"
+    },
+    {
+      "id": "RP4",
+      "stage": "booster",
+      "kind": "plate",
+      "clock": 0.0,
+      "x": -1328.0,
+      "tangent": 17.0,
+      "length": 100.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "booster"
+    },
+    {
+      "id": "BN3",
+      "stage": "booster",
+      "kind": "rect",
+      "clock": 180.0,
+      "x": -1290.6666666666667,
+      "tangent": 18.0,
+      "length": 36.0,
+      "width": 14.0,
+      "slots": null,
+      "category": "booster"
+    },
+    {
+      "id": "BN2",
+      "stage": "booster",
+      "kind": "round",
+      "clock": 90.0,
+      "x": -1253.3333333333333,
+      "tangent": 17.0,
+      "length": 20.0,
+      "width": 20.0,
+      "slots": null,
+      "category": "booster"
+    },
+    {
+      "id": "BN1",
+      "stage": "booster",
+      "kind": "rect",
+      "clock": 270.0,
+      "x": -1216.0,
+      "tangent": 18.0,
+      "length": 50.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "booster"
+    },
+    {
+      "id": "BZ2",
+      "stage": "booster",
+      "kind": "round",
+      "clock": 0.0,
+      "x": -1178.6666666666665,
+      "tangent": -18.0,
+      "length": 16.0,
+      "width": 16.0,
+      "slots": null,
+      "category": "booster"
+    }
+  ],
+  "raised": {
+    "RB1": {
+      "kind": "raised_boss",
+      "clock_degrees": 180.0,
+      "center_x_mm": -1023.0803571428571,
+      "tangent_offset_mm": 15.0,
+      "diameter_mm": 24.0,
+      "height_mm": 1.5,
+      "recess_diameter_mm": 10.56,
+      "stage": "main"
+    },
+    "RP1": {
+      "kind": "raised_plate",
+      "clock_degrees": 0.0,
+      "center_x_mm": -757.4553571428571,
+      "tangent_offset_mm": 16.0,
+      "length_mm": 100.0,
+      "width_mm": 22.0,
+      "height_mm": 1.5,
+      "stage": "main"
+    },
+    "RB3": {
+      "kind": "raised_boss",
+      "clock_degrees": 270.0,
+      "center_x_mm": -529.7767857142858,
+      "tangent_offset_mm": 17.0,
+      "diameter_mm": 20.0,
+      "height_mm": 1.5,
+      "recess_diameter_mm": 8.8,
+      "stage": "main"
+    },
+    "RP3": {
+      "kind": "raised_plate",
+      "clock_degrees": 90.0,
+      "center_x_mm": -112.36607142857144,
+      "tangent_offset_mm": -18.0,
+      "length_mm": 70.0,
+      "width_mm": 18.0,
+      "height_mm": 1.5,
+      "stage": "main"
+    },
+    "RB2": {
+      "kind": "raised_boss",
+      "clock_degrees": 270.0,
+      "center_x_mm": 153.25892857142844,
+      "tangent_offset_mm": -16.0,
+      "diameter_mm": 22.0,
+      "height_mm": 1.5,
+      "recess_diameter_mm": 9.68,
+      "stage": "main"
+    },
+    "RP2": {
+      "kind": "raised_plate",
+      "clock_degrees": 0.0,
+      "center_x_mm": 570.6696428571427,
+      "tangent_offset_mm": 17.0,
+      "length_mm": 90.0,
+      "width_mm": 20.0,
+      "height_mm": 1.5,
+      "stage": "main"
+    },
+    "RP4": {
+      "kind": "raised_plate",
+      "clock_degrees": 0.0,
+      "center_x_mm": -1328.0,
+      "tangent_offset_mm": 17.0,
+      "length_mm": 100.0,
+      "width_mm": 20.0,
+      "height_mm": 1.5,
+      "stage": "booster"
+    }
+  },
+  "louvres": {
+    "LV1": {
+      "stage": "main",
+      "clock_degrees": 0.0,
+      "center_x_mm": -909.2410714285714,
+      "tangent_offset_mm": -16.0,
+      "slot_x_offsets_mm": [
+        -22.0,
+        -11.0,
+        0.0,
+        11.0,
+        22.0
+      ],
+      "slot_width_mm": 1.4,
+      "slot_depth_mm": 0.6,
+      "slot_length_mm": 15.0
+    },
+    "LV2": {
+      "stage": "main",
+      "clock_degrees": 270.0,
+      "center_x_mm": -340.0446428571429,
+      "tangent_offset_mm": -18.0,
+      "slot_x_offsets_mm": [
+        -12.0,
+        -4.0,
+        4.0,
+        12.0
+      ],
+      "slot_width_mm": 1.4,
+      "slot_depth_mm": 0.6,
+      "slot_length_mm": 11.0
+    },
+    "LV3": {
+      "stage": "main",
+      "clock_degrees": 270.0,
+      "center_x_mm": 380.9375,
+      "tangent_offset_mm": -18.0,
+      "slot_x_offsets_mm": [
+        -17.0,
+        -5.666666666666666,
+        5.666666666666668,
+        17.0
+      ],
+      "slot_width_mm": 1.4,
+      "slot_depth_mm": 0.6,
+      "slot_length_mm": 11.0
+    },
+    "LV4": {
+      "stage": "booster",
+      "clock_degrees": 90.0,
+      "center_x_mm": -1365.3333333333333,
+      "tangent_offset_mm": -17.0,
+      "slot_x_offsets_mm": [
+        -22.0,
+        -11.0,
+        0.0,
+        11.0,
+        22.0
+      ],
+      "slot_width_mm": 1.4,
+      "slot_depth_mm": 0.6,
+      "slot_length_mm": 13.0
+    }
+  },
+  "host_volume_removed_mm3": {
+    "main_body_intake_r12": 8736.160343945026,
+    "booster_body": 779.0955078043044
+  },
+  "hardware_labels": [
+    "main_r19_joint_ring_fastener_015",
+    "main_r19_joint_ring_fastener_030",
+    "main_r19_joint_ring_fastener_045",
+    "main_r19_joint_ring_fastener_060",
+    "main_r19_joint_ring_fastener_075",
+    "main_r19_joint_ring_fastener_105",
+    "main_r19_joint_ring_fastener_120",
+    "main_r19_joint_ring_fastener_135",
+    "main_r19_joint_ring_fastener_150",
+    "main_r19_joint_ring_fastener_165",
+    "main_r19_joint_ring_fastener_195",
+    "main_r19_joint_ring_fastener_210",
+    "main_r19_joint_ring_fastener_225",
+    "main_r19_joint_ring_fastener_240",
+    "main_r19_joint_ring_fastener_255",
+    "main_r19_joint_ring_fastener_285",
+    "main_r19_joint_ring_fastener_300",
+    "main_r19_joint_ring_fastener_315",
+    "main_r19_joint_ring_fastener_330",
+    "main_r19_joint_ring_fastener_345",
+    "main_r19_RMA_0000_fastener_1",
+    "main_r19_RMA_0145_fastener_1",
+    "main_r19_RMA_0280_fastener_1",
+    "main_r19_RMA_0620_fastener_1",
+    "main_r19_RMA_0755_fastener_1",
+    "main_r19_RMA_0900_fastener_1",
+    "main_r19_RMA_1045_fastener_1",
+    "main_r19_RMA_1180_fastener_1",
+    "main_r19_RMA_1520_fastener_1",
+    "main_r19_RMA_1655_fastener_1",
+    "main_r19_RMA_1800_fastener_1",
+    "main_r19_RMA_1945_fastener_1",
+    "main_r19_RMA_2080_fastener_1",
+    "main_r19_RMA_2420_fastener_1",
+    "main_r19_RMA_2555_fastener_1",
+    "main_r19_RMA_2700_fastener_1",
+    "main_r19_RMA_2845_fastener_1",
+    "main_r19_RMA_2980_fastener_1",
+    "main_r19_RMA_3320_fastener_1",
+    "main_r19_RMA_3455_fastener_1",
+    "booster_r19_RBF_0000_fastener_1",
+    "booster_r19_RBF_0136_fastener_1",
+    "booster_r19_RBF_0264_fastener_1",
+    "booster_r19_RBF_0636_fastener_1",
+    "booster_r19_RBF_0764_fastener_1",
+    "booster_r19_RBF_0900_fastener_1",
+    "booster_r19_RBF_1036_fastener_1",
+    "booster_r19_RBF_1164_fastener_1",
+    "booster_r19_RBF_1536_fastener_1",
+    "booster_r19_RBF_1664_fastener_1",
+    "booster_r19_RBF_1800_fastener_1",
+    "booster_r19_RBF_1936_fastener_1",
+    "booster_r19_RBF_2064_fastener_1",
+    "booster_r19_RBF_2436_fastener_1",
+    "booster_r19_RBF_2564_fastener_1",
+    "booster_r19_RBF_2700_fastener_1",
+    "booster_r19_RBF_2836_fastener_1",
+    "booster_r19_RBF_2964_fastener_1",
+    "booster_r19_RBF_3336_fastener_1",
+    "booster_r19_RBF_3464_fastener_1",
+    "booster_r19_RBA_0000_fastener_1",
+    "booster_r19_RBA_0136_fastener_1",
+    "booster_r19_RBA_0264_fastener_1",
+    "booster_r19_RBA_0388_fastener_1",
+    "booster_r19_RBA_0512_fastener_1",
+    "booster_r19_RBA_0636_fastener_1",
+    "booster_r19_RBA_0764_fastener_1",
+    "booster_r19_RBA_0900_fastener_1",
+    "booster_r19_RBA_1036_fastener_1",
+    "booster_r19_RBA_1164_fastener_1",
+    "booster_r19_RBA_1288_fastener_1",
+    "booster_r19_RBA_1412_fastener_1",
+    "booster_r19_RBA_1536_fastener_1",
+    "booster_r19_RBA_1664_fastener_1",
+    "booster_r19_RBA_1800_fastener_1",
+    "booster_r19_RBA_1936_fastener_1",
+    "booster_r19_RBA_2064_fastener_1",
+    "booster_r19_RBA_2188_fastener_1",
+    "booster_r19_RBA_2312_fastener_1",
+    "booster_r19_RBA_2436_fastener_1",
+    "booster_r19_RBA_2564_fastener_1",
+    "booster_r19_RBA_2700_fastener_1",
+    "booster_r19_RBA_2836_fastener_1",
+    "booster_r19_RBA_2964_fastener_1",
+    "booster_r19_RBA_3088_fastener_1",
+    "booster_r19_RBA_3212_fastener_1",
+    "booster_r19_RBA_3336_fastener_1",
+    "booster_r19_RBA_3464_fastener_1",
+    "main_r19_F05_center_strip_fastener_1",
+    "main_r19_F05_center_strip_fastener_2",
+    "main_r19_F05M_center_strip_fastener_1",
+    "main_r19_F05M_center_strip_fastener_2",
+    "main_r19_P05_fastener_1",
+    "main_r19_P05_fastener_2",
+    "main_r19_P05_fastener_3",
+    "main_r19_P05_fastener_4",
+    "main_r19_P08_fastener_1",
+    "main_r19_P08_fastener_2",
+    "main_r19_N02_fastener_1",
+    "main_r19_N02_fastener_2",
+    "main_r19_N02_fastener_3",
+    "main_r19_N02_fastener_4",
+    "main_r19_N02_fastener_5",
+    "main_r19_N02_fastener_6",
+    "main_r19_N02_fastener_7",
+    "main_r19_N02_fastener_8",
+    "main_r19_H01_fastener_1",
+    "main_r19_H01_fastener_2",
+    "main_r19_H01_fastener_3",
+    "main_r19_H01_fastener_4",
+    "main_r19_T05_fastener_1",
+    "main_r19_T05_fastener_2",
+    "main_r19_Z10_fastener_1",
+    "main_r19_Z10_fastener_2",
+    "main_r19_Z01_fastener_1",
+    "main_r19_Z01_fastener_2",
+    "main_r19_Z01_fastener_3",
+    "main_r19_Z01_fastener_4",
+    "main_r19_H20_fastener_1",
+    "main_r19_H20_fastener_2",
+    "main_r19_P01_fastener_1",
+    "main_r19_P01_fastener_2",
+    "main_r19_P02_fastener_1",
+    "main_r19_P02_fastener_2",
+    "main_r19_H10_fastener_1",
+    "main_r19_H10_fastener_2",
+    "main_r19_H16_fastener_1",
+    "main_r19_H16_fastener_2",
+    "main_r19_B09_fastener_1",
+    "main_r19_B09_fastener_2",
+    "main_r19_T07_fastener_1",
+    "main_r19_T07_fastener_2",
+    "main_r19_Z09_fastener_1",
+    "main_r19_Z09_fastener_2",
+    "main_r19_H11_fastener_1",
+    "main_r19_H11_fastener_2",
+    "main_r19_H08_fastener_1",
+    "main_r19_H08_fastener_2",
+    "main_r19_H08_fastener_3",
+    "main_r19_H08_fastener_4",
+    "main_r19_T01_fastener_1",
+    "main_r19_T01_fastener_2",
+    "main_r19_P06_fastener_1",
+    "main_r19_P06_fastener_2",
+    "main_r19_H22_fastener_1",
+    "main_r19_H22_fastener_2",
+    "main_r19_B02_fastener_1",
+    "main_r19_B02_fastener_2",
+    "main_r19_H02_fastener_1",
+    "main_r19_H02_fastener_2",
+    "main_r19_Y09_fastener_1",
+    "main_r19_Y09_fastener_2",
+    "main_r19_P04_fastener_1",
+    "main_r19_P04_fastener_2",
+    "main_r19_P03_fastener_1",
+    "main_r19_P03_fastener_2",
+    "main_r19_P07_fastener_1",
+    "main_r19_P07_fastener_2",
+    "main_r19_N01_fastener_1",
+    "main_r19_N01_fastener_2",
+    "main_r19_Y07_fastener_1",
+    "main_r19_Y07_fastener_2",
+    "main_r19_Y07_fastener_3",
+    "main_r19_Y07_fastener_4",
+    "main_r19_P09_fastener_1",
+    "main_r19_P09_fastener_2",
+    "main_r19_N08_fastener_1",
+    "main_r19_N08_fastener_2",
+    "main_r19_Y01_fastener_1",
+    "main_r19_Y01_fastener_2",
+    "main_r19_C01_fastener_1",
+    "main_r19_C01_fastener_2",
+    "main_r19_C01_fastener_3",
+    "main_r19_C01_fastener_4",
+    "main_r19_C03_fastener_1",
+    "main_r19_H24_fastener_1",
+    "main_r19_H24_fastener_2",
+    "main_r19_H24_fastener_3",
+    "main_r19_H24_fastener_4",
+    "main_r19_T04_fastener_1",
+    "main_r19_B01_fastener_1",
+    "main_r19_B01_fastener_2",
+    "main_r19_B01_fastener_3",
+    "main_r19_B01_fastener_4",
+    "main_r19_B08_fastener_1",
+    "main_r19_H05_fastener_1",
+    "main_r19_T06_fastener_1",
+    "main_r19_C04_fastener_1",
+    "main_r19_C04_fastener_2",
+    "main_r19_C04_fastener_3",
+    "main_r19_C04_fastener_4",
+    "main_r19_H19_fastener_1",
+    "main_r19_H19_fastener_2",
+    "main_r19_H19_fastener_3",
+    "main_r19_H19_fastener_4",
+    "main_r19_T02_fastener_1",
+    "main_r19_Y08_fastener_1",
+    "main_r19_C02_fastener_1",
+    "main_r19_C02_fastener_2",
+    "main_r19_C02_fastener_3",
+    "main_r19_N03_fastener_1",
+    "main_r19_N03_fastener_2",
+    "main_r19_N03_fastener_3",
+    "main_r19_N09_fastener_1",
+    "main_r19_N09_fastener_2",
+    "main_r19_N09_fastener_3",
+    "main_r19_N09_fastener_4",
+    "main_r19_Y02_fastener_1",
+    "main_r19_Y02_fastener_2",
+    "main_r19_Y02_fastener_3",
+    "booster_r19_BZ1_fastener_1",
+    "booster_r19_BZ1_fastener_2",
+    "booster_r19_BN3_fastener_1",
+    "booster_r19_BN3_fastener_2",
+    "booster_r19_BN1_fastener_1",
+    "booster_r19_BN1_fastener_2",
+    "booster_r19_BN1_fastener_3",
+    "booster_r19_BN1_fastener_4",
+    "booster_r19_BY1_fastener_1",
+    "booster_r19_BY1_fastener_2",
+    "booster_r19_BY1_fastener_3",
+    "booster_r19_BY1_fastener_4",
+    "booster_r19_BB2_fastener_1",
+    "booster_r19_BN2_fastener_1",
+    "booster_r19_BN2_fastener_2",
+    "booster_r19_BN2_fastener_3",
+    "booster_r19_BZ2_fastener_1",
+    "main_r19_RB1_fastener_1",
+    "main_r19_RB1_fastener_2",
+    "main_r19_RB1_fastener_3",
+    "main_r19_RP1_fastener_1",
+    "main_r19_RP1_fastener_2",
+    "main_r19_RP1_fastener_3",
+    "main_r19_RP1_fastener_4",
+    "main_r19_RP3_fastener_1",
+    "main_r19_RP3_fastener_2",
+    "main_r19_RP2_fastener_1",
+    "main_r19_RP2_fastener_2",
+    "booster_r19_RP4_fastener_1",
+    "booster_r19_RP4_fastener_2",
+    "booster_r19_RP4_fastener_3",
+    "booster_r19_RP4_fastener_4",
+    "main_r19_LV1_fastener_1",
+    "main_r19_LV1_fastener_2",
+    "main_r19_LV2_fastener_1",
+    "main_r19_LV2_fastener_2",
+    "main_r19_LV3_fastener_1",
+    "main_r19_LV3_fastener_2",
+    "booster_r19_LV4_fastener_1",
+    "booster_r19_LV4_fastener_2"
+  ],
+  "raised_labels": [
+    "main_r19_F05_terminal_left_raised",
+    "main_r19_F05_center_strip_raised",
+    "main_r19_F05_terminal_right_raised",
+    "main_r19_F05M_terminal_left_raised",
+    "main_r19_F05M_center_strip_raised",
+    "main_r19_F05M_terminal_right_raised",
+    "main_r19_RB1_boss",
+    "main_r19_RP1_plate",
+    "main_r19_RB3_boss",
+    "main_r19_RP3_plate",
+    "main_r19_RB2_boss",
+    "main_r19_RP2_plate",
+    "booster_r19_RP4_plate"
+  ],
+  "top_chamfer_used_mm": {
+    "F05_terminal_left": 0.4,
+    "F05_center_strip": 0.4,
+    "F05_terminal_right": 0.2,
+    "RB1": 0.4,
+    "RP1": 0.3,
+    "RB3": 0.4,
+    "RP3": 0.3,
+    "RB2": 0.4,
+    "RP2": 0.3,
+    "RP4": 0.3
+  },
+  "replaced_r18_labels": [
+    "main_r18_F05_terminal_left",
+    "main_r18_F05_center_strip",
+    "main_r18_F05_terminal_right",
+    "main_r18_F05_fastener_1",
+    "main_r18_F05_fastener_2"
+  ],
+  "panel_count": 58,
+  "ring_head_count": 92
+}

@@ -1,0 +1,299 @@
+[
+    {
+        "input":  "STEP/halberd_r18_access_booster_F10_F03B.step",
+        "mode":  "view",
+        "outputs":  [
+                        {
+                            "path":  "reviews/R18_access_F10_oblique.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.5,
+                                                             -0.5,
+                                                             1.0
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F10_grazing.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.9,
+                                                             -0.1,
+                                                             0.15
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F03B_oblique.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.4,
+                                                             -1.0,
+                                                             0.6
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F03B_grazing.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.9,
+                                                             -0.5,
+                                                             0.1
+                                                         ]
+                                       }
+                        }
+                    ],
+        "output":  {
+                       "viewLabels":  false,
+                       "padding":  0.08,
+                       "sizeProfile":  "diagnostic"
+                   },
+        "quality":  {
+                        "tessellation":  {
+                                             "chordTolerance":  5E-05,
+                                             "angleTolerance":  0.05
+                                         }
+                    }
+    },
+    {
+        "input":  "STEP/halberd_r18_access_F02_focus.step",
+        "mode":  "view",
+        "outputs":  [
+                        {
+                            "path":  "reviews/R18_access_F02_oblique.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.55,
+                                                             -0.75,
+                                                             1.0
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F02_grazing.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.9,
+                                                             -0.25,
+                                                             0.18
+                                                         ]
+                                       }
+                        }
+                    ],
+        "output":  {
+                       "viewLabels":  false,
+                       "padding":  0.08,
+                       "sizeProfile":  "diagnostic"
+                   },
+        "quality":  {
+                        "tessellation":  {
+                                             "chordTolerance":  5E-05,
+                                             "angleTolerance":  0.05
+                                         }
+                    }
+    },
+    {
+        "input":  "STEP/halberd_r18_access_F04B_focus.step",
+        "mode":  "view",
+        "outputs":  [
+                        {
+                            "path":  "reviews/R18_access_F04B_oblique.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.45,
+                                                             1.0,
+                                                             0.6
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F04B_grazing.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.9,
+                                                             0.5,
+                                                             0.12
+                                                         ]
+                                       }
+                        }
+                    ],
+        "output":  {
+                       "viewLabels":  false,
+                       "padding":  0.08,
+                       "sizeProfile":  "diagnostic"
+                   },
+        "quality":  {
+                        "tessellation":  {
+                                             "chordTolerance":  5E-05,
+                                             "angleTolerance":  0.05
+                                         }
+                    }
+    },
+    {
+        "input":  "STEP/halberd_r18_access_F05_focus.step",
+        "mode":  "view",
+        "outputs":  [
+                        {
+                            "path":  "reviews/R18_access_F05_oblique.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.45,
+                                                             -0.35,
+                                                             -1.0
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F05_grazing.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.9,
+                                                             -0.1,
+                                                             -0.15
+                                                         ]
+                                       }
+                        }
+                    ],
+        "output":  {
+                       "viewLabels":  false,
+                       "padding":  0.08,
+                       "sizeProfile":  "diagnostic"
+                   },
+        "quality":  {
+                        "tessellation":  {
+                                             "chordTolerance":  5E-05,
+                                             "angleTolerance":  0.05
+                                         }
+                    }
+    },
+    {
+        "input":  "STEP/halberd_r18_access_forward_F04A_F03A.step",
+        "mode":  "view",
+        "outputs":  [
+                        {
+                            "path":  "reviews/R18_access_F04A_oblique.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.45,
+                                                             1.0,
+                                                             0.6
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F04A_grazing.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.9,
+                                                             0.5,
+                                                             0.12
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F03A_oblique.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.45,
+                                                             -1.0,
+                                                             0.6
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_F03A_grazing.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.9,
+                                                             -0.5,
+                                                             0.12
+                                                         ]
+                                       }
+                        }
+                    ],
+        "output":  {
+                       "viewLabels":  false,
+                       "padding":  0.08,
+                       "sizeProfile":  "diagnostic"
+                   },
+        "quality":  {
+                        "tessellation":  {
+                                             "chordTolerance":  5E-05,
+                                             "angleTolerance":  0.05
+                                         }
+                    }
+    },
+    {
+        "input":  "STEP/halberd_r18_access_separated.step",
+        "mode":  "view",
+        "outputs":  [
+                        {
+                            "path":  "reviews/R18_access_separated_iso.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.6,
+                                                             -0.8,
+                                                             0.5
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_separated_opposite.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             -0.6,
+                                                             0.8,
+                                                             0.5
+                                                         ]
+                                       }
+                        }
+                    ],
+        "output":  {
+                       "viewLabels":  false,
+                       "padding":  0.05,
+                       "sizeProfile":  "assembly"
+                   }
+    },
+    {
+        "input":  "STEP/halberd_r18_access.step",
+        "mode":  "view",
+        "outputs":  [
+                        {
+                            "path":  "reviews/R18_access_whole_iso.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.6,
+                                                             -0.8,
+                                                             0.5
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_whole_opposite.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             -0.6,
+                                                             0.8,
+                                                             0.5
+                                                         ]
+                                       }
+                        },
+                        {
+                            "path":  "reviews/R18_access_whole_lower.png",
+                            "camera":  {
+                                           "direction":  [
+                                                             0.3,
+                                                             -0.4,
+                                                             -1.0
+                                                         ]
+                                       }
+                        }
+                    ],
+        "output":  {
+                       "viewLabels":  false,
+                       "padding":  0.05,
+                       "sizeProfile":  "assembly"
+                   }
+    }
+]

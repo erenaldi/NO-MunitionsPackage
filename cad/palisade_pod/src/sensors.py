@@ -143,7 +143,124 @@ def concept_3(nose, tail):
     return parts
 
 
-CONCEPTS = {1: concept_1, 2: concept_2, 3: concept_3}
+def concept_4(nose, tail):
+    """Inline sensor barrels: collar + cylinder + bezel + IR dome per tip.
+
+    Built along +X at the front tip, mirrored for the rear. The collar cone
+    starts inside the tapering shell and is clipped by it, so it emerges as a
+    fairing around the tip; nothing is subtracted from the housing.
+    """
+    parts = []
+    for name, shell, tip, cz, sign in (
+            ("front", nose, FRONT_TIP, -135., 1),
+            ("rear", tail, abs(AFT_TIP), -111.5, -1)):
+        def along_x(shape, x_mid):
+            return shape.translate((x_mid, 0, cz))
+        cone = bd.Cone(34, 21, 53, rotation=(0, 90, 0))
+        collar = along_x(cone, tip-45+53/2)
+        barrel = along_x(bd.Cylinder(21, 67, rotation=(0, 90, 0)), tip+8+67/2)
+        bezel = along_x(bd.Cylinder(24.5, 9, rotation=(0, 90, 0)), tip+75+4.5)
+        dome = bd.Sphere(21) & bd.Box(60, 60, 60).translate((30, 0, 0))
+        dome = dome.translate((tip+84, 0, cz))
+        if sign < 0:
+            shell_pos = shell.mirror(bd.Plane.YZ)
+        else:
+            shell_pos = shell
+        body = (collar+barrel) - shell_pos
+        body.label = f"sensor_{name}_barrel"
+        pieces = [body, bezel, dome]
+        bezel.label = f"sensor_{name}_bezel"
+        dome.label = f"sensor_{name}_dome"
+        for p in pieces:
+            if sign < 0:
+                lab = p.label
+                p = p.mirror(bd.Plane.YZ)
+                p.label = lab
+            parts.append(p)
+    return parts
+
+
+def dome(radius, cz, x0, sign):
+    """Half-sphere on the +/-X side of x0, flat face seated at x0."""
+    ball = bd.Sphere(radius).translate((x0, 0, cz))
+    half = bd.Box(radius+1, 2*radius+2, 2*radius+2).translate(
+        (x0+sign*(radius+1)/2, 0, cz))
+    return ball & half
+
+
+# satellite layout read from the user's markup (front view, mm from the end
+# axis: dy right/+Y, dz up), dome diameter, and how far the dome ends behind
+# the central mast's dome (from the side-view guide lines)
+SATELLITES = (("large", -80., 31., 70., 58.),
+              ("medium", 130., 55., 44., 48.),
+              ("small", 51., -29., 34., 43.))
+
+
+def satellite(shell, name, end, sign, cy, cz, dome_d, behind, k, prior):
+    """Inline neck + ring + dome seated on the shell surface at (cy, cz)."""
+    y, z = cy*k, end["cz"]+cz*k
+    probe = bd.Cylinder(.5, 900, rotation=(0, 90, 0)).translate(
+        (end["tip"]+sign*(-450+200), y, z))
+    hit = probe & shell
+    assert hit is not None and hit.volume > 0, (name, "no surface at", y, z)
+    box = hit.bounding_box()
+    x_hit = box.max.X if sign > 0 else box.min.X
+    x_end = end["mast_end"]-sign*behind*k
+    r_dome = dome_d*k/2
+    x_base = x_end-sign*r_dome
+    assert (x_base-x_hit)*sign > 4, (name, "no room for a neck", x_hit, x_base)
+    a, b = sorted((x_hit-sign*30, x_base))
+    neck = bd.Cylinder(r_dome*.8, b-a, rotation=(0, 90, 0)).translate(
+        ((a+b)/2, y, z)) - shell
+    ring_c = (x_hit+x_base)/2
+    ring = bd.Cylinder(r_dome*.98, 8, rotation=(0, 90, 0)).translate(
+        (ring_c, y, z))
+    cap = dome(r_dome, z, x_base, sign).translate((0, y, 0))
+    parts = []
+    for part, label in ((neck, "neck"), (ring, "ring"), (cap, "dome")):
+        for other in prior+parts:
+            part = part - other
+        part = part - shell
+        assert part.volume > 5, (name, label, "empty/sliver after subtraction")
+        part.label = f"sensor_{end['name']}_{name}_{label}"
+        parts.append(part)
+    return parts
+
+
+def concept_5(nose, tail):
+    """C4 mast plus three staggered inline satellites (user markup intent)."""
+    base = concept_4(nose, tail)
+    parts = list(base)
+    for end_name, shell, tip, sign, k, mast in (
+            ("front", nose, FRONT_TIP, 1, 1., 105.),
+            ("rear", tail, AFT_TIP, -1, .8, 105.)):
+        end = {"name": end_name, "tip": tip, "mast_end": tip+sign*mast,
+               "cz": -135. if sign > 0 else -111.5}
+        prior = [p for p in parts if p.label.startswith(f"sensor_{end_name}")]
+        for name, cy, cz, dome_d, behind in SATELLITES:
+            sat = satellite(shell, name, end, sign, cy*(1 if sign > 0 else -1),
+                            cz, dome_d, behind, k, prior)
+            prior += sat
+            parts += sat
+    return parts
+
+
+def concept_6(nose, tail):
+    """Three staggered inline satellites per end; no central mast."""
+    parts = []
+    for end_name, shell, tip, sign, k in (("front", nose, FRONT_TIP, 1, 1.),
+                                          ("rear", tail, AFT_TIP, -1, .8)):
+        end = {"name": end_name, "tip": tip, "mast_end": tip+sign*105.,
+               "cz": -135. if sign > 0 else -111.5}
+        for name, cy, cz, dome_d, behind in SATELLITES:
+            parts += satellite(shell, name, end, sign,
+                               cy*(1 if sign > 0 else -1), cz, dome_d, behind,
+                               k, parts)
+    return parts
+
+
+CONCEPTS = {1: concept_1, 2: concept_2, 3: concept_3, 4: concept_4,
+            5: concept_5, 6: concept_6}
 
 
 def study(concept):

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "document_hash": "129c3297a88e3bc74d8fcd78a998480ee68dc9cc35883ec11e6cd0f0b0ae314a",
+  "parts": 64,
+  "ring_heads": 24,
+  "panels": 13,
+  "panel_fasteners": 32,
+  "host_volume_removed_mm3": 790.9693102557212
+}

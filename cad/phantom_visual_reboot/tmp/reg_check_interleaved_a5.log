@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "report": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\reviews\\interleaved_a5_checks.json",
+  "A5_saved_artifacts_checked": 6,
+  "part_counts": {
+    "Stowed": 13,
+    "Module_Stowed": 12,
+    "Midfold": 13,
+    "Deployed": 13,
+    "Body_Pocket": 1,
+    "Cover": 1
+  },
+  "body_exact_cut_delta_mm3": 0.0,
+  "body_outside_cut_delta_mm3": 0.0,
+  "body_added_material_mm3": 0.0,
+  "pin_sweep_intersections": {
+    "starboard_shaft": {
+      "nominal": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      },
+      "inflated": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      }
+    },
+    "starboard_cap": {
+      "nominal": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      },
+      "inflated": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      }
+    },
+    "port_shaft": {
+      "nominal": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      },
+      "inflated": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      }
+    },
+    "port_cap": {
+      "nominal": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      },
+      "inflated": {
+        "saved_body_intersection_mm3": 0.0,
+        "cover_intersection_mm3": 0.0
+      }
+    }
+  },
+  "body_cover_contact": {
+    "gap_mm": 0.0,
+    "overlap_mm3": 0.0,
+    "cover_underside_z_mm": 84.0,
+    "cover_roof_z_mm": 86.0,
+    "expected_underside_z_mm": 84.0,
+    "expected_roof_z_mm": 86.0,
+    "landing_band_z_mm": [
+      83.99,
+      84.0
+    ],
+    "landing_band_volume_mm3": 48.30840000143397,
+    "positive_ledge_support_area_proxy_mm2": 4830.8400001433965
+  },
+  "body_housing_floor": {
+    "housing_bottom_z_mm": 57.75,
+    "expected_floor_z_mm": 57.75,
+    "gap_mm": 0.0,
+    "overlap_mm3": 0.0
+  },
+  "complete_stowed_radius_mm": 121.6223665055127,
+  "motion_samples": 31,
+  "minimum_panel_clearance_mm": {
+    "starboard_rear": {
+      "clearance_mm": 0.24999999995539549,
+      "fraction": 0.02,
+      "other": "starboard_join"
+    },
+    "starboard_front": {
+      "clearance_mm": 0.24999999995776534,
+      "fraction": 0.003,
+      "other": "starboard_join"
+    },
+    "port_rear": {
+      "clearance_mm": 0.24999999995787903,
+      "fraction": 1.0,
+      "other": "port_join"
+    },
+    "port_front": {
+      "clearance_mm": 0.2499999999582201,
+      "fraction": 0.8,
+      "other": "port_join"
+    }
+  },
+  "maximum_unexpected_overlap": {
+    "overlap_mm3": 0.0,
+    "fraction": null,
+    "a": null,
+    "b": null
+  },
+  "A4_early_regression_collision_count": 3,
+  "failure_count": 0,
+  "failures": []
+}

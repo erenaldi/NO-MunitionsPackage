@@ -1,0 +1,263 @@
+[
+ {
+  "input": "STEP/S_RF_Layout_P04_Study.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/RF_P04_top_fwd.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      500,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_top_aft.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      -600,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_bottom_fwd.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      -1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      500,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_bottom_aft.png",
+    "camera": {
+     "direction": [
+      0,
+      0,
+      -1
+     ],
+     "up": [
+      1,
+      0,
+      0
+     ],
+     "target": [
+      -600,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_port_fwd.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      500,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_port_aft.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -600,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_stbd_fwd.png",
+    "camera": {
+     "direction": [
+      0,
+      1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      500,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_stbd_aft.png",
+    "camera": {
+     "direction": [
+      0,
+      1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -600,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_nose_ob_stbd.png",
+    "camera": {
+     "direction": [
+      1,
+      0.7,
+      0.35
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      900,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 260
+    }
+   },
+   {
+    "path": "reviews/RF_P04_nose_ob_port.png",
+    "camera": {
+     "direction": [
+      1,
+      -0.7,
+      0.35
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      900,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 260
+    }
+   },
+   {
+    "path": "reviews/RF_P04_belly_ob.png",
+    "camera": {
+     "direction": [
+      0.6,
+      0.7,
+      -0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      300,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   },
+   {
+    "path": "reviews/RF_P04_aft_ob_top.png",
+    "camera": {
+     "direction": [
+      -0.6,
+      -0.7,
+      0.7
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -800,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 450
+    }
+   }
+  ]
+ }
+]

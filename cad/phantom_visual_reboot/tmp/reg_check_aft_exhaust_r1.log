@@ -1,0 +1,42 @@
+{
+  "report": "C:\\Users\\erena\\Desktop\\Nuclear Option Munitions Package\\cad\\phantom_visual_reboot\\reviews\\aft_exhaust_r1_checks.json",
+  "passed": true,
+  "failure_count": 0,
+  "saved_artifact_count": 10,
+  "full_state_component_counts": {
+    "Stowed": 34,
+    "Midfold": 34,
+    "Deployed": 34
+  },
+  "nonbody_counterpart_comparisons": {
+    "Stowed": 32,
+    "Midfold": 32,
+    "Deployed": 32
+  },
+  "body_cut_state_count": 3,
+  "maximum_body_boolean_identity_delta_mm3": 0.0,
+  "liner_recession_mm": 6.000000557806516,
+  "body_liner_overlap_mm3": 0.0,
+  "body_liner_contact_area_proxy_mm2": 34624.333651585395,
+  "tail_pocket_count": 4,
+  "fixed_mounts_per_state": {
+    "Stowed": 10,
+    "Midfold": 10,
+    "Deployed": 10
+  },
+  "stowed_radius_mm": 121.62236729470624,
+  "stowed_global_X_span_mm": 2800.000001315613,
+  "motion_sample_count": 66,
+  "motion_pair_coverage": 2112,
+  "motion_exact_fallback_queries": 0,
+  "motion_minimum_proven_clearance_lower_bound": {
+    "clearance_lower_bound_mm": 17.999999799999962,
+    "pair": [
+      "aft_exhaust_r1_liner",
+      "tail_r4_lower_starboard_fin_root"
+    ],
+    "fraction": 0.55,
+    "method": "conservative_AABB_lower_bound"
+  },
+  "first_failures": []
+}

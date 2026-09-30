@@ -1,0 +1,1 @@
+[{"input": "STEP/halberd_r19_surface.step", "mode": "view", "outputs": [{"path": "reviews/R19_surface_strip_grazing.png", "camera": {"direction": [0.95, -0.25, 0.12]}}], "output": {"viewLabels": false, "padding": 0.02, "sizeProfile": "diagnostic"}, "quality": {"tessellation": {"chordTolerance": 5e-05, "angleTolerance": 0.05}}}]

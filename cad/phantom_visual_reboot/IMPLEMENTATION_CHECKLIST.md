@@ -4,6 +4,8 @@ Updated 2026-09-27. Scope: the current Phantom visual reboot, through CAD approv
 
 ## Current working baseline
 
+**Updated 2026-09-29: the working baseline is B2H** (`ENGINE_BAY_B2H_CONTRACT.md`): `STEP/S_EngineBay_B2H_{Stowed,Deployed}_Full.step`, adding the engine carried on the main ramp (ramp now ~50 mm lip drop, 4.3424 deg), the 340 mm belly door with pocket, the straight bypass duct, the square rear nozzle and restrained cosmetic engraving on the door, ramp underside, bay surround and intake frame. Integrated regression `src/check_engine_bay_b2h_integrated.py` -> `reviews/engine_bay_b2h_integrated_checks.json`: 0 failures. P01 (intake setting) is closed; the 35 mm setting was superseded by the user's 50 mm request. P03 is superseded by the B2 work (engine/nozzle/door) and P05/P06 are partly done (door, ramp, bay, nozzle, intake frame); the actual-pylon fit (P02 follow-on) and RF panels (P04) remain open. The bullets below describe the earlier R1-exhaust baseline and are kept as history.
+
 - Latest integrated candidate: `src/aft_exhaust_r1.py` → `STEP/S_AftExhaust_R1_{Stowed,Midfold,Deployed}.step` (34 components per full state), retaining IntakeR3's35 mm travel. See `AFT_EXHAUST_R1_BRIEF.md` and `DONOR_RACK_FINDINGS.md` for this pass.
 - Coordinates: mm; +X forward, +Y starboard, +Z dorsal; body X−1400..1400. Complete stowed assembly must remain inside radius 125 mm / diameter 250 mm.
 - The body derives from J/R7, with explicit wing, tail and intake pocket cuts. Preserve the accepted exterior outside those approved regions.

@@ -106,6 +106,13 @@ def assignments_by_label(scene, sidecar):
     return {leaf.label: table.get(leaf.ref.lstrip("#")) for leaf in scene.leaves()}
 
 
+def material_matches(got, want, materials):
+    if got is None:
+        return False
+    return (got.split("/")[-1] == want or
+            materials.get(got, {}).get("name") == want)
+
+
 def expected_material(label):
     if label.endswith("_ring") or "terminal_" in label or "fastener_" in label:
         return "detail_metal"
@@ -272,7 +279,7 @@ def main():
     for label in new_labels:
         want = expected_material(label)
         got = mat_full.get(label)
-        check(got is not None and (got == want or mats.get(got, {}).get("name") == want),
+        check(material_matches(got, want, mats),
               f"{label}: material {got!r} != {want}")
 
     # --- focus crops --------------------------------------------------------
@@ -299,7 +306,7 @@ def main():
             if label in new_labels:
                 got = mat_assign.get(label)
                 w = expected_material(label)
-                check(got is not None and (got == w or sidecar["appearance"]["materials"].get(got, {}).get("name") == w),
+                check(material_matches(got, w, sidecar["appearance"]["materials"]),
                       f"{name}:{label}: material {got!r} != {w}")
         crop_report[variant] = {"step": f"STEP/{name}.step", "parts": len(parts),
                                 "axial_bounds_mm": [lo, hi], "document_hash": scene.document_hash}

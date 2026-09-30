@@ -1,0 +1,68 @@
+{
+ "candidate": "STEP/S_EngineBay_B2H_Stowed_Full.step",
+ "leaves_tested": [
+  "RDM9_R7_symmetric_body_20mm_wedge_R4",
+  "aft_exhaust_r1_liner",
+  "b2g_turbine_stage",
+  "b2h_nozzle_facet_dorsal_starboard",
+  "b2h_nozzle_facet_port_dorsal",
+  "b2h_nozzle_flap_dorsal",
+  "b2h_nozzle_flap_port",
+  "b2h_nozzle_flap_starboard",
+  "b2h_nozzle_ring",
+  "b2h_tail_strut_135",
+  "b2h_tail_strut_45",
+  "port_carriage",
+  "port_fixed_root",
+  "port_front",
+  "port_join",
+  "port_rear",
+  "starboard_carriage",
+  "starboard_fixed_root",
+  "starboard_front",
+  "starboard_join",
+  "starboard_rear",
+  "supported_housing",
+  "tail_r4_upper_port_fin_root",
+  "tail_r4_upper_port_fixed_knuckle_aft",
+  "tail_r4_upper_port_fixed_knuckle_forward",
+  "tail_r4_upper_port_throughpin",
+  "tail_r4_upper_starboard_fin_root",
+  "tail_r4_upper_starboard_fixed_knuckle_aft",
+  "tail_r4_upper_starboard_fixed_knuckle_forward",
+  "tail_r4_upper_starboard_throughpin",
+  "top_cover"
+ ],
+ "results": {
+  "8.1": {
+   "lowering_mm": 8.1,
+   "pylon_lowest_z_after_mm": 85.52566466331481,
+   "bbox_vertical_gap_mm": -0.4743354366851804,
+   "surface_intersections": {
+    "top_cover": {
+     "triangle_count": 62,
+     "intersection_area_mm2": 3059.246637554621
+    },
+    "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+     "triangle_count": 16,
+     "intersection_area_mm2": 1039.9479868648032
+    }
+   },
+   "clear_of_surface_intersections": false
+  },
+  "9.1": {
+   "lowering_mm": 9.1,
+   "pylon_lowest_z_after_mm": 86.52566466331481,
+   "bbox_vertical_gap_mm": 0.5256645633148196,
+   "surface_intersections": {},
+   "clear_of_surface_intersections": true
+  },
+  "9.574": {
+   "lowering_mm": 9.574,
+   "pylon_lowest_z_after_mm": 86.99966466331482,
+   "bbox_vertical_gap_mm": 0.9996645633148233,
+   "surface_intersections": {},
+   "clear_of_surface_intersections": true
+  }
+ }
+}

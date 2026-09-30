@@ -1,0 +1,92 @@
+[
+ {
+  "input": "STEP/S_EngineBay_B2_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2_deployed_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -650,
+      0,
+      -10
+     ],
+     "orthographicHalfHeight": 780
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2_Stowed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2_stowed_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -650,
+      0,
+      -10
+     ],
+     "orthographicHalfHeight": 780
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2_deployed_belly.png",
+    "camera": {
+     "direction": [
+      0.35,
+      -0.6,
+      -0.9
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -150,
+      0,
+      -80
+     ],
+     "orthographicHalfHeight": 330
+    }
+   }
+  ]
+ }
+]

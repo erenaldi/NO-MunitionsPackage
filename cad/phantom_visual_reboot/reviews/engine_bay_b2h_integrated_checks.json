@@ -1,0 +1,550 @@
+{
+ "gate": "B2H_integrated_regression",
+ "units": "mm",
+ "failures": [],
+ "checks": {
+  "inventory": {
+   "same_labels_both_states": true,
+   "multi_solid_leaves": {
+    "Stowed": [],
+    "Deployed": []
+   }
+  },
+  "r3_peer_identity_and_body_removal_only": {
+   "peer_symdiff_mm3": {
+    "Stowed/port_carriage": 0.0,
+    "Stowed/port_fixed_root": 0.0,
+    "Stowed/port_front": 0.0,
+    "Stowed/port_join": 0.0,
+    "Stowed/port_rear": 0.0,
+    "Stowed/starboard_carriage": 0.0,
+    "Stowed/starboard_fixed_root": 0.0,
+    "Stowed/starboard_front": 0.0,
+    "Stowed/starboard_join": 0.0,
+    "Stowed/starboard_rear": 0.0,
+    "Stowed/supported_housing": 0.0,
+    "Stowed/top_cover": 0.0,
+    "Stowed/tail_r4_upper_starboard_fin_root": 0.0,
+    "Stowed/tail_r4_upper_starboard_fixed_knuckle_aft": 0.0,
+    "Stowed/tail_r4_upper_starboard_fixed_knuckle_forward": 0.0,
+    "Stowed/tail_r4_upper_starboard_throughpin": 0.0,
+    "Stowed/tail_r4_upper_port_fin_root": 0.0,
+    "Stowed/tail_r4_upper_port_fixed_knuckle_aft": 0.0,
+    "Stowed/tail_r4_upper_port_fixed_knuckle_forward": 0.0,
+    "Stowed/tail_r4_upper_port_throughpin": 0.0,
+    "Stowed/tail_r4_lower_port_fin_root": 0.0,
+    "Stowed/tail_r4_lower_port_fixed_knuckle_aft": 0.0,
+    "Stowed/tail_r4_lower_port_fixed_knuckle_forward": 0.0,
+    "Stowed/tail_r4_lower_port_throughpin": 0.0,
+    "Stowed/tail_r4_lower_starboard_fin_root": 0.0,
+    "Stowed/tail_r4_lower_starboard_fixed_knuckle_aft": 0.0,
+    "Stowed/tail_r4_lower_starboard_fixed_knuckle_forward": 0.0,
+    "Stowed/tail_r4_lower_starboard_throughpin": 0.0,
+    "Stowed/intake_r1_fixed_mount_negative_y": 0.0,
+    "Stowed/intake_r1_fixed_mount_positive_y": 0.0,
+    "Stowed/intake_r1_throughpin": 0.0,
+    "Deployed/port_carriage": 0.0,
+    "Deployed/port_fixed_root": 0.0,
+    "Deployed/port_front": 0.0,
+    "Deployed/port_join": 0.0,
+    "Deployed/port_rear": 0.0,
+    "Deployed/starboard_carriage": 0.0,
+    "Deployed/starboard_fixed_root": 0.0,
+    "Deployed/starboard_front": 0.0,
+    "Deployed/starboard_join": 0.0,
+    "Deployed/starboard_rear": 0.0,
+    "Deployed/supported_housing": 0.0,
+    "Deployed/top_cover": 0.0,
+    "Deployed/tail_r4_upper_starboard_fin_root": 0.0,
+    "Deployed/tail_r4_upper_starboard_fixed_knuckle_aft": 0.0,
+    "Deployed/tail_r4_upper_starboard_fixed_knuckle_forward": 0.0,
+    "Deployed/tail_r4_upper_starboard_throughpin": 0.0,
+    "Deployed/tail_r4_upper_port_fin_root": 0.0,
+    "Deployed/tail_r4_upper_port_fixed_knuckle_aft": 0.0,
+    "Deployed/tail_r4_upper_port_fixed_knuckle_forward": 0.0,
+    "Deployed/tail_r4_upper_port_throughpin": 0.0,
+    "Deployed/tail_r4_lower_port_fin_root": 0.0,
+    "Deployed/tail_r4_lower_port_fixed_knuckle_aft": 0.0,
+    "Deployed/tail_r4_lower_port_fixed_knuckle_forward": 0.0,
+    "Deployed/tail_r4_lower_port_throughpin": 0.0,
+    "Deployed/tail_r4_lower_starboard_fin_root": 0.0,
+    "Deployed/tail_r4_lower_starboard_fixed_knuckle_aft": 0.0,
+    "Deployed/tail_r4_lower_starboard_fixed_knuckle_forward": 0.0,
+    "Deployed/tail_r4_lower_starboard_throughpin": 0.0,
+    "Deployed/intake_r1_fixed_mount_negative_y": 0.0,
+    "Deployed/intake_r1_fixed_mount_positive_y": 0.0,
+    "Deployed/intake_r1_throughpin": 0.0
+   },
+   "body": {
+    "Stowed": {
+     "material_added_mm3": 0.0,
+     "material_removed_mm3": 8775508.228654815
+    },
+    "Deployed": {
+     "material_added_mm3": 0.0,
+     "material_removed_mm3": 8775508.228654815
+    }
+   }
+  },
+  "pose_model_identity": {
+   "rotated_stowed_vs_saved_deployed": {
+    "intake_r1_ramp": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 3.3700508591857846e-15,
+      "com_distance_mm": 1.7454796497856839e-07,
+      "bbox_max_delta_mm": 3.266659689415974e-07,
+      "vertex_count": [
+       190,
+       190
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2_engine_envelope": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 0.0,
+      "com_distance_mm": 1.7055191247524226e-07,
+      "bbox_max_delta_mm": 3.109465467332484e-07,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_face_frame": {
+     "symdiff_mm3": 8233.5871931765,
+     "invariants": {
+      "rel_volume_diff": 4.41846154327108e-15,
+      "com_distance_mm": 3.133736014402885e-07,
+      "bbox_max_delta_mm": 3.158993990837189e-07,
+      "vertex_count": [
+       80,
+       80
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_inlet_lip": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 2.695909288319094e-15,
+      "com_distance_mm": 3.1540005669273893e-07,
+      "bbox_max_delta_mm": 3.152933985006712e-07,
+      "vertex_count": [
+       4,
+       4
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_fan": {
+     "symdiff_mm3": 12893.45205579782,
+     "invariants": {
+      "rel_volume_diff": 2.116178113906942e-15,
+      "com_distance_mm": 3.1411850103373724e-07,
+      "bbox_max_delta_mm": 3.1464814753690007e-07,
+      "vertex_count": [
+       214,
+       214
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_spinner": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 1.143284827866236e-15,
+      "com_distance_mm": 3.179614556597926e-07,
+      "bbox_max_delta_mm": 3.158044563633666e-07,
+      "vertex_count": [
+       2,
+       2
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_0_port": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 4.602705980632235e-15,
+      "com_distance_mm": 6.524781844433337e-08,
+      "bbox_max_delta_mm": 6.58593819480302e-08,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_0_stbd": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 4.602705980632235e-15,
+      "com_distance_mm": 6.524781844433337e-08,
+      "bbox_max_delta_mm": 6.58593819480302e-08,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_1_port": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 4.602705980632235e-15,
+      "com_distance_mm": 1.294598111851023e-07,
+      "bbox_max_delta_mm": 1.3023040423831844e-07,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_1_stbd": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 4.602705980632235e-15,
+      "com_distance_mm": 1.294598111851023e-07,
+      "bbox_max_delta_mm": 1.3023040423831844e-07,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_2_port": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 4.794485396491913e-15,
+      "com_distance_mm": 1.9389144778044846e-07,
+      "bbox_max_delta_mm": 1.945914362977419e-07,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_2_stbd": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 4.794485396491913e-15,
+      "com_distance_mm": 1.9389144778044846e-07,
+      "bbox_max_delta_mm": 1.945914362977419e-07,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_3_port": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 1.5342353268774118e-15,
+      "com_distance_mm": 2.583909649987667e-07,
+      "bbox_max_delta_mm": 2.5896245858803013e-07,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_mount_pad_3_stbd": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 1.5342353268774118e-15,
+      "com_distance_mm": 2.583909649987667e-07,
+      "bbox_max_delta_mm": 2.5896245858803013e-07,
+      "vertex_count": [
+       8,
+       8
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_door_panel": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 7.410527512156647e-16,
+      "com_distance_mm": 2.557814205640267e-11,
+      "bbox_max_delta_mm": 5.03348474012455e-11,
+      "vertex_count": [
+       144,
+       144
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_door_frame": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 5.791115579579298e-16,
+      "com_distance_mm": 2.5555322782979878e-11,
+      "bbox_max_delta_mm": 5.0114579153159866e-11,
+      "vertex_count": [
+       40,
+       40
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    },
+    "b2d_door_hinge": {
+     "symdiff_mm3": 0.0,
+     "invariants": {
+      "rel_volume_diff": 0.0,
+      "com_distance_mm": 1.0873691218678636e-15,
+      "bbox_max_delta_mm": 0.0,
+      "vertex_count": [
+       26,
+       26
+      ],
+      "vertex_sets_match_2um": true,
+      "pass": true
+     }
+    }
+   },
+   "boolean_symdiff_unreliable_but_invariants_pass": {
+    "b2d_face_frame": 8233.5871931765,
+    "b2d_fan": 12893.45205579782
+   },
+   "leaves_that_differ_between_states_R3_state_dependent": [
+    "port_carriage",
+    "port_front",
+    "port_join",
+    "port_rear",
+    "starboard_carriage",
+    "starboard_front",
+    "starboard_join",
+    "starboard_rear",
+    "tail_r4_lower_port_fin_root",
+    "tail_r4_lower_starboard_fin_root",
+    "tail_r4_upper_port_fin_root",
+    "tail_r4_upper_starboard_fin_root"
+   ],
+   "deployed_lip_drop_mm": 49.96401484557069,
+   "stowed_lip_offset_mm": 9.999999406318238e-08,
+   "ramp_group": [
+    "intake_r1_ramp",
+    "b2_engine_envelope",
+    "b2d_face_frame",
+    "b2d_inlet_lip",
+    "b2d_fan",
+    "b2d_spinner",
+    "b2d_mount_pad_0_port",
+    "b2d_mount_pad_0_stbd",
+    "b2d_mount_pad_1_port",
+    "b2d_mount_pad_1_stbd",
+    "b2d_mount_pad_2_port",
+    "b2d_mount_pad_2_stbd",
+    "b2d_mount_pad_3_port",
+    "b2d_mount_pad_3_stbd"
+   ],
+   "door_group": [
+    "b2d_door_panel",
+    "b2d_door_frame",
+    "b2d_door_hinge"
+   ]
+  },
+  "stowed_envelope": {
+   "max_conservative_radius_mm": 121.62236650587943,
+   "witness": "RDM9_R7_symmetric_body_20mm_wedge_R4",
+   "limit_mm_exclusive": 125.0,
+   "x_span_mm": 2800.0000002000434,
+   "x_span_limit_mm": 2800.66,
+   "pass": true,
+   "method": "Conservative YZ AABB corner bound, not a tight radial maximum."
+  },
+  "static_overlap_pairs_gt_tol": {
+   "Stowed": {
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_starboard_fixed_knuckle_aft": 405.68972737447194,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_starboard_fixed_knuckle_forward": 405.68972737446535,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_port_fixed_knuckle_aft": 405.689727320327,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_port_fixed_knuckle_forward": 405.6897273202201,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_port_fixed_knuckle_aft": 405.6897273743357,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_port_fixed_knuckle_forward": 405.6897273742761,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_starboard_fixed_knuckle_aft": 405.6897273205602,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_starboard_fixed_knuckle_forward": 405.6897273204892,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | intake_r1_fixed_mount_negative_y": 326.83051942522786,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | intake_r1_fixed_mount_positive_y": 326.8305185505853,
+    "port_fixed_root | supported_housing": 314.1592653589794,
+    "starboard_fixed_root | supported_housing": 314.1592653589794,
+    "aft_exhaust_r1_liner | b2h_nozzle_ring": 682.4112127215694,
+    "aft_exhaust_r1_liner | b2g_turbine_stage": 62.12512268402468,
+    "b2d_face_frame | b2d_inlet_lip": 168.57360028279805,
+    "b2d_face_frame | b2d_fan": 6.250827348480397,
+    "b2d_door_panel | b2d_door_hinge": 490.86270895774135,
+    "b2d_door_frame | b2d_door_hinge": 22.375847450648507,
+    "b2h_nozzle_ring | b2h_nozzle_flap_dorsal": 364.8980242672567,
+    "b2h_nozzle_ring | b2h_nozzle_flap_starboard": 364.8980242672568,
+    "b2h_nozzle_ring | b2h_nozzle_flap_ventral": 364.89802426725583,
+    "b2h_nozzle_ring | b2h_nozzle_flap_port": 364.89802426725737,
+    "b2h_nozzle_ring | b2h_nozzle_facet_dorsal_starboard": 58.88483193151796,
+    "b2h_nozzle_ring | b2h_nozzle_facet_starboard_ventral": 58.88483193151791,
+    "b2h_nozzle_ring | b2h_nozzle_facet_ventral_port": 58.88483193151799,
+    "b2h_nozzle_ring | b2h_nozzle_facet_port_dorsal": 58.884831931517965,
+    "b2h_nozzle_ring | b2h_tail_strut_45": 6.061799524365033,
+    "b2h_nozzle_ring | b2h_tail_strut_135": 6.0617995050665066,
+    "b2h_nozzle_ring | b2h_tail_strut_225": 6.061799524383441,
+    "b2h_nozzle_ring | b2h_tail_strut_315": 6.0617995243595555,
+    "b2h_tail_strut_45 | b2g_tail_cone": 37.110898971595766,
+    "b2h_tail_strut_135 | b2g_tail_cone": 37.110898971623385,
+    "b2h_tail_strut_225 | b2g_tail_cone": 37.110898971650826,
+    "b2h_tail_strut_315 | b2g_tail_cone": 37.110898971623236,
+    "b2g_tail_cone | b2g_tail_shaft": 95.03317777109125,
+    "b2g_tail_shaft | b2g_turbine_stage": 47.51658888554562
+   },
+   "Deployed": {
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_starboard_fixed_knuckle_aft": 405.68972737447194,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_starboard_fixed_knuckle_forward": 405.68972737446535,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_port_fixed_knuckle_aft": 405.689727320327,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_upper_port_fixed_knuckle_forward": 405.6897273202201,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_port_fixed_knuckle_aft": 405.6897273743357,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_port_fixed_knuckle_forward": 405.6897273742761,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_starboard_fixed_knuckle_aft": 405.6897273205602,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | tail_r4_lower_starboard_fixed_knuckle_forward": 405.6897273204892,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | intake_r1_fixed_mount_negative_y": 326.83051942522786,
+    "RDM9_R7_symmetric_body_20mm_wedge_R4 | intake_r1_fixed_mount_positive_y": 326.8305185505853,
+    "port_fixed_root | supported_housing": 314.1592653589794,
+    "starboard_fixed_root | supported_housing": 314.1592653589794,
+    "aft_exhaust_r1_liner | b2h_nozzle_ring": 682.4112127215694,
+    "aft_exhaust_r1_liner | b2g_turbine_stage": 62.12512268402468,
+    "b2d_face_frame | b2d_inlet_lip": 168.57360028280374,
+    "b2d_face_frame | b2d_fan": 6.250827348483269,
+    "b2d_door_panel | b2d_door_hinge": 490.86270895774595,
+    "b2d_door_frame | b2d_door_hinge": 22.375847450648642,
+    "b2h_nozzle_ring | b2h_nozzle_flap_dorsal": 364.8980242672567,
+    "b2h_nozzle_ring | b2h_nozzle_flap_starboard": 364.8980242672568,
+    "b2h_nozzle_ring | b2h_nozzle_flap_ventral": 364.89802426725583,
+    "b2h_nozzle_ring | b2h_nozzle_flap_port": 364.89802426725737,
+    "b2h_nozzle_ring | b2h_nozzle_facet_dorsal_starboard": 58.88483193151796,
+    "b2h_nozzle_ring | b2h_nozzle_facet_starboard_ventral": 58.88483193151791,
+    "b2h_nozzle_ring | b2h_nozzle_facet_ventral_port": 58.88483193151799,
+    "b2h_nozzle_ring | b2h_nozzle_facet_port_dorsal": 58.884831931517965,
+    "b2h_nozzle_ring | b2h_tail_strut_45": 6.061799524365033,
+    "b2h_nozzle_ring | b2h_tail_strut_135": 6.0617995050665066,
+    "b2h_nozzle_ring | b2h_tail_strut_225": 6.061799524383441,
+    "b2h_nozzle_ring | b2h_tail_strut_315": 6.0617995243595555,
+    "b2h_tail_strut_45 | b2g_tail_cone": 37.110898971595766,
+    "b2h_tail_strut_135 | b2g_tail_cone": 37.110898971623385,
+    "b2h_tail_strut_225 | b2g_tail_cone": 37.110898971650826,
+    "b2h_tail_strut_315 | b2g_tail_cone": 37.110898971623236,
+    "b2g_tail_cone | b2g_tail_shaft": 95.03317777109125,
+    "b2g_tail_shaft | b2g_turbine_stage": 47.51658888554562
+   }
+  },
+  "static_overlap_state_differences": {
+   "stowed_only": [],
+   "deployed_only": []
+  },
+  "ramp_group_sweep_vs_fixed_peers": {
+   "poses": 29,
+   "pairs_ever_overlapping": {},
+   "violations": {},
+   "min_aabb_gap_where_disjoint_mm": 0.9999998000000119
+  },
+  "door_sweep_vs_fixed_peers": {
+   "poses": 29,
+   "pairs_ever_overlapping": {},
+   "violations": {},
+   "min_aabb_gap_where_disjoint_mm": 79.76566049195849
+  },
+  "ramp_group_vs_deployed_state_wings_and_fins": {
+   "poses": 5,
+   "pairs_ever_overlapping": {},
+   "violations": {},
+   "min_aabb_gap_where_disjoint_mm": 0.9999998000000119
+  },
+  "door_vs_deployed_state_wings_and_fins": {
+   "poses": 5,
+   "pairs_ever_overlapping": {},
+   "violations": {},
+   "min_aabb_gap_where_disjoint_mm": 79.76566049195849
+  },
+  "mount_pad_contact_type": {
+   "b2d_mount_pad_0_port": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   },
+   "b2d_mount_pad_0_stbd": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   },
+   "b2d_mount_pad_1_port": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   },
+   "b2d_mount_pad_1_stbd": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   },
+   "b2d_mount_pad_2_port": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   },
+   "b2d_mount_pad_2_stbd": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   },
+   "b2d_mount_pad_3_port": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   },
+   "b2d_mount_pad_3_stbd": {
+    "volume_overlap_with_engine_mm3": 0.0,
+    "aabb_gap_to_engine_mm": 0.0,
+    "aabb_gap_to_ramp_mm": 0.0
+   }
+  },
+  "door_vs_ramp_group_async_grid": {
+   "combos": 25,
+   "overlaps": {}
+  }
+ },
+ "notes": [
+  "Overlap volumes are exact booleans on saved leaves; clearances during sweeps are lower bounds (AABB gap) where no boolean was needed.",
+  "Sampled poses only; no continuous swept-volume proof.",
+  "Existing R3/A5/TailR4/aft-exhaust checkers are run separately against their own saved artifacts."
+ ],
+ "parameters": {
+  "deg_r3": 3.0402055284501452,
+  "deg_b2": 4.342368883534361,
+  "door_deg": 9.86,
+  "part_count": {
+   "Stowed": 66,
+   "Deployed": 66
+  }
+ },
+ "elapsed_s": 89.7,
+ "failure_count": 0
+}

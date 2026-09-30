@@ -1,0 +1,61 @@
+{
+  "scope": "Actual extracted donor pylon surface versus saved stowed candidate at the unchanged donor missile-local origin; aircraft/bay clearance not assessed.",
+  "source_manifest": "reference/agm1_mount/manifest.json",
+  "candidate_step": "STEP\\S_AftExhaust_R1_Stowed.step",
+  "pylon_reference_sha256": "51c891f1255924a2d919cf9b87d9b1963d1113965647c14f9f9a7c10d68e0a6e",
+  "candidate_step_sha256": "80740d9557ddcc423fe6c26332f468e31f8d7f03afdebdc8953cd293fbf470ee",
+  "candidate_component_count": 34,
+  "pylon_mesh_name": "launchpylon1",
+  "pylon_vertex_count": 848,
+  "pylon_triangle_count": 648,
+  "axis_map": "CAD X=Unity Z, CAD Y=Unity X, CAD Z=Unity Y, metres to mm, after inverse mounted-missile transform",
+  "pylon_bounds_candidate_CAD_mm": [
+    [
+      -770.1659535901816,
+      -66.71959737684261,
+      77.42566466331482
+    ],
+    [
+      685.6464503159493,
+      66.71900058536527,
+      236.66122555732727
+    ]
+  ],
+  "degenerate_triangles_ignored": 0,
+  "surface_intersections": {
+    "port_front": {
+      "triangle_count": 13,
+      "intersection_area_mm2": 701.1695125554978,
+      "strict_interior_witness_CAD_mm": [
+        391.3519778124507,
+        -58.75630808428179,
+        80.16740391818973
+      ]
+    },
+    "top_cover": {
+      "triangle_count": 60,
+      "intersection_area_mm2": 13751.634272283178,
+      "strict_interior_witness_CAD_mm": [
+        416.4811842047609,
+        -44.59216955496448,
+        85.044008296547
+      ]
+    },
+    "RDM9_R7_symmetric_body_20mm_wedge_R4": {
+      "triangle_count": 18,
+      "intersection_area_mm2": 20002.873765682823,
+      "strict_interior_witness_CAD_mm": [
+        -533.0830239446815,
+        -50.06346889108043,
+        83.14189418156941
+      ]
+    }
+  },
+  "static_pylon_surface_check_passed": false,
+  "candidate_max_z_mm": 86.0000001,
+  "pylon_min_z_mm": 77.42566466331482,
+  "vertical_bbox_overlap_mm": 8.574335436685175,
+  "unapplied_candidate_lowering_for_1mm_vertical_bbox_gap_mm": 9.574335436685175,
+  "placement_change_applied": false,
+  "limits": "Surface-area evidence, not closed-volume penetration; no donor replacement or game installation; final attachment offset and real aircraft fit pending."
+}

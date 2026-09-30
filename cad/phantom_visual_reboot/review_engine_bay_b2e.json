@@ -1,0 +1,182 @@
+[
+ {
+  "input": "STEP/S_EngineBay_B2E_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2E_deployed_side.png",
+    "camera": {
+     "direction": [
+      0,
+      -1,
+      0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -650,
+      0,
+      -10
+     ],
+     "orthographicHalfHeight": 780
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2E_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2E_intake_face.png",
+    "camera": {
+     "direction": [
+      0.5,
+      -0.85,
+      -0.45
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -330,
+      0,
+      -70
+     ],
+     "orthographicHalfHeight": 170
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2E_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2E_belly_door.png",
+    "camera": {
+     "direction": [
+      0.25,
+      -0.5,
+      -1.0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -150,
+      0,
+      -80
+     ],
+     "orthographicHalfHeight": 300
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2E_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2E_mount.png",
+    "camera": {
+     "direction": [
+      0.3,
+      -1.0,
+      -0.2
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -620,
+      0,
+      -70
+     ],
+     "orthographicHalfHeight": 200
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2E_Deployed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2E_rear.png",
+    "camera": {
+     "direction": [
+      -1,
+      -0.25,
+      0.15
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -1394,
+      0,
+      0
+     ],
+     "orthographicHalfHeight": 110
+    }
+   }
+  ]
+ },
+ {
+  "input": "STEP/S_EngineBay_B2E_Stowed_Cutaway.step",
+  "mode": "view",
+  "output": {
+   "tightFrame": false
+  },
+  "outputs": [
+   {
+    "path": "reviews/EngineBay_B2E_stowed_belly.png",
+    "camera": {
+     "direction": [
+      0.25,
+      -0.5,
+      -1.0
+     ],
+     "up": [
+      0,
+      0,
+      1
+     ],
+     "target": [
+      -450,
+      0,
+      -80
+     ],
+     "orthographicHalfHeight": 500
+    }
+   }
+  ]
+ }
+]

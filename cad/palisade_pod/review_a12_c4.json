@@ -1,0 +1,78 @@
+{
+ "jobs": [
+  {
+   "input": "STEP/A12_Crop_C4_front.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C4_front_a.png",
+     "camera": {
+      "direction": [
+       1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C4_front_b.png",
+     "camera": {
+      "direction": [
+       1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C4_front_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  },
+  {
+   "input": "STEP/A12_Crop_C4_rear.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A12_C4_rear_a.png",
+     "camera": {
+      "direction": [
+       -1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C4_rear_b.png",
+     "camera": {
+      "direction": [
+       -1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A12_C4_rear_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+Starting CAD Viewer at http://127.0.0.1:3246/ (serving C:\Users\erena\Desktop\Nuclear Option Munitions Package\cad\phantom_visual_reboot)
+CAD Viewer URL: http://127.0.0.1:3246/
+{"url":"http://127.0.0.1:3246/","port":3246,"action":"started"}
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55348)
+Traceback (most recent call last):
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\http_app.py", line 435, in _dispatch
+    self._handle_catalog(request, response)
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\http_app.py", line 528, in _handle_catalog
+    response.send_json(200, self.read_catalog(request.query.get("file")))
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\response.py", line 119, in send_json
+    self._write(body)
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\response.py", line 98, in _write
+    self._handler.wfile.write(data)
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 438, in handle
+    self.handle_one_request()
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\handler.py", line 277, in handle_one_request
+    method()
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\handler.py", line 235, in do_GET
+    self._dispatch()
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\handler.py", line 224, in _dispatch
+    app.handle(request, response)
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\http_app.py", line 402, in handle
+    self._dispatch(request, response)
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\http_app.py", line 459, in _dispatch
+    response.send_json(400, {"error": str(error)})
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\response.py", line 111, in send_json
+    self._begin(
+  File "C:\Users\erena\.config\opencode\cadgen-venv\Lib\site-packages\cadgen\viewer\response.py", line 91, in _begin
+    handler.end_headers()
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Users\erena\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
