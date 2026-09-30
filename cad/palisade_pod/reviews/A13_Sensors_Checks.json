@@ -1,0 +1,1748 @@
+{
+ "ok": true,
+ "shells_identical_to_A11": true,
+ "additive_only": true,
+ "user_visual_approval": false,
+ "concepts": {
+  "D1": {
+   "parts": 42,
+   "x_span_mm": 3497.3,
+   "sensors": {
+    "sensor_front_large_plinth": {
+     "volume_mm3": 82647.5,
+     "x": [
+      1723.1,
+      1773.1
+     ],
+     "z": [
+      -139.0,
+      -69.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_seam": {
+     "volume_mm3": 6796.5,
+     "x": [
+      1772.1,
+      1775.1
+     ],
+     "z": [
+      -140.4,
+      -67.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_hood_1": {
+     "volume_mm3": 7291.8,
+     "x": [
+      1767.1,
+      1807.1
+     ],
+     "z": [
+      -108.7,
+      -68.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_hood_2": {
+     "volume_mm3": 6743.0,
+     "x": [
+      1767.1,
+      1807.1
+     ],
+     "z": [
+      -108.7,
+      -68.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_lens": {
+     "volume_mm3": 50769.5,
+     "x": [
+      1775.1,
+      1804.5
+     ],
+     "z": [
+      -133.4,
+      -74.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_1": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -94.0,
+      -90.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_2": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -84.1,
+      -80.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_3": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -77.4,
+      -74.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_4": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -74.7,
+      -71.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_5": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -77.4,
+      -74.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_6": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -84.1,
+      -80.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_7": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -94.0,
+      -90.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_8": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -105.7,
+      -102.3
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_9": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -117.4,
+      -114.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_10": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -127.3,
+      -123.9
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_11": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -133.9,
+      -130.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_bolts_12": {
+     "volume_mm3": 21.1,
+     "x": [
+      1775.1,
+      1777.7
+     ],
+     "z": [
+      -136.2,
+      -133.3
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_barrel": {
+     "volume_mm3": 58681.5,
+     "x": [
+      1643.1,
+      1727.8
+     ],
+     "z": [
+      -102.0,
+      -58.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_window": {
+     "volume_mm3": 3215.6,
+     "x": [
+      1704.2,
+      1728.9
+     ],
+     "z": [
+      -98.9,
+      -61.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_flange": {
+     "volume_mm3": 3182.8,
+     "x": [
+      1685.1,
+      1692.7
+     ],
+     "z": [
+      -107.9,
+      -52.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_bezel": {
+     "volume_mm3": 8378.7,
+     "x": [
+      1768.7,
+      1810.8
+     ],
+     "z": [
+      -181.0,
+      -147.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_base": {
+     "volume_mm3": 4529.8,
+     "x": [
+      1775.1,
+      1796.8
+     ],
+     "z": [
+      -177.4,
+      -150.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_dome": {
+     "volume_mm3": 3235.4,
+     "x": [
+      1798.8,
+      1810.3
+     ],
+     "z": [
+      -175.6,
+      -152.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_flange_1": {
+     "volume_mm3": 2958.6,
+     "x": [
+      1793.8,
+      1801.4
+     ],
+     "z": [
+      -187.0,
+      -141.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_flange_2": {
+     "volume_mm3": 1052.8,
+     "x": [
+      1796.8,
+      1798.8
+     ],
+     "z": [
+      -177.4,
+      -150.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_flange_3": {
+     "volume_mm3": 3.7,
+     "x": [
+      1800.1,
+      1801.4
+     ],
+     "z": [
+      -149.7,
+      -146.3
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_seat": {
+     "volume_mm3": 715.8,
+     "x": [
+      1805.8,
+      1809.8
+     ],
+     "z": [
+      -182.6,
+      -145.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_plinth": {
+     "volume_mm3": 27224.8,
+     "x": [
+      -1655.5,
+      -1624.8
+     ],
+     "z": [
+      -114.7,
+      -58.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_seam": {
+     "volume_mm3": 6218.2,
+     "x": [
+      -1662.2,
+      -1659.8
+     ],
+     "z": [
+      -115.8,
+      -57.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_hood_1": {
+     "volume_mm3": 3563.5,
+     "x": [
+      -1685.3,
+      -1653.3
+     ],
+     "z": [
+      -90.4,
+      -58.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_hood_2": {
+     "volume_mm3": 3733.4,
+     "x": [
+      -1685.3,
+      -1653.3
+     ],
+     "z": [
+      -90.4,
+      -58.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_lens_1": {
+     "volume_mm3": 163.7,
+     "x": [
+      -1659.8,
+      -1659.7
+     ],
+     "z": [
+      -110.2,
+      -63.2
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_lens_2": {
+     "volume_mm3": 22919.0,
+     "x": [
+      -1683.3,
+      -1662.2
+     ],
+     "z": [
+      -110.1,
+      -63.3
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_barrel": {
+     "volume_mm3": 28392.3,
+     "x": [
+      -1647.8,
+      -1588.6
+     ],
+     "z": [
+      -85.1,
+      -49.9
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_window": {
+     "volume_mm3": 1662.2,
+     "x": [
+      -1648.7,
+      -1628.9
+     ],
+     "z": [
+      -82.6,
+      -52.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_flange": {
+     "volume_mm3": 1672.4,
+     "x": [
+      -1619.7,
+      -1613.7
+     ],
+     "z": [
+      -89.9,
+      -45.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_bezel": {
+     "volume_mm3": 3897.4,
+     "x": [
+      -1675.0,
+      -1649.7
+     ],
+     "z": [
+      -148.3,
+      -121.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_base": {
+     "volume_mm3": 974.1,
+     "x": [
+      -1660.6,
+      -1652.0
+     ],
+     "z": [
+      -145.4,
+      -124.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_dome": {
+     "volume_mm3": 1656.5,
+     "x": [
+      -1674.6,
+      -1665.4
+     ],
+     "z": [
+      -143.9,
+      -125.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_flange_1": {
+     "volume_mm3": 1707.7,
+     "x": [
+      -1667.4,
+      -1661.4
+     ],
+     "z": [
+      -153.1,
+      -116.3
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_flange_2": {
+     "volume_mm3": 1392.6,
+     "x": [
+      -1665.4,
+      -1661.4
+     ],
+     "z": [
+      -145.4,
+      -124.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_seat": {
+     "volume_mm3": 366.5,
+     "x": [
+      -1674.2,
+      -1671.0
+     ],
+     "z": [
+      -149.6,
+      -119.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    }
+   }
+  },
+  "D2": {
+   "parts": 34,
+   "x_span_mm": 3578.1,
+   "sensors": {
+    "sensor_front_large_base": {
+     "volume_mm3": 152173.3,
+     "x": [
+      1723.1,
+      1793.1
+     ],
+     "z": [
+      -139.0,
+      -69.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_band": {
+     "volume_mm3": 832.6,
+     "x": [
+      1777.1,
+      1780.1
+     ],
+     "z": [
+      -140.6,
+      -67.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_flange": {
+     "volume_mm3": 5905.0,
+     "x": [
+      1761.1,
+      1768.7
+     ],
+     "z": [
+      -145.7,
+      -62.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_step": {
+     "volume_mm3": 76033.1,
+     "x": [
+      1793.1,
+      1821.1
+     ],
+     "z": [
+      -133.4,
+      -74.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_seam": {
+     "volume_mm3": 6459.0,
+     "x": [
+      1820.1,
+      1823.1
+     ],
+     "z": [
+      -135.2,
+      -72.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_head": {
+     "volume_mm3": 47782.3,
+     "x": [
+      1823.1,
+      1850.5
+     ],
+     "z": [
+      -133.3,
+      -74.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_barrel": {
+     "volume_mm3": 113088.4,
+     "x": [
+      1643.1,
+      1766.5
+     ],
+     "z": [
+      -102.0,
+      -58.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_window": {
+     "volume_mm3": 3432.2,
+     "x": [
+      1737.8,
+      1767.4
+     ],
+     "z": [
+      -98.9,
+      -61.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_band1": {
+     "volume_mm3": 438.1,
+     "x": [
+      1699.1,
+      1702.1
+     ],
+     "z": [
+      -103.4,
+      -56.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_band2": {
+     "volume_mm3": 599.0,
+     "x": [
+      1725.1,
+      1728.1
+     ],
+     "z": [
+      -103.4,
+      -56.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_flange": {
+     "volume_mm3": 3114.9,
+     "x": [
+      1683.1,
+      1690.7
+     ],
+     "z": [
+      -107.8,
+      -52.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_neck": {
+     "volume_mm3": 33659.1,
+     "x": [
+      1774.8,
+      1846.8
+     ],
+     "z": [
+      -177.6,
+      -150.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_bezel": {
+     "volume_mm3": 7877.4,
+     "x": [
+      1836.8,
+      1850.8
+     ],
+     "z": [
+      -183.0,
+      -145.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_dome": {
+     "volume_mm3": 3786.5,
+     "x": [
+      1846.8,
+      1858.0
+     ],
+     "z": [
+      -177.1,
+      -150.9
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_flange_1": {
+     "volume_mm3": 5221.1,
+     "x": [
+      1796.8,
+      1804.4
+     ],
+     "z": [
+      -188.0,
+      -140.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_flange_2": {
+     "volume_mm3": 9.6,
+     "x": [
+      1802.4,
+      1804.4
+     ],
+     "z": [
+      -156.0,
+      -152.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_band": {
+     "volume_mm3": 377.4,
+     "x": [
+      1814.8,
+      1817.8
+     ],
+     "z": [
+      -179.0,
+      -149.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_base": {
+     "volume_mm3": 70338.1,
+     "x": [
+      -1673.5,
+      -1624.8
+     ],
+     "z": [
+      -114.7,
+      -58.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_band": {
+     "volume_mm3": 530.2,
+     "x": [
+      -1663.7,
+      -1661.3
+     ],
+     "z": [
+      -116.0,
+      -57.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_flange": {
+     "volume_mm3": 3038.3,
+     "x": [
+      -1654.6,
+      -1648.5
+     ],
+     "z": [
+      -120.3,
+      -53.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_step": {
+     "volume_mm3": 38928.9,
+     "x": [
+      -1705.7,
+      -1683.3
+     ],
+     "z": [
+      -110.2,
+      -63.2
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_seam": {
+     "volume_mm3": 4697.3,
+     "x": [
+      -1710.2,
+      -1707.8
+     ],
+     "z": [
+      -111.7,
+      -61.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_head_1": {
+     "volume_mm3": 2954.0,
+     "x": [
+      -1707.8,
+      -1705.7
+     ],
+     "z": [
+      -108.3,
+      -65.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_head_2": {
+     "volume_mm3": 6133.8,
+     "x": [
+      -1720.1,
+      -1710.2
+     ],
+     "z": [
+      -105.8,
+      -67.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_barrel": {
+     "volume_mm3": 56418.7,
+     "x": [
+      -1678.8,
+      -1588.6
+     ],
+     "z": [
+      -85.1,
+      -49.9
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_window": {
+     "volume_mm3": 1757.3,
+     "x": [
+      -1679.5,
+      -1655.9
+     ],
+     "z": [
+      -82.6,
+      -52.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_band1": {
+     "volume_mm3": 266.3,
+     "x": [
+      -1627.3,
+      -1624.9
+     ],
+     "z": [
+      -86.2,
+      -48.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_band2": {
+     "volume_mm3": 306.7,
+     "x": [
+      -1648.1,
+      -1645.7
+     ],
+     "z": [
+      -86.2,
+      -48.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_flange": {
+     "volume_mm3": 1609.9,
+     "x": [
+      -1618.1,
+      -1612.1
+     ],
+     "z": [
+      -89.7,
+      -45.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_neck": {
+     "volume_mm3": 17631.0,
+     "x": [
+      -1705.6,
+      -1651.9
+     ],
+     "z": [
+      -145.6,
+      -123.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_bezel": {
+     "volume_mm3": 3994.4,
+     "x": [
+      -1707.0,
+      -1695.8
+     ],
+     "z": [
+      -149.9,
+      -119.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_dome": {
+     "volume_mm3": 1339.3,
+     "x": [
+      -1712.8,
+      -1705.6
+     ],
+     "z": [
+      -144.7,
+      -124.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_flange": {
+     "volume_mm3": 3163.0,
+     "x": [
+      -1669.8,
+      -1663.8
+     ],
+     "z": [
+      -153.9,
+      -115.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_band": {
+     "volume_mm3": 193.2,
+     "x": [
+      -1680.6,
+      -1678.2
+     ],
+     "z": [
+      -146.7,
+      -122.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    }
+   }
+  },
+  "D3": {
+   "parts": 16,
+   "x_span_mm": 3524.6,
+   "sensors": {
+    "sensor_front_large_blister": {
+     "volume_mm3": 146030.0,
+     "x": [
+      1723.1,
+      1816.3
+     ],
+     "z": [
+      -136.2,
+      -69.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_window": {
+     "volume_mm3": 2782.3,
+     "x": [
+      1791.3,
+      1817.3
+     ],
+     "z": [
+      -127.3,
+      -91.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_blister": {
+     "volume_mm3": 48058.2,
+     "x": [
+      1643.1,
+      1724.1
+     ],
+     "z": [
+      -99.7,
+      -58.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_bezel": {
+     "volume_mm3": 574.4,
+     "x": [
+      1720.2,
+      1725.6
+     ],
+     "z": [
+      -92.2,
+      -67.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_lens": {
+     "volume_mm3": 1418.6,
+     "x": [
+      1724.1,
+      1732.4
+     ],
+     "z": [
+      -89.0,
+      -71.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_blister": {
+     "volume_mm3": 19910.3,
+     "x": [
+      1769.1,
+      1824.8
+     ],
+     "z": [
+      -180.8,
+      -149.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_bezel": {
+     "volume_mm3": 480.7,
+     "x": [
+      1820.8,
+      1826.3
+     ],
+     "z": [
+      -173.8,
+      -154.2
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_lens": {
+     "volume_mm3": 599.1,
+     "x": [
+      1824.8,
+      1831.0
+     ],
+     "z": [
+      -170.8,
+      -157.2
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_blister": {
+     "volume_mm3": 67415.1,
+     "x": [
+      -1692.8,
+      -1625.1
+     ],
+     "z": [
+      -112.9,
+      -58.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_window": {
+     "volume_mm3": 1424.5,
+     "x": [
+      -1693.6,
+      -1672.8
+     ],
+     "z": [
+      -105.4,
+      -76.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_blister": {
+     "volume_mm3": 22337.6,
+     "x": [
+      -1644.9,
+      -1588.6
+     ],
+     "z": [
+      -83.3,
+      -50.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_bezel": {
+     "volume_mm3": 294.1,
+     "x": [
+      -1646.1,
+      -1641.8
+     ],
+     "z": [
+      -77.3,
+      -57.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_lens": {
+     "volume_mm3": 726.3,
+     "x": [
+      -1651.5,
+      -1644.9
+     ],
+     "z": [
+      -74.7,
+      -60.3
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_blister": {
+     "volume_mm3": 9551.7,
+     "x": [
+      -1686.2,
+      -1650.1
+     ],
+     "z": [
+      -147.8,
+      -122.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_bezel": {
+     "volume_mm3": 246.1,
+     "x": [
+      -1687.4,
+      -1683.0
+     ],
+     "z": [
+      -142.6,
+      -126.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_lens": {
+     "volume_mm3": 306.7,
+     "x": [
+      -1691.2,
+      -1686.2
+     ],
+     "z": [
+      -140.1,
+      -129.3
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    }
+   }
+  },
+  "D4": {
+   "parts": 40,
+   "x_span_mm": 3578.8,
+   "sensors": {
+    "sensor_front_large_base": {
+     "volume_mm3": 152173.3,
+     "x": [
+      1723.1,
+      1793.1
+     ],
+     "z": [
+      -139.0,
+      -69.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_band": {
+     "volume_mm3": 832.6,
+     "x": [
+      1777.1,
+      1780.1
+     ],
+     "z": [
+      -140.6,
+      -67.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_flange": {
+     "volume_mm3": 5905.0,
+     "x": [
+      1761.1,
+      1768.7
+     ],
+     "z": [
+      -145.7,
+      -62.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_step": {
+     "volume_mm3": 76033.1,
+     "x": [
+      1793.1,
+      1821.1
+     ],
+     "z": [
+      -133.4,
+      -74.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_seam": {
+     "volume_mm3": 6459.0,
+     "x": [
+      1820.1,
+      1823.1
+     ],
+     "z": [
+      -135.2,
+      -72.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_head": {
+     "volume_mm3": 47782.3,
+     "x": [
+      1823.1,
+      1850.5
+     ],
+     "z": [
+      -133.3,
+      -74.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_large_hood": {
+     "volume_mm3": 12227.9,
+     "x": [
+      1807.1,
+      1837.1
+     ],
+     "z": [
+      -108.1,
+      -73.2
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_barrel": {
+     "volume_mm3": 113088.4,
+     "x": [
+      1643.1,
+      1766.5
+     ],
+     "z": [
+      -102.0,
+      -58.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_window": {
+     "volume_mm3": 3432.2,
+     "x": [
+      1737.8,
+      1767.4
+     ],
+     "z": [
+      -98.9,
+      -61.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_band1": {
+     "volume_mm3": 438.1,
+     "x": [
+      1699.1,
+      1702.1
+     ],
+     "z": [
+      -103.4,
+      -56.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_band2": {
+     "volume_mm3": 599.0,
+     "x": [
+      1725.1,
+      1728.1
+     ],
+     "z": [
+      -103.4,
+      -56.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_flange": {
+     "volume_mm3": 3114.9,
+     "x": [
+      1683.1,
+      1690.7
+     ],
+     "z": [
+      -107.8,
+      -52.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_medium_hood": {
+     "volume_mm3": 8270.0,
+     "x": [
+      1727.1,
+      1761.1
+     ],
+     "z": [
+      -83.0,
+      -56.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_neck": {
+     "volume_mm3": 33659.1,
+     "x": [
+      1774.8,
+      1846.8
+     ],
+     "z": [
+      -177.6,
+      -150.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_bezel": {
+     "volume_mm3": 7877.4,
+     "x": [
+      1836.8,
+      1850.8
+     ],
+     "z": [
+      -183.0,
+      -145.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_dome": {
+     "volume_mm3": 3786.5,
+     "x": [
+      1846.8,
+      1858.0
+     ],
+     "z": [
+      -177.1,
+      -150.9
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_flange_1": {
+     "volume_mm3": 5221.1,
+     "x": [
+      1796.8,
+      1804.4
+     ],
+     "z": [
+      -188.0,
+      -140.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_flange_2": {
+     "volume_mm3": 9.6,
+     "x": [
+      1802.4,
+      1804.4
+     ],
+     "z": [
+      -156.0,
+      -152.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_band": {
+     "volume_mm3": 377.4,
+     "x": [
+      1814.8,
+      1817.8
+     ],
+     "z": [
+      -179.0,
+      -149.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_front_small_hood": {
+     "volume_mm3": 4699.5,
+     "x": [
+      1838.8,
+      1858.8
+     ],
+     "z": [
+      -166.7,
+      -143.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_base": {
+     "volume_mm3": 70338.1,
+     "x": [
+      -1673.5,
+      -1624.8
+     ],
+     "z": [
+      -114.7,
+      -58.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_band": {
+     "volume_mm3": 530.2,
+     "x": [
+      -1663.7,
+      -1661.3
+     ],
+     "z": [
+      -116.0,
+      -57.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_flange": {
+     "volume_mm3": 3038.3,
+     "x": [
+      -1654.6,
+      -1648.5
+     ],
+     "z": [
+      -120.3,
+      -53.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_step": {
+     "volume_mm3": 38928.9,
+     "x": [
+      -1705.7,
+      -1683.3
+     ],
+     "z": [
+      -110.2,
+      -63.2
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_seam": {
+     "volume_mm3": 4697.3,
+     "x": [
+      -1710.2,
+      -1707.8
+     ],
+     "z": [
+      -111.7,
+      -61.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_head_1": {
+     "volume_mm3": 2954.0,
+     "x": [
+      -1707.8,
+      -1705.7
+     ],
+     "z": [
+      -108.3,
+      -65.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_head_2": {
+     "volume_mm3": 6133.8,
+     "x": [
+      -1720.1,
+      -1710.2
+     ],
+     "z": [
+      -105.8,
+      -67.6
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_large_hood": {
+     "volume_mm3": 6366.5,
+     "x": [
+      -1709.3,
+      -1685.3
+     ],
+     "z": [
+      -90.0,
+      -62.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_barrel": {
+     "volume_mm3": 56418.7,
+     "x": [
+      -1678.8,
+      -1588.6
+     ],
+     "z": [
+      -85.1,
+      -49.9
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_window": {
+     "volume_mm3": 1757.3,
+     "x": [
+      -1679.5,
+      -1655.9
+     ],
+     "z": [
+      -82.6,
+      -52.4
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_band1": {
+     "volume_mm3": 266.3,
+     "x": [
+      -1627.3,
+      -1624.9
+     ],
+     "z": [
+      -86.2,
+      -48.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_band2": {
+     "volume_mm3": 306.7,
+     "x": [
+      -1648.1,
+      -1645.7
+     ],
+     "z": [
+      -86.2,
+      -48.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_flange": {
+     "volume_mm3": 1609.9,
+     "x": [
+      -1618.1,
+      -1612.1
+     ],
+     "z": [
+      -89.7,
+      -45.1
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_medium_hood": {
+     "volume_mm3": 4234.2,
+     "x": [
+      -1674.5,
+      -1647.3
+     ],
+     "z": [
+      -69.9,
+      -48.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_neck": {
+     "volume_mm3": 17631.0,
+     "x": [
+      -1705.6,
+      -1651.9
+     ],
+     "z": [
+      -145.6,
+      -123.8
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_bezel": {
+     "volume_mm3": 3994.4,
+     "x": [
+      -1707.0,
+      -1695.8
+     ],
+     "z": [
+      -149.9,
+      -119.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_dome": {
+     "volume_mm3": 1339.3,
+     "x": [
+      -1712.8,
+      -1705.6
+     ],
+     "z": [
+      -144.7,
+      -124.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_flange": {
+     "volume_mm3": 3163.0,
+     "x": [
+      -1669.8,
+      -1663.8
+     ],
+     "z": [
+      -153.9,
+      -115.5
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_band": {
+     "volume_mm3": 193.2,
+     "x": [
+      -1680.6,
+      -1678.2
+     ],
+     "z": [
+      -146.7,
+      -122.7
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    },
+    "sensor_rear_small_hood": {
+     "volume_mm3": 2406.1,
+     "x": [
+      -1713.4,
+      -1697.4
+     ],
+     "z": [
+      -136.9,
+      -118.0
+     ],
+     "overlap_with_shell_mm3": 0.0,
+     "gap_to_shell_mm": 0.0
+    }
+   }
+  }
+ }
+}

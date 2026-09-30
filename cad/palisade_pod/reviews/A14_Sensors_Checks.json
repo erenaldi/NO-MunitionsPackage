@@ -1,0 +1,188 @@
+{
+ "ok": true,
+ "shells_identical_to_A11": true,
+ "additive_only": true,
+ "front_parts": 20,
+ "rear_parts": 2,
+ "x_span_mm": 3528.8,
+ "rear_extent_x_mm": -1670.0,
+ "user_visual_approval": false,
+ "sensors": {
+  "sensor_front_large_band": {
+   "volume_mm3": 832.6,
+   "x": [
+    1777.1,
+    1780.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_large_base": {
+   "volume_mm3": 152173.3,
+   "x": [
+    1723.1,
+    1793.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_large_flange": {
+   "volume_mm3": 5905.0,
+   "x": [
+    1761.1,
+    1768.7
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_large_head": {
+   "volume_mm3": 47782.3,
+   "x": [
+    1823.1,
+    1850.5
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_large_hood": {
+   "volume_mm3": 12227.9,
+   "x": [
+    1807.1,
+    1837.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_large_seam": {
+   "volume_mm3": 6459.0,
+   "x": [
+    1820.1,
+    1823.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_large_step": {
+   "volume_mm3": 76033.1,
+   "x": [
+    1793.1,
+    1821.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_medium_band1": {
+   "volume_mm3": 438.1,
+   "x": [
+    1699.1,
+    1702.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_medium_band2": {
+   "volume_mm3": 599.0,
+   "x": [
+    1725.1,
+    1728.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_medium_barrel": {
+   "volume_mm3": 113088.4,
+   "x": [
+    1643.1,
+    1766.5
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_medium_flange": {
+   "volume_mm3": 3114.9,
+   "x": [
+    1683.1,
+    1690.7
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_medium_hood": {
+   "volume_mm3": 8270.0,
+   "x": [
+    1727.1,
+    1761.1
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_medium_window": {
+   "volume_mm3": 3432.2,
+   "x": [
+    1737.8,
+    1767.4
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_small_band": {
+   "volume_mm3": 377.4,
+   "x": [
+    1814.8,
+    1817.8
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_small_bezel": {
+   "volume_mm3": 7877.4,
+   "x": [
+    1836.8,
+    1850.8
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_small_dome": {
+   "volume_mm3": 3786.5,
+   "x": [
+    1846.8,
+    1858.0
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_small_flange_1": {
+   "volume_mm3": 5221.1,
+   "x": [
+    1796.8,
+    1804.4
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_small_flange_2": {
+   "volume_mm3": 9.6,
+   "x": [
+    1802.4,
+    1804.4
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_small_hood": {
+   "volume_mm3": 4699.5,
+   "x": [
+    1838.8,
+    1858.8
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_front_small_neck": {
+   "volume_mm3": 33659.1,
+   "x": [
+    1774.8,
+    1846.8
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_rear_window_frame": {
+   "volume_mm3": 13359.0,
+   "x": [
+    -1667.3,
+    -1651.3
+   ],
+   "gap_mm": 0.0
+  },
+  "sensor_rear_window_lens": {
+   "volume_mm3": 3117.7,
+   "x": [
+    -1670.0,
+    -1659.0
+   ],
+   "gap_mm": 0.0
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "jobs": [
+  {
+   "input": "STEP/A14_Crop_rear.step",
+   "mode": "view",
+   "display": {
+    "mode": "solid"
+   },
+   "outputs": [
+    {
+     "path": "reviews/A14_rear_a.png",
+     "camera": {
+      "direction": [
+       -1,
+       -1,
+       0.45
+      ]
+     }
+    },
+    {
+     "path": "reviews/A14_rear_b.png",
+     "camera": {
+      "direction": [
+       -1,
+       1,
+       -0.2
+      ]
+     }
+    },
+    {
+     "path": "reviews/A14_rear_face.png",
+     "camera": "left"
+    },
+    {
+     "path": "reviews/A14_rear_side.png",
+     "camera": "front"
+    }
+   ],
+   "output": {
+    "sizeProfile": "assembly",
+    "padding": 0.08
+   }
+  }
+ ]
+}

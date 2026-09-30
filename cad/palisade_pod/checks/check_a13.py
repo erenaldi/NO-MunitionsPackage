@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     a11 = saved("A11_TealNose_Bare.step")
     report = {}
-    for n in (1, 2, 3, 4, 5, 6):
-        study = saved(f"A12_Sensors_C{n}.step")
+    for n in (1, 2, 3, 4):
+        study = saved(f"A13_Sensors_D{n}.step")
         base = {k: v for k, v in study.items() if not k.startswith("sensor_")}
         sensors = {k: v for k, v in study.items() if k.startswith("sensor_")}
         assert set(base) == set(a11) and sensors, n
@@ -39,12 +39,12 @@ def main():
                           "gap_to_shell_mm": round(near, 4)}
         allx = [limits(p)[0] for p in study.values()]
         env = [round(max(v[1] for v in allx)-min(v[0] for v in allx), 1)]
-        report[f"C{n}"] = {"parts": len(sensors), "x_span_mm": env[0],
+        report[f"D{n}"] = {"parts": len(sensors), "x_span_mm": env[0],
                            "sensors": info}
     out = {"ok": True, "shells_identical_to_A11": True,
            "additive_only": True, "user_visual_approval": False,
            "concepts": report}
-    (ROOT/"reviews"/"A12_Sensors_Checks.json").write_text(
+    (ROOT/"reviews"/"A13_Sensors_Checks.json").write_text(
         json.dumps(out, indent=1)+"\n", encoding="utf-8")
     print(json.dumps({k: (v["parts"], v["x_span_mm"]) for k, v in report.items()}), "ok")
 
