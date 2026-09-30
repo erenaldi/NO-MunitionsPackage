@@ -100,11 +100,50 @@ for label, part in ref.items():
             (part.center() - parts[label].center()).length > 1e-6:
         fail(f"{label}: retained R18 part changed")
 
-# 4. Hosts: only material removed; removal matches metadata.
+# 4. Hosts: only material removed, except the declared inlet re-cut on the
+# main host (2026-09-29); removal matches metadata.
+INLET_CLOCKS = (45.0, 135.0, 225.0, 315.0)
+INLET_X = (340.0, 740.0)
+
+
+def precise_volume(shape):
+    """Independent copy: volume with tight Gauss integration. Default-precision volumes of the
+    thin inlet gain solids err by ~2e-4 relative (2026-09-29: 10278.23 vs
+    10276.68 mm3 for identical solids); at eps 1e-9 they agree exactly."""
+    from OCP.BRepGProp import BRepGProp
+    from OCP.GProp import GProp_GProps
+
+    total = 0.0
+    for solid in shape.solids():
+        props = GProp_GProps()
+        BRepGProp.VolumeProperties_s(solid.wrapped, props, 1e-9, True, True)
+        total += props.Mass()
+    return total
+
+
+def in_inlet_zone(solid):
+    box = solid.bounding_box()
+    if box.min.X < INLET_X[0] - 1e-3 or box.max.X > INLET_X[1] + 1e-3:
+        return False
+    c = solid.center()
+    clock = math.degrees(math.atan2(c.Y, c.Z)) % 360.0
+    return any(abs((clock - k + 180.0) % 360.0 - 180.0) < 20.0 for k in INLET_CLOCKS) and         math.hypot(c.Y, c.Z) > 95.0
+
+
 for host in HOSTS:
     gain = parts[host] - ref[host]
-    if gain and gain.volume > 1e-3:
-        fail(f"{host}: gained {gain.volume:.4f} mm3")
+    gained = precise_volume(gain) if gain else 0.0
+    if host == HOSTS[0]:
+        declared = meta.get("intake_walls", {}).get("host_gain_mm3")
+        if declared is None:
+            fail(f"{host}: inlet re-cut metadata missing")
+        elif abs(gained - declared) > max(5e-3, 1e-6 * declared):
+            fail(f"{host}: gained {gained:.4f} mm3 != declared inlet gain {declared:.4f}")
+        stray = [g for g in (gain.solids() if gain else []) if not in_inlet_zone(g)]
+        if stray:
+            fail(f"{host}: {len(stray)} gained solids outside the inlet zones")
+    elif gained > 1e-3:
+        fail(f"{host}: gained {gained:.4f} mm3")
     removed = ref[host].volume - parts[host].volume
     # Volume integration on the 85e6 mm3 main body is only good to ~4e-9
     # relative: the in-memory and saved hosts had identical faces (2284) and an
@@ -113,6 +152,65 @@ for host in HOSTS:
     tolerance = max(5e-3, 1e-8 * ref[host].volume)
     if abs(removed - meta["host_volume_removed_mm3"][host]) > tolerance:
         fail(f"{host}: removed {removed:.4f} != metadata {meta['host_volume_removed_mm3'][host]:.4f}")
+
+# 4b. Inlet side walls: constant thickness, thinner than the roof wall.
+# Independent spec of the inherited outer housing: side face from the buried
+# foot (44, 42.43 + sqrt(70^2 - 44^2) - 0.4) to the roof edge (16, roof(x)),
+# roof 147.5 at X=210 falling linearly to 145 at X=715 (local frame of each
+# inlet, rotated by -clock about X). Probes march inward along the normal.
+SIDE_WALL = 3.0
+WALL_TOL = 0.05
+FOOT = (44.0, 30.0 * math.sqrt(2.0) + math.sqrt(70.0 ** 2 - 44.0 ** 2) - 0.4)
+
+
+def _outer_roof(x):
+    return 147.5 - 2.5 * (x - 210.0) / 505.0
+
+
+def _world(x, y, z, clock):
+    a = math.radians(-clock)
+    return bd.Vector(x, y * math.cos(a) - z * math.sin(a), y * math.sin(a) + z * math.cos(a))
+
+
+def _solid_run(shape, points, step):
+    inside, start = False, None
+    for i, pt in enumerate(points):
+        now = shape.is_inside(pt)
+        if now and not inside:
+            start = i
+        if inside and not now:
+            return (i - start) * step
+        inside = now
+    return None
+
+
+inlet_report = {}
+for x in (600.0, 625.0):
+    crop = parts[HOSTS[0]] & bd.Box(12.0, 400.0, 400.0).translate((x, 0.0, 0.0))
+    top = (16.0, _outer_roof(x))
+    dy, dz = top[0] - FOOT[0], top[1] - FOOT[1]
+    length = math.hypot(dy, dz)
+    ny, nz = dz / length, -dy / length          # outward normal (+y, +z)
+    for clock in INLET_CLOCKS:
+        for side in (1.0, -1.0):
+            for frac in (0.3, 0.5, 0.7):
+                y = side * (FOOT[0] + frac * dy)
+                z = FOOT[1] + frac * dz
+                run = _solid_run(crop, [_world(x, y - side * ny * d, z - nz * d, clock)
+                                        for d in (-1.0 + i * 0.01 for i in range(900))], 0.01)
+                key = f"x{x:g}_c{clock:g}_{'+' if side > 0 else '-'}_{frac}"
+                inlet_report[key] = run
+                if run is None or abs(run - SIDE_WALL) > WALL_TOL:
+                    fail(f"inlet side wall {key}: {run} mm, expected {SIDE_WALL}")
+
+# The swept mouth removes the roof forward of X~605; the roof is probed at 590.
+roof_crop = parts[HOSTS[0]] & bd.Box(12.0, 400.0, 400.0).translate((590.0, 0.0, 0.0))
+for clock in INLET_CLOCKS:
+    roof = _solid_run(roof_crop, [_world(590.0, 0.0, _outer_roof(590.0) + 1.0 - i * 0.01, clock)
+                                  for i in range(800)], 0.01)
+    inlet_report[f"x590_c{clock:g}_roof"] = roof
+    if roof is None or roof <= SIDE_WALL + WALL_TOL:
+        fail(f"inlet roof wall c{clock:g}: {roof} mm, not thicker than the side walls")
 
 # 5. Hardware: no overlap with any part; >= clearance from R18 detail parts.
 details = [p for label, p in ref.items() if label not in HOSTS and label not in replaced]
@@ -270,6 +368,7 @@ for label, occ in by_label18.items():
 
 report = {
     "status": "PASS" if not failures else "FAIL",
+    "inlet_walls_mm": inlet_report,
     "failures": failures[:60],
     "failure_count": len(failures),
     "document_hash": scene.document_hash,

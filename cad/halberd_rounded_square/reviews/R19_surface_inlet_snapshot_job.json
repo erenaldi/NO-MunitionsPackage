@@ -1,0 +1,8 @@
+[
+  {"input": "STEP/halberd_r19_surface_inlet_focus.step", "mode": "view",
+   "outputs": [
+     {"path": "reviews/R19_surface_inlet_mouth_front.png", "camera": {"direction": [1.0, 0.35, 0.45]}},
+     {"path": "reviews/R19_surface_inlet_mouth_oblique.png", "camera": {"direction": [0.8, -0.2, 1.0]}}],
+   "output": {"viewLabels": false, "padding": 0.04, "sizeProfile": "diagnostic"},
+   "quality": {"tessellation": {"chordTolerance": 5e-05, "angleTolerance": 0.05}}}
+]

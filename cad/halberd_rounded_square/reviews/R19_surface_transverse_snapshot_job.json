@@ -1,0 +1,10 @@
+[
+  {"input": "STEP/halberd_r19_surface_mid_focus.step", "mode": "view",
+   "outputs": [{"path": "reviews/R19_surface_Z09_transverse.png", "camera": {"direction": [0.35, -1.0, 0.3]}}],
+   "output": {"viewLabels": false, "padding": 0.04, "sizeProfile": "diagnostic"},
+   "quality": {"tessellation": {"chordTolerance": 5e-05, "angleTolerance": 0.05}}},
+  {"input": "STEP/halberd_r19_surface.step", "mode": "view",
+   "outputs": [{"path": "reviews/R19_surface_whole_minus_y.png", "camera": {"direction": [0.0, -1.0, 0.12]}}],
+   "output": {"viewLabels": false, "padding": 0.04, "sizeProfile": "diagnostic"},
+   "quality": {"tessellation": {"chordTolerance": 5e-05, "angleTolerance": 0.05}}}
+]

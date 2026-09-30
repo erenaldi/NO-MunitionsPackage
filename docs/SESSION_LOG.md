@@ -2,6 +2,28 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-29 — Halberd R19: one transverse panel per face + even inlet walls (user: "Looks good to me")
+
+- `src/halberd_r19_surface.py`:
+  - `TRANSVERSE` (P03 +Z, P02 +Y, Z10 -Z, B02 -Y), seeded pick among
+    conflicting adjacent pairs, pinned to their face, planner order
+    preserved;
+  - Z09/N08 trial reverted;
+  - build step 0 calls `even_intake_walls`.
+- New `src/halberd_r19_intake_walls.py`: fill the old channel front, then
+  re-cut with 3.0 mm side walls. Cutting only the new band no-op'd silently
+  (coincident roof/floor faces), so the fill comes first.
+- `checks/check_halberd_r19_surface.py`:
+  - inlet-zone gain allowance, equal to the declared gain;
+  - independent wall probes (8 walls x 2 X x 3 heights = 3.01 mm, roof 3.62);
+  - precise volume integration: default precision was off by 2.8 mm3 on
+    identical solids, while the containment Boolean was empty.
+- New review crop `src/halberd_r19_surface_inlet_focus.py` and job
+  `reviews/R19_surface_inlet_snapshot_job.json`.
+- Verified: build OK; checker PASS (335 leaves, 250 heads, 58 panels, 13
+  raised; doc hash 378e3c89...).
+- Nothing committed.
+
 ## 2026-09-29 — Phantom P04 flush-RF layout study built (awaiting user placement decision)
 
 - Re-verified the B2H handoff on disk (STEP hashes, `engine_bay_b2h_integrated_checks.json` 0 failures). Built a NON-CUTTING annotated layout: `cad/phantom_visual_reboot/src/rf_layout_p04.py` -> `STEP/S_RF_Layout_P04_Study.step` (66 unchanged baseline leaves + 0.6 mm proud colour patches). Teal = recommended RF: A nose cheeks (X 815..960, Z -12..30, warped nose facet), B flank pair (X -650..-350, Z +-28), C belly pair (X 130..420, |Y| 22..62). Amber = optional D dorsal-aft (X -1030..-830, Y +-40). Red = keep-outs: top pylon strip (X -770..686, Y +-67, from recovered pylon bounds), aft fin band X -1335..-1075 on all four faces, belly ramp/door X -953..53, wing-slot flank strips X -455..555 Z 62..86.

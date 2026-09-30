@@ -139,6 +139,34 @@ tables only define the designs.
   quiet middle).
 Fixed and exempt: 4 joint rings + seams, the raised F05 pair, the R18 hatches.
 
+## Transverse panels and even inlet walls (2026-09-29, chat) — approved
+
+User: panels nearly all run along the body; turn one rectangular panel per
+cardinal face to run around it, picked at random where two similar panels sit
+next to each other and conflict. Also make the inlet side walls a constant
+thickness, slightly thinner than the top (roof) wall. User: "Looks good to me."
+- Transverse panels, `TRANSVERSE` in `src/halberd_r19_surface.py`. Candidates
+  were adjacent pairs with dissimilarity < 0.35 and gap < 300 mm (+Z has no
+  such pair, so both its panels were candidates). `random.Random(19)` picked:
+  - +Z P03, 16 x 44 mm;
+  - +Y P02, 20 x 50;
+  - -Z Z10, 14 x 36;
+  - -Y B02, 18 x 50.
+  Each keeps its station, is pinned to its face and has two screws at the
+  circumferential ends. Planner order uses the original lengths, so no other
+  design moved. An earlier Z09/N08 trial was reverted.
+- Inlet walls (`src/halberd_r19_intake_walls.py`). The inherited side walls
+  measured 1.4 / 2.2 / 3.1 mm (floor to roof).
+  - All four inlets are re-cut in R19: the old channel is filled over X
+    350..mouth, then a channel whose side face is offset 3.0 mm inside the
+    outer side face is cut. The roof and floor are unchanged.
+  - Measured side walls: 3.01 mm at every probe (8 walls, X 600/625, 3
+    heights). Roof wall: 3.62 mm.
+  - Historical intake sources and older STEPs are untouched.
+  - The checker allows host gain only in the inlet zones, equal to the
+    declared value (precise integration).
+- Checker PASS: 335 leaves, 58 panels, 13 raised, 250 heads.
+
 ## Gate
 
 Primary inspects the prototype packet; the user approves or corrects panel

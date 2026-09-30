@@ -27,6 +27,7 @@ from surface_detail import checked_cut, clock_frame, skin_point  # noqa: E402
 from halberd_r18_access_build import materials_for_labels  # noqa: E402
 from halberd_r18_access_shapes import METAL, load_saved_parts  # noqa: E402
 import halberd_r19_surface_proto as proto  # noqa: E402
+from halberd_r19_intake_walls import even_intake_walls, precise_volume  # noqa: E402
 from halberd_r17_interface_shapes import _slotted_head_local  # noqa: E402
 from halberd_r18_access_shapes import load_manifest  # noqa: E402
 from halberd_r18_access import ACCESS_LABELS  # noqa: E402
@@ -81,13 +82,6 @@ def hinge_row(length, width, pitch=12.0):
     return tuple((-span / 2.0 + i * pitch, edge) for i in range(count))
 
 
-def cross_rows(length, width, pitch=14.0):
-    """Screw rows across both axial ends (a transverse cover strapped at the ends)."""
-    count = int((width - 10.0) // pitch) + 1
-    span = (count - 1) * pitch
-    end = length / 2.0 - 4.0
-    return tuple((dx, -span / 2.0 + i * pitch) for dx in (-end, end) for i in range(count))
-
 
 # Composition (2026-09-29 user feedback: mid-section too dense, not varied):
 # a moderately dense forward cluster (X 250..1085) and aft cluster
@@ -100,8 +94,7 @@ def cross_rows(length, width, pitch=14.0):
 MAIN_RECT = (
     # +Z face (raised F05 mirror strip spans X -110..390 at tangent -22..-6)
     ("Z01", 0.0, 600.0, 90.0, 22.0, -22.0, four_corner(90.0, 22.0)),
-    # Z09/N08: wide transverse covers (2026-09-29 user: not every panel axial)
-    ("Z09", 0.0, -880.0, 42.0, 50.0, 0.0, cross_rows(42.0, 50.0)),
+    ("Z09", 0.0, -880.0, 70.0, 18.0, 22.0, two_end(70.0)),
     ("Z10", 0.0, -1030.0, 36.0, 14.0, -20.0, two_end(36.0)),
     # +Y face (F04A 350-530, F04B -855..-725)
     ("Y01", 90.0, 610.0, 50.0, 16.0, 22.0, two_end(50.0)),
@@ -113,7 +106,7 @@ MAIN_RECT = (
     # -Y face (F03A X=572-608)
     ("N01", 270.0, 650.0, 44.0, 16.0, 24.0, two_end(44.0)),
     ("N02", 270.0, 450.0, 100.0, 20.0, -18.0, hinge_row(100.0, 20.0)),
-    ("N08", 270.0, -700.0, 34.0, 48.0, 0.0, four_corner(34.0, 48.0)),
+    ("N08", 270.0, -700.0, 50.0, 16.0, -26.0, two_end(50.0)),
 )
 MAIN_ROUND = (
     ("Y02", 90.0, 270.0, 20.0, -24.0, bolt3(20.0)),
@@ -247,6 +240,25 @@ FWD_BLOCKED = {0.0: ((820.0, 980.0),)}           # F02
 BOOSTER_BLOCKED = {0.0: ((-1502.0, -1398.0),), 270.0: ((-1406.0, -1374.0),)}
 
 
+# Transverse panels (2026-09-29 user: one rectangular panel per cardinal face
+# turned to run around the body, chosen where two similar panels sit next to
+# each other). Candidates per face were the members of adjacent pairs with
+# dissimilarity < 0.35 and gap < 300 mm in the even-distribution plan; +Z has
+# no such pair, so both of its panels were candidates. random.Random(19)
+# picked one per face. Each keeps its station; its old width becomes the
+# axial length, its old length (capped to the 50 mm usable flat) the width
+# around the body, with the two end screws moved to the circumferential ends.
+TRANSVERSE_CAP = 50.0
+TRANSVERSE = {"P03": 0.0, "P02": 90.0, "Z10": 180.0, "B02": 270.0}  # id: face clock
+
+
+def _turned(item):
+    pid, cat, kind, length, width, screws, slots = item
+    across = min(length, TRANSVERSE_CAP)
+    e = across / 2.0 - 7.0
+    return (pid, cat, kind, width, across, ((0.0, -e), (0.0, e)), slots)
+
+
 def _design_pool():
     """Every movable design: (id, category, kind, length, width, screws, slots)."""
     pool = []
@@ -276,13 +288,19 @@ def _design_pool():
     for r in LOUVRES:
         pool.append((r[0], "planar" if r[1] == "main" else "booster", "louvre",
                      r[4], r[5], r[8], r[7]))
-    return pool
+    # Planner order keeps each turned panel's original length so no other
+    # design moves from its approved station.
+    ORDER_LENGTH.update({p[0]: p[3] for p in pool if p[0] in TRANSVERSE})
+    return [_turned(p) if p[0] in TRANSVERSE else p for p in pool]
+
+
+ORDER_LENGTH = {}
 
 
 def _interleave(items):
     """Alternate kinds (and sizes within a kind) so neighbours differ."""
     by_kind = {}
-    for item in sorted(items, key=lambda i: (-i[3], i[0])):
+    for item in sorted(items, key=lambda i: (-ORDER_LENGTH.get(i[0], i[3]), i[0])):
         by_kind.setdefault(item[2], []).append(item)
     for kind, queue in by_kind.items():   # alternate large/small within a kind
         big, small = queue[:(len(queue) + 1) // 2], queue[(len(queue) + 1) // 2:][::-1]
@@ -330,6 +348,8 @@ def plan_layout():
     def place(item, stage, x, lanes, tangent_for, blocked, zones=None):
         pid, cat, kind, length, width, screws, slots = item
         half = length / 2.0
+        if pid in TRANSVERSE:   # a turned panel stays on its chosen face
+            lanes = [lane for lane in lanes if lane == TRANSVERSE[pid]]
         if zones:   # clamp the station into the nearest zone the part fits
             spans = [(a + half + END_MARGIN, b - half - END_MARGIN) for a, b in zones
                      if b - a >= length + 2.0 * END_MARGIN]
@@ -692,6 +712,14 @@ def build_r19_surface():
             "rings": {}, "panels": {}, "seams": {}}
     new_heads = []
     before = {MAIN_HOST: main.volume, BOOSTER_HOST: booster.volume}
+
+    # 0. Even inlet side walls (2026-09-29 user): re-cut the four inlet
+    # channels before any other Boolean on the main host.
+    original = main
+    main, meta["intake_walls"] = even_intake_walls(main)
+    gain, loss = main - original, original - main
+    meta["intake_walls"]["host_gain_mm3"] = precise_volume(gain) if gain else 0.0
+    meta["intake_walls"]["host_loss_mm3"] = precise_volume(loss) if loss else 0.0
 
     # 1. Joint rings first: slab rejoins must precede panel Booleans on a host.
     nose_seats, nose_heads = proto._ring_fasteners(saved["main_joint_fastener_1"])
