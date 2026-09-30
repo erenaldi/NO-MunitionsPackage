@@ -2,8 +2,8 @@
 id: "022"
 title: Select Ballista and Phantom external pylon concepts in measured context
 type: feature
-status: blocked
-blocked-by: ["020"]
+status: todo
+blocked-by: []
 ---
 
 ## Slice

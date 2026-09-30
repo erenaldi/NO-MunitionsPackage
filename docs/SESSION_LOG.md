@@ -2,6 +2,15 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-30 — issues 021/022 unblocked; pylon concept briefs written (cloud session, no CAD)
+
+- Cloud (Linux) session; no dotnet, CAD tooling, game or Windows paths. Synced to `origin/main` at `3d9b3da` (issue 020 complete in `f68417a`); the session branch `claude/sleepy-cannon-hqajl7` was fast-forwarded to it and pushed.
+- Changed: `issues/021-*.md` and `issues/022-*.md` `status: blocked` -> `todo`, `blocked-by: []` (020 is `done` on disk). New `docs/PYLON_CONCEPT_BRIEFS.md` (common three-architecture contract, measured donor stations from `docs/ISSUE_020_FINDINGS.md`, per-weapon fixed constraints, evidence labels, deferred-variant panel, unresolved evidence).
+- Sources read on disk: plan, issues 017/020-022, `docs/ISSUE_020_FINDINGS.md`, `docs/BALLISTA_UNITY_DELIVERY.md`, `docs/HALBERD_UNITY_DELIVERY.md`, `cad/phantom_visual_reboot/ENGINE_BAY_B2H_CONTRACT.md` and `DONOR_RACK_FINDINGS.md`, `MUNITIONS.md`, `cad/halberd/generate_halberd_detailed.py` constants.
+- Not verified: no CAD, render, build or dump was run; constants are quoted from docs/source and must be re-read against the selected revisions. Known discrepancy left open: Halberd lug stations differ between `generate_halberd_detailed.py` (-75/+410 mm) and `halberd_four_intake_concepts.py` (0/480 mm); the current R17-R19 values were not located.
+- Boundary: nothing approved; no CAD, registration, availability or Unity change.
+- Next: run Kris then Halberd CAD packets (021), Ballista then Phantom (022), each with primary visual review and user selection; confirm current Halberd shoe stations first.
+
 ## 2026-09-29 — Phantom P04 flush-RF layout study built (awaiting user placement decision)
 
 - Re-verified the B2H handoff on disk (STEP hashes, `engine_bay_b2h_integrated_checks.json` 0 failures). Built a NON-CUTTING annotated layout: `cad/phantom_visual_reboot/src/rf_layout_p04.py` -> `STEP/S_RF_Layout_P04_Study.step` (66 unchanged baseline leaves + 0.6 mm proud colour patches). Teal = recommended RF: A nose cheeks (X 815..960, Z -12..30, warped nose facet), B flank pair (X -650..-350, Z +-28), C belly pair (X 130..420, |Y| 22..62). Amber = optional D dorsal-aft (X -1030..-830, Y +-40). Red = keep-outs: top pylon strip (X -770..686, Y +-67, from recovered pylon bounds), aft fin band X -1335..-1075 on all four faces, belly ramp/door X -953..53, wing-slot flank strips X -455..555 Z 62..86.
