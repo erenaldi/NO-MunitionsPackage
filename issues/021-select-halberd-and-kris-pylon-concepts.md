@@ -51,3 +51,8 @@ later weapon slices.
   checks need not claim production wall thickness or structural load capacity.
 - Measure every shown local missile/pylon gap used as an acceptance claim.
 - Direct visual review is mandatory and cannot be replaced by text-only findings.
+
+## Review notes (2026-09-30)
+
+- **Halberd attachment:** the current R17-R19 model has no lugs (`cad/halberd_rounded_square/R18_REAL_MISSILE_DETAIL_SURVEY.md`); older -75/+410 mm and 0/480 mm values are constants of earlier models, not game measurements. Do not cite lug stations as measured; take attachment stations from the pylon design and settle the carriage face (+Z conflicts with F02/F10) with the user. See `docs/PYLON_CONCEPT_BRIEFS.md`.
+- **Halberd length:** record both 3370 mm (plan, `plans/2026-09-22-halberd-rounded-square-reboot.md`) and 3367 mm / 3.367 m (CAD/Unity, `docs/GEOMETRY_PIPELINE.md`) in the packet.

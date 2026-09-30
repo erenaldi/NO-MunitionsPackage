@@ -2,6 +2,12 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-30 (later) — Halberd lug correction recorded in briefs and issues
+
+- Local review found my earlier brief wrongly treated Halberd lug stations as usable. Re-verified on disk: `cad/halberd_rounded_square/R18_REAL_MISSILE_DETAIL_SURVEY.md:33,49-52` lists lugs "Missing" from the current model (conflict with F02/F10 on +Z; lugs appearance-only); `MOUNT_LUG_STATIONS` -75/+410 mm is `cad/halberd/generate_halberd_detailed.py:51`; `MOUNT_STATIONS` 0/480 mm is `cad/halberd/halberd_four_intake_concepts.py:20` (fixed 70x30x34 pads at z=85 and 62x25x10 mount pads at z=105 of the older four-intake study). Neither is a game measurement or applies to R17-R19.
+- Changed: `docs/PYLON_CONCEPT_BRIEFS.md` (Halberd attachment paragraph, direction B wording, unresolved list); review notes appended to issues 021 (lug + both Halberd lengths) and 022 (Phantom 9.574 mm lowering, `agm1_reference_fit.json` not re-run). Docs only; nothing approved.
+- Open decision for the user: carriage face for Halberd (+Z vs F02/F10) or purely visual attachment.
+
 ## 2026-09-30 — issues 021/022 unblocked; pylon concept briefs written (cloud session, no CAD)
 
 - Cloud (Linux) session; no dotnet, CAD tooling, game or Windows paths. Synced to `origin/main` at `3d9b3da` (issue 020 complete in `f68417a`); the session branch `claude/sleepy-cannon-hqajl7` was fast-forwarded to it and pushed.

@@ -37,13 +37,13 @@ Representative-context rule: use these stations as *review context*, not shipped
 
 **Fixed:** length 3370 mm (CAD contract 3.367 m; the plan quotes 3370, use the approved revision's value and record both); rounded-square body about 200 mm (BODY_RADIUS 100.5 mm in the detailed model); stage seam and FX datums; open intake language; dorsal mounting corridor kept clear; booster-separation path; intake clearance. Unity mounted display is `pylon/aam4`; the donor mount's missile node sits at (0, -0.204, 0.187) under a pylon at (0, -0.083, 0), so any custom rack keeps that mounted placement until contact is measured (`docs/HALBERD_UNITY_DELIVERY.md`).
 
-**Shoe/rail evidence to re-read from the selected revision before drawing:** the detailed model has a 920 mm dorsal launch rail (10 mm wide, 3.5 mm tall) and two suspension lugs (44 x 18 x 8 mm) at stations X = -75 and +410 mm; the four-intake study used stations 0 and 480 mm. The selected rounded-square revision (R17 to R19, with R18/R19 in progress) may differ. Confirm the current stations, do not carry either set forward unchecked.
+**Attachment evidence (corrected 2026-09-30):** the current R17-R19 rounded-square model has **no lugs** (`cad/halberd_rounded_square/R18_REAL_MISSILE_DETAIL_SURVEY.md` marks hardpoint/lug studs "Missing", conflicting with the +Z F02/F10 features), and the survey notes lugs would be appearance-only because the game carries the missile on its own mount. The older values are model constants, not game measurements: -75/+410 mm (`MOUNT_LUG_STATIONS`, `cad/halberd/generate_halberd_detailed.py:51`, the Unity-delivery model) and 0/480 mm (`MOUNT_STATIONS`, `cad/halberd/halberd_four_intake_concepts.py:20`, fixed pads of the older four-intake study; other `cad/halberd/` files reuse it, not opened). Neither applies to the current model. Packets must not cite lug stations as measured: take pylon attachment stations from the pylon design, and decide with the user whether a carriage face is +Z (which conflicts with F02/F10) or attachment stays purely visual. Game evidence: the vanilla `AAM4_single` pylon spans z -1.09 to +0.99 m with the missile node at z +0.187 m, which shows where the vanilla pylon sits, not a lug station.
 
 **Starting architecture (plan):** long mechanism beam with fore/aft suspension housings, i.e. direction B is the recommended start but must still be compared with A and C.
 
 **Halberd-specific points per direction:**
 - A: rail must stay within the dorsal corridor and not shadow the upper intakes; taper toward the aft lug so the stage joint band stays visible.
-- B: the beam spans both lug stations; housings sit ahead of and behind the stage joint; open gap under the beam clears the dorsal conduit and umbilical run.
+- B: the beam carries fore/aft ejector housings (stations set by the pylon design) ahead of and behind the stage joint; open gap under the beam clears the dorsal conduit and umbilical run.
 - C: cradle may not wrap the dorsal corridor or upper-intake apertures; keep the cradle forward of the booster fin plane.
 
 **Show:** intake clearance, stage joint, booster-separation path, dorsal corridor, and how the beam meets the donor mount frame at the Fighter1 wing-pylon station.
@@ -119,7 +119,7 @@ Record the user's selections and exact approval boundaries. Neither weapon advan
 - Release travel: donor rail data is zero.
 - The mount-spawns-at-hardpoint assumption.
 - Sibling stations beyond the four sampled (Halberd 5 more sets, Kris 16, Phantom 8, Ballista 10).
-- Current Halberd lug stations in the selected revision (see above).
+- Halberd attachment stations: the current model has no lugs; the carriage face (+Z vs F02/F10) is an open decision.
 
 ## Suggested split for CAD sessions
 

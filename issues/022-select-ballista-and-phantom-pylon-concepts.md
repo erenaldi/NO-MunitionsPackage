@@ -51,3 +51,7 @@ Internal and multi-round Ballista variants remain visibly separate deferred work
   not establish carriage fit.
 - A missing Phantom whole-airframe decision remains a blocker for production and
   is not bypassed by approving a pylon direction.
+
+## Review notes (2026-09-30)
+
+- **Phantom fit:** a concept must agree with the user's 2026-09-29 decision to lower the stowed model 9.574 mm in the CAD asset frame (`cad/phantom_visual_reboot/DONOR_RACK_FINDINGS.md`, `CLAUDE_CODE_HANDOFF_B2H.md`) or state that it changes it. `agm1_reference_fit.json` was not re-run. Production (026) stays blocked on 017 and the whole-airframe decision.
