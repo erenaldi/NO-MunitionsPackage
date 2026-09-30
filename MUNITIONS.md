@@ -5,6 +5,7 @@
 - **Method:** clone vanilla analog def → override fields → register via BepInEx plugin; def-only weapons may alternatively ship as Blueprinter `.nobp` patches (proven by AShM-500 Yashma)
 - **Phase 1 gate:** runtime reflection dump validates every def-field mapping below; all numbers are design targets until then
 - **Pylon/hardpoint decision (2026-09-27):** Halberd, Kris, Ballista and Phantom keep their fixed munition sizes while pylons and aircraft eligibility are redesigned around measured fit. Donor hardpoint presence is a candidate source, not authorization: only configurations with validated mounted and release clearance will be enabled. External single, internal, twin and triple carriage require distinct rack variants and evidence. Destination plan: `plans/2026-09-27-fixed-munition-pylons-hardpoints.md`.
+- **Halberd pylon attachment (2026-09-30):** purely visual. No lugs or hanger block on the missile; F02/F10 access features untouched; the pylon carries all attachment detail, with at most one measured missile-side contact patch clear of F02/F10. Concept-level only; no CAD, export or runtime approval. See `docs/PYLON_CONCEPT_BRIEFS.md` and issue 021.
 
 ---
 

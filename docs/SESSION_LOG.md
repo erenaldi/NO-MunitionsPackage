@@ -2,6 +2,11 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-09-30 (decision) — Halberd pylon attachment is purely visual
+
+- User decision recorded in `MUNITIONS.md` (line 8), `docs/PYLON_CONCEPT_BRIEFS.md` and issue 021: no lugs/studs/hanger on the Halberd missile, F02/F10 untouched, pylon carries all attachment detail, at most one measured missile-side contact patch clear of F02/F10. Concept-level only; nothing approved. Docs only, no CAD or build run.
+- Open: locate and dimension the contact patch on the top centerline (unmeasured).
+
 ## 2026-09-30 (later) — Halberd lug correction recorded in briefs and issues
 
 - Local review found my earlier brief wrongly treated Halberd lug stations as usable. Re-verified on disk: `cad/halberd_rounded_square/R18_REAL_MISSILE_DETAIL_SURVEY.md:33,49-52` lists lugs "Missing" from the current model (conflict with F02/F10 on +Z; lugs appearance-only); `MOUNT_LUG_STATIONS` -75/+410 mm is `cad/halberd/generate_halberd_detailed.py:51`; `MOUNT_STATIONS` 0/480 mm is `cad/halberd/halberd_four_intake_concepts.py:20` (fixed 70x30x34 pads at z=85 and 62x25x10 mount pads at z=105 of the older four-intake study). Neither is a game measurement or applies to R17-R19.
