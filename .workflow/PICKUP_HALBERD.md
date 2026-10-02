@@ -35,7 +35,7 @@ Written 2026-10-02 by the workflow-setup session. Treat every claim below as a c
 ## What was configured for the new workflow (2026-10-02)
 
 - `CLAUDE.md` now imports `@AGENTS.md` and `@CONTEXT.md` (it only imported `CONTEXT.md` before, so Claude sessions did not see the project rules). Previous content: the single line `@CONTEXT.md`.
-- `.workflow/` created: `STATUS.md` (coordinator's status board), `reports/`, `tmp/`; `.gitignore` gained `.workflow/tmp/`. Nothing committed.
+- `.workflow/` created: `STATUS.md` (coordinator's status board), `reports/`, `tmp/`; `.gitignore` gained `.workflow/tmp/`. Committed locally on `main` (see the commit "Configure orchestrated workflow and add Halberd pickup brief"); not pushed. The commit exists so git worktree sessions inherit `CLAUDE.md`, `CONTEXT.md` and `.workflow/`; a worktree created before it needs `git merge --ff-only main` to get them.
 - Global setup: Claude defaults to Sonnet 5.5 at medium effort (the coordinator); the Orca hooks were removed from `~/.claude/settings.json`.
 - Workflow files: `C:\Users\erena\agent-workflow\` (read `skills\orchestrate\SKILL.md` and `skills\orchestrate\roster.md`); the `/orchestrate` skill is the entry point.
 

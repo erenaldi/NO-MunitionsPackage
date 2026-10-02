@@ -5,9 +5,9 @@ Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "
 ## 2026-10-02 — New workflow configured; Halberd pickup brief written for a fresh Claude session
 
 - User asked for a fresh Claude session that picks up the Halberd session's context, configured for the new orchestrated workflow (shared source `C:\Users\erena\agent-workflow\`: 13 agents, `/orchestrate`, `roster.md`).
-- Changed (nothing committed): `CLAUDE.md` now `@AGENTS.md` + `@CONTEXT.md` (was `@CONTEXT.md` only, so Claude sessions did not see `AGENTS.md`); new `.workflow/` (`STATUS.md`, `reports/`, `tmp/`, `PICKUP_HALBERD.md`); `.gitignore` gained `.workflow/tmp/`. `core.autocrlf` left as is (system setting).
+- Changed (committed locally on `main` as "Configure orchestrated workflow and add Halberd pickup brief", not pushed; the user approved the commit so worktree sessions inherit these files): `CLAUDE.md` now `@AGENTS.md` + `@CONTEXT.md` (was `@CONTEXT.md` only, so Claude sessions did not see `AGENTS.md`); new `.workflow/` (`STATUS.md`, `reports/`, `tmp/`, `PICKUP_HALBERD.md`); `.gitignore` gained `.workflow/tmp/`. `core.autocrlf` left as is (system setting).
 - Pickup brief: `.workflow/PICKUP_HALBERD.md`. It records the Halberd session's end state (R19 approved, committed and pushed as `2bad5ba`; checker PASS, 335 leaves, 250 heads, 58 panels), the known unknowns, and that `HANDOFF_R19_SURFACE_DETAIL.md` is stale. Source: the session transcript and this journal; all claims to be re-verified on disk by the next session.
-- Not done: no CAD, plugin or Unity change; no commit or push.
+- Not done: no CAD, plugin or Unity change; no push. Observed: the first worktree session started from this setup lacked `CLAUDE.md`, `CONTEXT.md` and `.workflow/` (untracked files are absent from worktrees), which is why they were committed.
 
 ## 2026-10-01 17:22 -05:00 — Four Claude export pickup chats created in Codex Project
 
