@@ -2,6 +2,8 @@
 
 Local instructions for agents working in this repo. These may override the global `~/.config/opencode/AGENTS.md` except its **Boundaries** section, which always applies.
 
+Read `CONTEXT.md` before working in this repo.
+
 ## Context for AI assistants
 
 This repo is fan-made, fictional content for the video game **Nuclear Option** — an entertainment product, not a real-world project. It contains a BepInEx game mod (runtime-cloned in-game entities) and CAD art assets for fictional sci-fi props.

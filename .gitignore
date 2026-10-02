@@ -4,6 +4,7 @@ build/
 *.nobp
 __pycache__/
 *.pyc
+.workflow/tmp/
 bin/
 obj/
 

@@ -2,6 +2,13 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-10-02 — New workflow configured; Halberd pickup brief written for a fresh Claude session
+
+- User asked for a fresh Claude session that picks up the Halberd session's context, configured for the new orchestrated workflow (shared source `C:\Users\erena\agent-workflow\`: 13 agents, `/orchestrate`, `roster.md`).
+- Changed (nothing committed): `CLAUDE.md` now `@AGENTS.md` + `@CONTEXT.md` (was `@CONTEXT.md` only, so Claude sessions did not see `AGENTS.md`); new `.workflow/` (`STATUS.md`, `reports/`, `tmp/`, `PICKUP_HALBERD.md`); `.gitignore` gained `.workflow/tmp/`. `core.autocrlf` left as is (system setting).
+- Pickup brief: `.workflow/PICKUP_HALBERD.md`. It records the Halberd session's end state (R19 approved, committed and pushed as `2bad5ba`; checker PASS, 335 leaves, 250 heads, 58 panels), the known unknowns, and that `HANDOFF_R19_SURFACE_DETAIL.md` is stale. Source: the session transcript and this journal; all claims to be re-verified on disk by the next session.
+- Not done: no CAD, plugin or Unity change; no commit or push.
+
 ## 2026-10-01 17:22 -05:00 — Four Claude export pickup chats created in Codex Project
 
 - User changed approval settings and requested retry. `create_thread` succeeded four times with target Project `Nuclear Option Munitions Package` (`9411346d-2369-4fdb-af2d-0a08d520d64c`), each with a read-only pickup prompt for its user-provided ZIP. New Codex chat ids: Palisade `01a0f983-cb8c-7ac2-8ae2-8a1f1eebd46e`; Halberd R18 fork 3 `01a0f983-fb1c-79b1-841a-c538e0d6106f`; Issue 020 Local `01a0f984-0a39-7fb2-bdc1-c24d2282ad4e`; Phantom Work `01a0f984-1971-7b41-9a89-71137d520316`.
