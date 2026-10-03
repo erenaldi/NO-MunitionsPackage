@@ -2,6 +2,13 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-10-03 (latest) — Codex topology diagnosis confirmed; sectioned cuts benchmarked
+
+- Codex handoff (`C:\Users\erena\Documents\Codex\2026-10-03\can\outputs\claude-cad-topology-handoff.md`): cutting every detail sequentially into the long body leaves makes each Boolean slower and bloats the host. Rechecked on disk: `halberd_r19_surface.py:783-784` is that sequential `checked_cut` loop; saved R19 hosts have 1,589 (main) / 416 (booster) faces; Kris hybrid STEP is 3,994,763 bytes. R20 (main 1,589 -> 2,061) and R21 (booster 416 -> 2,240) repeated the pattern. Codex's own timings were not re-verified.
+- New `cad/shared/host_sections.py` (`split_host`, `choose_boundaries`, `section_of`, `apply_cuts`, `rejoin`, `face_report`) and benchmark `checks/experiment_host_sections.py` -> `reviews/experiment_host_sections.json`. Real R19 main-panel cutters (47 panels, 165 cutters) on the R18 main host: whole-host sequential 170.5 s (per-cut 0.49 -> 1.55 s); nine sections 55.8 s, zero straddlers, A-B and B-A volumes exactly 0 (3.1x faster). Caveats: about 41 extra seam faces after rejoin (1,272 vs 1,231); R18 host, not the full R19 state; not yet used in a production build.
+- Lessons, cad-builder text and the prepared F08 brief updated to require sectioned cuts (installed in sync; 154/154 workflow tests pass). Committed as `ff4d62e` (journal entry added in the follow-up commit).
+- Next: user says go for the one-fin F08 prototype using host_sections.
+
 ## 2026-10-03 (later) — Shared CAD helpers extracted; F08 retry still pending
 
 - New modules in `cad/shared/` (surface_detail.py untouched): `check_kit.py` (stage timer with budgets, leaf loading, precise volume, closed-and-clean, multi-shape ray_skin, unchanged-leaf and removed-volume checks, crop helpers), `review_crop.py` (crop a saved STEP around a window or cube, standard face/outboard/grazing snapshot jobs, render wrapper), `root_geometry.py` (R20 `RootSide` root-edge/crease measurement made parametric, bisect, chamfer, densify, local crop box, blade faces).
