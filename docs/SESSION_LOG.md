@@ -2,6 +2,14 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-10-03 (later) — Shared CAD helpers extracted; F08 retry still pending
+
+- New modules in `cad/shared/` (surface_detail.py untouched): `check_kit.py` (stage timer with budgets, leaf loading, precise volume, closed-and-clean, multi-shape ray_skin, unchanged-leaf and removed-volume checks, crop helpers), `review_crop.py` (crop a saved STEP around a window or cube, standard face/outboard/grazing snapshot jobs, render wrapper), `root_geometry.py` (R20 `RootSide` root-edge/crease measurement made parametric, bisect, chamfer, densify, local crop box, blade faces).
+- Verified: `halberd_rounded_square/checks/verify_shared_helpers.py` extracts the original functions from the committed R20 checker and builder with `ast` and compares on the saved R20 model: RESULT PASS in 71 s (precise_volume, closed_and_clean, ray_skin, frame, boxes_near identical; crop of X -1130..-840 has the same leaf count and volume as the saved R20 main crop; `RootSide` edge, crease and point values identical to 1e-9).
+- Measured, smaller than hoped: closed-and-clean on a 60 mm crop of the main-body leaf took 46 s (559 faces) vs 136 s for the whole leaf (2,061 faces), about 3x. Real speed-up comes from running self-intersection checks only on new parts, not hosts.
+- Not changed: R20 builder and checker still carry their own copies (kept as committed; new passes import the shared modules). The cad-builder agent text and the prepared F08 one-fin brief now name the shared modules (installed, in sync).
+- Next: user says go for the one-fin F08 prototype.
+
 ## 2026-10-03 — Halberd F07 main-fin seats (R20) built and accepted; F08 (R21) stopped for slowness; lessons saved
 
 - User direction: continue from R19 (R18 acceptance dropped as a separate step). Fin-root feasibility measured (`checks/measure_fin_roots_r19.py` -> `reviews/halberd_r19_fin_roots.json`, `reviews/R19_fin_roots_feasibility.md`): 20x8 seat fits on all 4 main fins, 3 mm band on all 4 booster fins. Close-up crops `src/halberd_r19_fin_roots_focus.py`, `reviews/R19_fin_roots_*.png`.
