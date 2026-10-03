@@ -147,6 +147,52 @@ def boxes_near(a, b, margin):
                 ba.min.Z - margin > bb.max.Z or bb.min.Z - margin > ba.max.Z)
 
 
+def _box6(shape):
+    if isinstance(shape, bd.Vector):
+        return (shape.X, shape.Y, shape.Z, shape.X, shape.Y, shape.Z)
+    b = shape.bounding_box()
+    return (b.min.X, b.min.Y, b.min.Z, b.max.X, b.max.Y, b.max.Z)
+
+
+def _box_gap(a, b, safety=0.01):
+    """Distance between two boxes minus `safety` mm: a lower bound of the shape distance."""
+    gx = max(a[0] - b[3], b[0] - a[3], 0.0)
+    gy = max(a[1] - b[4], b[1] - a[4], 0.0)
+    gz = max(a[2] - b[5], b[2] - a[5], 0.0)
+    return max(0.0, math.sqrt(gx * gx + gy * gy + gz * gz) - safety)
+
+
+def min_distance(ps, qs):
+    """Exact `min(p.distance_to(q) for p in ps for q in qs)` without the all-pairs cost.
+
+    `qs` may hold shapes or `bd.Vector` points. Pairs are evaluated in bounding-box-gap
+    order and the loop stops once the box gap reaches the best distance found, so only
+    nearby pairs pay for `distance_to`. Returns `math.inf` when either list is empty.
+    (Halberd R21 checker: all-pairs blade and panel loops never finished in 25+ min;
+    pruned they take about 45 s and 28 s per band, same values.)
+    """
+    pb = [_box6(p) for p in ps]
+    qb = [_box6(q) for q in qs]
+    pairs = sorted(((_box_gap(pb[i], qb[j]), i, j) for i in range(len(ps)) for j in range(len(qs))),
+                   key=lambda t: t[0])
+    best = math.inf
+    for gap, i, j in pairs:
+        if gap >= best:
+            break
+        best = min(best, _dist(ps[i], qs[j]))
+    return best
+
+
+def _dist(p, q):
+    """Distance between two shapes or points (a Vector has no `distance_to`)."""
+    p_pt, q_pt = isinstance(p, bd.Vector), isinstance(q, bd.Vector)
+    if p_pt and q_pt:
+        return (p - q).length
+    if p_pt:
+        return q.distance_to(p)
+    return p.distance_to(q)
+
+
 def frame(clock_degrees):
     """(outward, tangent) for clock 0 = +Z, 90 = +Y."""
     a = math.radians(clock_degrees)
