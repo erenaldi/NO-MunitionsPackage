@@ -1,0 +1,3277 @@
+{
+  "source_step": "STEP/halberd_r19_surface.step",
+  "source_document_hash": "360c8c16be72cb8db88c66627f0fc34d968f1e1b4fb155a1b16450adbe04d805",
+  "metadata": "reviews/halberd_r19_surface.json",
+  "units": "mm, degrees; +X noseward; clock 0 = +Z, 90 = +Y",
+  "method": [
+    "Writes reviews/halberd_r19_fin_roots.json. Builds no geometry for the model.",
+    "",
+    "Method (per fin, per side of the blade, at axial stations every STATION_STEP mm):",
+    "- cross-section the blade and the adjacent skin faces with the plane X = x;",
+    "- root point = where the blade outline meets the adjacent skin in that section;",
+    "- walk the adjacent skin section away from the blade (arc length d from the root);",
+    "- classify the skin (face geom type, in-section turning angle), and measure",
+    "  clearance from every walked point to existing details: all non-host leaves",
+    "  (R18 hatches, R19 heads/raised parts, F05 strips, rings), R19 engraved panel",
+    "  outlines/interiors (from the saved metadata plan) and circumferential seams /",
+    "  the stage split (axial distance).",
+    "Main fins: test a 20 x 8 mm seat (axial x across, starting SEAT_LAND mm from the",
+    "root edge). Booster fins: test a 3 mm collar band starting at the root edge."
+  ],
+  "thresholds": {
+    "clearance_mm": 2.0,
+    "band_mm": 30.0,
+    "station_step_mm": 2.0,
+    "walk_spacing_mm": 0.5,
+    "main_seat_mm": [
+      20.0,
+      8.0
+    ],
+    "main_seat_land_from_root_mm": 2.0,
+    "booster_collar_width_mm": 3.0
+  },
+  "existing_details_considered": {
+    "leaves": 331,
+    "panel_outlines_from_plan": [
+      "P05",
+      "C01",
+      "P08",
+      "LV1",
+      "N02",
+      "C03",
+      "H01",
+      "BY1",
+      "BZ1",
+      "BB2",
+      "LV4",
+      "BN3",
+      "BN2",
+      "BN1",
+      "BZ2"
+    ],
+    "seams_and_split": [
+      [
+        "seam_nose",
+        1060.0,
+        1060.4
+      ],
+      [
+        "seam_RMA",
+        -1096.4,
+        -1096.0
+      ],
+      [
+        "seam_RBF",
+        -1150.0,
+        -1149.6
+      ],
+      [
+        "seam_RBA",
+        -1508.4,
+        -1508.0
+      ],
+      [
+        "stage_split",
+        -1123.3,
+        -1123.3
+      ]
+    ],
+    "r17_root_hardware_leaves_in_r19_step": [],
+    "r17_note": "No R17 fin-root strip/heads exist in the R19 STEP; they live only in the R17 local review coupons (src/halberd_r17_interface_shapes.py: 52 x 9 mm 0.8 mm-pocket inset strip with 4 slotted heads on the main_fin_1 / booster_fin_fairing_1 blade face)."
+  },
+  "fins": [
+    {
+      "leaf": "main_fin_1",
+      "stage": "main",
+      "clock_deg": 45.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1075.0,
+          93.003,
+          93.003
+        ],
+        [
+          -855.0,
+          150.897,
+          150.897
+        ]
+      ],
+      "root_footprint": {
+        "face_geom_type": "BSPLINE",
+        "area_mm2": 837.04,
+        "x_range_mm": [
+          -1075.0,
+          -859.816
+        ],
+        "embedded_volume_mm3": 2817.08,
+        "source": "face of (fin - host) lying on the host skin",
+        "measured_station_x_mm": [
+          -1072.5,
+          -862.5
+        ],
+        "root_chord_mm": 215.184,
+        "thickness_at_root_mm": {
+          "max": 7.6,
+          "at_x_mm": -978.5,
+          "min_measured": 0.0,
+          "profile_every_10mm": [
+            [
+              -1072.5,
+              0.0
+            ],
+            [
+              -1062.5,
+              0.8
+            ],
+            [
+              -1052.5,
+              1.6
+            ],
+            [
+              -1042.5,
+              2.4
+            ],
+            [
+              -1032.5,
+              3.2
+            ],
+            [
+              -1022.5,
+              4.0
+            ],
+            [
+              -1012.5,
+              4.8
+            ],
+            [
+              -1002.5,
+              5.6
+            ],
+            [
+              -992.5,
+              6.4
+            ],
+            [
+              -982.5,
+              7.2
+            ],
+            [
+              -972.5,
+              7.4
+            ],
+            [
+              -962.5,
+              6.6
+            ],
+            [
+              -952.5,
+              6.0
+            ],
+            [
+              -942.5,
+              5.2
+            ],
+            [
+              -932.5,
+              4.6
+            ],
+            [
+              -922.5,
+              3.8
+            ],
+            [
+              -912.5,
+              3.4
+            ],
+            [
+              -902.5,
+              2.8
+            ],
+            [
+              -892.5,
+              2.0
+            ],
+            [
+              -882.5,
+              1.4
+            ],
+            [
+              -872.5,
+              0.8
+            ],
+            [
+              -862.5,
+              0.0
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.089,
+          "max": 0.082
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1072.5,
+              97.626,
+              97.608
+            ],
+            [
+              -1052.5,
+              98.273,
+              97.169
+            ],
+            [
+              -1032.5,
+              98.912,
+              96.738
+            ],
+            [
+              -1012.5,
+              99.685,
+              96.174
+            ],
+            [
+              -992.5,
+              100.308,
+              95.759
+            ],
+            [
+              -972.5,
+              100.782,
+              95.494
+            ],
+            [
+              -952.5,
+              100.4,
+              96.084
+            ],
+            [
+              -932.5,
+              100.011,
+              96.682
+            ],
+            [
+              -912.5,
+              99.614,
+              97.287
+            ],
+            [
+              -892.5,
+              99.21,
+              97.9
+            ],
+            [
+              -872.5,
+              98.94,
+              98.378
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1072.5,
+              97.626,
+              97.608
+            ],
+            [
+              -1052.5,
+              97.142,
+              98.3
+            ],
+            [
+              -1032.5,
+              96.65,
+              99.001
+            ],
+            [
+              -1012.5,
+              96.291,
+              99.568
+            ],
+            [
+              -992.5,
+              95.783,
+              100.285
+            ],
+            [
+              -972.5,
+              95.55,
+              100.726
+            ],
+            [
+              -952.5,
+              96.158,
+              100.327
+            ],
+            [
+              -932.5,
+              96.758,
+              99.935
+            ],
+            [
+              -912.5,
+              97.21,
+              99.692
+            ],
+            [
+              -892.5,
+              97.795,
+              99.314
+            ],
+            [
+              -872.5,
+              98.374,
+              98.944
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 20.99999989999992,
+            "seam": "seam_RMA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 236.18427439318668,
+            "seam": "seam_RMA"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.66888057990386,
+            "max": 67.32038641770524
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000964,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.46,
+            "label": "main_r19_RMA_0620_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -1062.5,
+              "detail_clearance_mm": 71.943,
+              "detail": "panel P05 (rect, clock 0)",
+              "seam_clearance_mm": 23.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 71.943
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.6687931729264,
+            "max": 67.31889062358587
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000964,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.433,
+            "label": "main_r19_RMA_0280_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -988.5,
+              "detail_clearance_mm": 60.238,
+              "detail": "panel P05 (rect, clock 0)",
+              "seam_clearance_mm": 97.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 60.238
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved"
+      ]
+    },
+    {
+      "leaf": "main_fin_2",
+      "stage": "main",
+      "clock_deg": 135.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1075.0,
+          93.003,
+          -150.897
+        ],
+        [
+          -855.0,
+          150.897,
+          -93.003
+        ]
+      ],
+      "root_footprint": {
+        "face_geom_type": "BSPLINE",
+        "area_mm2": 837.04,
+        "x_range_mm": [
+          -1075.0,
+          -859.816
+        ],
+        "embedded_volume_mm3": 2817.08,
+        "source": "face of (fin - host) lying on the host skin",
+        "measured_station_x_mm": [
+          -1072.5,
+          -862.5
+        ],
+        "root_chord_mm": 215.184,
+        "thickness_at_root_mm": {
+          "max": 7.6,
+          "at_x_mm": -978.5,
+          "min_measured": 0.0,
+          "profile_every_10mm": [
+            [
+              -1072.5,
+              0.0
+            ],
+            [
+              -1062.5,
+              0.8
+            ],
+            [
+              -1052.5,
+              1.6
+            ],
+            [
+              -1042.5,
+              2.4
+            ],
+            [
+              -1032.5,
+              3.2
+            ],
+            [
+              -1022.5,
+              4.0
+            ],
+            [
+              -1012.5,
+              4.8
+            ],
+            [
+              -1002.5,
+              5.6
+            ],
+            [
+              -992.5,
+              6.4
+            ],
+            [
+              -982.5,
+              7.2
+            ],
+            [
+              -972.5,
+              7.4
+            ],
+            [
+              -962.5,
+              6.6
+            ],
+            [
+              -952.5,
+              6.0
+            ],
+            [
+              -942.5,
+              5.2
+            ],
+            [
+              -932.5,
+              4.6
+            ],
+            [
+              -922.5,
+              3.8
+            ],
+            [
+              -912.5,
+              3.4
+            ],
+            [
+              -902.5,
+              2.8
+            ],
+            [
+              -892.5,
+              2.0
+            ],
+            [
+              -882.5,
+              1.4
+            ],
+            [
+              -872.5,
+              0.8
+            ],
+            [
+              -862.5,
+              0.0
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.089,
+          "max": 0.082
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1072.5,
+              97.608,
+              -97.626
+            ],
+            [
+              -1052.5,
+              97.169,
+              -98.273
+            ],
+            [
+              -1032.5,
+              96.738,
+              -98.912
+            ],
+            [
+              -1012.5,
+              96.174,
+              -99.685
+            ],
+            [
+              -992.5,
+              95.759,
+              -100.308
+            ],
+            [
+              -972.5,
+              95.494,
+              -100.782
+            ],
+            [
+              -952.5,
+              96.084,
+              -100.4
+            ],
+            [
+              -932.5,
+              96.682,
+              -100.011
+            ],
+            [
+              -912.5,
+              97.287,
+              -99.614
+            ],
+            [
+              -892.5,
+              97.9,
+              -99.21
+            ],
+            [
+              -872.5,
+              98.378,
+              -98.94
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1072.5,
+              97.608,
+              -97.626
+            ],
+            [
+              -1052.5,
+              98.3,
+              -97.142
+            ],
+            [
+              -1032.5,
+              99.001,
+              -96.65
+            ],
+            [
+              -1012.5,
+              99.568,
+              -96.291
+            ],
+            [
+              -992.5,
+              100.285,
+              -95.783
+            ],
+            [
+              -972.5,
+              100.726,
+              -95.55
+            ],
+            [
+              -952.5,
+              100.327,
+              -96.158
+            ],
+            [
+              -932.5,
+              99.935,
+              -96.758
+            ],
+            [
+              -912.5,
+              99.692,
+              -97.21
+            ],
+            [
+              -892.5,
+              99.314,
+              -97.795
+            ],
+            [
+              -872.5,
+              98.944,
+              -98.374
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 20.99999989999992,
+            "seam": "seam_RMA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 236.18427439319328,
+            "seam": "seam_RMA"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.66888057008367,
+            "max": 67.32038641107819
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000967,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.46,
+            "label": "main_r19_RMA_1520_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -930.5,
+              "detail_clearance_mm": 62.644,
+              "detail": "panel N02 (rect, clock 180)",
+              "seam_clearance_mm": 155.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 62.644
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.66879317854584,
+            "max": 67.31889062711795
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000967,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.433,
+            "label": "main_r19_RMA_1180_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -994.5,
+              "detail_clearance_mm": 60.466,
+              "detail": "panel C01 (round, clock 90)",
+              "seam_clearance_mm": 91.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 60.466
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved"
+      ]
+    },
+    {
+      "leaf": "main_fin_3",
+      "stage": "main",
+      "clock_deg": 225.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1075.0,
+          -150.897,
+          -150.897
+        ],
+        [
+          -855.0,
+          -93.003,
+          -93.003
+        ]
+      ],
+      "root_footprint": {
+        "face_geom_type": "BSPLINE",
+        "area_mm2": 837.04,
+        "x_range_mm": [
+          -1075.0,
+          -859.816
+        ],
+        "embedded_volume_mm3": 2817.08,
+        "source": "face of (fin - host) lying on the host skin",
+        "measured_station_x_mm": [
+          -1072.5,
+          -862.5
+        ],
+        "root_chord_mm": 215.184,
+        "thickness_at_root_mm": {
+          "max": 7.6,
+          "at_x_mm": -978.5,
+          "min_measured": 0.0,
+          "profile_every_10mm": [
+            [
+              -1072.5,
+              0.0
+            ],
+            [
+              -1062.5,
+              0.8
+            ],
+            [
+              -1052.5,
+              1.6
+            ],
+            [
+              -1042.5,
+              2.4
+            ],
+            [
+              -1032.5,
+              3.2
+            ],
+            [
+              -1022.5,
+              4.0
+            ],
+            [
+              -1012.5,
+              4.8
+            ],
+            [
+              -1002.5,
+              5.6
+            ],
+            [
+              -992.5,
+              6.4
+            ],
+            [
+              -982.5,
+              7.2
+            ],
+            [
+              -972.5,
+              7.4
+            ],
+            [
+              -962.5,
+              6.6
+            ],
+            [
+              -952.5,
+              6.0
+            ],
+            [
+              -942.5,
+              5.2
+            ],
+            [
+              -932.5,
+              4.6
+            ],
+            [
+              -922.5,
+              3.8
+            ],
+            [
+              -912.5,
+              3.4
+            ],
+            [
+              -902.5,
+              2.8
+            ],
+            [
+              -892.5,
+              2.0
+            ],
+            [
+              -882.5,
+              1.4
+            ],
+            [
+              -872.5,
+              0.8
+            ],
+            [
+              -862.5,
+              0.0
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.089,
+          "max": 0.082
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1072.5,
+              -97.626,
+              -97.608
+            ],
+            [
+              -1052.5,
+              -98.273,
+              -97.169
+            ],
+            [
+              -1032.5,
+              -98.912,
+              -96.738
+            ],
+            [
+              -1012.5,
+              -99.685,
+              -96.174
+            ],
+            [
+              -992.5,
+              -100.308,
+              -95.759
+            ],
+            [
+              -972.5,
+              -100.782,
+              -95.494
+            ],
+            [
+              -952.5,
+              -100.4,
+              -96.084
+            ],
+            [
+              -932.5,
+              -100.011,
+              -96.682
+            ],
+            [
+              -912.5,
+              -99.614,
+              -97.287
+            ],
+            [
+              -892.5,
+              -99.21,
+              -97.9
+            ],
+            [
+              -872.5,
+              -98.94,
+              -98.378
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1072.5,
+              -97.626,
+              -97.608
+            ],
+            [
+              -1052.5,
+              -97.142,
+              -98.3
+            ],
+            [
+              -1032.5,
+              -96.65,
+              -99.001
+            ],
+            [
+              -1012.5,
+              -96.291,
+              -99.568
+            ],
+            [
+              -992.5,
+              -95.783,
+              -100.285
+            ],
+            [
+              -972.5,
+              -95.55,
+              -100.726
+            ],
+            [
+              -952.5,
+              -96.158,
+              -100.327
+            ],
+            [
+              -932.5,
+              -96.758,
+              -99.935
+            ],
+            [
+              -912.5,
+              -97.21,
+              -99.692
+            ],
+            [
+              -892.5,
+              -97.795,
+              -99.314
+            ],
+            [
+              -872.5,
+              -98.374,
+              -98.944
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 20.99999989999992,
+            "seam": "seam_RMA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 236.18427439319987,
+            "seam": "seam_RMA"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.66888058127259,
+            "max": 67.32038641721371
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000964,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.46,
+            "label": "main_r19_RMA_2420_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -872.5,
+              "detail_clearance_mm": 72.275,
+              "detail": "panel C03 (round, clock 270)",
+              "seam_clearance_mm": 213.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 72.275
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.66879317852309,
+            "max": 67.31889063104374
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000964,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.433,
+            "label": "main_r19_RMA_2080_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -872.5,
+              "detail_clearance_mm": 80.048,
+              "detail": "panel C03 (round, clock 270)",
+              "seam_clearance_mm": 213.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 80.048
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved"
+      ]
+    },
+    {
+      "leaf": "main_fin_4",
+      "stage": "main",
+      "clock_deg": 315.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1075.0,
+          -150.897,
+          93.003
+        ],
+        [
+          -855.0,
+          -93.003,
+          150.897
+        ]
+      ],
+      "root_footprint": {
+        "face_geom_type": "BSPLINE",
+        "area_mm2": 837.04,
+        "x_range_mm": [
+          -1075.0,
+          -859.816
+        ],
+        "embedded_volume_mm3": 2817.08,
+        "source": "face of (fin - host) lying on the host skin",
+        "measured_station_x_mm": [
+          -1072.5,
+          -862.5
+        ],
+        "root_chord_mm": 215.184,
+        "thickness_at_root_mm": {
+          "max": 7.6,
+          "at_x_mm": -978.5,
+          "min_measured": 0.0,
+          "profile_every_10mm": [
+            [
+              -1072.5,
+              0.0
+            ],
+            [
+              -1062.5,
+              0.8
+            ],
+            [
+              -1052.5,
+              1.6
+            ],
+            [
+              -1042.5,
+              2.4
+            ],
+            [
+              -1032.5,
+              3.2
+            ],
+            [
+              -1022.5,
+              4.0
+            ],
+            [
+              -1012.5,
+              4.8
+            ],
+            [
+              -1002.5,
+              5.6
+            ],
+            [
+              -992.5,
+              6.4
+            ],
+            [
+              -982.5,
+              7.2
+            ],
+            [
+              -972.5,
+              7.4
+            ],
+            [
+              -962.5,
+              6.6
+            ],
+            [
+              -952.5,
+              6.0
+            ],
+            [
+              -942.5,
+              5.2
+            ],
+            [
+              -932.5,
+              4.6
+            ],
+            [
+              -922.5,
+              3.8
+            ],
+            [
+              -912.5,
+              3.4
+            ],
+            [
+              -902.5,
+              2.8
+            ],
+            [
+              -892.5,
+              2.0
+            ],
+            [
+              -882.5,
+              1.4
+            ],
+            [
+              -872.5,
+              0.8
+            ],
+            [
+              -862.5,
+              0.0
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.089,
+          "max": 0.082
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1072.5,
+              -97.608,
+              97.626
+            ],
+            [
+              -1052.5,
+              -97.169,
+              98.273
+            ],
+            [
+              -1032.5,
+              -96.738,
+              98.912
+            ],
+            [
+              -1012.5,
+              -96.174,
+              99.685
+            ],
+            [
+              -992.5,
+              -95.759,
+              100.308
+            ],
+            [
+              -972.5,
+              -95.494,
+              100.782
+            ],
+            [
+              -952.5,
+              -96.084,
+              100.4
+            ],
+            [
+              -932.5,
+              -96.682,
+              100.011
+            ],
+            [
+              -912.5,
+              -97.287,
+              99.614
+            ],
+            [
+              -892.5,
+              -97.9,
+              99.21
+            ],
+            [
+              -872.5,
+              -98.378,
+              98.94
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1072.5,
+              -97.608,
+              97.626
+            ],
+            [
+              -1052.5,
+              -98.3,
+              97.142
+            ],
+            [
+              -1032.5,
+              -99.001,
+              96.65
+            ],
+            [
+              -1012.5,
+              -99.568,
+              96.291
+            ],
+            [
+              -992.5,
+              -100.285,
+              95.783
+            ],
+            [
+              -972.5,
+              -100.726,
+              95.55
+            ],
+            [
+              -952.5,
+              -100.327,
+              96.158
+            ],
+            [
+              -932.5,
+              -99.935,
+              96.758
+            ],
+            [
+              -912.5,
+              -99.692,
+              97.21
+            ],
+            [
+              -892.5,
+              -99.314,
+              97.795
+            ],
+            [
+              -872.5,
+              -98.944,
+              98.374
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 20.99999989999992,
+            "seam": "seam_RMA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 236.18427439319328,
+            "seam": "seam_RMA"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.668880589723514,
+            "max": 67.3203864115551
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000967,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.46,
+            "label": "main_r19_RMA_3320_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -954.5,
+              "detail_clearance_mm": 61.531,
+              "detail": "panel LV1 (louvre, clock 0)",
+              "seam_clearance_mm": 131.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 61.531
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "BSPLINE": 6360
+          },
+          "skin_sources_hit": {
+            "host": 6360
+          },
+          "flat_extent_from_root_mm": {
+            "min": 5.5,
+            "max": 11.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 62.66879316731186,
+            "max": 67.31889062840206
+          },
+          "root_point_to_skin_gap_mm_max": 0.20000000000000967,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 6466.0,
+          "free_area_mm2": 6466.0,
+          "nearest_detail": {
+            "clearance_mm": 39.433,
+            "label": "main_r19_RMA_2980_fastener_1",
+            "at_x_mm": -1072.5000001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 23.5,
+            "seam": "seam_RMA"
+          },
+          "seat_20x8": {
+            "seat_definition": "20.0 mm axial x 8.0 mm across the skin, inner edge 2.0 mm from the root edge",
+            "fits_anywhere": true,
+            "fit_windows_centre_x_mm": [
+              [
+                -1062.5,
+                -872.5
+              ]
+            ],
+            "fraction_of_chord_centres_that_fit": 1.0,
+            "worst_window": {
+              "centre_x_mm": -978.5,
+              "detail_clearance_mm": 62.879,
+              "detail": "panel P08 (rect, clock 270)",
+              "seam_clearance_mm": 107.5,
+              "seam": "seam_RMA"
+            },
+            "min_detail_clearance_over_fitting_windows_mm": 62.879
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved"
+      ]
+    },
+    {
+      "leaf": "booster_fin_fairing_1",
+      "stage": "booster",
+      "clock_deg": 45.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1482.925,
+          65.512,
+          65.512
+        ],
+        [
+          -1123.333,
+          133.926,
+          133.926
+        ]
+      ],
+      "root_footprint": {
+        "blade_face_ids": [
+          0,
+          1,
+          2,
+          3,
+          7
+        ],
+        "fairing_face_ids": [
+          4,
+          6,
+          8,
+          9,
+          10
+        ],
+        "base_face_ids": [
+          5
+        ],
+        "x_range_mm": [
+          -1482.925,
+          -1203.634
+        ],
+        "source": "blade faces (|n.tangent| > 0.98, reach > 175 mm radius) of the fin+fairing leaf",
+        "measured_station_x_mm": [
+          -1482.43,
+          -1204.43
+        ],
+        "root_chord_mm": 279.291,
+        "thickness_at_root_mm": {
+          "max": 7.697,
+          "at_x_mm": -1352.43,
+          "min_measured": 0.029,
+          "profile_every_10mm": [
+            [
+              -1482.4,
+              0.029
+            ],
+            [
+              -1472.4,
+              0.619
+            ],
+            [
+              -1462.4,
+              1.208
+            ],
+            [
+              -1452.4,
+              1.797
+            ],
+            [
+              -1442.4,
+              2.387
+            ],
+            [
+              -1432.4,
+              2.976
+            ],
+            [
+              -1422.4,
+              3.566
+            ],
+            [
+              -1412.4,
+              4.156
+            ],
+            [
+              -1402.4,
+              4.746
+            ],
+            [
+              -1392.4,
+              5.336
+            ],
+            [
+              -1382.4,
+              5.926
+            ],
+            [
+              -1372.4,
+              6.516
+            ],
+            [
+              -1362.4,
+              7.106
+            ],
+            [
+              -1352.4,
+              7.697
+            ],
+            [
+              -1342.4,
+              6.564
+            ],
+            [
+              -1332.4,
+              5.72
+            ],
+            [
+              -1322.4,
+              5.026
+            ],
+            [
+              -1312.4,
+              4.555
+            ],
+            [
+              -1302.4,
+              4.134
+            ],
+            [
+              -1292.4,
+              3.714
+            ],
+            [
+              -1282.4,
+              3.294
+            ],
+            [
+              -1272.4,
+              2.874
+            ],
+            [
+              -1262.4,
+              2.455
+            ],
+            [
+              -1252.4,
+              2.037
+            ],
+            [
+              -1242.4,
+              1.618
+            ],
+            [
+              -1232.4,
+              1.2
+            ],
+            [
+              -1222.4,
+              0.783
+            ],
+            [
+              -1212.4,
+              0.366
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.0,
+          "max": 0.0
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1482.425,
+              79.508,
+              79.487
+            ],
+            [
+              -1462.425,
+              79.923,
+              79.069
+            ],
+            [
+              -1442.425,
+              80.334,
+              78.646
+            ],
+            [
+              -1422.425,
+              80.742,
+              78.221
+            ],
+            [
+              -1402.425,
+              81.147,
+              77.791
+            ],
+            [
+              -1382.425,
+              81.548,
+              77.358
+            ],
+            [
+              -1362.425,
+              81.946,
+              76.921
+            ],
+            [
+              -1342.425,
+              89.838,
+              85.197
+            ],
+            [
+              -1322.425,
+              97.447,
+              93.893
+            ],
+            [
+              -1302.425,
+              97.881,
+              94.958
+            ],
+            [
+              -1282.425,
+              97.688,
+              95.359
+            ],
+            [
+              -1262.425,
+              97.496,
+              95.76
+            ],
+            [
+              -1242.425,
+              97.304,
+              96.16
+            ],
+            [
+              -1222.425,
+              97.113,
+              96.559
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1482.425,
+              79.487,
+              79.508
+            ],
+            [
+              -1462.425,
+              79.069,
+              79.923
+            ],
+            [
+              -1442.425,
+              78.646,
+              80.334
+            ],
+            [
+              -1422.425,
+              78.221,
+              80.742
+            ],
+            [
+              -1402.425,
+              77.791,
+              81.147
+            ],
+            [
+              -1382.425,
+              77.358,
+              81.548
+            ],
+            [
+              -1362.425,
+              76.921,
+              81.946
+            ],
+            [
+              -1342.425,
+              85.197,
+              89.838
+            ],
+            [
+              -1322.425,
+              93.893,
+              97.447
+            ],
+            [
+              -1302.425,
+              94.958,
+              97.881
+            ],
+            [
+              -1282.425,
+              95.359,
+              97.688
+            ],
+            [
+              -1262.425,
+              95.76,
+              97.496
+            ],
+            [
+              -1242.425,
+              96.16,
+              97.304
+            ],
+            [
+              -1222.425,
+              96.559,
+              97.113
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 25.074878127796183,
+            "seam": "seam_RBA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 53.63370669300002,
+            "seam": "seam_RBF"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.105241681849833,
+            "max": 158.38255694353344
+          },
+          "root_point_to_skin_gap_mm_max": 0.3491796897886647,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 23.846,
+            "label": "panel LV4 (louvre, clock 90)",
+            "at_x_mm": -1352.4251218722038,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.31,
+            "nearest_detail_to_band": "booster_r19_RBA_0512_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.828,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.4251218722038,
+                -1204.4251218722038
+              ]
+            }
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.106087627009124,
+            "max": 158.38232348536027
+          },
+          "root_point_to_skin_gap_mm_max": 0.34852564323137264,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 24.089,
+            "label": "booster_r19_RP4_plate",
+            "at_x_mm": -1356.4251218722038,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.321,
+            "nearest_detail_to_band": "booster_r19_RBA_0388_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.838,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.4251218722038,
+                -1204.4251218722038
+              ]
+            }
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved",
+        "fairing"
+      ]
+    },
+    {
+      "leaf": "booster_fin_fairing_2",
+      "stage": "booster",
+      "clock_deg": 135.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1482.925,
+          65.512,
+          -133.926
+        ],
+        [
+          -1123.333,
+          133.926,
+          -65.512
+        ]
+      ],
+      "root_footprint": {
+        "blade_face_ids": [
+          0,
+          1,
+          2,
+          3,
+          7
+        ],
+        "fairing_face_ids": [
+          4,
+          6,
+          8,
+          9,
+          10
+        ],
+        "base_face_ids": [
+          5
+        ],
+        "x_range_mm": [
+          -1482.925,
+          -1203.634
+        ],
+        "source": "blade faces (|n.tangent| > 0.98, reach > 175 mm radius) of the fin+fairing leaf",
+        "measured_station_x_mm": [
+          -1482.43,
+          -1204.43
+        ],
+        "root_chord_mm": 279.291,
+        "thickness_at_root_mm": {
+          "max": 7.697,
+          "at_x_mm": -1352.43,
+          "min_measured": 0.029,
+          "profile_every_10mm": [
+            [
+              -1482.4,
+              0.029
+            ],
+            [
+              -1472.4,
+              0.619
+            ],
+            [
+              -1462.4,
+              1.208
+            ],
+            [
+              -1452.4,
+              1.797
+            ],
+            [
+              -1442.4,
+              2.387
+            ],
+            [
+              -1432.4,
+              2.976
+            ],
+            [
+              -1422.4,
+              3.566
+            ],
+            [
+              -1412.4,
+              4.156
+            ],
+            [
+              -1402.4,
+              4.746
+            ],
+            [
+              -1392.4,
+              5.336
+            ],
+            [
+              -1382.4,
+              5.926
+            ],
+            [
+              -1372.4,
+              6.516
+            ],
+            [
+              -1362.4,
+              7.106
+            ],
+            [
+              -1352.4,
+              7.697
+            ],
+            [
+              -1342.4,
+              6.564
+            ],
+            [
+              -1332.4,
+              5.72
+            ],
+            [
+              -1322.4,
+              5.026
+            ],
+            [
+              -1312.4,
+              4.555
+            ],
+            [
+              -1302.4,
+              4.134
+            ],
+            [
+              -1292.4,
+              3.714
+            ],
+            [
+              -1282.4,
+              3.294
+            ],
+            [
+              -1272.4,
+              2.874
+            ],
+            [
+              -1262.4,
+              2.455
+            ],
+            [
+              -1252.4,
+              2.037
+            ],
+            [
+              -1242.4,
+              1.618
+            ],
+            [
+              -1232.4,
+              1.2
+            ],
+            [
+              -1222.4,
+              0.783
+            ],
+            [
+              -1212.4,
+              0.366
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.0,
+          "max": 0.0
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1482.425,
+              79.487,
+              -79.508
+            ],
+            [
+              -1462.425,
+              79.069,
+              -79.923
+            ],
+            [
+              -1442.425,
+              78.646,
+              -80.334
+            ],
+            [
+              -1422.425,
+              78.221,
+              -80.742
+            ],
+            [
+              -1402.425,
+              77.791,
+              -81.147
+            ],
+            [
+              -1382.425,
+              77.358,
+              -81.548
+            ],
+            [
+              -1362.425,
+              76.921,
+              -81.946
+            ],
+            [
+              -1342.425,
+              85.197,
+              -89.838
+            ],
+            [
+              -1322.425,
+              93.893,
+              -97.447
+            ],
+            [
+              -1302.425,
+              94.958,
+              -97.881
+            ],
+            [
+              -1282.425,
+              95.359,
+              -97.688
+            ],
+            [
+              -1262.425,
+              95.76,
+              -97.496
+            ],
+            [
+              -1242.425,
+              96.16,
+              -97.304
+            ],
+            [
+              -1222.425,
+              96.559,
+              -97.113
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1482.425,
+              79.508,
+              -79.487
+            ],
+            [
+              -1462.425,
+              79.923,
+              -79.069
+            ],
+            [
+              -1442.425,
+              80.334,
+              -78.646
+            ],
+            [
+              -1422.425,
+              80.742,
+              -78.221
+            ],
+            [
+              -1402.425,
+              81.147,
+              -77.791
+            ],
+            [
+              -1382.425,
+              81.548,
+              -77.358
+            ],
+            [
+              -1362.425,
+              81.946,
+              -76.921
+            ],
+            [
+              -1342.425,
+              89.838,
+              -85.197
+            ],
+            [
+              -1322.425,
+              97.447,
+              -93.893
+            ],
+            [
+              -1302.425,
+              97.881,
+              -94.958
+            ],
+            [
+              -1282.425,
+              97.688,
+              -95.359
+            ],
+            [
+              -1262.425,
+              97.496,
+              -95.76
+            ],
+            [
+              -1242.425,
+              97.304,
+              -96.16
+            ],
+            [
+              -1222.425,
+              97.113,
+              -96.559
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 25.074878127797092,
+            "seam": "seam_RBA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 53.63370669300002,
+            "seam": "seam_RBF"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.10524167037157,
+            "max": 158.3825569208897
+          },
+          "root_point_to_skin_gap_mm_max": 0.34917966034707043,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 27.206,
+            "label": "panel BB2 (round, clock 180)",
+            "at_x_mm": -1402.425121872203,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.31,
+            "nearest_detail_to_band": "booster_r19_RBA_1412_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.828,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.425121872203,
+                -1204.425121872203
+              ]
+            }
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.10608763914074,
+            "max": 158.38232351103503
+          },
+          "root_point_to_skin_gap_mm_max": 0.3485256725985204,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 25.467,
+            "label": "panel BZ1 (rect, clock 90)",
+            "at_x_mm": -1412.425121872203,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.321,
+            "nearest_detail_to_band": "booster_r19_RBA_1288_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.838,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.425121872203,
+                -1204.425121872203
+              ]
+            }
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved",
+        "fairing"
+      ]
+    },
+    {
+      "leaf": "booster_fin_fairing_3",
+      "stage": "booster",
+      "clock_deg": 225.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1482.925,
+          -133.926,
+          -133.926
+        ],
+        [
+          -1123.333,
+          -65.512,
+          -65.512
+        ]
+      ],
+      "root_footprint": {
+        "blade_face_ids": [
+          0,
+          1,
+          2,
+          3,
+          7
+        ],
+        "fairing_face_ids": [
+          4,
+          6,
+          8,
+          9,
+          10
+        ],
+        "base_face_ids": [
+          5
+        ],
+        "x_range_mm": [
+          -1482.925,
+          -1203.634
+        ],
+        "source": "blade faces (|n.tangent| > 0.98, reach > 175 mm radius) of the fin+fairing leaf",
+        "measured_station_x_mm": [
+          -1482.43,
+          -1204.43
+        ],
+        "root_chord_mm": 279.291,
+        "thickness_at_root_mm": {
+          "max": 7.697,
+          "at_x_mm": -1352.43,
+          "min_measured": 0.029,
+          "profile_every_10mm": [
+            [
+              -1482.4,
+              0.029
+            ],
+            [
+              -1472.4,
+              0.619
+            ],
+            [
+              -1462.4,
+              1.208
+            ],
+            [
+              -1452.4,
+              1.797
+            ],
+            [
+              -1442.4,
+              2.387
+            ],
+            [
+              -1432.4,
+              2.976
+            ],
+            [
+              -1422.4,
+              3.566
+            ],
+            [
+              -1412.4,
+              4.156
+            ],
+            [
+              -1402.4,
+              4.746
+            ],
+            [
+              -1392.4,
+              5.336
+            ],
+            [
+              -1382.4,
+              5.926
+            ],
+            [
+              -1372.4,
+              6.516
+            ],
+            [
+              -1362.4,
+              7.106
+            ],
+            [
+              -1352.4,
+              7.697
+            ],
+            [
+              -1342.4,
+              6.564
+            ],
+            [
+              -1332.4,
+              5.72
+            ],
+            [
+              -1322.4,
+              5.026
+            ],
+            [
+              -1312.4,
+              4.555
+            ],
+            [
+              -1302.4,
+              4.134
+            ],
+            [
+              -1292.4,
+              3.714
+            ],
+            [
+              -1282.4,
+              3.294
+            ],
+            [
+              -1272.4,
+              2.874
+            ],
+            [
+              -1262.4,
+              2.455
+            ],
+            [
+              -1252.4,
+              2.037
+            ],
+            [
+              -1242.4,
+              1.618
+            ],
+            [
+              -1232.4,
+              1.2
+            ],
+            [
+              -1222.4,
+              0.783
+            ],
+            [
+              -1212.4,
+              0.366
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.0,
+          "max": 0.0
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1482.425,
+              -79.508,
+              -79.487
+            ],
+            [
+              -1462.425,
+              -79.923,
+              -79.069
+            ],
+            [
+              -1442.425,
+              -80.334,
+              -78.646
+            ],
+            [
+              -1422.425,
+              -80.742,
+              -78.221
+            ],
+            [
+              -1402.425,
+              -81.147,
+              -77.791
+            ],
+            [
+              -1382.425,
+              -81.548,
+              -77.358
+            ],
+            [
+              -1362.425,
+              -81.946,
+              -76.921
+            ],
+            [
+              -1342.425,
+              -89.838,
+              -85.197
+            ],
+            [
+              -1322.425,
+              -97.447,
+              -93.893
+            ],
+            [
+              -1302.425,
+              -97.881,
+              -94.958
+            ],
+            [
+              -1282.425,
+              -97.688,
+              -95.359
+            ],
+            [
+              -1262.425,
+              -97.496,
+              -95.76
+            ],
+            [
+              -1242.425,
+              -97.304,
+              -96.16
+            ],
+            [
+              -1222.425,
+              -97.113,
+              -96.559
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1482.425,
+              -79.487,
+              -79.508
+            ],
+            [
+              -1462.425,
+              -79.069,
+              -79.923
+            ],
+            [
+              -1442.425,
+              -78.646,
+              -80.334
+            ],
+            [
+              -1422.425,
+              -78.221,
+              -80.742
+            ],
+            [
+              -1402.425,
+              -77.791,
+              -81.147
+            ],
+            [
+              -1382.425,
+              -77.358,
+              -81.548
+            ],
+            [
+              -1362.425,
+              -76.921,
+              -81.946
+            ],
+            [
+              -1342.425,
+              -85.197,
+              -89.838
+            ],
+            [
+              -1322.425,
+              -93.893,
+              -97.447
+            ],
+            [
+              -1302.425,
+              -94.958,
+              -97.881
+            ],
+            [
+              -1282.425,
+              -95.359,
+              -97.688
+            ],
+            [
+              -1262.425,
+              -95.76,
+              -97.496
+            ],
+            [
+              -1242.425,
+              -96.16,
+              -97.304
+            ],
+            [
+              -1222.425,
+              -96.559,
+              -97.113
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 25.07487811099986,
+            "seam": "seam_RBA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 53.63370669300002,
+            "seam": "seam_RBF"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.105241669736152,
+            "max": 158.38255691871646
+          },
+          "root_point_to_skin_gap_mm_max": 0.3491796596487931,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 31.063,
+            "label": "booster_r19_RBA_2312_fastener_1",
+            "at_x_mm": -1482.4251218890001,
+            "at_arc_from_root_mm": 12.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.31,
+            "nearest_detail_to_band": "booster_r19_RBA_2312_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.828,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.4251218890001,
+                -1204.4251218890001
+              ]
+            }
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.106087639075405,
+            "max": 158.38232350847784
+          },
+          "root_point_to_skin_gap_mm_max": 0.3485256723651252,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 27.444,
+            "label": "panel BY1 (round, clock 180)",
+            "at_x_mm": -1476.4251218890001,
+            "at_arc_from_root_mm": 30.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.321,
+            "nearest_detail_to_band": "booster_r19_RBA_2188_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.838,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.4251218890001,
+                -1204.4251218890001
+              ]
+            }
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved",
+        "fairing"
+      ]
+    },
+    {
+      "leaf": "booster_fin_fairing_4",
+      "stage": "booster",
+      "clock_deg": 315.0,
+      "fin_leaf_bbox_mm": [
+        [
+          -1482.925,
+          -133.926,
+          65.512
+        ],
+        [
+          -1123.333,
+          -65.512,
+          133.926
+        ]
+      ],
+      "root_footprint": {
+        "blade_face_ids": [
+          0,
+          1,
+          2,
+          3,
+          7
+        ],
+        "fairing_face_ids": [
+          4,
+          6,
+          8,
+          9,
+          10
+        ],
+        "base_face_ids": [
+          5
+        ],
+        "x_range_mm": [
+          -1482.925,
+          -1203.634
+        ],
+        "source": "blade faces (|n.tangent| > 0.98, reach > 175 mm radius) of the fin+fairing leaf",
+        "measured_station_x_mm": [
+          -1482.43,
+          -1204.43
+        ],
+        "root_chord_mm": 279.291,
+        "thickness_at_root_mm": {
+          "max": 7.697,
+          "at_x_mm": -1352.43,
+          "min_measured": 0.029,
+          "profile_every_10mm": [
+            [
+              -1482.4,
+              0.029
+            ],
+            [
+              -1472.4,
+              0.619
+            ],
+            [
+              -1462.4,
+              1.208
+            ],
+            [
+              -1452.4,
+              1.797
+            ],
+            [
+              -1442.4,
+              2.387
+            ],
+            [
+              -1432.4,
+              2.976
+            ],
+            [
+              -1422.4,
+              3.566
+            ],
+            [
+              -1412.4,
+              4.156
+            ],
+            [
+              -1402.4,
+              4.746
+            ],
+            [
+              -1392.4,
+              5.336
+            ],
+            [
+              -1382.4,
+              5.926
+            ],
+            [
+              -1372.4,
+              6.516
+            ],
+            [
+              -1362.4,
+              7.106
+            ],
+            [
+              -1352.4,
+              7.697
+            ],
+            [
+              -1342.4,
+              6.564
+            ],
+            [
+              -1332.4,
+              5.72
+            ],
+            [
+              -1322.4,
+              5.026
+            ],
+            [
+              -1312.4,
+              4.555
+            ],
+            [
+              -1302.4,
+              4.134
+            ],
+            [
+              -1292.4,
+              3.714
+            ],
+            [
+              -1282.4,
+              3.294
+            ],
+            [
+              -1272.4,
+              2.874
+            ],
+            [
+              -1262.4,
+              2.455
+            ],
+            [
+              -1252.4,
+              2.037
+            ],
+            [
+              -1242.4,
+              1.618
+            ],
+            [
+              -1232.4,
+              1.2
+            ],
+            [
+              -1222.4,
+              0.783
+            ],
+            [
+              -1212.4,
+              0.366
+            ]
+          ]
+        },
+        "blade_mid_plane_offset_mm": {
+          "min": -0.0,
+          "max": 0.0
+        },
+        "root_outline_samples": {
+          "plus_tangent": [
+            [
+              -1482.425,
+              -79.487,
+              79.508
+            ],
+            [
+              -1462.425,
+              -79.069,
+              79.923
+            ],
+            [
+              -1442.425,
+              -78.646,
+              80.334
+            ],
+            [
+              -1422.425,
+              -78.221,
+              80.742
+            ],
+            [
+              -1402.425,
+              -77.791,
+              81.147
+            ],
+            [
+              -1382.425,
+              -77.358,
+              81.548
+            ],
+            [
+              -1362.425,
+              -76.921,
+              81.946
+            ],
+            [
+              -1342.425,
+              -85.197,
+              89.838
+            ],
+            [
+              -1322.425,
+              -93.893,
+              97.447
+            ],
+            [
+              -1302.425,
+              -94.958,
+              97.881
+            ],
+            [
+              -1282.425,
+              -95.359,
+              97.688
+            ],
+            [
+              -1262.425,
+              -95.76,
+              97.496
+            ],
+            [
+              -1242.425,
+              -96.16,
+              97.304
+            ],
+            [
+              -1222.425,
+              -96.559,
+              97.113
+            ]
+          ],
+          "minus_tangent": [
+            [
+              -1482.425,
+              -79.508,
+              79.487
+            ],
+            [
+              -1462.425,
+              -79.923,
+              79.069
+            ],
+            [
+              -1442.425,
+              -80.334,
+              78.646
+            ],
+            [
+              -1422.425,
+              -80.742,
+              78.221
+            ],
+            [
+              -1402.425,
+              -81.147,
+              77.791
+            ],
+            [
+              -1382.425,
+              -81.548,
+              77.358
+            ],
+            [
+              -1362.425,
+              -81.946,
+              76.921
+            ],
+            [
+              -1342.425,
+              -89.838,
+              85.197
+            ],
+            [
+              -1322.425,
+              -97.447,
+              93.893
+            ],
+            [
+              -1302.425,
+              -97.881,
+              94.958
+            ],
+            [
+              -1282.425,
+              -97.688,
+              95.359
+            ],
+            [
+              -1262.425,
+              -97.496,
+              95.76
+            ],
+            [
+              -1242.425,
+              -97.304,
+              96.16
+            ],
+            [
+              -1222.425,
+              -97.113,
+              96.559
+            ]
+          ]
+        },
+        "root_end_seam_clearance_mm": {
+          "aft": {
+            "axial_clearance_mm": 25.0748781289999,
+            "seam": "seam_RBA"
+          },
+          "fwd": {
+            "axial_clearance_mm": 53.63370669300002,
+            "seam": "seam_RBF"
+          }
+        }
+      },
+      "sides": {
+        "plus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.105241668212383,
+            "max": 158.38255691682994
+          },
+          "root_point_to_skin_gap_mm_max": 0.34917965731604556,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 31.063,
+            "label": "booster_r19_RBA_3212_fastener_1",
+            "at_x_mm": -1482.425121871,
+            "at_arc_from_root_mm": 12.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.31,
+            "nearest_detail_to_band": "booster_r19_RBA_3212_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.828,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.425121871,
+                -1204.425121871
+              ]
+            }
+          }
+        },
+        "minus_tangent": {
+          "skin_face_types_hit": {
+            "CYLINDER": 4659,
+            "BSPLINE": 3741
+          },
+          "skin_sources_hit": {
+            "booster_body": 4659,
+            "fairing": 3741
+          },
+          "flat_extent_from_root_mm": {
+            "min": 0.5,
+            "max": 24.0,
+            "note": "arc length from root edge before the in-section direction turns > 2 deg"
+          },
+          "in_section_turn_over_30mm_deg": {
+            "min": 24.10608764004654,
+            "max": 158.38232351166715
+          },
+          "root_point_to_skin_gap_mm_max": 0.3485256757250928,
+          "walk_shorter_than_band": [],
+          "band_area_mm2": 8540.0,
+          "free_area_mm2": 8540.0,
+          "nearest_detail": {
+            "clearance_mm": 31.063,
+            "label": "booster_r19_RBA_3088_fastener_1",
+            "at_x_mm": -1482.425121871,
+            "at_arc_from_root_mm": 12.0
+          },
+          "root_station_nearest_seam": {
+            "axial_clearance_mm": 25.575,
+            "seam": "seam_RBA"
+          },
+          "collar_band_3mm": {
+            "band_definition": "3.0 mm band on the adjacent skin starting at the root edge, full root length",
+            "min_detail_clearance_band_mm": 32.321,
+            "nearest_detail_to_band": "booster_r19_RBA_3088_fastener_1",
+            "min_detail_clearance_band_plus_2mm_zone_mm": 31.838,
+            "seam_axial_clearance_mm": 25.575,
+            "seam": "seam_RBA",
+            "fits": true,
+            "fairing_arc_beside_root_mm": {
+              "stations_on_fairing": 74,
+              "stations_on_body_only": 66,
+              "min": 3.5,
+              "max": 30.0,
+              "x_range_on_fairing": [
+                -1350.425121871,
+                -1204.425121871
+              ]
+            }
+          }
+        }
+      },
+      "adjacent_skin_within_30mm": [
+        "curved",
+        "fairing"
+      ]
+    }
+  ],
+  "limitations": [
+    "Free area is a sampled estimate: stations every 2 mm in X, 0.5 mm arc steps across the skin.",
+    "Engraved panels are not separate leaves; their outlines come from the metadata plan and are re-projected onto the saved skin.",
+    "Clearance to leaves is exact B-rep point distance at sample points; between samples it can be up to ~1 mm smaller."
+  ]
+}

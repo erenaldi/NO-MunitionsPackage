@@ -1,0 +1,96 @@
+[
+ {
+  "input": "STEP/halberd_r19_fin_roots_main_focus.step",
+  "mode": "view",
+  "outputs": [
+   {
+    "path": "reviews/R19_fin_roots_main_face.png",
+    "camera": {
+     "direction": [
+      0.3,
+      1,
+      -1
+     ]
+    }
+   },
+   {
+    "path": "reviews/R19_fin_roots_main_outboard.png",
+    "camera": {
+     "direction": [
+      0.5,
+      0.7,
+      0.7
+     ]
+    }
+   },
+   {
+    "path": "reviews/R19_fin_roots_main_grazing.png",
+    "camera": {
+     "direction": [
+      0.96,
+      -0.17,
+      0.18
+     ]
+    }
+   }
+  ],
+  "output": {
+   "viewLabels": false,
+   "padding": 0.04,
+   "sizeProfile": "diagnostic"
+  },
+  "quality": {
+   "tessellation": {
+    "chordTolerance": 5e-05,
+    "angleTolerance": 0.05
+   }
+  }
+ },
+ {
+  "input": "STEP/halberd_r19_fin_roots_booster_focus.step",
+  "mode": "view",
+  "outputs": [
+   {
+    "path": "reviews/R19_fin_roots_booster_face.png",
+    "camera": {
+     "direction": [
+      0.3,
+      1,
+      -1
+     ]
+    }
+   },
+   {
+    "path": "reviews/R19_fin_roots_booster_outboard.png",
+    "camera": {
+     "direction": [
+      0.5,
+      0.7,
+      0.7
+     ]
+    }
+   },
+   {
+    "path": "reviews/R19_fin_roots_booster_grazing.png",
+    "camera": {
+     "direction": [
+      0.96,
+      -0.17,
+      0.18
+     ]
+    }
+   }
+  ],
+  "output": {
+   "viewLabels": false,
+   "padding": 0.04,
+   "sizeProfile": "diagnostic"
+  },
+  "quality": {
+   "tessellation": {
+    "chordTolerance": 5e-05,
+    "angleTolerance": 0.05
+   }
+  }
+ }
+]

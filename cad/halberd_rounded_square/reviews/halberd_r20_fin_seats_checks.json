@@ -1,0 +1,212 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "failure_count": 0,
+  "document_hash": "9528bc6b4c9f200946941145575579828afcd0a9742c82b917ee6cbda775ac26",
+  "reference_r19_hash": "378e3c8930f4f2611a3225397831e8d7c5b0771624a0f04d7ecb9007a2dcc297",
+  "leaves": 359,
+  "r19_leaves": 335,
+  "seats": 8,
+  "heads": 16,
+  "host_gain_mm3": 0.0,
+  "host_removed_mm3": 744.1995123710401,
+  "host_volume_delta_mm3": 744.820703625679,
+  "removed_solids": 8,
+  "per_seat": {
+    "main_r20_F07_1m": {
+      "removed_mm3": 93.02493914097407,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    },
+    "main_r20_F07_1p": {
+      "removed_mm3": 93.02493895631076,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    },
+    "main_r20_F07_2m": {
+      "removed_mm3": 93.02493912728612,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    },
+    "main_r20_F07_2p": {
+      "removed_mm3": 93.02493896006287,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    },
+    "main_r20_F07_3m": {
+      "removed_mm3": 93.02493914578952,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    },
+    "main_r20_F07_3p": {
+      "removed_mm3": 93.02493896053137,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    },
+    "main_r20_F07_4m": {
+      "removed_mm3": 93.02493912853338,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    },
+    "main_r20_F07_4p": {
+      "removed_mm3": 93.02493895155199,
+      "land": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      },
+      "facet": {
+        "open_0.3": true,
+        "floor_before_0.75": true,
+        "no_host_at_0.5": true,
+        "cover_at_0.4": true,
+        "clear_at_0.1": true
+      }
+    }
+  },
+  "clearance_mm": {
+    "main_r20_F07_1m": {
+      "visible_fin_mm": 2.2307495912846824,
+      "nearest_detail_mm": 181.11521095450965,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 58.609820521330406
+    },
+    "main_r20_F07_1p": {
+      "visible_fin_mm": 2.2307495912846824,
+      "nearest_detail_mm": 181.11521095450968,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 74.82358411652181
+    },
+    "main_r20_F07_2m": {
+      "visible_fin_mm": 2.2307495912873345,
+      "nearest_detail_mm": 181.11521095451133,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 59.23410993692246
+    },
+    "main_r20_F07_2p": {
+      "visible_fin_mm": 2.230749591261139,
+      "nearest_detail_mm": 181.1152109544978,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 73.03117444976634
+    },
+    "main_r20_F07_3m": {
+      "visible_fin_mm": 2.230749591265166,
+      "nearest_detail_mm": 181.1152109544965,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 102.48183435538748
+    },
+    "main_r20_F07_3p": {
+      "visible_fin_mm": 2.230749591265176,
+      "nearest_detail_mm": 181.1152109544965,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 97.04528972280335
+    },
+    "main_r20_F07_4m": {
+      "visible_fin_mm": 2.230749591261139,
+      "nearest_detail_mm": 181.11521095449785,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 61.109267306680344
+    },
+    "main_r20_F07_4p": {
+      "visible_fin_mm": 2.2307495912873345,
+      "nearest_detail_mm": 181.11521095451133,
+      "nearest_detail": null,
+      "seam_axial_mm": 116.2765641871,
+      "panel_outline_mm": 62.37934580321653
+    }
+  },
+  "panel_outline_points_checked": 328
+}

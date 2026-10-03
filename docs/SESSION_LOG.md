@@ -2,6 +2,16 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-10-03 — Halberd F07 main-fin seats (R20) built and accepted; F08 (R21) stopped for slowness; lessons saved
+
+- User direction: continue from R19 (R18 acceptance dropped as a separate step). Fin-root feasibility measured (`checks/measure_fin_roots_r19.py` -> `reviews/halberd_r19_fin_roots.json`, `reviews/R19_fin_roots_feasibility.md`): 20x8 seat fits on all 4 main fins, 3 mm band on all 4 booster fins. Close-up crops `src/halberd_r19_fin_roots_focus.py`, `reviews/R19_fin_roots_*.png`.
+- F07 built as R20 by the cad-builder agent: `src/halberd_r20_fin_seats.py` -> `STEP/halberd_r20_fin_seats.step`; 8 seats, 16 slotted heads, folded over a crease 5.8-6.6 mm from the root (design deviation). Checker `checks/check_halberd_r20_fin_seats.py` PASS (`reviews/halberd_r20_fin_seats_checks.json`, 0 failures); STEP sha256 equals its sidecar hash `9528bc6b...`. Primary inspected the renders `reviews/R20_fin_seats_*.png`; **user accepted R20 ("Fantastic")**. Visuals note: seats read small/bracket-like at normal size.
+- F08 (R21, 8 bands, 258 rows each) was stopped by the user after ~120 min. Partial, superseded, kept for reference: `STEP/halberd_r21_booster_collars.step` (59 MB, 10,719 faces vs 6,247 in R20), `src/halberd_r21_booster_collars*.py`, `checks/check_halberd_r21_booster_collars.py`. Its checker did not finish in 15 min (validity 243 s, hosts 258 s, probes unfinished). No R21 renders or checker result exist; do not treat R21 as built.
+- Cause analysis (transcript timing, file timestamps; see `~/.claude/lessons/cad.md`, "Delegated CAD passes"): 98 of 120 min were shell commands, 7 hit the 10-min cap; bundled brief, no time budget, whole-body tests, new geometry code with one face per 1-2 mm station. Catalog F08 says one assembly per fin; R21 built two bands per fin.
+- Workflow fixes made (outside the repo): `cad-builder` agent now carries a time-budget rule (installed, `install.mjs --check` in sync, 154/154 tests pass); new `~/agent-workflow/templates/cad-pass-brief.md`; prepared, undispatched brief `~/agent-workflow/runs/F08_one_fin_prototype.md`. Preference saved: any CAD mention needs a viewer link plus a render of the exact revision.
+- Environment: this worktree checks out STEP files with converted line endings, so cadgen refuses R19 here against its sidecar; render and read R19 from the main copy (STEPs built in the worktree are self-consistent).
+- Next: user says go for the one-fin F08 prototype (single band per fin, <= 60 faces, local-crop checker < 3 min), or another gate (F06, F09/F12, export). Nothing pushed.
+
 ## 2026-10-02 — New workflow configured; Halberd pickup brief written for a fresh Claude session
 
 - User asked for a fresh Claude session that picks up the Halberd session's context, configured for the new orchestrated workflow (shared source `C:\Users\erena\agent-workflow\`: 13 agents, `/orchestrate`, `roster.md`).
