@@ -6,7 +6,12 @@ import math
 from dataclasses import dataclass
 from pathlib import Path
 
-from cadgen import build123d as bd, declare_input, read_scene, srgb
+from cadgen import build123d as bd, read_scene, srgb
+try:
+    from cadgen import declare_input
+except ImportError:  # cadgen >= 0.7.10 traces input reads itself
+    def declare_input(_path):
+        return None
 
 from halberd_r17_interface_shapes import (
     FASTENER_BORE_RADIUS,

@@ -38,7 +38,12 @@ import os
 import sys
 from pathlib import Path
 
-from cadgen import build123d as bd, declare_input, read_scene, srgb, step
+from cadgen import build123d as bd, read_scene, srgb, step
+try:
+    from cadgen import declare_input
+except ImportError:  # cadgen >= 0.7.10 traces input reads itself
+    def declare_input(_path):
+        return None
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "shared"))
 from surface_detail import checked_cut, clock_frame, seated_hardware, skin_point  # noqa: E402

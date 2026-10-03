@@ -2,6 +2,13 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-10-03 (runtime) — cadgen 0.7.10 removed `declare_input`; sources adapted; F08 one-fin prototype R21p built
+
+- The cad plugin upgraded the venv from cadgen 0.7.2 to 0.7.10 (package dated 10-03 17:43; the skill's `requirements.txt` now pins 0.7.11). Only `declare_input` is gone (`read_scene`, `step`, `build123d`, `srgb` import fine; cadgen now traces input reads itself). Ten Halberd sources imported it; each now has a try/except fallback (no-op on 0.7.10+): `src/halberd_r17*.py` (6), `halberd_r18_access_shapes.py`, `halberd_r20_fin_seats.py`, plus the untracked R21 and R21p sources.
+- Verified: all those modules import; rebuilding `halberd_r17_main_fin_focus` with `--force` gave identical geometry (7 leaves, same labels, volumes and bboxes equal, 78 faces both); only the STEP bytes differ (newer writer). Side effect found and undone: that rebuild also overwrote the preserved R12, R13, R15, R16 STEP and sidecar files; restored with `git checkout`, bytes equal to the committed originals. Lesson recorded: never rebuild old models in the working tree.
+- F08 one-fin prototype `src/halberd_r21p_booster_band.py` -> `STEP/halberd_r21p_booster_band.step` (booster fin 1, a band on both sides of the blade): builder 133 s, +26 faces (fin 12->20, body 416->434), STEP +2.43 MB. Precise old-new volumes: body -286.081 mm3, fin -294.481 mm3, nothing gained; other leaves unchanged (main host differs 0.004 mm3 precise). Renders `reviews/R21p_band_*.png` inspected by primary: parting line reads in close-ups, faint at full-missile size. Not user-reviewed; its checker still lives only in a session scratchpad and debug prints remain; builder was stopped at its 30 min reporting limit as briefed. Prototype files left uncommitted.
+- Next: user decides on the R21p look (accept / bolder / redesign), then a saved crop-based checker and fins 2-4.
+
 ## 2026-10-03 (latest) — Codex topology diagnosis confirmed; sectioned cuts benchmarked
 
 - Codex handoff (`C:\Users\erena\Documents\Codex\2026-10-03\can\outputs\claude-cad-topology-handoff.md`): cutting every detail sequentially into the long body leaves makes each Boolean slower and bloats the host. Rechecked on disk: `halberd_r19_surface.py:783-784` is that sequential `checked_cut` loop; saved R19 hosts have 1,589 (main) / 416 (booster) faces; Kris hybrid STEP is 3,994,763 bytes. R20 (main 1,589 -> 2,061) and R21 (booster 416 -> 2,240) repeated the pattern. Codex's own timings were not re-verified.

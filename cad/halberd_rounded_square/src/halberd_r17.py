@@ -1,4 +1,9 @@
-from cadgen import declare_input, step
+from cadgen import step
+try:
+    from cadgen import declare_input
+except ImportError:  # cadgen >= 0.7.10 traces input reads itself
+    def declare_input(_path):
+        return None
 
 from halberd_r17_shapes import BASELINE_STEP, MATERIALS, build_r17
 

@@ -66,16 +66,9 @@ def crop_scene(saved, clip, label):
     return bd.Compound(children=kept, label=label)
 
 
-def build_crop(saved, clip, label, out):
-    """Write the cropped STEP to `out` (path) and return it. Applies cadgen's @step at call time."""
-    out = Path(out).resolve()
-
-    def model():
-        return crop_scene(saved, clip, label)
-
-    model.__name__ = label.lower()
-    step(out=os.path.relpath(out, Path(sys.argv[0]).resolve().parent))(model)()
-    return out
+# NOTE: there is no build_crop(). cadgen needs a module-level @step-decorated model in the script that runs,
+# so write a tiny crop script per pass (pattern: cad/halberd_rounded_square/src/halberd_r19_fin_roots_focus.py)
+# whose model returns crop_scene(saved, clip, label); a dynamic wrapper fails with "declares no CAD model".
 
 
 def snapshot_jobs(crops, views=None):
