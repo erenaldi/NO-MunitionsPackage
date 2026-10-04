@@ -1,0 +1,9 @@
+{
+  "source_step": "STEP\\r24_booster_seats.step",
+  "source_document_hash": "874347938d8ffc9404fdd2574d2339053737c17abd2379c986585537a217ee7f",
+  "color": "#52342C",
+  "recoloured": [
+    "main_nozzle_dark_recess",
+    "booster_nozzle_dark_recess"
+  ]
+}

@@ -2,6 +2,14 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-10-04 — Halberd rear-fin seats (R24) and nozzle recess colour (R26) accepted; model declared complete by the user
+
+- R24 (accepted): fold-over-lip seats on the four booster fin fairings, built from the R24p one-fin prototype (`cad/halberd_rounded_square/src/halberd_r24p_flank_lip_seats.py`, `halberd_r24_booster_seats.py`; checker `checks/check_halberd_r24_booster_seats.py` PASS; `STEP/r24_booster_seats.step`). Builder time about 15 min for 8 seats versus 81-120 min earlier, after host sectioning and shared helpers.
+- R26 (accepted): colour-only pass on R24, `src/halberd_r26_nozzle_recess.py` -> `STEP/r26_nozzle_recess.step`. The booster and 2nd-stage nozzle dark recess leaves are `#52342C` (user-picked from shade D `#5A3A32`, slightly darker); outside skirt and dark floors keep their R24 colours. Geometry unchanged. The 2nd-stage recess is a closed cavity behind the stage joint face and is not visible in any view. Renders: `reviews/R26_whole_aft.png`, `R26_aft_oblique.png`, `R26_aft_rear.png`, `R26_tone_compare.png`.
+- Verified: R26 build reads only the saved R24 STEP and fails if the recess leaves are missing; renders inspected directly. No separate R26 geometry checker was run.
+- Not committed, rejected or superseded prototypes: R21/R21p (parting band, rejected), R22p (body-corner seats), R23p (flank seats below the lip), R25 (coloured the outside skirt, wrong). Scratch tone tests `r26t_*`.
+- Status: CAD gate accepted by the user. Export, Unity integration and in-engine capture remain pending and unverified.
+
 ## 2026-10-03 (runtime) — cadgen 0.7.10 removed `declare_input`; sources adapted; F08 one-fin prototype R21p built
 
 - The cad plugin upgraded the venv from cadgen 0.7.2 to 0.7.10 (package dated 10-03 17:43; the skill's `requirements.txt` now pins 0.7.11). Only `declare_input` is gone (`read_scene`, `step`, `build123d`, `srgb` import fine; cadgen now traces input reads itself). Ten Halberd sources imported it; each now has a try/except fallback (no-op on 0.7.10+): `src/halberd_r17*.py` (6), `halberd_r18_access_shapes.py`, `halberd_r20_fin_seats.py`, plus the untracked R21 and R21p sources.

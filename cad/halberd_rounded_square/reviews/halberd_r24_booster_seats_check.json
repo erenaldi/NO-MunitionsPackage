@@ -1,0 +1,541 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "document_hash": "874347938d8ffc9404fdd2574d2339053737c17abd2379c986585537a217ee7f",
+  "reference_r24p_hash": "72640fe689fafb89427b6ac08c1452427f907a8c94d9205528a05130262bbfce",
+  "leaves": 383,
+  "r24p_leaves": 365,
+  "new_leaves": [
+    "booster_r24_F11_2m_cover",
+    "booster_r24_F11_2m_fastener_1",
+    "booster_r24_F11_2m_fastener_2",
+    "booster_r24_F11_2p_cover",
+    "booster_r24_F11_2p_fastener_1",
+    "booster_r24_F11_2p_fastener_2",
+    "booster_r24_F11_3m_cover",
+    "booster_r24_F11_3m_fastener_1",
+    "booster_r24_F11_3m_fastener_2",
+    "booster_r24_F11_3p_cover",
+    "booster_r24_F11_3p_fastener_1",
+    "booster_r24_F11_3p_fastener_2",
+    "booster_r24_F11_4m_cover",
+    "booster_r24_F11_4m_fastener_1",
+    "booster_r24_F11_4m_fastener_2",
+    "booster_r24_F11_4p_cover",
+    "booster_r24_F11_4p_fastener_1",
+    "booster_r24_F11_4p_fastener_2"
+  ],
+  "covers": [
+    "booster_r24_F11_2m_cover",
+    "booster_r24_F11_2p_cover",
+    "booster_r24_F11_3m_cover",
+    "booster_r24_F11_3p_cover",
+    "booster_r24_F11_4m_cover",
+    "booster_r24_F11_4p_cover",
+    "booster_r24p_F11_1m_cover",
+    "booster_r24p_F11_1p_cover"
+  ],
+  "heads": 16,
+  "heads_per_seat": {
+    "booster_r24_F11_2m": 2,
+    "booster_r24_F11_2p": 2,
+    "booster_r24_F11_3m": 2,
+    "booster_r24_F11_3p": 2,
+    "booster_r24_F11_4m": 2,
+    "booster_r24_F11_4p": 2,
+    "booster_r24p_F11_1m": 2,
+    "booster_r24p_F11_1p": 2
+  },
+  "fin1_unchanged_vs_r24p": true,
+  "unchanged_failures": [],
+  "precise_volume_rechecks_mm3": {
+    "main_body_intake_r12": 2.7120113372802734e-06
+  },
+  "new_parts": {
+    "booster_r24_F11_2m_cover": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 61.59475600675144,
+      "faces": 25
+    },
+    "booster_r24_F11_2m_fastener_1": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.740068994661085,
+      "faces": 9
+    },
+    "booster_r24_F11_2m_fastener_2": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.740068994661087,
+      "faces": 9
+    },
+    "booster_r24_F11_2p_cover": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 61.594756035547256,
+      "faces": 25
+    },
+    "booster_r24_F11_2p_fastener_1": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610832,
+      "faces": 9
+    },
+    "booster_r24_F11_2p_fastener_2": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610868,
+      "faces": 9
+    },
+    "booster_r24_F11_3m_cover": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 61.59475600865227,
+      "faces": 25
+    },
+    "booster_r24_F11_3m_fastener_1": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610854,
+      "faces": 9
+    },
+    "booster_r24_F11_3m_fastener_2": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610863,
+      "faces": 9
+    },
+    "booster_r24_F11_3p_cover": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 61.59475605302028,
+      "faces": 25
+    },
+    "booster_r24_F11_3p_fastener_1": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610832,
+      "faces": 9
+    },
+    "booster_r24_F11_3p_fastener_2": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610868,
+      "faces": 9
+    },
+    "booster_r24_F11_4m_cover": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 61.59475602720317,
+      "faces": 25
+    },
+    "booster_r24_F11_4m_fastener_1": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.740068994661085,
+      "faces": 9
+    },
+    "booster_r24_F11_4m_fastener_2": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610877,
+      "faces": 9
+    },
+    "booster_r24_F11_4p_cover": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 61.59475604887311,
+      "faces": 25
+    },
+    "booster_r24_F11_4p_fastener_1": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.740068994661084,
+      "faces": 9
+    },
+    "booster_r24_F11_4p_fastener_2": {
+      "valid": true,
+      "solids": 1,
+      "closed": true,
+      "check": true,
+      "volume_mm3": 3.7400689946610868,
+      "faces": 9
+    }
+  },
+  "fins": {
+    "booster_fin_fairing_2": {
+      "removed_mm3": 221.55288609292086,
+      "gained_mm3": 0.0,
+      "removed_solids": 2,
+      "faces": [
+        12,
+        56
+      ],
+      "crop": {
+        "valid": true,
+        "closed": true,
+        "check": true,
+        "faces": [
+          10,
+          54
+        ]
+      }
+    },
+    "booster_fin_fairing_3": {
+      "removed_mm3": 221.55288608459534,
+      "gained_mm3": 0.0,
+      "removed_solids": 2,
+      "faces": [
+        12,
+        56
+      ],
+      "crop": {
+        "valid": true,
+        "closed": true,
+        "check": true,
+        "faces": [
+          10,
+          54
+        ]
+      }
+    },
+    "booster_fin_fairing_4": {
+      "removed_mm3": 221.55288608572585,
+      "gained_mm3": 0.0,
+      "removed_solids": 2,
+      "faces": [
+        12,
+        56
+      ],
+      "crop": {
+        "valid": true,
+        "closed": true,
+        "check": true,
+        "faces": [
+          10,
+          54
+        ]
+      }
+    }
+  },
+  "per_seat": {
+    "booster_r24_F11_2m": {
+      "removed_mm3": 110.77644305003123,
+      "solids": 1
+    },
+    "booster_r24_F11_2p": {
+      "removed_mm3": 110.77644304288964,
+      "solids": 1
+    },
+    "booster_r24_F11_3m": {
+      "removed_mm3": 110.77644304249364,
+      "solids": 1
+    },
+    "booster_r24_F11_3p": {
+      "removed_mm3": 110.7764430421017,
+      "solids": 1
+    },
+    "booster_r24_F11_4m": {
+      "removed_mm3": 110.7764430427553,
+      "solids": 1
+    },
+    "booster_r24_F11_4p": {
+      "removed_mm3": 110.77644304297054,
+      "solids": 1
+    }
+  },
+  "probes": {
+    "booster_r24_F11_2m": {
+      "ledge_fwd": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_mid": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low_aft": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      }
+    },
+    "booster_r24_F11_2p": {
+      "ledge_fwd": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_mid": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low_aft": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      }
+    },
+    "booster_r24_F11_3m": {
+      "ledge_fwd": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_mid": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low_aft": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      }
+    },
+    "booster_r24_F11_3p": {
+      "ledge_fwd": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_mid": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low_aft": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      }
+    },
+    "booster_r24_F11_4m": {
+      "ledge_fwd": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_mid": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low_aft": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      }
+    },
+    "booster_r24_F11_4p": {
+      "ledge_fwd": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_mid": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      },
+      "flank_low_aft": {
+        "open_0.3": true,
+        "floor_0.75": true,
+        "no_host_0.5": true,
+        "cover_0.4": true,
+        "clear_0.1": true
+      }
+    }
+  },
+  "head_centre_to_lip_mm": {
+    "booster_r24_F11_2m": [
+      2.3991555098701336,
+      2.399138358869039
+    ],
+    "booster_r24_F11_2p": [
+      2.3991555098721307,
+      2.3991383588710242
+    ],
+    "booster_r24_F11_3m": [
+      2.399155509871681,
+      2.3991383588705646
+    ],
+    "booster_r24_F11_3p": [
+      2.3991555098716932,
+      2.3991383588705366
+    ],
+    "booster_r24_F11_4m": [
+      2.399155509872157,
+      2.3991383588710504
+    ],
+    "booster_r24_F11_4p": [
+      2.3991555098701847,
+      2.3991383588689748
+    ]
+  },
+  "clearance_mm": {
+    "booster_r24_F11_2m": {
+      "fin_crease_ledge_blade_mm": 2.2505560061081553,
+      "other_leaves_incl_body_and_other_seat_mm": ">= 5.0",
+      "other_leaves_clipped": 3
+    },
+    "booster_r24_F11_2p": {
+      "fin_crease_ledge_blade_mm": 2.250556006113852,
+      "other_leaves_incl_body_and_other_seat_mm": ">= 5.0",
+      "other_leaves_clipped": 3
+    },
+    "booster_r24_F11_3m": {
+      "fin_crease_ledge_blade_mm": 2.250556006101127,
+      "other_leaves_incl_body_and_other_seat_mm": ">= 5.0",
+      "other_leaves_clipped": 3
+    },
+    "booster_r24_F11_3p": {
+      "fin_crease_ledge_blade_mm": 2.2505560061064176,
+      "other_leaves_incl_body_and_other_seat_mm": ">= 5.0",
+      "other_leaves_clipped": 3
+    },
+    "booster_r24_F11_4m": {
+      "fin_crease_ledge_blade_mm": 2.2505560061054593,
+      "other_leaves_incl_body_and_other_seat_mm": ">= 5.0",
+      "other_leaves_clipped": 3
+    },
+    "booster_r24_F11_4p": {
+      "fin_crease_ledge_blade_mm": 2.2505560061124403,
+      "other_leaves_incl_body_and_other_seat_mm": ">= 5.0",
+      "other_leaves_clipped": 3
+    }
+  },
+  "stage_seconds": {
+    "start": 8.54,
+    "composition": 0.0,
+    "unchanged_leaves": 11.57,
+    "new_parts_valid": 10.43,
+    "fin2_host_volumes": 8.94,
+    "fin2_crop_validity": 4.78,
+    "fin2_probes": 3.24,
+    "fin2_clearance": 18.76,
+    "fin3_host_volumes": 1.58,
+    "fin3_crop_validity": 3.46,
+    "fin3_probes": 3.42,
+    "fin3_clearance": 18.9,
+    "fin4_host_volumes": 7.74,
+    "fin4_crop_validity": 5.04,
+    "fin4_probes": 3.66,
+    "fin4_clearance": 19.86,
+    "groups_materials": 0.0
+  }
+}
