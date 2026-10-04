@@ -51,7 +51,7 @@ def classify(label):
     raise ValueError(f"unclassified leaf label: {label}")
 
 
-HARDWARE_TESSELLATION = (0.3, 0.6)   # screws/covers: coarser (user-approved guidance), body keeps (TOLERANCE, ANGULAR)
+HARDWARE_TESSELLATION = None   # None = same tessellation as the body (user reverted the hardware coarsening, ~265k triangles)
 
 
 def to_unity(shape, tess):
@@ -84,7 +84,7 @@ def main():
     for leaf in leaves:
         shape = scene.resolve(leaf.ref).shape()
         base = classify(leaf.label)
-        mesh = to_unity(shape, HARDWARE_TESSELLATION if base.startswith("hardware") else (TOLERANCE, ANGULAR))
+        mesh = to_unity(shape, HARDWARE_TESSELLATION or (TOLERANCE, ANGULAR))
         check_mesh(mesh, leaf.label)
         c = shape.color
         key = "%02X%02X%02X" % tuple(int(round(max(0, min(1, x)) * 255)) for x in tuple(c)[:3]) if c else "none"

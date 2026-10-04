@@ -16,18 +16,18 @@ Each of the nine groups is split by color, because one Unity mesh carries one ma
 | body | upper | 3 | 95,488 |
 | intake_recess | upper | 8 | 272 |
 | sustainer_fins | upper | 4 | 48 |
-| hardware_main | upper | 249 | 47,000 |
+| hardware_main | upper | 249 | 93,736 |
 | sustainer_nozzle | upper | 2 | 790 |
 | booster_body | booster | 1 | 28,018 |
 | booster_fins | booster | 4 | 6,640 |
-| hardware_booster | booster | 110 | 18,876 |
+| hardware_booster | booster | 110 | 39,654 |
 | booster_nozzle | booster | 2 | 832 |
-| **Total** | | 383 | **197,964** |
+| **Total** | | 383 | **265,478** |
 
-Tessellation: body and fins 0.12 mm / 0.3 rad; hardware (fasteners, covers) 0.3 mm / 0.6 rad. This is the user-approved guidance for the budget decision (down from 265k). The single body leaf (about 94k triangles, from the surface panel and seam engraving) is now the dominant cost; coarsening it is the next lever if the budget must drop further.
+Tessellation: all parts 0.12 mm / 0.3 rad. The hardware-only coarsening (198k triangles) was tried and reverted by the user, who asked for the original triangle count and surface quality. The single body leaf (about 94k triangles, from the surface panel and seam engraving) is now the dominant cost; coarsening it is the next lever if the budget must drop further.
 
 ## Decisions
-1. Triangle budget: coarsen hardware only (done, ~198k). Shipping ceiling still to be confirmed at the engine gate.
+1. Triangle budget: original 265k kept (hardware coarsening reverted at user request). Visible faceting on the booster tail shroud and nose comes from the 0.3 rad angular tolerance on the shells (0.2 rad gives about 419k); not changed. Shipping ceiling still to be confirmed at the engine gate.
 2. Material slots: split by color (done, 8 slots).
 3. Runtime hierarchy: the user decided the runtime hierarchy is fixed to R26 (four fins and four intakes), not the shipped three-fin layout. Fin/intake child paths, the direct `Booster` child, colliders and the FX anchor are defined from R26 at the Unity gate. Not started.
 4. Gates still pending: export validation review, Unity import, engine capture, runtime test, fallback.

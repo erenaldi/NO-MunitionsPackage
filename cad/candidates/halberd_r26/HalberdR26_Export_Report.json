@@ -142,8 +142,8 @@
       "file": "HalberdR26_HardwareBooster_3E4A54.obj",
       "materialColorHex": "#3E4A54",
       "leaves": 99,
-      "vertices": 7042,
-      "triangles": 13692,
+      "vertices": 15358,
+      "triangles": 30324,
       "bounds": [
         [
           -0.09981999997486998,
@@ -161,8 +161,8 @@
       "file": "HalberdR26_HardwareBooster_636F79.obj",
       "materialColorHex": "#636F79",
       "leaves": 10,
-      "vertices": 2300,
-      "triangles": 4636,
+      "vertices": 4037,
+      "triangles": 8110,
       "bounds": [
         [
           -0.1001779751644,
@@ -180,8 +180,8 @@
       "file": "HalberdR26_HardwareBooster_76828B.obj",
       "materialColorHex": "#76828B",
       "leaves": 1,
-      "vertices": 276,
-      "triangles": 548,
+      "vertices": 612,
+      "triangles": 1220,
       "bounds": [
         [
           0.007,
@@ -199,16 +199,16 @@
       "file": "HalberdR26_HardwareMain_3E4A54.obj",
       "materialColorHex": "#3E4A54",
       "leaves": 225,
-      "vertices": 16001,
-      "triangles": 31110,
+      "vertices": 34901,
+      "triangles": 68910,
       "bounds": [
         [
           -0.10717240510991717,
-          -0.10943853486280354,
+          -0.1094388611947722,
           -1.123153333333
         ],
         [
-          0.10749149682706811,
+          0.10749176980092616,
           0.10919011509943803,
           1.07978
         ]
@@ -218,8 +218,8 @@
       "file": "HalberdR26_HardwareMain_636F79.obj",
       "materialColorHex": "#636F79",
       "leaves": 12,
-      "vertices": 6501,
-      "triangles": 13082,
+      "vertices": 9394,
+      "triangles": 18868,
       "bounds": [
         [
           -0.105070580018,
@@ -237,13 +237,13 @@
       "file": "HalberdR26_HardwareMain_76828B.obj",
       "materialColorHex": "#76828B",
       "leaves": 12,
-      "vertices": 1428,
-      "triangles": 2808,
+      "vertices": 3003,
+      "triangles": 5958,
       "bounds": [
         [
           -0.10149999997487,
           -0.10250000000000001,
-          -1.0349463270577017
+          -1.035080357143
         ],
         [
           0.10150000002512001,
@@ -356,7 +356,7 @@
     ],
     "maxRadialM": 0.21200462259111247,
     "stageSeamZM": -1.1233,
-    "triangles": 197964,
+    "triangles": 265478,
     "triangleCeiling": 1000000
   }
 }
