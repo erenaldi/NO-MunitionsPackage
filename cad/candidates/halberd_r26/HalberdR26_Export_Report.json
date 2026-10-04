@@ -5,16 +5,31 @@
   "toleranceMm": 0.12,
   "axisMap": "Unity=(CAD.Y,CAD.Z,CAD.X)*0.001",
   "groups": {
-    "body": {
-      "file": "HalberdR26_Body.obj",
-      "leaves": 3,
-      "colors": {
-        "#76828B": 1,
-        "#8B959D": 1,
-        "#3E4A54": 1
-      },
-      "vertices": 47748,
-      "triangles": 95488,
+    "body__3E4A54": {
+      "file": "HalberdR26_Body_3E4A54.obj",
+      "materialColorHex": "#3E4A54",
+      "leaves": 1,
+      "vertices": 168,
+      "triangles": 336,
+      "bounds": [
+        [
+          -0.09453491997277587,
+          -0.0948,
+          1.0837999999999999
+        ],
+        [
+          0.09453491997277587,
+          0.0948,
+          1.0849000000000002
+        ]
+      ]
+    },
+    "body__76828B": {
+      "file": "HalberdR26_Body_76828B.obj",
+      "materialColorHex": "#76828B",
+      "leaves": 1,
+      "vertices": 47262,
+      "triangles": 94520,
       "bounds": [
         [
           -0.11561195872400001,
@@ -24,104 +39,33 @@
         [
           0.11561195872400001,
           0.11561195872400001,
+          1.085
+        ]
+      ]
+    },
+    "body__8B959D": {
+      "file": "HalberdR26_Body_8B959D.obj",
+      "materialColorHex": "#8B959D",
+      "leaves": 1,
+      "vertices": 318,
+      "triangles": 632,
+      "bounds": [
+        [
+          -0.09499952913396853,
+          -0.095,
+          1.085
+        ],
+        [
+          0.09489411432621626,
+          0.09490776168816366,
           1.685
         ]
       ]
     },
-    "intake_recess": {
-      "file": "HalberdR26_IntakeRecess.obj",
-      "leaves": 8,
-      "colors": {
-        "#040608": 4,
-        "#000000": 4
-      },
-      "vertices": 120,
-      "triangles": 272,
-      "bounds": [
-        [
-          -0.09655244348309301,
-          -0.09655244348309301,
-          -0.4476739225656
-        ],
-        [
-          0.09655244348309301,
-          0.096552443483093,
-          -0.3649739225656
-        ]
-      ]
-    },
-    "sustainer_fins": {
-      "file": "HalberdR26_SustainerFins.obj",
-      "leaves": 4,
-      "colors": {
-        "#495660": 4
-      },
-      "vertices": 32,
-      "triangles": 48,
-      "bounds": [
-        [
-          -0.15089658710520928,
-          -0.15089658710520928,
-          -1.075
-        ],
-        [
-          0.15089658710520928,
-          0.15089658710520928,
-          -0.855
-        ]
-      ]
-    },
-    "hardware_main": {
-      "file": "HalberdR26_HardwareMain.obj",
-      "leaves": 249,
-      "colors": {
-        "#3E4A54": 225,
-        "#636F79": 12,
-        "#76828B": 12
-      },
-      "vertices": 47298,
-      "triangles": 93736,
-      "bounds": [
-        [
-          -0.10717240510991717,
-          -0.1094388611947722,
-          -1.123153333333
-        ],
-        [
-          0.10749176980092616,
-          0.10919011509943803,
-          1.07978
-        ]
-      ]
-    },
-    "sustainer_nozzle": {
-      "file": "HalberdR26_SustainerNozzle.obj",
-      "leaves": 2,
-      "colors": {
-        "#160906": 1,
-        "#000000": 1
-      },
-      "vertices": 399,
-      "triangles": 790,
-      "bounds": [
-        [
-          -0.05767072122184523,
-          -0.05783243243243,
-          -1.1143333333329999
-        ],
-        [
-          0.05767072122184523,
-          0.057832432432432,
-          -1.0803333333329999
-        ]
-      ]
-    },
-    "booster_body": {
-      "file": "HalberdR26_BoosterBody.obj",
+    "booster_body__636F79": {
+      "file": "HalberdR26_BoosterBody_636F79.obj",
+      "materialColorHex": "#636F79",
       "leaves": 1,
-      "colors": {
-        "#636F79": 1
-      },
       "vertices": 14011,
       "triangles": 28018,
       "bounds": [
@@ -137,12 +81,10 @@
         ]
       ]
     },
-    "booster_fins": {
-      "file": "HalberdR26_BoosterFins.obj",
+    "booster_fins__495660": {
+      "file": "HalberdR26_BoosterFins_495660.obj",
+      "materialColorHex": "#495660",
       "leaves": 4,
-      "colors": {
-        "#495660": 4
-      },
       "vertices": 3328,
       "triangles": 6640,
       "bounds": [
@@ -158,38 +100,31 @@
         ]
       ]
     },
-    "hardware_booster": {
-      "file": "HalberdR26_HardwareBooster.obj",
-      "leaves": 110,
-      "colors": {
-        "#636F79": 10,
-        "#3E4A54": 99,
-        "#76828B": 1
-      },
-      "vertices": 20007,
-      "triangles": 39654,
+    "booster_nozzle__000000": {
+      "file": "HalberdR26_BoosterNozzle_000000.obj",
+      "materialColorHex": "#000000",
+      "leaves": 1,
+      "vertices": 84,
+      "triangles": 164,
       "bounds": [
         [
-          -0.1001779751644,
-          -0.1001779751644,
-          -1.68482
+          -0.03220968264895212,
+          -0.032299999999999995,
+          -1.615
         ],
         [
-          0.10017797516444,
-          0.1015,
-          -1.136487
+          0.03220968264895212,
+          0.032299999999999995,
+          -1.614
         ]
       ]
     },
-    "booster_nozzle": {
-      "file": "HalberdR26_BoosterNozzle.obj",
-      "leaves": 2,
-      "colors": {
-        "#160906": 1,
-        "#000000": 1
-      },
-      "vertices": 420,
-      "triangles": 832,
+    "booster_nozzle__160906": {
+      "file": "HalberdR26_BoosterNozzle_160906.obj",
+      "materialColorHex": "#160906",
+      "leaves": 1,
+      "vertices": 336,
+      "triangles": 668,
       "bounds": [
         [
           -0.06368296864767767,
@@ -202,6 +137,215 @@
           -1.612
         ]
       ]
+    },
+    "hardware_booster__3E4A54": {
+      "file": "HalberdR26_HardwareBooster_3E4A54.obj",
+      "materialColorHex": "#3E4A54",
+      "leaves": 99,
+      "vertices": 7042,
+      "triangles": 13692,
+      "bounds": [
+        [
+          -0.09981999997486998,
+          -0.09981999999999999,
+          -1.68482
+        ],
+        [
+          0.09982000002512,
+          0.10132,
+          -1.136487
+        ]
+      ]
+    },
+    "hardware_booster__636F79": {
+      "file": "HalberdR26_HardwareBooster_636F79.obj",
+      "materialColorHex": "#636F79",
+      "leaves": 10,
+      "vertices": 2300,
+      "triangles": 4636,
+      "bounds": [
+        [
+          -0.1001779751644,
+          -0.1001779751644,
+          -1.4977
+        ],
+        [
+          0.10017797516444,
+          0.10017797516444,
+          -1.2206653111410002
+        ]
+      ]
+    },
+    "hardware_booster__76828B": {
+      "file": "HalberdR26_HardwareBooster_76828B.obj",
+      "materialColorHex": "#76828B",
+      "leaves": 1,
+      "vertices": 276,
+      "triangles": 548,
+      "bounds": [
+        [
+          0.007,
+          0.1,
+          -1.3780000000000001
+        ],
+        [
+          0.027,
+          0.1015,
+          -1.278
+        ]
+      ]
+    },
+    "hardware_main__3E4A54": {
+      "file": "HalberdR26_HardwareMain_3E4A54.obj",
+      "materialColorHex": "#3E4A54",
+      "leaves": 225,
+      "vertices": 16001,
+      "triangles": 31110,
+      "bounds": [
+        [
+          -0.10717240510991717,
+          -0.10943853486280354,
+          -1.123153333333
+        ],
+        [
+          0.10749149682706811,
+          0.10919011509943803,
+          1.07978
+        ]
+      ]
+    },
+    "hardware_main__636F79": {
+      "file": "HalberdR26_HardwareMain_636F79.obj",
+      "materialColorHex": "#636F79",
+      "leaves": 12,
+      "vertices": 6501,
+      "triangles": 13082,
+      "bounds": [
+        [
+          -0.105070580018,
+          -0.105070580018,
+          -0.9793730404291
+        ],
+        [
+          0.10507058001807999,
+          0.10507058001807999,
+          0.9697000000000001
+        ]
+      ]
+    },
+    "hardware_main__76828B": {
+      "file": "HalberdR26_HardwareMain_76828B.obj",
+      "materialColorHex": "#76828B",
+      "leaves": 12,
+      "vertices": 1428,
+      "triangles": 2808,
+      "bounds": [
+        [
+          -0.10149999997487,
+          -0.10250000000000001,
+          -1.0349463270577017
+        ],
+        [
+          0.10150000002512001,
+          0.10250000000000001,
+          0.6156696428571401
+        ]
+      ]
+    },
+    "intake_recess__000000": {
+      "file": "HalberdR26_IntakeRecess_000000.obj",
+      "materialColorHex": "#000000",
+      "leaves": 4,
+      "vertices": 48,
+      "triangles": 80,
+      "bounds": [
+        [
+          -0.09458925632362802,
+          -0.09458925632362802,
+          -0.4476739225656
+        ],
+        [
+          0.09458925632362802,
+          0.09458925632362801,
+          -0.4449739225656
+        ]
+      ]
+    },
+    "intake_recess__040608": {
+      "file": "HalberdR26_IntakeRecess_040608.obj",
+      "materialColorHex": "#040608",
+      "leaves": 4,
+      "vertices": 96,
+      "triangles": 192,
+      "bounds": [
+        [
+          -0.09655244348309301,
+          -0.09655244348309301,
+          -0.4449739225656
+        ],
+        [
+          0.09655244348309301,
+          0.096552443483093,
+          -0.3649739225656
+        ]
+      ]
+    },
+    "sustainer_fins__495660": {
+      "file": "HalberdR26_SustainerFins_495660.obj",
+      "materialColorHex": "#495660",
+      "leaves": 4,
+      "vertices": 32,
+      "triangles": 48,
+      "bounds": [
+        [
+          -0.15089658710520928,
+          -0.15089658710520928,
+          -1.075
+        ],
+        [
+          0.15089658710520928,
+          0.15089658710520928,
+          -0.855
+        ]
+      ]
+    },
+    "sustainer_nozzle__000000": {
+      "file": "HalberdR26_SustainerNozzle_000000.obj",
+      "materialColorHex": "#000000",
+      "leaves": 1,
+      "vertices": 84,
+      "triangles": 164,
+      "bounds": [
+        [
+          -0.036198497837676834,
+          -0.0363,
+          -1.083333333333
+        ],
+        [
+          0.036198497837676834,
+          0.0363,
+          -1.0823333333329999
+        ]
+      ]
+    },
+    "sustainer_nozzle__160906": {
+      "file": "HalberdR26_SustainerNozzle_160906.obj",
+      "materialColorHex": "#160906",
+      "leaves": 1,
+      "vertices": 315,
+      "triangles": 626,
+      "bounds": [
+        [
+          -0.05767072122184523,
+          -0.05783243243243,
+          -1.1143333333329999
+        ],
+        [
+          0.05767072122184523,
+          0.057832432432432,
+          -1.0803333333329999
+        ]
+      ]
     }
   },
   "assembly": {
@@ -212,7 +356,7 @@
     ],
     "maxRadialM": 0.21200462259111247,
     "stageSeamZM": -1.1233,
-    "triangles": 265478,
+    "triangles": 197964,
     "triangleCeiling": 1000000
   }
 }

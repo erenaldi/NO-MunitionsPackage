@@ -51,8 +51,11 @@ def classify(label):
     raise ValueError(f"unclassified leaf label: {label}")
 
 
-def to_unity(shape):
-    verts, tris = shape.tessellate(TOLERANCE, ANGULAR)
+HARDWARE_TESSELLATION = (0.3, 0.6)   # screws/covers: coarser (user-approved guidance), body keeps (TOLERANCE, ANGULAR)
+
+
+def to_unity(shape, tess):
+    verts, tris = shape.tessellate(*tess)
     cad = np.array([(v.X, v.Y, v.Z) for v in verts], dtype=float)
     game = np.column_stack((cad[:, 1], cad[:, 2], cad[:, 0])) * MM
     return trimesh.Trimesh(vertices=game, faces=np.asarray(tris), process=False)
@@ -77,23 +80,22 @@ def main():
     leaves = list(scene.leaves())
     if len(leaves) != EXPECTED_LEAVES:
         raise ValueError(f"expected {EXPECTED_LEAVES} leaves, found {len(leaves)}")
-    grouped = {g: [] for g in OUTPUTS}
-    labels = {g: [] for g in OUTPUTS}
-    colors = {g: {} for g in OUTPUTS}
+    grouped, labels, colors = {}, {}, {}
     for leaf in leaves:
         shape = scene.resolve(leaf.ref).shape()
-        g = classify(leaf.label)
-        mesh = to_unity(shape)
+        base = classify(leaf.label)
+        mesh = to_unity(shape, HARDWARE_TESSELLATION if base.startswith("hardware") else (TOLERANCE, ANGULAR))
         check_mesh(mesh, leaf.label)
-        grouped[g].append(mesh)
-        labels[g].append(leaf.label)
         c = shape.color
-        key = "#%02X%02X%02X" % tuple(int(round(max(0, min(1, x)) * 255)) for x in tuple(c)[:3]) if c else "none"
-        colors[g][key] = colors[g].get(key, 0) + 1
+        key = "%02X%02X%02X" % tuple(int(round(max(0, min(1, x)) * 255)) for x in tuple(c)[:3]) if c else "none"
+        g = f"{base}__{key}"
+        grouped.setdefault(g, []).append(mesh)
+        labels.setdefault(g, []).append(leaf.label)
+    missing = [b for b in OUTPUTS if not any(k.split("__")[0] == b for k in grouped)]
+    if missing:
+        raise ValueError(f"empty groups: {missing}")
     merged = {}
-    for g in OUTPUTS:
-        if not grouped[g]:
-            raise ValueError(f"empty group: {g}")
+    for g in sorted(grouped):
         m = trimesh.util.concatenate(grouped[g])
         m.merge_vertices()
         check_mesh(m, g)
@@ -104,11 +106,11 @@ def main():
     if abs(length - 2 * EXPECTED_HALF_LENGTH_MM * MM) > 1e-3 or abs(lo[2] + hi[2]) > 1e-3:
         raise ValueError(f"envelope not centred/expected length: {lo[2]:.4f}..{hi[2]:.4f}")
     seam = STAGE_SEAM_X_MM * MM
-    for g in UPPER:
-        if merged[g].bounds[0][2] < seam - 1e-4:
+    for g, m in merged.items():
+        b = g.split("__")[0]
+        if b in UPPER and m.bounds[0][2] < seam - 1e-4:
             raise ValueError(f"upper-stage group {g} extends aft of the stage seam")
-    for g in BOOSTER:
-        if merged[g].bounds[1][2] > seam + 1e-4:
+        if b in BOOSTER and m.bounds[1][2] > seam + 1e-4:
             raise ValueError(f"booster group {g} extends forward of the stage seam")
     total = int(sum(len(m.faces) for m in merged.values()))
     if total > TRIANGLE_CEILING:
@@ -118,9 +120,13 @@ def main():
               "sourceSha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
               "approvalState": "cad-approved-by-user; export candidate awaiting review",
               "toleranceMm": TOLERANCE, "axisMap": "Unity=(CAD.Y,CAD.Z,CAD.X)*0.001", "groups": {}}
-    for g, name in OUTPUTS.items():
+    for old in OUT_DIR.glob("HalberdR26_*.obj"):
+        old.unlink()
+    for g in sorted(merged):
+        base, key = g.split("__")
+        name = OUTPUTS[base][:-4] + f"_{key}.obj"
         merged[g].export(OUT_DIR / name, file_type="obj")
-        report["groups"][g] = {"file": name, "leaves": len(labels[g]), "colors": colors[g],
+        report["groups"][g] = {"file": name, "materialColorHex": "#" + key, "leaves": len(labels[g]),
                                "vertices": int(len(merged[g].vertices)), "triangles": int(len(merged[g].faces)),
                                "bounds": [[float(v) for v in r] for r in merged[g].bounds]}
     report["assembly"] = {"lengthM": length, "zRangeM": [float(lo[2]), float(hi[2])],
@@ -129,7 +135,7 @@ def main():
     (OUT_DIR / "HalberdR26_Export_Report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="ascii")
     print(json.dumps({"tolerance": TOLERANCE, "triangles": total, "length": length,
                       "maxRadial": report["assembly"]["maxRadialM"],
-                      "groups": {g: v["triangles"] for g, v in report["groups"].items()}}, indent=1))
+                      "materialSlots": len(report["groups"]), "groups": {g: v["triangles"] for g, v in report["groups"].items()}}, indent=1))
 
 
 if __name__ == "__main__":
