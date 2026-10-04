@@ -1,0 +1,218 @@
+{
+  "source": "cad\\halberd_rounded_square\\STEP\\r26_nozzle_recess.step",
+  "sourceSha256": "b1bdbc1e10f8107f2db98739f7a5b92c09069031a84e85265d73e1f12ce98a0f",
+  "approvalState": "cad-approved-by-user; export candidate awaiting review",
+  "toleranceMm": 0.12,
+  "axisMap": "Unity=(CAD.Y,CAD.Z,CAD.X)*0.001",
+  "groups": {
+    "body": {
+      "file": "HalberdR26_Body.obj",
+      "leaves": 3,
+      "colors": {
+        "#76828B": 1,
+        "#8B959D": 1,
+        "#3E4A54": 1
+      },
+      "vertices": 47748,
+      "triangles": 95488,
+      "bounds": [
+        [
+          -0.11561195872400001,
+          -0.11561195872400001,
+          -1.123333333333
+        ],
+        [
+          0.11561195872400001,
+          0.11561195872400001,
+          1.685
+        ]
+      ]
+    },
+    "intake_recess": {
+      "file": "HalberdR26_IntakeRecess.obj",
+      "leaves": 8,
+      "colors": {
+        "#040608": 4,
+        "#000000": 4
+      },
+      "vertices": 120,
+      "triangles": 272,
+      "bounds": [
+        [
+          -0.09655244348309301,
+          -0.09655244348309301,
+          -0.4476739225656
+        ],
+        [
+          0.09655244348309301,
+          0.096552443483093,
+          -0.3649739225656
+        ]
+      ]
+    },
+    "sustainer_fins": {
+      "file": "HalberdR26_SustainerFins.obj",
+      "leaves": 4,
+      "colors": {
+        "#495660": 4
+      },
+      "vertices": 32,
+      "triangles": 48,
+      "bounds": [
+        [
+          -0.15089658710520928,
+          -0.15089658710520928,
+          -1.075
+        ],
+        [
+          0.15089658710520928,
+          0.15089658710520928,
+          -0.855
+        ]
+      ]
+    },
+    "hardware_main": {
+      "file": "HalberdR26_HardwareMain.obj",
+      "leaves": 249,
+      "colors": {
+        "#3E4A54": 225,
+        "#636F79": 12,
+        "#76828B": 12
+      },
+      "vertices": 47298,
+      "triangles": 93736,
+      "bounds": [
+        [
+          -0.10717240510991717,
+          -0.1094388611947722,
+          -1.123153333333
+        ],
+        [
+          0.10749176980092616,
+          0.10919011509943803,
+          1.07978
+        ]
+      ]
+    },
+    "sustainer_nozzle": {
+      "file": "HalberdR26_SustainerNozzle.obj",
+      "leaves": 2,
+      "colors": {
+        "#160906": 1,
+        "#000000": 1
+      },
+      "vertices": 399,
+      "triangles": 790,
+      "bounds": [
+        [
+          -0.05767072122184523,
+          -0.05783243243243,
+          -1.1143333333329999
+        ],
+        [
+          0.05767072122184523,
+          0.057832432432432,
+          -1.0803333333329999
+        ]
+      ]
+    },
+    "booster_body": {
+      "file": "HalberdR26_BoosterBody.obj",
+      "leaves": 1,
+      "colors": {
+        "#636F79": 1
+      },
+      "vertices": 14011,
+      "triangles": 28018,
+      "bounds": [
+        [
+          -0.1,
+          -0.1,
+          -1.685
+        ],
+        [
+          0.10000000002512001,
+          0.1,
+          -1.123333333333
+        ]
+      ]
+    },
+    "booster_fins": {
+      "file": "HalberdR26_BoosterFins.obj",
+      "leaves": 4,
+      "colors": {
+        "#495660": 4
+      },
+      "vertices": 3328,
+      "triangles": 6640,
+      "bounds": [
+        [
+          -0.1339260243567,
+          -0.1339260243567,
+          -1.482925121789
+        ],
+        [
+          0.13392602435673,
+          0.13392602435673,
+          -1.123333333333
+        ]
+      ]
+    },
+    "hardware_booster": {
+      "file": "HalberdR26_HardwareBooster.obj",
+      "leaves": 110,
+      "colors": {
+        "#636F79": 10,
+        "#3E4A54": 99,
+        "#76828B": 1
+      },
+      "vertices": 20007,
+      "triangles": 39654,
+      "bounds": [
+        [
+          -0.1001779751644,
+          -0.1001779751644,
+          -1.68482
+        ],
+        [
+          0.10017797516444,
+          0.1015,
+          -1.136487
+        ]
+      ]
+    },
+    "booster_nozzle": {
+      "file": "HalberdR26_BoosterNozzle.obj",
+      "leaves": 2,
+      "colors": {
+        "#160906": 1,
+        "#000000": 1
+      },
+      "vertices": 420,
+      "triangles": 832,
+      "bounds": [
+        [
+          -0.06368296864767767,
+          -0.06386153846153,
+          -1.676
+        ],
+        [
+          0.06368296864767767,
+          0.063861538461538,
+          -1.612
+        ]
+      ]
+    }
+  },
+  "assembly": {
+    "lengthM": 3.37,
+    "zRangeM": [
+      -1.685,
+      1.685
+    ],
+    "maxRadialM": 0.21200462259111247,
+    "stageSeamZM": -1.1233,
+    "triangles": 265478,
+    "triangleCeiling": 1000000
+  }
+}
