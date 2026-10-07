@@ -2,6 +2,11 @@
 
 Append-only handoff journal, newest entry first. Rules of use: `AGENTS.md` → "Session records & handoff". Treat every entry as a claim to re-verify against disk, not as truth.
 
+## 2026-10-07 - R26 export accepted; Unity import candidate built and rendered
+
+- Export: R26 OBJ groups (198k triangles, 8 colors, smoothed normals) accepted by the user and pushed (`1cdb75a`). Unity import: `HalberdR26Importer.cs` batch run PASS (197,964 triangles, 18 renderers, bounds and stage-seam checks), prefab and 6 GPU renders in `cad/halberd_rounded_square/reviews/R26_unity_*.png`. Details in `docs/HALBERD_R26_UNITY_DELIVERY.md`.
+- Pending: user review of the engine renders, colliders, four-fin transplant paths, exhaust anchor, bundle, plugin build, game test. Nozzle recess color reads lighter in Unity than in CAD.
+
 ## 2026-10-04 — Halberd rear-fin seats (R24) and nozzle recess colour (R26) accepted; model declared complete by the user
 
 - R24 (accepted): fold-over-lip seats on the four booster fin fairings, built from the R24p one-fin prototype (`cad/halberd_rounded_square/src/halberd_r24p_flank_lip_seats.py`, `halberd_r24_booster_seats.py`; checker `checks/check_halberd_r24_booster_seats.py` PASS; `STEP/r24_booster_seats.step`). Builder time about 15 min for 8 seats versus 81-120 min earlier, after host sectioning and shared helpers.

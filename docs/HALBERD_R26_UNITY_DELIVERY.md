@@ -1,6 +1,6 @@
 # Halberd R26 (rounded-square study) — Unity delivery contract, export candidate
 
-**2026-10-04 — State:** CAD accepted by the user (R26 = R24 rear-fin lip seats + dark rust-maroon nozzle recess). Export is a staged candidate awaiting review. No prefab, bundle, plugin or runtime work has been done. User decision: R26 is intended to replace the shipped `Erenaldi.AAM44` geometry, but nothing replaces it yet.
+**2026-10-04 — State:** CAD accepted by the user (R26 = R24 rear-fin lip seats + dark rust-maroon nozzle recess). Export is a staged candidate awaiting review. Engine import candidate built 2026-10-07 (see "Unity import candidate"); no bundle, collider, plugin or runtime work has been done. User decision: R26 is intended to replace the shipped `Erenaldi.AAM44` geometry, but nothing replaces it yet.
 
 ## Source and transform
 - Source: `cad/halberd_rounded_square/STEP/r26_nozzle_recess.step` (383 labeled leaves, X -1685..1685 mm, max radius 212.0 mm). Exporter: `cad/halberd_rounded_square/export_r26_unity_mesh.py`.
@@ -31,3 +31,10 @@ Tessellation: body and fins 0.12 mm / 0.3 rad; hardware (fasteners, covers) 0.3 
 2. Material slots: split by color (done, 8 slots).
 3. Runtime hierarchy: the user decided the runtime hierarchy is fixed to R26 (four fins and four intakes), not the shipped three-fin layout. Fin/intake child paths, the direct `Booster` child, colliders and the FX anchor are defined from R26 at the Unity gate. Not started.
 4. Gates still pending: export validation review, Unity import, engine capture, runtime test, fallback.
+
+## Unity import candidate (2026-10-07)
+- `unity/BlueprinterEditor/Blueprinter-Editor/Assets/Editor/HalberdR26Importer.cs` (`Blueprinter > Halberd R26 > Build Candidate`) reads the 18 OBJs directly (Unity's OBJ importer mirrors X), builds `Assets/Blueprinter/Mods/HalberdR26/Erenaldi.AAM44.R26Candidate.prefab` and 18 meshes, 8 flat URP/Lit materials (export linear hex converted to sRGB), and a preview scene. Run: Unity 2022.3.62f2 `-batchmode -quit -executeMethod Erenaldi.Halberd.HalberdR26Importer.BuildAndPreview` (no `-nographics`; log under `Logs/`).
+- Hierarchy: body (largest upper-stage color) on the prefab root; `SustainerFins` child (4 fin leaves); `Booster` child carrying the booster hull plus booster fins, hardware and nozzle children. No scripts, no colliders, no UVs (flat colors).
+- Checks that passed in the batch run: 197,964 triangles equals the export report, 18 renderers, root identity transform, stage ownership against the seam, z bounds +-1.685 m, no scripts or colliders. Axis map (Y,Z,X) is a cyclic permutation, so winding was kept and the model is the engine-handedness mirror of CAD, as in the earlier Halberd exports.
+- Engine renders (GPU, 2000x1200): `cad/halberd_rounded_square/reviews/R26_unity_{whole,side,tail,nose,intakes,separated}.png`. Smoothed normals work in Unity: the tail shroud and nose read smooth. In Unity lighting the nozzle recess reads copper-brown, lighter than in the CAD render.
+- Not done: colliders, the four-fin child paths for the transplant loader, exhaust FX anchor, rack prefab, bundle, plugin build/install, in-game test. A cold Unity library rebuild logs harmless editor-only asset import errors from over-long package paths in this worktree (UXML files); they did not affect the build.
