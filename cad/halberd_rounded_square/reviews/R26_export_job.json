@@ -14,12 +14,22 @@
     }
    },
    {
-    "path": "reviews/R26_export_side.png",
+    "path": "reviews/R26_export_rear.png",
     "camera": {
      "direction": [
-      0,
-      1,
-      0.15
+      -1.0,
+      0.35,
+      0.3
+     ]
+    }
+   },
+   {
+    "path": "reviews/R26_export_nose.png",
+    "camera": {
+     "direction": [
+      0.9,
+      0.6,
+      0.3
      ]
     }
    }

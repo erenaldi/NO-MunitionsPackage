@@ -9,7 +9,7 @@
       "file": "HalberdR26_Body_3E4A54.obj",
       "materialColorHex": "#3E4A54",
       "leaves": 1,
-      "vertices": 168,
+      "vertices": 336,
       "triangles": 336,
       "bounds": [
         [
@@ -28,7 +28,7 @@
       "file": "HalberdR26_Body_76828B.obj",
       "materialColorHex": "#76828B",
       "leaves": 1,
-      "vertices": 47262,
+      "vertices": 84441,
       "triangles": 94520,
       "bounds": [
         [
@@ -47,7 +47,7 @@
       "file": "HalberdR26_Body_8B959D.obj",
       "materialColorHex": "#8B959D",
       "leaves": 1,
-      "vertices": 318,
+      "vertices": 417,
       "triangles": 632,
       "bounds": [
         [
@@ -66,7 +66,7 @@
       "file": "HalberdR26_BoosterBody_636F79.obj",
       "materialColorHex": "#636F79",
       "leaves": 1,
-      "vertices": 14011,
+      "vertices": 26384,
       "triangles": 28018,
       "bounds": [
         [
@@ -85,7 +85,7 @@
       "file": "HalberdR26_BoosterFins_495660.obj",
       "materialColorHex": "#495660",
       "leaves": 4,
-      "vertices": 3328,
+      "vertices": 6209,
       "triangles": 6640,
       "bounds": [
         [
@@ -104,7 +104,7 @@
       "file": "HalberdR26_BoosterNozzle_000000.obj",
       "materialColorHex": "#000000",
       "leaves": 1,
-      "vertices": 84,
+      "vertices": 168,
       "triangles": 164,
       "bounds": [
         [
@@ -123,7 +123,7 @@
       "file": "HalberdR26_BoosterNozzle_160906.obj",
       "materialColorHex": "#160906",
       "leaves": 1,
-      "vertices": 336,
+      "vertices": 504,
       "triangles": 668,
       "bounds": [
         [
@@ -142,8 +142,8 @@
       "file": "HalberdR26_HardwareBooster_3E4A54.obj",
       "materialColorHex": "#3E4A54",
       "leaves": 99,
-      "vertices": 15358,
-      "triangles": 30324,
+      "vertices": 14868,
+      "triangles": 13692,
       "bounds": [
         [
           -0.09981999997486998,
@@ -161,8 +161,8 @@
       "file": "HalberdR26_HardwareBooster_636F79.obj",
       "materialColorHex": "#636F79",
       "leaves": 10,
-      "vertices": 4037,
-      "triangles": 8110,
+      "vertices": 4008,
+      "triangles": 4636,
       "bounds": [
         [
           -0.1001779751644,
@@ -180,8 +180,8 @@
       "file": "HalberdR26_HardwareBooster_76828B.obj",
       "materialColorHex": "#76828B",
       "leaves": 1,
-      "vertices": 612,
-      "triangles": 1220,
+      "vertices": 568,
+      "triangles": 548,
       "bounds": [
         [
           0.007,
@@ -199,16 +199,16 @@
       "file": "HalberdR26_HardwareMain_3E4A54.obj",
       "materialColorHex": "#3E4A54",
       "leaves": 225,
-      "vertices": 34901,
-      "triangles": 68910,
+      "vertices": 33786,
+      "triangles": 31110,
       "bounds": [
         [
           -0.10717240510991717,
-          -0.1094388611947722,
+          -0.10943853486280354,
           -1.123153333333
         ],
         [
-          0.10749176980092616,
+          0.10749149682706811,
           0.10919011509943803,
           1.07978
         ]
@@ -218,8 +218,8 @@
       "file": "HalberdR26_HardwareMain_636F79.obj",
       "materialColorHex": "#636F79",
       "leaves": 12,
-      "vertices": 9394,
-      "triangles": 18868,
+      "vertices": 9838,
+      "triangles": 13082,
       "bounds": [
         [
           -0.105070580018,
@@ -237,13 +237,13 @@
       "file": "HalberdR26_HardwareMain_76828B.obj",
       "materialColorHex": "#76828B",
       "leaves": 12,
-      "vertices": 3003,
-      "triangles": 5958,
+      "vertices": 2996,
+      "triangles": 2808,
       "bounds": [
         [
           -0.10149999997487,
           -0.10250000000000001,
-          -1.035080357143
+          -1.0349463270577017
         ],
         [
           0.10150000002512001,
@@ -256,7 +256,7 @@
       "file": "HalberdR26_IntakeRecess_000000.obj",
       "materialColorHex": "#000000",
       "leaves": 4,
-      "vertices": 48,
+      "vertices": 128,
       "triangles": 80,
       "bounds": [
         [
@@ -275,7 +275,7 @@
       "file": "HalberdR26_IntakeRecess_040608.obj",
       "materialColorHex": "#040608",
       "leaves": 4,
-      "vertices": 96,
+      "vertices": 256,
       "triangles": 192,
       "bounds": [
         [
@@ -294,7 +294,7 @@
       "file": "HalberdR26_SustainerFins_495660.obj",
       "materialColorHex": "#495660",
       "leaves": 4,
-      "vertices": 32,
+      "vertices": 80,
       "triangles": 48,
       "bounds": [
         [
@@ -313,7 +313,7 @@
       "file": "HalberdR26_SustainerNozzle_000000.obj",
       "materialColorHex": "#000000",
       "leaves": 1,
-      "vertices": 84,
+      "vertices": 168,
       "triangles": 164,
       "bounds": [
         [
@@ -332,7 +332,7 @@
       "file": "HalberdR26_SustainerNozzle_160906.obj",
       "materialColorHex": "#160906",
       "leaves": 1,
-      "vertices": 315,
+      "vertices": 567,
       "triangles": 626,
       "bounds": [
         [
@@ -356,7 +356,7 @@
     ],
     "maxRadialM": 0.21200462259111247,
     "stageSeamZM": -1.1233,
-    "triangles": 265478,
+    "triangles": 197964,
     "triangleCeiling": 1000000
   }
 }

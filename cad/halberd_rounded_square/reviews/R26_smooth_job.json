@@ -1,0 +1,23 @@
+[
+ {
+  "input": "../candidates/halberd_r26/HalberdR26_preview.glb",
+  "mode": "view",
+  "outputs": [
+   {
+    "path": "reviews/R26_smooth_side.png",
+    "camera": {
+     "direction": [
+      0,
+      1,
+      0.15
+     ]
+    }
+   }
+  ],
+  "output": {
+   "viewLabels": false,
+   "padding": 0.04,
+   "sizeProfile": "diagnostic"
+  }
+ }
+]

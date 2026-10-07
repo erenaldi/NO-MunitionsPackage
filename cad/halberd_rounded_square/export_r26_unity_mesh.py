@@ -51,7 +51,8 @@ def classify(label):
     raise ValueError(f"unclassified leaf label: {label}")
 
 
-HARDWARE_TESSELLATION = None   # None = same tessellation as the body (user reverted the hardware coarsening, ~265k triangles)
+HARDWARE_TESSELLATION = (0.3, 0.6)   # screws/covers coarser; the user chose to stay at ~198k and fix curve smoothness with normals instead
+SMOOTH_ANGLE = np.radians(35.0)      # vertices are split above this crease angle, so curves shade smooth and hard edges stay sharp
 
 
 def to_unity(shape, tess):
@@ -84,7 +85,7 @@ def main():
     for leaf in leaves:
         shape = scene.resolve(leaf.ref).shape()
         base = classify(leaf.label)
-        mesh = to_unity(shape, HARDWARE_TESSELLATION or (TOLERANCE, ANGULAR))
+        mesh = to_unity(shape, HARDWARE_TESSELLATION if base.startswith("hardware") else (TOLERANCE, ANGULAR))
         check_mesh(mesh, leaf.label)
         c = shape.color
         key = "%02X%02X%02X" % tuple(int(round(max(0, min(1, x)) * 255)) for x in tuple(c)[:3]) if c else "none"
@@ -99,7 +100,7 @@ def main():
         m = trimesh.util.concatenate(grouped[g])
         m.merge_vertices()
         check_mesh(m, g)
-        merged[g] = m
+        merged[g] = trimesh.graph.smooth_shade(m, angle=SMOOTH_ANGLE)
     asm = trimesh.util.concatenate(list(merged.values()))
     lo, hi = asm.bounds
     length = float(hi[2] - lo[2])
@@ -125,7 +126,7 @@ def main():
     for g in sorted(merged):
         base, key = g.split("__")
         name = OUTPUTS[base][:-4] + f"_{key}.obj"
-        merged[g].export(OUT_DIR / name, file_type="obj")
+        merged[g].export(OUT_DIR / name, file_type="obj", include_normals=True)
         report["groups"][g] = {"file": name, "materialColorHex": "#" + key, "leaves": len(labels[g]),
                                "vertices": int(len(merged[g].vertices)), "triangles": int(len(merged[g].faces)),
                                "bounds": [[float(v) for v in r] for r in merged[g].bounds]}
