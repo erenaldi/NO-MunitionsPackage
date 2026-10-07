@@ -137,6 +137,13 @@ namespace Erenaldi.Halberd
             return mesh;
         }
 
+        // Engine-side tuning: the CAD nozzle recess (#52342C) reads copper-brown under Unity lighting, so the engine
+        // material is pushed slightly redder. Keyed by the export's linear hex; values are sRGB.
+        private static readonly Dictionary<string, Color> EngineColorOverride = new Dictionary<string, Color>
+        {
+            { "160906", new Color32(0x5E, 0x28, 0x22, 0xFF) },
+        };
+
         // The export writes colours as linear 8-bit hex; Unity materials take the sRGB value.
         private static Material MaterialFor(string linearHex, Dictionary<string, Material> cache)
         {
@@ -144,6 +151,7 @@ namespace Erenaldi.Halberd
             float Lin(int i) => Convert.ToInt32(linearHex.Substring(i, 2), 16) / 255f;
             float Srgb(float c) => c <= 0.0031308f ? 12.92f * c : 1.055f * Mathf.Pow(c, 1f / 2.4f) - 0.055f;
             var color = new Color(Srgb(Lin(0)), Srgb(Lin(2)), Srgb(Lin(4)), 1f);
+            if (EngineColorOverride.TryGetValue(linearHex, out var tuned)) color = tuned;
             var material = new Material(Shader.Find("Universal Render Pipeline/Lit")) { name = "MatR26_" + linearHex, color = color };
             material.SetFloat("_Metallic", .10f);
             material.SetFloat("_Smoothness", .30f);
